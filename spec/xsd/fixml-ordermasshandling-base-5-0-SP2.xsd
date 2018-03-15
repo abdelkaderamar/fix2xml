@@ -1,0 +1,244 @@
+
+<!--
+ - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Generated:2009-04-19T13:43:43.089-05:00
+    Revision: FIXML  Schema Version  FIX.5.0SP2
+    Copyright(c) FIX Protocol Limited.  All rights reserved.
+    Comments and errors should be posted on the FIX protocol web-site
+    http://www.fixprotocol.org
+ - - - - - - - - - - - - - - - - - - - - - - - - - -
+--><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.fixprotocol.org/FIXML-5-0-SP2"
+           xmlns:fm="http://www.fixprotocol.org/FIXML-5-0-SP2/METADATA"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.fixprotocol.org/FIXML-5-0-SP2/METADATA fixml-metadata-5-0-SP2.xsd"
+           targetNamespace="http://www.fixprotocol.org/FIXML-5-0-SP2"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>	
+ <xs:group name="OrderMassCancelRequestElements">
+  <xs:sequence>
+  <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="TgtPty" type="TargetParties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="0"/>
+  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0"/>
+  </xs:sequence>
+ </xs:group>	
+ <xs:attributeGroup name="OrderMassCancelRequestAttributes">
+  <xs:attribute name="ClOrdID" type="ClOrdID_t" use="required"/>
+  <xs:attribute name="ClOrdID2" type="SecondaryClOrdID_t" use="optional"/>
+  <xs:attribute name="ReqTyp" type="MassCancelRequestType_t" use="required"/>
+  <xs:attribute name="SesID" type="TradingSessionID_t" use="optional"/>
+  <xs:attribute name="SesSub" type="TradingSessionSubID_t" use="optional"/>
+  <xs:attribute name="MktID" type="MarketID_t" use="optional"/>
+  <xs:attribute name="MktSegID" type="MarketSegmentID_t" use="optional"/>
+  <xs:attribute name="Side" type="Side_t" use="optional"/>
+  <xs:attribute name="TxnTm" type="TransactTime_t" use="required"/>
+  <xs:attribute name="Txt" type="Text_t" use="optional"/>
+  <xs:attribute name="EncTxtLen" type="EncodedTextLen_t" use="optional"/>
+  <xs:attribute name="EncTxt" type="EncodedText_t" use="optional"/>
+ </xs:attributeGroup>
+ <xs:complexType name="OrderMassCancelRequest_message_t" final="#all">
+  <xs:annotation>
+     <xs:documentation xml:lang="en">OrderMassCancelRequest can be found in Volume4 of the specification </xs:documentation> 
+   <xs:appinfo>
+    <fm:Xref Protocol="FIX" name="OrderMassCancelRequest" ComponentType="Message" MsgID="50" Section="Trade" Category="OrderMassHandling"/>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="Abstract_message_t">
+    <xs:sequence>
+     <xs:group ref="OrderMassCancelRequestElements"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="OrderMassCancelRequestAttributes"/>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="OrdMassCxlReq" type="OrderMassCancelRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:group name="OrderMassCancelReportElements">
+  <xs:sequence>
+  <xs:element name="AffectOrd" type="AffectedOrdGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="NotAffectedOrdersGrp" type="NotAffectedOrdersGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="TgtPty" type="TargetParties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="0"/>
+  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0"/>
+  </xs:sequence>
+ </xs:group>	
+ <xs:attributeGroup name="OrderMassCancelReportAttributes">
+  <xs:attribute name="ClOrdID" type="ClOrdID_t" use="optional"/>
+  <xs:attribute name="ClOrdID2" type="SecondaryClOrdID_t" use="optional"/>
+  <xs:attribute name="OrdID" type="OrderID_t" use="required"/>
+  <xs:attribute name="MassActionReportID" type="MassActionReportID_t" use="required"/>
+  <xs:attribute name="OrdID2" type="SecondaryOrderID_t" use="optional"/>
+  <xs:attribute name="ReqTyp" type="MassCancelRequestType_t" use="required"/>
+  <xs:attribute name="Rsp" type="MassCancelResponse_t" use="required"/>
+  <xs:attribute name="MassCxlRejRsn" type="MassCancelRejectReason_t" use="optional"/>
+  <xs:attribute name="TotAffctdOrds" type="TotalAffectedOrders_t" use="optional"/>
+  <xs:attribute name="SesID" type="TradingSessionID_t" use="optional"/>
+  <xs:attribute name="SesSub" type="TradingSessionSubID_t" use="optional"/>
+  <xs:attribute name="MktID" type="MarketID_t" use="optional"/>
+  <xs:attribute name="MktSegID" type="MarketSegmentID_t" use="optional"/>
+  <xs:attribute name="Side" type="Side_t" use="optional"/>
+  <xs:attribute name="TxnTm" type="TransactTime_t" use="optional"/>
+  <xs:attribute name="Txt" type="Text_t" use="optional"/>
+  <xs:attribute name="EncTxtLen" type="EncodedTextLen_t" use="optional"/>
+  <xs:attribute name="EncTxt" type="EncodedText_t" use="optional"/>
+ </xs:attributeGroup>
+ <xs:complexType name="OrderMassCancelReport_message_t" final="#all">
+  <xs:annotation>
+     <xs:documentation xml:lang="en">OrderMassCancelReport can be found in Volume4 of the specification </xs:documentation> 
+   <xs:appinfo>
+    <fm:Xref Protocol="FIX" name="OrderMassCancelReport" ComponentType="Message" MsgID="51" Section="Trade" Category="OrderMassHandling"/>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="Abstract_message_t">
+    <xs:sequence>
+     <xs:group ref="OrderMassCancelReportElements"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="OrderMassCancelReportAttributes"/>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="OrdMassCxlRpt" type="OrderMassCancelReport_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:group name="OrderMassStatusRequestElements">
+  <xs:sequence>
+  <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="TgtPty" type="TargetParties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="0"/>
+  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0"/>
+  </xs:sequence>
+ </xs:group>	
+ <xs:attributeGroup name="OrderMassStatusRequestAttributes">
+  <xs:attribute name="ReqID" type="MassStatusReqID_t" use="required"/>
+  <xs:attribute name="MassStatReqTyp" type="MassStatusReqType_t" use="required"/>
+  <xs:attribute name="Acct" type="Account_t" use="optional"/>
+  <xs:attribute name="AcctIDSrc" type="AcctIDSource_t" use="optional"/>
+  <xs:attribute name="SesID" type="TradingSessionID_t" use="optional"/>
+  <xs:attribute name="SesSub" type="TradingSessionSubID_t" use="optional"/>
+  <xs:attribute name="Side" type="Side_t" use="optional"/>
+ </xs:attributeGroup>
+ <xs:complexType name="OrderMassStatusRequest_message_t" final="#all">
+  <xs:annotation>
+     <xs:documentation xml:lang="en">OrderMassStatusRequest can be found in Volume4 of the specification </xs:documentation> 
+   <xs:appinfo>
+    <fm:Xref Protocol="FIX" name="OrderMassStatusRequest" ComponentType="Message" MsgID="65" Section="Trade" Category="OrderMassHandling"/>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="Abstract_message_t">
+    <xs:sequence>
+     <xs:group ref="OrderMassStatusRequestElements"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="OrderMassStatusRequestAttributes"/>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="OrdMassStatReq" type="OrderMassStatusRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:group name="OrderMassActionReportElements">
+  <xs:sequence>
+  <xs:element name="AffectOrd" type="AffectedOrdGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="NotAffectedOrdersGrp" type="NotAffectedOrdersGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="TgtPty" type="TargetParties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="0"/>
+  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0"/>
+  </xs:sequence>
+ </xs:group>	
+ <xs:attributeGroup name="OrderMassActionReportAttributes">
+  <xs:attribute name="ClOrdID" type="ClOrdID_t" use="optional"/>
+  <xs:attribute name="ClOrdID2" type="SecondaryClOrdID_t" use="optional"/>
+  <xs:attribute name="MassActionReportID" type="MassActionReportID_t" use="required"/>
+  <xs:attribute name="MassActionType" type="MassActionType_t" use="required"/>
+  <xs:attribute name="MassActionScope" type="MassActionScope_t" use="required"/>
+  <xs:attribute name="MassActionResponse" type="MassActionResponse_t" use="required"/>
+  <xs:attribute name="MassActionRejectReason" type="MassActionRejectReason_t" use="optional"/>
+  <xs:attribute name="TotAffctdOrds" type="TotalAffectedOrders_t" use="optional"/>
+  <xs:attribute name="MktID" type="MarketID_t" use="optional"/>
+  <xs:attribute name="MktSegID" type="MarketSegmentID_t" use="optional"/>
+  <xs:attribute name="SesID" type="TradingSessionID_t" use="optional"/>
+  <xs:attribute name="SesSub" type="TradingSessionSubID_t" use="optional"/>
+  <xs:attribute name="Side" type="Side_t" use="optional"/>
+  <xs:attribute name="TxnTm" type="TransactTime_t" use="optional"/>
+  <xs:attribute name="Txt" type="Text_t" use="optional"/>
+  <xs:attribute name="EncTxtLen" type="EncodedTextLen_t" use="optional"/>
+  <xs:attribute name="EncTxt" type="EncodedText_t" use="optional"/>
+ </xs:attributeGroup>
+ <xs:complexType name="OrderMassActionReport_message_t" final="#all">
+  <xs:annotation>
+     <xs:documentation xml:lang="en">OrderMassActionReport can be found in Volume4 of the specification </xs:documentation> 
+   <xs:appinfo>
+    <fm:Xref Protocol="FIX" name="OrderMassActionReport" ComponentType="Message" MsgID="111" Section="Trade" Category="OrderMassHandling"/>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="Abstract_message_t">
+    <xs:sequence>
+     <xs:group ref="OrderMassActionReportElements"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="OrderMassActionReportAttributes"/>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="OrdMassActRpt" type="OrderMassActionReport_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:group name="OrderMassActionRequestElements">
+  <xs:sequence>
+  <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="TgtPty" type="TargetParties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="0"/>
+  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0"/>
+  </xs:sequence>
+ </xs:group>	
+ <xs:attributeGroup name="OrderMassActionRequestAttributes">
+  <xs:attribute name="ClOrdID" type="ClOrdID_t" use="required"/>
+  <xs:attribute name="ClOrdID2" type="SecondaryClOrdID_t" use="optional"/>
+  <xs:attribute name="MassActionType" type="MassActionType_t" use="required"/>
+  <xs:attribute name="MassActionScope" type="MassActionScope_t" use="required"/>
+  <xs:attribute name="MktID" type="MarketID_t" use="optional"/>
+  <xs:attribute name="MktSegID" type="MarketSegmentID_t" use="optional"/>
+  <xs:attribute name="SesID" type="TradingSessionID_t" use="optional"/>
+  <xs:attribute name="SesSub" type="TradingSessionSubID_t" use="optional"/>
+  <xs:attribute name="Side" type="Side_t" use="optional"/>
+  <xs:attribute name="TxnTm" type="TransactTime_t" use="required"/>
+  <xs:attribute name="Txt" type="Text_t" use="optional"/>
+  <xs:attribute name="EncTxtLen" type="EncodedTextLen_t" use="optional"/>
+  <xs:attribute name="EncTxt" type="EncodedText_t" use="optional"/>
+ </xs:attributeGroup>
+ <xs:complexType name="OrderMassActionRequest_message_t" final="#all">
+  <xs:annotation>
+     <xs:documentation xml:lang="en">OrderMassActionRequest can be found in Volume4 of the specification </xs:documentation> 
+   <xs:appinfo>
+    <fm:Xref Protocol="FIX" name="OrderMassActionRequest" ComponentType="Message" MsgID="112" Section="Trade" Category="OrderMassHandling"/>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="Abstract_message_t">
+    <xs:sequence>
+     <xs:group ref="OrderMassActionRequestElements"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="OrderMassActionRequestAttributes"/>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="OrdMassActReq" type="OrderMassActionRequest_message_t" substitutionGroup="Message" final="#all"/><xs:group name="NotAffectedOrdersGrpElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="NotAffectedOrdersGrpAttributes">
+      <xs:attribute name="NotAffOrigClOrdID" type="NotAffOrigClOrdID_t" use="optional"/>
+      <xs:attribute name="NotAffectedOrderID" type="NotAffectedOrderID_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="NotAffectedOrdersGrp_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="NotAffectedOrdersGrp"
+                     ComponentType="ImplicitBlockRepeating"
+                     Category="OrderMassHandling"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="NotAffectedOrdersGrpElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="NotAffectedOrdersGrpAttributes"/>
+   </xs:complexType>
+</xs:schema>

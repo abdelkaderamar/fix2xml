@@ -1,0 +1,22 @@
+
+<!--
+ - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Generated:2009-04-19T13:43:43.089-05:00
+    Revision: FIXML  Schema Version  FIX.5.0SP2
+    Copyright(c) FIX Protocol Limited.  All rights reserved.
+    Comments and errors should be posted on the FIX protocol web-site
+    http://www.fixprotocol.org
+ - - - - - - - - - - - - - - - - - - - - - - - - - -
+--><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.fixprotocol.org/FIXML-5-0-SP2"
+           xmlns:fm="http://www.fixprotocol.org/FIXML-5-0-SP2/METADATA"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.fixprotocol.org/FIXML-5-0-SP2/METADATA fixml-metadata-5-0-SP2.xsd"
+           targetNamespace="http://www.fixprotocol.org/FIXML-5-0-SP2"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:include schemaLocation="fixml-application-impl-5-0-SP2.xsd"/>
+   <xs:include schemaLocation="fixml-businessreject-impl-5-0-SP2.xsd"/>
+   <xs:include schemaLocation="fixml-network-impl-5-0-SP2.xsd"/>
+   <xs:include schemaLocation="fixml-usermanagement-impl-5-0-SP2.xsd"/>
+</xs:schema>

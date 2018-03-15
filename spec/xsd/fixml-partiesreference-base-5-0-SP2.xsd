@@ -1,0 +1,636 @@
+
+<!--
+ - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Generated:2009-04-19T13:43:43.089-05:00
+    Revision: FIXML  Schema Version  FIX.5.0SP2
+    Copyright(c) FIX Protocol Limited.  All rights reserved.
+    Comments and errors should be posted on the FIX protocol web-site
+    http://www.fixprotocol.org
+ - - - - - - - - - - - - - - - - - - - - - - - - - -
+--><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.fixprotocol.org/FIXML-5-0-SP2"
+           xmlns:fm="http://www.fixprotocol.org/FIXML-5-0-SP2/METADATA"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.fixprotocol.org/FIXML-5-0-SP2/METADATA fixml-metadata-5-0-SP2.xsd"
+           targetNamespace="http://www.fixprotocol.org/FIXML-5-0-SP2"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>	
+ <xs:group name="PartyDetailsListRequestElements">
+  <xs:sequence>
+  <xs:element name="RspTyp" type="PartyListResponseTypeGrp_Block_t" maxOccurs="unbounded"/>
+  <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="ReqR" type="RequestedPartyRoleGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="Rltnshp" type="PartyRelationships_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  </xs:sequence>
+ </xs:group>	
+ <xs:attributeGroup name="PartyDetailsListRequestAttributes">
+  <xs:attribute name="ReqID" type="PartyDetailsListRequestID_t" use="required"/>
+  <xs:attribute name="SubReqTyp" type="SubscriptionRequestType_t" use="optional"/>
+  <xs:attribute name="Txt" type="Text_t" use="optional"/>
+  <xs:attribute name="EncTxtLen" type="EncodedTextLen_t" use="optional"/>
+  <xs:attribute name="EncTxt" type="EncodedText_t" use="optional"/>
+ </xs:attributeGroup>
+ <xs:complexType name="PartyDetailsListRequest_message_t" final="#all">
+  <xs:annotation>
+     <xs:documentation xml:lang="en">PartyDetailsListRequest can be found in Volume3 of the specification </xs:documentation> 
+   <xs:appinfo>
+    <fm:Xref Protocol="FIX" name="PartyDetailsListRequest" ComponentType="Message" MsgID="117" Section="Pre Trade" Category="PartiesReferenceData"/>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="Abstract_message_t">
+    <xs:sequence>
+     <xs:group ref="PartyDetailsListRequestElements"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="PartyDetailsListRequestAttributes"/>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="PtyDetlListReq" type="PartyDetailsListRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:group name="PartyDetailsListReportElements">
+  <xs:sequence>
+  <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
+  <xs:element name="PtyLst" type="PartyListGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  </xs:sequence>
+ </xs:group>	
+ <xs:attributeGroup name="PartyDetailsListReportAttributes">
+  <xs:attribute name="RptID" type="PartyDetailsListReportID_t" use="required"/>
+  <xs:attribute name="ReqID" type="PartyDetailsListRequestID_t" use="optional"/>
+  <xs:attribute name="Rslt" type="PartyDetailsRequestResult_t" use="optional"/>
+  <xs:attribute name="TotNoPtyList" type="TotNoPartyList_t" use="optional"/>
+  <xs:attribute name="LastFragment" type="LastFragment_t" use="optional"/>
+  <xs:attribute name="Txt" type="Text_t" use="optional"/>
+  <xs:attribute name="EncTxtLen" type="EncodedTextLen_t" use="optional"/>
+  <xs:attribute name="EncTxt" type="EncodedText_t" use="optional"/>
+ </xs:attributeGroup>
+ <xs:complexType name="PartyDetailsListReport_message_t" final="#all">
+  <xs:annotation>
+     <xs:documentation xml:lang="en">PartyDetailsListReport can be found in Volume3 of the specification </xs:documentation> 
+   <xs:appinfo>
+    <fm:Xref Protocol="FIX" name="PartyDetailsListReport" ComponentType="Message" MsgID="118" Section="Pre Trade" Category="PartiesReferenceData"/>
+   </xs:appinfo>
+  </xs:annotation>
+  <xs:complexContent>
+   <xs:extension base="Abstract_message_t">
+    <xs:sequence>
+     <xs:group ref="PartyDetailsListReportElements"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="PartyDetailsListReportAttributes"/>
+   </xs:extension>
+  </xs:complexContent>
+ </xs:complexType>
+ <xs:element name="PtyDetlListRpt" type="PartyDetailsListReport_message_t" substitutionGroup="Message" final="#all"/><xs:group name="PartyListResponseTypeGrpElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="PartyListResponseTypeGrpAttributes">
+      <xs:attribute name="Typ" type="PartyListResponseType_t" use="required"/>
+   </xs:attributeGroup>
+   <xs:complexType name="PartyListResponseTypeGrp_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="PartyListResponseTypeGrp"
+                     ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="PartyListResponseTypeGrpElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="PartyListResponseTypeGrpAttributes"/>
+   </xs:complexType>
+   <xs:group name="RequestedPartyRoleGrpElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="RequestedPartyRoleGrpAttributes">
+      <xs:attribute name="R" type="RequestedPartyRole_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RequestedPartyRoleGrp_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RequestedPartyRoleGrp"
+                     ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RequestedPartyRoleGrpElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RequestedPartyRoleGrpAttributes"/>
+   </xs:complexType>
+   <xs:group name="PartyRelationshipsElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="PartyRelationshipsAttributes">
+      <xs:attribute name="Rltnshp" type="PartyRelationship_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="PartyRelationships_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="PartyRelationships" ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="PartyRelationshipsElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="PartyRelationshipsAttributes"/>
+   </xs:complexType>
+   <xs:group name="PartyListGrpElements">
+      <xs:sequence>
+         <xs:element name="PtyDetl" type="PartyDetail_Block_t" minOccurs="0" maxOccurs="1"/>
+         <xs:element name="ReltdPty" type="RelatedPartyGrp_Block_t" minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="PartyListGrpAttributes"/>
+   <xs:complexType name="PartyListGrp_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="PartyListGrp" ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="PartyListGrpElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="PartyListGrpAttributes"/>
+   </xs:complexType>
+   <xs:group name="PartyDetailElements">
+      <xs:sequence>
+         <xs:element name="Sub" type="PtysSubGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="AltPty" type="PartyAltIDs_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="CntxtPty" type="ContextParties_Block_t" minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element name="RiskLmt" type="RiskLimits_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="PartyDetailAttributes">
+      <xs:attribute name="ID" type="PartyID_t" use="required"/>
+      <xs:attribute name="Src" type="PartyIDSource_t" use="required"/>
+      <xs:attribute name="R" type="PartyRole_t" use="required"/>
+   </xs:attributeGroup>
+   <xs:complexType name="PartyDetail_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="PartyDetail" ComponentType="ImplicitBlock"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="PartyDetailElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="PartyDetailAttributes"/>
+   </xs:complexType>
+   <xs:group name="PartyAltIDsElements">
+      <xs:sequence>
+         <xs:element name="Sub" type="AltPtysSubGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="PartyAltIDsAttributes">
+      <xs:attribute name="ID" type="PartyAltID_t" use="optional"/>
+      <xs:attribute name="Src" type="PartyAltIDSource_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="PartyAltIDs_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="PartyAltIDs" ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="PartyAltIDsElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="PartyAltIDsAttributes"/>
+   </xs:complexType>
+   <xs:group name="AltPtysSubGrpElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="AltPtysSubGrpAttributes">
+      <xs:attribute name="ID" type="PartyAltSubID_t" use="optional"/>
+      <xs:attribute name="Typ" type="PartyAltSubIDType_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="AltPtysSubGrp_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="AltPtysSubGrp" ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="AltPtysSubGrpElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="AltPtysSubGrpAttributes"/>
+   </xs:complexType>
+   <xs:group name="ContextPartiesElements">
+      <xs:sequence>
+         <xs:element name="Sub" type="ContextPtysSubGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="ContextPartiesAttributes">
+      <xs:attribute name="ID" type="ContextPartyID_t" use="optional"/>
+      <xs:attribute name="Src" type="ContextPartyIDSource_t" use="optional"/>
+      <xs:attribute name="R" type="ContextPartyRole_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="ContextParties_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="ContextParties" ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="ContextPartiesElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="ContextPartiesAttributes"/>
+   </xs:complexType>
+   <xs:group name="ContextPtysSubGrpElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="ContextPtysSubGrpAttributes">
+      <xs:attribute name="ID" type="ContextPartySubID_t" use="optional"/>
+      <xs:attribute name="Typ" type="ContextPartySubIDType_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="ContextPtysSubGrp_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="ContextPtysSubGrp" ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="ContextPtysSubGrpElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="ContextPtysSubGrpAttributes"/>
+   </xs:complexType>
+   <xs:group name="RiskLimitsElements">
+      <xs:sequence>
+         <xs:element name="InstrmtScope" type="RiskInstrumentScope_Block_t" minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element name="WarnLvl" type="RiskWarningLevels_Block_t" minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="RiskLimitsAttributes">
+      <xs:attribute name="Typ" type="RiskLimitType_t" use="optional"/>
+      <xs:attribute name="Amt" type="RiskLimitAmount_t" use="optional"/>
+      <xs:attribute name="Ccy" type="RiskLimitCurrency_t" use="optional"/>
+      <xs:attribute name="Pltfm" type="RiskLimitPlatform_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RiskLimits_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RiskLimits" ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RiskLimitsElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RiskLimitsAttributes"/>
+   </xs:complexType>
+   <xs:group name="RiskInstrumentScopeElements">
+      <xs:sequence>
+         <xs:element name="AID" type="RiskSecAltIDGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="RiskInstrumentScopeAttributes">
+      <xs:attribute name="Oper" type="RiskInstrumentOperator_t" use="optional"/>
+      <xs:attribute name="Sym" type="RiskSymbol_t" use="optional"/>
+      <xs:attribute name="Sfx" type="RiskSymbolSfx_t" use="optional"/>
+      <xs:attribute name="ID" type="RiskSecurityID_t" use="optional"/>
+      <xs:attribute name="Src" type="RiskSecurityIDSource_t" use="optional"/>
+      <xs:attribute name="Prod" type="RiskProduct_t" use="optional"/>
+      <xs:attribute name="ProdCmplx" type="RiskProductComplex_t" use="optional"/>
+      <xs:attribute name="SecGrp" type="RiskSecurityGroup_t" use="optional"/>
+      <xs:attribute name="CFI" type="RiskCFICode_t" use="optional"/>
+      <xs:attribute name="SecTyp" type="RiskSecurityType_t" use="optional"/>
+      <xs:attribute name="SecSubTyp" type="RiskSecuritySubType_t" use="optional"/>
+      <xs:attribute name="MMY" type="RiskMaturityMonthYear_t" use="optional"/>
+      <xs:attribute name="MatTm" type="RiskMaturityTime_t" use="optional"/>
+      <xs:attribute name="RstrctTyp" type="RiskRestructuringType_t" use="optional"/>
+      <xs:attribute name="Snrty" type="RiskSeniority_t" use="optional"/>
+      <xs:attribute name="PutCall" type="RiskPutOrCall_t" use="optional"/>
+      <xs:attribute name="FlexInd" type="RiskFlexibleIndicator_t" use="optional"/>
+      <xs:attribute name="CpnRt" type="RiskCouponRate_t" use="optional"/>
+      <xs:attribute name="Exch" type="RiskSecurityExchange_t" use="optional"/>
+      <xs:attribute name="Desc" type="RiskSecurityDesc_t" use="optional"/>
+      <xs:attribute name="SettlTyp" type="RiskInstrumentSettlType_t" use="optional"/>
+      <xs:attribute name="Mult" type="RiskInstrumentMultiplier_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RiskInstrumentScope_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RiskInstrumentScope"
+                     ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RiskInstrumentScopeElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RiskInstrumentScopeAttributes"/>
+   </xs:complexType>
+   <xs:group name="RiskSecAltIDGrpElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="RiskSecAltIDGrpAttributes">
+      <xs:attribute name="AltID" type="RiskSecurityAltID_t" use="optional"/>
+      <xs:attribute name="AltIDSrc" type="RiskSecurityAltIDSource_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RiskSecAltIDGrp_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RiskSecAltIDGrp" ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RiskSecAltIDGrpElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RiskSecAltIDGrpAttributes"/>
+   </xs:complexType>
+   <xs:group name="RiskWarningLevelsElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="RiskWarningLevelsAttributes">
+      <xs:attribute name="Pct" type="RiskWarningLevelPercent_t" use="optional"/>
+      <xs:attribute name="Nme" type="RiskWarningLevelName_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RiskWarningLevels_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RiskWarningLevels" ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RiskWarningLevelsElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RiskWarningLevelsAttributes"/>
+   </xs:complexType>
+   <xs:group name="RelatedPartyGrpElements">
+      <xs:sequence>
+         <xs:element name="PtyDetl" type="RelatedPartyDetail_Block_t" minOccurs="0" maxOccurs="1"/>
+         <xs:element name="Rltnshp" type="PartyRelationships_Block_t" minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="RelatedPartyGrpAttributes"/>
+   <xs:complexType name="RelatedPartyGrp_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RelatedPartyGrp" ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RelatedPartyGrpElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RelatedPartyGrpAttributes"/>
+   </xs:complexType>
+   <xs:group name="RelatedPartyDetailElements">
+      <xs:sequence>
+         <xs:element name="Sub" type="RelatedPtysSubGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="AltPty" type="RelatedPartyAltIDs_Block_t" minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element name="CntxtPty" type="RelatedContextParties_Block_t" minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element name="RiskLmt" type="RelationshipRiskLimits_Block_t" minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="RelatedPartyDetailAttributes">
+      <xs:attribute name="ID" type="RelatedPartyID_t" use="optional"/>
+      <xs:attribute name="Src" type="RelatedPartyIDSource_t" use="optional"/>
+      <xs:attribute name="R" type="RelatedPartyRole_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RelatedPartyDetail_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RelatedPartyDetail" ComponentType="ImplicitBlock"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RelatedPartyDetailElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RelatedPartyDetailAttributes"/>
+   </xs:complexType>
+   <xs:group name="RelatedPtysSubGrpElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="RelatedPtysSubGrpAttributes">
+      <xs:attribute name="ID" type="RelatedPartySubID_t" use="optional"/>
+      <xs:attribute name="Typ" type="RelatedPartySubIDType_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RelatedPtysSubGrp_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RelatedPtysSubGrp" ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RelatedPtysSubGrpElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RelatedPtysSubGrpAttributes"/>
+   </xs:complexType>
+   <xs:group name="RelatedPartyAltIDsElements">
+      <xs:sequence>
+         <xs:element name="Sub" type="RelatedAltPtysSubGrp_Block_t" minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="RelatedPartyAltIDsAttributes">
+      <xs:attribute name="ID" type="RelatedPartyAltID_t" use="optional"/>
+      <xs:attribute name="Src" type="RelatedPartyAltIDSource_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RelatedPartyAltIDs_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RelatedPartyAltIDs" ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RelatedPartyAltIDsElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RelatedPartyAltIDsAttributes"/>
+   </xs:complexType>
+   <xs:group name="RelatedAltPtysSubGrpElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="RelatedAltPtysSubGrpAttributes">
+      <xs:attribute name="ID" type="RelatedPartyAltSubID_t" use="optional"/>
+      <xs:attribute name="Typ" type="RelatedPartyAltSubIDType_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RelatedAltPtysSubGrp_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RelatedAltPtysSubGrp"
+                     ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RelatedAltPtysSubGrpElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RelatedAltPtysSubGrpAttributes"/>
+   </xs:complexType>
+   <xs:group name="RelatedContextPartiesElements">
+      <xs:sequence>
+         <xs:element name="Sub" type="RelatedContextPtysSubGrp_Block_t" minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="RelatedContextPartiesAttributes">
+      <xs:attribute name="ID" type="RelatedContextPartyID_t" use="optional"/>
+      <xs:attribute name="Src" type="RelatedContextPartyIDSource_t" use="optional"/>
+      <xs:attribute name="R" type="RelatedContextPartyRole_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RelatedContextParties_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RelatedContextParties"
+                     ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RelatedContextPartiesElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RelatedContextPartiesAttributes"/>
+   </xs:complexType>
+   <xs:group name="RelatedContextPtysSubGrpElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="RelatedContextPtysSubGrpAttributes">
+      <xs:attribute name="ID" type="RelatedContextPartySubID_t" use="optional"/>
+      <xs:attribute name="Typ" type="RelatedContextPartySubIDType_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RelatedContextPtysSubGrp_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RelatedContextPtysSubGrp"
+                     ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RelatedContextPtysSubGrpElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RelatedContextPtysSubGrpAttributes"/>
+   </xs:complexType>
+   <xs:group name="RelationshipRiskLimitsElements">
+      <xs:sequence>
+         <xs:element name="InstrmtScope" type="RelationshipRiskInstrumentScope_Block_t"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element name="WarnLvl" type="RelationshipRiskWarningLevels_Block_t" minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="RelationshipRiskLimitsAttributes">
+      <xs:attribute name="Typ" type="RelationshipRiskLimitType_t" use="optional"/>
+      <xs:attribute name="Amt" type="RelationshipRiskLimitAmount_t" use="optional"/>
+      <xs:attribute name="Ccy" type="RelationshipRiskLimitCurrency_t" use="optional"/>
+      <xs:attribute name="Pltfm" type="RelationshipRiskLimitPlatform_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RelationshipRiskLimits_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RelationshipRiskLimits"
+                     ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RelationshipRiskLimitsElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RelationshipRiskLimitsAttributes"/>
+   </xs:complexType>
+   <xs:group name="RelationshipRiskInstrumentScopeElements">
+      <xs:sequence>
+         <xs:element name="AID" type="RelationshipRiskSecAltIDGrp_Block_t" minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="RelationshipRiskInstrumentScopeAttributes">
+      <xs:attribute name="Oper" type="RelationshipRiskInstrumentOperator_t" use="optional"/>
+      <xs:attribute name="Sym" type="RelationshipRiskSymbol_t" use="optional"/>
+      <xs:attribute name="Sfx" type="RelationshipRiskSymbolSfx_t" use="optional"/>
+      <xs:attribute name="ID" type="RelationshipRiskSecurityID_t" use="optional"/>
+      <xs:attribute name="Src" type="RelationshipRiskSecurityIDSource_t" use="optional"/>
+      <xs:attribute name="Prod" type="RelationshipRiskProduct_t" use="optional"/>
+      <xs:attribute name="ProdCmplx" type="RelationshipRiskProductComplex_t" use="optional"/>
+      <xs:attribute name="SecGrp" type="RelationshipRiskSecurityGroup_t" use="optional"/>
+      <xs:attribute name="CFI" type="RelationshipRiskCFICode_t" use="optional"/>
+      <xs:attribute name="SecTyp" type="RelationshipRiskSecurityType_t" use="optional"/>
+      <xs:attribute name="SecSubTyp" type="RelationshipRiskSecuritySubType_t" use="optional"/>
+      <xs:attribute name="MMY" type="RelationshipRiskMaturityMonthYear_t" use="optional"/>
+      <xs:attribute name="MatTm" type="RelationshipRiskMaturityTime_t" use="optional"/>
+      <xs:attribute name="RstrctTyp" type="RelationshipRiskRestructuringType_t" use="optional"/>
+      <xs:attribute name="Snrty" type="RelationshipRiskSeniority_t" use="optional"/>
+      <xs:attribute name="PutCall" type="RelationshipRiskPutOrCall_t" use="optional"/>
+      <xs:attribute name="FlexInd" type="RelationshipRiskFlexibleIndicator_t" use="optional"/>
+      <xs:attribute name="CpnRt" type="RelationshipRiskCouponRate_t" use="optional"/>
+      <xs:attribute name="Exch" type="RelationshipRiskSecurityExchange_t" use="optional"/>
+      <xs:attribute name="Desc" type="RelationshipRiskSecurityDesc_t" use="optional"/>
+      <xs:attribute name="SettlTyp" type="RelationshipRiskInstrumentSettlType_t" use="optional"/>
+      <xs:attribute name="Mult" type="RelationshipRiskInstrumentMultiplier_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RelationshipRiskInstrumentScope_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RelationshipRiskInstrumentScope"
+                     ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RelationshipRiskInstrumentScopeElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RelationshipRiskInstrumentScopeAttributes"/>
+   </xs:complexType>
+   <xs:group name="RelationshipRiskSecAltIDGrpElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="RelationshipRiskSecAltIDGrpAttributes">
+      <xs:attribute name="AltID" type="RelationshipRiskSecurityAltID_t" use="optional"/>
+      <xs:attribute name="AltIDSrc" type="RelationshipRiskSecurityAltIDSource_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RelationshipRiskSecAltIDGrp_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RelationshipRiskSecAltIDGrp"
+                     ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RelationshipRiskSecAltIDGrpElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RelationshipRiskSecAltIDGrpAttributes"/>
+   </xs:complexType>
+   <xs:group name="RelationshipRiskWarningLevelsElements">
+      <xs:sequence/>
+   </xs:group>
+   <xs:attributeGroup name="RelationshipRiskWarningLevelsAttributes">
+      <xs:attribute name="Pct" type="RelationshipRiskWarningLevelPercent_t" use="optional"/>
+      <xs:attribute name="Nme" type="RelationshipRiskWarningLevelName_t" use="optional"/>
+   </xs:attributeGroup>
+   <xs:complexType name="RelationshipRiskWarningLevels_Block_t">
+      <xs:annotation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="RelationshipRiskWarningLevels"
+                     ComponentType="ImplicitBlockRepeating"
+                     Category="PartiesReferenceData"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:group ref="RelationshipRiskWarningLevelsElements"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="RelationshipRiskWarningLevelsAttributes"/>
+   </xs:complexType>
+</xs:schema>
