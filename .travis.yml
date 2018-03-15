@@ -1,0 +1,33 @@
+language: cpp
+sudo: required
+dist: trusty
+compiler:
+  - gcc
+os: linux
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-7
+      - libboost-system-dev
+      - libboost-filesystem-dev
+      - libboost-program-options-dev
+      - libboost-log-dev
+      - libboost-iostreams-dev
+      - libgtest-dev
+      - xerces-c
+      - cmake
+
+before_install:
+#  - sudo add-apt-repository ppa:kubuntu-ppa/backports -y
+#  - sudo apt-get -qq update
+#  - sudo apt-get install -y libgtest-dev
+
+script:
+  - export CXX=/usr/bin/g++-7
+  - export CC=/usr/bin/gcc-7
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
