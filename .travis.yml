@@ -28,6 +28,7 @@ before_install:
   - sudo cmake -DBUILD_SHARED_LIBS=ON .
   - sudo make
   - sudo make install
+  - cd ..
 
 script:
   - export CXX=/usr/bin/g++-7
