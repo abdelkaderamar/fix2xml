@@ -16,7 +16,7 @@ addons:
       - libboost-log-dev
       - libboost-iostreams-dev
       - libgtest-dev
-      - xerces-c
+      - libxerces-c-dev
       - cmake
 
 before_install:
