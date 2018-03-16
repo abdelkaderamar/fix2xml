@@ -35,7 +35,7 @@ before_install:
   - ./bootstrap
   - ./configure 
   - make 
-  - make install
+  - sudo make install
   - cd ..
 
 script:
