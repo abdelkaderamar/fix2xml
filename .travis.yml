@@ -29,6 +29,14 @@ before_install:
   - sudo make
   - sudo make install
   - cd ..
+  - wget https://github.com/quickfix/quickfix/archive/v.1.14.4.tar.gz
+  - tar xf v.1.14.4.tar.gz 
+  - cd quickfix-v.1.14.4
+  - ./bootstrap
+  - ./configure 
+  - make 
+  - make install
+  - cd ..
 
 script:
   - export CXX=/usr/bin/g++-7
