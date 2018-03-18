@@ -40,9 +40,7 @@ Endif()
 Find_Package ( GTest )
 
 If ( FIX2XML_COVERAGE )
-  Message ( "Appending coverage flags ")
   APPEND_COVERAGE_COMPILER_FLAGS()
-  Message ( "CMAKE_CXX_FLAGS = ${CMAKE_CXX_FLAGS}" )
 Endif ( FIX2XML_COVERAGE )
 
 # Include path
