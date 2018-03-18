@@ -15,6 +15,13 @@ Endif ( FIXTOOLS_REVISION_VERSION )
 #--- Cmake module path
 Set ( CMAKE_MODULE_PATH ${FIXTOOLS_SOURCE_DIR}/cmake )
 
+Set ( CMAKE_BUILD_TYPE "Debug" )
+
+#--- options
+OPTION( FIX2XML_COVERAGE   "Build FIXTOOLS for coverage." OFF )
+
+Include (CodeCoverage)
+
 # C++11
 # Add_Definitions ( "-std=c++11" )
 
@@ -32,11 +39,24 @@ Endif()
 
 Find_Package ( GTest )
 
-# Compiler
+If ( FIX2XML_COVERAGE )
+  Message ( "Appending coverage flags ")
+  APPEND_COVERAGE_COMPILER_FLAGS()
+  Message ( "CMAKE_CXX_FLAGS = ${CMAKE_CXX_FLAGS}" )
+Endif ( FIX2XML_COVERAGE )
+
+# Include path
 Include_Directories ( ${FIXTOOLS_SOURCE_DIR}/src )
 
 #--- Source directories
 Add_Subdirectory ( src )
+
+Set(COVERAGE_EXCLUDES 'boost/*' '/usr/*' 'test/*')
+
+SETUP_TARGET_FOR_COVERAGE (
+  NAME fix2xml_coverage
+  EXECUTABLE fix2xml_test
+  DEPENDENCIES fix2xml_test )
 
 #--- Test directories
 Add_Subdirectory ( test )

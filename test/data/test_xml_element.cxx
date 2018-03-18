@@ -48,11 +48,12 @@ TEST(xml_element_test, ctor)
     EXPECT_FALSE(elt.empty());
   }
   {
+    // If all child elements are empty the parent is empty 
     const string name { "foo" };
     xml_element elt(name);
     xml_element child("bar");
     elt.add_element(child);
-    EXPECT_FALSE(elt.empty());
+    EXPECT_TRUE(elt.empty());
   }
 }
 
