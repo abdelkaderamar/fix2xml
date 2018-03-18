@@ -42,6 +42,7 @@ script:
   - export CXX=/usr/bin/g++-7
   - export CC=/usr/bin/gcc-7
   - mkdir build && cd build && cmake .. && make
+  - cd ..
   - mkdir build_coverage && cd build_coverage && cmake .. -DCMAKE_BUILD_TYPE=Debug -DFIX2XML_COVERAGE=ON && make fix2xml_coverage
 
 after_success:
