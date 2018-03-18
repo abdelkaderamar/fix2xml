@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.fixprotocol.org/FIXML-5-0-SP2"
+           xmlns:fm="http://www.fixprotocol.org/FIXML-5-0-SP2/METADATA"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.fixprotocol.org/FIXML-5-0-SP2/METADATA fixml-metadata-5-0-SP2.xsd"
+           targetNamespace="http://www.fixprotocol.org/FIXML-5-0-SP2"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:simpleType name="Length">
+      <xs:annotation>
+         <xs:documentation>intint field representing the length in bytes. Value must be positive.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:nonNegativeInteger"/>
+   </xs:simpleType>
+   <xs:simpleType name="SeqNum">
+      <xs:annotation>
+         <xs:documentation>intint field representing a message sequence number. Value must be positive.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:positiveInteger"/>
+   </xs:simpleType>
+   <xs:simpleType name="Qty">
+      <xs:annotation>
+         <xs:documentation>floatfloat field capable of storing either a whole number (no decimal places) of "shares" (securities denominated in whole units) or a decimal value containing decimal places for non-share quantity asset classes (securities denominated in fractional units).</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:decimal"/>
+   </xs:simpleType>
+   <xs:simpleType name="Price">
+      <xs:annotation>
+         <xs:documentation>floatfloat field  representing a price. Note the number of decimal places may vary. For certain asset classes prices may be negative values. For example, prices for options strategies can be negative under certain market conditions. Refer to Volume 7: FIX Usage by Product for asset classes that support negative price values. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:decimal"/>
+   </xs:simpleType>
+
+</xs:schema>
