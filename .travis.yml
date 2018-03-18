@@ -17,6 +17,8 @@ addons:
       - libboost-iostreams-dev
       - libxerces-c-dev
       - cmake
+      - lcov
+      - gcovr 
 
 before_install:
   - sudo wget https://github.com/google/googletest/archive/release-1.8.0.tar.gz
