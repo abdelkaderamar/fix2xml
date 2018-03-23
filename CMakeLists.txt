@@ -58,3 +58,6 @@ SETUP_TARGET_FOR_COVERAGE (
 
 #--- Test directories
 Add_Subdirectory ( test )
+
+#--- Tools directory
+Add_Subdirectory ( tools )
