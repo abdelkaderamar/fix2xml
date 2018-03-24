@@ -66,7 +66,7 @@ namespace fix2xml
   {
     fix_component_type() {}
     fix_component_type(const std::string& name, const std::string& type) :
-      fix_base_type(name), _type(type)
+      fix_base_type(name), _type(type), _short_name(name)
     {}
 
     std::string to_string() const override;
@@ -75,6 +75,7 @@ namespace fix2xml
     void add_component(const std::string& compo) { _components.insert(compo); }
 
     std::string _type;
+    std::string _short_name;
     std::set<std::string> _fields;
     std::set<std::string> _components;
   }; // end fix_component_type

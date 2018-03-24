@@ -104,7 +104,7 @@ namespace fix2xml
     for (DOMElement * one_component_elt : childs) {
       fix_component_type component_type;
       list<fix_component_type> groups;
-      _component_parser.parse(one_component_elt, component_type, groups);
+      _component_parser.parse(one_component_elt, component_type, groups, "");
       _fix_dico->add_component(component_type);
       for (const auto& g : groups) {
        _fix_dico->add_component(g);
