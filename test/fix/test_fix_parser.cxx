@@ -67,7 +67,7 @@ TEST(fix_parser, parse)
     EXPECT_EQ(1, compo_idreq._components.size());
 
     fix_component_type compo_nocompids;
-    EXPECT_TRUE(dico->get_fix_component("NoCompIDs", compo_nocompids));
+    EXPECT_TRUE(dico->get_fix_component("CompIDReqGrp.NoCompIDs", compo_nocompids));
     EXPECT_EQ(0, compo_nocompids._components.size());
     EXPECT_EQ(4, compo_nocompids._fields.size());
     EXPECT_EQ(1, compo_nocompids._fields.count("RefCompID"));
