@@ -22,12 +22,13 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "fix/fix_parser.hxx"
-
+#include "fixml/fixml_xsd_parser.hxx"
 #include "util/fix_env.hxx"
 
 #include <boost/algorithm/string.hpp>
 #include <boost/log/trivial.hpp>
 
+#include <algorithm>
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
@@ -62,14 +63,16 @@ int usage(const int ret) {
 //-----------------------------------------------------------------------------
 
 string generate_var_name(const string &type) {
+  string type_name = type;
+  replace(type_name.begin(), type_name.end(), '.', '_');
   static map<string, int> variables;
   int i = -1;
-  const auto it = variables.find(type);
+  const auto it = variables.find(type_name);
   if (it != variables.end()) {
     i = it->second;
   }
-  variables[type] = ++i;
-  return type + "_" + to_string(i);
+  variables[type_name] = ++i;
+  return type_name + "_" + to_string(i);
 }
 
 //-----------------------------------------------------------------------------
@@ -185,19 +188,25 @@ string generate_field(ostream &os, const string field_name,
 
 void generate_component(ostream &os, const fix_component_type &compo_type,
                         const shared_ptr<fix_dico_container> &dico,
+                        const shared_ptr<fixml_dico_container> &fixml_dico,
                         const string &field_map, const string &parent_type,
                         const int level, const string var_level) {
   os << TAB(level) << "// " << compo_type._name << endl;
-  const string compo_var_name = generate_var_name(compo_type._short_name);
-  os << TAB(level) << "multiset<pair<string, string>> " << compo_var_name << ";"
-     << endl;
+  const string compo_var_name = generate_var_name(compo_type._name);
+  os << TAB(level) << "multiset<string> " << compo_var_name << ";" << endl;
   for (const auto &field_name : compo_type._fields) {
     string value = generate_field(os, field_name, field_map, dico, level);
-    if (!value.empty()) {
-      os << TAB(level) << compo_var_name << ".insert(make_pair(" << value
-         << ".getString(), \"" << field_name << "\"));" << endl;
+    if (!value.empty() && fixml_dico->has_fix_tag(field_name)) {
+      os << TAB(level) << compo_var_name << ".insert(" << value
+         << ".getString());" << endl;
+    } else {
+      BOOST_LOG_TRIVIAL(warning) << "Not adding field " << field_name
+                                 << " with value [" << value << "]";
     }
   }
+  os << TAB(level) << "all_values.push_back(" << compo_var_name << ");" << endl
+     << endl;
+
   for (const auto &child_compo_name : compo_type._components) {
     fix_component_type child_compo_type;
     if (!dico->get_fix_component(child_compo_name, child_compo_type)) {
@@ -217,16 +226,16 @@ void generate_component(ostream &os, const fix_component_type &compo_type,
         os << TAB(level) << "{" << endl;
         os << TAB(level + 1) << group_type_name << " " << group_var_name << ";"
            << endl;
-        generate_component(os, child_compo_type, dico, group_var_name,
-                           group_type_name, level + 1,
+        generate_component(os, child_compo_type, dico, fixml_dico,
+                           group_var_name, group_type_name, level + 1,
                            var_level + to_string(i) + "_");
         os << TAB(level + 1) << field_map << ".addGroup(" << group_var_name
            << ");" << endl;
         os << TAB(level) << "}" << endl;
       }
     } else {
-      generate_component(os, child_compo_type, dico, field_map, parent_type,
-                         level, var_level);
+      generate_component(os, child_compo_type, dico, fixml_dico, field_map,
+                         parent_type, level, var_level);
     }
   }
 }
@@ -234,30 +243,71 @@ void generate_component(ostream &os, const fix_component_type &compo_type,
 //-----------------------------------------------------------------------------
 
 void generate_test(ostream &os, const fix_message_type &msg_type,
-                   const shared_ptr<fix_dico_container> &dico, const string &ns,
-                   const string &fix_filename, const string &xsd_schema) {
+                   const shared_ptr<fix_dico_container> &dico,
+                   const shared_ptr<fixml_dico_container> &fixml_dico,
+                   const string &ns, const string &fix_filename,
+                   const string &xsd_schema) {
   const string msg_type_name = ns + "::" + msg_type._name;
   os << "TEST ( " << msg_type._name << ", set_fields)\n"
-     << "{\n"
+     << "{" << endl
+     << endl
+     << TAB(0) << "fixml2fix_converter converter {\"" << fix_filename
+     << "\", \"" << xsd_schema << "\"};" << endl
+     << TAB(0) << "auto& fixml_dict = converter.fixml_dico();" << endl
+     << TAB(0) << "ASSERT_TRUE(converter.init());" << endl
      << TAB(0) << msg_type_name << " "
-     << "msg;\n";
+     << "msg;" << endl
+     << endl
+     << TAB(0) << "list<multiset<string>> all_values;" << endl;
+  const string msg_var_name = generate_var_name(msg_type._name);
+  os << TAB(0) << "multiset<string> " << msg_var_name << ";" << endl;
   for (auto &field_name : msg_type._fields) {
-    generate_field(os, field_name, "msg", dico, 0);
+    const string value = generate_field(os, field_name, "msg", dico, 0);
+    if (!value.empty() && fixml_dico->has_fix_tag(field_name)) {
+      os << TAB(0) << msg_var_name << ".insert(" << value << ".getString());"
+         << endl;
+    }
   }
+  os << TAB(0) << "all_values.push_back(" << msg_var_name << ");" << endl
+     << endl;
+
   for (auto &compo_name : msg_type._components) {
     fix_component_type compo_type;
     if (dico->get_fix_component(compo_name, compo_type))
-      generate_component(os, compo_type, dico, "msg", msg_type_name, 0, "");
+      generate_component(os, compo_type, dico, fixml_dico, "msg", msg_type_name,
+                         0, "");
   }
 
   // FIX2FIXML code generation
   os << endl
-     << TAB(0) << "fixml2fix_converter converter {\"" << fix_filename
-     << "\", \"" << xsd_schema << "\"};" << endl
-     << TAB(0) << "ASSERT_TRUE(converter.init());" << endl
      << TAB(0) << "string str;" << endl
      << TAB(0) << "converter.fix2fixml(msg, str);" << endl
-     << TAB(0) << "cout << str << endl;" << endl;
+     << TAB(0) << "cout << str << endl;" << endl
+     << endl;
+
+  os << endl
+     << TAB(0) << "xml_element elt;" << endl
+     << TAB(0) << "converter.fix2fixml(msg, elt);" << endl
+     << TAB(0) << "cout << elt.to_string() << endl;" << endl
+
+     << TAB(0) << "list<multiset<string>> ls;" << endl
+     << TAB(0) << "elt.to_list(ls);" << endl
+     << TAB(0) << "cout << ls.size() << \" vs \" << all_values.size() << endl;"
+     << endl
+     << TAB(0) << "for (const auto& l : all_values) {" << endl
+     << TAB(0) << "bool found = false;" << endl
+     << TAB(0) << "for (const auto& xml_l : ls) {" << endl
+     //     << TAB(0) << "if (xml_l == l) {" << endl
+     //     << TAB(0) << "found = true;" << endl
+     //     << TAB(0) << "break;" << endl
+     << TAB(0) << "}" << endl
+     << TAB(0) << "}" << endl
+     << TAB(0) << "if ( ! found) {" << endl
+     //     << TAB(0) << "copy(l.begin(), l.end(), ostream_iterator(cout, '
+     //     '));"
+     << endl
+     << TAB(0) << "}" << endl
+     << TAB(0) << "}" << endl;
 
   os << "}" << endl;
 }
@@ -269,12 +319,15 @@ void generate_header(ostream &os, const fix_message_type &msg_type,
                      const string &ns) {
   os << "#include <gtest/gtest.h>" << endl << endl;
 
-  os << "#include \"converter/fixml2fix_converter.hxx\"" << endl;
+  os << "#include \"converter/fixml2fix_converter.hxx\"" << endl
+     << "#include \"util/fix_env.hxx\"" << endl
+     << endl;
 
   const std::string lower_ns = boost::algorithm::to_lower_copy(ns);
 
   os << "#include <quickfix/" << lower_ns << "/" + msg_type._name + ".h>"
-     << endl
+     << endl << endl
+     << "#include <list>" << endl
      << "#include <set>" << endl
      << "#include <string>" << endl
      << "#include <utility>" << endl
@@ -288,13 +341,22 @@ void generate_header(ostream &os, const fix_message_type &msg_type,
 
 void generate_message_test(const fix_message_type &msg_type,
                            const shared_ptr<fix_dico_container> &dico,
+                           const shared_ptr<fixml_dico_container> &fixml_dico,
                            const string &ns, const string &fix_filename,
                            const string &xsd_schema) {
   const string filename = "generated/test_" + msg_type._name + ".cpp";
   BOOST_LOG_TRIVIAL(info) << "Generating file " << filename;
   ofstream ofs(filename.c_str());
   generate_header(ofs, msg_type, dico, ns);
-  generate_test(ofs, msg_type, dico, ns, fix_filename, xsd_schema);
+  generate_test(ofs, msg_type, dico, fixml_dico, ns, fix_filename, xsd_schema);
+
+  ofs << "int main(int argc, char *argv[]) {" << endl
+      << TAB(0) << "::testing::InitGoogleTest(&argc, argv);" << endl
+      << TAB(0) << "fix2xml::fix_env::init_xerces();" << endl
+      << TAB(0) << "return RUN_ALL_TESTS();" << endl
+      << TAB(0) << "fix2xml::fix_env::terminate_xerces();" << endl
+      << "}" << endl;
+
   ofs.close();
 } // end generate_message_test
 
@@ -321,11 +383,18 @@ int main(int argc, char *argv[]) {
       BOOST_LOG_TRIVIAL(error) << "Failed to parse " << fix_filename;
       return 1;
     }
+    fixml_xsd_parser xsd_parser;
+    if (!xsd_parser.parse(xsd_schema.c_str())) {
+      BOOST_LOG_TRIVIAL(error) << "Failed to parse " << xsd_schema;
+      return 1;
+    }
     auto dico = parser.dico();
+    auto fixml_dico = xsd_parser.dico();
     auto messages = dico->messages();
     auto &name_index = messages.get<0>();
     for (const auto msg_type : name_index) {
-      generate_message_test(msg_type, dico, ns, fix_filename, xsd_schema);
+      generate_message_test(msg_type, dico, fixml_dico, ns, fix_filename,
+                            xsd_schema);
     }
   }
 

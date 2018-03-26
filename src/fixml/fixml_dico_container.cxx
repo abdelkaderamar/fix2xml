@@ -137,8 +137,8 @@ int fixml_dico_container::get_field_fix_tag(
 
 //----------------------------------------------------------------------------
 
-bool fixml_dico_container::get_type_by_fixml_name(const string &fixml_msg_name,
-                                                  fixml_type &fix_msg_type) {
+bool fixml_dico_container::get_type_by_fixml_name(
+    const string &fixml_msg_name, fixml_type &fix_msg_type) const {
   auto it_msg_type = _fixml_name_index.find(fixml_msg_name);
   auto it_msg_elt = _element_name_index.find(fixml_msg_name);
   if (it_msg_type == _fixml_name_index.end() &&
@@ -157,6 +157,28 @@ bool fixml_dico_container::get_type_by_fixml_name(const string &fixml_msg_name,
   return true;
 }
 
+//----------------------------------------------------------------------------
+
+bool fixml_dico_container::get_type_by_fix_name(
+    const std::string &fixname, fixml_type &fix_msg_type) const {
+  // TODO: merge with get_message_type
+  auto it = _fix_name_index.find(fixname);
+  if (it == _fix_name_index.end()) {
+    BOOST_LOG_TRIVIAL(warning) << "FIXML type not found for " << fixname;
+    return false;
+  }
+  fix_msg_type = *it;
+  return true;
+}
+//----------------------------------------------------------------------------
+
+bool fixml_dico_container::has_fix_tag(const std::string &fixname) const {
+  auto it = _fix_name_index.find(fixname);
+  if (it == _fix_name_index.end()) {
+    return false;
+  }
+  return (!it->_fix_data._tag.empty());
+}
 //----------------------------------------------------------------------------
 }
 
