@@ -554,7 +554,7 @@
       <xs:restriction base="AcctIDSource_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="BenchmarkPriceType_t">
-      <xs:restriction base="PriceType_enum_t"/>
+      <xs:restriction base="BenchmarkPriceType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="ConfirmStatus_t">
       <xs:restriction base="ConfirmStatus_enum_t"/>
@@ -590,7 +590,7 @@
       <xs:restriction base="IOIQualifier_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="YieldRedemptionPriceType_t">
-      <xs:restriction base="PriceType_enum_t"/>
+      <xs:restriction base="YieldRedemptionPriceType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PosType_t">
       <xs:restriction base="PosType_enum_t"/>
@@ -662,7 +662,7 @@
       <xs:restriction base="PartyRole_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="BenchmarkSecurityIDSource_t">
-      <xs:restriction base="SecurityIDSource_enum_t"/>
+      <xs:restriction base="BenchmarkSecurityIDSource_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TrdRegTimestampType_t">
       <xs:restriction base="TrdRegTimestampType_enum_t"/>
@@ -1007,7 +1007,7 @@
       <xs:restriction base="PegPriceType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PegSecurityIDSource_t">
-      <xs:restriction base="SecurityIDSource_enum_t"/>
+      <xs:restriction base="PegSecurityIDSource_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TriggerType_t">
       <xs:restriction base="TriggerType_enum_t"/>
@@ -1016,7 +1016,7 @@
       <xs:restriction base="TriggerAction_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TriggerSecurityIDSource_t">
-      <xs:restriction base="SecurityIDSource_enum_t"/>
+      <xs:restriction base="TriggerSecurityIDSource_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TriggerPriceType_t">
       <xs:restriction base="TriggerPriceType_enum_t"/>
@@ -1088,7 +1088,7 @@
       <xs:union memberTypes="MDSecSizeType_enum_t Reserved100Plus"/>
    </xs:simpleType>
    <xs:simpleType name="PriceUnitOfMeasure_t">
-      <xs:restriction base="UnitOfMeasure_enum_t"/>
+      <xs:restriction base="PriceUnitOfMeasure_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="SettlMethod_t">
       <xs:restriction base="SettlMethod_enum_t"/>
@@ -1433,7 +1433,7 @@
       <xs:restriction base="PutOrCall_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RiskInstrumentSettlType_t">
-      <xs:union memberTypes="SettlType_enum_t Tenor"/>
+      <xs:union memberTypes="SettlType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelatedPartyIDSource_t">
       <xs:restriction base="PartyIDSource_enum_t"/>
