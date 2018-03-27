@@ -103,8 +103,8 @@ string generate_dateonly() {
   int date = rand() % 28;
   int month = 1 + rand() % 12;
   int year = 2000 + rand() % 18;
-  return "UTCDATEONLY(" + to_string(date) + ", " + to_string(month) +
-         to_string(year) + ")";
+  return "FIX::UTCDATEONLY(" + to_string(date) + ", " + to_string(month) +
+         ", " + to_string(year) + ")";
 }
 string generate_currency() {
   static vector<string> CURRENCIES = {"USD", "EUR", "GBP", "CHF", "JPY", "CAN"};
@@ -305,17 +305,36 @@ void generate_test(ostream &os, const fix_message_type &msg_type,
      << TAB(0) << "elt.to_list(elt_lists);" << endl
      << TAB(0) << "EXPECT_EQ(elt_lists.size(), all_values.size());" << endl
      << endl
+     << TAB(0) << "cout << \"FIX components\" << endl;" << endl
+     << TAB(0) << "for (const auto& l : all_values) {" << endl
+     << TAB(1)
+     << "copy(l.begin(), l.end(), ostream_iterator<string>(cout, \" \"));"
+     << endl
+     << TAB(1) << "cout << endl;" << endl
+     << TAB(0) << "}" << endl
+     << TAB(0) << "cout << \"XML components\" << endl;" << endl
+     << TAB(0) << "for (const auto& l : elt_lists) {" << endl
+     << TAB(1)
+     << "copy(l.begin(), l.end(), ostream_iterator<string>(cout, \" \"));"
+     << endl
+     << TAB(1) << "cout << endl;" << endl
+     << TAB(0) << "}" << endl
+     << endl
+
      << TAB(0) << "for (const auto& xml_l : elt_lists) {" << endl
      << TAB(1) << "bool found = false;" << endl
      << TAB(1) << "for (const auto& l : all_values) {" << endl
-     << TAB(2) << "if (includes(l.begin(), l.end(), xml_l.begin(), xml_l.end())) {" << endl
+     << TAB(2)
+     << "if (includes(l.begin(), l.end(), xml_l.begin(), xml_l.end())) {"
+     << endl
      << TAB(3) << "found = true;" << endl
      << TAB(3) << "break;" << endl
      << TAB(2) << "} // end if includes" << endl
      << TAB(1) << "} // end for all_values" << endl
      << TAB(1) << "if ( ! found) {" << endl
      << TAB(2) << "cout << \"#### NOT FOUND ###\" << endl;" << endl
-     << TAB(2) << "copy(xml_l.begin(), xml_l.end(), ostream_iterator<string>(cout, \" \"));"
+     << TAB(2) << "copy(xml_l.begin(), xml_l.end(), "
+                  "ostream_iterator<string>(cout, \" \"));"
      << TAB(2) << "cout << endl;" << endl
      << TAB(1) << "} // end if ! found" << endl
      << TAB(0) << "} // end for elt_lists" << endl;
