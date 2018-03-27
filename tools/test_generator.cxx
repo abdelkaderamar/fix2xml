@@ -155,6 +155,14 @@ string generate_random_value(const fix_field_type &field_type) {
 }
 
 //-----------------------------------------------------------------------------
+bool is_real_number_type(const fix_field_type &field_type) {
+  if (field_type._type == "PRICE" || field_type._type == "QTY" ||
+      field_type._type == "FLOAT" || field_type._type == "AMT" ||
+      field_type._type == "PRICEOFFSET" || field_type._type == "PERCENTAGE")
+    return true;
+  return false;
+}
+//-----------------------------------------------------------------------------
 
 string generate_field(ostream &os, const string field_name,
                       const string &field_map,
@@ -174,8 +182,15 @@ string generate_field(ostream &os, const string field_name,
        << value << "));\n";
   } else {
     var_name = generate_var_name(field_name);
-    os << TAB(level) << "FIX::" << field_name << " " << var_name << "(" << value
-       << ");" << endl;
+    if (is_real_number_type(field_type)) {
+      os << TAB(level) << "FIX::" << field_name << " " << var_name << ";"
+         << endl
+         << TAB(level) << var_name << ".setString(\"" << value << "\");"
+         << endl;
+    } else {
+      os << TAB(level) << "FIX::" << field_name << " " << var_name << "("
+         << value << ");" << endl;
+    }
     os << TAB(level) << field_map << ".set(" << var_name << ");" << endl;
     // os << TAB(level) << field_map << ".set(FIX::" << field_name << "(" <<
     // value
@@ -193,20 +208,22 @@ void generate_component(ostream &os, const fix_component_type &compo_type,
                         const int level, const string var_level) {
   os << TAB(level) << "// " << compo_type._name << endl;
   const string compo_var_name = generate_var_name(compo_type._name);
-  os << TAB(level) << "multiset<string> " << compo_var_name << ";" << endl;
-  for (const auto &field_name : compo_type._fields) {
-    string value = generate_field(os, field_name, field_map, dico, level);
-    if (!value.empty() && fixml_dico->has_fix_tag(field_name)) {
-      os << TAB(level) << compo_var_name << ".insert(" << value
-         << ".getString());" << endl;
-    } else {
-      BOOST_LOG_TRIVIAL(warning) << "Not adding field " << field_name
-                                 << " with value [" << value << "]";
+  if (compo_type._fields.size() > 0) {
+    os << TAB(level) << "multiset<string> " << compo_var_name << ";" << endl;
+    for (const auto &field_name : compo_type._fields) {
+      string value = generate_field(os, field_name, field_map, dico, level);
+      if (!value.empty() && fixml_dico->has_fix_tag(field_name)) {
+        os << TAB(level) << compo_var_name << ".insert(" << value
+           << ".getString());" << endl;
+      } else {
+        BOOST_LOG_TRIVIAL(warning) << "Not adding field " << field_name
+                                   << " with value [" << value << "]";
+      }
     }
+    os << TAB(level) << "all_values.push_back(" << compo_var_name << ");"
+       << endl
+       << endl;
   }
-  os << TAB(level) << "all_values.push_back(" << compo_var_name << ");" << endl
-     << endl;
-
   for (const auto &child_compo_name : compo_type._components) {
     fix_component_type child_compo_type;
     if (!dico->get_fix_component(child_compo_name, child_compo_type)) {
@@ -280,34 +297,28 @@ void generate_test(ostream &os, const fix_message_type &msg_type,
 
   // FIX2FIXML code generation
   os << endl
-     << TAB(0) << "string str;" << endl
-     << TAB(0) << "converter.fix2fixml(msg, str);" << endl
-     << TAB(0) << "cout << str << endl;" << endl
-     << endl;
-
-  os << endl
      << TAB(0) << "xml_element elt;" << endl
      << TAB(0) << "converter.fix2fixml(msg, elt);" << endl
      << TAB(0) << "cout << elt.to_string() << endl;" << endl
 
-     << TAB(0) << "list<multiset<string>> ls;" << endl
-     << TAB(0) << "elt.to_list(ls);" << endl
-     << TAB(0) << "cout << ls.size() << \" vs \" << all_values.size() << endl;"
+     << TAB(0) << "list<multiset<string>> elt_lists;" << endl
+     << TAB(0) << "elt.to_list(elt_lists);" << endl
+     << TAB(0) << "EXPECT_EQ(elt_lists.size(), all_values.size());" << endl
      << endl
-     << TAB(0) << "for (const auto& l : all_values) {" << endl
-     << TAB(0) << "bool found = false;" << endl
-     << TAB(0) << "for (const auto& xml_l : ls) {" << endl
-     //     << TAB(0) << "if (xml_l == l) {" << endl
-     //     << TAB(0) << "found = true;" << endl
-     //     << TAB(0) << "break;" << endl
-     << TAB(0) << "}" << endl
-     << TAB(0) << "}" << endl
-     << TAB(0) << "if ( ! found) {" << endl
-     //     << TAB(0) << "copy(l.begin(), l.end(), ostream_iterator(cout, '
-     //     '));"
-     << endl
-     << TAB(0) << "}" << endl
-     << TAB(0) << "}" << endl;
+     << TAB(0) << "for (const auto& xml_l : elt_lists) {" << endl
+     << TAB(1) << "bool found = false;" << endl
+     << TAB(1) << "for (const auto& l : all_values) {" << endl
+     << TAB(2) << "if (includes(l.begin(), l.end(), xml_l.begin(), xml_l.end())) {" << endl
+     << TAB(3) << "found = true;" << endl
+     << TAB(3) << "break;" << endl
+     << TAB(2) << "} // end if includes" << endl
+     << TAB(1) << "} // end for all_values" << endl
+     << TAB(1) << "if ( ! found) {" << endl
+     << TAB(2) << "cout << \"#### NOT FOUND ###\" << endl;" << endl
+     << TAB(2) << "copy(xml_l.begin(), xml_l.end(), ostream_iterator<string>(cout, \" \"));"
+     << TAB(2) << "cout << endl;" << endl
+     << TAB(1) << "} // end if ! found" << endl
+     << TAB(0) << "} // end for elt_lists" << endl;
 
   os << "}" << endl;
 }
@@ -326,7 +337,8 @@ void generate_header(ostream &os, const fix_message_type &msg_type,
   const std::string lower_ns = boost::algorithm::to_lower_copy(ns);
 
   os << "#include <quickfix/" << lower_ns << "/" + msg_type._name + ".h>"
-     << endl << endl
+     << endl
+     << endl
      << "#include <list>" << endl
      << "#include <set>" << endl
      << "#include <string>" << endl
