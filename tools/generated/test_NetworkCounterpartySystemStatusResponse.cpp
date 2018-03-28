@@ -23,16 +23,16 @@ TEST ( NetworkCounterpartySystemStatusResponse, set_fields)
 
   list<multiset<string>> all_values;
   multiset<string> NetworkCounterpartySystemStatusResponse_0;
-  FIX::LastNetworkResponseID LastNetworkResponseID_0("STRING_1062136033");
+  FIX::LastNetworkResponseID LastNetworkResponseID_0("STRING_2036773930");
   msg.set(LastNetworkResponseID_0);
   NetworkCounterpartySystemStatusResponse_0.insert(LastNetworkResponseID_0.getString());
-  FIX::NetworkRequestID NetworkRequestID_1("STRING_1865009601");
+  FIX::NetworkRequestID NetworkRequestID_1("STRING_1298830886");
   msg.set(NetworkRequestID_1);
   NetworkCounterpartySystemStatusResponse_0.insert(NetworkRequestID_1.getString());
-  FIX::NetworkResponseID NetworkResponseID_0("STRING_1069025170");
+  FIX::NetworkResponseID NetworkResponseID_0("STRING_1467470066");
   msg.set(NetworkResponseID_0);
   NetworkCounterpartySystemStatusResponse_0.insert(NetworkResponseID_0.getString());
-  FIX::NetworkStatusResponseType NetworkStatusResponseType_0(1);
+  FIX::NetworkStatusResponseType NetworkStatusResponseType_0(2);
   msg.set(NetworkStatusResponseType_0);
   NetworkCounterpartySystemStatusResponse_0.insert(NetworkStatusResponseType_0.getString());
   all_values.push_back(NetworkCounterpartySystemStatusResponse_0);
@@ -43,19 +43,19 @@ TEST ( NetworkCounterpartySystemStatusResponse, set_fields)
     FIX50SP2::NetworkCounterpartySystemStatusResponse::NoCompIDs noCompIDs_0_0;
     // CompIDStatGrp.NoCompIDs
     multiset<string> CompIDStatGrp_NoCompIDs_0;
-    FIX::DeskID DeskID_5("STRING_1357495896");
-    noCompIDs_0_0.set(DeskID_5);
-    CompIDStatGrp_NoCompIDs_0.insert(DeskID_5.getString());
-    FIX::LocationID LocationID_5("STRING_1941699734");
-    noCompIDs_0_0.set(LocationID_5);
-    CompIDStatGrp_NoCompIDs_0.insert(LocationID_5.getString());
-    FIX::RefCompID RefCompID_2("STRING_1172049978");
-    noCompIDs_0_0.set(RefCompID_2);
-    CompIDStatGrp_NoCompIDs_0.insert(RefCompID_2.getString());
-    FIX::RefSubID RefSubID_2("STRING_1055035960");
-    noCompIDs_0_0.set(RefSubID_2);
-    CompIDStatGrp_NoCompIDs_0.insert(RefSubID_2.getString());
-    FIX::StatusText StatusText_0("STRING_1267479385");
+    FIX::DeskID DeskID_8("STRING_2094853696");
+    noCompIDs_0_0.set(DeskID_8);
+    CompIDStatGrp_NoCompIDs_0.insert(DeskID_8.getString());
+    FIX::LocationID LocationID_8("STRING_1682582214");
+    noCompIDs_0_0.set(LocationID_8);
+    CompIDStatGrp_NoCompIDs_0.insert(LocationID_8.getString());
+    FIX::RefCompID RefCompID_3("STRING_1725610116");
+    noCompIDs_0_0.set(RefCompID_3);
+    CompIDStatGrp_NoCompIDs_0.insert(RefCompID_3.getString());
+    FIX::RefSubID RefSubID_3("STRING_632900168");
+    noCompIDs_0_0.set(RefSubID_3);
+    CompIDStatGrp_NoCompIDs_0.insert(RefSubID_3.getString());
+    FIX::StatusText StatusText_0("STRING_1817295519");
     noCompIDs_0_0.set(StatusText_0);
     CompIDStatGrp_NoCompIDs_0.insert(StatusText_0.getString());
     FIX::StatusValue StatusValue_0(3);
@@ -69,27 +69,53 @@ TEST ( NetworkCounterpartySystemStatusResponse, set_fields)
     FIX50SP2::NetworkCounterpartySystemStatusResponse::NoCompIDs noCompIDs_0_1;
     // CompIDStatGrp.NoCompIDs
     multiset<string> CompIDStatGrp_NoCompIDs_1;
-    FIX::DeskID DeskID_6("STRING_438725866");
-    noCompIDs_0_1.set(DeskID_6);
-    CompIDStatGrp_NoCompIDs_1.insert(DeskID_6.getString());
-    FIX::LocationID LocationID_6("STRING_1657320114");
-    noCompIDs_0_1.set(LocationID_6);
-    CompIDStatGrp_NoCompIDs_1.insert(LocationID_6.getString());
-    FIX::RefCompID RefCompID_3("STRING_1236525470");
-    noCompIDs_0_1.set(RefCompID_3);
-    CompIDStatGrp_NoCompIDs_1.insert(RefCompID_3.getString());
-    FIX::RefSubID RefSubID_3("STRING_1002792521");
-    noCompIDs_0_1.set(RefSubID_3);
-    CompIDStatGrp_NoCompIDs_1.insert(RefSubID_3.getString());
-    FIX::StatusText StatusText_1("STRING_15799714");
+    FIX::DeskID DeskID_9("STRING_320845804");
+    noCompIDs_0_1.set(DeskID_9);
+    CompIDStatGrp_NoCompIDs_1.insert(DeskID_9.getString());
+    FIX::LocationID LocationID_9("STRING_2000162780");
+    noCompIDs_0_1.set(LocationID_9);
+    CompIDStatGrp_NoCompIDs_1.insert(LocationID_9.getString());
+    FIX::RefCompID RefCompID_4("STRING_1907645607");
+    noCompIDs_0_1.set(RefCompID_4);
+    CompIDStatGrp_NoCompIDs_1.insert(RefCompID_4.getString());
+    FIX::RefSubID RefSubID_4("STRING_1355488489");
+    noCompIDs_0_1.set(RefSubID_4);
+    CompIDStatGrp_NoCompIDs_1.insert(RefSubID_4.getString());
+    FIX::StatusText StatusText_1("STRING_1308549292");
     noCompIDs_0_1.set(StatusText_1);
     CompIDStatGrp_NoCompIDs_1.insert(StatusText_1.getString());
-    FIX::StatusValue StatusValue_1(3);
+    FIX::StatusValue StatusValue_1(1);
     noCompIDs_0_1.set(StatusValue_1);
     CompIDStatGrp_NoCompIDs_1.insert(StatusValue_1.getString());
     all_values.push_back(CompIDStatGrp_NoCompIDs_1);
 
     msg.addGroup(noCompIDs_0_1);
+  }
+  {
+    FIX50SP2::NetworkCounterpartySystemStatusResponse::NoCompIDs noCompIDs_0_2;
+    // CompIDStatGrp.NoCompIDs
+    multiset<string> CompIDStatGrp_NoCompIDs_2;
+    FIX::DeskID DeskID_10("STRING_286772570");
+    noCompIDs_0_2.set(DeskID_10);
+    CompIDStatGrp_NoCompIDs_2.insert(DeskID_10.getString());
+    FIX::LocationID LocationID_10("STRING_1181342486");
+    noCompIDs_0_2.set(LocationID_10);
+    CompIDStatGrp_NoCompIDs_2.insert(LocationID_10.getString());
+    FIX::RefCompID RefCompID_5("STRING_290354710");
+    noCompIDs_0_2.set(RefCompID_5);
+    CompIDStatGrp_NoCompIDs_2.insert(RefCompID_5.getString());
+    FIX::RefSubID RefSubID_5("STRING_512443629");
+    noCompIDs_0_2.set(RefSubID_5);
+    CompIDStatGrp_NoCompIDs_2.insert(RefSubID_5.getString());
+    FIX::StatusText StatusText_2("STRING_1230584405");
+    noCompIDs_0_2.set(StatusText_2);
+    CompIDStatGrp_NoCompIDs_2.insert(StatusText_2.getString());
+    FIX::StatusValue StatusValue_2(2);
+    noCompIDs_0_2.set(StatusValue_2);
+    CompIDStatGrp_NoCompIDs_2.insert(StatusValue_2.getString());
+    all_values.push_back(CompIDStatGrp_NoCompIDs_2);
+
+    msg.addGroup(noCompIDs_0_2);
   }
 
   xml_element elt;

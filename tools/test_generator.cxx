@@ -86,7 +86,7 @@ string generate_timestamp() {
   int year = 2000 + rand() % 18;
   return "FIX::UTCTIMESTAMP(" + to_string(hour) + ", " + to_string(min) + ", " +
          to_string(sec) + ", " + to_string(date) + ", " + to_string(month) +
-         to_string(year) + ")";
+         ", " + to_string(year) + ")";
 }
 
 //-----------------------------------------------------------------------------

@@ -23,24 +23,24 @@ TEST ( StreamAssignmentReportACK, set_fields)
 
   list<multiset<string>> all_values;
   multiset<string> StreamAssignmentReportACK_0;
-  FIX::EncodedText EncodedText_95("DATA_727847177");
-  msg.set(EncodedText_95);
-  StreamAssignmentReportACK_0.insert(EncodedText_95.getString());
-  FIX::EncodedTextLen EncodedTextLen_95(1957788629);
-  msg.set(EncodedTextLen_95);
-  StreamAssignmentReportACK_0.insert(EncodedTextLen_95.getString());
-  FIX::StreamAsgnAckType StreamAsgnAckType_0(1);
+  FIX::EncodedText EncodedText_99("DATA_1387333943");
+  msg.set(EncodedText_99);
+  StreamAssignmentReportACK_0.insert(EncodedText_99.getString());
+  FIX::EncodedTextLen EncodedTextLen_99(2000061864);
+  msg.set(EncodedTextLen_99);
+  StreamAssignmentReportACK_0.insert(EncodedTextLen_99.getString());
+  FIX::StreamAsgnAckType StreamAsgnAckType_0(0);
   msg.set(StreamAsgnAckType_0);
   StreamAssignmentReportACK_0.insert(StreamAsgnAckType_0.getString());
-  FIX::StreamAsgnRejReason StreamAsgnRejReason_5(1);
-  msg.set(StreamAsgnRejReason_5);
-  StreamAssignmentReportACK_0.insert(StreamAsgnRejReason_5.getString());
-  FIX::StreamAsgnRptID StreamAsgnRptID_1("STRING_495253061");
+  FIX::StreamAsgnRejReason StreamAsgnRejReason_2(99);
+  msg.set(StreamAsgnRejReason_2);
+  StreamAssignmentReportACK_0.insert(StreamAsgnRejReason_2.getString());
+  FIX::StreamAsgnRptID StreamAsgnRptID_1("STRING_192990202");
   msg.set(StreamAsgnRptID_1);
   StreamAssignmentReportACK_0.insert(StreamAsgnRptID_1.getString());
-  FIX::Text Text_95("STRING_2039601730");
-  msg.set(Text_95);
-  StreamAssignmentReportACK_0.insert(Text_95.getString());
+  FIX::Text Text_99("STRING_174797976");
+  msg.set(Text_99);
+  StreamAssignmentReportACK_0.insert(Text_99.getString());
   all_values.push_back(StreamAssignmentReportACK_0);
 
 

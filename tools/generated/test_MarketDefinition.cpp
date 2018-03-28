@@ -23,59 +23,59 @@ TEST ( MarketDefinition, set_fields)
 
   list<multiset<string>> all_values;
   multiset<string> MarketDefinition_0;
-  FIX::Currency Currency_28("CHF");
-  msg.set(Currency_28);
-  MarketDefinition_0.insert(Currency_28.getString());
-  FIX::EncodedMktSegmDesc EncodedMktSegmDesc_0("DATA_438602233");
+  FIX::Currency Currency_31("EUR");
+  msg.set(Currency_31);
+  MarketDefinition_0.insert(Currency_31.getString());
+  FIX::EncodedMktSegmDesc EncodedMktSegmDesc_0("DATA_988170623");
   msg.set(EncodedMktSegmDesc_0);
   MarketDefinition_0.insert(EncodedMktSegmDesc_0.getString());
-  FIX::EncodedMktSegmDescLen EncodedMktSegmDescLen_0(982916087);
+  FIX::EncodedMktSegmDescLen EncodedMktSegmDescLen_0(390782099);
   msg.set(EncodedMktSegmDescLen_0);
   MarketDefinition_0.insert(EncodedMktSegmDescLen_0.getString());
-  FIX::EncodedText EncodedText_48("DATA_656764098");
-  msg.set(EncodedText_48);
-  MarketDefinition_0.insert(EncodedText_48.getString());
-  FIX::EncodedTextLen EncodedTextLen_48(185189689);
-  msg.set(EncodedTextLen_48);
-  MarketDefinition_0.insert(EncodedTextLen_48.getString());
-  FIX::MarketID MarketID_6("EXCHANGE_389112018");
+  FIX::EncodedText EncodedText_57("DATA_1446738913");
+  msg.set(EncodedText_57);
+  MarketDefinition_0.insert(EncodedText_57.getString());
+  FIX::EncodedTextLen EncodedTextLen_57(483198343);
+  msg.set(EncodedTextLen_57);
+  MarketDefinition_0.insert(EncodedTextLen_57.getString());
+  FIX::MarketID MarketID_6("EXCHANGE_998946493");
   msg.set(MarketID_6);
   MarketDefinition_0.insert(MarketID_6.getString());
-  FIX::MarketReportID MarketReportID_0("STRING_2053496672");
+  FIX::MarketReportID MarketReportID_0("STRING_2063592641");
   msg.set(MarketReportID_0);
   MarketDefinition_0.insert(MarketReportID_0.getString());
-  FIX::MarketReqID MarketReqID_0("STRING_1825762300");
+  FIX::MarketReqID MarketReqID_0("STRING_445172436");
   msg.set(MarketReqID_0);
   MarketDefinition_0.insert(MarketReqID_0.getString());
-  FIX::MarketSegmentDesc MarketSegmentDesc_0("STRING_1651984420");
+  FIX::MarketSegmentDesc MarketSegmentDesc_0("STRING_916305907");
   msg.set(MarketSegmentDesc_0);
   MarketDefinition_0.insert(MarketSegmentDesc_0.getString());
-  FIX::MarketSegmentID MarketSegmentID_6("STRING_1032580835");
+  FIX::MarketSegmentID MarketSegmentID_6("STRING_1148456412");
   msg.set(MarketSegmentID_6);
   MarketDefinition_0.insert(MarketSegmentID_6.getString());
-  FIX::ParentMktSegmID ParentMktSegmID_0("STRING_52643841");
+  FIX::ParentMktSegmID ParentMktSegmID_0("STRING_1988406240");
   msg.set(ParentMktSegmID_0);
   MarketDefinition_0.insert(ParentMktSegmID_0.getString());
-  FIX::Text Text_48("STRING_1592438924");
-  msg.set(Text_48);
-  MarketDefinition_0.insert(Text_48.getString());
-  FIX::TransactTime TransactTime_24(FIX::UTCTIMESTAMP(0, 53, 43, 8, 102013));
-  msg.set(TransactTime_24);
-  MarketDefinition_0.insert(TransactTime_24.getString());
+  FIX::Text Text_57("STRING_1686071682");
+  msg.set(Text_57);
+  MarketDefinition_0.insert(Text_57.getString());
+  FIX::TransactTime TransactTime_25(FIX::UTCTIMESTAMP(20, 34, 41, 26, 7, 2005));
+  msg.set(TransactTime_25);
+  MarketDefinition_0.insert(TransactTime_25.getString());
   all_values.push_back(MarketDefinition_0);
 
   // ApplicationSequenceControl
   multiset<string> ApplicationSequenceControl_8;
-  FIX::ApplID ApplID_8("STRING_18661686");
+  FIX::ApplID ApplID_8("STRING_442673943");
   msg.set(ApplID_8);
   ApplicationSequenceControl_8.insert(ApplID_8.getString());
-  FIX::ApplLastSeqNum ApplLastSeqNum_8(626714818);
+  FIX::ApplLastSeqNum ApplLastSeqNum_8(14726913);
   msg.set(ApplLastSeqNum_8);
   ApplicationSequenceControl_8.insert(ApplLastSeqNum_8.getString());
-  FIX::ApplResendFlag ApplResendFlag_8(false);
+  FIX::ApplResendFlag ApplResendFlag_8(true);
   msg.set(ApplResendFlag_8);
   ApplicationSequenceControl_8.insert(ApplResendFlag_8.getString());
-  FIX::ApplSeqNum ApplSeqNum_8(1286064151);
+  FIX::ApplSeqNum ApplSeqNum_8(1148128816);
   msg.set(ApplSeqNum_8);
   ApplicationSequenceControl_8.insert(ApplSeqNum_8.getString());
   all_values.push_back(ApplicationSequenceControl_8);
@@ -89,31 +89,31 @@ TEST ( MarketDefinition, set_fields)
   msg.set(ImpliedMarketIndicator_5);
   BaseTradingRules_5.insert(ImpliedMarketIndicator_5.getString());
   FIX::MaxPriceVariation MaxPriceVariation_5;
-  MaxPriceVariation_5.setString("13311925");
+  MaxPriceVariation_5.setString("4924381");
   msg.set(MaxPriceVariation_5);
   BaseTradingRules_5.insert(MaxPriceVariation_5.getString());
   FIX::MaxTradeVol MaxTradeVol_5;
-  MaxTradeVol_5.setString("4005880");
+  MaxTradeVol_5.setString("19466305");
   msg.set(MaxTradeVol_5);
   BaseTradingRules_5.insert(MaxTradeVol_5.getString());
   FIX::MinTradeVol MinTradeVol_5;
-  MinTradeVol_5.setString("10429718");
+  MinTradeVol_5.setString("13804198");
   msg.set(MinTradeVol_5);
   BaseTradingRules_5.insert(MinTradeVol_5.getString());
-  FIX::MultilegModel MultilegModel_5(0);
+  FIX::MultilegModel MultilegModel_5(2);
   msg.set(MultilegModel_5);
   BaseTradingRules_5.insert(MultilegModel_5.getString());
-  FIX::MultilegPriceMethod MultilegPriceMethod_5(4);
+  FIX::MultilegPriceMethod MultilegPriceMethod_5(5);
   msg.set(MultilegPriceMethod_5);
   BaseTradingRules_5.insert(MultilegPriceMethod_5.getString());
-  FIX::PriceType PriceType_22(5);
-  msg.set(PriceType_22);
-  BaseTradingRules_5.insert(PriceType_22.getString());
+  FIX::PriceType PriceType_26(4);
+  msg.set(PriceType_26);
+  BaseTradingRules_5.insert(PriceType_26.getString());
   FIX::RoundLot RoundLot_5;
-  RoundLot_5.setString("4794305");
+  RoundLot_5.setString("6390778");
   msg.set(RoundLot_5);
   BaseTradingRules_5.insert(RoundLot_5.getString());
-  FIX::TradingCurrency TradingCurrency_5("CHF");
+  FIX::TradingCurrency TradingCurrency_5("GBP");
   msg.set(TradingCurrency_5);
   BaseTradingRules_5.insert(TradingCurrency_5.getString());
   all_values.push_back(BaseTradingRules_5);
@@ -123,63 +123,33 @@ TEST ( MarketDefinition, set_fields)
   {
     FIX50SP2::MarketDefinition::NoLotTypeRules noLotTypeRules_0_0;
     // LotTypeRules.NoLotTypeRules
-    multiset<string> LotTypeRules_NoLotTypeRules_9;
-    FIX::LotType LotType_13('2');
-    noLotTypeRules_0_0.set(LotType_13);
-    LotTypeRules_NoLotTypeRules_9.insert(LotType_13.getString());
-    FIX::MinLotSize MinLotSize_9;
-    MinLotSize_9.setString("2926870");
-    noLotTypeRules_0_0.set(MinLotSize_9);
-    LotTypeRules_NoLotTypeRules_9.insert(MinLotSize_9.getString());
-    all_values.push_back(LotTypeRules_NoLotTypeRules_9);
+    multiset<string> LotTypeRules_NoLotTypeRules_12;
+    FIX::LotType LotType_18('1');
+    noLotTypeRules_0_0.set(LotType_18);
+    LotTypeRules_NoLotTypeRules_12.insert(LotType_18.getString());
+    FIX::MinLotSize MinLotSize_12;
+    MinLotSize_12.setString("15773338");
+    noLotTypeRules_0_0.set(MinLotSize_12);
+    LotTypeRules_NoLotTypeRules_12.insert(MinLotSize_12.getString());
+    all_values.push_back(LotTypeRules_NoLotTypeRules_12);
 
     msg.addGroup(noLotTypeRules_0_0);
-  }
-  {
-    FIX50SP2::MarketDefinition::NoLotTypeRules noLotTypeRules_0_1;
-    // LotTypeRules.NoLotTypeRules
-    multiset<string> LotTypeRules_NoLotTypeRules_10;
-    FIX::LotType LotType_14('3');
-    noLotTypeRules_0_1.set(LotType_14);
-    LotTypeRules_NoLotTypeRules_10.insert(LotType_14.getString());
-    FIX::MinLotSize MinLotSize_10;
-    MinLotSize_10.setString("17083678");
-    noLotTypeRules_0_1.set(MinLotSize_10);
-    LotTypeRules_NoLotTypeRules_10.insert(MinLotSize_10.getString());
-    all_values.push_back(LotTypeRules_NoLotTypeRules_10);
-
-    msg.addGroup(noLotTypeRules_0_1);
-  }
-  {
-    FIX50SP2::MarketDefinition::NoLotTypeRules noLotTypeRules_0_2;
-    // LotTypeRules.NoLotTypeRules
-    multiset<string> LotTypeRules_NoLotTypeRules_11;
-    FIX::LotType LotType_15('1');
-    noLotTypeRules_0_2.set(LotType_15);
-    LotTypeRules_NoLotTypeRules_11.insert(LotType_15.getString());
-    FIX::MinLotSize MinLotSize_11;
-    MinLotSize_11.setString("20747884");
-    noLotTypeRules_0_2.set(MinLotSize_11);
-    LotTypeRules_NoLotTypeRules_11.insert(MinLotSize_11.getString());
-    all_values.push_back(LotTypeRules_NoLotTypeRules_11);
-
-    msg.addGroup(noLotTypeRules_0_2);
   }
   // PriceLimits
   multiset<string> PriceLimits_5;
   FIX::HighLimitPrice HighLimitPrice_5;
-  HighLimitPrice_5.setString("17610116");
+  HighLimitPrice_5.setString("20019257");
   msg.set(HighLimitPrice_5);
   PriceLimits_5.insert(HighLimitPrice_5.getString());
   FIX::LowLimitPrice LowLimitPrice_5;
-  LowLimitPrice_5.setString("13896267");
+  LowLimitPrice_5.setString("8421332");
   msg.set(LowLimitPrice_5);
   PriceLimits_5.insert(LowLimitPrice_5.getString());
-  FIX::PriceLimitType PriceLimitType_5(2);
+  FIX::PriceLimitType PriceLimitType_5(0);
   msg.set(PriceLimitType_5);
   PriceLimits_5.insert(PriceLimitType_5.getString());
   FIX::TradingReferencePrice TradingReferencePrice_5;
-  TradingReferencePrice_5.setString("8085193");
+  TradingReferencePrice_5.setString("10028985");
   msg.set(TradingReferencePrice_5);
   PriceLimits_5.insert(TradingReferencePrice_5.getString());
   all_values.push_back(PriceLimits_5);
@@ -189,120 +159,165 @@ TEST ( MarketDefinition, set_fields)
   {
     FIX50SP2::MarketDefinition::NoTickRules noTickRules_0_0;
     // TickRules.NoTickRules
-    multiset<string> TickRules_NoTickRules_9;
-    FIX::EndTickPriceRange EndTickPriceRange_9;
-    EndTickPriceRange_9.setString("7226312");
-    noTickRules_0_0.set(EndTickPriceRange_9);
-    TickRules_NoTickRules_9.insert(EndTickPriceRange_9.getString());
-    FIX::StartTickPriceRange StartTickPriceRange_9;
-    StartTickPriceRange_9.setString("16583651");
-    noTickRules_0_0.set(StartTickPriceRange_9);
-    TickRules_NoTickRules_9.insert(StartTickPriceRange_9.getString());
-    FIX::TickIncrement TickIncrement_9;
-    TickIncrement_9.setString("9378535");
-    noTickRules_0_0.set(TickIncrement_9);
-    TickRules_NoTickRules_9.insert(TickIncrement_9.getString());
-    FIX::TickRuleType TickRuleType_9(1);
-    noTickRules_0_0.set(TickRuleType_9);
-    TickRules_NoTickRules_9.insert(TickRuleType_9.getString());
-    all_values.push_back(TickRules_NoTickRules_9);
+    multiset<string> TickRules_NoTickRules_10;
+    FIX::EndTickPriceRange EndTickPriceRange_10;
+    EndTickPriceRange_10.setString("20322277");
+    noTickRules_0_0.set(EndTickPriceRange_10);
+    TickRules_NoTickRules_10.insert(EndTickPriceRange_10.getString());
+    FIX::StartTickPriceRange StartTickPriceRange_10;
+    StartTickPriceRange_10.setString("9203264");
+    noTickRules_0_0.set(StartTickPriceRange_10);
+    TickRules_NoTickRules_10.insert(StartTickPriceRange_10.getString());
+    FIX::TickIncrement TickIncrement_10;
+    TickIncrement_10.setString("7005117");
+    noTickRules_0_0.set(TickIncrement_10);
+    TickRules_NoTickRules_10.insert(TickIncrement_10.getString());
+    FIX::TickRuleType TickRuleType_10(1);
+    noTickRules_0_0.set(TickRuleType_10);
+    TickRules_NoTickRules_10.insert(TickRuleType_10.getString());
+    all_values.push_back(TickRules_NoTickRules_10);
 
     msg.addGroup(noTickRules_0_0);
   }
   {
     FIX50SP2::MarketDefinition::NoTickRules noTickRules_0_1;
     // TickRules.NoTickRules
-    multiset<string> TickRules_NoTickRules_10;
-    FIX::EndTickPriceRange EndTickPriceRange_10;
-    EndTickPriceRange_10.setString("16770268");
-    noTickRules_0_1.set(EndTickPriceRange_10);
-    TickRules_NoTickRules_10.insert(EndTickPriceRange_10.getString());
-    FIX::StartTickPriceRange StartTickPriceRange_10;
-    StartTickPriceRange_10.setString("15645683");
-    noTickRules_0_1.set(StartTickPriceRange_10);
-    TickRules_NoTickRules_10.insert(StartTickPriceRange_10.getString());
-    FIX::TickIncrement TickIncrement_10;
-    TickIncrement_10.setString("13123225");
-    noTickRules_0_1.set(TickIncrement_10);
-    TickRules_NoTickRules_10.insert(TickIncrement_10.getString());
-    FIX::TickRuleType TickRuleType_10(1);
-    noTickRules_0_1.set(TickRuleType_10);
-    TickRules_NoTickRules_10.insert(TickRuleType_10.getString());
-    all_values.push_back(TickRules_NoTickRules_10);
+    multiset<string> TickRules_NoTickRules_11;
+    FIX::EndTickPriceRange EndTickPriceRange_11;
+    EndTickPriceRange_11.setString("11599307");
+    noTickRules_0_1.set(EndTickPriceRange_11);
+    TickRules_NoTickRules_11.insert(EndTickPriceRange_11.getString());
+    FIX::StartTickPriceRange StartTickPriceRange_11;
+    StartTickPriceRange_11.setString("3690759");
+    noTickRules_0_1.set(StartTickPriceRange_11);
+    TickRules_NoTickRules_11.insert(StartTickPriceRange_11.getString());
+    FIX::TickIncrement TickIncrement_11;
+    TickIncrement_11.setString("5728398");
+    noTickRules_0_1.set(TickIncrement_11);
+    TickRules_NoTickRules_11.insert(TickIncrement_11.getString());
+    FIX::TickRuleType TickRuleType_11(3);
+    noTickRules_0_1.set(TickRuleType_11);
+    TickRules_NoTickRules_11.insert(TickRuleType_11.getString());
+    all_values.push_back(TickRules_NoTickRules_11);
 
     msg.addGroup(noTickRules_0_1);
+  }
+  {
+    FIX50SP2::MarketDefinition::NoTickRules noTickRules_0_2;
+    // TickRules.NoTickRules
+    multiset<string> TickRules_NoTickRules_12;
+    FIX::EndTickPriceRange EndTickPriceRange_12;
+    EndTickPriceRange_12.setString("8117498");
+    noTickRules_0_2.set(EndTickPriceRange_12);
+    TickRules_NoTickRules_12.insert(EndTickPriceRange_12.getString());
+    FIX::StartTickPriceRange StartTickPriceRange_12;
+    StartTickPriceRange_12.setString("5875667");
+    noTickRules_0_2.set(StartTickPriceRange_12);
+    TickRules_NoTickRules_12.insert(StartTickPriceRange_12.getString());
+    FIX::TickIncrement TickIncrement_12;
+    TickIncrement_12.setString("18922581");
+    noTickRules_0_2.set(TickIncrement_12);
+    TickRules_NoTickRules_12.insert(TickIncrement_12.getString());
+    FIX::TickRuleType TickRuleType_12(1);
+    noTickRules_0_2.set(TickRuleType_12);
+    TickRules_NoTickRules_12.insert(TickRuleType_12.getString());
+    all_values.push_back(TickRules_NoTickRules_12);
+
+    msg.addGroup(noTickRules_0_2);
   }
   // ExecInstRules
   // Group ExecInstRules.NoExecInstRules
   {
     FIX50SP2::MarketDefinition::NoExecInstRules noExecInstRules_0_0;
     // ExecInstRules.NoExecInstRules
-    multiset<string> ExecInstRules_NoExecInstRules_24;
-    FIX::ExecInstValue ExecInstValue_24('1');
-    noExecInstRules_0_0.set(ExecInstValue_24);
-    ExecInstRules_NoExecInstRules_24.insert(ExecInstValue_24.getString());
-    all_values.push_back(ExecInstRules_NoExecInstRules_24);
+    multiset<string> ExecInstRules_NoExecInstRules_17;
+    FIX::ExecInstValue ExecInstValue_17('1');
+    noExecInstRules_0_0.set(ExecInstValue_17);
+    ExecInstRules_NoExecInstRules_17.insert(ExecInstValue_17.getString());
+    all_values.push_back(ExecInstRules_NoExecInstRules_17);
 
     msg.addGroup(noExecInstRules_0_0);
   }
   {
     FIX50SP2::MarketDefinition::NoExecInstRules noExecInstRules_0_1;
     // ExecInstRules.NoExecInstRules
-    multiset<string> ExecInstRules_NoExecInstRules_25;
-    FIX::ExecInstValue ExecInstValue_25('2');
-    noExecInstRules_0_1.set(ExecInstValue_25);
-    ExecInstRules_NoExecInstRules_25.insert(ExecInstValue_25.getString());
-    all_values.push_back(ExecInstRules_NoExecInstRules_25);
+    multiset<string> ExecInstRules_NoExecInstRules_18;
+    FIX::ExecInstValue ExecInstValue_18('3');
+    noExecInstRules_0_1.set(ExecInstValue_18);
+    ExecInstRules_NoExecInstRules_18.insert(ExecInstValue_18.getString());
+    all_values.push_back(ExecInstRules_NoExecInstRules_18);
 
     msg.addGroup(noExecInstRules_0_1);
+  }
+  {
+    FIX50SP2::MarketDefinition::NoExecInstRules noExecInstRules_0_2;
+    // ExecInstRules.NoExecInstRules
+    multiset<string> ExecInstRules_NoExecInstRules_19;
+    FIX::ExecInstValue ExecInstValue_19('1');
+    noExecInstRules_0_2.set(ExecInstValue_19);
+    ExecInstRules_NoExecInstRules_19.insert(ExecInstValue_19.getString());
+    all_values.push_back(ExecInstRules_NoExecInstRules_19);
+
+    msg.addGroup(noExecInstRules_0_2);
   }
   // OrdTypeRules
   // Group OrdTypeRules.NoOrdTypeRules
   {
     FIX50SP2::MarketDefinition::NoOrdTypeRules noOrdTypeRules_0_0;
     // OrdTypeRules.NoOrdTypeRules
-    multiset<string> OrdTypeRules_NoOrdTypeRules_24;
-    FIX::OrdType OrdType_29('L');
-    noOrdTypeRules_0_0.set(OrdType_29);
-    OrdTypeRules_NoOrdTypeRules_24.insert(OrdType_29.getString());
-    all_values.push_back(OrdTypeRules_NoOrdTypeRules_24);
+    multiset<string> OrdTypeRules_NoOrdTypeRules_21;
+    FIX::OrdType OrdType_28('K');
+    noOrdTypeRules_0_0.set(OrdType_28);
+    OrdTypeRules_NoOrdTypeRules_21.insert(OrdType_28.getString());
+    all_values.push_back(OrdTypeRules_NoOrdTypeRules_21);
 
     msg.addGroup(noOrdTypeRules_0_0);
   }
   {
     FIX50SP2::MarketDefinition::NoOrdTypeRules noOrdTypeRules_0_1;
     // OrdTypeRules.NoOrdTypeRules
-    multiset<string> OrdTypeRules_NoOrdTypeRules_25;
-    FIX::OrdType OrdType_30('C');
-    noOrdTypeRules_0_1.set(OrdType_30);
-    OrdTypeRules_NoOrdTypeRules_25.insert(OrdType_30.getString());
-    all_values.push_back(OrdTypeRules_NoOrdTypeRules_25);
+    multiset<string> OrdTypeRules_NoOrdTypeRules_22;
+    FIX::OrdType OrdType_29('E');
+    noOrdTypeRules_0_1.set(OrdType_29);
+    OrdTypeRules_NoOrdTypeRules_22.insert(OrdType_29.getString());
+    all_values.push_back(OrdTypeRules_NoOrdTypeRules_22);
 
     msg.addGroup(noOrdTypeRules_0_1);
-  }
-  {
-    FIX50SP2::MarketDefinition::NoOrdTypeRules noOrdTypeRules_0_2;
-    // OrdTypeRules.NoOrdTypeRules
-    multiset<string> OrdTypeRules_NoOrdTypeRules_26;
-    FIX::OrdType OrdType_31('Q');
-    noOrdTypeRules_0_2.set(OrdType_31);
-    OrdTypeRules_NoOrdTypeRules_26.insert(OrdType_31.getString());
-    all_values.push_back(OrdTypeRules_NoOrdTypeRules_26);
-
-    msg.addGroup(noOrdTypeRules_0_2);
   }
   // TimeInForceRules
   // Group TimeInForceRules.NoTimeInForceRules
   {
     FIX50SP2::MarketDefinition::NoTimeInForceRules noTimeInForceRules_0_0;
     // TimeInForceRules.NoTimeInForceRules
-    multiset<string> TimeInForceRules_NoTimeInForceRules_26;
-    FIX::TimeInForce TimeInForce_31('0');
-    noTimeInForceRules_0_0.set(TimeInForce_31);
-    TimeInForceRules_NoTimeInForceRules_26.insert(TimeInForce_31.getString());
-    all_values.push_back(TimeInForceRules_NoTimeInForceRules_26);
+    multiset<string> TimeInForceRules_NoTimeInForceRules_17;
+    FIX::TimeInForce TimeInForce_24('9');
+    noTimeInForceRules_0_0.set(TimeInForce_24);
+    TimeInForceRules_NoTimeInForceRules_17.insert(TimeInForce_24.getString());
+    all_values.push_back(TimeInForceRules_NoTimeInForceRules_17);
 
     msg.addGroup(noTimeInForceRules_0_0);
+  }
+  {
+    FIX50SP2::MarketDefinition::NoTimeInForceRules noTimeInForceRules_0_1;
+    // TimeInForceRules.NoTimeInForceRules
+    multiset<string> TimeInForceRules_NoTimeInForceRules_18;
+    FIX::TimeInForce TimeInForce_25('3');
+    noTimeInForceRules_0_1.set(TimeInForce_25);
+    TimeInForceRules_NoTimeInForceRules_18.insert(TimeInForce_25.getString());
+    all_values.push_back(TimeInForceRules_NoTimeInForceRules_18);
+
+    msg.addGroup(noTimeInForceRules_0_1);
+  }
+  {
+    FIX50SP2::MarketDefinition::NoTimeInForceRules noTimeInForceRules_0_2;
+    // TimeInForceRules.NoTimeInForceRules
+    multiset<string> TimeInForceRules_NoTimeInForceRules_19;
+    FIX::TimeInForce TimeInForce_26('1');
+    noTimeInForceRules_0_2.set(TimeInForce_26);
+    TimeInForceRules_NoTimeInForceRules_19.insert(TimeInForce_26.getString());
+    all_values.push_back(TimeInForceRules_NoTimeInForceRules_19);
+
+    msg.addGroup(noTimeInForceRules_0_2);
   }
 
   xml_element elt;

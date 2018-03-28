@@ -23,18 +23,18 @@ TEST ( ListStatusRequest, set_fields)
 
   list<multiset<string>> all_values;
   multiset<string> ListStatusRequest_0;
-  FIX::EncodedText EncodedText_41("DATA_1049330954");
-  msg.set(EncodedText_41);
-  ListStatusRequest_0.insert(EncodedText_41.getString());
-  FIX::EncodedTextLen EncodedTextLen_41(1454411898);
-  msg.set(EncodedTextLen_41);
-  ListStatusRequest_0.insert(EncodedTextLen_41.getString());
-  FIX::ListID ListID_16("STRING_1432548821");
-  msg.set(ListID_16);
-  ListStatusRequest_0.insert(ListID_16.getString());
-  FIX::Text Text_41("STRING_545634798");
-  msg.set(Text_41);
-  ListStatusRequest_0.insert(Text_41.getString());
+  FIX::EncodedText EncodedText_48("DATA_515214131");
+  msg.set(EncodedText_48);
+  ListStatusRequest_0.insert(EncodedText_48.getString());
+  FIX::EncodedTextLen EncodedTextLen_48(766104037);
+  msg.set(EncodedTextLen_48);
+  ListStatusRequest_0.insert(EncodedTextLen_48.getString());
+  FIX::ListID ListID_18("STRING_2004056049");
+  msg.set(ListID_18);
+  ListStatusRequest_0.insert(ListID_18.getString());
+  FIX::Text Text_48("STRING_331589272");
+  msg.set(Text_48);
+  ListStatusRequest_0.insert(Text_48.getString());
   all_values.push_back(ListStatusRequest_0);
 
 

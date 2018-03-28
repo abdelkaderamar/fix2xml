@@ -23,28 +23,28 @@ TEST ( ApplicationMessageRequestAck, set_fields)
 
   list<multiset<string>> all_values;
   multiset<string> ApplicationMessageRequestAck_0;
-  FIX::ApplReqID ApplReqID_2("STRING_533995799");
+  FIX::ApplReqID ApplReqID_2("STRING_1382756552");
   msg.set(ApplReqID_2);
   ApplicationMessageRequestAck_0.insert(ApplReqID_2.getString());
-  FIX::ApplReqType ApplReqType_1(6);
+  FIX::ApplReqType ApplReqType_1(4);
   msg.set(ApplReqType_1);
   ApplicationMessageRequestAck_0.insert(ApplReqType_1.getString());
-  FIX::ApplResponseID ApplResponseID_0("STRING_932782672");
+  FIX::ApplResponseID ApplResponseID_0("STRING_1983052296");
   msg.set(ApplResponseID_0);
   ApplicationMessageRequestAck_0.insert(ApplResponseID_0.getString());
-  FIX::ApplResponseType ApplResponseType_0(0);
+  FIX::ApplResponseType ApplResponseType_0(2);
   msg.set(ApplResponseType_0);
   ApplicationMessageRequestAck_0.insert(ApplResponseType_0.getString());
-  FIX::ApplTotalMessageCount ApplTotalMessageCount_0(904220579);
+  FIX::ApplTotalMessageCount ApplTotalMessageCount_0(779602885);
   msg.set(ApplTotalMessageCount_0);
   ApplicationMessageRequestAck_0.insert(ApplTotalMessageCount_0.getString());
-  FIX::EncodedText EncodedText_8("DATA_1560496273");
+  FIX::EncodedText EncodedText_8("DATA_2070050020");
   msg.set(EncodedText_8);
   ApplicationMessageRequestAck_0.insert(EncodedText_8.getString());
-  FIX::EncodedTextLen EncodedTextLen_8(682728156);
+  FIX::EncodedTextLen EncodedTextLen_8(254171063);
   msg.set(EncodedTextLen_8);
   ApplicationMessageRequestAck_0.insert(EncodedTextLen_8.getString());
-  FIX::Text Text_8("STRING_1716415291");
+  FIX::Text Text_8("STRING_1495847257");
   msg.set(Text_8);
   ApplicationMessageRequestAck_0.insert(Text_8.getString());
   all_values.push_back(ApplicationMessageRequestAck_0);
@@ -55,22 +55,22 @@ TEST ( ApplicationMessageRequestAck, set_fields)
     FIX50SP2::ApplicationMessageRequestAck::NoApplIDs noApplIDs_0_0;
     // ApplIDRequestAckGrp.NoApplIDs
     multiset<string> ApplIDRequestAckGrp_NoApplIDs_0;
-    FIX::ApplBegSeqNum ApplBegSeqNum_2(1295398237);
+    FIX::ApplBegSeqNum ApplBegSeqNum_2(505720380);
     noApplIDs_0_0.set(ApplBegSeqNum_2);
     ApplIDRequestAckGrp_NoApplIDs_0.insert(ApplBegSeqNum_2.getString());
-    FIX::ApplEndSeqNum ApplEndSeqNum_2(1341151995);
+    FIX::ApplEndSeqNum ApplEndSeqNum_2(1190300550);
     noApplIDs_0_0.set(ApplEndSeqNum_2);
     ApplIDRequestAckGrp_NoApplIDs_0.insert(ApplEndSeqNum_2.getString());
-    FIX::ApplResponseError ApplResponseError_0(2);
+    FIX::ApplResponseError ApplResponseError_0(1);
     noApplIDs_0_0.set(ApplResponseError_0);
     ApplIDRequestAckGrp_NoApplIDs_0.insert(ApplResponseError_0.getString());
-    FIX::RefApplID RefApplID_4("STRING_1237574961");
+    FIX::RefApplID RefApplID_4("STRING_1035443240");
     noApplIDs_0_0.set(RefApplID_4);
     ApplIDRequestAckGrp_NoApplIDs_0.insert(RefApplID_4.getString());
-    FIX::RefApplLastSeqNum RefApplLastSeqNum_2(988698725);
+    FIX::RefApplLastSeqNum RefApplLastSeqNum_2(317411626);
     noApplIDs_0_0.set(RefApplLastSeqNum_2);
     ApplIDRequestAckGrp_NoApplIDs_0.insert(RefApplLastSeqNum_2.getString());
-    FIX::RefApplReqID RefApplReqID_2("STRING_488495287");
+    FIX::RefApplReqID RefApplReqID_2("STRING_248935297");
     noApplIDs_0_0.set(RefApplReqID_2);
     ApplIDRequestAckGrp_NoApplIDs_0.insert(RefApplReqID_2.getString());
     all_values.push_back(ApplIDRequestAckGrp_NoApplIDs_0);
@@ -80,120 +80,92 @@ TEST ( ApplicationMessageRequestAck, set_fields)
     {
       FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_0_1_0;
       // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_25;
-      FIX::NestedPartyID NestedPartyID_25("STRING_101461937");
-      noNestedPartyIDs_0_1_0.set(NestedPartyID_25);
-      NestedParties_NoNestedPartyIDs_25.insert(NestedPartyID_25.getString());
-      FIX::NestedPartyIDSource NestedPartyIDSource_25('2');
-      noNestedPartyIDs_0_1_0.set(NestedPartyIDSource_25);
-      NestedParties_NoNestedPartyIDs_25.insert(NestedPartyIDSource_25.getString());
-      FIX::NestedPartyRole NestedPartyRole_25(24576920);
-      noNestedPartyIDs_0_1_0.set(NestedPartyRole_25);
-      NestedParties_NoNestedPartyIDs_25.insert(NestedPartyRole_25.getString());
-      all_values.push_back(NestedParties_NoNestedPartyIDs_25);
+      multiset<string> NestedParties_NoNestedPartyIDs_21;
+      FIX::NestedPartyID NestedPartyID_21("STRING_680690829");
+      noNestedPartyIDs_0_1_0.set(NestedPartyID_21);
+      NestedParties_NoNestedPartyIDs_21.insert(NestedPartyID_21.getString());
+      FIX::NestedPartyIDSource NestedPartyIDSource_21('1');
+      noNestedPartyIDs_0_1_0.set(NestedPartyIDSource_21);
+      NestedParties_NoNestedPartyIDs_21.insert(NestedPartyIDSource_21.getString());
+      FIX::NestedPartyRole NestedPartyRole_21(1164956030);
+      noNestedPartyIDs_0_1_0.set(NestedPartyRole_21);
+      NestedParties_NoNestedPartyIDs_21.insert(NestedPartyRole_21.getString());
+      all_values.push_back(NestedParties_NoNestedPartyIDs_21);
 
       // NstdPtysSubGrp
       // Group NstdPtysSubGrp.NoNestedPartySubIDs
       {
         FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_0_2_0;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_44;
-        FIX::NestedPartySubID NestedPartySubID_44("STRING_428637589");
-        noNestedPartySubIDs_0_0_2_0.set(NestedPartySubID_44);
-        NstdPtysSubGrp_NoNestedPartySubIDs_44.insert(NestedPartySubID_44.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_44(1550606855);
-        noNestedPartySubIDs_0_0_2_0.set(NestedPartySubIDType_44);
-        NstdPtysSubGrp_NoNestedPartySubIDs_44.insert(NestedPartySubIDType_44.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_44);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_41;
+        FIX::NestedPartySubID NestedPartySubID_41("STRING_1279282221");
+        noNestedPartySubIDs_0_0_2_0.set(NestedPartySubID_41);
+        NstdPtysSubGrp_NoNestedPartySubIDs_41.insert(NestedPartySubID_41.getString());
+        FIX::NestedPartySubIDType NestedPartySubIDType_41(277881019);
+        noNestedPartySubIDs_0_0_2_0.set(NestedPartySubIDType_41);
+        NstdPtysSubGrp_NoNestedPartySubIDs_41.insert(NestedPartySubIDType_41.getString());
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_41);
 
         noNestedPartyIDs_0_1_0.addGroup(noNestedPartySubIDs_0_0_2_0);
-      }
-      {
-        FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_0_2_1;
-        // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_45;
-        FIX::NestedPartySubID NestedPartySubID_45("STRING_862764600");
-        noNestedPartySubIDs_0_0_2_1.set(NestedPartySubID_45);
-        NstdPtysSubGrp_NoNestedPartySubIDs_45.insert(NestedPartySubID_45.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_45(1663082047);
-        noNestedPartySubIDs_0_0_2_1.set(NestedPartySubIDType_45);
-        NstdPtysSubGrp_NoNestedPartySubIDs_45.insert(NestedPartySubIDType_45.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_45);
-
-        noNestedPartyIDs_0_1_0.addGroup(noNestedPartySubIDs_0_0_2_1);
-      }
-      {
-        FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_0_2_2;
-        // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_46;
-        FIX::NestedPartySubID NestedPartySubID_46("STRING_1943550724");
-        noNestedPartySubIDs_0_0_2_2.set(NestedPartySubID_46);
-        NstdPtysSubGrp_NoNestedPartySubIDs_46.insert(NestedPartySubID_46.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_46(2071138820);
-        noNestedPartySubIDs_0_0_2_2.set(NestedPartySubIDType_46);
-        NstdPtysSubGrp_NoNestedPartySubIDs_46.insert(NestedPartySubIDType_46.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_46);
-
-        noNestedPartyIDs_0_1_0.addGroup(noNestedPartySubIDs_0_0_2_2);
       }
       noApplIDs_0_0.addGroup(noNestedPartyIDs_0_1_0);
     }
     {
       FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_0_1_1;
       // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_26;
-      FIX::NestedPartyID NestedPartyID_26("STRING_108262298");
-      noNestedPartyIDs_0_1_1.set(NestedPartyID_26);
-      NestedParties_NoNestedPartyIDs_26.insert(NestedPartyID_26.getString());
-      FIX::NestedPartyIDSource NestedPartyIDSource_26('1');
-      noNestedPartyIDs_0_1_1.set(NestedPartyIDSource_26);
-      NestedParties_NoNestedPartyIDs_26.insert(NestedPartyIDSource_26.getString());
-      FIX::NestedPartyRole NestedPartyRole_26(215702834);
-      noNestedPartyIDs_0_1_1.set(NestedPartyRole_26);
-      NestedParties_NoNestedPartyIDs_26.insert(NestedPartyRole_26.getString());
-      all_values.push_back(NestedParties_NoNestedPartyIDs_26);
+      multiset<string> NestedParties_NoNestedPartyIDs_22;
+      FIX::NestedPartyID NestedPartyID_22("STRING_85402779");
+      noNestedPartyIDs_0_1_1.set(NestedPartyID_22);
+      NestedParties_NoNestedPartyIDs_22.insert(NestedPartyID_22.getString());
+      FIX::NestedPartyIDSource NestedPartyIDSource_22('8');
+      noNestedPartyIDs_0_1_1.set(NestedPartyIDSource_22);
+      NestedParties_NoNestedPartyIDs_22.insert(NestedPartyIDSource_22.getString());
+      FIX::NestedPartyRole NestedPartyRole_22(1612266832);
+      noNestedPartyIDs_0_1_1.set(NestedPartyRole_22);
+      NestedParties_NoNestedPartyIDs_22.insert(NestedPartyRole_22.getString());
+      all_values.push_back(NestedParties_NoNestedPartyIDs_22);
 
       // NstdPtysSubGrp
       // Group NstdPtysSubGrp.NoNestedPartySubIDs
       {
         FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_1_2_0;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_47;
-        FIX::NestedPartySubID NestedPartySubID_47("STRING_674392841");
-        noNestedPartySubIDs_0_1_2_0.set(NestedPartySubID_47);
-        NstdPtysSubGrp_NoNestedPartySubIDs_47.insert(NestedPartySubID_47.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_47(749698633);
-        noNestedPartySubIDs_0_1_2_0.set(NestedPartySubIDType_47);
-        NstdPtysSubGrp_NoNestedPartySubIDs_47.insert(NestedPartySubIDType_47.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_47);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_42;
+        FIX::NestedPartySubID NestedPartySubID_42("STRING_1640915840");
+        noNestedPartySubIDs_0_1_2_0.set(NestedPartySubID_42);
+        NstdPtysSubGrp_NoNestedPartySubIDs_42.insert(NestedPartySubID_42.getString());
+        FIX::NestedPartySubIDType NestedPartySubIDType_42(723260476);
+        noNestedPartySubIDs_0_1_2_0.set(NestedPartySubIDType_42);
+        NstdPtysSubGrp_NoNestedPartySubIDs_42.insert(NestedPartySubIDType_42.getString());
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_42);
 
         noNestedPartyIDs_0_1_1.addGroup(noNestedPartySubIDs_0_1_2_0);
       }
       {
         FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_1_2_1;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_48;
-        FIX::NestedPartySubID NestedPartySubID_48("STRING_575939262");
-        noNestedPartySubIDs_0_1_2_1.set(NestedPartySubID_48);
-        NstdPtysSubGrp_NoNestedPartySubIDs_48.insert(NestedPartySubID_48.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_48(1607175513);
-        noNestedPartySubIDs_0_1_2_1.set(NestedPartySubIDType_48);
-        NstdPtysSubGrp_NoNestedPartySubIDs_48.insert(NestedPartySubIDType_48.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_48);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_43;
+        FIX::NestedPartySubID NestedPartySubID_43("STRING_1118029241");
+        noNestedPartySubIDs_0_1_2_1.set(NestedPartySubID_43);
+        NstdPtysSubGrp_NoNestedPartySubIDs_43.insert(NestedPartySubID_43.getString());
+        FIX::NestedPartySubIDType NestedPartySubIDType_43(2000862659);
+        noNestedPartySubIDs_0_1_2_1.set(NestedPartySubIDType_43);
+        NstdPtysSubGrp_NoNestedPartySubIDs_43.insert(NestedPartySubIDType_43.getString());
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_43);
 
         noNestedPartyIDs_0_1_1.addGroup(noNestedPartySubIDs_0_1_2_1);
       }
       {
         FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_1_2_2;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_49;
-        FIX::NestedPartySubID NestedPartySubID_49("STRING_430571117");
-        noNestedPartySubIDs_0_1_2_2.set(NestedPartySubID_49);
-        NstdPtysSubGrp_NoNestedPartySubIDs_49.insert(NestedPartySubID_49.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_49(1480159841);
-        noNestedPartySubIDs_0_1_2_2.set(NestedPartySubIDType_49);
-        NstdPtysSubGrp_NoNestedPartySubIDs_49.insert(NestedPartySubIDType_49.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_49);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_44;
+        FIX::NestedPartySubID NestedPartySubID_44("STRING_1587602651");
+        noNestedPartySubIDs_0_1_2_2.set(NestedPartySubID_44);
+        NstdPtysSubGrp_NoNestedPartySubIDs_44.insert(NestedPartySubID_44.getString());
+        FIX::NestedPartySubIDType NestedPartySubIDType_44(353302145);
+        noNestedPartySubIDs_0_1_2_2.set(NestedPartySubIDType_44);
+        NstdPtysSubGrp_NoNestedPartySubIDs_44.insert(NestedPartySubIDType_44.getString());
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_44);
 
         noNestedPartyIDs_0_1_1.addGroup(noNestedPartySubIDs_0_1_2_2);
       }
@@ -205,22 +177,22 @@ TEST ( ApplicationMessageRequestAck, set_fields)
     FIX50SP2::ApplicationMessageRequestAck::NoApplIDs noApplIDs_0_1;
     // ApplIDRequestAckGrp.NoApplIDs
     multiset<string> ApplIDRequestAckGrp_NoApplIDs_1;
-    FIX::ApplBegSeqNum ApplBegSeqNum_3(1020188138);
+    FIX::ApplBegSeqNum ApplBegSeqNum_3(303596378);
     noApplIDs_0_1.set(ApplBegSeqNum_3);
     ApplIDRequestAckGrp_NoApplIDs_1.insert(ApplBegSeqNum_3.getString());
-    FIX::ApplEndSeqNum ApplEndSeqNum_3(1113299273);
+    FIX::ApplEndSeqNum ApplEndSeqNum_3(1423171300);
     noApplIDs_0_1.set(ApplEndSeqNum_3);
     ApplIDRequestAckGrp_NoApplIDs_1.insert(ApplEndSeqNum_3.getString());
     FIX::ApplResponseError ApplResponseError_1(2);
     noApplIDs_0_1.set(ApplResponseError_1);
     ApplIDRequestAckGrp_NoApplIDs_1.insert(ApplResponseError_1.getString());
-    FIX::RefApplID RefApplID_5("STRING_1636804033");
+    FIX::RefApplID RefApplID_5("STRING_1083199263");
     noApplIDs_0_1.set(RefApplID_5);
     ApplIDRequestAckGrp_NoApplIDs_1.insert(RefApplID_5.getString());
-    FIX::RefApplLastSeqNum RefApplLastSeqNum_3(261213862);
+    FIX::RefApplLastSeqNum RefApplLastSeqNum_3(1345737672);
     noApplIDs_0_1.set(RefApplLastSeqNum_3);
     ApplIDRequestAckGrp_NoApplIDs_1.insert(RefApplLastSeqNum_3.getString());
-    FIX::RefApplReqID RefApplReqID_3("STRING_242759832");
+    FIX::RefApplReqID RefApplReqID_3("STRING_11186648");
     noApplIDs_0_1.set(RefApplReqID_3);
     ApplIDRequestAckGrp_NoApplIDs_1.insert(RefApplReqID_3.getString());
     all_values.push_back(ApplIDRequestAckGrp_NoApplIDs_1);
@@ -230,284 +202,82 @@ TEST ( ApplicationMessageRequestAck, set_fields)
     {
       FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_1_1_0;
       // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_27;
-      FIX::NestedPartyID NestedPartyID_27("STRING_1498788824");
-      noNestedPartyIDs_1_1_0.set(NestedPartyID_27);
-      NestedParties_NoNestedPartyIDs_27.insert(NestedPartyID_27.getString());
-      FIX::NestedPartyIDSource NestedPartyIDSource_27('1');
-      noNestedPartyIDs_1_1_0.set(NestedPartyIDSource_27);
-      NestedParties_NoNestedPartyIDs_27.insert(NestedPartyIDSource_27.getString());
-      FIX::NestedPartyRole NestedPartyRole_27(1555421718);
-      noNestedPartyIDs_1_1_0.set(NestedPartyRole_27);
-      NestedParties_NoNestedPartyIDs_27.insert(NestedPartyRole_27.getString());
-      all_values.push_back(NestedParties_NoNestedPartyIDs_27);
+      multiset<string> NestedParties_NoNestedPartyIDs_23;
+      FIX::NestedPartyID NestedPartyID_23("STRING_1430463019");
+      noNestedPartyIDs_1_1_0.set(NestedPartyID_23);
+      NestedParties_NoNestedPartyIDs_23.insert(NestedPartyID_23.getString());
+      FIX::NestedPartyIDSource NestedPartyIDSource_23('5');
+      noNestedPartyIDs_1_1_0.set(NestedPartyIDSource_23);
+      NestedParties_NoNestedPartyIDs_23.insert(NestedPartyIDSource_23.getString());
+      FIX::NestedPartyRole NestedPartyRole_23(1621863423);
+      noNestedPartyIDs_1_1_0.set(NestedPartyRole_23);
+      NestedParties_NoNestedPartyIDs_23.insert(NestedPartyRole_23.getString());
+      all_values.push_back(NestedParties_NoNestedPartyIDs_23);
 
       // NstdPtysSubGrp
       // Group NstdPtysSubGrp.NoNestedPartySubIDs
       {
         FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_1_0_2_0;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_50;
-        FIX::NestedPartySubID NestedPartySubID_50("STRING_1332920494");
-        noNestedPartySubIDs_1_0_2_0.set(NestedPartySubID_50);
-        NstdPtysSubGrp_NoNestedPartySubIDs_50.insert(NestedPartySubID_50.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_50(1421899442);
-        noNestedPartySubIDs_1_0_2_0.set(NestedPartySubIDType_50);
-        NstdPtysSubGrp_NoNestedPartySubIDs_50.insert(NestedPartySubIDType_50.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_50);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_45;
+        FIX::NestedPartySubID NestedPartySubID_45("STRING_1552350269");
+        noNestedPartySubIDs_1_0_2_0.set(NestedPartySubID_45);
+        NstdPtysSubGrp_NoNestedPartySubIDs_45.insert(NestedPartySubID_45.getString());
+        FIX::NestedPartySubIDType NestedPartySubIDType_45(1939275049);
+        noNestedPartySubIDs_1_0_2_0.set(NestedPartySubIDType_45);
+        NstdPtysSubGrp_NoNestedPartySubIDs_45.insert(NestedPartySubIDType_45.getString());
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_45);
 
         noNestedPartyIDs_1_1_0.addGroup(noNestedPartySubIDs_1_0_2_0);
       }
-      {
-        FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_1_0_2_1;
-        // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_51;
-        FIX::NestedPartySubID NestedPartySubID_51("STRING_500343511");
-        noNestedPartySubIDs_1_0_2_1.set(NestedPartySubID_51);
-        NstdPtysSubGrp_NoNestedPartySubIDs_51.insert(NestedPartySubID_51.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_51(145221379);
-        noNestedPartySubIDs_1_0_2_1.set(NestedPartySubIDType_51);
-        NstdPtysSubGrp_NoNestedPartySubIDs_51.insert(NestedPartySubIDType_51.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_51);
-
-        noNestedPartyIDs_1_1_0.addGroup(noNestedPartySubIDs_1_0_2_1);
-      }
       noApplIDs_0_1.addGroup(noNestedPartyIDs_1_1_0);
     }
-    {
-      FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_1_1_1;
-      // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_28;
-      FIX::NestedPartyID NestedPartyID_28("STRING_1850537031");
-      noNestedPartyIDs_1_1_1.set(NestedPartyID_28);
-      NestedParties_NoNestedPartyIDs_28.insert(NestedPartyID_28.getString());
-      FIX::NestedPartyIDSource NestedPartyIDSource_28('2');
-      noNestedPartyIDs_1_1_1.set(NestedPartyIDSource_28);
-      NestedParties_NoNestedPartyIDs_28.insert(NestedPartyIDSource_28.getString());
-      FIX::NestedPartyRole NestedPartyRole_28(1007985979);
-      noNestedPartyIDs_1_1_1.set(NestedPartyRole_28);
-      NestedParties_NoNestedPartyIDs_28.insert(NestedPartyRole_28.getString());
-      all_values.push_back(NestedParties_NoNestedPartyIDs_28);
-
-      // NstdPtysSubGrp
-      // Group NstdPtysSubGrp.NoNestedPartySubIDs
-      {
-        FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_1_1_2_0;
-        // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_52;
-        FIX::NestedPartySubID NestedPartySubID_52("STRING_1847017442");
-        noNestedPartySubIDs_1_1_2_0.set(NestedPartySubID_52);
-        NstdPtysSubGrp_NoNestedPartySubIDs_52.insert(NestedPartySubID_52.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_52(931641151);
-        noNestedPartySubIDs_1_1_2_0.set(NestedPartySubIDType_52);
-        NstdPtysSubGrp_NoNestedPartySubIDs_52.insert(NestedPartySubIDType_52.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_52);
-
-        noNestedPartyIDs_1_1_1.addGroup(noNestedPartySubIDs_1_1_2_0);
-      }
-      noApplIDs_0_1.addGroup(noNestedPartyIDs_1_1_1);
-    }
     msg.addGroup(noApplIDs_0_1);
-  }
-  {
-    FIX50SP2::ApplicationMessageRequestAck::NoApplIDs noApplIDs_0_2;
-    // ApplIDRequestAckGrp.NoApplIDs
-    multiset<string> ApplIDRequestAckGrp_NoApplIDs_2;
-    FIX::ApplBegSeqNum ApplBegSeqNum_4(1474397729);
-    noApplIDs_0_2.set(ApplBegSeqNum_4);
-    ApplIDRequestAckGrp_NoApplIDs_2.insert(ApplBegSeqNum_4.getString());
-    FIX::ApplEndSeqNum ApplEndSeqNum_4(1469466760);
-    noApplIDs_0_2.set(ApplEndSeqNum_4);
-    ApplIDRequestAckGrp_NoApplIDs_2.insert(ApplEndSeqNum_4.getString());
-    FIX::ApplResponseError ApplResponseError_2(0);
-    noApplIDs_0_2.set(ApplResponseError_2);
-    ApplIDRequestAckGrp_NoApplIDs_2.insert(ApplResponseError_2.getString());
-    FIX::RefApplID RefApplID_6("STRING_1627266589");
-    noApplIDs_0_2.set(RefApplID_6);
-    ApplIDRequestAckGrp_NoApplIDs_2.insert(RefApplID_6.getString());
-    FIX::RefApplLastSeqNum RefApplLastSeqNum_4(2143859601);
-    noApplIDs_0_2.set(RefApplLastSeqNum_4);
-    ApplIDRequestAckGrp_NoApplIDs_2.insert(RefApplLastSeqNum_4.getString());
-    FIX::RefApplReqID RefApplReqID_4("STRING_1897042618");
-    noApplIDs_0_2.set(RefApplReqID_4);
-    ApplIDRequestAckGrp_NoApplIDs_2.insert(RefApplReqID_4.getString());
-    all_values.push_back(ApplIDRequestAckGrp_NoApplIDs_2);
-
-    // NestedParties
-    // Group NestedParties.NoNestedPartyIDs
-    {
-      FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_2_1_0;
-      // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_29;
-      FIX::NestedPartyID NestedPartyID_29("STRING_1603551466");
-      noNestedPartyIDs_2_1_0.set(NestedPartyID_29);
-      NestedParties_NoNestedPartyIDs_29.insert(NestedPartyID_29.getString());
-      FIX::NestedPartyIDSource NestedPartyIDSource_29('1');
-      noNestedPartyIDs_2_1_0.set(NestedPartyIDSource_29);
-      NestedParties_NoNestedPartyIDs_29.insert(NestedPartyIDSource_29.getString());
-      FIX::NestedPartyRole NestedPartyRole_29(1535882044);
-      noNestedPartyIDs_2_1_0.set(NestedPartyRole_29);
-      NestedParties_NoNestedPartyIDs_29.insert(NestedPartyRole_29.getString());
-      all_values.push_back(NestedParties_NoNestedPartyIDs_29);
-
-      // NstdPtysSubGrp
-      // Group NstdPtysSubGrp.NoNestedPartySubIDs
-      {
-        FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_2_0_2_0;
-        // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_53;
-        FIX::NestedPartySubID NestedPartySubID_53("STRING_1293429361");
-        noNestedPartySubIDs_2_0_2_0.set(NestedPartySubID_53);
-        NstdPtysSubGrp_NoNestedPartySubIDs_53.insert(NestedPartySubID_53.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_53(437489881);
-        noNestedPartySubIDs_2_0_2_0.set(NestedPartySubIDType_53);
-        NstdPtysSubGrp_NoNestedPartySubIDs_53.insert(NestedPartySubIDType_53.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_53);
-
-        noNestedPartyIDs_2_1_0.addGroup(noNestedPartySubIDs_2_0_2_0);
-      }
-      {
-        FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_2_0_2_1;
-        // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_54;
-        FIX::NestedPartySubID NestedPartySubID_54("STRING_2113059989");
-        noNestedPartySubIDs_2_0_2_1.set(NestedPartySubID_54);
-        NstdPtysSubGrp_NoNestedPartySubIDs_54.insert(NestedPartySubID_54.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_54(1554643224);
-        noNestedPartySubIDs_2_0_2_1.set(NestedPartySubIDType_54);
-        NstdPtysSubGrp_NoNestedPartySubIDs_54.insert(NestedPartySubIDType_54.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_54);
-
-        noNestedPartyIDs_2_1_0.addGroup(noNestedPartySubIDs_2_0_2_1);
-      }
-      noApplIDs_0_2.addGroup(noNestedPartyIDs_2_1_0);
-    }
-    {
-      FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_2_1_1;
-      // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_30;
-      FIX::NestedPartyID NestedPartyID_30("STRING_680249713");
-      noNestedPartyIDs_2_1_1.set(NestedPartyID_30);
-      NestedParties_NoNestedPartyIDs_30.insert(NestedPartyID_30.getString());
-      FIX::NestedPartyIDSource NestedPartyIDSource_30('1');
-      noNestedPartyIDs_2_1_1.set(NestedPartyIDSource_30);
-      NestedParties_NoNestedPartyIDs_30.insert(NestedPartyIDSource_30.getString());
-      FIX::NestedPartyRole NestedPartyRole_30(905948400);
-      noNestedPartyIDs_2_1_1.set(NestedPartyRole_30);
-      NestedParties_NoNestedPartyIDs_30.insert(NestedPartyRole_30.getString());
-      all_values.push_back(NestedParties_NoNestedPartyIDs_30);
-
-      // NstdPtysSubGrp
-      // Group NstdPtysSubGrp.NoNestedPartySubIDs
-      {
-        FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_2_1_2_0;
-        // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_55;
-        FIX::NestedPartySubID NestedPartySubID_55("STRING_440440841");
-        noNestedPartySubIDs_2_1_2_0.set(NestedPartySubID_55);
-        NstdPtysSubGrp_NoNestedPartySubIDs_55.insert(NestedPartySubID_55.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_55(1381714990);
-        noNestedPartySubIDs_2_1_2_0.set(NestedPartySubIDType_55);
-        NstdPtysSubGrp_NoNestedPartySubIDs_55.insert(NestedPartySubIDType_55.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_55);
-
-        noNestedPartyIDs_2_1_1.addGroup(noNestedPartySubIDs_2_1_2_0);
-      }
-      noApplIDs_0_2.addGroup(noNestedPartyIDs_2_1_1);
-    }
-    {
-      FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_2_1_2;
-      // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_31;
-      FIX::NestedPartyID NestedPartyID_31("STRING_1097145117");
-      noNestedPartyIDs_2_1_2.set(NestedPartyID_31);
-      NestedParties_NoNestedPartyIDs_31.insert(NestedPartyID_31.getString());
-      FIX::NestedPartyIDSource NestedPartyIDSource_31('1');
-      noNestedPartyIDs_2_1_2.set(NestedPartyIDSource_31);
-      NestedParties_NoNestedPartyIDs_31.insert(NestedPartyIDSource_31.getString());
-      FIX::NestedPartyRole NestedPartyRole_31(1882058501);
-      noNestedPartyIDs_2_1_2.set(NestedPartyRole_31);
-      NestedParties_NoNestedPartyIDs_31.insert(NestedPartyRole_31.getString());
-      all_values.push_back(NestedParties_NoNestedPartyIDs_31);
-
-      // NstdPtysSubGrp
-      // Group NstdPtysSubGrp.NoNestedPartySubIDs
-      {
-        FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_2_2_2_0;
-        // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_56;
-        FIX::NestedPartySubID NestedPartySubID_56("STRING_1565393667");
-        noNestedPartySubIDs_2_2_2_0.set(NestedPartySubID_56);
-        NstdPtysSubGrp_NoNestedPartySubIDs_56.insert(NestedPartySubID_56.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_56(1785525219);
-        noNestedPartySubIDs_2_2_2_0.set(NestedPartySubIDType_56);
-        NstdPtysSubGrp_NoNestedPartySubIDs_56.insert(NestedPartySubIDType_56.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_56);
-
-        noNestedPartyIDs_2_1_2.addGroup(noNestedPartySubIDs_2_2_2_0);
-      }
-      {
-        FIX50SP2::ApplicationMessageRequestAck::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_2_2_2_1;
-        // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_57;
-        FIX::NestedPartySubID NestedPartySubID_57("STRING_102868828");
-        noNestedPartySubIDs_2_2_2_1.set(NestedPartySubID_57);
-        NstdPtysSubGrp_NoNestedPartySubIDs_57.insert(NestedPartySubID_57.getString());
-        FIX::NestedPartySubIDType NestedPartySubIDType_57(784045450);
-        noNestedPartySubIDs_2_2_2_1.set(NestedPartySubIDType_57);
-        NstdPtysSubGrp_NoNestedPartySubIDs_57.insert(NestedPartySubIDType_57.getString());
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_57);
-
-        noNestedPartyIDs_2_1_2.addGroup(noNestedPartySubIDs_2_2_2_1);
-      }
-      noApplIDs_0_2.addGroup(noNestedPartyIDs_2_1_2);
-    }
-    msg.addGroup(noApplIDs_0_2);
   }
   // Parties
   // Group Parties.NoPartyIDs
   {
     FIX50SP2::ApplicationMessageRequestAck::NoPartyIDs noPartyIDs_0_0;
     // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_19;
-    FIX::PartyID PartyID_19("STRING_1034509979");
-    noPartyIDs_0_0.set(PartyID_19);
-    Parties_NoPartyIDs_19.insert(PartyID_19.getString());
-    FIX::PartyIDSource PartyIDSource_19('3');
-    noPartyIDs_0_0.set(PartyIDSource_19);
-    Parties_NoPartyIDs_19.insert(PartyIDSource_19.getString());
-    FIX::PartyRole PartyRole_19(32);
-    noPartyIDs_0_0.set(PartyRole_19);
-    Parties_NoPartyIDs_19.insert(PartyRole_19.getString());
-    all_values.push_back(Parties_NoPartyIDs_19);
+    multiset<string> Parties_NoPartyIDs_13;
+    FIX::PartyID PartyID_13("STRING_1083025861");
+    noPartyIDs_0_0.set(PartyID_13);
+    Parties_NoPartyIDs_13.insert(PartyID_13.getString());
+    FIX::PartyIDSource PartyIDSource_13('E');
+    noPartyIDs_0_0.set(PartyIDSource_13);
+    Parties_NoPartyIDs_13.insert(PartyIDSource_13.getString());
+    FIX::PartyRole PartyRole_13(53);
+    noPartyIDs_0_0.set(PartyRole_13);
+    Parties_NoPartyIDs_13.insert(PartyRole_13.getString());
+    all_values.push_back(Parties_NoPartyIDs_13);
 
     // PtysSubGrp
     // Group PtysSubGrp.NoPartySubIDs
     {
       FIX50SP2::ApplicationMessageRequestAck::NoPartyIDs::NoPartySubIDs noPartySubIDs_0_1_0;
       // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_42;
-      FIX::PartySubID PartySubID_42("STRING_1738226120");
-      noPartySubIDs_0_1_0.set(PartySubID_42);
-      PtysSubGrp_NoPartySubIDs_42.insert(PartySubID_42.getString());
-      FIX::PartySubIDType PartySubIDType_42(14);
-      noPartySubIDs_0_1_0.set(PartySubIDType_42);
-      PtysSubGrp_NoPartySubIDs_42.insert(PartySubIDType_42.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_42);
+      multiset<string> PtysSubGrp_NoPartySubIDs_24;
+      FIX::PartySubID PartySubID_24("STRING_2136712595");
+      noPartySubIDs_0_1_0.set(PartySubID_24);
+      PtysSubGrp_NoPartySubIDs_24.insert(PartySubID_24.getString());
+      FIX::PartySubIDType PartySubIDType_24(20);
+      noPartySubIDs_0_1_0.set(PartySubIDType_24);
+      PtysSubGrp_NoPartySubIDs_24.insert(PartySubIDType_24.getString());
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_24);
 
       noPartyIDs_0_0.addGroup(noPartySubIDs_0_1_0);
     }
     {
       FIX50SP2::ApplicationMessageRequestAck::NoPartyIDs::NoPartySubIDs noPartySubIDs_0_1_1;
       // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_43;
-      FIX::PartySubID PartySubID_43("STRING_1931412935");
-      noPartySubIDs_0_1_1.set(PartySubID_43);
-      PtysSubGrp_NoPartySubIDs_43.insert(PartySubID_43.getString());
-      FIX::PartySubIDType PartySubIDType_43(14);
-      noPartySubIDs_0_1_1.set(PartySubIDType_43);
-      PtysSubGrp_NoPartySubIDs_43.insert(PartySubIDType_43.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_43);
+      multiset<string> PtysSubGrp_NoPartySubIDs_25;
+      FIX::PartySubID PartySubID_25("STRING_378379262");
+      noPartySubIDs_0_1_1.set(PartySubID_25);
+      PtysSubGrp_NoPartySubIDs_25.insert(PartySubID_25.getString());
+      FIX::PartySubIDType PartySubIDType_25(16);
+      noPartySubIDs_0_1_1.set(PartySubIDType_25);
+      PtysSubGrp_NoPartySubIDs_25.insert(PartySubIDType_25.getString());
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_25);
 
       noPartyIDs_0_0.addGroup(noPartySubIDs_0_1_1);
     }
@@ -516,45 +286,45 @@ TEST ( ApplicationMessageRequestAck, set_fields)
   {
     FIX50SP2::ApplicationMessageRequestAck::NoPartyIDs noPartyIDs_0_1;
     // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_20;
-    FIX::PartyID PartyID_20("STRING_259485897");
-    noPartyIDs_0_1.set(PartyID_20);
-    Parties_NoPartyIDs_20.insert(PartyID_20.getString());
-    FIX::PartyIDSource PartyIDSource_20('D');
-    noPartyIDs_0_1.set(PartyIDSource_20);
-    Parties_NoPartyIDs_20.insert(PartyIDSource_20.getString());
-    FIX::PartyRole PartyRole_20(16);
-    noPartyIDs_0_1.set(PartyRole_20);
-    Parties_NoPartyIDs_20.insert(PartyRole_20.getString());
-    all_values.push_back(Parties_NoPartyIDs_20);
+    multiset<string> Parties_NoPartyIDs_14;
+    FIX::PartyID PartyID_14("STRING_1008253768");
+    noPartyIDs_0_1.set(PartyID_14);
+    Parties_NoPartyIDs_14.insert(PartyID_14.getString());
+    FIX::PartyIDSource PartyIDSource_14('C');
+    noPartyIDs_0_1.set(PartyIDSource_14);
+    Parties_NoPartyIDs_14.insert(PartyIDSource_14.getString());
+    FIX::PartyRole PartyRole_14(22);
+    noPartyIDs_0_1.set(PartyRole_14);
+    Parties_NoPartyIDs_14.insert(PartyRole_14.getString());
+    all_values.push_back(Parties_NoPartyIDs_14);
 
     // PtysSubGrp
     // Group PtysSubGrp.NoPartySubIDs
     {
       FIX50SP2::ApplicationMessageRequestAck::NoPartyIDs::NoPartySubIDs noPartySubIDs_1_1_0;
       // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_44;
-      FIX::PartySubID PartySubID_44("STRING_1257488737");
-      noPartySubIDs_1_1_0.set(PartySubID_44);
-      PtysSubGrp_NoPartySubIDs_44.insert(PartySubID_44.getString());
-      FIX::PartySubIDType PartySubIDType_44(21);
-      noPartySubIDs_1_1_0.set(PartySubIDType_44);
-      PtysSubGrp_NoPartySubIDs_44.insert(PartySubIDType_44.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_44);
+      multiset<string> PtysSubGrp_NoPartySubIDs_26;
+      FIX::PartySubID PartySubID_26("STRING_566422922");
+      noPartySubIDs_1_1_0.set(PartySubID_26);
+      PtysSubGrp_NoPartySubIDs_26.insert(PartySubID_26.getString());
+      FIX::PartySubIDType PartySubIDType_26(7);
+      noPartySubIDs_1_1_0.set(PartySubIDType_26);
+      PtysSubGrp_NoPartySubIDs_26.insert(PartySubIDType_26.getString());
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_26);
 
       noPartyIDs_0_1.addGroup(noPartySubIDs_1_1_0);
     }
     {
       FIX50SP2::ApplicationMessageRequestAck::NoPartyIDs::NoPartySubIDs noPartySubIDs_1_1_1;
       // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_45;
-      FIX::PartySubID PartySubID_45("STRING_701318194");
-      noPartySubIDs_1_1_1.set(PartySubID_45);
-      PtysSubGrp_NoPartySubIDs_45.insert(PartySubID_45.getString());
-      FIX::PartySubIDType PartySubIDType_45(33);
-      noPartySubIDs_1_1_1.set(PartySubIDType_45);
-      PtysSubGrp_NoPartySubIDs_45.insert(PartySubIDType_45.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_45);
+      multiset<string> PtysSubGrp_NoPartySubIDs_27;
+      FIX::PartySubID PartySubID_27("STRING_355064972");
+      noPartySubIDs_1_1_1.set(PartySubID_27);
+      PtysSubGrp_NoPartySubIDs_27.insert(PartySubID_27.getString());
+      FIX::PartySubIDType PartySubIDType_27(7);
+      noPartySubIDs_1_1_1.set(PartySubIDType_27);
+      PtysSubGrp_NoPartySubIDs_27.insert(PartySubIDType_27.getString());
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_27);
 
       noPartyIDs_0_1.addGroup(noPartySubIDs_1_1_1);
     }

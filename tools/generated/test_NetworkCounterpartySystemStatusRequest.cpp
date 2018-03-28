@@ -23,10 +23,10 @@ TEST ( NetworkCounterpartySystemStatusRequest, set_fields)
 
   list<multiset<string>> all_values;
   multiset<string> NetworkCounterpartySystemStatusRequest_0;
-  FIX::NetworkRequestID NetworkRequestID_0("STRING_1566891125");
+  FIX::NetworkRequestID NetworkRequestID_0("STRING_930510241");
   msg.set(NetworkRequestID_0);
   NetworkCounterpartySystemStatusRequest_0.insert(NetworkRequestID_0.getString());
-  FIX::NetworkRequestType NetworkRequestType_0(1);
+  FIX::NetworkRequestType NetworkRequestType_0(2);
   msg.set(NetworkRequestType_0);
   NetworkCounterpartySystemStatusRequest_0.insert(NetworkRequestType_0.getString());
   all_values.push_back(NetworkCounterpartySystemStatusRequest_0);
@@ -37,16 +37,16 @@ TEST ( NetworkCounterpartySystemStatusRequest, set_fields)
     FIX50SP2::NetworkCounterpartySystemStatusRequest::NoCompIDs noCompIDs_0_0;
     // CompIDReqGrp.NoCompIDs
     multiset<string> CompIDReqGrp_NoCompIDs_0;
-    FIX::DeskID DeskID_3("STRING_553956525");
-    noCompIDs_0_0.set(DeskID_3);
-    CompIDReqGrp_NoCompIDs_0.insert(DeskID_3.getString());
-    FIX::LocationID LocationID_3("STRING_1473371475");
-    noCompIDs_0_0.set(LocationID_3);
-    CompIDReqGrp_NoCompIDs_0.insert(LocationID_3.getString());
-    FIX::RefCompID RefCompID_0("STRING_846203833");
+    FIX::DeskID DeskID_5("STRING_1747166158");
+    noCompIDs_0_0.set(DeskID_5);
+    CompIDReqGrp_NoCompIDs_0.insert(DeskID_5.getString());
+    FIX::LocationID LocationID_5("STRING_225671058");
+    noCompIDs_0_0.set(LocationID_5);
+    CompIDReqGrp_NoCompIDs_0.insert(LocationID_5.getString());
+    FIX::RefCompID RefCompID_0("STRING_49241919");
     noCompIDs_0_0.set(RefCompID_0);
     CompIDReqGrp_NoCompIDs_0.insert(RefCompID_0.getString());
-    FIX::RefSubID RefSubID_0("STRING_437130548");
+    FIX::RefSubID RefSubID_0("STRING_99181867");
     noCompIDs_0_0.set(RefSubID_0);
     CompIDReqGrp_NoCompIDs_0.insert(RefSubID_0.getString());
     all_values.push_back(CompIDReqGrp_NoCompIDs_0);
@@ -57,21 +57,41 @@ TEST ( NetworkCounterpartySystemStatusRequest, set_fields)
     FIX50SP2::NetworkCounterpartySystemStatusRequest::NoCompIDs noCompIDs_0_1;
     // CompIDReqGrp.NoCompIDs
     multiset<string> CompIDReqGrp_NoCompIDs_1;
-    FIX::DeskID DeskID_4("STRING_2001452510");
-    noCompIDs_0_1.set(DeskID_4);
-    CompIDReqGrp_NoCompIDs_1.insert(DeskID_4.getString());
-    FIX::LocationID LocationID_4("STRING_1563726341");
-    noCompIDs_0_1.set(LocationID_4);
-    CompIDReqGrp_NoCompIDs_1.insert(LocationID_4.getString());
-    FIX::RefCompID RefCompID_1("STRING_1673378250");
+    FIX::DeskID DeskID_6("STRING_229074071");
+    noCompIDs_0_1.set(DeskID_6);
+    CompIDReqGrp_NoCompIDs_1.insert(DeskID_6.getString());
+    FIX::LocationID LocationID_6("STRING_1151566301");
+    noCompIDs_0_1.set(LocationID_6);
+    CompIDReqGrp_NoCompIDs_1.insert(LocationID_6.getString());
+    FIX::RefCompID RefCompID_1("STRING_1265152643");
     noCompIDs_0_1.set(RefCompID_1);
     CompIDReqGrp_NoCompIDs_1.insert(RefCompID_1.getString());
-    FIX::RefSubID RefSubID_1("STRING_1215709421");
+    FIX::RefSubID RefSubID_1("STRING_1327806895");
     noCompIDs_0_1.set(RefSubID_1);
     CompIDReqGrp_NoCompIDs_1.insert(RefSubID_1.getString());
     all_values.push_back(CompIDReqGrp_NoCompIDs_1);
 
     msg.addGroup(noCompIDs_0_1);
+  }
+  {
+    FIX50SP2::NetworkCounterpartySystemStatusRequest::NoCompIDs noCompIDs_0_2;
+    // CompIDReqGrp.NoCompIDs
+    multiset<string> CompIDReqGrp_NoCompIDs_2;
+    FIX::DeskID DeskID_7("STRING_997860892");
+    noCompIDs_0_2.set(DeskID_7);
+    CompIDReqGrp_NoCompIDs_2.insert(DeskID_7.getString());
+    FIX::LocationID LocationID_7("STRING_1500669573");
+    noCompIDs_0_2.set(LocationID_7);
+    CompIDReqGrp_NoCompIDs_2.insert(LocationID_7.getString());
+    FIX::RefCompID RefCompID_2("STRING_1494649342");
+    noCompIDs_0_2.set(RefCompID_2);
+    CompIDReqGrp_NoCompIDs_2.insert(RefCompID_2.getString());
+    FIX::RefSubID RefSubID_2("STRING_1428222014");
+    noCompIDs_0_2.set(RefSubID_2);
+    CompIDReqGrp_NoCompIDs_2.insert(RefSubID_2.getString());
+    all_values.push_back(CompIDReqGrp_NoCompIDs_2);
+
+    msg.addGroup(noCompIDs_0_2);
   }
 
   xml_element elt;

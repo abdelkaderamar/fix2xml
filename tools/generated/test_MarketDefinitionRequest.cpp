@@ -23,19 +23,19 @@ TEST ( MarketDefinitionRequest, set_fields)
 
   list<multiset<string>> all_values;
   multiset<string> MarketDefinitionRequest_0;
-  FIX::MarketID MarketID_7("EXCHANGE_369884882");
+  FIX::MarketID MarketID_7("EXCHANGE_43935620");
   msg.set(MarketID_7);
   MarketDefinitionRequest_0.insert(MarketID_7.getString());
-  FIX::MarketReqID MarketReqID_1("STRING_1240925720");
+  FIX::MarketReqID MarketReqID_1("STRING_663084949");
   msg.set(MarketReqID_1);
   MarketDefinitionRequest_0.insert(MarketReqID_1.getString());
-  FIX::MarketSegmentID MarketSegmentID_7("STRING_661748059");
+  FIX::MarketSegmentID MarketSegmentID_7("STRING_1227454221");
   msg.set(MarketSegmentID_7);
   MarketDefinitionRequest_0.insert(MarketSegmentID_7.getString());
-  FIX::ParentMktSegmID ParentMktSegmID_1("STRING_252490423");
+  FIX::ParentMktSegmID ParentMktSegmID_1("STRING_2045861403");
   msg.set(ParentMktSegmID_1);
   MarketDefinitionRequest_0.insert(ParentMktSegmID_1.getString());
-  FIX::SubscriptionRequestType SubscriptionRequestType_3('1');
+  FIX::SubscriptionRequestType SubscriptionRequestType_3('0');
   msg.set(SubscriptionRequestType_3);
   MarketDefinitionRequest_0.insert(SubscriptionRequestType_3.getString());
   all_values.push_back(MarketDefinitionRequest_0);

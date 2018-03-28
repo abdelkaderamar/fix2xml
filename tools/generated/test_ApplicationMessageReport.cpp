@@ -23,22 +23,22 @@ TEST ( ApplicationMessageReport, set_fields)
 
   list<multiset<string>> all_values;
   multiset<string> ApplicationMessageReport_0;
-  FIX::ApplReportID ApplReportID_0("STRING_1635590811");
+  FIX::ApplReportID ApplReportID_0("STRING_2051374380");
   msg.set(ApplReportID_0);
   ApplicationMessageReport_0.insert(ApplReportID_0.getString());
-  FIX::ApplReportType ApplReportType_0(2);
+  FIX::ApplReportType ApplReportType_0(1);
   msg.set(ApplReportType_0);
   ApplicationMessageReport_0.insert(ApplReportType_0.getString());
-  FIX::ApplReqID ApplReqID_0("STRING_113253033");
+  FIX::ApplReqID ApplReqID_0("STRING_258897970");
   msg.set(ApplReqID_0);
   ApplicationMessageReport_0.insert(ApplReqID_0.getString());
-  FIX::EncodedText EncodedText_6("DATA_833418496");
+  FIX::EncodedText EncodedText_6("DATA_1895617118");
   msg.set(EncodedText_6);
   ApplicationMessageReport_0.insert(EncodedText_6.getString());
-  FIX::EncodedTextLen EncodedTextLen_6(566524436);
+  FIX::EncodedTextLen EncodedTextLen_6(1750409661);
   msg.set(EncodedTextLen_6);
   ApplicationMessageReport_0.insert(EncodedTextLen_6.getString());
-  FIX::Text Text_6("STRING_2073246585");
+  FIX::Text Text_6("STRING_1997925680");
   msg.set(Text_6);
   ApplicationMessageReport_0.insert(Text_6.getString());
   all_values.push_back(ApplicationMessageReport_0);
@@ -49,13 +49,13 @@ TEST ( ApplicationMessageReport, set_fields)
     FIX50SP2::ApplicationMessageReport::NoApplIDs noApplIDs_0_0;
     // ApplIDReportGrp.NoApplIDs
     multiset<string> ApplIDReportGrp_NoApplIDs_0;
-    FIX::ApplNewSeqNum ApplNewSeqNum_0(1792122911);
+    FIX::ApplNewSeqNum ApplNewSeqNum_0(1106873649);
     noApplIDs_0_0.set(ApplNewSeqNum_0);
     ApplIDReportGrp_NoApplIDs_0.insert(ApplNewSeqNum_0.getString());
-    FIX::RefApplID RefApplID_0("STRING_1158274695");
+    FIX::RefApplID RefApplID_0("STRING_866558251");
     noApplIDs_0_0.set(RefApplID_0);
     ApplIDReportGrp_NoApplIDs_0.insert(RefApplID_0.getString());
-    FIX::RefApplLastSeqNum RefApplLastSeqNum_0(926521176);
+    FIX::RefApplLastSeqNum RefApplLastSeqNum_0(738833716);
     noApplIDs_0_0.set(RefApplLastSeqNum_0);
     ApplIDReportGrp_NoApplIDs_0.insert(RefApplLastSeqNum_0.getString());
     all_values.push_back(ApplIDReportGrp_NoApplIDs_0);
@@ -66,13 +66,13 @@ TEST ( ApplicationMessageReport, set_fields)
     FIX50SP2::ApplicationMessageReport::NoApplIDs noApplIDs_0_1;
     // ApplIDReportGrp.NoApplIDs
     multiset<string> ApplIDReportGrp_NoApplIDs_1;
-    FIX::ApplNewSeqNum ApplNewSeqNum_1(802761514);
+    FIX::ApplNewSeqNum ApplNewSeqNum_1(1360684758);
     noApplIDs_0_1.set(ApplNewSeqNum_1);
     ApplIDReportGrp_NoApplIDs_1.insert(ApplNewSeqNum_1.getString());
-    FIX::RefApplID RefApplID_1("STRING_1052412196");
+    FIX::RefApplID RefApplID_1("STRING_877081851");
     noApplIDs_0_1.set(RefApplID_1);
     ApplIDReportGrp_NoApplIDs_1.insert(RefApplID_1.getString());
-    FIX::RefApplLastSeqNum RefApplLastSeqNum_1(102686337);
+    FIX::RefApplLastSeqNum RefApplLastSeqNum_1(454448861);
     noApplIDs_0_1.set(RefApplLastSeqNum_1);
     ApplIDReportGrp_NoApplIDs_1.insert(RefApplLastSeqNum_1.getString());
     all_values.push_back(ApplIDReportGrp_NoApplIDs_1);

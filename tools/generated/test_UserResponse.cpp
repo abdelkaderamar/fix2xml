@@ -23,16 +23,16 @@ TEST ( UserResponse, set_fields)
 
   list<multiset<string>> all_values;
   multiset<string> UserResponse_0;
-  FIX::UserRequestID UserRequestID_1("STRING_1944836703");
+  FIX::UserRequestID UserRequestID_1("STRING_1365548095");
   msg.set(UserRequestID_1);
   UserResponse_0.insert(UserRequestID_1.getString());
-  FIX::UserStatus UserStatus_1(6);
+  FIX::UserStatus UserStatus_1(8);
   msg.set(UserStatus_1);
   UserResponse_0.insert(UserStatus_1.getString());
-  FIX::UserStatusText UserStatusText_0("STRING_2003910138");
+  FIX::UserStatusText UserStatusText_0("STRING_1580460564");
   msg.set(UserStatusText_0);
   UserResponse_0.insert(UserStatusText_0.getString());
-  FIX::Username Username_2("STRING_71236111");
+  FIX::Username Username_2("STRING_219715373");
   msg.set(Username_2);
   UserResponse_0.insert(Username_2.getString());
   all_values.push_back(UserResponse_0);
