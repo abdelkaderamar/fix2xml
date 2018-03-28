@@ -28,9 +28,11 @@ before_install:
   - sudo make
   - sudo make install
   - cd ..
-  - wget https://github.com/quickfix/quickfix/archive/v.1.14.4.tar.gz
-  - tar xf v.1.14.4.tar.gz 
-  - cd quickfix-v.1.14.4
+#  - wget https://github.com/quickfix/quickfix/archive/v.1.14.4.tar.gz
+  - wget https://github.com/quickfix/quickfix/archive/master.zip
+  - unzip master.zip
+#  - cd quickfix-v.1.14.4
+  - cd quickfix-master
   - ./bootstrap
   - ./configure 
   - make 
