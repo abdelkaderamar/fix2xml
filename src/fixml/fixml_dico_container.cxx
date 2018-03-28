@@ -123,7 +123,9 @@ int fixml_dico_container::get_field_fix_tag(
       return -1;
     }
     BOOST_LOG_TRIVIAL(debug) << "type " << fixml_field_type << " not found =>"
-                             << " try with " << base_type_it->_fix_data._name;
+                             << " try with base type " << base_type_it->_name
+                             << " => fix_name = "
+                             << base_type_it->_fix_data._name;
 
     // BOOST_LOG_TRIVIAL(debug) << "Try with base_type " << it->_base_type;
     tag = base_type_it->_fix_data._tag;

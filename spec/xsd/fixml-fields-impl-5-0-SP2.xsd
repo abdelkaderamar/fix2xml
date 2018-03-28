@@ -248,7 +248,7 @@
       <xs:restriction base="UnsolicitedIndicator_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="SecurityTradingStatus_t">
-      <xs:union memberTypes="SecurityTradingStatus_enum_t Reserved100Plus"/>
+      <xs:union memberTypes="SecurityTradingStatus_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="HaltReason_t">
       <xs:union memberTypes="HaltReason_enum_t Reserved100Plus"/>
@@ -263,7 +263,7 @@
       <xs:restriction base="Adjustment_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TradingSessionID_t">
-      <xs:union memberTypes="TradingSessionID_enum_t Reserved100Plus"/>
+      <xs:restriction base="TradingSessionID_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TradSesMethod_t">
       <xs:restriction base="TradSesMethod_enum_t"/>
@@ -275,7 +275,7 @@
       <xs:union memberTypes="TradSesStatus_enum_t Reserved100Plus"/>
    </xs:simpleType>
    <xs:simpleType name="QuoteEntryRejectReason_t">
-      <xs:union memberTypes="QuoteRejectReason_enum_t Reserved100Plus"/>
+      <xs:union memberTypes="QuoteRejectReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RefMsgType_t">
       <xs:restriction base="MsgType_enum_t"/>

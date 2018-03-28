@@ -16,25 +16,25 @@ using namespace fix2xml;
 TEST ( ListStatusRequest, set_fields)
 {
 
-  fixml2fix_converter converter {"FIX50SP2.xml", "fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   ASSERT_TRUE(converter.init());
   FIX50SP2::ListStatusRequest msg;
 
   list<multiset<string>> all_values;
   multiset<string> ListStatusRequest_0;
-  FIX::EncodedText EncodedText_48("DATA_515214131");
-  msg.set(EncodedText_48);
-  ListStatusRequest_0.insert(EncodedText_48.getString());
-  FIX::EncodedTextLen EncodedTextLen_48(766104037);
-  msg.set(EncodedTextLen_48);
-  ListStatusRequest_0.insert(EncodedTextLen_48.getString());
-  FIX::ListID ListID_18("STRING_2004056049");
-  msg.set(ListID_18);
-  ListStatusRequest_0.insert(ListID_18.getString());
-  FIX::Text Text_48("STRING_331589272");
-  msg.set(Text_48);
-  ListStatusRequest_0.insert(Text_48.getString());
+  FIX::EncodedText EncodedText_42("DATA_1157683403");
+  msg.set(EncodedText_42);
+  ListStatusRequest_0.insert(EncodedText_42.getString());
+  FIX::EncodedTextLen EncodedTextLen_42(1312818693);
+  msg.set(EncodedTextLen_42);
+  ListStatusRequest_0.insert(EncodedTextLen_42.getString());
+  FIX::ListID ListID_17("STRING_441785928");
+  msg.set(ListID_17);
+  ListStatusRequest_0.insert(ListID_17.getString());
+  FIX::Text Text_42("STRING_1967215525");
+  msg.set(Text_42);
+  ListStatusRequest_0.insert(Text_42.getString());
   all_values.push_back(ListStatusRequest_0);
 
 
@@ -64,15 +64,10 @@ TEST ( ListStatusRequest, set_fields)
         break;
       } // end if includes
     } // end for all_values
+    EXPECT_TRUE(found);
     if ( ! found) {
       cout << "#### NOT FOUND ###" << endl;
       copy(xml_l.begin(), xml_l.end(), ostream_iterator<string>(cout, " "));      cout << endl;
     } // end if ! found
   } // end for elt_lists
-}
-int main(int argc, char *argv[]) {
-  ::testing::InitGoogleTest(&argc, argv);
-  fix2xml::fix_env::init_xerces();
-  return RUN_ALL_TESTS();
-  fix2xml::fix_env::terminate_xerces();
 }

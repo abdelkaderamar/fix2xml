@@ -16,28 +16,28 @@ using namespace fix2xml;
 TEST ( MarketDataRequestReject, set_fields)
 {
 
-  fixml2fix_converter converter {"FIX50SP2.xml", "fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   ASSERT_TRUE(converter.init());
   FIX50SP2::MarketDataRequestReject msg;
 
   list<multiset<string>> all_values;
   multiset<string> MarketDataRequestReject_0;
-  FIX::EncodedText EncodedText_53("DATA_137324065");
-  msg.set(EncodedText_53);
-  MarketDataRequestReject_0.insert(EncodedText_53.getString());
-  FIX::EncodedTextLen EncodedTextLen_53(1157644222);
-  msg.set(EncodedTextLen_53);
-  MarketDataRequestReject_0.insert(EncodedTextLen_53.getString());
-  FIX::MDReqID MDReqID_2("STRING_912627915");
+  FIX::EncodedText EncodedText_45("DATA_697700583");
+  msg.set(EncodedText_45);
+  MarketDataRequestReject_0.insert(EncodedText_45.getString());
+  FIX::EncodedTextLen EncodedTextLen_45(100033274);
+  msg.set(EncodedTextLen_45);
+  MarketDataRequestReject_0.insert(EncodedTextLen_45.getString());
+  FIX::MDReqID MDReqID_2("STRING_496746003");
   msg.set(MDReqID_2);
   MarketDataRequestReject_0.insert(MDReqID_2.getString());
-  FIX::MDReqRejReason MDReqRejReason_0('D');
+  FIX::MDReqRejReason MDReqRejReason_0('8');
   msg.set(MDReqRejReason_0);
   MarketDataRequestReject_0.insert(MDReqRejReason_0.getString());
-  FIX::Text Text_53("STRING_522172975");
-  msg.set(Text_53);
-  MarketDataRequestReject_0.insert(Text_53.getString());
+  FIX::Text Text_45("STRING_616251290");
+  msg.set(Text_45);
+  MarketDataRequestReject_0.insert(Text_45.getString());
   all_values.push_back(MarketDataRequestReject_0);
 
   // MDRjctGrp
@@ -46,7 +46,7 @@ TEST ( MarketDataRequestReject, set_fields)
     FIX50SP2::MarketDataRequestReject::NoAltMDSource noAltMDSource_0_0;
     // MDRjctGrp.NoAltMDSource
     multiset<string> MDRjctGrp_NoAltMDSource_0;
-    FIX::AltMDSourceID AltMDSourceID_0("STRING_1428010538");
+    FIX::AltMDSourceID AltMDSourceID_0("STRING_177842053");
     noAltMDSource_0_0.set(AltMDSourceID_0);
     MDRjctGrp_NoAltMDSource_0.insert(AltMDSourceID_0.getString());
     all_values.push_back(MDRjctGrp_NoAltMDSource_0);
@@ -58,96 +58,49 @@ TEST ( MarketDataRequestReject, set_fields)
   {
     FIX50SP2::MarketDataRequestReject::NoPartyIDs noPartyIDs_0_0;
     // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_60;
-    FIX::PartyID PartyID_60("STRING_599983834");
-    noPartyIDs_0_0.set(PartyID_60);
-    Parties_NoPartyIDs_60.insert(PartyID_60.getString());
-    FIX::PartyIDSource PartyIDSource_60('E');
-    noPartyIDs_0_0.set(PartyIDSource_60);
-    Parties_NoPartyIDs_60.insert(PartyIDSource_60.getString());
-    FIX::PartyRole PartyRole_60(24);
-    noPartyIDs_0_0.set(PartyRole_60);
-    Parties_NoPartyIDs_60.insert(PartyRole_60.getString());
-    all_values.push_back(Parties_NoPartyIDs_60);
+    multiset<string> Parties_NoPartyIDs_52;
+    FIX::PartyID PartyID_52("STRING_1236259757");
+    noPartyIDs_0_0.set(PartyID_52);
+    Parties_NoPartyIDs_52.insert(PartyID_52.getString());
+    FIX::PartyIDSource PartyIDSource_52('A');
+    noPartyIDs_0_0.set(PartyIDSource_52);
+    Parties_NoPartyIDs_52.insert(PartyIDSource_52.getString());
+    FIX::PartyRole PartyRole_52(41);
+    noPartyIDs_0_0.set(PartyRole_52);
+    Parties_NoPartyIDs_52.insert(PartyRole_52.getString());
+    all_values.push_back(Parties_NoPartyIDs_52);
 
     // PtysSubGrp
     // Group PtysSubGrp.NoPartySubIDs
     {
       FIX50SP2::MarketDataRequestReject::NoPartyIDs::NoPartySubIDs noPartySubIDs_0_1_0;
       // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_123;
-      FIX::PartySubID PartySubID_123("STRING_1232929744");
-      noPartySubIDs_0_1_0.set(PartySubID_123);
-      PtysSubGrp_NoPartySubIDs_123.insert(PartySubID_123.getString());
-      FIX::PartySubIDType PartySubIDType_123(1);
-      noPartySubIDs_0_1_0.set(PartySubIDType_123);
-      PtysSubGrp_NoPartySubIDs_123.insert(PartySubIDType_123.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_123);
+      multiset<string> PtysSubGrp_NoPartySubIDs_104;
+      FIX::PartySubID PartySubID_104("STRING_1462788305");
+      noPartySubIDs_0_1_0.set(PartySubID_104);
+      PtysSubGrp_NoPartySubIDs_104.insert(PartySubID_104.getString());
+      FIX::PartySubIDType PartySubIDType_104(1);
+      noPartySubIDs_0_1_0.set(PartySubIDType_104);
+      PtysSubGrp_NoPartySubIDs_104.insert(PartySubIDType_104.getString());
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_104);
 
       noPartyIDs_0_0.addGroup(noPartySubIDs_0_1_0);
     }
     {
       FIX50SP2::MarketDataRequestReject::NoPartyIDs::NoPartySubIDs noPartySubIDs_0_1_1;
       // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_124;
-      FIX::PartySubID PartySubID_124("STRING_761070296");
-      noPartySubIDs_0_1_1.set(PartySubID_124);
-      PtysSubGrp_NoPartySubIDs_124.insert(PartySubID_124.getString());
-      FIX::PartySubIDType PartySubIDType_124(9);
-      noPartySubIDs_0_1_1.set(PartySubIDType_124);
-      PtysSubGrp_NoPartySubIDs_124.insert(PartySubIDType_124.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_124);
+      multiset<string> PtysSubGrp_NoPartySubIDs_105;
+      FIX::PartySubID PartySubID_105("STRING_1961478312");
+      noPartySubIDs_0_1_1.set(PartySubID_105);
+      PtysSubGrp_NoPartySubIDs_105.insert(PartySubID_105.getString());
+      FIX::PartySubIDType PartySubIDType_105(32);
+      noPartySubIDs_0_1_1.set(PartySubIDType_105);
+      PtysSubGrp_NoPartySubIDs_105.insert(PartySubIDType_105.getString());
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_105);
 
       noPartyIDs_0_0.addGroup(noPartySubIDs_0_1_1);
     }
     msg.addGroup(noPartyIDs_0_0);
-  }
-  {
-    FIX50SP2::MarketDataRequestReject::NoPartyIDs noPartyIDs_0_1;
-    // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_61;
-    FIX::PartyID PartyID_61("STRING_1995584913");
-    noPartyIDs_0_1.set(PartyID_61);
-    Parties_NoPartyIDs_61.insert(PartyID_61.getString());
-    FIX::PartyIDSource PartyIDSource_61('4');
-    noPartyIDs_0_1.set(PartyIDSource_61);
-    Parties_NoPartyIDs_61.insert(PartyIDSource_61.getString());
-    FIX::PartyRole PartyRole_61(4);
-    noPartyIDs_0_1.set(PartyRole_61);
-    Parties_NoPartyIDs_61.insert(PartyRole_61.getString());
-    all_values.push_back(Parties_NoPartyIDs_61);
-
-    // PtysSubGrp
-    // Group PtysSubGrp.NoPartySubIDs
-    {
-      FIX50SP2::MarketDataRequestReject::NoPartyIDs::NoPartySubIDs noPartySubIDs_1_1_0;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_125;
-      FIX::PartySubID PartySubID_125("STRING_933937029");
-      noPartySubIDs_1_1_0.set(PartySubID_125);
-      PtysSubGrp_NoPartySubIDs_125.insert(PartySubID_125.getString());
-      FIX::PartySubIDType PartySubIDType_125(20);
-      noPartySubIDs_1_1_0.set(PartySubIDType_125);
-      PtysSubGrp_NoPartySubIDs_125.insert(PartySubIDType_125.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_125);
-
-      noPartyIDs_0_1.addGroup(noPartySubIDs_1_1_0);
-    }
-    {
-      FIX50SP2::MarketDataRequestReject::NoPartyIDs::NoPartySubIDs noPartySubIDs_1_1_1;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_126;
-      FIX::PartySubID PartySubID_126("STRING_1602107361");
-      noPartySubIDs_1_1_1.set(PartySubID_126);
-      PtysSubGrp_NoPartySubIDs_126.insert(PartySubID_126.getString());
-      FIX::PartySubIDType PartySubIDType_126(14);
-      noPartySubIDs_1_1_1.set(PartySubIDType_126);
-      PtysSubGrp_NoPartySubIDs_126.insert(PartySubIDType_126.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_126);
-
-      noPartyIDs_0_1.addGroup(noPartySubIDs_1_1_1);
-    }
-    msg.addGroup(noPartyIDs_0_1);
   }
 
   xml_element elt;
@@ -176,15 +129,10 @@ TEST ( MarketDataRequestReject, set_fields)
         break;
       } // end if includes
     } // end for all_values
+    EXPECT_TRUE(found);
     if ( ! found) {
       cout << "#### NOT FOUND ###" << endl;
       copy(xml_l.begin(), xml_l.end(), ostream_iterator<string>(cout, " "));      cout << endl;
     } // end if ! found
   } // end for elt_lists
-}
-int main(int argc, char *argv[]) {
-  ::testing::InitGoogleTest(&argc, argv);
-  fix2xml::fix_env::init_xerces();
-  return RUN_ALL_TESTS();
-  fix2xml::fix_env::terminate_xerces();
 }

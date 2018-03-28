@@ -16,23 +16,23 @@ using namespace fix2xml;
 TEST ( UserResponse, set_fields)
 {
 
-  fixml2fix_converter converter {"FIX50SP2.xml", "fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   ASSERT_TRUE(converter.init());
   FIX50SP2::UserResponse msg;
 
   list<multiset<string>> all_values;
   multiset<string> UserResponse_0;
-  FIX::UserRequestID UserRequestID_1("STRING_1365548095");
+  FIX::UserRequestID UserRequestID_1("STRING_1027784167");
   msg.set(UserRequestID_1);
   UserResponse_0.insert(UserRequestID_1.getString());
-  FIX::UserStatus UserStatus_1(8);
+  FIX::UserStatus UserStatus_1(5);
   msg.set(UserStatus_1);
   UserResponse_0.insert(UserStatus_1.getString());
-  FIX::UserStatusText UserStatusText_0("STRING_1580460564");
+  FIX::UserStatusText UserStatusText_0("STRING_1543865686");
   msg.set(UserStatusText_0);
   UserResponse_0.insert(UserStatusText_0.getString());
-  FIX::Username Username_2("STRING_219715373");
+  FIX::Username Username_2("STRING_582687064");
   msg.set(Username_2);
   UserResponse_0.insert(Username_2.getString());
   all_values.push_back(UserResponse_0);
@@ -64,15 +64,10 @@ TEST ( UserResponse, set_fields)
         break;
       } // end if includes
     } // end for all_values
+    EXPECT_TRUE(found);
     if ( ! found) {
       cout << "#### NOT FOUND ###" << endl;
       copy(xml_l.begin(), xml_l.end(), ostream_iterator<string>(cout, " "));      cout << endl;
     } // end if ! found
   } // end for elt_lists
-}
-int main(int argc, char *argv[]) {
-  ::testing::InitGoogleTest(&argc, argv);
-  fix2xml::fix_env::init_xerces();
-  return RUN_ALL_TESTS();
-  fix2xml::fix_env::terminate_xerces();
 }

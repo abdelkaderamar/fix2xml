@@ -16,43 +16,43 @@ using namespace fix2xml;
 TEST ( BusinessMessageReject, set_fields)
 {
 
-  fixml2fix_converter converter {"FIX50SP2.xml", "fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   ASSERT_TRUE(converter.init());
   FIX50SP2::BusinessMessageReject msg;
 
   list<multiset<string>> all_values;
   multiset<string> BusinessMessageReject_0;
-  FIX::BusinessRejectReason BusinessRejectReason_0(1);
+  FIX::BusinessRejectReason BusinessRejectReason_0(6);
   msg.set(BusinessRejectReason_0);
   BusinessMessageReject_0.insert(BusinessRejectReason_0.getString());
-  FIX::BusinessRejectRefID BusinessRejectRefID_0("STRING_1096060056");
+  FIX::BusinessRejectRefID BusinessRejectRefID_0("STRING_1103398207");
   msg.set(BusinessRejectRefID_0);
   BusinessMessageReject_0.insert(BusinessRejectRefID_0.getString());
-  FIX::EncodedText EncodedText_14("DATA_1275253668");
-  msg.set(EncodedText_14);
-  BusinessMessageReject_0.insert(EncodedText_14.getString());
-  FIX::EncodedTextLen EncodedTextLen_14(1415640085);
-  msg.set(EncodedTextLen_14);
-  BusinessMessageReject_0.insert(EncodedTextLen_14.getString());
-  FIX::RefApplExtID RefApplExtID_0(1624759191);
+  FIX::EncodedText EncodedText_12("DATA_748419514");
+  msg.set(EncodedText_12);
+  BusinessMessageReject_0.insert(EncodedText_12.getString());
+  FIX::EncodedTextLen EncodedTextLen_12(318831340);
+  msg.set(EncodedTextLen_12);
+  BusinessMessageReject_0.insert(EncodedTextLen_12.getString());
+  FIX::RefApplExtID RefApplExtID_0(1812681183);
   msg.set(RefApplExtID_0);
   BusinessMessageReject_0.insert(RefApplExtID_0.getString());
-  FIX::RefApplVerID RefApplVerID_0("STRING_1927118295");
+  FIX::RefApplVerID RefApplVerID_0("STRING_1615678584");
   msg.set(RefApplVerID_0);
   BusinessMessageReject_0.insert(RefApplVerID_0.getString());
-  FIX::RefCstmApplVerID RefCstmApplVerID_0("STRING_511794772");
+  FIX::RefCstmApplVerID RefCstmApplVerID_0("STRING_634879225");
   msg.set(RefCstmApplVerID_0);
   BusinessMessageReject_0.insert(RefCstmApplVerID_0.getString());
-  FIX::RefMsgType RefMsgType_0("STRING_2044357901");
+  FIX::RefMsgType RefMsgType_0("STRING_11119143");
   msg.set(RefMsgType_0);
   BusinessMessageReject_0.insert(RefMsgType_0.getString());
-  FIX::RefSeqNum RefSeqNum_0(53868568);
+  FIX::RefSeqNum RefSeqNum_0(178948653);
   msg.set(RefSeqNum_0);
   BusinessMessageReject_0.insert(RefSeqNum_0.getString());
-  FIX::Text Text_14("STRING_331385385");
-  msg.set(Text_14);
-  BusinessMessageReject_0.insert(Text_14.getString());
+  FIX::Text Text_12("STRING_412447312");
+  msg.set(Text_12);
+  BusinessMessageReject_0.insert(Text_12.getString());
   all_values.push_back(BusinessMessageReject_0);
 
 
@@ -82,15 +82,10 @@ TEST ( BusinessMessageReject, set_fields)
         break;
       } // end if includes
     } // end for all_values
+    EXPECT_TRUE(found);
     if ( ! found) {
       cout << "#### NOT FOUND ###" << endl;
       copy(xml_l.begin(), xml_l.end(), ostream_iterator<string>(cout, " "));      cout << endl;
     } // end if ! found
   } // end for elt_lists
-}
-int main(int argc, char *argv[]) {
-  ::testing::InitGoogleTest(&argc, argv);
-  fix2xml::fix_env::init_xerces();
-  return RUN_ALL_TESTS();
-  fix2xml::fix_env::terminate_xerces();
 }

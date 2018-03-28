@@ -16,7 +16,7 @@ using namespace fix2xml;
 TEST ( Confirmation, set_fields)
 {
 
-  fixml2fix_converter converter {"FIX50SP2.xml", "fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   ASSERT_TRUE(converter.init());
   FIX50SP2::Confirmation msg;
@@ -24,191 +24,191 @@ TEST ( Confirmation, set_fields)
   list<multiset<string>> all_values;
   multiset<string> Confirmation_0;
   FIX::AccruedInterestAmt AccruedInterestAmt_8;
-  AccruedInterestAmt_8.setString("5682806");
+  AccruedInterestAmt_8.setString("9563103");
   msg.set(AccruedInterestAmt_8);
   Confirmation_0.insert(AccruedInterestAmt_8.getString());
   FIX::AccruedInterestRate AccruedInterestRate_3;
-  AccruedInterestRate_3.setString("53.110000");
+  AccruedInterestRate_3.setString("19.700000");
   msg.set(AccruedInterestRate_3);
   Confirmation_0.insert(AccruedInterestRate_3.getString());
-  FIX::AllocAccount AllocAccount_8("STRING_1015072548");
-  msg.set(AllocAccount_8);
-  Confirmation_0.insert(AllocAccount_8.getString());
-  FIX::AllocAccountType AllocAccountType_0(1);
+  FIX::AllocAccount AllocAccount_10("STRING_552401622");
+  msg.set(AllocAccount_10);
+  Confirmation_0.insert(AllocAccount_10.getString());
+  FIX::AllocAccountType AllocAccountType_0(8);
   msg.set(AllocAccountType_0);
   Confirmation_0.insert(AllocAccountType_0.getString());
-  FIX::AllocAcctIDSource AllocAcctIDSource_8(1098817377);
-  msg.set(AllocAcctIDSource_8);
-  Confirmation_0.insert(AllocAcctIDSource_8.getString());
-  FIX::AllocID AllocID_5("STRING_2063979622");
+  FIX::AllocAcctIDSource AllocAcctIDSource_10(414642416);
+  msg.set(AllocAcctIDSource_10);
+  Confirmation_0.insert(AllocAcctIDSource_10.getString());
+  FIX::AllocID AllocID_5("STRING_1826103739");
   msg.set(AllocID_5);
   Confirmation_0.insert(AllocID_5.getString());
-  FIX::AllocQty AllocQty_8;
-  AllocQty_8.setString("10556529");
-  msg.set(AllocQty_8);
-  Confirmation_0.insert(AllocQty_8.getString());
+  FIX::AllocQty AllocQty_10;
+  AllocQty_10.setString("2926984");
+  msg.set(AllocQty_10);
+  Confirmation_0.insert(AllocQty_10.getString());
   FIX::AvgParPx AvgParPx_3;
-  AvgParPx_3.setString("17660417");
+  AvgParPx_3.setString("20243529");
   msg.set(AvgParPx_3);
   Confirmation_0.insert(AvgParPx_3.getString());
   FIX::AvgPx AvgPx_3;
-  AvgPx_3.setString("4786957");
+  AvgPx_3.setString("12549026");
   msg.set(AvgPx_3);
   Confirmation_0.insert(AvgPx_3.getString());
-  FIX::AvgPxPrecision AvgPxPrecision_3(841069290);
+  FIX::AvgPxPrecision AvgPxPrecision_3(1456345825);
   msg.set(AvgPxPrecision_3);
   Confirmation_0.insert(AvgPxPrecision_3.getString());
   FIX::Concession Concession_3;
-  Concession_3.setString("30243");
+  Concession_3.setString("7257085");
   msg.set(Concession_3);
   Confirmation_0.insert(Concession_3.getString());
-  FIX::ConfirmID ConfirmID_0("STRING_1558931033");
+  FIX::ConfirmID ConfirmID_0("STRING_920359494");
   msg.set(ConfirmID_0);
   Confirmation_0.insert(ConfirmID_0.getString());
-  FIX::ConfirmRefID ConfirmRefID_0("STRING_2014679969");
+  FIX::ConfirmRefID ConfirmRefID_0("STRING_1007411001");
   msg.set(ConfirmRefID_0);
   Confirmation_0.insert(ConfirmRefID_0.getString());
-  FIX::ConfirmReqID ConfirmReqID_0("STRING_1753680521");
+  FIX::ConfirmReqID ConfirmReqID_0("STRING_1430135177");
   msg.set(ConfirmReqID_0);
   Confirmation_0.insert(ConfirmReqID_0.getString());
-  FIX::ConfirmStatus ConfirmStatus_0(3);
+  FIX::ConfirmStatus ConfirmStatus_0(1);
   msg.set(ConfirmStatus_0);
   Confirmation_0.insert(ConfirmStatus_0.getString());
-  FIX::ConfirmTransType ConfirmTransType_0(1);
+  FIX::ConfirmTransType ConfirmTransType_0(0);
   msg.set(ConfirmTransType_0);
   Confirmation_0.insert(ConfirmTransType_0.getString());
-  FIX::ConfirmType ConfirmType_0(1);
+  FIX::ConfirmType ConfirmType_0(3);
   msg.set(ConfirmType_0);
   Confirmation_0.insert(ConfirmType_0.getString());
-  FIX::CopyMsgIndicator CopyMsgIndicator_0(true);
+  FIX::CopyMsgIndicator CopyMsgIndicator_0(false);
   msg.set(CopyMsgIndicator_0);
   Confirmation_0.insert(CopyMsgIndicator_0.getString());
-  FIX::Currency Currency_12("JPY");
+  FIX::Currency Currency_12("CHF");
   msg.set(Currency_12);
   Confirmation_0.insert(Currency_12.getString());
-  FIX::EncodedText EncodedText_21("DATA_62424525");
-  msg.set(EncodedText_21);
-  Confirmation_0.insert(EncodedText_21.getString());
-  FIX::EncodedTextLen EncodedTextLen_21(1785023037);
-  msg.set(EncodedTextLen_21);
-  Confirmation_0.insert(EncodedTextLen_21.getString());
+  FIX::EncodedText EncodedText_19("DATA_483861940");
+  msg.set(EncodedText_19);
+  Confirmation_0.insert(EncodedText_19.getString());
+  FIX::EncodedTextLen EncodedTextLen_19(168741436);
+  msg.set(EncodedTextLen_19);
+  Confirmation_0.insert(EncodedTextLen_19.getString());
   FIX::EndAccruedInterestAmt EndAccruedInterestAmt_8;
-  EndAccruedInterestAmt_8.setString("17725858");
+  EndAccruedInterestAmt_8.setString("14036895");
   msg.set(EndAccruedInterestAmt_8);
   Confirmation_0.insert(EndAccruedInterestAmt_8.getString());
   FIX::EndCash EndCash_8;
-  EndCash_8.setString("4554659");
+  EndCash_8.setString("19510717");
   msg.set(EndCash_8);
   Confirmation_0.insert(EndCash_8.getString());
-  FIX::ExDate ExDate_0("LOCALMKTDATE_1045598092");
+  FIX::ExDate ExDate_0("LOCALMKTDATE_184035595");
   msg.set(ExDate_0);
   Confirmation_0.insert(ExDate_0.getString());
   FIX::GrossTradeAmt GrossTradeAmt_3;
-  GrossTradeAmt_3.setString("16091334");
+  GrossTradeAmt_3.setString("5989519");
   msg.set(GrossTradeAmt_3);
   Confirmation_0.insert(GrossTradeAmt_3.getString());
-  FIX::IndividualAllocID IndividualAllocID_8("STRING_450501714");
-  msg.set(IndividualAllocID_8);
-  Confirmation_0.insert(IndividualAllocID_8.getString());
+  FIX::IndividualAllocID IndividualAllocID_10("STRING_550266249");
+  msg.set(IndividualAllocID_10);
+  Confirmation_0.insert(IndividualAllocID_10.getString());
   FIX::InterestAtMaturity InterestAtMaturity_3;
-  InterestAtMaturity_3.setString("1624298");
+  InterestAtMaturity_3.setString("3246895");
   msg.set(InterestAtMaturity_3);
   Confirmation_0.insert(InterestAtMaturity_3.getString());
-  FIX::LastMkt LastMkt_4("EXCHANGE_1451877624");
+  FIX::LastMkt LastMkt_4("EXCHANGE_386661300");
   msg.set(LastMkt_4);
   Confirmation_0.insert(LastMkt_4.getString());
-  FIX::LegalConfirm LegalConfirm_3(false);
+  FIX::LegalConfirm LegalConfirm_3(true);
   msg.set(LegalConfirm_3);
   Confirmation_0.insert(LegalConfirm_3.getString());
   FIX::MaturityNetMoney MaturityNetMoney_0;
-  MaturityNetMoney_0.setString("16629081");
+  MaturityNetMoney_0.setString("17829146");
   msg.set(MaturityNetMoney_0);
   Confirmation_0.insert(MaturityNetMoney_0.getString());
   FIX::NetMoney NetMoney_3;
-  NetMoney_3.setString("20201583");
+  NetMoney_3.setString("13429716");
   msg.set(NetMoney_3);
   Confirmation_0.insert(NetMoney_3.getString());
-  FIX::NumDaysInterest NumDaysInterest_3(1117656219);
+  FIX::NumDaysInterest NumDaysInterest_3(291858588);
   msg.set(NumDaysInterest_3);
   Confirmation_0.insert(NumDaysInterest_3.getString());
-  FIX::PriceType PriceType_11(2);
-  msg.set(PriceType_11);
-  Confirmation_0.insert(PriceType_11.getString());
-  FIX::ProcessCode ProcessCode_5('3');
-  msg.set(ProcessCode_5);
-  Confirmation_0.insert(ProcessCode_5.getString());
-  FIX::QtyType QtyType_10(1);
+  FIX::PriceType PriceType_9(7);
+  msg.set(PriceType_9);
+  Confirmation_0.insert(PriceType_9.getString());
+  FIX::ProcessCode ProcessCode_6('4');
+  msg.set(ProcessCode_6);
+  Confirmation_0.insert(ProcessCode_6.getString());
+  FIX::QtyType QtyType_10(2);
   msg.set(QtyType_10);
   Confirmation_0.insert(QtyType_10.getString());
   FIX::ReportedPx ReportedPx_0;
-  ReportedPx_0.setString("4469930");
+  ReportedPx_0.setString("20139364");
   msg.set(ReportedPx_0);
   Confirmation_0.insert(ReportedPx_0.getString());
-  FIX::SecondaryAllocID SecondaryAllocID_5("STRING_1169463200");
+  FIX::SecondaryAllocID SecondaryAllocID_5("STRING_1687928093");
   msg.set(SecondaryAllocID_5);
   Confirmation_0.insert(SecondaryAllocID_5.getString());
-  FIX::SettlCurrAmt SettlCurrAmt_5;
-  SettlCurrAmt_5.setString("18350317");
-  msg.set(SettlCurrAmt_5);
-  Confirmation_0.insert(SettlCurrAmt_5.getString());
-  FIX::SettlCurrFxRate SettlCurrFxRate_5;
-  SettlCurrFxRate_5.setString("9256888");
-  msg.set(SettlCurrFxRate_5);
-  Confirmation_0.insert(SettlCurrFxRate_5.getString());
-  FIX::SettlCurrFxRateCalc SettlCurrFxRateCalc_5('M');
-  msg.set(SettlCurrFxRateCalc_5);
-  Confirmation_0.insert(SettlCurrFxRateCalc_5.getString());
-  FIX::SettlCurrency SettlCurrency_5("GBP");
-  msg.set(SettlCurrency_5);
-  Confirmation_0.insert(SettlCurrency_5.getString());
-  FIX::SettlDate SettlDate_15("LOCALMKTDATE_1877728811");
-  msg.set(SettlDate_15);
-  Confirmation_0.insert(SettlDate_15.getString());
-  FIX::SettlType SettlType_9("STRING_6");
-  msg.set(SettlType_9);
-  Confirmation_0.insert(SettlType_9.getString());
+  FIX::SettlCurrAmt SettlCurrAmt_6;
+  SettlCurrAmt_6.setString("5833703");
+  msg.set(SettlCurrAmt_6);
+  Confirmation_0.insert(SettlCurrAmt_6.getString());
+  FIX::SettlCurrFxRate SettlCurrFxRate_6;
+  SettlCurrFxRate_6.setString("11213553");
+  msg.set(SettlCurrFxRate_6);
+  Confirmation_0.insert(SettlCurrFxRate_6.getString());
+  FIX::SettlCurrFxRateCalc SettlCurrFxRateCalc_6('M');
+  msg.set(SettlCurrFxRateCalc_6);
+  Confirmation_0.insert(SettlCurrFxRateCalc_6.getString());
+  FIX::SettlCurrency SettlCurrency_6("CHF");
+  msg.set(SettlCurrency_6);
+  Confirmation_0.insert(SettlCurrency_6.getString());
+  FIX::SettlDate SettlDate_11("LOCALMKTDATE_2004201272");
+  msg.set(SettlDate_11);
+  Confirmation_0.insert(SettlDate_11.getString());
+  FIX::SettlType SettlType_5("STRING_B");
+  msg.set(SettlType_5);
+  Confirmation_0.insert(SettlType_5.getString());
   FIX::SharedCommission SharedCommission_0;
-  SharedCommission_0.setString("10836286");
+  SharedCommission_0.setString("18529204");
   msg.set(SharedCommission_0);
   Confirmation_0.insert(SharedCommission_0.getString());
-  FIX::Side Side_14('F');
-  msg.set(Side_14);
-  Confirmation_0.insert(Side_14.getString());
+  FIX::Side Side_10('C');
+  msg.set(Side_10);
+  Confirmation_0.insert(Side_10.getString());
   FIX::StartCash StartCash_8;
-  StartCash_8.setString("2537815");
+  StartCash_8.setString("15059632");
   msg.set(StartCash_8);
   Confirmation_0.insert(StartCash_8.getString());
-  FIX::Text Text_21("STRING_1202745351");
-  msg.set(Text_21);
-  Confirmation_0.insert(Text_21.getString());
+  FIX::Text Text_19("STRING_1321022279");
+  msg.set(Text_19);
+  Confirmation_0.insert(Text_19.getString());
   FIX::TotalTakedown TotalTakedown_3;
-  TotalTakedown_3.setString("15873548");
+  TotalTakedown_3.setString("14873062");
   msg.set(TotalTakedown_3);
   Confirmation_0.insert(TotalTakedown_3.getString());
-  FIX::TradeDate TradeDate_7("LOCALMKTDATE_1015555352");
+  FIX::TradeDate TradeDate_7("LOCALMKTDATE_518874392");
   msg.set(TradeDate_7);
   Confirmation_0.insert(TradeDate_7.getString());
-  FIX::TransactTime TransactTime_10(FIX::UTCTIMESTAMP(2, 44, 52, 14, 1, 2008));
+  FIX::TransactTime TransactTime_10(FIX::UTCTIMESTAMP(12, 14, 11, 16, 7, 2013));
   msg.set(TransactTime_10);
   Confirmation_0.insert(TransactTime_10.getString());
   all_values.push_back(Confirmation_0);
 
   // CommissionData
-  multiset<string> CommissionData_8;
-  FIX::CommCurrency CommCurrency_8("USD");
-  msg.set(CommCurrency_8);
-  CommissionData_8.insert(CommCurrency_8.getString());
-  FIX::CommType CommType_8('3');
-  msg.set(CommType_8);
-  CommissionData_8.insert(CommType_8.getString());
-  FIX::Commission Commission_8;
-  Commission_8.setString("19483466");
-  msg.set(Commission_8);
-  CommissionData_8.insert(Commission_8.getString());
-  FIX::FundRenewWaiv FundRenewWaiv_8('Y');
-  msg.set(FundRenewWaiv_8);
-  CommissionData_8.insert(FundRenewWaiv_8.getString());
-  all_values.push_back(CommissionData_8);
+  multiset<string> CommissionData_7;
+  FIX::CommCurrency CommCurrency_7("USD");
+  msg.set(CommCurrency_7);
+  CommissionData_7.insert(CommCurrency_7.getString());
+  FIX::CommType CommType_7('6');
+  msg.set(CommType_7);
+  CommissionData_7.insert(CommType_7.getString());
+  FIX::Commission Commission_7;
+  Commission_7.setString("18002039");
+  msg.set(Commission_7);
+  CommissionData_7.insert(Commission_7.getString());
+  FIX::FundRenewWaiv FundRenewWaiv_7('N');
+  msg.set(FundRenewWaiv_7);
+  CommissionData_7.insert(FundRenewWaiv_7.getString());
+  all_values.push_back(CommissionData_7);
 
   // CpctyConfGrp
   // Group CpctyConfGrp.NoCapacities
@@ -216,48 +216,84 @@ TEST ( Confirmation, set_fields)
     FIX50SP2::Confirmation::NoCapacities noCapacities_0_0;
     // CpctyConfGrp.NoCapacities
     multiset<string> CpctyConfGrp_NoCapacities_0;
-    FIX::OrderCapacity OrderCapacity_0('W');
+    FIX::OrderCapacity OrderCapacity_0('R');
     noCapacities_0_0.set(OrderCapacity_0);
     CpctyConfGrp_NoCapacities_0.insert(OrderCapacity_0.getString());
     FIX::OrderCapacityQty OrderCapacityQty_0;
-    OrderCapacityQty_0.setString("15406698");
+    OrderCapacityQty_0.setString("13514111");
     noCapacities_0_0.set(OrderCapacityQty_0);
     CpctyConfGrp_NoCapacities_0.insert(OrderCapacityQty_0.getString());
-    FIX::OrderRestrictions OrderRestrictions_0("MULTIPLECHARVALUE_E");
+    FIX::OrderRestrictions OrderRestrictions_0("MULTIPLECHARVALUE_3");
     noCapacities_0_0.set(OrderRestrictions_0);
     CpctyConfGrp_NoCapacities_0.insert(OrderRestrictions_0.getString());
     all_values.push_back(CpctyConfGrp_NoCapacities_0);
 
     msg.addGroup(noCapacities_0_0);
   }
+  {
+    FIX50SP2::Confirmation::NoCapacities noCapacities_0_1;
+    // CpctyConfGrp.NoCapacities
+    multiset<string> CpctyConfGrp_NoCapacities_1;
+    FIX::OrderCapacity OrderCapacity_1('R');
+    noCapacities_0_1.set(OrderCapacity_1);
+    CpctyConfGrp_NoCapacities_1.insert(OrderCapacity_1.getString());
+    FIX::OrderCapacityQty OrderCapacityQty_1;
+    OrderCapacityQty_1.setString("8918555");
+    noCapacities_0_1.set(OrderCapacityQty_1);
+    CpctyConfGrp_NoCapacities_1.insert(OrderCapacityQty_1.getString());
+    FIX::OrderRestrictions OrderRestrictions_1("MULTIPLECHARVALUE_E");
+    noCapacities_0_1.set(OrderRestrictions_1);
+    CpctyConfGrp_NoCapacities_1.insert(OrderRestrictions_1.getString());
+    all_values.push_back(CpctyConfGrp_NoCapacities_1);
+
+    msg.addGroup(noCapacities_0_1);
+  }
+  {
+    FIX50SP2::Confirmation::NoCapacities noCapacities_0_2;
+    // CpctyConfGrp.NoCapacities
+    multiset<string> CpctyConfGrp_NoCapacities_2;
+    FIX::OrderCapacity OrderCapacity_2('W');
+    noCapacities_0_2.set(OrderCapacity_2);
+    CpctyConfGrp_NoCapacities_2.insert(OrderCapacity_2.getString());
+    FIX::OrderCapacityQty OrderCapacityQty_2;
+    OrderCapacityQty_2.setString("18886458");
+    noCapacities_0_2.set(OrderCapacityQty_2);
+    CpctyConfGrp_NoCapacities_2.insert(OrderCapacityQty_2.getString());
+    FIX::OrderRestrictions OrderRestrictions_2("MULTIPLECHARVALUE_6");
+    noCapacities_0_2.set(OrderRestrictions_2);
+    CpctyConfGrp_NoCapacities_2.insert(OrderRestrictions_2.getString());
+    all_values.push_back(CpctyConfGrp_NoCapacities_2);
+
+    msg.addGroup(noCapacities_0_2);
+  }
   // FinancingDetails
   multiset<string> FinancingDetails_9;
   FIX::AgreementCurrency AgreementCurrency_9("CHF");
   msg.set(AgreementCurrency_9);
   FinancingDetails_9.insert(AgreementCurrency_9.getString());
-  FIX::AgreementDate AgreementDate_9("LOCALMKTDATE_2114722711");
+  FIX::AgreementDate AgreementDate_9("LOCALMKTDATE_84356954");
   msg.set(AgreementDate_9);
   FinancingDetails_9.insert(AgreementDate_9.getString());
-  FIX::AgreementDesc AgreementDesc_9("STRING_1704041995");
+  FIX::AgreementDesc AgreementDesc_9("STRING_428029141");
   msg.set(AgreementDesc_9);
   FinancingDetails_9.insert(AgreementDesc_9.getString());
-  FIX::AgreementID AgreementID_9("STRING_425698239");
+  FIX::AgreementID AgreementID_9("STRING_1910625900");
   msg.set(AgreementID_9);
   FinancingDetails_9.insert(AgreementID_9.getString());
   FIX::DeliveryType DeliveryType_9(1);
   msg.set(DeliveryType_9);
   FinancingDetails_9.insert(DeliveryType_9.getString());
-  FIX::EndDate EndDate_9("LOCALMKTDATE_2041178206");
+  FIX::EndDate EndDate_9("LOCALMKTDATE_1749051420");
   msg.set(EndDate_9);
   FinancingDetails_9.insert(EndDate_9.getString());
   FIX::MarginRatio MarginRatio_9;
-  MarginRatio_9.setString("34.030000");
+  MarginRatio_9.setString("85.170000");
   msg.set(MarginRatio_9);
   FinancingDetails_9.insert(MarginRatio_9.getString());
-  FIX::StartDate StartDate_9("LOCALMKTDATE_1102064395");
+  FIX::StartDate StartDate_9("LOCALMKTDATE_2109194573");
   msg.set(StartDate_9);
   FinancingDetails_9.insert(StartDate_9.getString());
-  FIX::TerminationType TerminationType_9(3);
+  FIX::TerminationType TerminationType_9(4);
   msg.set(TerminationType_9);
   FinancingDetails_9.insert(TerminationType_9.getString());
   all_values.push_back(FinancingDetails_9);
@@ -268,215 +304,215 @@ TEST ( Confirmation, set_fields)
     FIX50SP2::Confirmation::NoLegs noLegs_0_0;
     // InstrmtLegGrp.NoLegs
     // InstrumentLeg
-    multiset<string> InstrumentLeg_18;
-    FIX::EncodedLegIssuer EncodedLegIssuer_18("DATA_1355845932");
-    noLegs_0_0.set(EncodedLegIssuer_18);
-    InstrumentLeg_18.insert(EncodedLegIssuer_18.getString());
-    FIX::EncodedLegIssuerLen EncodedLegIssuerLen_18(32584873);
-    noLegs_0_0.set(EncodedLegIssuerLen_18);
-    InstrumentLeg_18.insert(EncodedLegIssuerLen_18.getString());
-    FIX::EncodedLegSecurityDesc EncodedLegSecurityDesc_18("DATA_1948160886");
-    noLegs_0_0.set(EncodedLegSecurityDesc_18);
-    InstrumentLeg_18.insert(EncodedLegSecurityDesc_18.getString());
-    FIX::EncodedLegSecurityDescLen EncodedLegSecurityDescLen_18(223917636);
-    noLegs_0_0.set(EncodedLegSecurityDescLen_18);
-    InstrumentLeg_18.insert(EncodedLegSecurityDescLen_18.getString());
-    FIX::LegCFICode LegCFICode_18("STRING_1297754750");
-    noLegs_0_0.set(LegCFICode_18);
-    InstrumentLeg_18.insert(LegCFICode_18.getString());
-    FIX::LegContractMultiplier LegContractMultiplier_18;
-    LegContractMultiplier_18.setString("10255714");
-    noLegs_0_0.set(LegContractMultiplier_18);
-    InstrumentLeg_18.insert(LegContractMultiplier_18.getString());
-    FIX::LegContractMultiplierUnit LegContractMultiplierUnit_18(864575180);
-    noLegs_0_0.set(LegContractMultiplierUnit_18);
-    InstrumentLeg_18.insert(LegContractMultiplierUnit_18.getString());
-    FIX::LegContractSettlMonth LegContractSettlMonth_18("MONTHYEAR_870906934");
-    noLegs_0_0.set(LegContractSettlMonth_18);
-    InstrumentLeg_18.insert(LegContractSettlMonth_18.getString());
-    FIX::LegCountryOfIssue LegCountryOfIssue_18("COUNTRY_1148580118");
-    noLegs_0_0.set(LegCountryOfIssue_18);
-    InstrumentLeg_18.insert(LegCountryOfIssue_18.getString());
-    FIX::LegCouponPaymentDate LegCouponPaymentDate_18("LOCALMKTDATE_966882477");
-    noLegs_0_0.set(LegCouponPaymentDate_18);
-    InstrumentLeg_18.insert(LegCouponPaymentDate_18.getString());
-    FIX::LegCouponRate LegCouponRate_18;
-    LegCouponRate_18.setString("8.330000");
-    noLegs_0_0.set(LegCouponRate_18);
-    InstrumentLeg_18.insert(LegCouponRate_18.getString());
-    FIX::LegCreditRating LegCreditRating_18("STRING_1434018619");
-    noLegs_0_0.set(LegCreditRating_18);
-    InstrumentLeg_18.insert(LegCreditRating_18.getString());
-    FIX::LegCurrency LegCurrency_18("CHF");
-    noLegs_0_0.set(LegCurrency_18);
-    InstrumentLeg_18.insert(LegCurrency_18.getString());
-    FIX::LegDatedDate LegDatedDate_18("LOCALMKTDATE_1234881653");
-    noLegs_0_0.set(LegDatedDate_18);
-    InstrumentLeg_18.insert(LegDatedDate_18.getString());
-    FIX::LegExerciseStyle LegExerciseStyle_18(1800443328);
-    noLegs_0_0.set(LegExerciseStyle_18);
-    InstrumentLeg_18.insert(LegExerciseStyle_18.getString());
-    FIX::LegFactor LegFactor_18;
-    LegFactor_18.setString("1983066");
-    noLegs_0_0.set(LegFactor_18);
-    InstrumentLeg_18.insert(LegFactor_18.getString());
-    FIX::LegFlowScheduleType LegFlowScheduleType_18(1566241768);
-    noLegs_0_0.set(LegFlowScheduleType_18);
-    InstrumentLeg_18.insert(LegFlowScheduleType_18.getString());
-    FIX::LegInstrRegistry LegInstrRegistry_18("STRING_1193629526");
-    noLegs_0_0.set(LegInstrRegistry_18);
-    InstrumentLeg_18.insert(LegInstrRegistry_18.getString());
-    FIX::LegInterestAccrualDate LegInterestAccrualDate_18("LOCALMKTDATE_477997637");
-    noLegs_0_0.set(LegInterestAccrualDate_18);
-    InstrumentLeg_18.insert(LegInterestAccrualDate_18.getString());
-    FIX::LegIssueDate LegIssueDate_18("LOCALMKTDATE_197111290");
-    noLegs_0_0.set(LegIssueDate_18);
-    InstrumentLeg_18.insert(LegIssueDate_18.getString());
-    FIX::LegIssuer LegIssuer_18("STRING_1756278923");
-    noLegs_0_0.set(LegIssuer_18);
-    InstrumentLeg_18.insert(LegIssuer_18.getString());
-    FIX::LegLocaleOfIssue LegLocaleOfIssue_18("STRING_445236701");
-    noLegs_0_0.set(LegLocaleOfIssue_18);
-    InstrumentLeg_18.insert(LegLocaleOfIssue_18.getString());
-    FIX::LegMaturityDate LegMaturityDate_18("LOCALMKTDATE_1901153286");
-    noLegs_0_0.set(LegMaturityDate_18);
-    InstrumentLeg_18.insert(LegMaturityDate_18.getString());
-    FIX::LegMaturityMonthYear LegMaturityMonthYear_18("MONTHYEAR_34493515");
-    noLegs_0_0.set(LegMaturityMonthYear_18);
-    InstrumentLeg_18.insert(LegMaturityMonthYear_18.getString());
-    FIX::LegMaturityTime LegMaturityTime_18("TZTIMEONLY_103048170");
-    noLegs_0_0.set(LegMaturityTime_18);
-    InstrumentLeg_18.insert(LegMaturityTime_18.getString());
-    FIX::LegOptAttribute LegOptAttribute_18('1');
-    noLegs_0_0.set(LegOptAttribute_18);
-    InstrumentLeg_18.insert(LegOptAttribute_18.getString());
-    FIX::LegOptionRatio LegOptionRatio_18;
-    LegOptionRatio_18.setString("1904369");
-    noLegs_0_0.set(LegOptionRatio_18);
-    InstrumentLeg_18.insert(LegOptionRatio_18.getString());
-    FIX::LegPool LegPool_18("STRING_1205112565");
-    noLegs_0_0.set(LegPool_18);
-    InstrumentLeg_18.insert(LegPool_18.getString());
-    FIX::LegPriceUnitOfMeasure LegPriceUnitOfMeasure_18("STRING_624687366");
-    noLegs_0_0.set(LegPriceUnitOfMeasure_18);
-    InstrumentLeg_18.insert(LegPriceUnitOfMeasure_18.getString());
-    FIX::LegPriceUnitOfMeasureQty LegPriceUnitOfMeasureQty_18;
-    LegPriceUnitOfMeasureQty_18.setString("5512429");
-    noLegs_0_0.set(LegPriceUnitOfMeasureQty_18);
-    InstrumentLeg_18.insert(LegPriceUnitOfMeasureQty_18.getString());
-    FIX::LegProduct LegProduct_18(413474849);
-    noLegs_0_0.set(LegProduct_18);
-    InstrumentLeg_18.insert(LegProduct_18.getString());
-    FIX::LegPutOrCall LegPutOrCall_18(657272240);
-    noLegs_0_0.set(LegPutOrCall_18);
-    InstrumentLeg_18.insert(LegPutOrCall_18.getString());
-    FIX::LegRatioQty LegRatioQty_18;
-    LegRatioQty_18.setString("3519202");
-    noLegs_0_0.set(LegRatioQty_18);
-    InstrumentLeg_18.insert(LegRatioQty_18.getString());
-    FIX::LegRedemptionDate LegRedemptionDate_18("LOCALMKTDATE_637392486");
-    noLegs_0_0.set(LegRedemptionDate_18);
-    InstrumentLeg_18.insert(LegRedemptionDate_18.getString());
-    FIX::LegRepoCollateralSecurityType LegRepoCollateralSecurityType_18("STRING_1955026990");
-    noLegs_0_0.set(LegRepoCollateralSecurityType_18);
-    InstrumentLeg_18.insert(LegRepoCollateralSecurityType_18.getString());
-    FIX::LegRepurchaseRate LegRepurchaseRate_18;
-    LegRepurchaseRate_18.setString("16.690000");
-    noLegs_0_0.set(LegRepurchaseRate_18);
-    InstrumentLeg_18.insert(LegRepurchaseRate_18.getString());
-    FIX::LegRepurchaseTerm LegRepurchaseTerm_18(1501967666);
-    noLegs_0_0.set(LegRepurchaseTerm_18);
-    InstrumentLeg_18.insert(LegRepurchaseTerm_18.getString());
-    FIX::LegSecurityDesc LegSecurityDesc_18("STRING_678450276");
-    noLegs_0_0.set(LegSecurityDesc_18);
-    InstrumentLeg_18.insert(LegSecurityDesc_18.getString());
-    FIX::LegSecurityExchange LegSecurityExchange_18("EXCHANGE_378588139");
-    noLegs_0_0.set(LegSecurityExchange_18);
-    InstrumentLeg_18.insert(LegSecurityExchange_18.getString());
-    FIX::LegSecurityID LegSecurityID_18("STRING_321366495");
-    noLegs_0_0.set(LegSecurityID_18);
-    InstrumentLeg_18.insert(LegSecurityID_18.getString());
-    FIX::LegSecurityIDSource LegSecurityIDSource_18("STRING_1573011109");
-    noLegs_0_0.set(LegSecurityIDSource_18);
-    InstrumentLeg_18.insert(LegSecurityIDSource_18.getString());
-    FIX::LegSecuritySubType LegSecuritySubType_18("STRING_1812606759");
-    noLegs_0_0.set(LegSecuritySubType_18);
-    InstrumentLeg_18.insert(LegSecuritySubType_18.getString());
-    FIX::LegSecurityType LegSecurityType_18("STRING_694950245");
-    noLegs_0_0.set(LegSecurityType_18);
-    InstrumentLeg_18.insert(LegSecurityType_18.getString());
-    FIX::LegSide LegSide_18('1');
-    noLegs_0_0.set(LegSide_18);
-    InstrumentLeg_18.insert(LegSide_18.getString());
-    FIX::LegStateOrProvinceOfIssue LegStateOrProvinceOfIssue_18("STRING_900004764");
-    noLegs_0_0.set(LegStateOrProvinceOfIssue_18);
-    InstrumentLeg_18.insert(LegStateOrProvinceOfIssue_18.getString());
-    FIX::LegStrikeCurrency LegStrikeCurrency_18("USD");
-    noLegs_0_0.set(LegStrikeCurrency_18);
-    InstrumentLeg_18.insert(LegStrikeCurrency_18.getString());
-    FIX::LegStrikePrice LegStrikePrice_18;
-    LegStrikePrice_18.setString("3187628");
-    noLegs_0_0.set(LegStrikePrice_18);
-    InstrumentLeg_18.insert(LegStrikePrice_18.getString());
-    FIX::LegSymbol LegSymbol_18("STRING_1541539451");
-    noLegs_0_0.set(LegSymbol_18);
-    InstrumentLeg_18.insert(LegSymbol_18.getString());
-    FIX::LegSymbolSfx LegSymbolSfx_18("STRING_89437402");
-    noLegs_0_0.set(LegSymbolSfx_18);
-    InstrumentLeg_18.insert(LegSymbolSfx_18.getString());
-    FIX::LegTimeUnit LegTimeUnit_18("STRING_515874175");
-    noLegs_0_0.set(LegTimeUnit_18);
-    InstrumentLeg_18.insert(LegTimeUnit_18.getString());
-    FIX::LegUnitOfMeasure LegUnitOfMeasure_18("STRING_1150334727");
-    noLegs_0_0.set(LegUnitOfMeasure_18);
-    InstrumentLeg_18.insert(LegUnitOfMeasure_18.getString());
-    FIX::LegUnitOfMeasureQty LegUnitOfMeasureQty_18;
-    LegUnitOfMeasureQty_18.setString("5346741");
-    noLegs_0_0.set(LegUnitOfMeasureQty_18);
-    InstrumentLeg_18.insert(LegUnitOfMeasureQty_18.getString());
-    all_values.push_back(InstrumentLeg_18);
+    multiset<string> InstrumentLeg_19;
+    FIX::EncodedLegIssuer EncodedLegIssuer_19("DATA_1884274860");
+    noLegs_0_0.set(EncodedLegIssuer_19);
+    InstrumentLeg_19.insert(EncodedLegIssuer_19.getString());
+    FIX::EncodedLegIssuerLen EncodedLegIssuerLen_19(867440614);
+    noLegs_0_0.set(EncodedLegIssuerLen_19);
+    InstrumentLeg_19.insert(EncodedLegIssuerLen_19.getString());
+    FIX::EncodedLegSecurityDesc EncodedLegSecurityDesc_19("DATA_451612217");
+    noLegs_0_0.set(EncodedLegSecurityDesc_19);
+    InstrumentLeg_19.insert(EncodedLegSecurityDesc_19.getString());
+    FIX::EncodedLegSecurityDescLen EncodedLegSecurityDescLen_19(110823406);
+    noLegs_0_0.set(EncodedLegSecurityDescLen_19);
+    InstrumentLeg_19.insert(EncodedLegSecurityDescLen_19.getString());
+    FIX::LegCFICode LegCFICode_19("STRING_878695487");
+    noLegs_0_0.set(LegCFICode_19);
+    InstrumentLeg_19.insert(LegCFICode_19.getString());
+    FIX::LegContractMultiplier LegContractMultiplier_19;
+    LegContractMultiplier_19.setString("4689014");
+    noLegs_0_0.set(LegContractMultiplier_19);
+    InstrumentLeg_19.insert(LegContractMultiplier_19.getString());
+    FIX::LegContractMultiplierUnit LegContractMultiplierUnit_19(871516900);
+    noLegs_0_0.set(LegContractMultiplierUnit_19);
+    InstrumentLeg_19.insert(LegContractMultiplierUnit_19.getString());
+    FIX::LegContractSettlMonth LegContractSettlMonth_19("MONTHYEAR_1775480626");
+    noLegs_0_0.set(LegContractSettlMonth_19);
+    InstrumentLeg_19.insert(LegContractSettlMonth_19.getString());
+    FIX::LegCountryOfIssue LegCountryOfIssue_19("COUNTRY_121621689");
+    noLegs_0_0.set(LegCountryOfIssue_19);
+    InstrumentLeg_19.insert(LegCountryOfIssue_19.getString());
+    FIX::LegCouponPaymentDate LegCouponPaymentDate_19("LOCALMKTDATE_827698422");
+    noLegs_0_0.set(LegCouponPaymentDate_19);
+    InstrumentLeg_19.insert(LegCouponPaymentDate_19.getString());
+    FIX::LegCouponRate LegCouponRate_19;
+    LegCouponRate_19.setString("7.060000");
+    noLegs_0_0.set(LegCouponRate_19);
+    InstrumentLeg_19.insert(LegCouponRate_19.getString());
+    FIX::LegCreditRating LegCreditRating_19("STRING_2109658267");
+    noLegs_0_0.set(LegCreditRating_19);
+    InstrumentLeg_19.insert(LegCreditRating_19.getString());
+    FIX::LegCurrency LegCurrency_19("GBP");
+    noLegs_0_0.set(LegCurrency_19);
+    InstrumentLeg_19.insert(LegCurrency_19.getString());
+    FIX::LegDatedDate LegDatedDate_19("LOCALMKTDATE_1816663960");
+    noLegs_0_0.set(LegDatedDate_19);
+    InstrumentLeg_19.insert(LegDatedDate_19.getString());
+    FIX::LegExerciseStyle LegExerciseStyle_19(923481454);
+    noLegs_0_0.set(LegExerciseStyle_19);
+    InstrumentLeg_19.insert(LegExerciseStyle_19.getString());
+    FIX::LegFactor LegFactor_19;
+    LegFactor_19.setString("8953331");
+    noLegs_0_0.set(LegFactor_19);
+    InstrumentLeg_19.insert(LegFactor_19.getString());
+    FIX::LegFlowScheduleType LegFlowScheduleType_19(497541385);
+    noLegs_0_0.set(LegFlowScheduleType_19);
+    InstrumentLeg_19.insert(LegFlowScheduleType_19.getString());
+    FIX::LegInstrRegistry LegInstrRegistry_19("STRING_664643639");
+    noLegs_0_0.set(LegInstrRegistry_19);
+    InstrumentLeg_19.insert(LegInstrRegistry_19.getString());
+    FIX::LegInterestAccrualDate LegInterestAccrualDate_19("LOCALMKTDATE_387959775");
+    noLegs_0_0.set(LegInterestAccrualDate_19);
+    InstrumentLeg_19.insert(LegInterestAccrualDate_19.getString());
+    FIX::LegIssueDate LegIssueDate_19("LOCALMKTDATE_1220133686");
+    noLegs_0_0.set(LegIssueDate_19);
+    InstrumentLeg_19.insert(LegIssueDate_19.getString());
+    FIX::LegIssuer LegIssuer_19("STRING_262523448");
+    noLegs_0_0.set(LegIssuer_19);
+    InstrumentLeg_19.insert(LegIssuer_19.getString());
+    FIX::LegLocaleOfIssue LegLocaleOfIssue_19("STRING_472316729");
+    noLegs_0_0.set(LegLocaleOfIssue_19);
+    InstrumentLeg_19.insert(LegLocaleOfIssue_19.getString());
+    FIX::LegMaturityDate LegMaturityDate_19("LOCALMKTDATE_1648162827");
+    noLegs_0_0.set(LegMaturityDate_19);
+    InstrumentLeg_19.insert(LegMaturityDate_19.getString());
+    FIX::LegMaturityMonthYear LegMaturityMonthYear_19("MONTHYEAR_25665701");
+    noLegs_0_0.set(LegMaturityMonthYear_19);
+    InstrumentLeg_19.insert(LegMaturityMonthYear_19.getString());
+    FIX::LegMaturityTime LegMaturityTime_19("TZTIMEONLY_2062636910");
+    noLegs_0_0.set(LegMaturityTime_19);
+    InstrumentLeg_19.insert(LegMaturityTime_19.getString());
+    FIX::LegOptAttribute LegOptAttribute_19('1');
+    noLegs_0_0.set(LegOptAttribute_19);
+    InstrumentLeg_19.insert(LegOptAttribute_19.getString());
+    FIX::LegOptionRatio LegOptionRatio_19;
+    LegOptionRatio_19.setString("12761142");
+    noLegs_0_0.set(LegOptionRatio_19);
+    InstrumentLeg_19.insert(LegOptionRatio_19.getString());
+    FIX::LegPool LegPool_19("STRING_2024347836");
+    noLegs_0_0.set(LegPool_19);
+    InstrumentLeg_19.insert(LegPool_19.getString());
+    FIX::LegPriceUnitOfMeasure LegPriceUnitOfMeasure_19("STRING_508698942");
+    noLegs_0_0.set(LegPriceUnitOfMeasure_19);
+    InstrumentLeg_19.insert(LegPriceUnitOfMeasure_19.getString());
+    FIX::LegPriceUnitOfMeasureQty LegPriceUnitOfMeasureQty_19;
+    LegPriceUnitOfMeasureQty_19.setString("20351267");
+    noLegs_0_0.set(LegPriceUnitOfMeasureQty_19);
+    InstrumentLeg_19.insert(LegPriceUnitOfMeasureQty_19.getString());
+    FIX::LegProduct LegProduct_19(1761139048);
+    noLegs_0_0.set(LegProduct_19);
+    InstrumentLeg_19.insert(LegProduct_19.getString());
+    FIX::LegPutOrCall LegPutOrCall_19(1376139557);
+    noLegs_0_0.set(LegPutOrCall_19);
+    InstrumentLeg_19.insert(LegPutOrCall_19.getString());
+    FIX::LegRatioQty LegRatioQty_19;
+    LegRatioQty_19.setString("3392553");
+    noLegs_0_0.set(LegRatioQty_19);
+    InstrumentLeg_19.insert(LegRatioQty_19.getString());
+    FIX::LegRedemptionDate LegRedemptionDate_19("LOCALMKTDATE_1871962454");
+    noLegs_0_0.set(LegRedemptionDate_19);
+    InstrumentLeg_19.insert(LegRedemptionDate_19.getString());
+    FIX::LegRepoCollateralSecurityType LegRepoCollateralSecurityType_19("STRING_107351396");
+    noLegs_0_0.set(LegRepoCollateralSecurityType_19);
+    InstrumentLeg_19.insert(LegRepoCollateralSecurityType_19.getString());
+    FIX::LegRepurchaseRate LegRepurchaseRate_19;
+    LegRepurchaseRate_19.setString("67.860000");
+    noLegs_0_0.set(LegRepurchaseRate_19);
+    InstrumentLeg_19.insert(LegRepurchaseRate_19.getString());
+    FIX::LegRepurchaseTerm LegRepurchaseTerm_19(595995706);
+    noLegs_0_0.set(LegRepurchaseTerm_19);
+    InstrumentLeg_19.insert(LegRepurchaseTerm_19.getString());
+    FIX::LegSecurityDesc LegSecurityDesc_19("STRING_1882832023");
+    noLegs_0_0.set(LegSecurityDesc_19);
+    InstrumentLeg_19.insert(LegSecurityDesc_19.getString());
+    FIX::LegSecurityExchange LegSecurityExchange_19("EXCHANGE_929778475");
+    noLegs_0_0.set(LegSecurityExchange_19);
+    InstrumentLeg_19.insert(LegSecurityExchange_19.getString());
+    FIX::LegSecurityID LegSecurityID_19("STRING_1423694128");
+    noLegs_0_0.set(LegSecurityID_19);
+    InstrumentLeg_19.insert(LegSecurityID_19.getString());
+    FIX::LegSecurityIDSource LegSecurityIDSource_19("STRING_551989081");
+    noLegs_0_0.set(LegSecurityIDSource_19);
+    InstrumentLeg_19.insert(LegSecurityIDSource_19.getString());
+    FIX::LegSecuritySubType LegSecuritySubType_19("STRING_891953094");
+    noLegs_0_0.set(LegSecuritySubType_19);
+    InstrumentLeg_19.insert(LegSecuritySubType_19.getString());
+    FIX::LegSecurityType LegSecurityType_19("STRING_1455320020");
+    noLegs_0_0.set(LegSecurityType_19);
+    InstrumentLeg_19.insert(LegSecurityType_19.getString());
+    FIX::LegSide LegSide_19('1');
+    noLegs_0_0.set(LegSide_19);
+    InstrumentLeg_19.insert(LegSide_19.getString());
+    FIX::LegStateOrProvinceOfIssue LegStateOrProvinceOfIssue_19("STRING_561133406");
+    noLegs_0_0.set(LegStateOrProvinceOfIssue_19);
+    InstrumentLeg_19.insert(LegStateOrProvinceOfIssue_19.getString());
+    FIX::LegStrikeCurrency LegStrikeCurrency_19("CHF");
+    noLegs_0_0.set(LegStrikeCurrency_19);
+    InstrumentLeg_19.insert(LegStrikeCurrency_19.getString());
+    FIX::LegStrikePrice LegStrikePrice_19;
+    LegStrikePrice_19.setString("10586747");
+    noLegs_0_0.set(LegStrikePrice_19);
+    InstrumentLeg_19.insert(LegStrikePrice_19.getString());
+    FIX::LegSymbol LegSymbol_19("STRING_895961466");
+    noLegs_0_0.set(LegSymbol_19);
+    InstrumentLeg_19.insert(LegSymbol_19.getString());
+    FIX::LegSymbolSfx LegSymbolSfx_19("STRING_252100186");
+    noLegs_0_0.set(LegSymbolSfx_19);
+    InstrumentLeg_19.insert(LegSymbolSfx_19.getString());
+    FIX::LegTimeUnit LegTimeUnit_19("STRING_131324830");
+    noLegs_0_0.set(LegTimeUnit_19);
+    InstrumentLeg_19.insert(LegTimeUnit_19.getString());
+    FIX::LegUnitOfMeasure LegUnitOfMeasure_19("STRING_1158484915");
+    noLegs_0_0.set(LegUnitOfMeasure_19);
+    InstrumentLeg_19.insert(LegUnitOfMeasure_19.getString());
+    FIX::LegUnitOfMeasureQty LegUnitOfMeasureQty_19;
+    LegUnitOfMeasureQty_19.setString("7244169");
+    noLegs_0_0.set(LegUnitOfMeasureQty_19);
+    InstrumentLeg_19.insert(LegUnitOfMeasureQty_19.getString());
+    all_values.push_back(InstrumentLeg_19);
 
     // LegSecAltIDGrp
     // Group LegSecAltIDGrp.NoLegSecurityAltID
     {
       FIX50SP2::Confirmation::NoLegs::NoLegSecurityAltID noLegSecurityAltID_0_1_0;
       // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_41;
-      FIX::LegSecurityAltID LegSecurityAltID_41("STRING_1184828242");
-      noLegSecurityAltID_0_1_0.set(LegSecurityAltID_41);
-      LegSecAltIDGrp_NoLegSecurityAltID_41.insert(LegSecurityAltID_41.getString());
-      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_41("STRING_637722273");
-      noLegSecurityAltID_0_1_0.set(LegSecurityAltIDSource_41);
-      LegSecAltIDGrp_NoLegSecurityAltID_41.insert(LegSecurityAltIDSource_41.getString());
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_41);
+      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_34;
+      FIX::LegSecurityAltID LegSecurityAltID_34("STRING_1184150616");
+      noLegSecurityAltID_0_1_0.set(LegSecurityAltID_34);
+      LegSecAltIDGrp_NoLegSecurityAltID_34.insert(LegSecurityAltID_34.getString());
+      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_34("STRING_639570178");
+      noLegSecurityAltID_0_1_0.set(LegSecurityAltIDSource_34);
+      LegSecAltIDGrp_NoLegSecurityAltID_34.insert(LegSecurityAltIDSource_34.getString());
+      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_34);
 
       noLegs_0_0.addGroup(noLegSecurityAltID_0_1_0);
     }
     {
       FIX50SP2::Confirmation::NoLegs::NoLegSecurityAltID noLegSecurityAltID_0_1_1;
       // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_42;
-      FIX::LegSecurityAltID LegSecurityAltID_42("STRING_2064391657");
-      noLegSecurityAltID_0_1_1.set(LegSecurityAltID_42);
-      LegSecAltIDGrp_NoLegSecurityAltID_42.insert(LegSecurityAltID_42.getString());
-      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_42("STRING_1375265160");
-      noLegSecurityAltID_0_1_1.set(LegSecurityAltIDSource_42);
-      LegSecAltIDGrp_NoLegSecurityAltID_42.insert(LegSecurityAltIDSource_42.getString());
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_42);
+      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_35;
+      FIX::LegSecurityAltID LegSecurityAltID_35("STRING_881734609");
+      noLegSecurityAltID_0_1_1.set(LegSecurityAltID_35);
+      LegSecAltIDGrp_NoLegSecurityAltID_35.insert(LegSecurityAltID_35.getString());
+      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_35("STRING_312781186");
+      noLegSecurityAltID_0_1_1.set(LegSecurityAltIDSource_35);
+      LegSecAltIDGrp_NoLegSecurityAltID_35.insert(LegSecurityAltIDSource_35.getString());
+      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_35);
 
       noLegs_0_0.addGroup(noLegSecurityAltID_0_1_1);
     }
     {
       FIX50SP2::Confirmation::NoLegs::NoLegSecurityAltID noLegSecurityAltID_0_1_2;
       // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_43;
-      FIX::LegSecurityAltID LegSecurityAltID_43("STRING_1842834838");
-      noLegSecurityAltID_0_1_2.set(LegSecurityAltID_43);
-      LegSecAltIDGrp_NoLegSecurityAltID_43.insert(LegSecurityAltID_43.getString());
-      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_43("STRING_541595376");
-      noLegSecurityAltID_0_1_2.set(LegSecurityAltIDSource_43);
-      LegSecAltIDGrp_NoLegSecurityAltID_43.insert(LegSecurityAltIDSource_43.getString());
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_43);
+      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_36;
+      FIX::LegSecurityAltID LegSecurityAltID_36("STRING_516434366");
+      noLegSecurityAltID_0_1_2.set(LegSecurityAltID_36);
+      LegSecAltIDGrp_NoLegSecurityAltID_36.insert(LegSecurityAltID_36.getString());
+      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_36("STRING_1390433552");
+      noLegSecurityAltID_0_1_2.set(LegSecurityAltIDSource_36);
+      LegSecAltIDGrp_NoLegSecurityAltID_36.insert(LegSecurityAltIDSource_36.getString());
+      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_36);
 
       noLegs_0_0.addGroup(noLegSecurityAltID_0_1_2);
     }
@@ -486,187 +522,187 @@ TEST ( Confirmation, set_fields)
     FIX50SP2::Confirmation::NoLegs noLegs_0_1;
     // InstrmtLegGrp.NoLegs
     // InstrumentLeg
-    multiset<string> InstrumentLeg_19;
-    FIX::EncodedLegIssuer EncodedLegIssuer_19("DATA_1926508135");
-    noLegs_0_1.set(EncodedLegIssuer_19);
-    InstrumentLeg_19.insert(EncodedLegIssuer_19.getString());
-    FIX::EncodedLegIssuerLen EncodedLegIssuerLen_19(108826040);
-    noLegs_0_1.set(EncodedLegIssuerLen_19);
-    InstrumentLeg_19.insert(EncodedLegIssuerLen_19.getString());
-    FIX::EncodedLegSecurityDesc EncodedLegSecurityDesc_19("DATA_1198867616");
-    noLegs_0_1.set(EncodedLegSecurityDesc_19);
-    InstrumentLeg_19.insert(EncodedLegSecurityDesc_19.getString());
-    FIX::EncodedLegSecurityDescLen EncodedLegSecurityDescLen_19(130944701);
-    noLegs_0_1.set(EncodedLegSecurityDescLen_19);
-    InstrumentLeg_19.insert(EncodedLegSecurityDescLen_19.getString());
-    FIX::LegCFICode LegCFICode_19("STRING_746218526");
-    noLegs_0_1.set(LegCFICode_19);
-    InstrumentLeg_19.insert(LegCFICode_19.getString());
-    FIX::LegContractMultiplier LegContractMultiplier_19;
-    LegContractMultiplier_19.setString("10064109");
-    noLegs_0_1.set(LegContractMultiplier_19);
-    InstrumentLeg_19.insert(LegContractMultiplier_19.getString());
-    FIX::LegContractMultiplierUnit LegContractMultiplierUnit_19(1508436370);
-    noLegs_0_1.set(LegContractMultiplierUnit_19);
-    InstrumentLeg_19.insert(LegContractMultiplierUnit_19.getString());
-    FIX::LegContractSettlMonth LegContractSettlMonth_19("MONTHYEAR_100702544");
-    noLegs_0_1.set(LegContractSettlMonth_19);
-    InstrumentLeg_19.insert(LegContractSettlMonth_19.getString());
-    FIX::LegCountryOfIssue LegCountryOfIssue_19("COUNTRY_1684861234");
-    noLegs_0_1.set(LegCountryOfIssue_19);
-    InstrumentLeg_19.insert(LegCountryOfIssue_19.getString());
-    FIX::LegCouponPaymentDate LegCouponPaymentDate_19("LOCALMKTDATE_1887024510");
-    noLegs_0_1.set(LegCouponPaymentDate_19);
-    InstrumentLeg_19.insert(LegCouponPaymentDate_19.getString());
-    FIX::LegCouponRate LegCouponRate_19;
-    LegCouponRate_19.setString("90.400000");
-    noLegs_0_1.set(LegCouponRate_19);
-    InstrumentLeg_19.insert(LegCouponRate_19.getString());
-    FIX::LegCreditRating LegCreditRating_19("STRING_1110388696");
-    noLegs_0_1.set(LegCreditRating_19);
-    InstrumentLeg_19.insert(LegCreditRating_19.getString());
-    FIX::LegCurrency LegCurrency_19("CAN");
-    noLegs_0_1.set(LegCurrency_19);
-    InstrumentLeg_19.insert(LegCurrency_19.getString());
-    FIX::LegDatedDate LegDatedDate_19("LOCALMKTDATE_523521796");
-    noLegs_0_1.set(LegDatedDate_19);
-    InstrumentLeg_19.insert(LegDatedDate_19.getString());
-    FIX::LegExerciseStyle LegExerciseStyle_19(304668737);
-    noLegs_0_1.set(LegExerciseStyle_19);
-    InstrumentLeg_19.insert(LegExerciseStyle_19.getString());
-    FIX::LegFactor LegFactor_19;
-    LegFactor_19.setString("14649292");
-    noLegs_0_1.set(LegFactor_19);
-    InstrumentLeg_19.insert(LegFactor_19.getString());
-    FIX::LegFlowScheduleType LegFlowScheduleType_19(134961561);
-    noLegs_0_1.set(LegFlowScheduleType_19);
-    InstrumentLeg_19.insert(LegFlowScheduleType_19.getString());
-    FIX::LegInstrRegistry LegInstrRegistry_19("STRING_623431622");
-    noLegs_0_1.set(LegInstrRegistry_19);
-    InstrumentLeg_19.insert(LegInstrRegistry_19.getString());
-    FIX::LegInterestAccrualDate LegInterestAccrualDate_19("LOCALMKTDATE_858985014");
-    noLegs_0_1.set(LegInterestAccrualDate_19);
-    InstrumentLeg_19.insert(LegInterestAccrualDate_19.getString());
-    FIX::LegIssueDate LegIssueDate_19("LOCALMKTDATE_224398963");
-    noLegs_0_1.set(LegIssueDate_19);
-    InstrumentLeg_19.insert(LegIssueDate_19.getString());
-    FIX::LegIssuer LegIssuer_19("STRING_1139305798");
-    noLegs_0_1.set(LegIssuer_19);
-    InstrumentLeg_19.insert(LegIssuer_19.getString());
-    FIX::LegLocaleOfIssue LegLocaleOfIssue_19("STRING_2009319741");
-    noLegs_0_1.set(LegLocaleOfIssue_19);
-    InstrumentLeg_19.insert(LegLocaleOfIssue_19.getString());
-    FIX::LegMaturityDate LegMaturityDate_19("LOCALMKTDATE_759073066");
-    noLegs_0_1.set(LegMaturityDate_19);
-    InstrumentLeg_19.insert(LegMaturityDate_19.getString());
-    FIX::LegMaturityMonthYear LegMaturityMonthYear_19("MONTHYEAR_1408849611");
-    noLegs_0_1.set(LegMaturityMonthYear_19);
-    InstrumentLeg_19.insert(LegMaturityMonthYear_19.getString());
-    FIX::LegMaturityTime LegMaturityTime_19("TZTIMEONLY_1046664335");
-    noLegs_0_1.set(LegMaturityTime_19);
-    InstrumentLeg_19.insert(LegMaturityTime_19.getString());
-    FIX::LegOptAttribute LegOptAttribute_19('1');
-    noLegs_0_1.set(LegOptAttribute_19);
-    InstrumentLeg_19.insert(LegOptAttribute_19.getString());
-    FIX::LegOptionRatio LegOptionRatio_19;
-    LegOptionRatio_19.setString("13257576");
-    noLegs_0_1.set(LegOptionRatio_19);
-    InstrumentLeg_19.insert(LegOptionRatio_19.getString());
-    FIX::LegPool LegPool_19("STRING_274445847");
-    noLegs_0_1.set(LegPool_19);
-    InstrumentLeg_19.insert(LegPool_19.getString());
-    FIX::LegPriceUnitOfMeasure LegPriceUnitOfMeasure_19("STRING_1092146529");
-    noLegs_0_1.set(LegPriceUnitOfMeasure_19);
-    InstrumentLeg_19.insert(LegPriceUnitOfMeasure_19.getString());
-    FIX::LegPriceUnitOfMeasureQty LegPriceUnitOfMeasureQty_19;
-    LegPriceUnitOfMeasureQty_19.setString("18673529");
-    noLegs_0_1.set(LegPriceUnitOfMeasureQty_19);
-    InstrumentLeg_19.insert(LegPriceUnitOfMeasureQty_19.getString());
-    FIX::LegProduct LegProduct_19(53470334);
-    noLegs_0_1.set(LegProduct_19);
-    InstrumentLeg_19.insert(LegProduct_19.getString());
-    FIX::LegPutOrCall LegPutOrCall_19(1200972569);
-    noLegs_0_1.set(LegPutOrCall_19);
-    InstrumentLeg_19.insert(LegPutOrCall_19.getString());
-    FIX::LegRatioQty LegRatioQty_19;
-    LegRatioQty_19.setString("9187369");
-    noLegs_0_1.set(LegRatioQty_19);
-    InstrumentLeg_19.insert(LegRatioQty_19.getString());
-    FIX::LegRedemptionDate LegRedemptionDate_19("LOCALMKTDATE_184415035");
-    noLegs_0_1.set(LegRedemptionDate_19);
-    InstrumentLeg_19.insert(LegRedemptionDate_19.getString());
-    FIX::LegRepoCollateralSecurityType LegRepoCollateralSecurityType_19("STRING_1947191095");
-    noLegs_0_1.set(LegRepoCollateralSecurityType_19);
-    InstrumentLeg_19.insert(LegRepoCollateralSecurityType_19.getString());
-    FIX::LegRepurchaseRate LegRepurchaseRate_19;
-    LegRepurchaseRate_19.setString("79.230000");
-    noLegs_0_1.set(LegRepurchaseRate_19);
-    InstrumentLeg_19.insert(LegRepurchaseRate_19.getString());
-    FIX::LegRepurchaseTerm LegRepurchaseTerm_19(1692851406);
-    noLegs_0_1.set(LegRepurchaseTerm_19);
-    InstrumentLeg_19.insert(LegRepurchaseTerm_19.getString());
-    FIX::LegSecurityDesc LegSecurityDesc_19("STRING_2047893640");
-    noLegs_0_1.set(LegSecurityDesc_19);
-    InstrumentLeg_19.insert(LegSecurityDesc_19.getString());
-    FIX::LegSecurityExchange LegSecurityExchange_19("EXCHANGE_1462525509");
-    noLegs_0_1.set(LegSecurityExchange_19);
-    InstrumentLeg_19.insert(LegSecurityExchange_19.getString());
-    FIX::LegSecurityID LegSecurityID_19("STRING_1432392268");
-    noLegs_0_1.set(LegSecurityID_19);
-    InstrumentLeg_19.insert(LegSecurityID_19.getString());
-    FIX::LegSecurityIDSource LegSecurityIDSource_19("STRING_322479032");
-    noLegs_0_1.set(LegSecurityIDSource_19);
-    InstrumentLeg_19.insert(LegSecurityIDSource_19.getString());
-    FIX::LegSecuritySubType LegSecuritySubType_19("STRING_425430557");
-    noLegs_0_1.set(LegSecuritySubType_19);
-    InstrumentLeg_19.insert(LegSecuritySubType_19.getString());
-    FIX::LegSecurityType LegSecurityType_19("STRING_837056241");
-    noLegs_0_1.set(LegSecurityType_19);
-    InstrumentLeg_19.insert(LegSecurityType_19.getString());
-    FIX::LegSide LegSide_19('1');
-    noLegs_0_1.set(LegSide_19);
-    InstrumentLeg_19.insert(LegSide_19.getString());
-    FIX::LegStateOrProvinceOfIssue LegStateOrProvinceOfIssue_19("STRING_948952354");
-    noLegs_0_1.set(LegStateOrProvinceOfIssue_19);
-    InstrumentLeg_19.insert(LegStateOrProvinceOfIssue_19.getString());
-    FIX::LegStrikeCurrency LegStrikeCurrency_19("EUR");
-    noLegs_0_1.set(LegStrikeCurrency_19);
-    InstrumentLeg_19.insert(LegStrikeCurrency_19.getString());
-    FIX::LegStrikePrice LegStrikePrice_19;
-    LegStrikePrice_19.setString("10839139");
-    noLegs_0_1.set(LegStrikePrice_19);
-    InstrumentLeg_19.insert(LegStrikePrice_19.getString());
-    FIX::LegSymbol LegSymbol_19("STRING_1765156601");
-    noLegs_0_1.set(LegSymbol_19);
-    InstrumentLeg_19.insert(LegSymbol_19.getString());
-    FIX::LegSymbolSfx LegSymbolSfx_19("STRING_1615928893");
-    noLegs_0_1.set(LegSymbolSfx_19);
-    InstrumentLeg_19.insert(LegSymbolSfx_19.getString());
-    FIX::LegTimeUnit LegTimeUnit_19("STRING_1308312878");
-    noLegs_0_1.set(LegTimeUnit_19);
-    InstrumentLeg_19.insert(LegTimeUnit_19.getString());
-    FIX::LegUnitOfMeasure LegUnitOfMeasure_19("STRING_756978751");
-    noLegs_0_1.set(LegUnitOfMeasure_19);
-    InstrumentLeg_19.insert(LegUnitOfMeasure_19.getString());
-    FIX::LegUnitOfMeasureQty LegUnitOfMeasureQty_19;
-    LegUnitOfMeasureQty_19.setString("14777649");
-    noLegs_0_1.set(LegUnitOfMeasureQty_19);
-    InstrumentLeg_19.insert(LegUnitOfMeasureQty_19.getString());
-    all_values.push_back(InstrumentLeg_19);
+    multiset<string> InstrumentLeg_20;
+    FIX::EncodedLegIssuer EncodedLegIssuer_20("DATA_200424325");
+    noLegs_0_1.set(EncodedLegIssuer_20);
+    InstrumentLeg_20.insert(EncodedLegIssuer_20.getString());
+    FIX::EncodedLegIssuerLen EncodedLegIssuerLen_20(130089766);
+    noLegs_0_1.set(EncodedLegIssuerLen_20);
+    InstrumentLeg_20.insert(EncodedLegIssuerLen_20.getString());
+    FIX::EncodedLegSecurityDesc EncodedLegSecurityDesc_20("DATA_619089461");
+    noLegs_0_1.set(EncodedLegSecurityDesc_20);
+    InstrumentLeg_20.insert(EncodedLegSecurityDesc_20.getString());
+    FIX::EncodedLegSecurityDescLen EncodedLegSecurityDescLen_20(539679682);
+    noLegs_0_1.set(EncodedLegSecurityDescLen_20);
+    InstrumentLeg_20.insert(EncodedLegSecurityDescLen_20.getString());
+    FIX::LegCFICode LegCFICode_20("STRING_2002052220");
+    noLegs_0_1.set(LegCFICode_20);
+    InstrumentLeg_20.insert(LegCFICode_20.getString());
+    FIX::LegContractMultiplier LegContractMultiplier_20;
+    LegContractMultiplier_20.setString("7264408");
+    noLegs_0_1.set(LegContractMultiplier_20);
+    InstrumentLeg_20.insert(LegContractMultiplier_20.getString());
+    FIX::LegContractMultiplierUnit LegContractMultiplierUnit_20(1347836468);
+    noLegs_0_1.set(LegContractMultiplierUnit_20);
+    InstrumentLeg_20.insert(LegContractMultiplierUnit_20.getString());
+    FIX::LegContractSettlMonth LegContractSettlMonth_20("MONTHYEAR_450564278");
+    noLegs_0_1.set(LegContractSettlMonth_20);
+    InstrumentLeg_20.insert(LegContractSettlMonth_20.getString());
+    FIX::LegCountryOfIssue LegCountryOfIssue_20("COUNTRY_461789232");
+    noLegs_0_1.set(LegCountryOfIssue_20);
+    InstrumentLeg_20.insert(LegCountryOfIssue_20.getString());
+    FIX::LegCouponPaymentDate LegCouponPaymentDate_20("LOCALMKTDATE_130131295");
+    noLegs_0_1.set(LegCouponPaymentDate_20);
+    InstrumentLeg_20.insert(LegCouponPaymentDate_20.getString());
+    FIX::LegCouponRate LegCouponRate_20;
+    LegCouponRate_20.setString("84.070000");
+    noLegs_0_1.set(LegCouponRate_20);
+    InstrumentLeg_20.insert(LegCouponRate_20.getString());
+    FIX::LegCreditRating LegCreditRating_20("STRING_1013778313");
+    noLegs_0_1.set(LegCreditRating_20);
+    InstrumentLeg_20.insert(LegCreditRating_20.getString());
+    FIX::LegCurrency LegCurrency_20("CHF");
+    noLegs_0_1.set(LegCurrency_20);
+    InstrumentLeg_20.insert(LegCurrency_20.getString());
+    FIX::LegDatedDate LegDatedDate_20("LOCALMKTDATE_2130069184");
+    noLegs_0_1.set(LegDatedDate_20);
+    InstrumentLeg_20.insert(LegDatedDate_20.getString());
+    FIX::LegExerciseStyle LegExerciseStyle_20(1583217796);
+    noLegs_0_1.set(LegExerciseStyle_20);
+    InstrumentLeg_20.insert(LegExerciseStyle_20.getString());
+    FIX::LegFactor LegFactor_20;
+    LegFactor_20.setString("14134126");
+    noLegs_0_1.set(LegFactor_20);
+    InstrumentLeg_20.insert(LegFactor_20.getString());
+    FIX::LegFlowScheduleType LegFlowScheduleType_20(1994209595);
+    noLegs_0_1.set(LegFlowScheduleType_20);
+    InstrumentLeg_20.insert(LegFlowScheduleType_20.getString());
+    FIX::LegInstrRegistry LegInstrRegistry_20("STRING_494408940");
+    noLegs_0_1.set(LegInstrRegistry_20);
+    InstrumentLeg_20.insert(LegInstrRegistry_20.getString());
+    FIX::LegInterestAccrualDate LegInterestAccrualDate_20("LOCALMKTDATE_161890425");
+    noLegs_0_1.set(LegInterestAccrualDate_20);
+    InstrumentLeg_20.insert(LegInterestAccrualDate_20.getString());
+    FIX::LegIssueDate LegIssueDate_20("LOCALMKTDATE_98826134");
+    noLegs_0_1.set(LegIssueDate_20);
+    InstrumentLeg_20.insert(LegIssueDate_20.getString());
+    FIX::LegIssuer LegIssuer_20("STRING_625733771");
+    noLegs_0_1.set(LegIssuer_20);
+    InstrumentLeg_20.insert(LegIssuer_20.getString());
+    FIX::LegLocaleOfIssue LegLocaleOfIssue_20("STRING_1320375340");
+    noLegs_0_1.set(LegLocaleOfIssue_20);
+    InstrumentLeg_20.insert(LegLocaleOfIssue_20.getString());
+    FIX::LegMaturityDate LegMaturityDate_20("LOCALMKTDATE_823243050");
+    noLegs_0_1.set(LegMaturityDate_20);
+    InstrumentLeg_20.insert(LegMaturityDate_20.getString());
+    FIX::LegMaturityMonthYear LegMaturityMonthYear_20("MONTHYEAR_257737781");
+    noLegs_0_1.set(LegMaturityMonthYear_20);
+    InstrumentLeg_20.insert(LegMaturityMonthYear_20.getString());
+    FIX::LegMaturityTime LegMaturityTime_20("TZTIMEONLY_357042308");
+    noLegs_0_1.set(LegMaturityTime_20);
+    InstrumentLeg_20.insert(LegMaturityTime_20.getString());
+    FIX::LegOptAttribute LegOptAttribute_20('1');
+    noLegs_0_1.set(LegOptAttribute_20);
+    InstrumentLeg_20.insert(LegOptAttribute_20.getString());
+    FIX::LegOptionRatio LegOptionRatio_20;
+    LegOptionRatio_20.setString("11394723");
+    noLegs_0_1.set(LegOptionRatio_20);
+    InstrumentLeg_20.insert(LegOptionRatio_20.getString());
+    FIX::LegPool LegPool_20("STRING_669823494");
+    noLegs_0_1.set(LegPool_20);
+    InstrumentLeg_20.insert(LegPool_20.getString());
+    FIX::LegPriceUnitOfMeasure LegPriceUnitOfMeasure_20("STRING_1979247595");
+    noLegs_0_1.set(LegPriceUnitOfMeasure_20);
+    InstrumentLeg_20.insert(LegPriceUnitOfMeasure_20.getString());
+    FIX::LegPriceUnitOfMeasureQty LegPriceUnitOfMeasureQty_20;
+    LegPriceUnitOfMeasureQty_20.setString("3824222");
+    noLegs_0_1.set(LegPriceUnitOfMeasureQty_20);
+    InstrumentLeg_20.insert(LegPriceUnitOfMeasureQty_20.getString());
+    FIX::LegProduct LegProduct_20(870247819);
+    noLegs_0_1.set(LegProduct_20);
+    InstrumentLeg_20.insert(LegProduct_20.getString());
+    FIX::LegPutOrCall LegPutOrCall_20(2109337361);
+    noLegs_0_1.set(LegPutOrCall_20);
+    InstrumentLeg_20.insert(LegPutOrCall_20.getString());
+    FIX::LegRatioQty LegRatioQty_20;
+    LegRatioQty_20.setString("10015117");
+    noLegs_0_1.set(LegRatioQty_20);
+    InstrumentLeg_20.insert(LegRatioQty_20.getString());
+    FIX::LegRedemptionDate LegRedemptionDate_20("LOCALMKTDATE_1409927502");
+    noLegs_0_1.set(LegRedemptionDate_20);
+    InstrumentLeg_20.insert(LegRedemptionDate_20.getString());
+    FIX::LegRepoCollateralSecurityType LegRepoCollateralSecurityType_20("STRING_1963905934");
+    noLegs_0_1.set(LegRepoCollateralSecurityType_20);
+    InstrumentLeg_20.insert(LegRepoCollateralSecurityType_20.getString());
+    FIX::LegRepurchaseRate LegRepurchaseRate_20;
+    LegRepurchaseRate_20.setString("26.130000");
+    noLegs_0_1.set(LegRepurchaseRate_20);
+    InstrumentLeg_20.insert(LegRepurchaseRate_20.getString());
+    FIX::LegRepurchaseTerm LegRepurchaseTerm_20(610280322);
+    noLegs_0_1.set(LegRepurchaseTerm_20);
+    InstrumentLeg_20.insert(LegRepurchaseTerm_20.getString());
+    FIX::LegSecurityDesc LegSecurityDesc_20("STRING_266986564");
+    noLegs_0_1.set(LegSecurityDesc_20);
+    InstrumentLeg_20.insert(LegSecurityDesc_20.getString());
+    FIX::LegSecurityExchange LegSecurityExchange_20("EXCHANGE_42258197");
+    noLegs_0_1.set(LegSecurityExchange_20);
+    InstrumentLeg_20.insert(LegSecurityExchange_20.getString());
+    FIX::LegSecurityID LegSecurityID_20("STRING_740411618");
+    noLegs_0_1.set(LegSecurityID_20);
+    InstrumentLeg_20.insert(LegSecurityID_20.getString());
+    FIX::LegSecurityIDSource LegSecurityIDSource_20("STRING_2141244971");
+    noLegs_0_1.set(LegSecurityIDSource_20);
+    InstrumentLeg_20.insert(LegSecurityIDSource_20.getString());
+    FIX::LegSecuritySubType LegSecuritySubType_20("STRING_1056036511");
+    noLegs_0_1.set(LegSecuritySubType_20);
+    InstrumentLeg_20.insert(LegSecuritySubType_20.getString());
+    FIX::LegSecurityType LegSecurityType_20("STRING_1762496008");
+    noLegs_0_1.set(LegSecurityType_20);
+    InstrumentLeg_20.insert(LegSecurityType_20.getString());
+    FIX::LegSide LegSide_20('1');
+    noLegs_0_1.set(LegSide_20);
+    InstrumentLeg_20.insert(LegSide_20.getString());
+    FIX::LegStateOrProvinceOfIssue LegStateOrProvinceOfIssue_20("STRING_1038622047");
+    noLegs_0_1.set(LegStateOrProvinceOfIssue_20);
+    InstrumentLeg_20.insert(LegStateOrProvinceOfIssue_20.getString());
+    FIX::LegStrikeCurrency LegStrikeCurrency_20("CHF");
+    noLegs_0_1.set(LegStrikeCurrency_20);
+    InstrumentLeg_20.insert(LegStrikeCurrency_20.getString());
+    FIX::LegStrikePrice LegStrikePrice_20;
+    LegStrikePrice_20.setString("8853479");
+    noLegs_0_1.set(LegStrikePrice_20);
+    InstrumentLeg_20.insert(LegStrikePrice_20.getString());
+    FIX::LegSymbol LegSymbol_20("STRING_1692639097");
+    noLegs_0_1.set(LegSymbol_20);
+    InstrumentLeg_20.insert(LegSymbol_20.getString());
+    FIX::LegSymbolSfx LegSymbolSfx_20("STRING_603675486");
+    noLegs_0_1.set(LegSymbolSfx_20);
+    InstrumentLeg_20.insert(LegSymbolSfx_20.getString());
+    FIX::LegTimeUnit LegTimeUnit_20("STRING_984174129");
+    noLegs_0_1.set(LegTimeUnit_20);
+    InstrumentLeg_20.insert(LegTimeUnit_20.getString());
+    FIX::LegUnitOfMeasure LegUnitOfMeasure_20("STRING_170889220");
+    noLegs_0_1.set(LegUnitOfMeasure_20);
+    InstrumentLeg_20.insert(LegUnitOfMeasure_20.getString());
+    FIX::LegUnitOfMeasureQty LegUnitOfMeasureQty_20;
+    LegUnitOfMeasureQty_20.setString("19240508");
+    noLegs_0_1.set(LegUnitOfMeasureQty_20);
+    InstrumentLeg_20.insert(LegUnitOfMeasureQty_20.getString());
+    all_values.push_back(InstrumentLeg_20);
 
     // LegSecAltIDGrp
     // Group LegSecAltIDGrp.NoLegSecurityAltID
     {
       FIX50SP2::Confirmation::NoLegs::NoLegSecurityAltID noLegSecurityAltID_1_1_0;
       // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_44;
-      FIX::LegSecurityAltID LegSecurityAltID_44("STRING_18344714");
-      noLegSecurityAltID_1_1_0.set(LegSecurityAltID_44);
-      LegSecAltIDGrp_NoLegSecurityAltID_44.insert(LegSecurityAltID_44.getString());
-      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_44("STRING_376945673");
-      noLegSecurityAltID_1_1_0.set(LegSecurityAltIDSource_44);
-      LegSecAltIDGrp_NoLegSecurityAltID_44.insert(LegSecurityAltIDSource_44.getString());
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_44);
+      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_37;
+      FIX::LegSecurityAltID LegSecurityAltID_37("STRING_428627001");
+      noLegSecurityAltID_1_1_0.set(LegSecurityAltID_37);
+      LegSecAltIDGrp_NoLegSecurityAltID_37.insert(LegSecurityAltID_37.getString());
+      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_37("STRING_133609486");
+      noLegSecurityAltID_1_1_0.set(LegSecurityAltIDSource_37);
+      LegSecAltIDGrp_NoLegSecurityAltID_37.insert(LegSecurityAltIDSource_37.getString());
+      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_37);
 
       noLegs_0_1.addGroup(noLegSecurityAltID_1_1_0);
     }
@@ -676,725 +712,663 @@ TEST ( Confirmation, set_fields)
     FIX50SP2::Confirmation::NoLegs noLegs_0_2;
     // InstrmtLegGrp.NoLegs
     // InstrumentLeg
-    multiset<string> InstrumentLeg_20;
-    FIX::EncodedLegIssuer EncodedLegIssuer_20("DATA_1316697635");
-    noLegs_0_2.set(EncodedLegIssuer_20);
-    InstrumentLeg_20.insert(EncodedLegIssuer_20.getString());
-    FIX::EncodedLegIssuerLen EncodedLegIssuerLen_20(1344102335);
-    noLegs_0_2.set(EncodedLegIssuerLen_20);
-    InstrumentLeg_20.insert(EncodedLegIssuerLen_20.getString());
-    FIX::EncodedLegSecurityDesc EncodedLegSecurityDesc_20("DATA_651391520");
-    noLegs_0_2.set(EncodedLegSecurityDesc_20);
-    InstrumentLeg_20.insert(EncodedLegSecurityDesc_20.getString());
-    FIX::EncodedLegSecurityDescLen EncodedLegSecurityDescLen_20(261360516);
-    noLegs_0_2.set(EncodedLegSecurityDescLen_20);
-    InstrumentLeg_20.insert(EncodedLegSecurityDescLen_20.getString());
-    FIX::LegCFICode LegCFICode_20("STRING_1063971684");
-    noLegs_0_2.set(LegCFICode_20);
-    InstrumentLeg_20.insert(LegCFICode_20.getString());
-    FIX::LegContractMultiplier LegContractMultiplier_20;
-    LegContractMultiplier_20.setString("7048618");
-    noLegs_0_2.set(LegContractMultiplier_20);
-    InstrumentLeg_20.insert(LegContractMultiplier_20.getString());
-    FIX::LegContractMultiplierUnit LegContractMultiplierUnit_20(1462333086);
-    noLegs_0_2.set(LegContractMultiplierUnit_20);
-    InstrumentLeg_20.insert(LegContractMultiplierUnit_20.getString());
-    FIX::LegContractSettlMonth LegContractSettlMonth_20("MONTHYEAR_1982708649");
-    noLegs_0_2.set(LegContractSettlMonth_20);
-    InstrumentLeg_20.insert(LegContractSettlMonth_20.getString());
-    FIX::LegCountryOfIssue LegCountryOfIssue_20("COUNTRY_889276890");
-    noLegs_0_2.set(LegCountryOfIssue_20);
-    InstrumentLeg_20.insert(LegCountryOfIssue_20.getString());
-    FIX::LegCouponPaymentDate LegCouponPaymentDate_20("LOCALMKTDATE_1262040533");
-    noLegs_0_2.set(LegCouponPaymentDate_20);
-    InstrumentLeg_20.insert(LegCouponPaymentDate_20.getString());
-    FIX::LegCouponRate LegCouponRate_20;
-    LegCouponRate_20.setString("29.240000");
-    noLegs_0_2.set(LegCouponRate_20);
-    InstrumentLeg_20.insert(LegCouponRate_20.getString());
-    FIX::LegCreditRating LegCreditRating_20("STRING_434644648");
-    noLegs_0_2.set(LegCreditRating_20);
-    InstrumentLeg_20.insert(LegCreditRating_20.getString());
-    FIX::LegCurrency LegCurrency_20("JPY");
-    noLegs_0_2.set(LegCurrency_20);
-    InstrumentLeg_20.insert(LegCurrency_20.getString());
-    FIX::LegDatedDate LegDatedDate_20("LOCALMKTDATE_1867036916");
-    noLegs_0_2.set(LegDatedDate_20);
-    InstrumentLeg_20.insert(LegDatedDate_20.getString());
-    FIX::LegExerciseStyle LegExerciseStyle_20(1484929557);
-    noLegs_0_2.set(LegExerciseStyle_20);
-    InstrumentLeg_20.insert(LegExerciseStyle_20.getString());
-    FIX::LegFactor LegFactor_20;
-    LegFactor_20.setString("15008453");
-    noLegs_0_2.set(LegFactor_20);
-    InstrumentLeg_20.insert(LegFactor_20.getString());
-    FIX::LegFlowScheduleType LegFlowScheduleType_20(556609509);
-    noLegs_0_2.set(LegFlowScheduleType_20);
-    InstrumentLeg_20.insert(LegFlowScheduleType_20.getString());
-    FIX::LegInstrRegistry LegInstrRegistry_20("STRING_776944226");
-    noLegs_0_2.set(LegInstrRegistry_20);
-    InstrumentLeg_20.insert(LegInstrRegistry_20.getString());
-    FIX::LegInterestAccrualDate LegInterestAccrualDate_20("LOCALMKTDATE_302314049");
-    noLegs_0_2.set(LegInterestAccrualDate_20);
-    InstrumentLeg_20.insert(LegInterestAccrualDate_20.getString());
-    FIX::LegIssueDate LegIssueDate_20("LOCALMKTDATE_1698334488");
-    noLegs_0_2.set(LegIssueDate_20);
-    InstrumentLeg_20.insert(LegIssueDate_20.getString());
-    FIX::LegIssuer LegIssuer_20("STRING_1533888106");
-    noLegs_0_2.set(LegIssuer_20);
-    InstrumentLeg_20.insert(LegIssuer_20.getString());
-    FIX::LegLocaleOfIssue LegLocaleOfIssue_20("STRING_1386227964");
-    noLegs_0_2.set(LegLocaleOfIssue_20);
-    InstrumentLeg_20.insert(LegLocaleOfIssue_20.getString());
-    FIX::LegMaturityDate LegMaturityDate_20("LOCALMKTDATE_1316007441");
-    noLegs_0_2.set(LegMaturityDate_20);
-    InstrumentLeg_20.insert(LegMaturityDate_20.getString());
-    FIX::LegMaturityMonthYear LegMaturityMonthYear_20("MONTHYEAR_1002333351");
-    noLegs_0_2.set(LegMaturityMonthYear_20);
-    InstrumentLeg_20.insert(LegMaturityMonthYear_20.getString());
-    FIX::LegMaturityTime LegMaturityTime_20("TZTIMEONLY_547057194");
-    noLegs_0_2.set(LegMaturityTime_20);
-    InstrumentLeg_20.insert(LegMaturityTime_20.getString());
-    FIX::LegOptAttribute LegOptAttribute_20('2');
-    noLegs_0_2.set(LegOptAttribute_20);
-    InstrumentLeg_20.insert(LegOptAttribute_20.getString());
-    FIX::LegOptionRatio LegOptionRatio_20;
-    LegOptionRatio_20.setString("3326146");
-    noLegs_0_2.set(LegOptionRatio_20);
-    InstrumentLeg_20.insert(LegOptionRatio_20.getString());
-    FIX::LegPool LegPool_20("STRING_466959490");
-    noLegs_0_2.set(LegPool_20);
-    InstrumentLeg_20.insert(LegPool_20.getString());
-    FIX::LegPriceUnitOfMeasure LegPriceUnitOfMeasure_20("STRING_2091330906");
-    noLegs_0_2.set(LegPriceUnitOfMeasure_20);
-    InstrumentLeg_20.insert(LegPriceUnitOfMeasure_20.getString());
-    FIX::LegPriceUnitOfMeasureQty LegPriceUnitOfMeasureQty_20;
-    LegPriceUnitOfMeasureQty_20.setString("7095603");
-    noLegs_0_2.set(LegPriceUnitOfMeasureQty_20);
-    InstrumentLeg_20.insert(LegPriceUnitOfMeasureQty_20.getString());
-    FIX::LegProduct LegProduct_20(1783657125);
-    noLegs_0_2.set(LegProduct_20);
-    InstrumentLeg_20.insert(LegProduct_20.getString());
-    FIX::LegPutOrCall LegPutOrCall_20(1287949594);
-    noLegs_0_2.set(LegPutOrCall_20);
-    InstrumentLeg_20.insert(LegPutOrCall_20.getString());
-    FIX::LegRatioQty LegRatioQty_20;
-    LegRatioQty_20.setString("13609518");
-    noLegs_0_2.set(LegRatioQty_20);
-    InstrumentLeg_20.insert(LegRatioQty_20.getString());
-    FIX::LegRedemptionDate LegRedemptionDate_20("LOCALMKTDATE_2045017642");
-    noLegs_0_2.set(LegRedemptionDate_20);
-    InstrumentLeg_20.insert(LegRedemptionDate_20.getString());
-    FIX::LegRepoCollateralSecurityType LegRepoCollateralSecurityType_20("STRING_204437630");
-    noLegs_0_2.set(LegRepoCollateralSecurityType_20);
-    InstrumentLeg_20.insert(LegRepoCollateralSecurityType_20.getString());
-    FIX::LegRepurchaseRate LegRepurchaseRate_20;
-    LegRepurchaseRate_20.setString("37.390000");
-    noLegs_0_2.set(LegRepurchaseRate_20);
-    InstrumentLeg_20.insert(LegRepurchaseRate_20.getString());
-    FIX::LegRepurchaseTerm LegRepurchaseTerm_20(1359867080);
-    noLegs_0_2.set(LegRepurchaseTerm_20);
-    InstrumentLeg_20.insert(LegRepurchaseTerm_20.getString());
-    FIX::LegSecurityDesc LegSecurityDesc_20("STRING_39662632");
-    noLegs_0_2.set(LegSecurityDesc_20);
-    InstrumentLeg_20.insert(LegSecurityDesc_20.getString());
-    FIX::LegSecurityExchange LegSecurityExchange_20("EXCHANGE_807606981");
-    noLegs_0_2.set(LegSecurityExchange_20);
-    InstrumentLeg_20.insert(LegSecurityExchange_20.getString());
-    FIX::LegSecurityID LegSecurityID_20("STRING_474423965");
-    noLegs_0_2.set(LegSecurityID_20);
-    InstrumentLeg_20.insert(LegSecurityID_20.getString());
-    FIX::LegSecurityIDSource LegSecurityIDSource_20("STRING_1800035556");
-    noLegs_0_2.set(LegSecurityIDSource_20);
-    InstrumentLeg_20.insert(LegSecurityIDSource_20.getString());
-    FIX::LegSecuritySubType LegSecuritySubType_20("STRING_1242251630");
-    noLegs_0_2.set(LegSecuritySubType_20);
-    InstrumentLeg_20.insert(LegSecuritySubType_20.getString());
-    FIX::LegSecurityType LegSecurityType_20("STRING_1636874491");
-    noLegs_0_2.set(LegSecurityType_20);
-    InstrumentLeg_20.insert(LegSecurityType_20.getString());
-    FIX::LegSide LegSide_20('7');
-    noLegs_0_2.set(LegSide_20);
-    InstrumentLeg_20.insert(LegSide_20.getString());
-    FIX::LegStateOrProvinceOfIssue LegStateOrProvinceOfIssue_20("STRING_961804898");
-    noLegs_0_2.set(LegStateOrProvinceOfIssue_20);
-    InstrumentLeg_20.insert(LegStateOrProvinceOfIssue_20.getString());
-    FIX::LegStrikeCurrency LegStrikeCurrency_20("JPY");
-    noLegs_0_2.set(LegStrikeCurrency_20);
-    InstrumentLeg_20.insert(LegStrikeCurrency_20.getString());
-    FIX::LegStrikePrice LegStrikePrice_20;
-    LegStrikePrice_20.setString("15184144");
-    noLegs_0_2.set(LegStrikePrice_20);
-    InstrumentLeg_20.insert(LegStrikePrice_20.getString());
-    FIX::LegSymbol LegSymbol_20("STRING_1751264627");
-    noLegs_0_2.set(LegSymbol_20);
-    InstrumentLeg_20.insert(LegSymbol_20.getString());
-    FIX::LegSymbolSfx LegSymbolSfx_20("STRING_383642439");
-    noLegs_0_2.set(LegSymbolSfx_20);
-    InstrumentLeg_20.insert(LegSymbolSfx_20.getString());
-    FIX::LegTimeUnit LegTimeUnit_20("STRING_1069265248");
-    noLegs_0_2.set(LegTimeUnit_20);
-    InstrumentLeg_20.insert(LegTimeUnit_20.getString());
-    FIX::LegUnitOfMeasure LegUnitOfMeasure_20("STRING_1137669085");
-    noLegs_0_2.set(LegUnitOfMeasure_20);
-    InstrumentLeg_20.insert(LegUnitOfMeasure_20.getString());
-    FIX::LegUnitOfMeasureQty LegUnitOfMeasureQty_20;
-    LegUnitOfMeasureQty_20.setString("17698704");
-    noLegs_0_2.set(LegUnitOfMeasureQty_20);
-    InstrumentLeg_20.insert(LegUnitOfMeasureQty_20.getString());
-    all_values.push_back(InstrumentLeg_20);
+    multiset<string> InstrumentLeg_21;
+    FIX::EncodedLegIssuer EncodedLegIssuer_21("DATA_1122746759");
+    noLegs_0_2.set(EncodedLegIssuer_21);
+    InstrumentLeg_21.insert(EncodedLegIssuer_21.getString());
+    FIX::EncodedLegIssuerLen EncodedLegIssuerLen_21(1568099391);
+    noLegs_0_2.set(EncodedLegIssuerLen_21);
+    InstrumentLeg_21.insert(EncodedLegIssuerLen_21.getString());
+    FIX::EncodedLegSecurityDesc EncodedLegSecurityDesc_21("DATA_803432980");
+    noLegs_0_2.set(EncodedLegSecurityDesc_21);
+    InstrumentLeg_21.insert(EncodedLegSecurityDesc_21.getString());
+    FIX::EncodedLegSecurityDescLen EncodedLegSecurityDescLen_21(954510706);
+    noLegs_0_2.set(EncodedLegSecurityDescLen_21);
+    InstrumentLeg_21.insert(EncodedLegSecurityDescLen_21.getString());
+    FIX::LegCFICode LegCFICode_21("STRING_1950521686");
+    noLegs_0_2.set(LegCFICode_21);
+    InstrumentLeg_21.insert(LegCFICode_21.getString());
+    FIX::LegContractMultiplier LegContractMultiplier_21;
+    LegContractMultiplier_21.setString("16736808");
+    noLegs_0_2.set(LegContractMultiplier_21);
+    InstrumentLeg_21.insert(LegContractMultiplier_21.getString());
+    FIX::LegContractMultiplierUnit LegContractMultiplierUnit_21(916364420);
+    noLegs_0_2.set(LegContractMultiplierUnit_21);
+    InstrumentLeg_21.insert(LegContractMultiplierUnit_21.getString());
+    FIX::LegContractSettlMonth LegContractSettlMonth_21("MONTHYEAR_804549793");
+    noLegs_0_2.set(LegContractSettlMonth_21);
+    InstrumentLeg_21.insert(LegContractSettlMonth_21.getString());
+    FIX::LegCountryOfIssue LegCountryOfIssue_21("COUNTRY_936124654");
+    noLegs_0_2.set(LegCountryOfIssue_21);
+    InstrumentLeg_21.insert(LegCountryOfIssue_21.getString());
+    FIX::LegCouponPaymentDate LegCouponPaymentDate_21("LOCALMKTDATE_732786706");
+    noLegs_0_2.set(LegCouponPaymentDate_21);
+    InstrumentLeg_21.insert(LegCouponPaymentDate_21.getString());
+    FIX::LegCouponRate LegCouponRate_21;
+    LegCouponRate_21.setString("87.580000");
+    noLegs_0_2.set(LegCouponRate_21);
+    InstrumentLeg_21.insert(LegCouponRate_21.getString());
+    FIX::LegCreditRating LegCreditRating_21("STRING_1546404976");
+    noLegs_0_2.set(LegCreditRating_21);
+    InstrumentLeg_21.insert(LegCreditRating_21.getString());
+    FIX::LegCurrency LegCurrency_21("USD");
+    noLegs_0_2.set(LegCurrency_21);
+    InstrumentLeg_21.insert(LegCurrency_21.getString());
+    FIX::LegDatedDate LegDatedDate_21("LOCALMKTDATE_139332946");
+    noLegs_0_2.set(LegDatedDate_21);
+    InstrumentLeg_21.insert(LegDatedDate_21.getString());
+    FIX::LegExerciseStyle LegExerciseStyle_21(993534594);
+    noLegs_0_2.set(LegExerciseStyle_21);
+    InstrumentLeg_21.insert(LegExerciseStyle_21.getString());
+    FIX::LegFactor LegFactor_21;
+    LegFactor_21.setString("14833134");
+    noLegs_0_2.set(LegFactor_21);
+    InstrumentLeg_21.insert(LegFactor_21.getString());
+    FIX::LegFlowScheduleType LegFlowScheduleType_21(1901828954);
+    noLegs_0_2.set(LegFlowScheduleType_21);
+    InstrumentLeg_21.insert(LegFlowScheduleType_21.getString());
+    FIX::LegInstrRegistry LegInstrRegistry_21("STRING_21907049");
+    noLegs_0_2.set(LegInstrRegistry_21);
+    InstrumentLeg_21.insert(LegInstrRegistry_21.getString());
+    FIX::LegInterestAccrualDate LegInterestAccrualDate_21("LOCALMKTDATE_374451866");
+    noLegs_0_2.set(LegInterestAccrualDate_21);
+    InstrumentLeg_21.insert(LegInterestAccrualDate_21.getString());
+    FIX::LegIssueDate LegIssueDate_21("LOCALMKTDATE_952575463");
+    noLegs_0_2.set(LegIssueDate_21);
+    InstrumentLeg_21.insert(LegIssueDate_21.getString());
+    FIX::LegIssuer LegIssuer_21("STRING_463692110");
+    noLegs_0_2.set(LegIssuer_21);
+    InstrumentLeg_21.insert(LegIssuer_21.getString());
+    FIX::LegLocaleOfIssue LegLocaleOfIssue_21("STRING_1259799861");
+    noLegs_0_2.set(LegLocaleOfIssue_21);
+    InstrumentLeg_21.insert(LegLocaleOfIssue_21.getString());
+    FIX::LegMaturityDate LegMaturityDate_21("LOCALMKTDATE_497730912");
+    noLegs_0_2.set(LegMaturityDate_21);
+    InstrumentLeg_21.insert(LegMaturityDate_21.getString());
+    FIX::LegMaturityMonthYear LegMaturityMonthYear_21("MONTHYEAR_1067367597");
+    noLegs_0_2.set(LegMaturityMonthYear_21);
+    InstrumentLeg_21.insert(LegMaturityMonthYear_21.getString());
+    FIX::LegMaturityTime LegMaturityTime_21("TZTIMEONLY_96490342");
+    noLegs_0_2.set(LegMaturityTime_21);
+    InstrumentLeg_21.insert(LegMaturityTime_21.getString());
+    FIX::LegOptAttribute LegOptAttribute_21('6');
+    noLegs_0_2.set(LegOptAttribute_21);
+    InstrumentLeg_21.insert(LegOptAttribute_21.getString());
+    FIX::LegOptionRatio LegOptionRatio_21;
+    LegOptionRatio_21.setString("8439347");
+    noLegs_0_2.set(LegOptionRatio_21);
+    InstrumentLeg_21.insert(LegOptionRatio_21.getString());
+    FIX::LegPool LegPool_21("STRING_1903907521");
+    noLegs_0_2.set(LegPool_21);
+    InstrumentLeg_21.insert(LegPool_21.getString());
+    FIX::LegPriceUnitOfMeasure LegPriceUnitOfMeasure_21("STRING_1097247133");
+    noLegs_0_2.set(LegPriceUnitOfMeasure_21);
+    InstrumentLeg_21.insert(LegPriceUnitOfMeasure_21.getString());
+    FIX::LegPriceUnitOfMeasureQty LegPriceUnitOfMeasureQty_21;
+    LegPriceUnitOfMeasureQty_21.setString("9775442");
+    noLegs_0_2.set(LegPriceUnitOfMeasureQty_21);
+    InstrumentLeg_21.insert(LegPriceUnitOfMeasureQty_21.getString());
+    FIX::LegProduct LegProduct_21(879170633);
+    noLegs_0_2.set(LegProduct_21);
+    InstrumentLeg_21.insert(LegProduct_21.getString());
+    FIX::LegPutOrCall LegPutOrCall_21(517862876);
+    noLegs_0_2.set(LegPutOrCall_21);
+    InstrumentLeg_21.insert(LegPutOrCall_21.getString());
+    FIX::LegRatioQty LegRatioQty_21;
+    LegRatioQty_21.setString("17809772");
+    noLegs_0_2.set(LegRatioQty_21);
+    InstrumentLeg_21.insert(LegRatioQty_21.getString());
+    FIX::LegRedemptionDate LegRedemptionDate_21("LOCALMKTDATE_1833681339");
+    noLegs_0_2.set(LegRedemptionDate_21);
+    InstrumentLeg_21.insert(LegRedemptionDate_21.getString());
+    FIX::LegRepoCollateralSecurityType LegRepoCollateralSecurityType_21("STRING_320900914");
+    noLegs_0_2.set(LegRepoCollateralSecurityType_21);
+    InstrumentLeg_21.insert(LegRepoCollateralSecurityType_21.getString());
+    FIX::LegRepurchaseRate LegRepurchaseRate_21;
+    LegRepurchaseRate_21.setString("43.940000");
+    noLegs_0_2.set(LegRepurchaseRate_21);
+    InstrumentLeg_21.insert(LegRepurchaseRate_21.getString());
+    FIX::LegRepurchaseTerm LegRepurchaseTerm_21(602562111);
+    noLegs_0_2.set(LegRepurchaseTerm_21);
+    InstrumentLeg_21.insert(LegRepurchaseTerm_21.getString());
+    FIX::LegSecurityDesc LegSecurityDesc_21("STRING_1125450708");
+    noLegs_0_2.set(LegSecurityDesc_21);
+    InstrumentLeg_21.insert(LegSecurityDesc_21.getString());
+    FIX::LegSecurityExchange LegSecurityExchange_21("EXCHANGE_95815400");
+    noLegs_0_2.set(LegSecurityExchange_21);
+    InstrumentLeg_21.insert(LegSecurityExchange_21.getString());
+    FIX::LegSecurityID LegSecurityID_21("STRING_1335348817");
+    noLegs_0_2.set(LegSecurityID_21);
+    InstrumentLeg_21.insert(LegSecurityID_21.getString());
+    FIX::LegSecurityIDSource LegSecurityIDSource_21("STRING_1510469466");
+    noLegs_0_2.set(LegSecurityIDSource_21);
+    InstrumentLeg_21.insert(LegSecurityIDSource_21.getString());
+    FIX::LegSecuritySubType LegSecuritySubType_21("STRING_1642220377");
+    noLegs_0_2.set(LegSecuritySubType_21);
+    InstrumentLeg_21.insert(LegSecuritySubType_21.getString());
+    FIX::LegSecurityType LegSecurityType_21("STRING_187638440");
+    noLegs_0_2.set(LegSecurityType_21);
+    InstrumentLeg_21.insert(LegSecurityType_21.getString());
+    FIX::LegSide LegSide_21('1');
+    noLegs_0_2.set(LegSide_21);
+    InstrumentLeg_21.insert(LegSide_21.getString());
+    FIX::LegStateOrProvinceOfIssue LegStateOrProvinceOfIssue_21("STRING_1781553323");
+    noLegs_0_2.set(LegStateOrProvinceOfIssue_21);
+    InstrumentLeg_21.insert(LegStateOrProvinceOfIssue_21.getString());
+    FIX::LegStrikeCurrency LegStrikeCurrency_21("CAN");
+    noLegs_0_2.set(LegStrikeCurrency_21);
+    InstrumentLeg_21.insert(LegStrikeCurrency_21.getString());
+    FIX::LegStrikePrice LegStrikePrice_21;
+    LegStrikePrice_21.setString("15358986");
+    noLegs_0_2.set(LegStrikePrice_21);
+    InstrumentLeg_21.insert(LegStrikePrice_21.getString());
+    FIX::LegSymbol LegSymbol_21("STRING_1203080083");
+    noLegs_0_2.set(LegSymbol_21);
+    InstrumentLeg_21.insert(LegSymbol_21.getString());
+    FIX::LegSymbolSfx LegSymbolSfx_21("STRING_1648028108");
+    noLegs_0_2.set(LegSymbolSfx_21);
+    InstrumentLeg_21.insert(LegSymbolSfx_21.getString());
+    FIX::LegTimeUnit LegTimeUnit_21("STRING_340990445");
+    noLegs_0_2.set(LegTimeUnit_21);
+    InstrumentLeg_21.insert(LegTimeUnit_21.getString());
+    FIX::LegUnitOfMeasure LegUnitOfMeasure_21("STRING_1666772193");
+    noLegs_0_2.set(LegUnitOfMeasure_21);
+    InstrumentLeg_21.insert(LegUnitOfMeasure_21.getString());
+    FIX::LegUnitOfMeasureQty LegUnitOfMeasureQty_21;
+    LegUnitOfMeasureQty_21.setString("7603443");
+    noLegs_0_2.set(LegUnitOfMeasureQty_21);
+    InstrumentLeg_21.insert(LegUnitOfMeasureQty_21.getString());
+    all_values.push_back(InstrumentLeg_21);
 
     // LegSecAltIDGrp
     // Group LegSecAltIDGrp.NoLegSecurityAltID
     {
       FIX50SP2::Confirmation::NoLegs::NoLegSecurityAltID noLegSecurityAltID_2_1_0;
       // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_45;
-      FIX::LegSecurityAltID LegSecurityAltID_45("STRING_2140002436");
-      noLegSecurityAltID_2_1_0.set(LegSecurityAltID_45);
-      LegSecAltIDGrp_NoLegSecurityAltID_45.insert(LegSecurityAltID_45.getString());
-      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_45("STRING_169443950");
-      noLegSecurityAltID_2_1_0.set(LegSecurityAltIDSource_45);
-      LegSecAltIDGrp_NoLegSecurityAltID_45.insert(LegSecurityAltIDSource_45.getString());
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_45);
+      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_38;
+      FIX::LegSecurityAltID LegSecurityAltID_38("STRING_586656142");
+      noLegSecurityAltID_2_1_0.set(LegSecurityAltID_38);
+      LegSecAltIDGrp_NoLegSecurityAltID_38.insert(LegSecurityAltID_38.getString());
+      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_38("STRING_856834664");
+      noLegSecurityAltID_2_1_0.set(LegSecurityAltIDSource_38);
+      LegSecAltIDGrp_NoLegSecurityAltID_38.insert(LegSecurityAltIDSource_38.getString());
+      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_38);
 
       noLegs_0_2.addGroup(noLegSecurityAltID_2_1_0);
     }
     {
       FIX50SP2::Confirmation::NoLegs::NoLegSecurityAltID noLegSecurityAltID_2_1_1;
       // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_46;
-      FIX::LegSecurityAltID LegSecurityAltID_46("STRING_163291585");
-      noLegSecurityAltID_2_1_1.set(LegSecurityAltID_46);
-      LegSecAltIDGrp_NoLegSecurityAltID_46.insert(LegSecurityAltID_46.getString());
-      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_46("STRING_325133478");
-      noLegSecurityAltID_2_1_1.set(LegSecurityAltIDSource_46);
-      LegSecAltIDGrp_NoLegSecurityAltID_46.insert(LegSecurityAltIDSource_46.getString());
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_46);
+      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_39;
+      FIX::LegSecurityAltID LegSecurityAltID_39("STRING_1507341489");
+      noLegSecurityAltID_2_1_1.set(LegSecurityAltID_39);
+      LegSecAltIDGrp_NoLegSecurityAltID_39.insert(LegSecurityAltID_39.getString());
+      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_39("STRING_1430590918");
+      noLegSecurityAltID_2_1_1.set(LegSecurityAltIDSource_39);
+      LegSecAltIDGrp_NoLegSecurityAltID_39.insert(LegSecurityAltIDSource_39.getString());
+      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_39);
 
       noLegs_0_2.addGroup(noLegSecurityAltID_2_1_1);
     }
     {
       FIX50SP2::Confirmation::NoLegs::NoLegSecurityAltID noLegSecurityAltID_2_1_2;
       // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_47;
-      FIX::LegSecurityAltID LegSecurityAltID_47("STRING_636403441");
-      noLegSecurityAltID_2_1_2.set(LegSecurityAltID_47);
-      LegSecAltIDGrp_NoLegSecurityAltID_47.insert(LegSecurityAltID_47.getString());
-      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_47("STRING_107138843");
-      noLegSecurityAltID_2_1_2.set(LegSecurityAltIDSource_47);
-      LegSecAltIDGrp_NoLegSecurityAltID_47.insert(LegSecurityAltIDSource_47.getString());
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_47);
+      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_40;
+      FIX::LegSecurityAltID LegSecurityAltID_40("STRING_613258537");
+      noLegSecurityAltID_2_1_2.set(LegSecurityAltID_40);
+      LegSecAltIDGrp_NoLegSecurityAltID_40.insert(LegSecurityAltID_40.getString());
+      FIX::LegSecurityAltIDSource LegSecurityAltIDSource_40("STRING_457104974");
+      noLegSecurityAltID_2_1_2.set(LegSecurityAltIDSource_40);
+      LegSecAltIDGrp_NoLegSecurityAltID_40.insert(LegSecurityAltIDSource_40.getString());
+      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_40);
 
       noLegs_0_2.addGroup(noLegSecurityAltID_2_1_2);
     }
     msg.addGroup(noLegs_0_2);
   }
   // Instrument
-  multiset<string> Instrument_13;
-  FIX::AttachmentPoint AttachmentPoint_13;
-  AttachmentPoint_13.setString("38.420000");
-  msg.set(AttachmentPoint_13);
-  Instrument_13.insert(AttachmentPoint_13.getString());
-  FIX::CFICode CFICode_13("STRING_272576918");
-  msg.set(CFICode_13);
-  Instrument_13.insert(CFICode_13.getString());
-  FIX::CPProgram CPProgram_13(1);
-  msg.set(CPProgram_13);
-  Instrument_13.insert(CPProgram_13.getString());
-  FIX::CPRegType CPRegType_13("STRING_248162078");
-  msg.set(CPRegType_13);
-  Instrument_13.insert(CPRegType_13.getString());
-  FIX::CapPrice CapPrice_13;
-  CapPrice_13.setString("1701109");
-  msg.set(CapPrice_13);
-  Instrument_13.insert(CapPrice_13.getString());
-  FIX::ContractMultiplier ContractMultiplier_13;
-  ContractMultiplier_13.setString("15995260");
-  msg.set(ContractMultiplier_13);
-  Instrument_13.insert(ContractMultiplier_13.getString());
-  FIX::ContractMultiplierUnit ContractMultiplierUnit_13(2);
-  msg.set(ContractMultiplierUnit_13);
-  Instrument_13.insert(ContractMultiplierUnit_13.getString());
-  FIX::ContractSettlMonth ContractSettlMonth_13("MONTHYEAR_1529977992");
-  msg.set(ContractSettlMonth_13);
-  Instrument_13.insert(ContractSettlMonth_13.getString());
-  FIX::CountryOfIssue CountryOfIssue_13("COUNTRY_1639188700");
-  msg.set(CountryOfIssue_13);
-  Instrument_13.insert(CountryOfIssue_13.getString());
-  FIX::CouponPaymentDate CouponPaymentDate_13("LOCALMKTDATE_974099150");
-  msg.set(CouponPaymentDate_13);
-  Instrument_13.insert(CouponPaymentDate_13.getString());
-  FIX::CouponRate CouponRate_13;
-  CouponRate_13.setString("19.580000");
-  msg.set(CouponRate_13);
-  Instrument_13.insert(CouponRate_13.getString());
-  FIX::CreditRating CreditRating_13("STRING_1291740608");
-  msg.set(CreditRating_13);
-  Instrument_13.insert(CreditRating_13.getString());
-  FIX::DatedDate DatedDate_13("LOCALMKTDATE_68867132");
-  msg.set(DatedDate_13);
-  Instrument_13.insert(DatedDate_13.getString());
-  FIX::DetachmentPoint DetachmentPoint_13;
-  DetachmentPoint_13.setString("28.010000");
-  msg.set(DetachmentPoint_13);
-  Instrument_13.insert(DetachmentPoint_13.getString());
-  FIX::EncodedIssuer EncodedIssuer_13("DATA_2019707303");
-  msg.set(EncodedIssuer_13);
-  Instrument_13.insert(EncodedIssuer_13.getString());
-  FIX::EncodedIssuerLen EncodedIssuerLen_13(1030672031);
-  msg.set(EncodedIssuerLen_13);
-  Instrument_13.insert(EncodedIssuerLen_13.getString());
-  FIX::EncodedSecurityDesc EncodedSecurityDesc_13("DATA_320629553");
-  msg.set(EncodedSecurityDesc_13);
-  Instrument_13.insert(EncodedSecurityDesc_13.getString());
-  FIX::EncodedSecurityDescLen EncodedSecurityDescLen_13(2101035693);
-  msg.set(EncodedSecurityDescLen_13);
-  Instrument_13.insert(EncodedSecurityDescLen_13.getString());
-  FIX::ExerciseStyle ExerciseStyle_13(0);
-  msg.set(ExerciseStyle_13);
-  Instrument_13.insert(ExerciseStyle_13.getString());
-  FIX::Factor Factor_13;
-  Factor_13.setString("20718941");
-  msg.set(Factor_13);
-  Instrument_13.insert(Factor_13.getString());
-  FIX::FlexProductEligibilityIndicator FlexProductEligibilityIndicator_13(true);
-  msg.set(FlexProductEligibilityIndicator_13);
-  Instrument_13.insert(FlexProductEligibilityIndicator_13.getString());
-  FIX::FlexibleIndicator FlexibleIndicator_13(false);
-  msg.set(FlexibleIndicator_13);
-  Instrument_13.insert(FlexibleIndicator_13.getString());
-  FIX::FloorPrice FloorPrice_13;
-  FloorPrice_13.setString("10620796");
-  msg.set(FloorPrice_13);
-  Instrument_13.insert(FloorPrice_13.getString());
-  FIX::FlowScheduleType FlowScheduleType_13(3);
-  msg.set(FlowScheduleType_13);
-  Instrument_13.insert(FlowScheduleType_13.getString());
-  FIX::InstrRegistry InstrRegistry_13("STRING_1708657080");
-  msg.set(InstrRegistry_13);
-  Instrument_13.insert(InstrRegistry_13.getString());
-  FIX::InstrmtAssignmentMethod InstrmtAssignmentMethod_13('1');
-  msg.set(InstrmtAssignmentMethod_13);
-  Instrument_13.insert(InstrmtAssignmentMethod_13.getString());
-  FIX::InterestAccrualDate InterestAccrualDate_13("LOCALMKTDATE_129025191");
-  msg.set(InterestAccrualDate_13);
-  Instrument_13.insert(InterestAccrualDate_13.getString());
-  FIX::IssueDate IssueDate_13("LOCALMKTDATE_1871948665");
-  msg.set(IssueDate_13);
-  Instrument_13.insert(IssueDate_13.getString());
-  FIX::Issuer Issuer_13("STRING_1379731884");
-  msg.set(Issuer_13);
-  Instrument_13.insert(Issuer_13.getString());
-  FIX::ListMethod ListMethod_13(0);
-  msg.set(ListMethod_13);
-  Instrument_13.insert(ListMethod_13.getString());
-  FIX::LocaleOfIssue LocaleOfIssue_13("STRING_1979087508");
-  msg.set(LocaleOfIssue_13);
-  Instrument_13.insert(LocaleOfIssue_13.getString());
-  FIX::MaturityDate MaturityDate_13("LOCALMKTDATE_266942078");
-  msg.set(MaturityDate_13);
-  Instrument_13.insert(MaturityDate_13.getString());
-  FIX::MaturityMonthYear MaturityMonthYear_13("MONTHYEAR_1038005550");
-  msg.set(MaturityMonthYear_13);
-  Instrument_13.insert(MaturityMonthYear_13.getString());
-  FIX::MaturityTime MaturityTime_13("TZTIMEONLY_1226692298");
-  msg.set(MaturityTime_13);
-  Instrument_13.insert(MaturityTime_13.getString());
-  FIX::MinPriceIncrement MinPriceIncrement_13;
-  MinPriceIncrement_13.setString("5151041");
-  msg.set(MinPriceIncrement_13);
-  Instrument_13.insert(MinPriceIncrement_13.getString());
-  FIX::MinPriceIncrementAmount MinPriceIncrementAmount_13;
-  MinPriceIncrementAmount_13.setString("12081164");
-  msg.set(MinPriceIncrementAmount_13);
-  Instrument_13.insert(MinPriceIncrementAmount_13.getString());
-  FIX::NTPositionLimit NTPositionLimit_13(678734718);
-  msg.set(NTPositionLimit_13);
-  Instrument_13.insert(NTPositionLimit_13.getString());
-  FIX::NotionalPercentageOutstanding NotionalPercentageOutstanding_13;
-  NotionalPercentageOutstanding_13.setString("63.250000");
-  msg.set(NotionalPercentageOutstanding_13);
-  Instrument_13.insert(NotionalPercentageOutstanding_13.getString());
-  FIX::OptAttribute OptAttribute_13('5');
-  msg.set(OptAttribute_13);
-  Instrument_13.insert(OptAttribute_13.getString());
-  FIX::OptPayoutAmount OptPayoutAmount_13;
-  OptPayoutAmount_13.setString("1704397");
-  msg.set(OptPayoutAmount_13);
-  Instrument_13.insert(OptPayoutAmount_13.getString());
-  FIX::OptPayoutType OptPayoutType_13(1);
-  msg.set(OptPayoutType_13);
-  Instrument_13.insert(OptPayoutType_13.getString());
-  FIX::OriginalNotionalPercentageOutstanding OriginalNotionalPercentageOutstanding_13;
-  OriginalNotionalPercentageOutstanding_13.setString("91.170000");
-  msg.set(OriginalNotionalPercentageOutstanding_13);
-  Instrument_13.insert(OriginalNotionalPercentageOutstanding_13.getString());
-  FIX::Pool Pool_13("STRING_1462180378");
-  msg.set(Pool_13);
-  Instrument_13.insert(Pool_13.getString());
-  FIX::PositionLimit PositionLimit_13(1724562608);
-  msg.set(PositionLimit_13);
-  Instrument_13.insert(PositionLimit_13.getString());
-  FIX::PriceQuoteMethod PriceQuoteMethod_13("STRING_INT");
-  msg.set(PriceQuoteMethod_13);
-  Instrument_13.insert(PriceQuoteMethod_13.getString());
-  FIX::PriceUnitOfMeasure PriceUnitOfMeasure_13("STRING_1334404033");
-  msg.set(PriceUnitOfMeasure_13);
-  Instrument_13.insert(PriceUnitOfMeasure_13.getString());
-  FIX::PriceUnitOfMeasureQty PriceUnitOfMeasureQty_13;
-  PriceUnitOfMeasureQty_13.setString("6077509");
-  msg.set(PriceUnitOfMeasureQty_13);
-  Instrument_13.insert(PriceUnitOfMeasureQty_13.getString());
-  FIX::Product Product_15(4);
-  msg.set(Product_15);
-  Instrument_13.insert(Product_15.getString());
-  FIX::ProductComplex ProductComplex_13("STRING_1287956078");
-  msg.set(ProductComplex_13);
-  Instrument_13.insert(ProductComplex_13.getString());
-  FIX::PutOrCall PutOrCall_13(0);
-  msg.set(PutOrCall_13);
-  Instrument_13.insert(PutOrCall_13.getString());
-  FIX::RedemptionDate RedemptionDate_13("LOCALMKTDATE_38878356");
-  msg.set(RedemptionDate_13);
-  Instrument_13.insert(RedemptionDate_13.getString());
-  FIX::RepoCollateralSecurityType RepoCollateralSecurityType_13("STRING_1625150563");
-  msg.set(RepoCollateralSecurityType_13);
-  Instrument_13.insert(RepoCollateralSecurityType_13.getString());
-  FIX::RepurchaseRate RepurchaseRate_13;
-  RepurchaseRate_13.setString("81.730000");
-  msg.set(RepurchaseRate_13);
-  Instrument_13.insert(RepurchaseRate_13.getString());
-  FIX::RepurchaseTerm RepurchaseTerm_13(1100957974);
-  msg.set(RepurchaseTerm_13);
-  Instrument_13.insert(RepurchaseTerm_13.getString());
-  FIX::RestructuringType RestructuringType_13("STRING_XR");
-  msg.set(RestructuringType_13);
-  Instrument_13.insert(RestructuringType_13.getString());
-  FIX::SecurityDesc SecurityDesc_13("STRING_2041395253");
-  msg.set(SecurityDesc_13);
-  Instrument_13.insert(SecurityDesc_13.getString());
-  FIX::SecurityExchange SecurityExchange_13("EXCHANGE_8072732");
-  msg.set(SecurityExchange_13);
-  Instrument_13.insert(SecurityExchange_13.getString());
-  FIX::SecurityGroup SecurityGroup_13("STRING_1713756994");
-  msg.set(SecurityGroup_13);
-  Instrument_13.insert(SecurityGroup_13.getString());
-  FIX::SecurityID SecurityID_13("STRING_1765860270");
-  msg.set(SecurityID_13);
-  Instrument_13.insert(SecurityID_13.getString());
-  FIX::SecurityIDSource SecurityIDSource_13("STRING_1");
-  msg.set(SecurityIDSource_13);
-  Instrument_13.insert(SecurityIDSource_13.getString());
-  FIX::SecurityStatus SecurityStatus_13("STRING_1");
-  msg.set(SecurityStatus_13);
-  Instrument_13.insert(SecurityStatus_13.getString());
-  FIX::SecuritySubType SecuritySubType_13("STRING_1597464131");
-  msg.set(SecuritySubType_13);
-  Instrument_13.insert(SecuritySubType_13.getString());
-  FIX::SecurityType SecurityType_15("STRING_CB");
-  msg.set(SecurityType_15);
-  Instrument_13.insert(SecurityType_15.getString());
-  FIX::Seniority Seniority_13("STRING_SR");
-  msg.set(Seniority_13);
-  Instrument_13.insert(Seniority_13.getString());
-  FIX::SettlMethod SettlMethod_13('P');
-  msg.set(SettlMethod_13);
-  Instrument_13.insert(SettlMethod_13.getString());
-  FIX::SettleOnOpenFlag SettleOnOpenFlag_13("STRING_22367203");
-  msg.set(SettleOnOpenFlag_13);
-  Instrument_13.insert(SettleOnOpenFlag_13.getString());
-  FIX::StateOrProvinceOfIssue StateOrProvinceOfIssue_13("STRING_430340344");
-  msg.set(StateOrProvinceOfIssue_13);
-  Instrument_13.insert(StateOrProvinceOfIssue_13.getString());
-  FIX::StrikeCurrency StrikeCurrency_13("CAN");
-  msg.set(StrikeCurrency_13);
-  Instrument_13.insert(StrikeCurrency_13.getString());
-  FIX::StrikeMultiplier StrikeMultiplier_13;
-  StrikeMultiplier_13.setString("10209511");
-  msg.set(StrikeMultiplier_13);
-  Instrument_13.insert(StrikeMultiplier_13.getString());
-  FIX::StrikePrice StrikePrice_13;
-  StrikePrice_13.setString("15258472");
-  msg.set(StrikePrice_13);
-  Instrument_13.insert(StrikePrice_13.getString());
-  FIX::StrikePriceBoundaryMethod StrikePriceBoundaryMethod_13(3);
-  msg.set(StrikePriceBoundaryMethod_13);
-  Instrument_13.insert(StrikePriceBoundaryMethod_13.getString());
-  FIX::StrikePriceBoundaryPrecision StrikePriceBoundaryPrecision_13;
-  StrikePriceBoundaryPrecision_13.setString("2.690000");
-  msg.set(StrikePriceBoundaryPrecision_13);
-  Instrument_13.insert(StrikePriceBoundaryPrecision_13.getString());
-  FIX::StrikePriceDeterminationMethod StrikePriceDeterminationMethod_13(4);
-  msg.set(StrikePriceDeterminationMethod_13);
-  Instrument_13.insert(StrikePriceDeterminationMethod_13.getString());
-  FIX::StrikeValue StrikeValue_13;
-  StrikeValue_13.setString("19367379");
-  msg.set(StrikeValue_13);
-  Instrument_13.insert(StrikeValue_13.getString());
-  FIX::Symbol Symbol_13("STRING_1262318539");
-  msg.set(Symbol_13);
-  Instrument_13.insert(Symbol_13.getString());
-  FIX::SymbolSfx SymbolSfx_13("STRING_WI");
-  msg.set(SymbolSfx_13);
-  Instrument_13.insert(SymbolSfx_13.getString());
-  FIX::TimeUnit TimeUnit_13("STRING_Min");
-  msg.set(TimeUnit_13);
-  Instrument_13.insert(TimeUnit_13.getString());
-  FIX::UnderlyingPriceDeterminationMethod UnderlyingPriceDeterminationMethod_13(4);
-  msg.set(UnderlyingPriceDeterminationMethod_13);
-  Instrument_13.insert(UnderlyingPriceDeterminationMethod_13.getString());
-  FIX::UnitOfMeasure UnitOfMeasure_13("STRING_lbs");
-  msg.set(UnitOfMeasure_13);
-  Instrument_13.insert(UnitOfMeasure_13.getString());
-  FIX::UnitOfMeasureQty UnitOfMeasureQty_13;
-  UnitOfMeasureQty_13.setString("14063590");
-  msg.set(UnitOfMeasureQty_13);
-  Instrument_13.insert(UnitOfMeasureQty_13.getString());
-  FIX::ValuationMethod ValuationMethod_13("STRING_EQTY");
-  msg.set(ValuationMethod_13);
-  Instrument_13.insert(ValuationMethod_13.getString());
-  all_values.push_back(Instrument_13);
+  multiset<string> Instrument_14;
+  FIX::AttachmentPoint AttachmentPoint_14;
+  AttachmentPoint_14.setString("15.320000");
+  msg.set(AttachmentPoint_14);
+  Instrument_14.insert(AttachmentPoint_14.getString());
+  FIX::CFICode CFICode_14("STRING_1492429170");
+  msg.set(CFICode_14);
+  Instrument_14.insert(CFICode_14.getString());
+  FIX::CPProgram CPProgram_14(2);
+  msg.set(CPProgram_14);
+  Instrument_14.insert(CPProgram_14.getString());
+  FIX::CPRegType CPRegType_14("STRING_2041628774");
+  msg.set(CPRegType_14);
+  Instrument_14.insert(CPRegType_14.getString());
+  FIX::CapPrice CapPrice_14;
+  CapPrice_14.setString("11786268");
+  msg.set(CapPrice_14);
+  Instrument_14.insert(CapPrice_14.getString());
+  FIX::ContractMultiplier ContractMultiplier_14;
+  ContractMultiplier_14.setString("12958687");
+  msg.set(ContractMultiplier_14);
+  Instrument_14.insert(ContractMultiplier_14.getString());
+  FIX::ContractMultiplierUnit ContractMultiplierUnit_14(1);
+  msg.set(ContractMultiplierUnit_14);
+  Instrument_14.insert(ContractMultiplierUnit_14.getString());
+  FIX::ContractSettlMonth ContractSettlMonth_14("MONTHYEAR_1781188973");
+  msg.set(ContractSettlMonth_14);
+  Instrument_14.insert(ContractSettlMonth_14.getString());
+  FIX::CountryOfIssue CountryOfIssue_14("COUNTRY_273835825");
+  msg.set(CountryOfIssue_14);
+  Instrument_14.insert(CountryOfIssue_14.getString());
+  FIX::CouponPaymentDate CouponPaymentDate_14("LOCALMKTDATE_1297134921");
+  msg.set(CouponPaymentDate_14);
+  Instrument_14.insert(CouponPaymentDate_14.getString());
+  FIX::CouponRate CouponRate_14;
+  CouponRate_14.setString("41.430000");
+  msg.set(CouponRate_14);
+  Instrument_14.insert(CouponRate_14.getString());
+  FIX::CreditRating CreditRating_14("STRING_1784305291");
+  msg.set(CreditRating_14);
+  Instrument_14.insert(CreditRating_14.getString());
+  FIX::DatedDate DatedDate_14("LOCALMKTDATE_791871650");
+  msg.set(DatedDate_14);
+  Instrument_14.insert(DatedDate_14.getString());
+  FIX::DetachmentPoint DetachmentPoint_14;
+  DetachmentPoint_14.setString("25.830000");
+  msg.set(DetachmentPoint_14);
+  Instrument_14.insert(DetachmentPoint_14.getString());
+  FIX::EncodedIssuer EncodedIssuer_14("DATA_1574568066");
+  msg.set(EncodedIssuer_14);
+  Instrument_14.insert(EncodedIssuer_14.getString());
+  FIX::EncodedIssuerLen EncodedIssuerLen_14(425941326);
+  msg.set(EncodedIssuerLen_14);
+  Instrument_14.insert(EncodedIssuerLen_14.getString());
+  FIX::EncodedSecurityDesc EncodedSecurityDesc_14("DATA_190381969");
+  msg.set(EncodedSecurityDesc_14);
+  Instrument_14.insert(EncodedSecurityDesc_14.getString());
+  FIX::EncodedSecurityDescLen EncodedSecurityDescLen_14(700660659);
+  msg.set(EncodedSecurityDescLen_14);
+  Instrument_14.insert(EncodedSecurityDescLen_14.getString());
+  FIX::ExerciseStyle ExerciseStyle_14(0);
+  msg.set(ExerciseStyle_14);
+  Instrument_14.insert(ExerciseStyle_14.getString());
+  FIX::Factor Factor_14;
+  Factor_14.setString("13934620");
+  msg.set(Factor_14);
+  Instrument_14.insert(Factor_14.getString());
+  FIX::FlexProductEligibilityIndicator FlexProductEligibilityIndicator_14(false);
+  msg.set(FlexProductEligibilityIndicator_14);
+  Instrument_14.insert(FlexProductEligibilityIndicator_14.getString());
+  FIX::FlexibleIndicator FlexibleIndicator_14(false);
+  msg.set(FlexibleIndicator_14);
+  Instrument_14.insert(FlexibleIndicator_14.getString());
+  FIX::FloorPrice FloorPrice_14;
+  FloorPrice_14.setString("9127505");
+  msg.set(FloorPrice_14);
+  Instrument_14.insert(FloorPrice_14.getString());
+  FIX::FlowScheduleType FlowScheduleType_14(1);
+  msg.set(FlowScheduleType_14);
+  Instrument_14.insert(FlowScheduleType_14.getString());
+  FIX::InstrRegistry InstrRegistry_14("STRING_994068110");
+  msg.set(InstrRegistry_14);
+  Instrument_14.insert(InstrRegistry_14.getString());
+  FIX::InstrmtAssignmentMethod InstrmtAssignmentMethod_14('1');
+  msg.set(InstrmtAssignmentMethod_14);
+  Instrument_14.insert(InstrmtAssignmentMethod_14.getString());
+  FIX::InterestAccrualDate InterestAccrualDate_14("LOCALMKTDATE_1818384105");
+  msg.set(InterestAccrualDate_14);
+  Instrument_14.insert(InterestAccrualDate_14.getString());
+  FIX::IssueDate IssueDate_14("LOCALMKTDATE_353925951");
+  msg.set(IssueDate_14);
+  Instrument_14.insert(IssueDate_14.getString());
+  FIX::Issuer Issuer_14("STRING_782514010");
+  msg.set(Issuer_14);
+  Instrument_14.insert(Issuer_14.getString());
+  FIX::ListMethod ListMethod_14(0);
+  msg.set(ListMethod_14);
+  Instrument_14.insert(ListMethod_14.getString());
+  FIX::LocaleOfIssue LocaleOfIssue_14("STRING_811030925");
+  msg.set(LocaleOfIssue_14);
+  Instrument_14.insert(LocaleOfIssue_14.getString());
+  FIX::MaturityDate MaturityDate_14("LOCALMKTDATE_1043165542");
+  msg.set(MaturityDate_14);
+  Instrument_14.insert(MaturityDate_14.getString());
+  FIX::MaturityMonthYear MaturityMonthYear_14("MONTHYEAR_1776588165");
+  msg.set(MaturityMonthYear_14);
+  Instrument_14.insert(MaturityMonthYear_14.getString());
+  FIX::MaturityTime MaturityTime_14("TZTIMEONLY_1785998775");
+  msg.set(MaturityTime_14);
+  Instrument_14.insert(MaturityTime_14.getString());
+  FIX::MinPriceIncrement MinPriceIncrement_14;
+  MinPriceIncrement_14.setString("9373106");
+  msg.set(MinPriceIncrement_14);
+  Instrument_14.insert(MinPriceIncrement_14.getString());
+  FIX::MinPriceIncrementAmount MinPriceIncrementAmount_14;
+  MinPriceIncrementAmount_14.setString("8077313");
+  msg.set(MinPriceIncrementAmount_14);
+  Instrument_14.insert(MinPriceIncrementAmount_14.getString());
+  FIX::NTPositionLimit NTPositionLimit_14(934383892);
+  msg.set(NTPositionLimit_14);
+  Instrument_14.insert(NTPositionLimit_14.getString());
+  FIX::NotionalPercentageOutstanding NotionalPercentageOutstanding_14;
+  NotionalPercentageOutstanding_14.setString("1.890000");
+  msg.set(NotionalPercentageOutstanding_14);
+  Instrument_14.insert(NotionalPercentageOutstanding_14.getString());
+  FIX::OptAttribute OptAttribute_14('4');
+  msg.set(OptAttribute_14);
+  Instrument_14.insert(OptAttribute_14.getString());
+  FIX::OptPayoutAmount OptPayoutAmount_14;
+  OptPayoutAmount_14.setString("12082197");
+  msg.set(OptPayoutAmount_14);
+  Instrument_14.insert(OptPayoutAmount_14.getString());
+  FIX::OptPayoutType OptPayoutType_14(2);
+  msg.set(OptPayoutType_14);
+  Instrument_14.insert(OptPayoutType_14.getString());
+  FIX::OriginalNotionalPercentageOutstanding OriginalNotionalPercentageOutstanding_14;
+  OriginalNotionalPercentageOutstanding_14.setString("8.470000");
+  msg.set(OriginalNotionalPercentageOutstanding_14);
+  Instrument_14.insert(OriginalNotionalPercentageOutstanding_14.getString());
+  FIX::Pool Pool_14("STRING_845041361");
+  msg.set(Pool_14);
+  Instrument_14.insert(Pool_14.getString());
+  FIX::PositionLimit PositionLimit_14(2080153113);
+  msg.set(PositionLimit_14);
+  Instrument_14.insert(PositionLimit_14.getString());
+  FIX::PriceQuoteMethod PriceQuoteMethod_14("STRING_INT");
+  msg.set(PriceQuoteMethod_14);
+  Instrument_14.insert(PriceQuoteMethod_14.getString());
+  FIX::PriceUnitOfMeasure PriceUnitOfMeasure_14("STRING_272125779");
+  msg.set(PriceUnitOfMeasure_14);
+  Instrument_14.insert(PriceUnitOfMeasure_14.getString());
+  FIX::PriceUnitOfMeasureQty PriceUnitOfMeasureQty_14;
+  PriceUnitOfMeasureQty_14.setString("3586107");
+  msg.set(PriceUnitOfMeasureQty_14);
+  Instrument_14.insert(PriceUnitOfMeasureQty_14.getString());
+  FIX::Product Product_16(7);
+  msg.set(Product_16);
+  Instrument_14.insert(Product_16.getString());
+  FIX::ProductComplex ProductComplex_14("STRING_972786438");
+  msg.set(ProductComplex_14);
+  Instrument_14.insert(ProductComplex_14.getString());
+  FIX::PutOrCall PutOrCall_14(1);
+  msg.set(PutOrCall_14);
+  Instrument_14.insert(PutOrCall_14.getString());
+  FIX::RedemptionDate RedemptionDate_14("LOCALMKTDATE_2003543803");
+  msg.set(RedemptionDate_14);
+  Instrument_14.insert(RedemptionDate_14.getString());
+  FIX::RepoCollateralSecurityType RepoCollateralSecurityType_14("STRING_1173991558");
+  msg.set(RepoCollateralSecurityType_14);
+  Instrument_14.insert(RepoCollateralSecurityType_14.getString());
+  FIX::RepurchaseRate RepurchaseRate_14;
+  RepurchaseRate_14.setString("38.520000");
+  msg.set(RepurchaseRate_14);
+  Instrument_14.insert(RepurchaseRate_14.getString());
+  FIX::RepurchaseTerm RepurchaseTerm_14(768810753);
+  msg.set(RepurchaseTerm_14);
+  Instrument_14.insert(RepurchaseTerm_14.getString());
+  FIX::RestructuringType RestructuringType_14("STRING_XR");
+  msg.set(RestructuringType_14);
+  Instrument_14.insert(RestructuringType_14.getString());
+  FIX::SecurityDesc SecurityDesc_14("STRING_1322381962");
+  msg.set(SecurityDesc_14);
+  Instrument_14.insert(SecurityDesc_14.getString());
+  FIX::SecurityExchange SecurityExchange_14("EXCHANGE_120733845");
+  msg.set(SecurityExchange_14);
+  Instrument_14.insert(SecurityExchange_14.getString());
+  FIX::SecurityGroup SecurityGroup_14("STRING_1806441456");
+  msg.set(SecurityGroup_14);
+  Instrument_14.insert(SecurityGroup_14.getString());
+  FIX::SecurityID SecurityID_14("STRING_1676307913");
+  msg.set(SecurityID_14);
+  Instrument_14.insert(SecurityID_14.getString());
+  FIX::SecurityIDSource SecurityIDSource_14("STRING_G");
+  msg.set(SecurityIDSource_14);
+  Instrument_14.insert(SecurityIDSource_14.getString());
+  FIX::SecurityStatus SecurityStatus_14("STRING_1");
+  msg.set(SecurityStatus_14);
+  Instrument_14.insert(SecurityStatus_14.getString());
+  FIX::SecuritySubType SecuritySubType_14("STRING_339855190");
+  msg.set(SecuritySubType_14);
+  Instrument_14.insert(SecuritySubType_14.getString());
+  FIX::SecurityType SecurityType_16("STRING_COFO");
+  msg.set(SecurityType_16);
+  Instrument_14.insert(SecurityType_16.getString());
+  FIX::Seniority Seniority_14("STRING_SD");
+  msg.set(Seniority_14);
+  Instrument_14.insert(Seniority_14.getString());
+  FIX::SettlMethod SettlMethod_14('C');
+  msg.set(SettlMethod_14);
+  Instrument_14.insert(SettlMethod_14.getString());
+  FIX::SettleOnOpenFlag SettleOnOpenFlag_14("STRING_736240417");
+  msg.set(SettleOnOpenFlag_14);
+  Instrument_14.insert(SettleOnOpenFlag_14.getString());
+  FIX::StateOrProvinceOfIssue StateOrProvinceOfIssue_14("STRING_379952698");
+  msg.set(StateOrProvinceOfIssue_14);
+  Instrument_14.insert(StateOrProvinceOfIssue_14.getString());
+  FIX::StrikeCurrency StrikeCurrency_14("CAN");
+  msg.set(StrikeCurrency_14);
+  Instrument_14.insert(StrikeCurrency_14.getString());
+  FIX::StrikeMultiplier StrikeMultiplier_14;
+  StrikeMultiplier_14.setString("8213894");
+  msg.set(StrikeMultiplier_14);
+  Instrument_14.insert(StrikeMultiplier_14.getString());
+  FIX::StrikePrice StrikePrice_14;
+  StrikePrice_14.setString("21209739");
+  msg.set(StrikePrice_14);
+  Instrument_14.insert(StrikePrice_14.getString());
+  FIX::StrikePriceBoundaryMethod StrikePriceBoundaryMethod_14(3);
+  msg.set(StrikePriceBoundaryMethod_14);
+  Instrument_14.insert(StrikePriceBoundaryMethod_14.getString());
+  FIX::StrikePriceBoundaryPrecision StrikePriceBoundaryPrecision_14;
+  StrikePriceBoundaryPrecision_14.setString("66.020000");
+  msg.set(StrikePriceBoundaryPrecision_14);
+  Instrument_14.insert(StrikePriceBoundaryPrecision_14.getString());
+  FIX::StrikePriceDeterminationMethod StrikePriceDeterminationMethod_14(2);
+  msg.set(StrikePriceDeterminationMethod_14);
+  Instrument_14.insert(StrikePriceDeterminationMethod_14.getString());
+  FIX::StrikeValue StrikeValue_14;
+  StrikeValue_14.setString("19483378");
+  msg.set(StrikeValue_14);
+  Instrument_14.insert(StrikeValue_14.getString());
+  FIX::Symbol Symbol_14("STRING_504096385");
+  msg.set(Symbol_14);
+  Instrument_14.insert(Symbol_14.getString());
+  FIX::SymbolSfx SymbolSfx_14("STRING_CD");
+  msg.set(SymbolSfx_14);
+  Instrument_14.insert(SymbolSfx_14.getString());
+  FIX::TimeUnit TimeUnit_14("STRING_Mo");
+  msg.set(TimeUnit_14);
+  Instrument_14.insert(TimeUnit_14.getString());
+  FIX::UnderlyingPriceDeterminationMethod UnderlyingPriceDeterminationMethod_14(1);
+  msg.set(UnderlyingPriceDeterminationMethod_14);
+  Instrument_14.insert(UnderlyingPriceDeterminationMethod_14.getString());
+  FIX::UnitOfMeasure UnitOfMeasure_14("STRING_oz_tr");
+  msg.set(UnitOfMeasure_14);
+  Instrument_14.insert(UnitOfMeasure_14.getString());
+  FIX::UnitOfMeasureQty UnitOfMeasureQty_14;
+  UnitOfMeasureQty_14.setString("3324321");
+  msg.set(UnitOfMeasureQty_14);
+  Instrument_14.insert(UnitOfMeasureQty_14.getString());
+  FIX::ValuationMethod ValuationMethod_14("STRING_FUTDA");
+  msg.set(ValuationMethod_14);
+  Instrument_14.insert(ValuationMethod_14.getString());
+  all_values.push_back(Instrument_14);
 
   // ComplexEvents
   // Group ComplexEvents.NoComplexEvents
   {
     FIX50SP2::Confirmation::NoComplexEvents noComplexEvents_0_0;
     // ComplexEvents.NoComplexEvents
-    multiset<string> ComplexEvents_NoComplexEvents_31;
-    FIX::ComplexEventCondition ComplexEventCondition_31(2);
-    noComplexEvents_0_0.set(ComplexEventCondition_31);
-    ComplexEvents_NoComplexEvents_31.insert(ComplexEventCondition_31.getString());
-    FIX::ComplexEventPrice ComplexEventPrice_31;
-    ComplexEventPrice_31.setString("3691390");
-    noComplexEvents_0_0.set(ComplexEventPrice_31);
-    ComplexEvents_NoComplexEvents_31.insert(ComplexEventPrice_31.getString());
-    FIX::ComplexEventPriceBoundaryMethod ComplexEventPriceBoundaryMethod_31(5);
-    noComplexEvents_0_0.set(ComplexEventPriceBoundaryMethod_31);
-    ComplexEvents_NoComplexEvents_31.insert(ComplexEventPriceBoundaryMethod_31.getString());
-    FIX::ComplexEventPriceBoundaryPrecision ComplexEventPriceBoundaryPrecision_31;
-    ComplexEventPriceBoundaryPrecision_31.setString("88.700000");
-    noComplexEvents_0_0.set(ComplexEventPriceBoundaryPrecision_31);
-    ComplexEvents_NoComplexEvents_31.insert(ComplexEventPriceBoundaryPrecision_31.getString());
-    FIX::ComplexEventPriceTimeType ComplexEventPriceTimeType_31(2);
-    noComplexEvents_0_0.set(ComplexEventPriceTimeType_31);
-    ComplexEvents_NoComplexEvents_31.insert(ComplexEventPriceTimeType_31.getString());
-    FIX::ComplexEventType ComplexEventType_31(9);
-    noComplexEvents_0_0.set(ComplexEventType_31);
-    ComplexEvents_NoComplexEvents_31.insert(ComplexEventType_31.getString());
-    FIX::ComplexOptPayoutAmount ComplexOptPayoutAmount_31;
-    ComplexOptPayoutAmount_31.setString("12513854");
-    noComplexEvents_0_0.set(ComplexOptPayoutAmount_31);
-    ComplexEvents_NoComplexEvents_31.insert(ComplexOptPayoutAmount_31.getString());
-    all_values.push_back(ComplexEvents_NoComplexEvents_31);
+    multiset<string> ComplexEvents_NoComplexEvents_24;
+    FIX::ComplexEventCondition ComplexEventCondition_24(2);
+    noComplexEvents_0_0.set(ComplexEventCondition_24);
+    ComplexEvents_NoComplexEvents_24.insert(ComplexEventCondition_24.getString());
+    FIX::ComplexEventPrice ComplexEventPrice_24;
+    ComplexEventPrice_24.setString("17390490");
+    noComplexEvents_0_0.set(ComplexEventPrice_24);
+    ComplexEvents_NoComplexEvents_24.insert(ComplexEventPrice_24.getString());
+    FIX::ComplexEventPriceBoundaryMethod ComplexEventPriceBoundaryMethod_24(5);
+    noComplexEvents_0_0.set(ComplexEventPriceBoundaryMethod_24);
+    ComplexEvents_NoComplexEvents_24.insert(ComplexEventPriceBoundaryMethod_24.getString());
+    FIX::ComplexEventPriceBoundaryPrecision ComplexEventPriceBoundaryPrecision_24;
+    ComplexEventPriceBoundaryPrecision_24.setString("79.450000");
+    noComplexEvents_0_0.set(ComplexEventPriceBoundaryPrecision_24);
+    ComplexEvents_NoComplexEvents_24.insert(ComplexEventPriceBoundaryPrecision_24.getString());
+    FIX::ComplexEventPriceTimeType ComplexEventPriceTimeType_24(1);
+    noComplexEvents_0_0.set(ComplexEventPriceTimeType_24);
+    ComplexEvents_NoComplexEvents_24.insert(ComplexEventPriceTimeType_24.getString());
+    FIX::ComplexEventType ComplexEventType_24(2);
+    noComplexEvents_0_0.set(ComplexEventType_24);
+    ComplexEvents_NoComplexEvents_24.insert(ComplexEventType_24.getString());
+    FIX::ComplexOptPayoutAmount ComplexOptPayoutAmount_24;
+    ComplexOptPayoutAmount_24.setString("15119522");
+    noComplexEvents_0_0.set(ComplexOptPayoutAmount_24);
+    ComplexEvents_NoComplexEvents_24.insert(ComplexOptPayoutAmount_24.getString());
+    all_values.push_back(ComplexEvents_NoComplexEvents_24);
 
     // ComplexEventDates
     // Group ComplexEventDates.NoComplexEventDates
     {
       FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates noComplexEventDates_0_1_0;
       // ComplexEventDates.NoComplexEventDates
-      multiset<string> ComplexEventDates_NoComplexEventDates_65;
-      FIX::ComplexEventEndDate ComplexEventEndDate_65(FIX::UTCTIMESTAMP(8, 21, 8, 25, 6, 2012));
-      noComplexEventDates_0_1_0.set(ComplexEventEndDate_65);
-      ComplexEventDates_NoComplexEventDates_65.insert(ComplexEventEndDate_65.getString());
-      FIX::ComplexEventStartDate ComplexEventStartDate_65(FIX::UTCTIMESTAMP(22, 35, 17, 15, 1, 2012));
-      noComplexEventDates_0_1_0.set(ComplexEventStartDate_65);
-      ComplexEventDates_NoComplexEventDates_65.insert(ComplexEventStartDate_65.getString());
-      all_values.push_back(ComplexEventDates_NoComplexEventDates_65);
+      multiset<string> ComplexEventDates_NoComplexEventDates_44;
+      FIX::ComplexEventEndDate ComplexEventEndDate_44(FIX::UTCTIMESTAMP(17, 26, 9, 27, 4, 2008));
+      noComplexEventDates_0_1_0.set(ComplexEventEndDate_44);
+      ComplexEventDates_NoComplexEventDates_44.insert(ComplexEventEndDate_44.getString());
+      FIX::ComplexEventStartDate ComplexEventStartDate_44(FIX::UTCTIMESTAMP(14, 31, 22, 4, 10, 2017));
+      noComplexEventDates_0_1_0.set(ComplexEventStartDate_44);
+      ComplexEventDates_NoComplexEventDates_44.insert(ComplexEventStartDate_44.getString());
+      all_values.push_back(ComplexEventDates_NoComplexEventDates_44);
 
       // ComplexEventTimes
       // Group ComplexEventTimes.NoComplexEventTimes
       {
         FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_0_2_0;
         // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_137;
-        FIX::ComplexEventEndTime ComplexEventEndTime_137(FIX::UTCTIMEONLY(21, 29, 11));
-        noComplexEventTimes_0_0_2_0.set(ComplexEventEndTime_137);
-        ComplexEventTimes_NoComplexEventTimes_137.insert(ComplexEventEndTime_137.getString());
-        FIX::ComplexEventStartTime ComplexEventStartTime_137(FIX::UTCTIMEONLY(17, 11, 47));
-        noComplexEventTimes_0_0_2_0.set(ComplexEventStartTime_137);
-        ComplexEventTimes_NoComplexEventTimes_137.insert(ComplexEventStartTime_137.getString());
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_137);
+        multiset<string> ComplexEventTimes_NoComplexEventTimes_89;
+        FIX::ComplexEventEndTime ComplexEventEndTime_89(FIX::UTCTIMEONLY(7, 7, 27));
+        noComplexEventTimes_0_0_2_0.set(ComplexEventEndTime_89);
+        ComplexEventTimes_NoComplexEventTimes_89.insert(ComplexEventEndTime_89.getString());
+        FIX::ComplexEventStartTime ComplexEventStartTime_89(FIX::UTCTIMEONLY(13, 39, 34));
+        noComplexEventTimes_0_0_2_0.set(ComplexEventStartTime_89);
+        ComplexEventTimes_NoComplexEventTimes_89.insert(ComplexEventStartTime_89.getString());
+        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_89);
 
         noComplexEventDates_0_1_0.addGroup(noComplexEventTimes_0_0_2_0);
       }
-      {
-        FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_0_2_1;
-        // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_138;
-        FIX::ComplexEventEndTime ComplexEventEndTime_138(FIX::UTCTIMEONLY(5, 21, 20));
-        noComplexEventTimes_0_0_2_1.set(ComplexEventEndTime_138);
-        ComplexEventTimes_NoComplexEventTimes_138.insert(ComplexEventEndTime_138.getString());
-        FIX::ComplexEventStartTime ComplexEventStartTime_138(FIX::UTCTIMEONLY(22, 13, 14));
-        noComplexEventTimes_0_0_2_1.set(ComplexEventStartTime_138);
-        ComplexEventTimes_NoComplexEventTimes_138.insert(ComplexEventStartTime_138.getString());
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_138);
-
-        noComplexEventDates_0_1_0.addGroup(noComplexEventTimes_0_0_2_1);
-      }
       noComplexEvents_0_0.addGroup(noComplexEventDates_0_1_0);
     }
+    {
+      FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates noComplexEventDates_0_1_1;
+      // ComplexEventDates.NoComplexEventDates
+      multiset<string> ComplexEventDates_NoComplexEventDates_45;
+      FIX::ComplexEventEndDate ComplexEventEndDate_45(FIX::UTCTIMESTAMP(4, 5, 50, 14, 2, 2015));
+      noComplexEventDates_0_1_1.set(ComplexEventEndDate_45);
+      ComplexEventDates_NoComplexEventDates_45.insert(ComplexEventEndDate_45.getString());
+      FIX::ComplexEventStartDate ComplexEventStartDate_45(FIX::UTCTIMESTAMP(3, 54, 13, 0, 11, 2016));
+      noComplexEventDates_0_1_1.set(ComplexEventStartDate_45);
+      ComplexEventDates_NoComplexEventDates_45.insert(ComplexEventStartDate_45.getString());
+      all_values.push_back(ComplexEventDates_NoComplexEventDates_45);
+
+      // ComplexEventTimes
+      // Group ComplexEventTimes.NoComplexEventTimes
+      {
+        FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_1_2_0;
+        // ComplexEventTimes.NoComplexEventTimes
+        multiset<string> ComplexEventTimes_NoComplexEventTimes_90;
+        FIX::ComplexEventEndTime ComplexEventEndTime_90(FIX::UTCTIMEONLY(11, 43, 2));
+        noComplexEventTimes_0_1_2_0.set(ComplexEventEndTime_90);
+        ComplexEventTimes_NoComplexEventTimes_90.insert(ComplexEventEndTime_90.getString());
+        FIX::ComplexEventStartTime ComplexEventStartTime_90(FIX::UTCTIMEONLY(9, 25, 7));
+        noComplexEventTimes_0_1_2_0.set(ComplexEventStartTime_90);
+        ComplexEventTimes_NoComplexEventTimes_90.insert(ComplexEventStartTime_90.getString());
+        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_90);
+
+        noComplexEventDates_0_1_1.addGroup(noComplexEventTimes_0_1_2_0);
+      }
+      noComplexEvents_0_0.addGroup(noComplexEventDates_0_1_1);
+    }
+    {
+      FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates noComplexEventDates_0_1_2;
+      // ComplexEventDates.NoComplexEventDates
+      multiset<string> ComplexEventDates_NoComplexEventDates_46;
+      FIX::ComplexEventEndDate ComplexEventEndDate_46(FIX::UTCTIMESTAMP(8, 14, 18, 1, 9, 2009));
+      noComplexEventDates_0_1_2.set(ComplexEventEndDate_46);
+      ComplexEventDates_NoComplexEventDates_46.insert(ComplexEventEndDate_46.getString());
+      FIX::ComplexEventStartDate ComplexEventStartDate_46(FIX::UTCTIMESTAMP(8, 5, 37, 10, 12, 2000));
+      noComplexEventDates_0_1_2.set(ComplexEventStartDate_46);
+      ComplexEventDates_NoComplexEventDates_46.insert(ComplexEventStartDate_46.getString());
+      all_values.push_back(ComplexEventDates_NoComplexEventDates_46);
+
+      // ComplexEventTimes
+      // Group ComplexEventTimes.NoComplexEventTimes
+      {
+        FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_2_2_0;
+        // ComplexEventTimes.NoComplexEventTimes
+        multiset<string> ComplexEventTimes_NoComplexEventTimes_91;
+        FIX::ComplexEventEndTime ComplexEventEndTime_91(FIX::UTCTIMEONLY(1, 6, 35));
+        noComplexEventTimes_0_2_2_0.set(ComplexEventEndTime_91);
+        ComplexEventTimes_NoComplexEventTimes_91.insert(ComplexEventEndTime_91.getString());
+        FIX::ComplexEventStartTime ComplexEventStartTime_91(FIX::UTCTIMEONLY(20, 52, 54));
+        noComplexEventTimes_0_2_2_0.set(ComplexEventStartTime_91);
+        ComplexEventTimes_NoComplexEventTimes_91.insert(ComplexEventStartTime_91.getString());
+        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_91);
+
+        noComplexEventDates_0_1_2.addGroup(noComplexEventTimes_0_2_2_0);
+      }
+      {
+        FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_2_2_1;
+        // ComplexEventTimes.NoComplexEventTimes
+        multiset<string> ComplexEventTimes_NoComplexEventTimes_92;
+        FIX::ComplexEventEndTime ComplexEventEndTime_92(FIX::UTCTIMEONLY(19, 29, 26));
+        noComplexEventTimes_0_2_2_1.set(ComplexEventEndTime_92);
+        ComplexEventTimes_NoComplexEventTimes_92.insert(ComplexEventEndTime_92.getString());
+        FIX::ComplexEventStartTime ComplexEventStartTime_92(FIX::UTCTIMEONLY(14, 43, 42));
+        noComplexEventTimes_0_2_2_1.set(ComplexEventStartTime_92);
+        ComplexEventTimes_NoComplexEventTimes_92.insert(ComplexEventStartTime_92.getString());
+        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_92);
+
+        noComplexEventDates_0_1_2.addGroup(noComplexEventTimes_0_2_2_1);
+      }
+      {
+        FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_2_2_2;
+        // ComplexEventTimes.NoComplexEventTimes
+        multiset<string> ComplexEventTimes_NoComplexEventTimes_93;
+        FIX::ComplexEventEndTime ComplexEventEndTime_93(FIX::UTCTIMEONLY(7, 48, 48));
+        noComplexEventTimes_0_2_2_2.set(ComplexEventEndTime_93);
+        ComplexEventTimes_NoComplexEventTimes_93.insert(ComplexEventEndTime_93.getString());
+        FIX::ComplexEventStartTime ComplexEventStartTime_93(FIX::UTCTIMEONLY(0, 38, 24));
+        noComplexEventTimes_0_2_2_2.set(ComplexEventStartTime_93);
+        ComplexEventTimes_NoComplexEventTimes_93.insert(ComplexEventStartTime_93.getString());
+        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_93);
+
+        noComplexEventDates_0_1_2.addGroup(noComplexEventTimes_0_2_2_2);
+      }
+      noComplexEvents_0_0.addGroup(noComplexEventDates_0_1_2);
+    }
     msg.addGroup(noComplexEvents_0_0);
-  }
-  {
-    FIX50SP2::Confirmation::NoComplexEvents noComplexEvents_0_1;
-    // ComplexEvents.NoComplexEvents
-    multiset<string> ComplexEvents_NoComplexEvents_32;
-    FIX::ComplexEventCondition ComplexEventCondition_32(2);
-    noComplexEvents_0_1.set(ComplexEventCondition_32);
-    ComplexEvents_NoComplexEvents_32.insert(ComplexEventCondition_32.getString());
-    FIX::ComplexEventPrice ComplexEventPrice_32;
-    ComplexEventPrice_32.setString("5383272");
-    noComplexEvents_0_1.set(ComplexEventPrice_32);
-    ComplexEvents_NoComplexEvents_32.insert(ComplexEventPrice_32.getString());
-    FIX::ComplexEventPriceBoundaryMethod ComplexEventPriceBoundaryMethod_32(1);
-    noComplexEvents_0_1.set(ComplexEventPriceBoundaryMethod_32);
-    ComplexEvents_NoComplexEvents_32.insert(ComplexEventPriceBoundaryMethod_32.getString());
-    FIX::ComplexEventPriceBoundaryPrecision ComplexEventPriceBoundaryPrecision_32;
-    ComplexEventPriceBoundaryPrecision_32.setString("88.210000");
-    noComplexEvents_0_1.set(ComplexEventPriceBoundaryPrecision_32);
-    ComplexEvents_NoComplexEvents_32.insert(ComplexEventPriceBoundaryPrecision_32.getString());
-    FIX::ComplexEventPriceTimeType ComplexEventPriceTimeType_32(3);
-    noComplexEvents_0_1.set(ComplexEventPriceTimeType_32);
-    ComplexEvents_NoComplexEvents_32.insert(ComplexEventPriceTimeType_32.getString());
-    FIX::ComplexEventType ComplexEventType_32(9);
-    noComplexEvents_0_1.set(ComplexEventType_32);
-    ComplexEvents_NoComplexEvents_32.insert(ComplexEventType_32.getString());
-    FIX::ComplexOptPayoutAmount ComplexOptPayoutAmount_32;
-    ComplexOptPayoutAmount_32.setString("800239");
-    noComplexEvents_0_1.set(ComplexOptPayoutAmount_32);
-    ComplexEvents_NoComplexEvents_32.insert(ComplexOptPayoutAmount_32.getString());
-    all_values.push_back(ComplexEvents_NoComplexEvents_32);
-
-    // ComplexEventDates
-    // Group ComplexEventDates.NoComplexEventDates
-    {
-      FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates noComplexEventDates_1_1_0;
-      // ComplexEventDates.NoComplexEventDates
-      multiset<string> ComplexEventDates_NoComplexEventDates_66;
-      FIX::ComplexEventEndDate ComplexEventEndDate_66(FIX::UTCTIMESTAMP(20, 7, 21, 13, 9, 2000));
-      noComplexEventDates_1_1_0.set(ComplexEventEndDate_66);
-      ComplexEventDates_NoComplexEventDates_66.insert(ComplexEventEndDate_66.getString());
-      FIX::ComplexEventStartDate ComplexEventStartDate_66(FIX::UTCTIMESTAMP(17, 11, 56, 2, 9, 2000));
-      noComplexEventDates_1_1_0.set(ComplexEventStartDate_66);
-      ComplexEventDates_NoComplexEventDates_66.insert(ComplexEventStartDate_66.getString());
-      all_values.push_back(ComplexEventDates_NoComplexEventDates_66);
-
-      // ComplexEventTimes
-      // Group ComplexEventTimes.NoComplexEventTimes
-      {
-        FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_1_0_2_0;
-        // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_139;
-        FIX::ComplexEventEndTime ComplexEventEndTime_139(FIX::UTCTIMEONLY(5, 19, 55));
-        noComplexEventTimes_1_0_2_0.set(ComplexEventEndTime_139);
-        ComplexEventTimes_NoComplexEventTimes_139.insert(ComplexEventEndTime_139.getString());
-        FIX::ComplexEventStartTime ComplexEventStartTime_139(FIX::UTCTIMEONLY(9, 8, 11));
-        noComplexEventTimes_1_0_2_0.set(ComplexEventStartTime_139);
-        ComplexEventTimes_NoComplexEventTimes_139.insert(ComplexEventStartTime_139.getString());
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_139);
-
-        noComplexEventDates_1_1_0.addGroup(noComplexEventTimes_1_0_2_0);
-      }
-      {
-        FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_1_0_2_1;
-        // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_140;
-        FIX::ComplexEventEndTime ComplexEventEndTime_140(FIX::UTCTIMEONLY(14, 38, 55));
-        noComplexEventTimes_1_0_2_1.set(ComplexEventEndTime_140);
-        ComplexEventTimes_NoComplexEventTimes_140.insert(ComplexEventEndTime_140.getString());
-        FIX::ComplexEventStartTime ComplexEventStartTime_140(FIX::UTCTIMEONLY(11, 40, 31));
-        noComplexEventTimes_1_0_2_1.set(ComplexEventStartTime_140);
-        ComplexEventTimes_NoComplexEventTimes_140.insert(ComplexEventStartTime_140.getString());
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_140);
-
-        noComplexEventDates_1_1_0.addGroup(noComplexEventTimes_1_0_2_1);
-      }
-      noComplexEvents_0_1.addGroup(noComplexEventDates_1_1_0);
-    }
-    {
-      FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates noComplexEventDates_1_1_1;
-      // ComplexEventDates.NoComplexEventDates
-      multiset<string> ComplexEventDates_NoComplexEventDates_67;
-      FIX::ComplexEventEndDate ComplexEventEndDate_67(FIX::UTCTIMESTAMP(5, 38, 23, 2, 11, 2005));
-      noComplexEventDates_1_1_1.set(ComplexEventEndDate_67);
-      ComplexEventDates_NoComplexEventDates_67.insert(ComplexEventEndDate_67.getString());
-      FIX::ComplexEventStartDate ComplexEventStartDate_67(FIX::UTCTIMESTAMP(8, 16, 23, 6, 6, 2011));
-      noComplexEventDates_1_1_1.set(ComplexEventStartDate_67);
-      ComplexEventDates_NoComplexEventDates_67.insert(ComplexEventStartDate_67.getString());
-      all_values.push_back(ComplexEventDates_NoComplexEventDates_67);
-
-      // ComplexEventTimes
-      // Group ComplexEventTimes.NoComplexEventTimes
-      {
-        FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_1_1_2_0;
-        // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_141;
-        FIX::ComplexEventEndTime ComplexEventEndTime_141(FIX::UTCTIMEONLY(17, 16, 30));
-        noComplexEventTimes_1_1_2_0.set(ComplexEventEndTime_141);
-        ComplexEventTimes_NoComplexEventTimes_141.insert(ComplexEventEndTime_141.getString());
-        FIX::ComplexEventStartTime ComplexEventStartTime_141(FIX::UTCTIMEONLY(1, 31, 45));
-        noComplexEventTimes_1_1_2_0.set(ComplexEventStartTime_141);
-        ComplexEventTimes_NoComplexEventTimes_141.insert(ComplexEventStartTime_141.getString());
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_141);
-
-        noComplexEventDates_1_1_1.addGroup(noComplexEventTimes_1_1_2_0);
-      }
-      {
-        FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_1_1_2_1;
-        // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_142;
-        FIX::ComplexEventEndTime ComplexEventEndTime_142(FIX::UTCTIMEONLY(9, 15, 43));
-        noComplexEventTimes_1_1_2_1.set(ComplexEventEndTime_142);
-        ComplexEventTimes_NoComplexEventTimes_142.insert(ComplexEventEndTime_142.getString());
-        FIX::ComplexEventStartTime ComplexEventStartTime_142(FIX::UTCTIMEONLY(18, 24, 28));
-        noComplexEventTimes_1_1_2_1.set(ComplexEventStartTime_142);
-        ComplexEventTimes_NoComplexEventTimes_142.insert(ComplexEventStartTime_142.getString());
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_142);
-
-        noComplexEventDates_1_1_1.addGroup(noComplexEventTimes_1_1_2_1);
-      }
-      {
-        FIX50SP2::Confirmation::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_1_1_2_2;
-        // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_143;
-        FIX::ComplexEventEndTime ComplexEventEndTime_143(FIX::UTCTIMEONLY(9, 7, 43));
-        noComplexEventTimes_1_1_2_2.set(ComplexEventEndTime_143);
-        ComplexEventTimes_NoComplexEventTimes_143.insert(ComplexEventEndTime_143.getString());
-        FIX::ComplexEventStartTime ComplexEventStartTime_143(FIX::UTCTIMEONLY(21, 40, 26));
-        noComplexEventTimes_1_1_2_2.set(ComplexEventStartTime_143);
-        ComplexEventTimes_NoComplexEventTimes_143.insert(ComplexEventStartTime_143.getString());
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_143);
-
-        noComplexEventDates_1_1_1.addGroup(noComplexEventTimes_1_1_2_2);
-      }
-      noComplexEvents_0_1.addGroup(noComplexEventDates_1_1_1);
-    }
-    msg.addGroup(noComplexEvents_0_1);
   }
   // EvntGrp
   // Group EvntGrp.NoEvents
   {
     FIX50SP2::Confirmation::NoEvents noEvents_0_0;
     // EvntGrp.NoEvents
-    multiset<string> EvntGrp_NoEvents_24;
-    FIX::EventDate EventDate_24("LOCALMKTDATE_175297968");
-    noEvents_0_0.set(EventDate_24);
-    EvntGrp_NoEvents_24.insert(EventDate_24.getString());
-    FIX::EventPx EventPx_24;
-    EventPx_24.setString("14486915");
-    noEvents_0_0.set(EventPx_24);
-    EvntGrp_NoEvents_24.insert(EventPx_24.getString());
-    FIX::EventText EventText_24("STRING_4952540");
-    noEvents_0_0.set(EventText_24);
-    EvntGrp_NoEvents_24.insert(EventText_24.getString());
-    FIX::EventTime EventTime_24(FIX::UTCTIMESTAMP(5, 16, 17, 14, 9, 2003));
-    noEvents_0_0.set(EventTime_24);
-    EvntGrp_NoEvents_24.insert(EventTime_24.getString());
-    FIX::EventType EventType_24(13);
-    noEvents_0_0.set(EventType_24);
-    EvntGrp_NoEvents_24.insert(EventType_24.getString());
-    all_values.push_back(EvntGrp_NoEvents_24);
+    multiset<string> EvntGrp_NoEvents_26;
+    FIX::EventDate EventDate_26("LOCALMKTDATE_1631549503");
+    noEvents_0_0.set(EventDate_26);
+    EvntGrp_NoEvents_26.insert(EventDate_26.getString());
+    FIX::EventPx EventPx_26;
+    EventPx_26.setString("15451179");
+    noEvents_0_0.set(EventPx_26);
+    EvntGrp_NoEvents_26.insert(EventPx_26.getString());
+    FIX::EventText EventText_26("STRING_966858871");
+    noEvents_0_0.set(EventText_26);
+    EvntGrp_NoEvents_26.insert(EventText_26.getString());
+    FIX::EventTime EventTime_26(FIX::UTCTIMESTAMP(23, 43, 33, 24, 6, 2003));
+    noEvents_0_0.set(EventTime_26);
+    EvntGrp_NoEvents_26.insert(EventTime_26.getString());
+    FIX::EventType EventType_26(6);
+    noEvents_0_0.set(EventType_26);
+    EvntGrp_NoEvents_26.insert(EventType_26.getString());
+    all_values.push_back(EvntGrp_NoEvents_26);
 
     msg.addGroup(noEvents_0_0);
   }
@@ -1403,248 +1377,131 @@ TEST ( Confirmation, set_fields)
   {
     FIX50SP2::Confirmation::NoInstrumentParties noInstrumentParties_0_0;
     // InstrumentParties.NoInstrumentParties
-    multiset<string> InstrumentParties_NoInstrumentParties_22;
-    FIX::InstrumentPartyID InstrumentPartyID_22("STRING_155878922");
-    noInstrumentParties_0_0.set(InstrumentPartyID_22);
-    InstrumentParties_NoInstrumentParties_22.insert(InstrumentPartyID_22.getString());
-    FIX::InstrumentPartyIDSource InstrumentPartyIDSource_22('8');
-    noInstrumentParties_0_0.set(InstrumentPartyIDSource_22);
-    InstrumentParties_NoInstrumentParties_22.insert(InstrumentPartyIDSource_22.getString());
-    FIX::InstrumentPartyRole InstrumentPartyRole_22(444348422);
-    noInstrumentParties_0_0.set(InstrumentPartyRole_22);
-    InstrumentParties_NoInstrumentParties_22.insert(InstrumentPartyRole_22.getString());
-    all_values.push_back(InstrumentParties_NoInstrumentParties_22);
+    multiset<string> InstrumentParties_NoInstrumentParties_28;
+    FIX::InstrumentPartyID InstrumentPartyID_28("STRING_473165873");
+    noInstrumentParties_0_0.set(InstrumentPartyID_28);
+    InstrumentParties_NoInstrumentParties_28.insert(InstrumentPartyID_28.getString());
+    FIX::InstrumentPartyIDSource InstrumentPartyIDSource_28('3');
+    noInstrumentParties_0_0.set(InstrumentPartyIDSource_28);
+    InstrumentParties_NoInstrumentParties_28.insert(InstrumentPartyIDSource_28.getString());
+    FIX::InstrumentPartyRole InstrumentPartyRole_28(252818501);
+    noInstrumentParties_0_0.set(InstrumentPartyRole_28);
+    InstrumentParties_NoInstrumentParties_28.insert(InstrumentPartyRole_28.getString());
+    all_values.push_back(InstrumentParties_NoInstrumentParties_28);
 
     // InstrumentPtysSubGrp
     // Group InstrumentPtysSubGrp.NoInstrumentPartySubIDs
     {
       FIX50SP2::Confirmation::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_0_1_0;
       // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_51;
-      FIX::InstrumentPartySubID InstrumentPartySubID_51("STRING_1202092464");
-      noInstrumentPartySubIDs_0_1_0.set(InstrumentPartySubID_51);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_51.insert(InstrumentPartySubID_51.getString());
-      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_51(908452785);
-      noInstrumentPartySubIDs_0_1_0.set(InstrumentPartySubIDType_51);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_51.insert(InstrumentPartySubIDType_51.getString());
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_51);
+      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_56;
+      FIX::InstrumentPartySubID InstrumentPartySubID_56("STRING_387171009");
+      noInstrumentPartySubIDs_0_1_0.set(InstrumentPartySubID_56);
+      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_56.insert(InstrumentPartySubID_56.getString());
+      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_56(1223804227);
+      noInstrumentPartySubIDs_0_1_0.set(InstrumentPartySubIDType_56);
+      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_56.insert(InstrumentPartySubIDType_56.getString());
+      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_56);
 
       noInstrumentParties_0_0.addGroup(noInstrumentPartySubIDs_0_1_0);
-    }
-    {
-      FIX50SP2::Confirmation::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_0_1_1;
-      // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_52;
-      FIX::InstrumentPartySubID InstrumentPartySubID_52("STRING_1647837093");
-      noInstrumentPartySubIDs_0_1_1.set(InstrumentPartySubID_52);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_52.insert(InstrumentPartySubID_52.getString());
-      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_52(1288854643);
-      noInstrumentPartySubIDs_0_1_1.set(InstrumentPartySubIDType_52);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_52.insert(InstrumentPartySubIDType_52.getString());
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_52);
-
-      noInstrumentParties_0_0.addGroup(noInstrumentPartySubIDs_0_1_1);
-    }
-    {
-      FIX50SP2::Confirmation::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_0_1_2;
-      // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_53;
-      FIX::InstrumentPartySubID InstrumentPartySubID_53("STRING_851896861");
-      noInstrumentPartySubIDs_0_1_2.set(InstrumentPartySubID_53);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_53.insert(InstrumentPartySubID_53.getString());
-      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_53(1927242121);
-      noInstrumentPartySubIDs_0_1_2.set(InstrumentPartySubIDType_53);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_53.insert(InstrumentPartySubIDType_53.getString());
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_53);
-
-      noInstrumentParties_0_0.addGroup(noInstrumentPartySubIDs_0_1_2);
     }
     msg.addGroup(noInstrumentParties_0_0);
   }
   {
     FIX50SP2::Confirmation::NoInstrumentParties noInstrumentParties_0_1;
     // InstrumentParties.NoInstrumentParties
-    multiset<string> InstrumentParties_NoInstrumentParties_23;
-    FIX::InstrumentPartyID InstrumentPartyID_23("STRING_1649115663");
-    noInstrumentParties_0_1.set(InstrumentPartyID_23);
-    InstrumentParties_NoInstrumentParties_23.insert(InstrumentPartyID_23.getString());
-    FIX::InstrumentPartyIDSource InstrumentPartyIDSource_23('1');
-    noInstrumentParties_0_1.set(InstrumentPartyIDSource_23);
-    InstrumentParties_NoInstrumentParties_23.insert(InstrumentPartyIDSource_23.getString());
-    FIX::InstrumentPartyRole InstrumentPartyRole_23(901394880);
-    noInstrumentParties_0_1.set(InstrumentPartyRole_23);
-    InstrumentParties_NoInstrumentParties_23.insert(InstrumentPartyRole_23.getString());
-    all_values.push_back(InstrumentParties_NoInstrumentParties_23);
+    multiset<string> InstrumentParties_NoInstrumentParties_29;
+    FIX::InstrumentPartyID InstrumentPartyID_29("STRING_353530214");
+    noInstrumentParties_0_1.set(InstrumentPartyID_29);
+    InstrumentParties_NoInstrumentParties_29.insert(InstrumentPartyID_29.getString());
+    FIX::InstrumentPartyIDSource InstrumentPartyIDSource_29('1');
+    noInstrumentParties_0_1.set(InstrumentPartyIDSource_29);
+    InstrumentParties_NoInstrumentParties_29.insert(InstrumentPartyIDSource_29.getString());
+    FIX::InstrumentPartyRole InstrumentPartyRole_29(1738596770);
+    noInstrumentParties_0_1.set(InstrumentPartyRole_29);
+    InstrumentParties_NoInstrumentParties_29.insert(InstrumentPartyRole_29.getString());
+    all_values.push_back(InstrumentParties_NoInstrumentParties_29);
 
     // InstrumentPtysSubGrp
     // Group InstrumentPtysSubGrp.NoInstrumentPartySubIDs
     {
       FIX50SP2::Confirmation::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_1_1_0;
       // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_54;
-      FIX::InstrumentPartySubID InstrumentPartySubID_54("STRING_679543921");
-      noInstrumentPartySubIDs_1_1_0.set(InstrumentPartySubID_54);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_54.insert(InstrumentPartySubID_54.getString());
-      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_54(1841820454);
-      noInstrumentPartySubIDs_1_1_0.set(InstrumentPartySubIDType_54);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_54.insert(InstrumentPartySubIDType_54.getString());
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_54);
+      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_57;
+      FIX::InstrumentPartySubID InstrumentPartySubID_57("STRING_2041489217");
+      noInstrumentPartySubIDs_1_1_0.set(InstrumentPartySubID_57);
+      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_57.insert(InstrumentPartySubID_57.getString());
+      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_57(2127840105);
+      noInstrumentPartySubIDs_1_1_0.set(InstrumentPartySubIDType_57);
+      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_57.insert(InstrumentPartySubIDType_57.getString());
+      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_57);
 
       noInstrumentParties_0_1.addGroup(noInstrumentPartySubIDs_1_1_0);
     }
     {
       FIX50SP2::Confirmation::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_1_1_1;
       // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_55;
-      FIX::InstrumentPartySubID InstrumentPartySubID_55("STRING_1069241538");
-      noInstrumentPartySubIDs_1_1_1.set(InstrumentPartySubID_55);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_55.insert(InstrumentPartySubID_55.getString());
-      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_55(1810750647);
-      noInstrumentPartySubIDs_1_1_1.set(InstrumentPartySubIDType_55);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_55.insert(InstrumentPartySubIDType_55.getString());
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_55);
+      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_58;
+      FIX::InstrumentPartySubID InstrumentPartySubID_58("STRING_574482097");
+      noInstrumentPartySubIDs_1_1_1.set(InstrumentPartySubID_58);
+      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_58.insert(InstrumentPartySubID_58.getString());
+      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_58(248886298);
+      noInstrumentPartySubIDs_1_1_1.set(InstrumentPartySubIDType_58);
+      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_58.insert(InstrumentPartySubIDType_58.getString());
+      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_58);
 
       noInstrumentParties_0_1.addGroup(noInstrumentPartySubIDs_1_1_1);
     }
     {
       FIX50SP2::Confirmation::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_1_1_2;
       // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_56;
-      FIX::InstrumentPartySubID InstrumentPartySubID_56("STRING_262443947");
-      noInstrumentPartySubIDs_1_1_2.set(InstrumentPartySubID_56);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_56.insert(InstrumentPartySubID_56.getString());
-      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_56(1244539506);
-      noInstrumentPartySubIDs_1_1_2.set(InstrumentPartySubIDType_56);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_56.insert(InstrumentPartySubIDType_56.getString());
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_56);
+      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_59;
+      FIX::InstrumentPartySubID InstrumentPartySubID_59("STRING_490654769");
+      noInstrumentPartySubIDs_1_1_2.set(InstrumentPartySubID_59);
+      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_59.insert(InstrumentPartySubID_59.getString());
+      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_59(1056864481);
+      noInstrumentPartySubIDs_1_1_2.set(InstrumentPartySubIDType_59);
+      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_59.insert(InstrumentPartySubIDType_59.getString());
+      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_59);
 
       noInstrumentParties_0_1.addGroup(noInstrumentPartySubIDs_1_1_2);
     }
     msg.addGroup(noInstrumentParties_0_1);
-  }
-  {
-    FIX50SP2::Confirmation::NoInstrumentParties noInstrumentParties_0_2;
-    // InstrumentParties.NoInstrumentParties
-    multiset<string> InstrumentParties_NoInstrumentParties_24;
-    FIX::InstrumentPartyID InstrumentPartyID_24("STRING_1111958529");
-    noInstrumentParties_0_2.set(InstrumentPartyID_24);
-    InstrumentParties_NoInstrumentParties_24.insert(InstrumentPartyID_24.getString());
-    FIX::InstrumentPartyIDSource InstrumentPartyIDSource_24('2');
-    noInstrumentParties_0_2.set(InstrumentPartyIDSource_24);
-    InstrumentParties_NoInstrumentParties_24.insert(InstrumentPartyIDSource_24.getString());
-    FIX::InstrumentPartyRole InstrumentPartyRole_24(1432599648);
-    noInstrumentParties_0_2.set(InstrumentPartyRole_24);
-    InstrumentParties_NoInstrumentParties_24.insert(InstrumentPartyRole_24.getString());
-    all_values.push_back(InstrumentParties_NoInstrumentParties_24);
-
-    // InstrumentPtysSubGrp
-    // Group InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-    {
-      FIX50SP2::Confirmation::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_2_1_0;
-      // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_57;
-      FIX::InstrumentPartySubID InstrumentPartySubID_57("STRING_311717064");
-      noInstrumentPartySubIDs_2_1_0.set(InstrumentPartySubID_57);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_57.insert(InstrumentPartySubID_57.getString());
-      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_57(924406797);
-      noInstrumentPartySubIDs_2_1_0.set(InstrumentPartySubIDType_57);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_57.insert(InstrumentPartySubIDType_57.getString());
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_57);
-
-      noInstrumentParties_0_2.addGroup(noInstrumentPartySubIDs_2_1_0);
-    }
-    {
-      FIX50SP2::Confirmation::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_2_1_1;
-      // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_58;
-      FIX::InstrumentPartySubID InstrumentPartySubID_58("STRING_1728709444");
-      noInstrumentPartySubIDs_2_1_1.set(InstrumentPartySubID_58);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_58.insert(InstrumentPartySubID_58.getString());
-      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_58(2021622656);
-      noInstrumentPartySubIDs_2_1_1.set(InstrumentPartySubIDType_58);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_58.insert(InstrumentPartySubIDType_58.getString());
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_58);
-
-      noInstrumentParties_0_2.addGroup(noInstrumentPartySubIDs_2_1_1);
-    }
-    {
-      FIX50SP2::Confirmation::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_2_1_2;
-      // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_59;
-      FIX::InstrumentPartySubID InstrumentPartySubID_59("STRING_1891488876");
-      noInstrumentPartySubIDs_2_1_2.set(InstrumentPartySubID_59);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_59.insert(InstrumentPartySubID_59.getString());
-      FIX::InstrumentPartySubIDType InstrumentPartySubIDType_59(1360589728);
-      noInstrumentPartySubIDs_2_1_2.set(InstrumentPartySubIDType_59);
-      InstrumentPtysSubGrp_NoInstrumentPartySubIDs_59.insert(InstrumentPartySubIDType_59.getString());
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_59);
-
-      noInstrumentParties_0_2.addGroup(noInstrumentPartySubIDs_2_1_2);
-    }
-    msg.addGroup(noInstrumentParties_0_2);
   }
   // SecAltIDGrp
   // Group SecAltIDGrp.NoSecurityAltID
   {
     FIX50SP2::Confirmation::NoSecurityAltID noSecurityAltID_0_0;
     // SecAltIDGrp.NoSecurityAltID
-    multiset<string> SecAltIDGrp_NoSecurityAltID_27;
-    FIX::SecurityAltID SecurityAltID_27("STRING_2047367799");
-    noSecurityAltID_0_0.set(SecurityAltID_27);
-    SecAltIDGrp_NoSecurityAltID_27.insert(SecurityAltID_27.getString());
-    FIX::SecurityAltIDSource SecurityAltIDSource_27("STRING_84857489");
-    noSecurityAltID_0_0.set(SecurityAltIDSource_27);
-    SecAltIDGrp_NoSecurityAltID_27.insert(SecurityAltIDSource_27.getString());
-    all_values.push_back(SecAltIDGrp_NoSecurityAltID_27);
+    multiset<string> SecAltIDGrp_NoSecurityAltID_31;
+    FIX::SecurityAltID SecurityAltID_31("STRING_311080365");
+    noSecurityAltID_0_0.set(SecurityAltID_31);
+    SecAltIDGrp_NoSecurityAltID_31.insert(SecurityAltID_31.getString());
+    FIX::SecurityAltIDSource SecurityAltIDSource_31("STRING_1587511594");
+    noSecurityAltID_0_0.set(SecurityAltIDSource_31);
+    SecAltIDGrp_NoSecurityAltID_31.insert(SecurityAltIDSource_31.getString());
+    all_values.push_back(SecAltIDGrp_NoSecurityAltID_31);
 
     msg.addGroup(noSecurityAltID_0_0);
   }
-  {
-    FIX50SP2::Confirmation::NoSecurityAltID noSecurityAltID_0_1;
-    // SecAltIDGrp.NoSecurityAltID
-    multiset<string> SecAltIDGrp_NoSecurityAltID_28;
-    FIX::SecurityAltID SecurityAltID_28("STRING_1845530944");
-    noSecurityAltID_0_1.set(SecurityAltID_28);
-    SecAltIDGrp_NoSecurityAltID_28.insert(SecurityAltID_28.getString());
-    FIX::SecurityAltIDSource SecurityAltIDSource_28("STRING_1791376386");
-    noSecurityAltID_0_1.set(SecurityAltIDSource_28);
-    SecAltIDGrp_NoSecurityAltID_28.insert(SecurityAltIDSource_28.getString());
-    all_values.push_back(SecAltIDGrp_NoSecurityAltID_28);
-
-    msg.addGroup(noSecurityAltID_0_1);
-  }
-  {
-    FIX50SP2::Confirmation::NoSecurityAltID noSecurityAltID_0_2;
-    // SecAltIDGrp.NoSecurityAltID
-    multiset<string> SecAltIDGrp_NoSecurityAltID_29;
-    FIX::SecurityAltID SecurityAltID_29("STRING_1286949953");
-    noSecurityAltID_0_2.set(SecurityAltID_29);
-    SecAltIDGrp_NoSecurityAltID_29.insert(SecurityAltID_29.getString());
-    FIX::SecurityAltIDSource SecurityAltIDSource_29("STRING_606500082");
-    noSecurityAltID_0_2.set(SecurityAltIDSource_29);
-    SecAltIDGrp_NoSecurityAltID_29.insert(SecurityAltIDSource_29.getString());
-    all_values.push_back(SecAltIDGrp_NoSecurityAltID_29);
-
-    msg.addGroup(noSecurityAltID_0_2);
-  }
   // SecurityXML
-  multiset<string> SecurityXML_26;
-  FIX::SecurityXML SecurityXML_27("XMLDATA_1291729831");
-  msg.set(SecurityXML_27);
-  FIX::SecurityXMLLen SecurityXMLLen_13(428320948);
-  msg.set(SecurityXMLLen_13);
-  FIX::SecurityXMLSchema SecurityXMLSchema_13("STRING_1458396943");
-  msg.set(SecurityXMLSchema_13);
-  SecurityXML_26.insert(SecurityXMLSchema_13.getString());
-  all_values.push_back(SecurityXML_26);
+  multiset<string> SecurityXML_28;
+  FIX::SecurityXML SecurityXML_29("XMLDATA_2088331759");
+  msg.set(SecurityXML_29);
+  FIX::SecurityXMLLen SecurityXMLLen_14(1856198318);
+  msg.set(SecurityXMLLen_14);
+  FIX::SecurityXMLSchema SecurityXMLSchema_14("STRING_406886818");
+  msg.set(SecurityXMLSchema_14);
+  SecurityXML_28.insert(SecurityXMLSchema_14.getString());
+  all_values.push_back(SecurityXML_28);
 
   // InstrumentExtension
   multiset<string> InstrumentExtension_3;
-  FIX::DeliveryForm DeliveryForm_3(2);
+  FIX::DeliveryForm DeliveryForm_3(1);
   msg.set(DeliveryForm_3);
   InstrumentExtension_3.insert(DeliveryForm_3.getString());
   FIX::PctAtRisk PctAtRisk_3;
-  PctAtRisk_3.setString("66.110000");
+  PctAtRisk_3.setString("96.850000");
   msg.set(PctAtRisk_3);
   InstrumentExtension_3.insert(PctAtRisk_3.getString());
   all_values.push_back(InstrumentExtension_3);
@@ -1654,72 +1511,86 @@ TEST ( Confirmation, set_fields)
   {
     FIX50SP2::Confirmation::NoInstrAttrib noInstrAttrib_0_0;
     // AttrbGrp.NoInstrAttrib
-    multiset<string> AttrbGrp_NoInstrAttrib_5;
-    FIX::InstrAttribType InstrAttribType_5(26);
-    noInstrAttrib_0_0.set(InstrAttribType_5);
-    AttrbGrp_NoInstrAttrib_5.insert(InstrAttribType_5.getString());
-    FIX::InstrAttribValue InstrAttribValue_5("STRING_645724441");
-    noInstrAttrib_0_0.set(InstrAttribValue_5);
-    AttrbGrp_NoInstrAttrib_5.insert(InstrAttribValue_5.getString());
-    all_values.push_back(AttrbGrp_NoInstrAttrib_5);
+    multiset<string> AttrbGrp_NoInstrAttrib_7;
+    FIX::InstrAttribType InstrAttribType_7(27);
+    noInstrAttrib_0_0.set(InstrAttribType_7);
+    AttrbGrp_NoInstrAttrib_7.insert(InstrAttribType_7.getString());
+    FIX::InstrAttribValue InstrAttribValue_7("STRING_1931886549");
+    noInstrAttrib_0_0.set(InstrAttribValue_7);
+    AttrbGrp_NoInstrAttrib_7.insert(InstrAttribValue_7.getString());
+    all_values.push_back(AttrbGrp_NoInstrAttrib_7);
 
     msg.addGroup(noInstrAttrib_0_0);
   }
   {
     FIX50SP2::Confirmation::NoInstrAttrib noInstrAttrib_0_1;
     // AttrbGrp.NoInstrAttrib
-    multiset<string> AttrbGrp_NoInstrAttrib_6;
-    FIX::InstrAttribType InstrAttribType_6(18);
-    noInstrAttrib_0_1.set(InstrAttribType_6);
-    AttrbGrp_NoInstrAttrib_6.insert(InstrAttribType_6.getString());
-    FIX::InstrAttribValue InstrAttribValue_6("STRING_1667219991");
-    noInstrAttrib_0_1.set(InstrAttribValue_6);
-    AttrbGrp_NoInstrAttrib_6.insert(InstrAttribValue_6.getString());
-    all_values.push_back(AttrbGrp_NoInstrAttrib_6);
+    multiset<string> AttrbGrp_NoInstrAttrib_8;
+    FIX::InstrAttribType InstrAttribType_8(15);
+    noInstrAttrib_0_1.set(InstrAttribType_8);
+    AttrbGrp_NoInstrAttrib_8.insert(InstrAttribType_8.getString());
+    FIX::InstrAttribValue InstrAttribValue_8("STRING_1166171285");
+    noInstrAttrib_0_1.set(InstrAttribValue_8);
+    AttrbGrp_NoInstrAttrib_8.insert(InstrAttribValue_8.getString());
+    all_values.push_back(AttrbGrp_NoInstrAttrib_8);
 
     msg.addGroup(noInstrAttrib_0_1);
+  }
+  {
+    FIX50SP2::Confirmation::NoInstrAttrib noInstrAttrib_0_2;
+    // AttrbGrp.NoInstrAttrib
+    multiset<string> AttrbGrp_NoInstrAttrib_9;
+    FIX::InstrAttribType InstrAttribType_9(26);
+    noInstrAttrib_0_2.set(InstrAttribType_9);
+    AttrbGrp_NoInstrAttrib_9.insert(InstrAttribType_9.getString());
+    FIX::InstrAttribValue InstrAttribValue_9("STRING_1948878999");
+    noInstrAttrib_0_2.set(InstrAttribValue_9);
+    AttrbGrp_NoInstrAttrib_9.insert(InstrAttribValue_9.getString());
+    all_values.push_back(AttrbGrp_NoInstrAttrib_9);
+
+    msg.addGroup(noInstrAttrib_0_2);
   }
   // MiscFeesGrp
   // Group MiscFeesGrp.NoMiscFees
   {
     FIX50SP2::Confirmation::NoMiscFees noMiscFees_0_0;
     // MiscFeesGrp.NoMiscFees
-    multiset<string> MiscFeesGrp_NoMiscFees_18;
-    FIX::MiscFeeAmt MiscFeeAmt_18;
-    MiscFeeAmt_18.setString("8102550");
-    noMiscFees_0_0.set(MiscFeeAmt_18);
-    MiscFeesGrp_NoMiscFees_18.insert(MiscFeeAmt_18.getString());
-    FIX::MiscFeeBasis MiscFeeBasis_18(0);
-    noMiscFees_0_0.set(MiscFeeBasis_18);
-    MiscFeesGrp_NoMiscFees_18.insert(MiscFeeBasis_18.getString());
-    FIX::MiscFeeCurr MiscFeeCurr_18("JPY");
-    noMiscFees_0_0.set(MiscFeeCurr_18);
-    MiscFeesGrp_NoMiscFees_18.insert(MiscFeeCurr_18.getString());
-    FIX::MiscFeeType MiscFeeType_18("STRING_7");
-    noMiscFees_0_0.set(MiscFeeType_18);
-    MiscFeesGrp_NoMiscFees_18.insert(MiscFeeType_18.getString());
-    all_values.push_back(MiscFeesGrp_NoMiscFees_18);
+    multiset<string> MiscFeesGrp_NoMiscFees_19;
+    FIX::MiscFeeAmt MiscFeeAmt_19;
+    MiscFeeAmt_19.setString("1197848");
+    noMiscFees_0_0.set(MiscFeeAmt_19);
+    MiscFeesGrp_NoMiscFees_19.insert(MiscFeeAmt_19.getString());
+    FIX::MiscFeeBasis MiscFeeBasis_19(0);
+    noMiscFees_0_0.set(MiscFeeBasis_19);
+    MiscFeesGrp_NoMiscFees_19.insert(MiscFeeBasis_19.getString());
+    FIX::MiscFeeCurr MiscFeeCurr_19("CAN");
+    noMiscFees_0_0.set(MiscFeeCurr_19);
+    MiscFeesGrp_NoMiscFees_19.insert(MiscFeeCurr_19.getString());
+    FIX::MiscFeeType MiscFeeType_19("STRING_10");
+    noMiscFees_0_0.set(MiscFeeType_19);
+    MiscFeesGrp_NoMiscFees_19.insert(MiscFeeType_19.getString());
+    all_values.push_back(MiscFeesGrp_NoMiscFees_19);
 
     msg.addGroup(noMiscFees_0_0);
   }
   {
     FIX50SP2::Confirmation::NoMiscFees noMiscFees_0_1;
     // MiscFeesGrp.NoMiscFees
-    multiset<string> MiscFeesGrp_NoMiscFees_19;
-    FIX::MiscFeeAmt MiscFeeAmt_19;
-    MiscFeeAmt_19.setString("971378");
-    noMiscFees_0_1.set(MiscFeeAmt_19);
-    MiscFeesGrp_NoMiscFees_19.insert(MiscFeeAmt_19.getString());
-    FIX::MiscFeeBasis MiscFeeBasis_19(1);
-    noMiscFees_0_1.set(MiscFeeBasis_19);
-    MiscFeesGrp_NoMiscFees_19.insert(MiscFeeBasis_19.getString());
-    FIX::MiscFeeCurr MiscFeeCurr_19("EUR");
-    noMiscFees_0_1.set(MiscFeeCurr_19);
-    MiscFeesGrp_NoMiscFees_19.insert(MiscFeeCurr_19.getString());
-    FIX::MiscFeeType MiscFeeType_19("STRING_9");
-    noMiscFees_0_1.set(MiscFeeType_19);
-    MiscFeesGrp_NoMiscFees_19.insert(MiscFeeType_19.getString());
-    all_values.push_back(MiscFeesGrp_NoMiscFees_19);
+    multiset<string> MiscFeesGrp_NoMiscFees_20;
+    FIX::MiscFeeAmt MiscFeeAmt_20;
+    MiscFeeAmt_20.setString("10096630");
+    noMiscFees_0_1.set(MiscFeeAmt_20);
+    MiscFeesGrp_NoMiscFees_20.insert(MiscFeeAmt_20.getString());
+    FIX::MiscFeeBasis MiscFeeBasis_20(0);
+    noMiscFees_0_1.set(MiscFeeBasis_20);
+    MiscFeesGrp_NoMiscFees_20.insert(MiscFeeBasis_20.getString());
+    FIX::MiscFeeCurr MiscFeeCurr_20("CAN");
+    noMiscFees_0_1.set(MiscFeeCurr_20);
+    MiscFeesGrp_NoMiscFees_20.insert(MiscFeeCurr_20.getString());
+    FIX::MiscFeeType MiscFeeType_20("STRING_7");
+    noMiscFees_0_1.set(MiscFeeType_20);
+    MiscFeesGrp_NoMiscFees_20.insert(MiscFeeType_20.getString());
+    all_values.push_back(MiscFeesGrp_NoMiscFees_20);
 
     msg.addGroup(noMiscFees_0_1);
   }
@@ -1728,94 +1599,94 @@ TEST ( Confirmation, set_fields)
   {
     FIX50SP2::Confirmation::NoOrders noOrders_0_0;
     // OrdAllocGrp.NoOrders
-    multiset<string> OrdAllocGrp_NoOrders_6;
-    FIX::ClOrdID ClOrdID_12("STRING_765549863");
-    noOrders_0_0.set(ClOrdID_12);
-    OrdAllocGrp_NoOrders_6.insert(ClOrdID_12.getString());
-    FIX::ListID ListID_12("STRING_39113018");
-    noOrders_0_0.set(ListID_12);
-    OrdAllocGrp_NoOrders_6.insert(ListID_12.getString());
-    FIX::OrderAvgPx OrderAvgPx_6;
-    OrderAvgPx_6.setString("16366153");
-    noOrders_0_0.set(OrderAvgPx_6);
-    OrdAllocGrp_NoOrders_6.insert(OrderAvgPx_6.getString());
-    FIX::OrderBookingQty OrderBookingQty_6;
-    OrderBookingQty_6.setString("6654340");
-    noOrders_0_0.set(OrderBookingQty_6);
-    OrdAllocGrp_NoOrders_6.insert(OrderBookingQty_6.getString());
-    FIX::OrderID OrderID_12("STRING_123970507");
-    noOrders_0_0.set(OrderID_12);
-    OrdAllocGrp_NoOrders_6.insert(OrderID_12.getString());
-    FIX::OrderQty OrderQty_6;
-    OrderQty_6.setString("13346626");
-    noOrders_0_0.set(OrderQty_6);
-    OrdAllocGrp_NoOrders_6.insert(OrderQty_6.getString());
-    FIX::SecondaryClOrdID SecondaryClOrdID_12("STRING_309326753");
-    noOrders_0_0.set(SecondaryClOrdID_12);
-    OrdAllocGrp_NoOrders_6.insert(SecondaryClOrdID_12.getString());
-    FIX::SecondaryOrderID SecondaryOrderID_12("STRING_1410920460");
-    noOrders_0_0.set(SecondaryOrderID_12);
-    OrdAllocGrp_NoOrders_6.insert(SecondaryOrderID_12.getString());
-    all_values.push_back(OrdAllocGrp_NoOrders_6);
+    multiset<string> OrdAllocGrp_NoOrders_7;
+    FIX::ClOrdID ClOrdID_13("STRING_1172206878");
+    noOrders_0_0.set(ClOrdID_13);
+    OrdAllocGrp_NoOrders_7.insert(ClOrdID_13.getString());
+    FIX::ListID ListID_9("STRING_210398482");
+    noOrders_0_0.set(ListID_9);
+    OrdAllocGrp_NoOrders_7.insert(ListID_9.getString());
+    FIX::OrderAvgPx OrderAvgPx_7;
+    OrderAvgPx_7.setString("13401424");
+    noOrders_0_0.set(OrderAvgPx_7);
+    OrdAllocGrp_NoOrders_7.insert(OrderAvgPx_7.getString());
+    FIX::OrderBookingQty OrderBookingQty_7;
+    OrderBookingQty_7.setString("815877");
+    noOrders_0_0.set(OrderBookingQty_7);
+    OrdAllocGrp_NoOrders_7.insert(OrderBookingQty_7.getString());
+    FIX::OrderID OrderID_13("STRING_667180738");
+    noOrders_0_0.set(OrderID_13);
+    OrdAllocGrp_NoOrders_7.insert(OrderID_13.getString());
+    FIX::OrderQty OrderQty_7;
+    OrderQty_7.setString("16512227");
+    noOrders_0_0.set(OrderQty_7);
+    OrdAllocGrp_NoOrders_7.insert(OrderQty_7.getString());
+    FIX::SecondaryClOrdID SecondaryClOrdID_13("STRING_1669099306");
+    noOrders_0_0.set(SecondaryClOrdID_13);
+    OrdAllocGrp_NoOrders_7.insert(SecondaryClOrdID_13.getString());
+    FIX::SecondaryOrderID SecondaryOrderID_13("STRING_608028850");
+    noOrders_0_0.set(SecondaryOrderID_13);
+    OrdAllocGrp_NoOrders_7.insert(SecondaryOrderID_13.getString());
+    all_values.push_back(OrdAllocGrp_NoOrders_7);
 
     // NestedParties2
     // Group NestedParties2.NoNested2PartyIDs
     {
       FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs noNested2PartyIDs_0_1_0;
       // NestedParties2.NoNested2PartyIDs
-      multiset<string> NestedParties2_NoNested2PartyIDs_9;
-      FIX::Nested2PartyID Nested2PartyID_9("STRING_1601056584");
-      noNested2PartyIDs_0_1_0.set(Nested2PartyID_9);
-      NestedParties2_NoNested2PartyIDs_9.insert(Nested2PartyID_9.getString());
-      FIX::Nested2PartyIDSource Nested2PartyIDSource_9('1');
-      noNested2PartyIDs_0_1_0.set(Nested2PartyIDSource_9);
-      NestedParties2_NoNested2PartyIDs_9.insert(Nested2PartyIDSource_9.getString());
-      FIX::Nested2PartyRole Nested2PartyRole_9(1252076047);
-      noNested2PartyIDs_0_1_0.set(Nested2PartyRole_9);
-      NestedParties2_NoNested2PartyIDs_9.insert(Nested2PartyRole_9.getString());
-      all_values.push_back(NestedParties2_NoNested2PartyIDs_9);
+      multiset<string> NestedParties2_NoNested2PartyIDs_14;
+      FIX::Nested2PartyID Nested2PartyID_14("STRING_2075986124");
+      noNested2PartyIDs_0_1_0.set(Nested2PartyID_14);
+      NestedParties2_NoNested2PartyIDs_14.insert(Nested2PartyID_14.getString());
+      FIX::Nested2PartyIDSource Nested2PartyIDSource_14('5');
+      noNested2PartyIDs_0_1_0.set(Nested2PartyIDSource_14);
+      NestedParties2_NoNested2PartyIDs_14.insert(Nested2PartyIDSource_14.getString());
+      FIX::Nested2PartyRole Nested2PartyRole_14(1047543501);
+      noNested2PartyIDs_0_1_0.set(Nested2PartyRole_14);
+      NestedParties2_NoNested2PartyIDs_14.insert(Nested2PartyRole_14.getString());
+      all_values.push_back(NestedParties2_NoNested2PartyIDs_14);
 
       // NstdPtys2SubGrp
       // Group NstdPtys2SubGrp.NoNested2PartySubIDs
       {
         FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_0_0_2_0;
         // NstdPtys2SubGrp.NoNested2PartySubIDs
-        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_21;
-        FIX::Nested2PartySubID Nested2PartySubID_21("STRING_1769194372");
-        noNested2PartySubIDs_0_0_2_0.set(Nested2PartySubID_21);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_21.insert(Nested2PartySubID_21.getString());
-        FIX::Nested2PartySubIDType Nested2PartySubIDType_21(1719520133);
-        noNested2PartySubIDs_0_0_2_0.set(Nested2PartySubIDType_21);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_21.insert(Nested2PartySubIDType_21.getString());
-        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_21);
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_30;
+        FIX::Nested2PartySubID Nested2PartySubID_30("STRING_929353468");
+        noNested2PartySubIDs_0_0_2_0.set(Nested2PartySubID_30);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_30.insert(Nested2PartySubID_30.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_30(831946402);
+        noNested2PartySubIDs_0_0_2_0.set(Nested2PartySubIDType_30);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_30.insert(Nested2PartySubIDType_30.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_30);
 
         noNested2PartyIDs_0_1_0.addGroup(noNested2PartySubIDs_0_0_2_0);
       }
       {
         FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_0_0_2_1;
         // NstdPtys2SubGrp.NoNested2PartySubIDs
-        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_22;
-        FIX::Nested2PartySubID Nested2PartySubID_22("STRING_350460779");
-        noNested2PartySubIDs_0_0_2_1.set(Nested2PartySubID_22);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_22.insert(Nested2PartySubID_22.getString());
-        FIX::Nested2PartySubIDType Nested2PartySubIDType_22(267435166);
-        noNested2PartySubIDs_0_0_2_1.set(Nested2PartySubIDType_22);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_22.insert(Nested2PartySubIDType_22.getString());
-        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_22);
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_31;
+        FIX::Nested2PartySubID Nested2PartySubID_31("STRING_1706617831");
+        noNested2PartySubIDs_0_0_2_1.set(Nested2PartySubID_31);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_31.insert(Nested2PartySubID_31.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_31(2095524753);
+        noNested2PartySubIDs_0_0_2_1.set(Nested2PartySubIDType_31);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_31.insert(Nested2PartySubIDType_31.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_31);
 
         noNested2PartyIDs_0_1_0.addGroup(noNested2PartySubIDs_0_0_2_1);
       }
       {
         FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_0_0_2_2;
         // NstdPtys2SubGrp.NoNested2PartySubIDs
-        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_23;
-        FIX::Nested2PartySubID Nested2PartySubID_23("STRING_719024493");
-        noNested2PartySubIDs_0_0_2_2.set(Nested2PartySubID_23);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_23.insert(Nested2PartySubID_23.getString());
-        FIX::Nested2PartySubIDType Nested2PartySubIDType_23(2017680770);
-        noNested2PartySubIDs_0_0_2_2.set(Nested2PartySubIDType_23);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_23.insert(Nested2PartySubIDType_23.getString());
-        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_23);
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_32;
+        FIX::Nested2PartySubID Nested2PartySubID_32("STRING_620005149");
+        noNested2PartySubIDs_0_0_2_2.set(Nested2PartySubID_32);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_32.insert(Nested2PartySubID_32.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_32(1508013182);
+        noNested2PartySubIDs_0_0_2_2.set(Nested2PartySubIDType_32);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_32.insert(Nested2PartySubIDType_32.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_32);
 
         noNested2PartyIDs_0_1_0.addGroup(noNested2PartySubIDs_0_0_2_2);
       }
@@ -1824,344 +1695,470 @@ TEST ( Confirmation, set_fields)
     {
       FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs noNested2PartyIDs_0_1_1;
       // NestedParties2.NoNested2PartyIDs
-      multiset<string> NestedParties2_NoNested2PartyIDs_10;
-      FIX::Nested2PartyID Nested2PartyID_10("STRING_1982401145");
-      noNested2PartyIDs_0_1_1.set(Nested2PartyID_10);
-      NestedParties2_NoNested2PartyIDs_10.insert(Nested2PartyID_10.getString());
-      FIX::Nested2PartyIDSource Nested2PartyIDSource_10('1');
-      noNested2PartyIDs_0_1_1.set(Nested2PartyIDSource_10);
-      NestedParties2_NoNested2PartyIDs_10.insert(Nested2PartyIDSource_10.getString());
-      FIX::Nested2PartyRole Nested2PartyRole_10(1799861061);
-      noNested2PartyIDs_0_1_1.set(Nested2PartyRole_10);
-      NestedParties2_NoNested2PartyIDs_10.insert(Nested2PartyRole_10.getString());
-      all_values.push_back(NestedParties2_NoNested2PartyIDs_10);
+      multiset<string> NestedParties2_NoNested2PartyIDs_15;
+      FIX::Nested2PartyID Nested2PartyID_15("STRING_1587378263");
+      noNested2PartyIDs_0_1_1.set(Nested2PartyID_15);
+      NestedParties2_NoNested2PartyIDs_15.insert(Nested2PartyID_15.getString());
+      FIX::Nested2PartyIDSource Nested2PartyIDSource_15('7');
+      noNested2PartyIDs_0_1_1.set(Nested2PartyIDSource_15);
+      NestedParties2_NoNested2PartyIDs_15.insert(Nested2PartyIDSource_15.getString());
+      FIX::Nested2PartyRole Nested2PartyRole_15(1562227034);
+      noNested2PartyIDs_0_1_1.set(Nested2PartyRole_15);
+      NestedParties2_NoNested2PartyIDs_15.insert(Nested2PartyRole_15.getString());
+      all_values.push_back(NestedParties2_NoNested2PartyIDs_15);
 
       // NstdPtys2SubGrp
       // Group NstdPtys2SubGrp.NoNested2PartySubIDs
       {
         FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_0_1_2_0;
         // NstdPtys2SubGrp.NoNested2PartySubIDs
-        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_24;
-        FIX::Nested2PartySubID Nested2PartySubID_24("STRING_1304009388");
-        noNested2PartySubIDs_0_1_2_0.set(Nested2PartySubID_24);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_24.insert(Nested2PartySubID_24.getString());
-        FIX::Nested2PartySubIDType Nested2PartySubIDType_24(1849437840);
-        noNested2PartySubIDs_0_1_2_0.set(Nested2PartySubIDType_24);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_24.insert(Nested2PartySubIDType_24.getString());
-        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_24);
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_33;
+        FIX::Nested2PartySubID Nested2PartySubID_33("STRING_1246745771");
+        noNested2PartySubIDs_0_1_2_0.set(Nested2PartySubID_33);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_33.insert(Nested2PartySubID_33.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_33(692761465);
+        noNested2PartySubIDs_0_1_2_0.set(Nested2PartySubIDType_33);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_33.insert(Nested2PartySubIDType_33.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_33);
 
         noNested2PartyIDs_0_1_1.addGroup(noNested2PartySubIDs_0_1_2_0);
+      }
+      {
+        FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_0_1_2_1;
+        // NstdPtys2SubGrp.NoNested2PartySubIDs
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_34;
+        FIX::Nested2PartySubID Nested2PartySubID_34("STRING_1105690546");
+        noNested2PartySubIDs_0_1_2_1.set(Nested2PartySubID_34);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_34.insert(Nested2PartySubID_34.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_34(1314252386);
+        noNested2PartySubIDs_0_1_2_1.set(Nested2PartySubIDType_34);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_34.insert(Nested2PartySubIDType_34.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_34);
+
+        noNested2PartyIDs_0_1_1.addGroup(noNested2PartySubIDs_0_1_2_1);
+      }
+      {
+        FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_0_1_2_2;
+        // NstdPtys2SubGrp.NoNested2PartySubIDs
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_35;
+        FIX::Nested2PartySubID Nested2PartySubID_35("STRING_1561892666");
+        noNested2PartySubIDs_0_1_2_2.set(Nested2PartySubID_35);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_35.insert(Nested2PartySubID_35.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_35(1703415327);
+        noNested2PartySubIDs_0_1_2_2.set(Nested2PartySubIDType_35);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_35.insert(Nested2PartySubIDType_35.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_35);
+
+        noNested2PartyIDs_0_1_1.addGroup(noNested2PartySubIDs_0_1_2_2);
       }
       noOrders_0_0.addGroup(noNested2PartyIDs_0_1_1);
     }
     {
       FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs noNested2PartyIDs_0_1_2;
       // NestedParties2.NoNested2PartyIDs
-      multiset<string> NestedParties2_NoNested2PartyIDs_11;
-      FIX::Nested2PartyID Nested2PartyID_11("STRING_744077173");
-      noNested2PartyIDs_0_1_2.set(Nested2PartyID_11);
-      NestedParties2_NoNested2PartyIDs_11.insert(Nested2PartyID_11.getString());
-      FIX::Nested2PartyIDSource Nested2PartyIDSource_11('4');
-      noNested2PartyIDs_0_1_2.set(Nested2PartyIDSource_11);
-      NestedParties2_NoNested2PartyIDs_11.insert(Nested2PartyIDSource_11.getString());
-      FIX::Nested2PartyRole Nested2PartyRole_11(63248034);
-      noNested2PartyIDs_0_1_2.set(Nested2PartyRole_11);
-      NestedParties2_NoNested2PartyIDs_11.insert(Nested2PartyRole_11.getString());
-      all_values.push_back(NestedParties2_NoNested2PartyIDs_11);
+      multiset<string> NestedParties2_NoNested2PartyIDs_16;
+      FIX::Nested2PartyID Nested2PartyID_16("STRING_1275764571");
+      noNested2PartyIDs_0_1_2.set(Nested2PartyID_16);
+      NestedParties2_NoNested2PartyIDs_16.insert(Nested2PartyID_16.getString());
+      FIX::Nested2PartyIDSource Nested2PartyIDSource_16('2');
+      noNested2PartyIDs_0_1_2.set(Nested2PartyIDSource_16);
+      NestedParties2_NoNested2PartyIDs_16.insert(Nested2PartyIDSource_16.getString());
+      FIX::Nested2PartyRole Nested2PartyRole_16(728138557);
+      noNested2PartyIDs_0_1_2.set(Nested2PartyRole_16);
+      NestedParties2_NoNested2PartyIDs_16.insert(Nested2PartyRole_16.getString());
+      all_values.push_back(NestedParties2_NoNested2PartyIDs_16);
 
       // NstdPtys2SubGrp
       // Group NstdPtys2SubGrp.NoNested2PartySubIDs
       {
         FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_0_2_2_0;
         // NstdPtys2SubGrp.NoNested2PartySubIDs
-        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_25;
-        FIX::Nested2PartySubID Nested2PartySubID_25("STRING_1227313820");
-        noNested2PartySubIDs_0_2_2_0.set(Nested2PartySubID_25);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_25.insert(Nested2PartySubID_25.getString());
-        FIX::Nested2PartySubIDType Nested2PartySubIDType_25(298680885);
-        noNested2PartySubIDs_0_2_2_0.set(Nested2PartySubIDType_25);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_25.insert(Nested2PartySubIDType_25.getString());
-        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_25);
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_36;
+        FIX::Nested2PartySubID Nested2PartySubID_36("STRING_1604039103");
+        noNested2PartySubIDs_0_2_2_0.set(Nested2PartySubID_36);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_36.insert(Nested2PartySubID_36.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_36(809726268);
+        noNested2PartySubIDs_0_2_2_0.set(Nested2PartySubIDType_36);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_36.insert(Nested2PartySubIDType_36.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_36);
 
         noNested2PartyIDs_0_1_2.addGroup(noNested2PartySubIDs_0_2_2_0);
       }
       {
         FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_0_2_2_1;
         // NstdPtys2SubGrp.NoNested2PartySubIDs
-        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_26;
-        FIX::Nested2PartySubID Nested2PartySubID_26("STRING_383688024");
-        noNested2PartySubIDs_0_2_2_1.set(Nested2PartySubID_26);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_26.insert(Nested2PartySubID_26.getString());
-        FIX::Nested2PartySubIDType Nested2PartySubIDType_26(1266426838);
-        noNested2PartySubIDs_0_2_2_1.set(Nested2PartySubIDType_26);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_26.insert(Nested2PartySubIDType_26.getString());
-        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_26);
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_37;
+        FIX::Nested2PartySubID Nested2PartySubID_37("STRING_5860144");
+        noNested2PartySubIDs_0_2_2_1.set(Nested2PartySubID_37);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_37.insert(Nested2PartySubID_37.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_37(1107778248);
+        noNested2PartySubIDs_0_2_2_1.set(Nested2PartySubIDType_37);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_37.insert(Nested2PartySubIDType_37.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_37);
 
         noNested2PartyIDs_0_1_2.addGroup(noNested2PartySubIDs_0_2_2_1);
-      }
-      {
-        FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_0_2_2_2;
-        // NstdPtys2SubGrp.NoNested2PartySubIDs
-        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_27;
-        FIX::Nested2PartySubID Nested2PartySubID_27("STRING_1935296259");
-        noNested2PartySubIDs_0_2_2_2.set(Nested2PartySubID_27);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_27.insert(Nested2PartySubID_27.getString());
-        FIX::Nested2PartySubIDType Nested2PartySubIDType_27(1049122038);
-        noNested2PartySubIDs_0_2_2_2.set(Nested2PartySubIDType_27);
-        NstdPtys2SubGrp_NoNested2PartySubIDs_27.insert(Nested2PartySubIDType_27.getString());
-        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_27);
-
-        noNested2PartyIDs_0_1_2.addGroup(noNested2PartySubIDs_0_2_2_2);
       }
       noOrders_0_0.addGroup(noNested2PartyIDs_0_1_2);
     }
     msg.addGroup(noOrders_0_0);
+  }
+  {
+    FIX50SP2::Confirmation::NoOrders noOrders_0_1;
+    // OrdAllocGrp.NoOrders
+    multiset<string> OrdAllocGrp_NoOrders_8;
+    FIX::ClOrdID ClOrdID_14("STRING_331341926");
+    noOrders_0_1.set(ClOrdID_14);
+    OrdAllocGrp_NoOrders_8.insert(ClOrdID_14.getString());
+    FIX::ListID ListID_10("STRING_613888994");
+    noOrders_0_1.set(ListID_10);
+    OrdAllocGrp_NoOrders_8.insert(ListID_10.getString());
+    FIX::OrderAvgPx OrderAvgPx_8;
+    OrderAvgPx_8.setString("3202320");
+    noOrders_0_1.set(OrderAvgPx_8);
+    OrdAllocGrp_NoOrders_8.insert(OrderAvgPx_8.getString());
+    FIX::OrderBookingQty OrderBookingQty_8;
+    OrderBookingQty_8.setString("2598444");
+    noOrders_0_1.set(OrderBookingQty_8);
+    OrdAllocGrp_NoOrders_8.insert(OrderBookingQty_8.getString());
+    FIX::OrderID OrderID_14("STRING_1205939266");
+    noOrders_0_1.set(OrderID_14);
+    OrdAllocGrp_NoOrders_8.insert(OrderID_14.getString());
+    FIX::OrderQty OrderQty_8;
+    OrderQty_8.setString("13677755");
+    noOrders_0_1.set(OrderQty_8);
+    OrdAllocGrp_NoOrders_8.insert(OrderQty_8.getString());
+    FIX::SecondaryClOrdID SecondaryClOrdID_14("STRING_1750719919");
+    noOrders_0_1.set(SecondaryClOrdID_14);
+    OrdAllocGrp_NoOrders_8.insert(SecondaryClOrdID_14.getString());
+    FIX::SecondaryOrderID SecondaryOrderID_14("STRING_2135292735");
+    noOrders_0_1.set(SecondaryOrderID_14);
+    OrdAllocGrp_NoOrders_8.insert(SecondaryOrderID_14.getString());
+    all_values.push_back(OrdAllocGrp_NoOrders_8);
+
+    // NestedParties2
+    // Group NestedParties2.NoNested2PartyIDs
+    {
+      FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs noNested2PartyIDs_1_1_0;
+      // NestedParties2.NoNested2PartyIDs
+      multiset<string> NestedParties2_NoNested2PartyIDs_17;
+      FIX::Nested2PartyID Nested2PartyID_17("STRING_1309854102");
+      noNested2PartyIDs_1_1_0.set(Nested2PartyID_17);
+      NestedParties2_NoNested2PartyIDs_17.insert(Nested2PartyID_17.getString());
+      FIX::Nested2PartyIDSource Nested2PartyIDSource_17('2');
+      noNested2PartyIDs_1_1_0.set(Nested2PartyIDSource_17);
+      NestedParties2_NoNested2PartyIDs_17.insert(Nested2PartyIDSource_17.getString());
+      FIX::Nested2PartyRole Nested2PartyRole_17(672243469);
+      noNested2PartyIDs_1_1_0.set(Nested2PartyRole_17);
+      NestedParties2_NoNested2PartyIDs_17.insert(Nested2PartyRole_17.getString());
+      all_values.push_back(NestedParties2_NoNested2PartyIDs_17);
+
+      // NstdPtys2SubGrp
+      // Group NstdPtys2SubGrp.NoNested2PartySubIDs
+      {
+        FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_1_0_2_0;
+        // NstdPtys2SubGrp.NoNested2PartySubIDs
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_38;
+        FIX::Nested2PartySubID Nested2PartySubID_38("STRING_1523228456");
+        noNested2PartySubIDs_1_0_2_0.set(Nested2PartySubID_38);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_38.insert(Nested2PartySubID_38.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_38(1412033425);
+        noNested2PartySubIDs_1_0_2_0.set(Nested2PartySubIDType_38);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_38.insert(Nested2PartySubIDType_38.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_38);
+
+        noNested2PartyIDs_1_1_0.addGroup(noNested2PartySubIDs_1_0_2_0);
+      }
+      noOrders_0_1.addGroup(noNested2PartyIDs_1_1_0);
+    }
+    msg.addGroup(noOrders_0_1);
+  }
+  {
+    FIX50SP2::Confirmation::NoOrders noOrders_0_2;
+    // OrdAllocGrp.NoOrders
+    multiset<string> OrdAllocGrp_NoOrders_9;
+    FIX::ClOrdID ClOrdID_15("STRING_85127022");
+    noOrders_0_2.set(ClOrdID_15);
+    OrdAllocGrp_NoOrders_9.insert(ClOrdID_15.getString());
+    FIX::ListID ListID_11("STRING_1619255929");
+    noOrders_0_2.set(ListID_11);
+    OrdAllocGrp_NoOrders_9.insert(ListID_11.getString());
+    FIX::OrderAvgPx OrderAvgPx_9;
+    OrderAvgPx_9.setString("5112955");
+    noOrders_0_2.set(OrderAvgPx_9);
+    OrdAllocGrp_NoOrders_9.insert(OrderAvgPx_9.getString());
+    FIX::OrderBookingQty OrderBookingQty_9;
+    OrderBookingQty_9.setString("7778884");
+    noOrders_0_2.set(OrderBookingQty_9);
+    OrdAllocGrp_NoOrders_9.insert(OrderBookingQty_9.getString());
+    FIX::OrderID OrderID_15("STRING_577462827");
+    noOrders_0_2.set(OrderID_15);
+    OrdAllocGrp_NoOrders_9.insert(OrderID_15.getString());
+    FIX::OrderQty OrderQty_9;
+    OrderQty_9.setString("18255479");
+    noOrders_0_2.set(OrderQty_9);
+    OrdAllocGrp_NoOrders_9.insert(OrderQty_9.getString());
+    FIX::SecondaryClOrdID SecondaryClOrdID_15("STRING_192297505");
+    noOrders_0_2.set(SecondaryClOrdID_15);
+    OrdAllocGrp_NoOrders_9.insert(SecondaryClOrdID_15.getString());
+    FIX::SecondaryOrderID SecondaryOrderID_15("STRING_133394506");
+    noOrders_0_2.set(SecondaryOrderID_15);
+    OrdAllocGrp_NoOrders_9.insert(SecondaryOrderID_15.getString());
+    all_values.push_back(OrdAllocGrp_NoOrders_9);
+
+    // NestedParties2
+    // Group NestedParties2.NoNested2PartyIDs
+    {
+      FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs noNested2PartyIDs_2_1_0;
+      // NestedParties2.NoNested2PartyIDs
+      multiset<string> NestedParties2_NoNested2PartyIDs_18;
+      FIX::Nested2PartyID Nested2PartyID_18("STRING_456194181");
+      noNested2PartyIDs_2_1_0.set(Nested2PartyID_18);
+      NestedParties2_NoNested2PartyIDs_18.insert(Nested2PartyID_18.getString());
+      FIX::Nested2PartyIDSource Nested2PartyIDSource_18('8');
+      noNested2PartyIDs_2_1_0.set(Nested2PartyIDSource_18);
+      NestedParties2_NoNested2PartyIDs_18.insert(Nested2PartyIDSource_18.getString());
+      FIX::Nested2PartyRole Nested2PartyRole_18(292508263);
+      noNested2PartyIDs_2_1_0.set(Nested2PartyRole_18);
+      NestedParties2_NoNested2PartyIDs_18.insert(Nested2PartyRole_18.getString());
+      all_values.push_back(NestedParties2_NoNested2PartyIDs_18);
+
+      // NstdPtys2SubGrp
+      // Group NstdPtys2SubGrp.NoNested2PartySubIDs
+      {
+        FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_2_0_2_0;
+        // NstdPtys2SubGrp.NoNested2PartySubIDs
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_39;
+        FIX::Nested2PartySubID Nested2PartySubID_39("STRING_1671259332");
+        noNested2PartySubIDs_2_0_2_0.set(Nested2PartySubID_39);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_39.insert(Nested2PartySubID_39.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_39(298368407);
+        noNested2PartySubIDs_2_0_2_0.set(Nested2PartySubIDType_39);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_39.insert(Nested2PartySubIDType_39.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_39);
+
+        noNested2PartyIDs_2_1_0.addGroup(noNested2PartySubIDs_2_0_2_0);
+      }
+      {
+        FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_2_0_2_1;
+        // NstdPtys2SubGrp.NoNested2PartySubIDs
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_40;
+        FIX::Nested2PartySubID Nested2PartySubID_40("STRING_1020527885");
+        noNested2PartySubIDs_2_0_2_1.set(Nested2PartySubID_40);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_40.insert(Nested2PartySubID_40.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_40(2002601258);
+        noNested2PartySubIDs_2_0_2_1.set(Nested2PartySubIDType_40);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_40.insert(Nested2PartySubIDType_40.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_40);
+
+        noNested2PartyIDs_2_1_0.addGroup(noNested2PartySubIDs_2_0_2_1);
+      }
+      noOrders_0_2.addGroup(noNested2PartyIDs_2_1_0);
+    }
+    {
+      FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs noNested2PartyIDs_2_1_1;
+      // NestedParties2.NoNested2PartyIDs
+      multiset<string> NestedParties2_NoNested2PartyIDs_19;
+      FIX::Nested2PartyID Nested2PartyID_19("STRING_912257401");
+      noNested2PartyIDs_2_1_1.set(Nested2PartyID_19);
+      NestedParties2_NoNested2PartyIDs_19.insert(Nested2PartyID_19.getString());
+      FIX::Nested2PartyIDSource Nested2PartyIDSource_19('1');
+      noNested2PartyIDs_2_1_1.set(Nested2PartyIDSource_19);
+      NestedParties2_NoNested2PartyIDs_19.insert(Nested2PartyIDSource_19.getString());
+      FIX::Nested2PartyRole Nested2PartyRole_19(114962013);
+      noNested2PartyIDs_2_1_1.set(Nested2PartyRole_19);
+      NestedParties2_NoNested2PartyIDs_19.insert(Nested2PartyRole_19.getString());
+      all_values.push_back(NestedParties2_NoNested2PartyIDs_19);
+
+      // NstdPtys2SubGrp
+      // Group NstdPtys2SubGrp.NoNested2PartySubIDs
+      {
+        FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_2_1_2_0;
+        // NstdPtys2SubGrp.NoNested2PartySubIDs
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_41;
+        FIX::Nested2PartySubID Nested2PartySubID_41("STRING_561051866");
+        noNested2PartySubIDs_2_1_2_0.set(Nested2PartySubID_41);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_41.insert(Nested2PartySubID_41.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_41(1865681932);
+        noNested2PartySubIDs_2_1_2_0.set(Nested2PartySubIDType_41);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_41.insert(Nested2PartySubIDType_41.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_41);
+
+        noNested2PartyIDs_2_1_1.addGroup(noNested2PartySubIDs_2_1_2_0);
+      }
+      noOrders_0_2.addGroup(noNested2PartyIDs_2_1_1);
+    }
+    {
+      FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs noNested2PartyIDs_2_1_2;
+      // NestedParties2.NoNested2PartyIDs
+      multiset<string> NestedParties2_NoNested2PartyIDs_20;
+      FIX::Nested2PartyID Nested2PartyID_20("STRING_2106005755");
+      noNested2PartyIDs_2_1_2.set(Nested2PartyID_20);
+      NestedParties2_NoNested2PartyIDs_20.insert(Nested2PartyID_20.getString());
+      FIX::Nested2PartyIDSource Nested2PartyIDSource_20('6');
+      noNested2PartyIDs_2_1_2.set(Nested2PartyIDSource_20);
+      NestedParties2_NoNested2PartyIDs_20.insert(Nested2PartyIDSource_20.getString());
+      FIX::Nested2PartyRole Nested2PartyRole_20(1028052387);
+      noNested2PartyIDs_2_1_2.set(Nested2PartyRole_20);
+      NestedParties2_NoNested2PartyIDs_20.insert(Nested2PartyRole_20.getString());
+      all_values.push_back(NestedParties2_NoNested2PartyIDs_20);
+
+      // NstdPtys2SubGrp
+      // Group NstdPtys2SubGrp.NoNested2PartySubIDs
+      {
+        FIX50SP2::Confirmation::NoOrders::NoNested2PartyIDs::NoNested2PartySubIDs noNested2PartySubIDs_2_2_2_0;
+        // NstdPtys2SubGrp.NoNested2PartySubIDs
+        multiset<string> NstdPtys2SubGrp_NoNested2PartySubIDs_42;
+        FIX::Nested2PartySubID Nested2PartySubID_42("STRING_1285533655");
+        noNested2PartySubIDs_2_2_2_0.set(Nested2PartySubID_42);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_42.insert(Nested2PartySubID_42.getString());
+        FIX::Nested2PartySubIDType Nested2PartySubIDType_42(1698436023);
+        noNested2PartySubIDs_2_2_2_0.set(Nested2PartySubIDType_42);
+        NstdPtys2SubGrp_NoNested2PartySubIDs_42.insert(Nested2PartySubIDType_42.getString());
+        all_values.push_back(NstdPtys2SubGrp_NoNested2PartySubIDs_42);
+
+        noNested2PartyIDs_2_1_2.addGroup(noNested2PartySubIDs_2_2_2_0);
+      }
+      noOrders_0_2.addGroup(noNested2PartyIDs_2_1_2);
+    }
+    msg.addGroup(noOrders_0_2);
   }
   // Parties
   // Group Parties.NoPartyIDs
   {
     FIX50SP2::Confirmation::NoPartyIDs noPartyIDs_0_0;
     // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_33;
-    FIX::PartyID PartyID_33("STRING_1122475281");
-    noPartyIDs_0_0.set(PartyID_33);
-    Parties_NoPartyIDs_33.insert(PartyID_33.getString());
-    FIX::PartyIDSource PartyIDSource_33('1');
-    noPartyIDs_0_0.set(PartyIDSource_33);
-    Parties_NoPartyIDs_33.insert(PartyIDSource_33.getString());
-    FIX::PartyRole PartyRole_33(83);
-    noPartyIDs_0_0.set(PartyRole_33);
-    Parties_NoPartyIDs_33.insert(PartyRole_33.getString());
-    all_values.push_back(Parties_NoPartyIDs_33);
+    multiset<string> Parties_NoPartyIDs_32;
+    FIX::PartyID PartyID_32("STRING_550083432");
+    noPartyIDs_0_0.set(PartyID_32);
+    Parties_NoPartyIDs_32.insert(PartyID_32.getString());
+    FIX::PartyIDSource PartyIDSource_32('G');
+    noPartyIDs_0_0.set(PartyIDSource_32);
+    Parties_NoPartyIDs_32.insert(PartyIDSource_32.getString());
+    FIX::PartyRole PartyRole_32(22);
+    noPartyIDs_0_0.set(PartyRole_32);
+    Parties_NoPartyIDs_32.insert(PartyRole_32.getString());
+    all_values.push_back(Parties_NoPartyIDs_32);
 
     // PtysSubGrp
     // Group PtysSubGrp.NoPartySubIDs
     {
       FIX50SP2::Confirmation::NoPartyIDs::NoPartySubIDs noPartySubIDs_0_1_0;
       // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_68;
-      FIX::PartySubID PartySubID_68("STRING_812021728");
-      noPartySubIDs_0_1_0.set(PartySubID_68);
-      PtysSubGrp_NoPartySubIDs_68.insert(PartySubID_68.getString());
-      FIX::PartySubIDType PartySubIDType_68(13);
-      noPartySubIDs_0_1_0.set(PartySubIDType_68);
-      PtysSubGrp_NoPartySubIDs_68.insert(PartySubIDType_68.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_68);
+      multiset<string> PtysSubGrp_NoPartySubIDs_63;
+      FIX::PartySubID PartySubID_63("STRING_413967885");
+      noPartySubIDs_0_1_0.set(PartySubID_63);
+      PtysSubGrp_NoPartySubIDs_63.insert(PartySubID_63.getString());
+      FIX::PartySubIDType PartySubIDType_63(22);
+      noPartySubIDs_0_1_0.set(PartySubIDType_63);
+      PtysSubGrp_NoPartySubIDs_63.insert(PartySubIDType_63.getString());
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_63);
 
       noPartyIDs_0_0.addGroup(noPartySubIDs_0_1_0);
     }
+    {
+      FIX50SP2::Confirmation::NoPartyIDs::NoPartySubIDs noPartySubIDs_0_1_1;
+      // PtysSubGrp.NoPartySubIDs
+      multiset<string> PtysSubGrp_NoPartySubIDs_64;
+      FIX::PartySubID PartySubID_64("STRING_739443267");
+      noPartySubIDs_0_1_1.set(PartySubID_64);
+      PtysSubGrp_NoPartySubIDs_64.insert(PartySubID_64.getString());
+      FIX::PartySubIDType PartySubIDType_64(18);
+      noPartySubIDs_0_1_1.set(PartySubIDType_64);
+      PtysSubGrp_NoPartySubIDs_64.insert(PartySubIDType_64.getString());
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_64);
+
+      noPartyIDs_0_0.addGroup(noPartySubIDs_0_1_1);
+    }
     msg.addGroup(noPartyIDs_0_0);
   }
-  {
-    FIX50SP2::Confirmation::NoPartyIDs noPartyIDs_0_1;
-    // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_34;
-    FIX::PartyID PartyID_34("STRING_20746784");
-    noPartyIDs_0_1.set(PartyID_34);
-    Parties_NoPartyIDs_34.insert(PartyID_34.getString());
-    FIX::PartyIDSource PartyIDSource_34('9');
-    noPartyIDs_0_1.set(PartyIDSource_34);
-    Parties_NoPartyIDs_34.insert(PartyIDSource_34.getString());
-    FIX::PartyRole PartyRole_34(25);
-    noPartyIDs_0_1.set(PartyRole_34);
-    Parties_NoPartyIDs_34.insert(PartyRole_34.getString());
-    all_values.push_back(Parties_NoPartyIDs_34);
-
-    // PtysSubGrp
-    // Group PtysSubGrp.NoPartySubIDs
-    {
-      FIX50SP2::Confirmation::NoPartyIDs::NoPartySubIDs noPartySubIDs_1_1_0;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_69;
-      FIX::PartySubID PartySubID_69("STRING_1687543748");
-      noPartySubIDs_1_1_0.set(PartySubID_69);
-      PtysSubGrp_NoPartySubIDs_69.insert(PartySubID_69.getString());
-      FIX::PartySubIDType PartySubIDType_69(32);
-      noPartySubIDs_1_1_0.set(PartySubIDType_69);
-      PtysSubGrp_NoPartySubIDs_69.insert(PartySubIDType_69.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_69);
-
-      noPartyIDs_0_1.addGroup(noPartySubIDs_1_1_0);
-    }
-    {
-      FIX50SP2::Confirmation::NoPartyIDs::NoPartySubIDs noPartySubIDs_1_1_1;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_70;
-      FIX::PartySubID PartySubID_70("STRING_311807763");
-      noPartySubIDs_1_1_1.set(PartySubID_70);
-      PtysSubGrp_NoPartySubIDs_70.insert(PartySubID_70.getString());
-      FIX::PartySubIDType PartySubIDType_70(28);
-      noPartySubIDs_1_1_1.set(PartySubIDType_70);
-      PtysSubGrp_NoPartySubIDs_70.insert(PartySubIDType_70.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_70);
-
-      noPartyIDs_0_1.addGroup(noPartySubIDs_1_1_1);
-    }
-    {
-      FIX50SP2::Confirmation::NoPartyIDs::NoPartySubIDs noPartySubIDs_1_1_2;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_71;
-      FIX::PartySubID PartySubID_71("STRING_69655306");
-      noPartySubIDs_1_1_2.set(PartySubID_71);
-      PtysSubGrp_NoPartySubIDs_71.insert(PartySubID_71.getString());
-      FIX::PartySubIDType PartySubIDType_71(5);
-      noPartySubIDs_1_1_2.set(PartySubIDType_71);
-      PtysSubGrp_NoPartySubIDs_71.insert(PartySubIDType_71.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_71);
-
-      noPartyIDs_0_1.addGroup(noPartySubIDs_1_1_2);
-    }
-    msg.addGroup(noPartyIDs_0_1);
-  }
-  {
-    FIX50SP2::Confirmation::NoPartyIDs noPartyIDs_0_2;
-    // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_35;
-    FIX::PartyID PartyID_35("STRING_1210118284");
-    noPartyIDs_0_2.set(PartyID_35);
-    Parties_NoPartyIDs_35.insert(PartyID_35.getString());
-    FIX::PartyIDSource PartyIDSource_35('4');
-    noPartyIDs_0_2.set(PartyIDSource_35);
-    Parties_NoPartyIDs_35.insert(PartyIDSource_35.getString());
-    FIX::PartyRole PartyRole_35(25);
-    noPartyIDs_0_2.set(PartyRole_35);
-    Parties_NoPartyIDs_35.insert(PartyRole_35.getString());
-    all_values.push_back(Parties_NoPartyIDs_35);
-
-    // PtysSubGrp
-    // Group PtysSubGrp.NoPartySubIDs
-    {
-      FIX50SP2::Confirmation::NoPartyIDs::NoPartySubIDs noPartySubIDs_2_1_0;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_72;
-      FIX::PartySubID PartySubID_72("STRING_1460671815");
-      noPartySubIDs_2_1_0.set(PartySubID_72);
-      PtysSubGrp_NoPartySubIDs_72.insert(PartySubID_72.getString());
-      FIX::PartySubIDType PartySubIDType_72(23);
-      noPartySubIDs_2_1_0.set(PartySubIDType_72);
-      PtysSubGrp_NoPartySubIDs_72.insert(PartySubIDType_72.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_72);
-
-      noPartyIDs_0_2.addGroup(noPartySubIDs_2_1_0);
-    }
-    {
-      FIX50SP2::Confirmation::NoPartyIDs::NoPartySubIDs noPartySubIDs_2_1_1;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_73;
-      FIX::PartySubID PartySubID_73("STRING_975320511");
-      noPartySubIDs_2_1_1.set(PartySubID_73);
-      PtysSubGrp_NoPartySubIDs_73.insert(PartySubID_73.getString());
-      FIX::PartySubIDType PartySubIDType_73(14);
-      noPartySubIDs_2_1_1.set(PartySubIDType_73);
-      PtysSubGrp_NoPartySubIDs_73.insert(PartySubIDType_73.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_73);
-
-      noPartyIDs_0_2.addGroup(noPartySubIDs_2_1_1);
-    }
-    {
-      FIX50SP2::Confirmation::NoPartyIDs::NoPartySubIDs noPartySubIDs_2_1_2;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_74;
-      FIX::PartySubID PartySubID_74("STRING_478750057");
-      noPartySubIDs_2_1_2.set(PartySubID_74);
-      PtysSubGrp_NoPartySubIDs_74.insert(PartySubID_74.getString());
-      FIX::PartySubIDType PartySubIDType_74(31);
-      noPartySubIDs_2_1_2.set(PartySubIDType_74);
-      PtysSubGrp_NoPartySubIDs_74.insert(PartySubIDType_74.getString());
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_74);
-
-      noPartyIDs_0_2.addGroup(noPartySubIDs_2_1_2);
-    }
-    msg.addGroup(noPartyIDs_0_2);
-  }
   // SettlInstructionsData
-  multiset<string> SettlInstructionsData_8;
-  FIX::SettlDeliveryType SettlDeliveryType_8(0);
-  msg.set(SettlDeliveryType_8);
-  SettlInstructionsData_8.insert(SettlDeliveryType_8.getString());
-  FIX::StandInstDbID StandInstDbID_8("STRING_1745176895");
-  msg.set(StandInstDbID_8);
-  SettlInstructionsData_8.insert(StandInstDbID_8.getString());
-  FIX::StandInstDbName StandInstDbName_8("STRING_1061814007");
-  msg.set(StandInstDbName_8);
-  SettlInstructionsData_8.insert(StandInstDbName_8.getString());
-  FIX::StandInstDbType StandInstDbType_8(0);
-  msg.set(StandInstDbType_8);
-  SettlInstructionsData_8.insert(StandInstDbType_8.getString());
-  all_values.push_back(SettlInstructionsData_8);
+  multiset<string> SettlInstructionsData_9;
+  FIX::SettlDeliveryType SettlDeliveryType_9(3);
+  msg.set(SettlDeliveryType_9);
+  SettlInstructionsData_9.insert(SettlDeliveryType_9.getString());
+  FIX::StandInstDbID StandInstDbID_9("STRING_1693272125");
+  msg.set(StandInstDbID_9);
+  SettlInstructionsData_9.insert(StandInstDbID_9.getString());
+  FIX::StandInstDbName StandInstDbName_9("STRING_1062459572");
+  msg.set(StandInstDbName_9);
+  SettlInstructionsData_9.insert(StandInstDbName_9.getString());
+  FIX::StandInstDbType StandInstDbType_9(1);
+  msg.set(StandInstDbType_9);
+  SettlInstructionsData_9.insert(StandInstDbType_9.getString());
+  all_values.push_back(SettlInstructionsData_9);
 
   // DlvyInstGrp
   // Group DlvyInstGrp.NoDlvyInst
   {
     FIX50SP2::Confirmation::NoDlvyInst noDlvyInst_0_0;
     // DlvyInstGrp.NoDlvyInst
-    multiset<string> DlvyInstGrp_NoDlvyInst_14;
-    FIX::DlvyInstType DlvyInstType_14('C');
-    noDlvyInst_0_0.set(DlvyInstType_14);
-    DlvyInstGrp_NoDlvyInst_14.insert(DlvyInstType_14.getString());
-    FIX::SettlInstSource SettlInstSource_14('3');
-    noDlvyInst_0_0.set(SettlInstSource_14);
-    DlvyInstGrp_NoDlvyInst_14.insert(SettlInstSource_14.getString());
-    all_values.push_back(DlvyInstGrp_NoDlvyInst_14);
+    multiset<string> DlvyInstGrp_NoDlvyInst_16;
+    FIX::DlvyInstType DlvyInstType_16('S');
+    noDlvyInst_0_0.set(DlvyInstType_16);
+    DlvyInstGrp_NoDlvyInst_16.insert(DlvyInstType_16.getString());
+    FIX::SettlInstSource SettlInstSource_16('3');
+    noDlvyInst_0_0.set(SettlInstSource_16);
+    DlvyInstGrp_NoDlvyInst_16.insert(SettlInstSource_16.getString());
+    all_values.push_back(DlvyInstGrp_NoDlvyInst_16);
 
     // SettlParties
     // Group SettlParties.NoSettlPartyIDs
     {
       FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs noSettlPartyIDs_0_1_0;
       // SettlParties.NoSettlPartyIDs
-      multiset<string> SettlParties_NoSettlPartyIDs_32;
-      FIX::SettlPartyID SettlPartyID_32("STRING_952960025");
-      noSettlPartyIDs_0_1_0.set(SettlPartyID_32);
-      SettlParties_NoSettlPartyIDs_32.insert(SettlPartyID_32.getString());
-      FIX::SettlPartyIDSource SettlPartyIDSource_32('3');
-      noSettlPartyIDs_0_1_0.set(SettlPartyIDSource_32);
-      SettlParties_NoSettlPartyIDs_32.insert(SettlPartyIDSource_32.getString());
-      FIX::SettlPartyRole SettlPartyRole_32(1987516668);
-      noSettlPartyIDs_0_1_0.set(SettlPartyRole_32);
-      SettlParties_NoSettlPartyIDs_32.insert(SettlPartyRole_32.getString());
-      all_values.push_back(SettlParties_NoSettlPartyIDs_32);
+      multiset<string> SettlParties_NoSettlPartyIDs_31;
+      FIX::SettlPartyID SettlPartyID_31("STRING_1995737095");
+      noSettlPartyIDs_0_1_0.set(SettlPartyID_31);
+      SettlParties_NoSettlPartyIDs_31.insert(SettlPartyID_31.getString());
+      FIX::SettlPartyIDSource SettlPartyIDSource_31('1');
+      noSettlPartyIDs_0_1_0.set(SettlPartyIDSource_31);
+      SettlParties_NoSettlPartyIDs_31.insert(SettlPartyIDSource_31.getString());
+      FIX::SettlPartyRole SettlPartyRole_31(1048922550);
+      noSettlPartyIDs_0_1_0.set(SettlPartyRole_31);
+      SettlParties_NoSettlPartyIDs_31.insert(SettlPartyRole_31.getString());
+      all_values.push_back(SettlParties_NoSettlPartyIDs_31);
 
       // SettlPtysSubGrp
       // Group SettlPtysSubGrp.NoSettlPartySubIDs
       {
         FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs::NoSettlPartySubIDs noSettlPartySubIDs_0_0_2_0;
         // SettlPtysSubGrp.NoSettlPartySubIDs
-        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_73;
-        FIX::SettlPartySubID SettlPartySubID_73("STRING_1724206231");
-        noSettlPartySubIDs_0_0_2_0.set(SettlPartySubID_73);
-        SettlPtysSubGrp_NoSettlPartySubIDs_73.insert(SettlPartySubID_73.getString());
-        FIX::SettlPartySubIDType SettlPartySubIDType_73(1954819311);
-        noSettlPartySubIDs_0_0_2_0.set(SettlPartySubIDType_73);
-        SettlPtysSubGrp_NoSettlPartySubIDs_73.insert(SettlPartySubIDType_73.getString());
-        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_73);
+        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_68;
+        FIX::SettlPartySubID SettlPartySubID_68("STRING_1955618742");
+        noSettlPartySubIDs_0_0_2_0.set(SettlPartySubID_68);
+        SettlPtysSubGrp_NoSettlPartySubIDs_68.insert(SettlPartySubID_68.getString());
+        FIX::SettlPartySubIDType SettlPartySubIDType_68(1019635570);
+        noSettlPartySubIDs_0_0_2_0.set(SettlPartySubIDType_68);
+        SettlPtysSubGrp_NoSettlPartySubIDs_68.insert(SettlPartySubIDType_68.getString());
+        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_68);
 
         noSettlPartyIDs_0_1_0.addGroup(noSettlPartySubIDs_0_0_2_0);
       }
       {
         FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs::NoSettlPartySubIDs noSettlPartySubIDs_0_0_2_1;
         // SettlPtysSubGrp.NoSettlPartySubIDs
-        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_74;
-        FIX::SettlPartySubID SettlPartySubID_74("STRING_566490080");
-        noSettlPartySubIDs_0_0_2_1.set(SettlPartySubID_74);
-        SettlPtysSubGrp_NoSettlPartySubIDs_74.insert(SettlPartySubID_74.getString());
-        FIX::SettlPartySubIDType SettlPartySubIDType_74(1264266332);
-        noSettlPartySubIDs_0_0_2_1.set(SettlPartySubIDType_74);
-        SettlPtysSubGrp_NoSettlPartySubIDs_74.insert(SettlPartySubIDType_74.getString());
-        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_74);
+        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_69;
+        FIX::SettlPartySubID SettlPartySubID_69("STRING_1750065263");
+        noSettlPartySubIDs_0_0_2_1.set(SettlPartySubID_69);
+        SettlPtysSubGrp_NoSettlPartySubIDs_69.insert(SettlPartySubID_69.getString());
+        FIX::SettlPartySubIDType SettlPartySubIDType_69(1673817026);
+        noSettlPartySubIDs_0_0_2_1.set(SettlPartySubIDType_69);
+        SettlPtysSubGrp_NoSettlPartySubIDs_69.insert(SettlPartySubIDType_69.getString());
+        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_69);
 
         noSettlPartyIDs_0_1_0.addGroup(noSettlPartySubIDs_0_0_2_1);
       }
       {
         FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs::NoSettlPartySubIDs noSettlPartySubIDs_0_0_2_2;
         // SettlPtysSubGrp.NoSettlPartySubIDs
-        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_75;
-        FIX::SettlPartySubID SettlPartySubID_75("STRING_42073472");
-        noSettlPartySubIDs_0_0_2_2.set(SettlPartySubID_75);
-        SettlPtysSubGrp_NoSettlPartySubIDs_75.insert(SettlPartySubID_75.getString());
-        FIX::SettlPartySubIDType SettlPartySubIDType_75(878297843);
-        noSettlPartySubIDs_0_0_2_2.set(SettlPartySubIDType_75);
-        SettlPtysSubGrp_NoSettlPartySubIDs_75.insert(SettlPartySubIDType_75.getString());
-        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_75);
+        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_70;
+        FIX::SettlPartySubID SettlPartySubID_70("STRING_978157677");
+        noSettlPartySubIDs_0_0_2_2.set(SettlPartySubID_70);
+        SettlPtysSubGrp_NoSettlPartySubIDs_70.insert(SettlPartySubID_70.getString());
+        FIX::SettlPartySubIDType SettlPartySubIDType_70(215871801);
+        noSettlPartySubIDs_0_0_2_2.set(SettlPartySubIDType_70);
+        SettlPtysSubGrp_NoSettlPartySubIDs_70.insert(SettlPartySubIDType_70.getString());
+        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_70);
 
         noSettlPartyIDs_0_1_0.addGroup(noSettlPartySubIDs_0_0_2_2);
       }
@@ -2170,251 +2167,155 @@ TEST ( Confirmation, set_fields)
     {
       FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs noSettlPartyIDs_0_1_1;
       // SettlParties.NoSettlPartyIDs
-      multiset<string> SettlParties_NoSettlPartyIDs_33;
-      FIX::SettlPartyID SettlPartyID_33("STRING_674523555");
-      noSettlPartyIDs_0_1_1.set(SettlPartyID_33);
-      SettlParties_NoSettlPartyIDs_33.insert(SettlPartyID_33.getString());
-      FIX::SettlPartyIDSource SettlPartyIDSource_33('1');
-      noSettlPartyIDs_0_1_1.set(SettlPartyIDSource_33);
-      SettlParties_NoSettlPartyIDs_33.insert(SettlPartyIDSource_33.getString());
-      FIX::SettlPartyRole SettlPartyRole_33(571901458);
-      noSettlPartyIDs_0_1_1.set(SettlPartyRole_33);
-      SettlParties_NoSettlPartyIDs_33.insert(SettlPartyRole_33.getString());
-      all_values.push_back(SettlParties_NoSettlPartyIDs_33);
+      multiset<string> SettlParties_NoSettlPartyIDs_32;
+      FIX::SettlPartyID SettlPartyID_32("STRING_554385765");
+      noSettlPartyIDs_0_1_1.set(SettlPartyID_32);
+      SettlParties_NoSettlPartyIDs_32.insert(SettlPartyID_32.getString());
+      FIX::SettlPartyIDSource SettlPartyIDSource_32('8');
+      noSettlPartyIDs_0_1_1.set(SettlPartyIDSource_32);
+      SettlParties_NoSettlPartyIDs_32.insert(SettlPartyIDSource_32.getString());
+      FIX::SettlPartyRole SettlPartyRole_32(1501405456);
+      noSettlPartyIDs_0_1_1.set(SettlPartyRole_32);
+      SettlParties_NoSettlPartyIDs_32.insert(SettlPartyRole_32.getString());
+      all_values.push_back(SettlParties_NoSettlPartyIDs_32);
 
       // SettlPtysSubGrp
       // Group SettlPtysSubGrp.NoSettlPartySubIDs
       {
         FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs::NoSettlPartySubIDs noSettlPartySubIDs_0_1_2_0;
         // SettlPtysSubGrp.NoSettlPartySubIDs
-        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_76;
-        FIX::SettlPartySubID SettlPartySubID_76("STRING_828323420");
-        noSettlPartySubIDs_0_1_2_0.set(SettlPartySubID_76);
-        SettlPtysSubGrp_NoSettlPartySubIDs_76.insert(SettlPartySubID_76.getString());
-        FIX::SettlPartySubIDType SettlPartySubIDType_76(1569514461);
-        noSettlPartySubIDs_0_1_2_0.set(SettlPartySubIDType_76);
-        SettlPtysSubGrp_NoSettlPartySubIDs_76.insert(SettlPartySubIDType_76.getString());
-        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_76);
+        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_71;
+        FIX::SettlPartySubID SettlPartySubID_71("STRING_142647084");
+        noSettlPartySubIDs_0_1_2_0.set(SettlPartySubID_71);
+        SettlPtysSubGrp_NoSettlPartySubIDs_71.insert(SettlPartySubID_71.getString());
+        FIX::SettlPartySubIDType SettlPartySubIDType_71(2051488888);
+        noSettlPartySubIDs_0_1_2_0.set(SettlPartySubIDType_71);
+        SettlPtysSubGrp_NoSettlPartySubIDs_71.insert(SettlPartySubIDType_71.getString());
+        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_71);
 
         noSettlPartyIDs_0_1_1.addGroup(noSettlPartySubIDs_0_1_2_0);
       }
       {
         FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs::NoSettlPartySubIDs noSettlPartySubIDs_0_1_2_1;
         // SettlPtysSubGrp.NoSettlPartySubIDs
-        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_77;
-        FIX::SettlPartySubID SettlPartySubID_77("STRING_649230668");
-        noSettlPartySubIDs_0_1_2_1.set(SettlPartySubID_77);
-        SettlPtysSubGrp_NoSettlPartySubIDs_77.insert(SettlPartySubID_77.getString());
-        FIX::SettlPartySubIDType SettlPartySubIDType_77(141511588);
-        noSettlPartySubIDs_0_1_2_1.set(SettlPartySubIDType_77);
-        SettlPtysSubGrp_NoSettlPartySubIDs_77.insert(SettlPartySubIDType_77.getString());
-        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_77);
+        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_72;
+        FIX::SettlPartySubID SettlPartySubID_72("STRING_1888901187");
+        noSettlPartySubIDs_0_1_2_1.set(SettlPartySubID_72);
+        SettlPtysSubGrp_NoSettlPartySubIDs_72.insert(SettlPartySubID_72.getString());
+        FIX::SettlPartySubIDType SettlPartySubIDType_72(1032020121);
+        noSettlPartySubIDs_0_1_2_1.set(SettlPartySubIDType_72);
+        SettlPtysSubGrp_NoSettlPartySubIDs_72.insert(SettlPartySubIDType_72.getString());
+        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_72);
 
         noSettlPartyIDs_0_1_1.addGroup(noSettlPartySubIDs_0_1_2_1);
       }
-      noDlvyInst_0_0.addGroup(noSettlPartyIDs_0_1_1);
-    }
-    {
-      FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs noSettlPartyIDs_0_1_2;
-      // SettlParties.NoSettlPartyIDs
-      multiset<string> SettlParties_NoSettlPartyIDs_34;
-      FIX::SettlPartyID SettlPartyID_34("STRING_820950698");
-      noSettlPartyIDs_0_1_2.set(SettlPartyID_34);
-      SettlParties_NoSettlPartyIDs_34.insert(SettlPartyID_34.getString());
-      FIX::SettlPartyIDSource SettlPartyIDSource_34('1');
-      noSettlPartyIDs_0_1_2.set(SettlPartyIDSource_34);
-      SettlParties_NoSettlPartyIDs_34.insert(SettlPartyIDSource_34.getString());
-      FIX::SettlPartyRole SettlPartyRole_34(1220321564);
-      noSettlPartyIDs_0_1_2.set(SettlPartyRole_34);
-      SettlParties_NoSettlPartyIDs_34.insert(SettlPartyRole_34.getString());
-      all_values.push_back(SettlParties_NoSettlPartyIDs_34);
-
-      // SettlPtysSubGrp
-      // Group SettlPtysSubGrp.NoSettlPartySubIDs
       {
-        FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs::NoSettlPartySubIDs noSettlPartySubIDs_0_2_2_0;
+        FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs::NoSettlPartySubIDs noSettlPartySubIDs_0_1_2_2;
         // SettlPtysSubGrp.NoSettlPartySubIDs
-        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_78;
-        FIX::SettlPartySubID SettlPartySubID_78("STRING_751068927");
-        noSettlPartySubIDs_0_2_2_0.set(SettlPartySubID_78);
-        SettlPtysSubGrp_NoSettlPartySubIDs_78.insert(SettlPartySubID_78.getString());
-        FIX::SettlPartySubIDType SettlPartySubIDType_78(535335916);
-        noSettlPartySubIDs_0_2_2_0.set(SettlPartySubIDType_78);
-        SettlPtysSubGrp_NoSettlPartySubIDs_78.insert(SettlPartySubIDType_78.getString());
-        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_78);
+        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_73;
+        FIX::SettlPartySubID SettlPartySubID_73("STRING_965384220");
+        noSettlPartySubIDs_0_1_2_2.set(SettlPartySubID_73);
+        SettlPtysSubGrp_NoSettlPartySubIDs_73.insert(SettlPartySubID_73.getString());
+        FIX::SettlPartySubIDType SettlPartySubIDType_73(155385424);
+        noSettlPartySubIDs_0_1_2_2.set(SettlPartySubIDType_73);
+        SettlPtysSubGrp_NoSettlPartySubIDs_73.insert(SettlPartySubIDType_73.getString());
+        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_73);
 
-        noSettlPartyIDs_0_1_2.addGroup(noSettlPartySubIDs_0_2_2_0);
+        noSettlPartyIDs_0_1_1.addGroup(noSettlPartySubIDs_0_1_2_2);
       }
-      noDlvyInst_0_0.addGroup(noSettlPartyIDs_0_1_2);
+      noDlvyInst_0_0.addGroup(noSettlPartyIDs_0_1_1);
     }
     msg.addGroup(noDlvyInst_0_0);
   }
   {
     FIX50SP2::Confirmation::NoDlvyInst noDlvyInst_0_1;
     // DlvyInstGrp.NoDlvyInst
-    multiset<string> DlvyInstGrp_NoDlvyInst_15;
-    FIX::DlvyInstType DlvyInstType_15('C');
-    noDlvyInst_0_1.set(DlvyInstType_15);
-    DlvyInstGrp_NoDlvyInst_15.insert(DlvyInstType_15.getString());
-    FIX::SettlInstSource SettlInstSource_15('3');
-    noDlvyInst_0_1.set(SettlInstSource_15);
-    DlvyInstGrp_NoDlvyInst_15.insert(SettlInstSource_15.getString());
-    all_values.push_back(DlvyInstGrp_NoDlvyInst_15);
+    multiset<string> DlvyInstGrp_NoDlvyInst_17;
+    FIX::DlvyInstType DlvyInstType_17('S');
+    noDlvyInst_0_1.set(DlvyInstType_17);
+    DlvyInstGrp_NoDlvyInst_17.insert(DlvyInstType_17.getString());
+    FIX::SettlInstSource SettlInstSource_17('2');
+    noDlvyInst_0_1.set(SettlInstSource_17);
+    DlvyInstGrp_NoDlvyInst_17.insert(SettlInstSource_17.getString());
+    all_values.push_back(DlvyInstGrp_NoDlvyInst_17);
 
     // SettlParties
     // Group SettlParties.NoSettlPartyIDs
     {
       FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs noSettlPartyIDs_1_1_0;
       // SettlParties.NoSettlPartyIDs
-      multiset<string> SettlParties_NoSettlPartyIDs_35;
-      FIX::SettlPartyID SettlPartyID_35("STRING_1885484594");
-      noSettlPartyIDs_1_1_0.set(SettlPartyID_35);
-      SettlParties_NoSettlPartyIDs_35.insert(SettlPartyID_35.getString());
-      FIX::SettlPartyIDSource SettlPartyIDSource_35('1');
-      noSettlPartyIDs_1_1_0.set(SettlPartyIDSource_35);
-      SettlParties_NoSettlPartyIDs_35.insert(SettlPartyIDSource_35.getString());
-      FIX::SettlPartyRole SettlPartyRole_35(474573840);
-      noSettlPartyIDs_1_1_0.set(SettlPartyRole_35);
-      SettlParties_NoSettlPartyIDs_35.insert(SettlPartyRole_35.getString());
-      all_values.push_back(SettlParties_NoSettlPartyIDs_35);
+      multiset<string> SettlParties_NoSettlPartyIDs_33;
+      FIX::SettlPartyID SettlPartyID_33("STRING_1951602708");
+      noSettlPartyIDs_1_1_0.set(SettlPartyID_33);
+      SettlParties_NoSettlPartyIDs_33.insert(SettlPartyID_33.getString());
+      FIX::SettlPartyIDSource SettlPartyIDSource_33('1');
+      noSettlPartyIDs_1_1_0.set(SettlPartyIDSource_33);
+      SettlParties_NoSettlPartyIDs_33.insert(SettlPartyIDSource_33.getString());
+      FIX::SettlPartyRole SettlPartyRole_33(1824110388);
+      noSettlPartyIDs_1_1_0.set(SettlPartyRole_33);
+      SettlParties_NoSettlPartyIDs_33.insert(SettlPartyRole_33.getString());
+      all_values.push_back(SettlParties_NoSettlPartyIDs_33);
 
       // SettlPtysSubGrp
       // Group SettlPtysSubGrp.NoSettlPartySubIDs
       {
         FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs::NoSettlPartySubIDs noSettlPartySubIDs_1_0_2_0;
         // SettlPtysSubGrp.NoSettlPartySubIDs
-        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_79;
-        FIX::SettlPartySubID SettlPartySubID_79("STRING_655164953");
-        noSettlPartySubIDs_1_0_2_0.set(SettlPartySubID_79);
-        SettlPtysSubGrp_NoSettlPartySubIDs_79.insert(SettlPartySubID_79.getString());
-        FIX::SettlPartySubIDType SettlPartySubIDType_79(861697102);
-        noSettlPartySubIDs_1_0_2_0.set(SettlPartySubIDType_79);
-        SettlPtysSubGrp_NoSettlPartySubIDs_79.insert(SettlPartySubIDType_79.getString());
-        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_79);
+        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_74;
+        FIX::SettlPartySubID SettlPartySubID_74("STRING_1088912706");
+        noSettlPartySubIDs_1_0_2_0.set(SettlPartySubID_74);
+        SettlPtysSubGrp_NoSettlPartySubIDs_74.insert(SettlPartySubID_74.getString());
+        FIX::SettlPartySubIDType SettlPartySubIDType_74(651835949);
+        noSettlPartySubIDs_1_0_2_0.set(SettlPartySubIDType_74);
+        SettlPtysSubGrp_NoSettlPartySubIDs_74.insert(SettlPartySubIDType_74.getString());
+        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_74);
 
         noSettlPartyIDs_1_1_0.addGroup(noSettlPartySubIDs_1_0_2_0);
       }
       {
         FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs::NoSettlPartySubIDs noSettlPartySubIDs_1_0_2_1;
         // SettlPtysSubGrp.NoSettlPartySubIDs
-        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_80;
-        FIX::SettlPartySubID SettlPartySubID_80("STRING_1219958715");
-        noSettlPartySubIDs_1_0_2_1.set(SettlPartySubID_80);
-        SettlPtysSubGrp_NoSettlPartySubIDs_80.insert(SettlPartySubID_80.getString());
-        FIX::SettlPartySubIDType SettlPartySubIDType_80(1628871763);
-        noSettlPartySubIDs_1_0_2_1.set(SettlPartySubIDType_80);
-        SettlPtysSubGrp_NoSettlPartySubIDs_80.insert(SettlPartySubIDType_80.getString());
-        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_80);
+        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_75;
+        FIX::SettlPartySubID SettlPartySubID_75("STRING_2103937965");
+        noSettlPartySubIDs_1_0_2_1.set(SettlPartySubID_75);
+        SettlPtysSubGrp_NoSettlPartySubIDs_75.insert(SettlPartySubID_75.getString());
+        FIX::SettlPartySubIDType SettlPartySubIDType_75(1225577855);
+        noSettlPartySubIDs_1_0_2_1.set(SettlPartySubIDType_75);
+        SettlPtysSubGrp_NoSettlPartySubIDs_75.insert(SettlPartySubIDType_75.getString());
+        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_75);
 
         noSettlPartyIDs_1_1_0.addGroup(noSettlPartySubIDs_1_0_2_1);
-      }
-      {
-        FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs::NoSettlPartySubIDs noSettlPartySubIDs_1_0_2_2;
-        // SettlPtysSubGrp.NoSettlPartySubIDs
-        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_81;
-        FIX::SettlPartySubID SettlPartySubID_81("STRING_438419686");
-        noSettlPartySubIDs_1_0_2_2.set(SettlPartySubID_81);
-        SettlPtysSubGrp_NoSettlPartySubIDs_81.insert(SettlPartySubID_81.getString());
-        FIX::SettlPartySubIDType SettlPartySubIDType_81(1027294378);
-        noSettlPartySubIDs_1_0_2_2.set(SettlPartySubIDType_81);
-        SettlPtysSubGrp_NoSettlPartySubIDs_81.insert(SettlPartySubIDType_81.getString());
-        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_81);
-
-        noSettlPartyIDs_1_1_0.addGroup(noSettlPartySubIDs_1_0_2_2);
       }
       noDlvyInst_0_1.addGroup(noSettlPartyIDs_1_1_0);
     }
     msg.addGroup(noDlvyInst_0_1);
   }
-  {
-    FIX50SP2::Confirmation::NoDlvyInst noDlvyInst_0_2;
-    // DlvyInstGrp.NoDlvyInst
-    multiset<string> DlvyInstGrp_NoDlvyInst_16;
-    FIX::DlvyInstType DlvyInstType_16('S');
-    noDlvyInst_0_2.set(DlvyInstType_16);
-    DlvyInstGrp_NoDlvyInst_16.insert(DlvyInstType_16.getString());
-    FIX::SettlInstSource SettlInstSource_16('1');
-    noDlvyInst_0_2.set(SettlInstSource_16);
-    DlvyInstGrp_NoDlvyInst_16.insert(SettlInstSource_16.getString());
-    all_values.push_back(DlvyInstGrp_NoDlvyInst_16);
-
-    // SettlParties
-    // Group SettlParties.NoSettlPartyIDs
-    {
-      FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs noSettlPartyIDs_2_1_0;
-      // SettlParties.NoSettlPartyIDs
-      multiset<string> SettlParties_NoSettlPartyIDs_36;
-      FIX::SettlPartyID SettlPartyID_36("STRING_926176038");
-      noSettlPartyIDs_2_1_0.set(SettlPartyID_36);
-      SettlParties_NoSettlPartyIDs_36.insert(SettlPartyID_36.getString());
-      FIX::SettlPartyIDSource SettlPartyIDSource_36('2');
-      noSettlPartyIDs_2_1_0.set(SettlPartyIDSource_36);
-      SettlParties_NoSettlPartyIDs_36.insert(SettlPartyIDSource_36.getString());
-      FIX::SettlPartyRole SettlPartyRole_36(1181096629);
-      noSettlPartyIDs_2_1_0.set(SettlPartyRole_36);
-      SettlParties_NoSettlPartyIDs_36.insert(SettlPartyRole_36.getString());
-      all_values.push_back(SettlParties_NoSettlPartyIDs_36);
-
-      // SettlPtysSubGrp
-      // Group SettlPtysSubGrp.NoSettlPartySubIDs
-      {
-        FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs::NoSettlPartySubIDs noSettlPartySubIDs_2_0_2_0;
-        // SettlPtysSubGrp.NoSettlPartySubIDs
-        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_82;
-        FIX::SettlPartySubID SettlPartySubID_82("STRING_2114367764");
-        noSettlPartySubIDs_2_0_2_0.set(SettlPartySubID_82);
-        SettlPtysSubGrp_NoSettlPartySubIDs_82.insert(SettlPartySubID_82.getString());
-        FIX::SettlPartySubIDType SettlPartySubIDType_82(2009420049);
-        noSettlPartySubIDs_2_0_2_0.set(SettlPartySubIDType_82);
-        SettlPtysSubGrp_NoSettlPartySubIDs_82.insert(SettlPartySubIDType_82.getString());
-        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_82);
-
-        noSettlPartyIDs_2_1_0.addGroup(noSettlPartySubIDs_2_0_2_0);
-      }
-      {
-        FIX50SP2::Confirmation::NoDlvyInst::NoSettlPartyIDs::NoSettlPartySubIDs noSettlPartySubIDs_2_0_2_1;
-        // SettlPtysSubGrp.NoSettlPartySubIDs
-        multiset<string> SettlPtysSubGrp_NoSettlPartySubIDs_83;
-        FIX::SettlPartySubID SettlPartySubID_83("STRING_920108309");
-        noSettlPartySubIDs_2_0_2_1.set(SettlPartySubID_83);
-        SettlPtysSubGrp_NoSettlPartySubIDs_83.insert(SettlPartySubID_83.getString());
-        FIX::SettlPartySubIDType SettlPartySubIDType_83(616114784);
-        noSettlPartySubIDs_2_0_2_1.set(SettlPartySubIDType_83);
-        SettlPtysSubGrp_NoSettlPartySubIDs_83.insert(SettlPartySubIDType_83.getString());
-        all_values.push_back(SettlPtysSubGrp_NoSettlPartySubIDs_83);
-
-        noSettlPartyIDs_2_1_0.addGroup(noSettlPartySubIDs_2_0_2_1);
-      }
-      noDlvyInst_0_2.addGroup(noSettlPartyIDs_2_1_0);
-    }
-    msg.addGroup(noDlvyInst_0_2);
-  }
   // SpreadOrBenchmarkCurveData
   multiset<string> SpreadOrBenchmarkCurveData_8;
-  FIX::BenchmarkCurveCurrency BenchmarkCurveCurrency_8("EUR");
+  FIX::BenchmarkCurveCurrency BenchmarkCurveCurrency_8("JPY");
   msg.set(BenchmarkCurveCurrency_8);
   SpreadOrBenchmarkCurveData_8.insert(BenchmarkCurveCurrency_8.getString());
-  FIX::BenchmarkCurveName BenchmarkCurveName_8("STRING_Treasury");
+  FIX::BenchmarkCurveName BenchmarkCurveName_8("STRING_SONIA");
   msg.set(BenchmarkCurveName_8);
   SpreadOrBenchmarkCurveData_8.insert(BenchmarkCurveName_8.getString());
-  FIX::BenchmarkCurvePoint BenchmarkCurvePoint_8("STRING_1223769553");
+  FIX::BenchmarkCurvePoint BenchmarkCurvePoint_8("STRING_1689102793");
   msg.set(BenchmarkCurvePoint_8);
   SpreadOrBenchmarkCurveData_8.insert(BenchmarkCurvePoint_8.getString());
   FIX::BenchmarkPrice BenchmarkPrice_8;
-  BenchmarkPrice_8.setString("8932761");
+  BenchmarkPrice_8.setString("16052461");
   msg.set(BenchmarkPrice_8);
   SpreadOrBenchmarkCurveData_8.insert(BenchmarkPrice_8.getString());
-  FIX::BenchmarkPriceType BenchmarkPriceType_8(844251243);
+  FIX::BenchmarkPriceType BenchmarkPriceType_8(1146652327);
   msg.set(BenchmarkPriceType_8);
   SpreadOrBenchmarkCurveData_8.insert(BenchmarkPriceType_8.getString());
-  FIX::BenchmarkSecurityID BenchmarkSecurityID_8("STRING_1759105469");
+  FIX::BenchmarkSecurityID BenchmarkSecurityID_8("STRING_1291684408");
   msg.set(BenchmarkSecurityID_8);
   SpreadOrBenchmarkCurveData_8.insert(BenchmarkSecurityID_8.getString());
-  FIX::BenchmarkSecurityIDSource BenchmarkSecurityIDSource_8("STRING_1790670116");
+  FIX::BenchmarkSecurityIDSource BenchmarkSecurityIDSource_8("STRING_1131579519");
   msg.set(BenchmarkSecurityIDSource_8);
   SpreadOrBenchmarkCurveData_8.insert(BenchmarkSecurityIDSource_8.getString());
   FIX::Spread Spread_8;
-  Spread_8.setString("5096505");
+  Spread_8.setString("21248100");
   msg.set(Spread_8);
   SpreadOrBenchmarkCurveData_8.insert(Spread_8.getString());
   all_values.push_back(SpreadOrBenchmarkCurveData_8);
@@ -2424,28 +2325,28 @@ TEST ( Confirmation, set_fields)
   {
     FIX50SP2::Confirmation::NoStipulations noStipulations_0_0;
     // Stipulations.NoStipulations
-    multiset<string> Stipulations_NoStipulations_15;
-    FIX::StipulationType StipulationType_15("STRING_PAYFREQ");
-    noStipulations_0_0.set(StipulationType_15);
-    Stipulations_NoStipulations_15.insert(StipulationType_15.getString());
-    FIX::StipulationValue StipulationValue_15("STRING_211855457");
-    noStipulations_0_0.set(StipulationValue_15);
-    Stipulations_NoStipulations_15.insert(StipulationValue_15.getString());
-    all_values.push_back(Stipulations_NoStipulations_15);
+    multiset<string> Stipulations_NoStipulations_14;
+    FIX::StipulationType StipulationType_14("STRING_COUPON");
+    noStipulations_0_0.set(StipulationType_14);
+    Stipulations_NoStipulations_14.insert(StipulationType_14.getString());
+    FIX::StipulationValue StipulationValue_14("STRING_849856332");
+    noStipulations_0_0.set(StipulationValue_14);
+    Stipulations_NoStipulations_14.insert(StipulationValue_14.getString());
+    all_values.push_back(Stipulations_NoStipulations_14);
 
     msg.addGroup(noStipulations_0_0);
   }
   {
     FIX50SP2::Confirmation::NoStipulations noStipulations_0_1;
     // Stipulations.NoStipulations
-    multiset<string> Stipulations_NoStipulations_16;
-    FIX::StipulationType StipulationType_16("STRING_WHOLE");
-    noStipulations_0_1.set(StipulationType_16);
-    Stipulations_NoStipulations_16.insert(StipulationType_16.getString());
-    FIX::StipulationValue StipulationValue_16("STRING_761113109");
-    noStipulations_0_1.set(StipulationValue_16);
-    Stipulations_NoStipulations_16.insert(StipulationValue_16.getString());
-    all_values.push_back(Stipulations_NoStipulations_16);
+    multiset<string> Stipulations_NoStipulations_15;
+    FIX::StipulationType StipulationType_15("STRING_MATURITY");
+    noStipulations_0_1.set(StipulationType_15);
+    Stipulations_NoStipulations_15.insert(StipulationType_15.getString());
+    FIX::StipulationValue StipulationValue_15("STRING_1791303425");
+    noStipulations_0_1.set(StipulationValue_15);
+    Stipulations_NoStipulations_15.insert(StipulationValue_15.getString());
+    all_values.push_back(Stipulations_NoStipulations_15);
 
     msg.addGroup(noStipulations_0_1);
   }
@@ -2454,54 +2355,28 @@ TEST ( Confirmation, set_fields)
   {
     FIX50SP2::Confirmation::NoTrdRegTimestamps noTrdRegTimestamps_0_0;
     // TrdRegTimestamps.NoTrdRegTimestamps
-    multiset<string> TrdRegTimestamps_NoTrdRegTimestamps_11;
-    FIX::DeskOrderHandlingInst DeskOrderHandlingInst_11("MULTIPLESTRINGVALUE_NH");
-    noTrdRegTimestamps_0_0.set(DeskOrderHandlingInst_11);
-    TrdRegTimestamps_NoTrdRegTimestamps_11.insert(DeskOrderHandlingInst_11.getString());
-    FIX::DeskType DeskType_11("STRING_PR");
-    noTrdRegTimestamps_0_0.set(DeskType_11);
-    TrdRegTimestamps_NoTrdRegTimestamps_11.insert(DeskType_11.getString());
-    FIX::DeskTypeSource DeskTypeSource_11(1);
-    noTrdRegTimestamps_0_0.set(DeskTypeSource_11);
-    TrdRegTimestamps_NoTrdRegTimestamps_11.insert(DeskTypeSource_11.getString());
-    FIX::TrdRegTimestamp TrdRegTimestamp_11(FIX::UTCTIMESTAMP(11, 40, 47, 14, 11, 2000));
-    noTrdRegTimestamps_0_0.set(TrdRegTimestamp_11);
-    TrdRegTimestamps_NoTrdRegTimestamps_11.insert(TrdRegTimestamp_11.getString());
-    FIX::TrdRegTimestampOrigin TrdRegTimestampOrigin_11("STRING_963863387");
-    noTrdRegTimestamps_0_0.set(TrdRegTimestampOrigin_11);
-    TrdRegTimestamps_NoTrdRegTimestamps_11.insert(TrdRegTimestampOrigin_11.getString());
-    FIX::TrdRegTimestampType TrdRegTimestampType_11(6);
-    noTrdRegTimestamps_0_0.set(TrdRegTimestampType_11);
-    TrdRegTimestamps_NoTrdRegTimestamps_11.insert(TrdRegTimestampType_11.getString());
-    all_values.push_back(TrdRegTimestamps_NoTrdRegTimestamps_11);
+    multiset<string> TrdRegTimestamps_NoTrdRegTimestamps_9;
+    FIX::DeskOrderHandlingInst DeskOrderHandlingInst_9("MULTIPLESTRINGVALUE_PEG");
+    noTrdRegTimestamps_0_0.set(DeskOrderHandlingInst_9);
+    TrdRegTimestamps_NoTrdRegTimestamps_9.insert(DeskOrderHandlingInst_9.getString());
+    FIX::DeskType DeskType_9("STRING_O");
+    noTrdRegTimestamps_0_0.set(DeskType_9);
+    TrdRegTimestamps_NoTrdRegTimestamps_9.insert(DeskType_9.getString());
+    FIX::DeskTypeSource DeskTypeSource_9(1);
+    noTrdRegTimestamps_0_0.set(DeskTypeSource_9);
+    TrdRegTimestamps_NoTrdRegTimestamps_9.insert(DeskTypeSource_9.getString());
+    FIX::TrdRegTimestamp TrdRegTimestamp_9(FIX::UTCTIMESTAMP(5, 27, 37, 4, 8, 2001));
+    noTrdRegTimestamps_0_0.set(TrdRegTimestamp_9);
+    TrdRegTimestamps_NoTrdRegTimestamps_9.insert(TrdRegTimestamp_9.getString());
+    FIX::TrdRegTimestampOrigin TrdRegTimestampOrigin_9("STRING_2126383944");
+    noTrdRegTimestamps_0_0.set(TrdRegTimestampOrigin_9);
+    TrdRegTimestamps_NoTrdRegTimestamps_9.insert(TrdRegTimestampOrigin_9.getString());
+    FIX::TrdRegTimestampType TrdRegTimestampType_9(6);
+    noTrdRegTimestamps_0_0.set(TrdRegTimestampType_9);
+    TrdRegTimestamps_NoTrdRegTimestamps_9.insert(TrdRegTimestampType_9.getString());
+    all_values.push_back(TrdRegTimestamps_NoTrdRegTimestamps_9);
 
     msg.addGroup(noTrdRegTimestamps_0_0);
-  }
-  {
-    FIX50SP2::Confirmation::NoTrdRegTimestamps noTrdRegTimestamps_0_1;
-    // TrdRegTimestamps.NoTrdRegTimestamps
-    multiset<string> TrdRegTimestamps_NoTrdRegTimestamps_12;
-    FIX::DeskOrderHandlingInst DeskOrderHandlingInst_12("MULTIPLESTRINGVALUE_ADD");
-    noTrdRegTimestamps_0_1.set(DeskOrderHandlingInst_12);
-    TrdRegTimestamps_NoTrdRegTimestamps_12.insert(DeskOrderHandlingInst_12.getString());
-    FIX::DeskType DeskType_12("STRING_A");
-    noTrdRegTimestamps_0_1.set(DeskType_12);
-    TrdRegTimestamps_NoTrdRegTimestamps_12.insert(DeskType_12.getString());
-    FIX::DeskTypeSource DeskTypeSource_12(1);
-    noTrdRegTimestamps_0_1.set(DeskTypeSource_12);
-    TrdRegTimestamps_NoTrdRegTimestamps_12.insert(DeskTypeSource_12.getString());
-    FIX::TrdRegTimestamp TrdRegTimestamp_12(FIX::UTCTIMESTAMP(18, 34, 0, 15, 1, 2015));
-    noTrdRegTimestamps_0_1.set(TrdRegTimestamp_12);
-    TrdRegTimestamps_NoTrdRegTimestamps_12.insert(TrdRegTimestamp_12.getString());
-    FIX::TrdRegTimestampOrigin TrdRegTimestampOrigin_12("STRING_1664639153");
-    noTrdRegTimestamps_0_1.set(TrdRegTimestampOrigin_12);
-    TrdRegTimestamps_NoTrdRegTimestamps_12.insert(TrdRegTimestampOrigin_12.getString());
-    FIX::TrdRegTimestampType TrdRegTimestampType_12(5);
-    noTrdRegTimestamps_0_1.set(TrdRegTimestampType_12);
-    TrdRegTimestamps_NoTrdRegTimestamps_12.insert(TrdRegTimestampType_12.getString());
-    all_values.push_back(TrdRegTimestamps_NoTrdRegTimestamps_12);
-
-    msg.addGroup(noTrdRegTimestamps_0_1);
   }
   // UndInstrmtGrp
   // Group UndInstrmtGrp.NoUnderlyings
@@ -2509,238 +2384,238 @@ TEST ( Confirmation, set_fields)
     FIX50SP2::Confirmation::NoUnderlyings noUnderlyings_0_0;
     // UndInstrmtGrp.NoUnderlyings
     // UnderlyingInstrument
-    multiset<string> UnderlyingInstrument_24;
-    FIX::EncodedUnderlyingIssuer EncodedUnderlyingIssuer_24("DATA_28249633");
-    noUnderlyings_0_0.set(EncodedUnderlyingIssuer_24);
-    UnderlyingInstrument_24.insert(EncodedUnderlyingIssuer_24.getString());
-    FIX::EncodedUnderlyingIssuerLen EncodedUnderlyingIssuerLen_24(1104390270);
-    noUnderlyings_0_0.set(EncodedUnderlyingIssuerLen_24);
-    UnderlyingInstrument_24.insert(EncodedUnderlyingIssuerLen_24.getString());
-    FIX::EncodedUnderlyingSecurityDesc EncodedUnderlyingSecurityDesc_24("DATA_17684203");
-    noUnderlyings_0_0.set(EncodedUnderlyingSecurityDesc_24);
-    UnderlyingInstrument_24.insert(EncodedUnderlyingSecurityDesc_24.getString());
-    FIX::EncodedUnderlyingSecurityDescLen EncodedUnderlyingSecurityDescLen_24(1013917601);
-    noUnderlyings_0_0.set(EncodedUnderlyingSecurityDescLen_24);
-    UnderlyingInstrument_24.insert(EncodedUnderlyingSecurityDescLen_24.getString());
-    FIX::UnderlyingAdjustedQuantity UnderlyingAdjustedQuantity_24;
-    UnderlyingAdjustedQuantity_24.setString("18655033");
-    noUnderlyings_0_0.set(UnderlyingAdjustedQuantity_24);
-    UnderlyingInstrument_24.insert(UnderlyingAdjustedQuantity_24.getString());
-    FIX::UnderlyingAllocationPercent UnderlyingAllocationPercent_24;
-    UnderlyingAllocationPercent_24.setString("46.130000");
-    noUnderlyings_0_0.set(UnderlyingAllocationPercent_24);
-    UnderlyingInstrument_24.insert(UnderlyingAllocationPercent_24.getString());
-    FIX::UnderlyingAttachmentPoint UnderlyingAttachmentPoint_24;
-    UnderlyingAttachmentPoint_24.setString("90.240000");
-    noUnderlyings_0_0.set(UnderlyingAttachmentPoint_24);
-    UnderlyingInstrument_24.insert(UnderlyingAttachmentPoint_24.getString());
-    FIX::UnderlyingCFICode UnderlyingCFICode_24("STRING_1699091557");
-    noUnderlyings_0_0.set(UnderlyingCFICode_24);
-    UnderlyingInstrument_24.insert(UnderlyingCFICode_24.getString());
-    FIX::UnderlyingCPProgram UnderlyingCPProgram_24("STRING_1233113139");
-    noUnderlyings_0_0.set(UnderlyingCPProgram_24);
-    UnderlyingInstrument_24.insert(UnderlyingCPProgram_24.getString());
-    FIX::UnderlyingCPRegType UnderlyingCPRegType_24("STRING_852100133");
-    noUnderlyings_0_0.set(UnderlyingCPRegType_24);
-    UnderlyingInstrument_24.insert(UnderlyingCPRegType_24.getString());
-    FIX::UnderlyingCapValue UnderlyingCapValue_24;
-    UnderlyingCapValue_24.setString("4124904");
-    noUnderlyings_0_0.set(UnderlyingCapValue_24);
-    UnderlyingInstrument_24.insert(UnderlyingCapValue_24.getString());
-    FIX::UnderlyingCashAmount UnderlyingCashAmount_24;
-    UnderlyingCashAmount_24.setString("16293998");
-    noUnderlyings_0_0.set(UnderlyingCashAmount_24);
-    UnderlyingInstrument_24.insert(UnderlyingCashAmount_24.getString());
-    FIX::UnderlyingCashType UnderlyingCashType_24("STRING_FIXED");
-    noUnderlyings_0_0.set(UnderlyingCashType_24);
-    UnderlyingInstrument_24.insert(UnderlyingCashType_24.getString());
-    FIX::UnderlyingContractMultiplier UnderlyingContractMultiplier_24;
-    UnderlyingContractMultiplier_24.setString("1952572");
-    noUnderlyings_0_0.set(UnderlyingContractMultiplier_24);
-    UnderlyingInstrument_24.insert(UnderlyingContractMultiplier_24.getString());
-    FIX::UnderlyingContractMultiplierUnit UnderlyingContractMultiplierUnit_24(804378970);
-    noUnderlyings_0_0.set(UnderlyingContractMultiplierUnit_24);
-    UnderlyingInstrument_24.insert(UnderlyingContractMultiplierUnit_24.getString());
-    FIX::UnderlyingCountryOfIssue UnderlyingCountryOfIssue_24("COUNTRY_468833016");
-    noUnderlyings_0_0.set(UnderlyingCountryOfIssue_24);
-    UnderlyingInstrument_24.insert(UnderlyingCountryOfIssue_24.getString());
-    FIX::UnderlyingCouponPaymentDate UnderlyingCouponPaymentDate_24("LOCALMKTDATE_1159120609");
-    noUnderlyings_0_0.set(UnderlyingCouponPaymentDate_24);
-    UnderlyingInstrument_24.insert(UnderlyingCouponPaymentDate_24.getString());
-    FIX::UnderlyingCouponRate UnderlyingCouponRate_24;
-    UnderlyingCouponRate_24.setString("55.760000");
-    noUnderlyings_0_0.set(UnderlyingCouponRate_24);
-    UnderlyingInstrument_24.insert(UnderlyingCouponRate_24.getString());
-    FIX::UnderlyingCreditRating UnderlyingCreditRating_24("STRING_358946537");
-    noUnderlyings_0_0.set(UnderlyingCreditRating_24);
-    UnderlyingInstrument_24.insert(UnderlyingCreditRating_24.getString());
-    FIX::UnderlyingCurrency UnderlyingCurrency_24("GBP");
-    noUnderlyings_0_0.set(UnderlyingCurrency_24);
-    UnderlyingInstrument_24.insert(UnderlyingCurrency_24.getString());
-    FIX::UnderlyingCurrentValue UnderlyingCurrentValue_24;
-    UnderlyingCurrentValue_24.setString("8651748");
-    noUnderlyings_0_0.set(UnderlyingCurrentValue_24);
-    UnderlyingInstrument_24.insert(UnderlyingCurrentValue_24.getString());
-    FIX::UnderlyingDetachmentPoint UnderlyingDetachmentPoint_24;
-    UnderlyingDetachmentPoint_24.setString("45.280000");
-    noUnderlyings_0_0.set(UnderlyingDetachmentPoint_24);
-    UnderlyingInstrument_24.insert(UnderlyingDetachmentPoint_24.getString());
-    FIX::UnderlyingDirtyPrice UnderlyingDirtyPrice_24;
-    UnderlyingDirtyPrice_24.setString("21098571");
-    noUnderlyings_0_0.set(UnderlyingDirtyPrice_24);
-    UnderlyingInstrument_24.insert(UnderlyingDirtyPrice_24.getString());
-    FIX::UnderlyingEndPrice UnderlyingEndPrice_24;
-    UnderlyingEndPrice_24.setString("14645854");
-    noUnderlyings_0_0.set(UnderlyingEndPrice_24);
-    UnderlyingInstrument_24.insert(UnderlyingEndPrice_24.getString());
-    FIX::UnderlyingEndValue UnderlyingEndValue_24;
-    UnderlyingEndValue_24.setString("5722182");
-    noUnderlyings_0_0.set(UnderlyingEndValue_24);
-    UnderlyingInstrument_24.insert(UnderlyingEndValue_24.getString());
-    FIX::UnderlyingExerciseStyle UnderlyingExerciseStyle_24(2042389859);
-    noUnderlyings_0_0.set(UnderlyingExerciseStyle_24);
-    UnderlyingInstrument_24.insert(UnderlyingExerciseStyle_24.getString());
-    FIX::UnderlyingFXRate UnderlyingFXRate_24;
-    UnderlyingFXRate_24.setString("7607636");
-    noUnderlyings_0_0.set(UnderlyingFXRate_24);
-    UnderlyingInstrument_24.insert(UnderlyingFXRate_24.getString());
-    FIX::UnderlyingFXRateCalc UnderlyingFXRateCalc_24('D');
-    noUnderlyings_0_0.set(UnderlyingFXRateCalc_24);
-    UnderlyingInstrument_24.insert(UnderlyingFXRateCalc_24.getString());
-    FIX::UnderlyingFactor UnderlyingFactor_24;
-    UnderlyingFactor_24.setString("16181090");
-    noUnderlyings_0_0.set(UnderlyingFactor_24);
-    UnderlyingInstrument_24.insert(UnderlyingFactor_24.getString());
-    FIX::UnderlyingFlowScheduleType UnderlyingFlowScheduleType_24(566592423);
-    noUnderlyings_0_0.set(UnderlyingFlowScheduleType_24);
-    UnderlyingInstrument_24.insert(UnderlyingFlowScheduleType_24.getString());
-    FIX::UnderlyingInstrRegistry UnderlyingInstrRegistry_24("STRING_117623349");
-    noUnderlyings_0_0.set(UnderlyingInstrRegistry_24);
-    UnderlyingInstrument_24.insert(UnderlyingInstrRegistry_24.getString());
-    FIX::UnderlyingIssueDate UnderlyingIssueDate_24("LOCALMKTDATE_575015690");
-    noUnderlyings_0_0.set(UnderlyingIssueDate_24);
-    UnderlyingInstrument_24.insert(UnderlyingIssueDate_24.getString());
-    FIX::UnderlyingIssuer UnderlyingIssuer_24("STRING_584276626");
-    noUnderlyings_0_0.set(UnderlyingIssuer_24);
-    UnderlyingInstrument_24.insert(UnderlyingIssuer_24.getString());
-    FIX::UnderlyingLocaleOfIssue UnderlyingLocaleOfIssue_24("STRING_1131540951");
-    noUnderlyings_0_0.set(UnderlyingLocaleOfIssue_24);
-    UnderlyingInstrument_24.insert(UnderlyingLocaleOfIssue_24.getString());
-    FIX::UnderlyingMaturityDate UnderlyingMaturityDate_24("LOCALMKTDATE_293035422");
-    noUnderlyings_0_0.set(UnderlyingMaturityDate_24);
-    UnderlyingInstrument_24.insert(UnderlyingMaturityDate_24.getString());
-    FIX::UnderlyingMaturityMonthYear UnderlyingMaturityMonthYear_24("MONTHYEAR_1468981240");
-    noUnderlyings_0_0.set(UnderlyingMaturityMonthYear_24);
-    UnderlyingInstrument_24.insert(UnderlyingMaturityMonthYear_24.getString());
-    FIX::UnderlyingMaturityTime UnderlyingMaturityTime_24("TZTIMEONLY_1845339975");
-    noUnderlyings_0_0.set(UnderlyingMaturityTime_24);
-    UnderlyingInstrument_24.insert(UnderlyingMaturityTime_24.getString());
-    FIX::UnderlyingNotionalPercentageOutstanding UnderlyingNotionalPercentageOutstanding_24;
-    UnderlyingNotionalPercentageOutstanding_24.setString("69.790000");
-    noUnderlyings_0_0.set(UnderlyingNotionalPercentageOutstanding_24);
-    UnderlyingInstrument_24.insert(UnderlyingNotionalPercentageOutstanding_24.getString());
-    FIX::UnderlyingOptAttribute UnderlyingOptAttribute_24('5');
-    noUnderlyings_0_0.set(UnderlyingOptAttribute_24);
-    UnderlyingInstrument_24.insert(UnderlyingOptAttribute_24.getString());
-    FIX::UnderlyingOriginalNotionalPercentageOutstanding UnderlyingOriginalNotionalPercentageOutstanding_24;
-    UnderlyingOriginalNotionalPercentageOutstanding_24.setString("64.610000");
-    noUnderlyings_0_0.set(UnderlyingOriginalNotionalPercentageOutstanding_24);
-    UnderlyingInstrument_24.insert(UnderlyingOriginalNotionalPercentageOutstanding_24.getString());
-    FIX::UnderlyingPriceUnitOfMeasure UnderlyingPriceUnitOfMeasure_24("STRING_257133795");
-    noUnderlyings_0_0.set(UnderlyingPriceUnitOfMeasure_24);
-    UnderlyingInstrument_24.insert(UnderlyingPriceUnitOfMeasure_24.getString());
-    FIX::UnderlyingPriceUnitOfMeasureQty UnderlyingPriceUnitOfMeasureQty_24;
-    UnderlyingPriceUnitOfMeasureQty_24.setString("365269");
-    noUnderlyings_0_0.set(UnderlyingPriceUnitOfMeasureQty_24);
-    UnderlyingInstrument_24.insert(UnderlyingPriceUnitOfMeasureQty_24.getString());
-    FIX::UnderlyingProduct UnderlyingProduct_24(1095560073);
-    noUnderlyings_0_0.set(UnderlyingProduct_24);
-    UnderlyingInstrument_24.insert(UnderlyingProduct_24.getString());
-    FIX::UnderlyingPutOrCall UnderlyingPutOrCall_24(452391018);
-    noUnderlyings_0_0.set(UnderlyingPutOrCall_24);
-    UnderlyingInstrument_24.insert(UnderlyingPutOrCall_24.getString());
-    FIX::UnderlyingPx UnderlyingPx_24;
-    UnderlyingPx_24.setString("8409059");
-    noUnderlyings_0_0.set(UnderlyingPx_24);
-    UnderlyingInstrument_24.insert(UnderlyingPx_24.getString());
-    FIX::UnderlyingQty UnderlyingQty_24;
-    UnderlyingQty_24.setString("15643930");
-    noUnderlyings_0_0.set(UnderlyingQty_24);
-    UnderlyingInstrument_24.insert(UnderlyingQty_24.getString());
-    FIX::UnderlyingRedemptionDate UnderlyingRedemptionDate_24("LOCALMKTDATE_1611511627");
-    noUnderlyings_0_0.set(UnderlyingRedemptionDate_24);
-    UnderlyingInstrument_24.insert(UnderlyingRedemptionDate_24.getString());
-    FIX::UnderlyingRepoCollateralSecurityType UnderlyingRepoCollateralSecurityType_24("STRING_170857841");
-    noUnderlyings_0_0.set(UnderlyingRepoCollateralSecurityType_24);
-    UnderlyingInstrument_24.insert(UnderlyingRepoCollateralSecurityType_24.getString());
-    FIX::UnderlyingRepurchaseRate UnderlyingRepurchaseRate_24;
-    UnderlyingRepurchaseRate_24.setString("96.270000");
-    noUnderlyings_0_0.set(UnderlyingRepurchaseRate_24);
-    UnderlyingInstrument_24.insert(UnderlyingRepurchaseRate_24.getString());
-    FIX::UnderlyingRepurchaseTerm UnderlyingRepurchaseTerm_24(1448948377);
-    noUnderlyings_0_0.set(UnderlyingRepurchaseTerm_24);
-    UnderlyingInstrument_24.insert(UnderlyingRepurchaseTerm_24.getString());
-    FIX::UnderlyingRestructuringType UnderlyingRestructuringType_24("STRING_1093974685");
-    noUnderlyings_0_0.set(UnderlyingRestructuringType_24);
-    UnderlyingInstrument_24.insert(UnderlyingRestructuringType_24.getString());
-    FIX::UnderlyingSecurityDesc UnderlyingSecurityDesc_24("STRING_641030821");
-    noUnderlyings_0_0.set(UnderlyingSecurityDesc_24);
-    UnderlyingInstrument_24.insert(UnderlyingSecurityDesc_24.getString());
-    FIX::UnderlyingSecurityExchange UnderlyingSecurityExchange_24("EXCHANGE_2115632905");
-    noUnderlyings_0_0.set(UnderlyingSecurityExchange_24);
-    UnderlyingInstrument_24.insert(UnderlyingSecurityExchange_24.getString());
-    FIX::UnderlyingSecurityID UnderlyingSecurityID_24("STRING_1056348155");
-    noUnderlyings_0_0.set(UnderlyingSecurityID_24);
-    UnderlyingInstrument_24.insert(UnderlyingSecurityID_24.getString());
-    FIX::UnderlyingSecurityIDSource UnderlyingSecurityIDSource_24("STRING_2105616283");
-    noUnderlyings_0_0.set(UnderlyingSecurityIDSource_24);
-    UnderlyingInstrument_24.insert(UnderlyingSecurityIDSource_24.getString());
-    FIX::UnderlyingSecuritySubType UnderlyingSecuritySubType_24("STRING_540367469");
-    noUnderlyings_0_0.set(UnderlyingSecuritySubType_24);
-    UnderlyingInstrument_24.insert(UnderlyingSecuritySubType_24.getString());
-    FIX::UnderlyingSecurityType UnderlyingSecurityType_24("STRING_951254366");
-    noUnderlyings_0_0.set(UnderlyingSecurityType_24);
-    UnderlyingInstrument_24.insert(UnderlyingSecurityType_24.getString());
-    FIX::UnderlyingSeniority UnderlyingSeniority_24("STRING_718896313");
-    noUnderlyings_0_0.set(UnderlyingSeniority_24);
-    UnderlyingInstrument_24.insert(UnderlyingSeniority_24.getString());
-    FIX::UnderlyingSettlMethod UnderlyingSettlMethod_24("STRING_629741185");
-    noUnderlyings_0_0.set(UnderlyingSettlMethod_24);
-    UnderlyingInstrument_24.insert(UnderlyingSettlMethod_24.getString());
-    FIX::UnderlyingSettlementType UnderlyingSettlementType_24(4);
-    noUnderlyings_0_0.set(UnderlyingSettlementType_24);
-    UnderlyingInstrument_24.insert(UnderlyingSettlementType_24.getString());
-    FIX::UnderlyingStartValue UnderlyingStartValue_24;
-    UnderlyingStartValue_24.setString("12854887");
-    noUnderlyings_0_0.set(UnderlyingStartValue_24);
-    UnderlyingInstrument_24.insert(UnderlyingStartValue_24.getString());
-    FIX::UnderlyingStateOrProvinceOfIssue UnderlyingStateOrProvinceOfIssue_24("STRING_747364535");
-    noUnderlyings_0_0.set(UnderlyingStateOrProvinceOfIssue_24);
-    UnderlyingInstrument_24.insert(UnderlyingStateOrProvinceOfIssue_24.getString());
-    FIX::UnderlyingStrikeCurrency UnderlyingStrikeCurrency_24("CHF");
-    noUnderlyings_0_0.set(UnderlyingStrikeCurrency_24);
-    UnderlyingInstrument_24.insert(UnderlyingStrikeCurrency_24.getString());
-    FIX::UnderlyingStrikePrice UnderlyingStrikePrice_24;
-    UnderlyingStrikePrice_24.setString("18789054");
-    noUnderlyings_0_0.set(UnderlyingStrikePrice_24);
-    UnderlyingInstrument_24.insert(UnderlyingStrikePrice_24.getString());
-    FIX::UnderlyingSymbol UnderlyingSymbol_24("STRING_1289930898");
-    noUnderlyings_0_0.set(UnderlyingSymbol_24);
-    UnderlyingInstrument_24.insert(UnderlyingSymbol_24.getString());
-    FIX::UnderlyingSymbolSfx UnderlyingSymbolSfx_24("STRING_1191262955");
-    noUnderlyings_0_0.set(UnderlyingSymbolSfx_24);
-    UnderlyingInstrument_24.insert(UnderlyingSymbolSfx_24.getString());
-    FIX::UnderlyingTimeUnit UnderlyingTimeUnit_24("STRING_1576761813");
-    noUnderlyings_0_0.set(UnderlyingTimeUnit_24);
-    UnderlyingInstrument_24.insert(UnderlyingTimeUnit_24.getString());
-    FIX::UnderlyingUnitOfMeasure UnderlyingUnitOfMeasure_24("STRING_1134574229");
-    noUnderlyings_0_0.set(UnderlyingUnitOfMeasure_24);
-    UnderlyingInstrument_24.insert(UnderlyingUnitOfMeasure_24.getString());
-    FIX::UnderlyingUnitOfMeasureQty UnderlyingUnitOfMeasureQty_24;
-    UnderlyingUnitOfMeasureQty_24.setString("17458736");
-    noUnderlyings_0_0.set(UnderlyingUnitOfMeasureQty_24);
-    UnderlyingInstrument_24.insert(UnderlyingUnitOfMeasureQty_24.getString());
-    all_values.push_back(UnderlyingInstrument_24);
+    multiset<string> UnderlyingInstrument_25;
+    FIX::EncodedUnderlyingIssuer EncodedUnderlyingIssuer_25("DATA_630736246");
+    noUnderlyings_0_0.set(EncodedUnderlyingIssuer_25);
+    UnderlyingInstrument_25.insert(EncodedUnderlyingIssuer_25.getString());
+    FIX::EncodedUnderlyingIssuerLen EncodedUnderlyingIssuerLen_25(107384452);
+    noUnderlyings_0_0.set(EncodedUnderlyingIssuerLen_25);
+    UnderlyingInstrument_25.insert(EncodedUnderlyingIssuerLen_25.getString());
+    FIX::EncodedUnderlyingSecurityDesc EncodedUnderlyingSecurityDesc_25("DATA_558350548");
+    noUnderlyings_0_0.set(EncodedUnderlyingSecurityDesc_25);
+    UnderlyingInstrument_25.insert(EncodedUnderlyingSecurityDesc_25.getString());
+    FIX::EncodedUnderlyingSecurityDescLen EncodedUnderlyingSecurityDescLen_25(1130825642);
+    noUnderlyings_0_0.set(EncodedUnderlyingSecurityDescLen_25);
+    UnderlyingInstrument_25.insert(EncodedUnderlyingSecurityDescLen_25.getString());
+    FIX::UnderlyingAdjustedQuantity UnderlyingAdjustedQuantity_25;
+    UnderlyingAdjustedQuantity_25.setString("19044954");
+    noUnderlyings_0_0.set(UnderlyingAdjustedQuantity_25);
+    UnderlyingInstrument_25.insert(UnderlyingAdjustedQuantity_25.getString());
+    FIX::UnderlyingAllocationPercent UnderlyingAllocationPercent_25;
+    UnderlyingAllocationPercent_25.setString("73.050000");
+    noUnderlyings_0_0.set(UnderlyingAllocationPercent_25);
+    UnderlyingInstrument_25.insert(UnderlyingAllocationPercent_25.getString());
+    FIX::UnderlyingAttachmentPoint UnderlyingAttachmentPoint_25;
+    UnderlyingAttachmentPoint_25.setString("47.870000");
+    noUnderlyings_0_0.set(UnderlyingAttachmentPoint_25);
+    UnderlyingInstrument_25.insert(UnderlyingAttachmentPoint_25.getString());
+    FIX::UnderlyingCFICode UnderlyingCFICode_25("STRING_1362257991");
+    noUnderlyings_0_0.set(UnderlyingCFICode_25);
+    UnderlyingInstrument_25.insert(UnderlyingCFICode_25.getString());
+    FIX::UnderlyingCPProgram UnderlyingCPProgram_25("STRING_1832019632");
+    noUnderlyings_0_0.set(UnderlyingCPProgram_25);
+    UnderlyingInstrument_25.insert(UnderlyingCPProgram_25.getString());
+    FIX::UnderlyingCPRegType UnderlyingCPRegType_25("STRING_1964129195");
+    noUnderlyings_0_0.set(UnderlyingCPRegType_25);
+    UnderlyingInstrument_25.insert(UnderlyingCPRegType_25.getString());
+    FIX::UnderlyingCapValue UnderlyingCapValue_25;
+    UnderlyingCapValue_25.setString("3463538");
+    noUnderlyings_0_0.set(UnderlyingCapValue_25);
+    UnderlyingInstrument_25.insert(UnderlyingCapValue_25.getString());
+    FIX::UnderlyingCashAmount UnderlyingCashAmount_25;
+    UnderlyingCashAmount_25.setString("18093459");
+    noUnderlyings_0_0.set(UnderlyingCashAmount_25);
+    UnderlyingInstrument_25.insert(UnderlyingCashAmount_25.getString());
+    FIX::UnderlyingCashType UnderlyingCashType_25("STRING_FIXED");
+    noUnderlyings_0_0.set(UnderlyingCashType_25);
+    UnderlyingInstrument_25.insert(UnderlyingCashType_25.getString());
+    FIX::UnderlyingContractMultiplier UnderlyingContractMultiplier_25;
+    UnderlyingContractMultiplier_25.setString("20323191");
+    noUnderlyings_0_0.set(UnderlyingContractMultiplier_25);
+    UnderlyingInstrument_25.insert(UnderlyingContractMultiplier_25.getString());
+    FIX::UnderlyingContractMultiplierUnit UnderlyingContractMultiplierUnit_25(511718673);
+    noUnderlyings_0_0.set(UnderlyingContractMultiplierUnit_25);
+    UnderlyingInstrument_25.insert(UnderlyingContractMultiplierUnit_25.getString());
+    FIX::UnderlyingCountryOfIssue UnderlyingCountryOfIssue_25("COUNTRY_38196125");
+    noUnderlyings_0_0.set(UnderlyingCountryOfIssue_25);
+    UnderlyingInstrument_25.insert(UnderlyingCountryOfIssue_25.getString());
+    FIX::UnderlyingCouponPaymentDate UnderlyingCouponPaymentDate_25("LOCALMKTDATE_1676138924");
+    noUnderlyings_0_0.set(UnderlyingCouponPaymentDate_25);
+    UnderlyingInstrument_25.insert(UnderlyingCouponPaymentDate_25.getString());
+    FIX::UnderlyingCouponRate UnderlyingCouponRate_25;
+    UnderlyingCouponRate_25.setString("20.890000");
+    noUnderlyings_0_0.set(UnderlyingCouponRate_25);
+    UnderlyingInstrument_25.insert(UnderlyingCouponRate_25.getString());
+    FIX::UnderlyingCreditRating UnderlyingCreditRating_25("STRING_803679382");
+    noUnderlyings_0_0.set(UnderlyingCreditRating_25);
+    UnderlyingInstrument_25.insert(UnderlyingCreditRating_25.getString());
+    FIX::UnderlyingCurrency UnderlyingCurrency_25("CAN");
+    noUnderlyings_0_0.set(UnderlyingCurrency_25);
+    UnderlyingInstrument_25.insert(UnderlyingCurrency_25.getString());
+    FIX::UnderlyingCurrentValue UnderlyingCurrentValue_25;
+    UnderlyingCurrentValue_25.setString("3870632");
+    noUnderlyings_0_0.set(UnderlyingCurrentValue_25);
+    UnderlyingInstrument_25.insert(UnderlyingCurrentValue_25.getString());
+    FIX::UnderlyingDetachmentPoint UnderlyingDetachmentPoint_25;
+    UnderlyingDetachmentPoint_25.setString("89.810000");
+    noUnderlyings_0_0.set(UnderlyingDetachmentPoint_25);
+    UnderlyingInstrument_25.insert(UnderlyingDetachmentPoint_25.getString());
+    FIX::UnderlyingDirtyPrice UnderlyingDirtyPrice_25;
+    UnderlyingDirtyPrice_25.setString("16096742");
+    noUnderlyings_0_0.set(UnderlyingDirtyPrice_25);
+    UnderlyingInstrument_25.insert(UnderlyingDirtyPrice_25.getString());
+    FIX::UnderlyingEndPrice UnderlyingEndPrice_25;
+    UnderlyingEndPrice_25.setString("16752745");
+    noUnderlyings_0_0.set(UnderlyingEndPrice_25);
+    UnderlyingInstrument_25.insert(UnderlyingEndPrice_25.getString());
+    FIX::UnderlyingEndValue UnderlyingEndValue_25;
+    UnderlyingEndValue_25.setString("9042725");
+    noUnderlyings_0_0.set(UnderlyingEndValue_25);
+    UnderlyingInstrument_25.insert(UnderlyingEndValue_25.getString());
+    FIX::UnderlyingExerciseStyle UnderlyingExerciseStyle_25(1642205493);
+    noUnderlyings_0_0.set(UnderlyingExerciseStyle_25);
+    UnderlyingInstrument_25.insert(UnderlyingExerciseStyle_25.getString());
+    FIX::UnderlyingFXRate UnderlyingFXRate_25;
+    UnderlyingFXRate_25.setString("20666181");
+    noUnderlyings_0_0.set(UnderlyingFXRate_25);
+    UnderlyingInstrument_25.insert(UnderlyingFXRate_25.getString());
+    FIX::UnderlyingFXRateCalc UnderlyingFXRateCalc_25('D');
+    noUnderlyings_0_0.set(UnderlyingFXRateCalc_25);
+    UnderlyingInstrument_25.insert(UnderlyingFXRateCalc_25.getString());
+    FIX::UnderlyingFactor UnderlyingFactor_25;
+    UnderlyingFactor_25.setString("17931356");
+    noUnderlyings_0_0.set(UnderlyingFactor_25);
+    UnderlyingInstrument_25.insert(UnderlyingFactor_25.getString());
+    FIX::UnderlyingFlowScheduleType UnderlyingFlowScheduleType_25(1399390858);
+    noUnderlyings_0_0.set(UnderlyingFlowScheduleType_25);
+    UnderlyingInstrument_25.insert(UnderlyingFlowScheduleType_25.getString());
+    FIX::UnderlyingInstrRegistry UnderlyingInstrRegistry_25("STRING_1513909080");
+    noUnderlyings_0_0.set(UnderlyingInstrRegistry_25);
+    UnderlyingInstrument_25.insert(UnderlyingInstrRegistry_25.getString());
+    FIX::UnderlyingIssueDate UnderlyingIssueDate_25("LOCALMKTDATE_1900520080");
+    noUnderlyings_0_0.set(UnderlyingIssueDate_25);
+    UnderlyingInstrument_25.insert(UnderlyingIssueDate_25.getString());
+    FIX::UnderlyingIssuer UnderlyingIssuer_25("STRING_1957741406");
+    noUnderlyings_0_0.set(UnderlyingIssuer_25);
+    UnderlyingInstrument_25.insert(UnderlyingIssuer_25.getString());
+    FIX::UnderlyingLocaleOfIssue UnderlyingLocaleOfIssue_25("STRING_497251075");
+    noUnderlyings_0_0.set(UnderlyingLocaleOfIssue_25);
+    UnderlyingInstrument_25.insert(UnderlyingLocaleOfIssue_25.getString());
+    FIX::UnderlyingMaturityDate UnderlyingMaturityDate_25("LOCALMKTDATE_1657531930");
+    noUnderlyings_0_0.set(UnderlyingMaturityDate_25);
+    UnderlyingInstrument_25.insert(UnderlyingMaturityDate_25.getString());
+    FIX::UnderlyingMaturityMonthYear UnderlyingMaturityMonthYear_25("MONTHYEAR_495625064");
+    noUnderlyings_0_0.set(UnderlyingMaturityMonthYear_25);
+    UnderlyingInstrument_25.insert(UnderlyingMaturityMonthYear_25.getString());
+    FIX::UnderlyingMaturityTime UnderlyingMaturityTime_25("TZTIMEONLY_1169695862");
+    noUnderlyings_0_0.set(UnderlyingMaturityTime_25);
+    UnderlyingInstrument_25.insert(UnderlyingMaturityTime_25.getString());
+    FIX::UnderlyingNotionalPercentageOutstanding UnderlyingNotionalPercentageOutstanding_25;
+    UnderlyingNotionalPercentageOutstanding_25.setString("62.730000");
+    noUnderlyings_0_0.set(UnderlyingNotionalPercentageOutstanding_25);
+    UnderlyingInstrument_25.insert(UnderlyingNotionalPercentageOutstanding_25.getString());
+    FIX::UnderlyingOptAttribute UnderlyingOptAttribute_25('1');
+    noUnderlyings_0_0.set(UnderlyingOptAttribute_25);
+    UnderlyingInstrument_25.insert(UnderlyingOptAttribute_25.getString());
+    FIX::UnderlyingOriginalNotionalPercentageOutstanding UnderlyingOriginalNotionalPercentageOutstanding_25;
+    UnderlyingOriginalNotionalPercentageOutstanding_25.setString("14.100000");
+    noUnderlyings_0_0.set(UnderlyingOriginalNotionalPercentageOutstanding_25);
+    UnderlyingInstrument_25.insert(UnderlyingOriginalNotionalPercentageOutstanding_25.getString());
+    FIX::UnderlyingPriceUnitOfMeasure UnderlyingPriceUnitOfMeasure_25("STRING_1218660135");
+    noUnderlyings_0_0.set(UnderlyingPriceUnitOfMeasure_25);
+    UnderlyingInstrument_25.insert(UnderlyingPriceUnitOfMeasure_25.getString());
+    FIX::UnderlyingPriceUnitOfMeasureQty UnderlyingPriceUnitOfMeasureQty_25;
+    UnderlyingPriceUnitOfMeasureQty_25.setString("19895070");
+    noUnderlyings_0_0.set(UnderlyingPriceUnitOfMeasureQty_25);
+    UnderlyingInstrument_25.insert(UnderlyingPriceUnitOfMeasureQty_25.getString());
+    FIX::UnderlyingProduct UnderlyingProduct_25(163059518);
+    noUnderlyings_0_0.set(UnderlyingProduct_25);
+    UnderlyingInstrument_25.insert(UnderlyingProduct_25.getString());
+    FIX::UnderlyingPutOrCall UnderlyingPutOrCall_25(1103495634);
+    noUnderlyings_0_0.set(UnderlyingPutOrCall_25);
+    UnderlyingInstrument_25.insert(UnderlyingPutOrCall_25.getString());
+    FIX::UnderlyingPx UnderlyingPx_25;
+    UnderlyingPx_25.setString("3537420");
+    noUnderlyings_0_0.set(UnderlyingPx_25);
+    UnderlyingInstrument_25.insert(UnderlyingPx_25.getString());
+    FIX::UnderlyingQty UnderlyingQty_25;
+    UnderlyingQty_25.setString("2012556");
+    noUnderlyings_0_0.set(UnderlyingQty_25);
+    UnderlyingInstrument_25.insert(UnderlyingQty_25.getString());
+    FIX::UnderlyingRedemptionDate UnderlyingRedemptionDate_25("LOCALMKTDATE_632150910");
+    noUnderlyings_0_0.set(UnderlyingRedemptionDate_25);
+    UnderlyingInstrument_25.insert(UnderlyingRedemptionDate_25.getString());
+    FIX::UnderlyingRepoCollateralSecurityType UnderlyingRepoCollateralSecurityType_25("STRING_1857964151");
+    noUnderlyings_0_0.set(UnderlyingRepoCollateralSecurityType_25);
+    UnderlyingInstrument_25.insert(UnderlyingRepoCollateralSecurityType_25.getString());
+    FIX::UnderlyingRepurchaseRate UnderlyingRepurchaseRate_25;
+    UnderlyingRepurchaseRate_25.setString("50.260000");
+    noUnderlyings_0_0.set(UnderlyingRepurchaseRate_25);
+    UnderlyingInstrument_25.insert(UnderlyingRepurchaseRate_25.getString());
+    FIX::UnderlyingRepurchaseTerm UnderlyingRepurchaseTerm_25(1693527150);
+    noUnderlyings_0_0.set(UnderlyingRepurchaseTerm_25);
+    UnderlyingInstrument_25.insert(UnderlyingRepurchaseTerm_25.getString());
+    FIX::UnderlyingRestructuringType UnderlyingRestructuringType_25("STRING_1091742482");
+    noUnderlyings_0_0.set(UnderlyingRestructuringType_25);
+    UnderlyingInstrument_25.insert(UnderlyingRestructuringType_25.getString());
+    FIX::UnderlyingSecurityDesc UnderlyingSecurityDesc_25("STRING_1391998238");
+    noUnderlyings_0_0.set(UnderlyingSecurityDesc_25);
+    UnderlyingInstrument_25.insert(UnderlyingSecurityDesc_25.getString());
+    FIX::UnderlyingSecurityExchange UnderlyingSecurityExchange_25("EXCHANGE_148042484");
+    noUnderlyings_0_0.set(UnderlyingSecurityExchange_25);
+    UnderlyingInstrument_25.insert(UnderlyingSecurityExchange_25.getString());
+    FIX::UnderlyingSecurityID UnderlyingSecurityID_25("STRING_553933040");
+    noUnderlyings_0_0.set(UnderlyingSecurityID_25);
+    UnderlyingInstrument_25.insert(UnderlyingSecurityID_25.getString());
+    FIX::UnderlyingSecurityIDSource UnderlyingSecurityIDSource_25("STRING_919789120");
+    noUnderlyings_0_0.set(UnderlyingSecurityIDSource_25);
+    UnderlyingInstrument_25.insert(UnderlyingSecurityIDSource_25.getString());
+    FIX::UnderlyingSecuritySubType UnderlyingSecuritySubType_25("STRING_1052315022");
+    noUnderlyings_0_0.set(UnderlyingSecuritySubType_25);
+    UnderlyingInstrument_25.insert(UnderlyingSecuritySubType_25.getString());
+    FIX::UnderlyingSecurityType UnderlyingSecurityType_25("STRING_48654886");
+    noUnderlyings_0_0.set(UnderlyingSecurityType_25);
+    UnderlyingInstrument_25.insert(UnderlyingSecurityType_25.getString());
+    FIX::UnderlyingSeniority UnderlyingSeniority_25("STRING_838923636");
+    noUnderlyings_0_0.set(UnderlyingSeniority_25);
+    UnderlyingInstrument_25.insert(UnderlyingSeniority_25.getString());
+    FIX::UnderlyingSettlMethod UnderlyingSettlMethod_25("STRING_1935487856");
+    noUnderlyings_0_0.set(UnderlyingSettlMethod_25);
+    UnderlyingInstrument_25.insert(UnderlyingSettlMethod_25.getString());
+    FIX::UnderlyingSettlementType UnderlyingSettlementType_25(4);
+    noUnderlyings_0_0.set(UnderlyingSettlementType_25);
+    UnderlyingInstrument_25.insert(UnderlyingSettlementType_25.getString());
+    FIX::UnderlyingStartValue UnderlyingStartValue_25;
+    UnderlyingStartValue_25.setString("908308");
+    noUnderlyings_0_0.set(UnderlyingStartValue_25);
+    UnderlyingInstrument_25.insert(UnderlyingStartValue_25.getString());
+    FIX::UnderlyingStateOrProvinceOfIssue UnderlyingStateOrProvinceOfIssue_25("STRING_1301913289");
+    noUnderlyings_0_0.set(UnderlyingStateOrProvinceOfIssue_25);
+    UnderlyingInstrument_25.insert(UnderlyingStateOrProvinceOfIssue_25.getString());
+    FIX::UnderlyingStrikeCurrency UnderlyingStrikeCurrency_25("CAN");
+    noUnderlyings_0_0.set(UnderlyingStrikeCurrency_25);
+    UnderlyingInstrument_25.insert(UnderlyingStrikeCurrency_25.getString());
+    FIX::UnderlyingStrikePrice UnderlyingStrikePrice_25;
+    UnderlyingStrikePrice_25.setString("17991643");
+    noUnderlyings_0_0.set(UnderlyingStrikePrice_25);
+    UnderlyingInstrument_25.insert(UnderlyingStrikePrice_25.getString());
+    FIX::UnderlyingSymbol UnderlyingSymbol_25("STRING_1104875228");
+    noUnderlyings_0_0.set(UnderlyingSymbol_25);
+    UnderlyingInstrument_25.insert(UnderlyingSymbol_25.getString());
+    FIX::UnderlyingSymbolSfx UnderlyingSymbolSfx_25("STRING_396713669");
+    noUnderlyings_0_0.set(UnderlyingSymbolSfx_25);
+    UnderlyingInstrument_25.insert(UnderlyingSymbolSfx_25.getString());
+    FIX::UnderlyingTimeUnit UnderlyingTimeUnit_25("STRING_821376578");
+    noUnderlyings_0_0.set(UnderlyingTimeUnit_25);
+    UnderlyingInstrument_25.insert(UnderlyingTimeUnit_25.getString());
+    FIX::UnderlyingUnitOfMeasure UnderlyingUnitOfMeasure_25("STRING_1977181502");
+    noUnderlyings_0_0.set(UnderlyingUnitOfMeasure_25);
+    UnderlyingInstrument_25.insert(UnderlyingUnitOfMeasure_25.getString());
+    FIX::UnderlyingUnitOfMeasureQty UnderlyingUnitOfMeasureQty_25;
+    UnderlyingUnitOfMeasureQty_25.setString("5768747");
+    noUnderlyings_0_0.set(UnderlyingUnitOfMeasureQty_25);
+    UnderlyingInstrument_25.insert(UnderlyingUnitOfMeasureQty_25.getString());
+    all_values.push_back(UnderlyingInstrument_25);
 
     // UndSecAltIDGrp
     // Group UndSecAltIDGrp.NoUnderlyingSecurityAltID
@@ -2748,10 +2623,10 @@ TEST ( Confirmation, set_fields)
       FIX50SP2::Confirmation::NoUnderlyings::NoUnderlyingSecurityAltID noUnderlyingSecurityAltID_0_1_0;
       // UndSecAltIDGrp.NoUnderlyingSecurityAltID
       multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_51;
-      FIX::UnderlyingSecurityAltID UnderlyingSecurityAltID_51("STRING_1391708024");
+      FIX::UnderlyingSecurityAltID UnderlyingSecurityAltID_51("STRING_1048357989");
       noUnderlyingSecurityAltID_0_1_0.set(UnderlyingSecurityAltID_51);
       UndSecAltIDGrp_NoUnderlyingSecurityAltID_51.insert(UnderlyingSecurityAltID_51.getString());
-      FIX::UnderlyingSecurityAltIDSource UnderlyingSecurityAltIDSource_51("STRING_1782400629");
+      FIX::UnderlyingSecurityAltIDSource UnderlyingSecurityAltIDSource_51("STRING_418898106");
       noUnderlyingSecurityAltID_0_1_0.set(UnderlyingSecurityAltIDSource_51);
       UndSecAltIDGrp_NoUnderlyingSecurityAltID_51.insert(UnderlyingSecurityAltIDSource_51.getString());
       all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_51);
@@ -2762,211 +2637,451 @@ TEST ( Confirmation, set_fields)
       FIX50SP2::Confirmation::NoUnderlyings::NoUnderlyingSecurityAltID noUnderlyingSecurityAltID_0_1_1;
       // UndSecAltIDGrp.NoUnderlyingSecurityAltID
       multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_52;
-      FIX::UnderlyingSecurityAltID UnderlyingSecurityAltID_52("STRING_1074794700");
+      FIX::UnderlyingSecurityAltID UnderlyingSecurityAltID_52("STRING_1970777507");
       noUnderlyingSecurityAltID_0_1_1.set(UnderlyingSecurityAltID_52);
       UndSecAltIDGrp_NoUnderlyingSecurityAltID_52.insert(UnderlyingSecurityAltID_52.getString());
-      FIX::UnderlyingSecurityAltIDSource UnderlyingSecurityAltIDSource_52("STRING_1844099042");
+      FIX::UnderlyingSecurityAltIDSource UnderlyingSecurityAltIDSource_52("STRING_4369975");
       noUnderlyingSecurityAltID_0_1_1.set(UnderlyingSecurityAltIDSource_52);
       UndSecAltIDGrp_NoUnderlyingSecurityAltID_52.insert(UnderlyingSecurityAltIDSource_52.getString());
       all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_52);
 
       noUnderlyings_0_0.addGroup(noUnderlyingSecurityAltID_0_1_1);
     }
+    {
+      FIX50SP2::Confirmation::NoUnderlyings::NoUnderlyingSecurityAltID noUnderlyingSecurityAltID_0_1_2;
+      // UndSecAltIDGrp.NoUnderlyingSecurityAltID
+      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_53;
+      FIX::UnderlyingSecurityAltID UnderlyingSecurityAltID_53("STRING_772640168");
+      noUnderlyingSecurityAltID_0_1_2.set(UnderlyingSecurityAltID_53);
+      UndSecAltIDGrp_NoUnderlyingSecurityAltID_53.insert(UnderlyingSecurityAltID_53.getString());
+      FIX::UnderlyingSecurityAltIDSource UnderlyingSecurityAltIDSource_53("STRING_24549503");
+      noUnderlyingSecurityAltID_0_1_2.set(UnderlyingSecurityAltIDSource_53);
+      UndSecAltIDGrp_NoUnderlyingSecurityAltID_53.insert(UnderlyingSecurityAltIDSource_53.getString());
+      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_53);
+
+      noUnderlyings_0_0.addGroup(noUnderlyingSecurityAltID_0_1_2);
+    }
     // UnderlyingStipulations
     // Group UnderlyingStipulations.NoUnderlyingStips
     {
       FIX50SP2::Confirmation::NoUnderlyings::NoUnderlyingStips noUnderlyingStips_0_1_0;
       // UnderlyingStipulations.NoUnderlyingStips
-      multiset<string> UnderlyingStipulations_NoUnderlyingStips_45;
-      FIX::UnderlyingStipType UnderlyingStipType_45("STRING_491704142");
-      noUnderlyingStips_0_1_0.set(UnderlyingStipType_45);
-      UnderlyingStipulations_NoUnderlyingStips_45.insert(UnderlyingStipType_45.getString());
-      FIX::UnderlyingStipValue UnderlyingStipValue_45("STRING_1308127022");
-      noUnderlyingStips_0_1_0.set(UnderlyingStipValue_45);
-      UnderlyingStipulations_NoUnderlyingStips_45.insert(UnderlyingStipValue_45.getString());
-      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_45);
+      multiset<string> UnderlyingStipulations_NoUnderlyingStips_46;
+      FIX::UnderlyingStipType UnderlyingStipType_46("STRING_483120672");
+      noUnderlyingStips_0_1_0.set(UnderlyingStipType_46);
+      UnderlyingStipulations_NoUnderlyingStips_46.insert(UnderlyingStipType_46.getString());
+      FIX::UnderlyingStipValue UnderlyingStipValue_46("STRING_1029484529");
+      noUnderlyingStips_0_1_0.set(UnderlyingStipValue_46);
+      UnderlyingStipulations_NoUnderlyingStips_46.insert(UnderlyingStipValue_46.getString());
+      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_46);
 
       noUnderlyings_0_0.addGroup(noUnderlyingStips_0_1_0);
+    }
+    {
+      FIX50SP2::Confirmation::NoUnderlyings::NoUnderlyingStips noUnderlyingStips_0_1_1;
+      // UnderlyingStipulations.NoUnderlyingStips
+      multiset<string> UnderlyingStipulations_NoUnderlyingStips_47;
+      FIX::UnderlyingStipType UnderlyingStipType_47("STRING_182564388");
+      noUnderlyingStips_0_1_1.set(UnderlyingStipType_47);
+      UnderlyingStipulations_NoUnderlyingStips_47.insert(UnderlyingStipType_47.getString());
+      FIX::UnderlyingStipValue UnderlyingStipValue_47("STRING_1574863154");
+      noUnderlyingStips_0_1_1.set(UnderlyingStipValue_47);
+      UnderlyingStipulations_NoUnderlyingStips_47.insert(UnderlyingStipValue_47.getString());
+      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_47);
+
+      noUnderlyings_0_0.addGroup(noUnderlyingStips_0_1_1);
     }
     // UndlyInstrumentParties
     // Group UndlyInstrumentParties.NoUndlyInstrumentParties
     {
       FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties noUndlyInstrumentParties_0_1_0;
       // UndlyInstrumentParties.NoUndlyInstrumentParties
-      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_47;
-      FIX::UnderlyingInstrumentPartyID UnderlyingInstrumentPartyID_47("STRING_267560121");
-      noUndlyInstrumentParties_0_1_0.set(UnderlyingInstrumentPartyID_47);
-      UndlyInstrumentParties_NoUndlyInstrumentParties_47.insert(UnderlyingInstrumentPartyID_47.getString());
-      FIX::UnderlyingInstrumentPartyIDSource UnderlyingInstrumentPartyIDSource_47('6');
-      noUndlyInstrumentParties_0_1_0.set(UnderlyingInstrumentPartyIDSource_47);
-      UndlyInstrumentParties_NoUndlyInstrumentParties_47.insert(UnderlyingInstrumentPartyIDSource_47.getString());
-      FIX::UnderlyingInstrumentPartyRole UnderlyingInstrumentPartyRole_47(1740655419);
-      noUndlyInstrumentParties_0_1_0.set(UnderlyingInstrumentPartyRole_47);
-      UndlyInstrumentParties_NoUndlyInstrumentParties_47.insert(UnderlyingInstrumentPartyRole_47.getString());
-      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_47);
+      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_53;
+      FIX::UnderlyingInstrumentPartyID UnderlyingInstrumentPartyID_53("STRING_330606872");
+      noUndlyInstrumentParties_0_1_0.set(UnderlyingInstrumentPartyID_53);
+      UndlyInstrumentParties_NoUndlyInstrumentParties_53.insert(UnderlyingInstrumentPartyID_53.getString());
+      FIX::UnderlyingInstrumentPartyIDSource UnderlyingInstrumentPartyIDSource_53('2');
+      noUndlyInstrumentParties_0_1_0.set(UnderlyingInstrumentPartyIDSource_53);
+      UndlyInstrumentParties_NoUndlyInstrumentParties_53.insert(UnderlyingInstrumentPartyIDSource_53.getString());
+      FIX::UnderlyingInstrumentPartyRole UnderlyingInstrumentPartyRole_53(1193788240);
+      noUndlyInstrumentParties_0_1_0.set(UnderlyingInstrumentPartyRole_53);
+      UndlyInstrumentParties_NoUndlyInstrumentParties_53.insert(UnderlyingInstrumentPartyRole_53.getString());
+      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_53);
 
       // UndlyInstrumentPtysSubGrp
       // Group UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
       {
         FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_0_2_0;
         // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_104;
-        FIX::UnderlyingInstrumentPartySubID UnderlyingInstrumentPartySubID_104("STRING_577741009");
-        noUndlyInstrumentPartySubIDs_0_0_2_0.set(UnderlyingInstrumentPartySubID_104);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_104.insert(UnderlyingInstrumentPartySubID_104.getString());
-        FIX::UnderlyingInstrumentPartySubIDType UnderlyingInstrumentPartySubIDType_104(649519927);
-        noUndlyInstrumentPartySubIDs_0_0_2_0.set(UnderlyingInstrumentPartySubIDType_104);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_104.insert(UnderlyingInstrumentPartySubIDType_104.getString());
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_104);
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_112;
+        FIX::UnderlyingInstrumentPartySubID UnderlyingInstrumentPartySubID_112("STRING_29967433");
+        noUndlyInstrumentPartySubIDs_0_0_2_0.set(UnderlyingInstrumentPartySubID_112);
+        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_112.insert(UnderlyingInstrumentPartySubID_112.getString());
+        FIX::UnderlyingInstrumentPartySubIDType UnderlyingInstrumentPartySubIDType_112(2032711876);
+        noUndlyInstrumentPartySubIDs_0_0_2_0.set(UnderlyingInstrumentPartySubIDType_112);
+        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_112.insert(UnderlyingInstrumentPartySubIDType_112.getString());
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_112);
 
         noUndlyInstrumentParties_0_1_0.addGroup(noUndlyInstrumentPartySubIDs_0_0_2_0);
       }
       {
         FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_0_2_1;
         // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_105;
-        FIX::UnderlyingInstrumentPartySubID UnderlyingInstrumentPartySubID_105("STRING_866723577");
-        noUndlyInstrumentPartySubIDs_0_0_2_1.set(UnderlyingInstrumentPartySubID_105);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_105.insert(UnderlyingInstrumentPartySubID_105.getString());
-        FIX::UnderlyingInstrumentPartySubIDType UnderlyingInstrumentPartySubIDType_105(1118108478);
-        noUndlyInstrumentPartySubIDs_0_0_2_1.set(UnderlyingInstrumentPartySubIDType_105);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_105.insert(UnderlyingInstrumentPartySubIDType_105.getString());
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_105);
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_113;
+        FIX::UnderlyingInstrumentPartySubID UnderlyingInstrumentPartySubID_113("STRING_1170926102");
+        noUndlyInstrumentPartySubIDs_0_0_2_1.set(UnderlyingInstrumentPartySubID_113);
+        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_113.insert(UnderlyingInstrumentPartySubID_113.getString());
+        FIX::UnderlyingInstrumentPartySubIDType UnderlyingInstrumentPartySubIDType_113(1871757947);
+        noUndlyInstrumentPartySubIDs_0_0_2_1.set(UnderlyingInstrumentPartySubIDType_113);
+        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_113.insert(UnderlyingInstrumentPartySubIDType_113.getString());
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_113);
 
         noUndlyInstrumentParties_0_1_0.addGroup(noUndlyInstrumentPartySubIDs_0_0_2_1);
       }
+      {
+        FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_0_2_2;
+        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_114;
+        FIX::UnderlyingInstrumentPartySubID UnderlyingInstrumentPartySubID_114("STRING_2123542723");
+        noUndlyInstrumentPartySubIDs_0_0_2_2.set(UnderlyingInstrumentPartySubID_114);
+        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_114.insert(UnderlyingInstrumentPartySubID_114.getString());
+        FIX::UnderlyingInstrumentPartySubIDType UnderlyingInstrumentPartySubIDType_114(325355743);
+        noUndlyInstrumentPartySubIDs_0_0_2_2.set(UnderlyingInstrumentPartySubIDType_114);
+        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_114.insert(UnderlyingInstrumentPartySubIDType_114.getString());
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_114);
+
+        noUndlyInstrumentParties_0_1_0.addGroup(noUndlyInstrumentPartySubIDs_0_0_2_2);
+      }
       noUnderlyings_0_0.addGroup(noUndlyInstrumentParties_0_1_0);
     }
-    {
-      FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties noUndlyInstrumentParties_0_1_1;
-      // UndlyInstrumentParties.NoUndlyInstrumentParties
-      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_48;
-      FIX::UnderlyingInstrumentPartyID UnderlyingInstrumentPartyID_48("STRING_1600774293");
-      noUndlyInstrumentParties_0_1_1.set(UnderlyingInstrumentPartyID_48);
-      UndlyInstrumentParties_NoUndlyInstrumentParties_48.insert(UnderlyingInstrumentPartyID_48.getString());
-      FIX::UnderlyingInstrumentPartyIDSource UnderlyingInstrumentPartyIDSource_48('1');
-      noUndlyInstrumentParties_0_1_1.set(UnderlyingInstrumentPartyIDSource_48);
-      UndlyInstrumentParties_NoUndlyInstrumentParties_48.insert(UnderlyingInstrumentPartyIDSource_48.getString());
-      FIX::UnderlyingInstrumentPartyRole UnderlyingInstrumentPartyRole_48(1747849663);
-      noUndlyInstrumentParties_0_1_1.set(UnderlyingInstrumentPartyRole_48);
-      UndlyInstrumentParties_NoUndlyInstrumentParties_48.insert(UnderlyingInstrumentPartyRole_48.getString());
-      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_48);
-
-      // UndlyInstrumentPtysSubGrp
-      // Group UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-      {
-        FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_1_2_0;
-        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_106;
-        FIX::UnderlyingInstrumentPartySubID UnderlyingInstrumentPartySubID_106("STRING_723624980");
-        noUndlyInstrumentPartySubIDs_0_1_2_0.set(UnderlyingInstrumentPartySubID_106);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_106.insert(UnderlyingInstrumentPartySubID_106.getString());
-        FIX::UnderlyingInstrumentPartySubIDType UnderlyingInstrumentPartySubIDType_106(347730550);
-        noUndlyInstrumentPartySubIDs_0_1_2_0.set(UnderlyingInstrumentPartySubIDType_106);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_106.insert(UnderlyingInstrumentPartySubIDType_106.getString());
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_106);
-
-        noUndlyInstrumentParties_0_1_1.addGroup(noUndlyInstrumentPartySubIDs_0_1_2_0);
-      }
-      {
-        FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_1_2_1;
-        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_107;
-        FIX::UnderlyingInstrumentPartySubID UnderlyingInstrumentPartySubID_107("STRING_872065907");
-        noUndlyInstrumentPartySubIDs_0_1_2_1.set(UnderlyingInstrumentPartySubID_107);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_107.insert(UnderlyingInstrumentPartySubID_107.getString());
-        FIX::UnderlyingInstrumentPartySubIDType UnderlyingInstrumentPartySubIDType_107(445906695);
-        noUndlyInstrumentPartySubIDs_0_1_2_1.set(UnderlyingInstrumentPartySubIDType_107);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_107.insert(UnderlyingInstrumentPartySubIDType_107.getString());
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_107);
-
-        noUndlyInstrumentParties_0_1_1.addGroup(noUndlyInstrumentPartySubIDs_0_1_2_1);
-      }
-      noUnderlyings_0_0.addGroup(noUndlyInstrumentParties_0_1_1);
-    }
-    {
-      FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties noUndlyInstrumentParties_0_1_2;
-      // UndlyInstrumentParties.NoUndlyInstrumentParties
-      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_49;
-      FIX::UnderlyingInstrumentPartyID UnderlyingInstrumentPartyID_49("STRING_79152388");
-      noUndlyInstrumentParties_0_1_2.set(UnderlyingInstrumentPartyID_49);
-      UndlyInstrumentParties_NoUndlyInstrumentParties_49.insert(UnderlyingInstrumentPartyID_49.getString());
-      FIX::UnderlyingInstrumentPartyIDSource UnderlyingInstrumentPartyIDSource_49('1');
-      noUndlyInstrumentParties_0_1_2.set(UnderlyingInstrumentPartyIDSource_49);
-      UndlyInstrumentParties_NoUndlyInstrumentParties_49.insert(UnderlyingInstrumentPartyIDSource_49.getString());
-      FIX::UnderlyingInstrumentPartyRole UnderlyingInstrumentPartyRole_49(1637169651);
-      noUndlyInstrumentParties_0_1_2.set(UnderlyingInstrumentPartyRole_49);
-      UndlyInstrumentParties_NoUndlyInstrumentParties_49.insert(UnderlyingInstrumentPartyRole_49.getString());
-      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_49);
-
-      // UndlyInstrumentPtysSubGrp
-      // Group UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-      {
-        FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_2_2_0;
-        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_108;
-        FIX::UnderlyingInstrumentPartySubID UnderlyingInstrumentPartySubID_108("STRING_1149087386");
-        noUndlyInstrumentPartySubIDs_0_2_2_0.set(UnderlyingInstrumentPartySubID_108);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_108.insert(UnderlyingInstrumentPartySubID_108.getString());
-        FIX::UnderlyingInstrumentPartySubIDType UnderlyingInstrumentPartySubIDType_108(1235559689);
-        noUndlyInstrumentPartySubIDs_0_2_2_0.set(UnderlyingInstrumentPartySubIDType_108);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_108.insert(UnderlyingInstrumentPartySubIDType_108.getString());
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_108);
-
-        noUndlyInstrumentParties_0_1_2.addGroup(noUndlyInstrumentPartySubIDs_0_2_2_0);
-      }
-      {
-        FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_2_2_1;
-        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_109;
-        FIX::UnderlyingInstrumentPartySubID UnderlyingInstrumentPartySubID_109("STRING_1635148828");
-        noUndlyInstrumentPartySubIDs_0_2_2_1.set(UnderlyingInstrumentPartySubID_109);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_109.insert(UnderlyingInstrumentPartySubID_109.getString());
-        FIX::UnderlyingInstrumentPartySubIDType UnderlyingInstrumentPartySubIDType_109(393311763);
-        noUndlyInstrumentPartySubIDs_0_2_2_1.set(UnderlyingInstrumentPartySubIDType_109);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_109.insert(UnderlyingInstrumentPartySubIDType_109.getString());
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_109);
-
-        noUndlyInstrumentParties_0_1_2.addGroup(noUndlyInstrumentPartySubIDs_0_2_2_1);
-      }
-      {
-        FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_2_2_2;
-        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_110;
-        FIX::UnderlyingInstrumentPartySubID UnderlyingInstrumentPartySubID_110("STRING_870476670");
-        noUndlyInstrumentPartySubIDs_0_2_2_2.set(UnderlyingInstrumentPartySubID_110);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_110.insert(UnderlyingInstrumentPartySubID_110.getString());
-        FIX::UnderlyingInstrumentPartySubIDType UnderlyingInstrumentPartySubIDType_110(562459880);
-        noUndlyInstrumentPartySubIDs_0_2_2_2.set(UnderlyingInstrumentPartySubIDType_110);
-        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_110.insert(UnderlyingInstrumentPartySubIDType_110.getString());
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_110);
-
-        noUndlyInstrumentParties_0_1_2.addGroup(noUndlyInstrumentPartySubIDs_0_2_2_2);
-      }
-      noUnderlyings_0_0.addGroup(noUndlyInstrumentParties_0_1_2);
-    }
     msg.addGroup(noUnderlyings_0_0);
+  }
+  {
+    FIX50SP2::Confirmation::NoUnderlyings noUnderlyings_0_1;
+    // UndInstrmtGrp.NoUnderlyings
+    // UnderlyingInstrument
+    multiset<string> UnderlyingInstrument_26;
+    FIX::EncodedUnderlyingIssuer EncodedUnderlyingIssuer_26("DATA_1319101245");
+    noUnderlyings_0_1.set(EncodedUnderlyingIssuer_26);
+    UnderlyingInstrument_26.insert(EncodedUnderlyingIssuer_26.getString());
+    FIX::EncodedUnderlyingIssuerLen EncodedUnderlyingIssuerLen_26(2024631328);
+    noUnderlyings_0_1.set(EncodedUnderlyingIssuerLen_26);
+    UnderlyingInstrument_26.insert(EncodedUnderlyingIssuerLen_26.getString());
+    FIX::EncodedUnderlyingSecurityDesc EncodedUnderlyingSecurityDesc_26("DATA_2124520107");
+    noUnderlyings_0_1.set(EncodedUnderlyingSecurityDesc_26);
+    UnderlyingInstrument_26.insert(EncodedUnderlyingSecurityDesc_26.getString());
+    FIX::EncodedUnderlyingSecurityDescLen EncodedUnderlyingSecurityDescLen_26(276492825);
+    noUnderlyings_0_1.set(EncodedUnderlyingSecurityDescLen_26);
+    UnderlyingInstrument_26.insert(EncodedUnderlyingSecurityDescLen_26.getString());
+    FIX::UnderlyingAdjustedQuantity UnderlyingAdjustedQuantity_26;
+    UnderlyingAdjustedQuantity_26.setString("2738613");
+    noUnderlyings_0_1.set(UnderlyingAdjustedQuantity_26);
+    UnderlyingInstrument_26.insert(UnderlyingAdjustedQuantity_26.getString());
+    FIX::UnderlyingAllocationPercent UnderlyingAllocationPercent_26;
+    UnderlyingAllocationPercent_26.setString("30.380000");
+    noUnderlyings_0_1.set(UnderlyingAllocationPercent_26);
+    UnderlyingInstrument_26.insert(UnderlyingAllocationPercent_26.getString());
+    FIX::UnderlyingAttachmentPoint UnderlyingAttachmentPoint_26;
+    UnderlyingAttachmentPoint_26.setString("6.790000");
+    noUnderlyings_0_1.set(UnderlyingAttachmentPoint_26);
+    UnderlyingInstrument_26.insert(UnderlyingAttachmentPoint_26.getString());
+    FIX::UnderlyingCFICode UnderlyingCFICode_26("STRING_850736066");
+    noUnderlyings_0_1.set(UnderlyingCFICode_26);
+    UnderlyingInstrument_26.insert(UnderlyingCFICode_26.getString());
+    FIX::UnderlyingCPProgram UnderlyingCPProgram_26("STRING_458647378");
+    noUnderlyings_0_1.set(UnderlyingCPProgram_26);
+    UnderlyingInstrument_26.insert(UnderlyingCPProgram_26.getString());
+    FIX::UnderlyingCPRegType UnderlyingCPRegType_26("STRING_1154548669");
+    noUnderlyings_0_1.set(UnderlyingCPRegType_26);
+    UnderlyingInstrument_26.insert(UnderlyingCPRegType_26.getString());
+    FIX::UnderlyingCapValue UnderlyingCapValue_26;
+    UnderlyingCapValue_26.setString("12696341");
+    noUnderlyings_0_1.set(UnderlyingCapValue_26);
+    UnderlyingInstrument_26.insert(UnderlyingCapValue_26.getString());
+    FIX::UnderlyingCashAmount UnderlyingCashAmount_26;
+    UnderlyingCashAmount_26.setString("2819412");
+    noUnderlyings_0_1.set(UnderlyingCashAmount_26);
+    UnderlyingInstrument_26.insert(UnderlyingCashAmount_26.getString());
+    FIX::UnderlyingCashType UnderlyingCashType_26("STRING_FIXED");
+    noUnderlyings_0_1.set(UnderlyingCashType_26);
+    UnderlyingInstrument_26.insert(UnderlyingCashType_26.getString());
+    FIX::UnderlyingContractMultiplier UnderlyingContractMultiplier_26;
+    UnderlyingContractMultiplier_26.setString("20422743");
+    noUnderlyings_0_1.set(UnderlyingContractMultiplier_26);
+    UnderlyingInstrument_26.insert(UnderlyingContractMultiplier_26.getString());
+    FIX::UnderlyingContractMultiplierUnit UnderlyingContractMultiplierUnit_26(306490740);
+    noUnderlyings_0_1.set(UnderlyingContractMultiplierUnit_26);
+    UnderlyingInstrument_26.insert(UnderlyingContractMultiplierUnit_26.getString());
+    FIX::UnderlyingCountryOfIssue UnderlyingCountryOfIssue_26("COUNTRY_1795439530");
+    noUnderlyings_0_1.set(UnderlyingCountryOfIssue_26);
+    UnderlyingInstrument_26.insert(UnderlyingCountryOfIssue_26.getString());
+    FIX::UnderlyingCouponPaymentDate UnderlyingCouponPaymentDate_26("LOCALMKTDATE_377911365");
+    noUnderlyings_0_1.set(UnderlyingCouponPaymentDate_26);
+    UnderlyingInstrument_26.insert(UnderlyingCouponPaymentDate_26.getString());
+    FIX::UnderlyingCouponRate UnderlyingCouponRate_26;
+    UnderlyingCouponRate_26.setString("52.700000");
+    noUnderlyings_0_1.set(UnderlyingCouponRate_26);
+    UnderlyingInstrument_26.insert(UnderlyingCouponRate_26.getString());
+    FIX::UnderlyingCreditRating UnderlyingCreditRating_26("STRING_1978003918");
+    noUnderlyings_0_1.set(UnderlyingCreditRating_26);
+    UnderlyingInstrument_26.insert(UnderlyingCreditRating_26.getString());
+    FIX::UnderlyingCurrency UnderlyingCurrency_26("USD");
+    noUnderlyings_0_1.set(UnderlyingCurrency_26);
+    UnderlyingInstrument_26.insert(UnderlyingCurrency_26.getString());
+    FIX::UnderlyingCurrentValue UnderlyingCurrentValue_26;
+    UnderlyingCurrentValue_26.setString("1611271");
+    noUnderlyings_0_1.set(UnderlyingCurrentValue_26);
+    UnderlyingInstrument_26.insert(UnderlyingCurrentValue_26.getString());
+    FIX::UnderlyingDetachmentPoint UnderlyingDetachmentPoint_26;
+    UnderlyingDetachmentPoint_26.setString("70.670000");
+    noUnderlyings_0_1.set(UnderlyingDetachmentPoint_26);
+    UnderlyingInstrument_26.insert(UnderlyingDetachmentPoint_26.getString());
+    FIX::UnderlyingDirtyPrice UnderlyingDirtyPrice_26;
+    UnderlyingDirtyPrice_26.setString("6562789");
+    noUnderlyings_0_1.set(UnderlyingDirtyPrice_26);
+    UnderlyingInstrument_26.insert(UnderlyingDirtyPrice_26.getString());
+    FIX::UnderlyingEndPrice UnderlyingEndPrice_26;
+    UnderlyingEndPrice_26.setString("15440490");
+    noUnderlyings_0_1.set(UnderlyingEndPrice_26);
+    UnderlyingInstrument_26.insert(UnderlyingEndPrice_26.getString());
+    FIX::UnderlyingEndValue UnderlyingEndValue_26;
+    UnderlyingEndValue_26.setString("19640545");
+    noUnderlyings_0_1.set(UnderlyingEndValue_26);
+    UnderlyingInstrument_26.insert(UnderlyingEndValue_26.getString());
+    FIX::UnderlyingExerciseStyle UnderlyingExerciseStyle_26(541507210);
+    noUnderlyings_0_1.set(UnderlyingExerciseStyle_26);
+    UnderlyingInstrument_26.insert(UnderlyingExerciseStyle_26.getString());
+    FIX::UnderlyingFXRate UnderlyingFXRate_26;
+    UnderlyingFXRate_26.setString("5674914");
+    noUnderlyings_0_1.set(UnderlyingFXRate_26);
+    UnderlyingInstrument_26.insert(UnderlyingFXRate_26.getString());
+    FIX::UnderlyingFXRateCalc UnderlyingFXRateCalc_26('M');
+    noUnderlyings_0_1.set(UnderlyingFXRateCalc_26);
+    UnderlyingInstrument_26.insert(UnderlyingFXRateCalc_26.getString());
+    FIX::UnderlyingFactor UnderlyingFactor_26;
+    UnderlyingFactor_26.setString("5175662");
+    noUnderlyings_0_1.set(UnderlyingFactor_26);
+    UnderlyingInstrument_26.insert(UnderlyingFactor_26.getString());
+    FIX::UnderlyingFlowScheduleType UnderlyingFlowScheduleType_26(892847234);
+    noUnderlyings_0_1.set(UnderlyingFlowScheduleType_26);
+    UnderlyingInstrument_26.insert(UnderlyingFlowScheduleType_26.getString());
+    FIX::UnderlyingInstrRegistry UnderlyingInstrRegistry_26("STRING_859946396");
+    noUnderlyings_0_1.set(UnderlyingInstrRegistry_26);
+    UnderlyingInstrument_26.insert(UnderlyingInstrRegistry_26.getString());
+    FIX::UnderlyingIssueDate UnderlyingIssueDate_26("LOCALMKTDATE_394713965");
+    noUnderlyings_0_1.set(UnderlyingIssueDate_26);
+    UnderlyingInstrument_26.insert(UnderlyingIssueDate_26.getString());
+    FIX::UnderlyingIssuer UnderlyingIssuer_26("STRING_869883693");
+    noUnderlyings_0_1.set(UnderlyingIssuer_26);
+    UnderlyingInstrument_26.insert(UnderlyingIssuer_26.getString());
+    FIX::UnderlyingLocaleOfIssue UnderlyingLocaleOfIssue_26("STRING_1136439221");
+    noUnderlyings_0_1.set(UnderlyingLocaleOfIssue_26);
+    UnderlyingInstrument_26.insert(UnderlyingLocaleOfIssue_26.getString());
+    FIX::UnderlyingMaturityDate UnderlyingMaturityDate_26("LOCALMKTDATE_668575314");
+    noUnderlyings_0_1.set(UnderlyingMaturityDate_26);
+    UnderlyingInstrument_26.insert(UnderlyingMaturityDate_26.getString());
+    FIX::UnderlyingMaturityMonthYear UnderlyingMaturityMonthYear_26("MONTHYEAR_1668296731");
+    noUnderlyings_0_1.set(UnderlyingMaturityMonthYear_26);
+    UnderlyingInstrument_26.insert(UnderlyingMaturityMonthYear_26.getString());
+    FIX::UnderlyingMaturityTime UnderlyingMaturityTime_26("TZTIMEONLY_1242629901");
+    noUnderlyings_0_1.set(UnderlyingMaturityTime_26);
+    UnderlyingInstrument_26.insert(UnderlyingMaturityTime_26.getString());
+    FIX::UnderlyingNotionalPercentageOutstanding UnderlyingNotionalPercentageOutstanding_26;
+    UnderlyingNotionalPercentageOutstanding_26.setString("13.810000");
+    noUnderlyings_0_1.set(UnderlyingNotionalPercentageOutstanding_26);
+    UnderlyingInstrument_26.insert(UnderlyingNotionalPercentageOutstanding_26.getString());
+    FIX::UnderlyingOptAttribute UnderlyingOptAttribute_26('2');
+    noUnderlyings_0_1.set(UnderlyingOptAttribute_26);
+    UnderlyingInstrument_26.insert(UnderlyingOptAttribute_26.getString());
+    FIX::UnderlyingOriginalNotionalPercentageOutstanding UnderlyingOriginalNotionalPercentageOutstanding_26;
+    UnderlyingOriginalNotionalPercentageOutstanding_26.setString("49.220000");
+    noUnderlyings_0_1.set(UnderlyingOriginalNotionalPercentageOutstanding_26);
+    UnderlyingInstrument_26.insert(UnderlyingOriginalNotionalPercentageOutstanding_26.getString());
+    FIX::UnderlyingPriceUnitOfMeasure UnderlyingPriceUnitOfMeasure_26("STRING_641461906");
+    noUnderlyings_0_1.set(UnderlyingPriceUnitOfMeasure_26);
+    UnderlyingInstrument_26.insert(UnderlyingPriceUnitOfMeasure_26.getString());
+    FIX::UnderlyingPriceUnitOfMeasureQty UnderlyingPriceUnitOfMeasureQty_26;
+    UnderlyingPriceUnitOfMeasureQty_26.setString("2614016");
+    noUnderlyings_0_1.set(UnderlyingPriceUnitOfMeasureQty_26);
+    UnderlyingInstrument_26.insert(UnderlyingPriceUnitOfMeasureQty_26.getString());
+    FIX::UnderlyingProduct UnderlyingProduct_26(1408613566);
+    noUnderlyings_0_1.set(UnderlyingProduct_26);
+    UnderlyingInstrument_26.insert(UnderlyingProduct_26.getString());
+    FIX::UnderlyingPutOrCall UnderlyingPutOrCall_26(536252599);
+    noUnderlyings_0_1.set(UnderlyingPutOrCall_26);
+    UnderlyingInstrument_26.insert(UnderlyingPutOrCall_26.getString());
+    FIX::UnderlyingPx UnderlyingPx_26;
+    UnderlyingPx_26.setString("5678924");
+    noUnderlyings_0_1.set(UnderlyingPx_26);
+    UnderlyingInstrument_26.insert(UnderlyingPx_26.getString());
+    FIX::UnderlyingQty UnderlyingQty_26;
+    UnderlyingQty_26.setString("10565694");
+    noUnderlyings_0_1.set(UnderlyingQty_26);
+    UnderlyingInstrument_26.insert(UnderlyingQty_26.getString());
+    FIX::UnderlyingRedemptionDate UnderlyingRedemptionDate_26("LOCALMKTDATE_914163965");
+    noUnderlyings_0_1.set(UnderlyingRedemptionDate_26);
+    UnderlyingInstrument_26.insert(UnderlyingRedemptionDate_26.getString());
+    FIX::UnderlyingRepoCollateralSecurityType UnderlyingRepoCollateralSecurityType_26("STRING_1903867710");
+    noUnderlyings_0_1.set(UnderlyingRepoCollateralSecurityType_26);
+    UnderlyingInstrument_26.insert(UnderlyingRepoCollateralSecurityType_26.getString());
+    FIX::UnderlyingRepurchaseRate UnderlyingRepurchaseRate_26;
+    UnderlyingRepurchaseRate_26.setString("97.180000");
+    noUnderlyings_0_1.set(UnderlyingRepurchaseRate_26);
+    UnderlyingInstrument_26.insert(UnderlyingRepurchaseRate_26.getString());
+    FIX::UnderlyingRepurchaseTerm UnderlyingRepurchaseTerm_26(719454837);
+    noUnderlyings_0_1.set(UnderlyingRepurchaseTerm_26);
+    UnderlyingInstrument_26.insert(UnderlyingRepurchaseTerm_26.getString());
+    FIX::UnderlyingRestructuringType UnderlyingRestructuringType_26("STRING_1366358452");
+    noUnderlyings_0_1.set(UnderlyingRestructuringType_26);
+    UnderlyingInstrument_26.insert(UnderlyingRestructuringType_26.getString());
+    FIX::UnderlyingSecurityDesc UnderlyingSecurityDesc_26("STRING_1048216860");
+    noUnderlyings_0_1.set(UnderlyingSecurityDesc_26);
+    UnderlyingInstrument_26.insert(UnderlyingSecurityDesc_26.getString());
+    FIX::UnderlyingSecurityExchange UnderlyingSecurityExchange_26("EXCHANGE_506058256");
+    noUnderlyings_0_1.set(UnderlyingSecurityExchange_26);
+    UnderlyingInstrument_26.insert(UnderlyingSecurityExchange_26.getString());
+    FIX::UnderlyingSecurityID UnderlyingSecurityID_26("STRING_2022637434");
+    noUnderlyings_0_1.set(UnderlyingSecurityID_26);
+    UnderlyingInstrument_26.insert(UnderlyingSecurityID_26.getString());
+    FIX::UnderlyingSecurityIDSource UnderlyingSecurityIDSource_26("STRING_444782248");
+    noUnderlyings_0_1.set(UnderlyingSecurityIDSource_26);
+    UnderlyingInstrument_26.insert(UnderlyingSecurityIDSource_26.getString());
+    FIX::UnderlyingSecuritySubType UnderlyingSecuritySubType_26("STRING_322629108");
+    noUnderlyings_0_1.set(UnderlyingSecuritySubType_26);
+    UnderlyingInstrument_26.insert(UnderlyingSecuritySubType_26.getString());
+    FIX::UnderlyingSecurityType UnderlyingSecurityType_26("STRING_416660996");
+    noUnderlyings_0_1.set(UnderlyingSecurityType_26);
+    UnderlyingInstrument_26.insert(UnderlyingSecurityType_26.getString());
+    FIX::UnderlyingSeniority UnderlyingSeniority_26("STRING_1012273739");
+    noUnderlyings_0_1.set(UnderlyingSeniority_26);
+    UnderlyingInstrument_26.insert(UnderlyingSeniority_26.getString());
+    FIX::UnderlyingSettlMethod UnderlyingSettlMethod_26("STRING_2010957907");
+    noUnderlyings_0_1.set(UnderlyingSettlMethod_26);
+    UnderlyingInstrument_26.insert(UnderlyingSettlMethod_26.getString());
+    FIX::UnderlyingSettlementType UnderlyingSettlementType_26(2);
+    noUnderlyings_0_1.set(UnderlyingSettlementType_26);
+    UnderlyingInstrument_26.insert(UnderlyingSettlementType_26.getString());
+    FIX::UnderlyingStartValue UnderlyingStartValue_26;
+    UnderlyingStartValue_26.setString("19051209");
+    noUnderlyings_0_1.set(UnderlyingStartValue_26);
+    UnderlyingInstrument_26.insert(UnderlyingStartValue_26.getString());
+    FIX::UnderlyingStateOrProvinceOfIssue UnderlyingStateOrProvinceOfIssue_26("STRING_723420655");
+    noUnderlyings_0_1.set(UnderlyingStateOrProvinceOfIssue_26);
+    UnderlyingInstrument_26.insert(UnderlyingStateOrProvinceOfIssue_26.getString());
+    FIX::UnderlyingStrikeCurrency UnderlyingStrikeCurrency_26("GBP");
+    noUnderlyings_0_1.set(UnderlyingStrikeCurrency_26);
+    UnderlyingInstrument_26.insert(UnderlyingStrikeCurrency_26.getString());
+    FIX::UnderlyingStrikePrice UnderlyingStrikePrice_26;
+    UnderlyingStrikePrice_26.setString("18598598");
+    noUnderlyings_0_1.set(UnderlyingStrikePrice_26);
+    UnderlyingInstrument_26.insert(UnderlyingStrikePrice_26.getString());
+    FIX::UnderlyingSymbol UnderlyingSymbol_26("STRING_1997516562");
+    noUnderlyings_0_1.set(UnderlyingSymbol_26);
+    UnderlyingInstrument_26.insert(UnderlyingSymbol_26.getString());
+    FIX::UnderlyingSymbolSfx UnderlyingSymbolSfx_26("STRING_148334102");
+    noUnderlyings_0_1.set(UnderlyingSymbolSfx_26);
+    UnderlyingInstrument_26.insert(UnderlyingSymbolSfx_26.getString());
+    FIX::UnderlyingTimeUnit UnderlyingTimeUnit_26("STRING_955006129");
+    noUnderlyings_0_1.set(UnderlyingTimeUnit_26);
+    UnderlyingInstrument_26.insert(UnderlyingTimeUnit_26.getString());
+    FIX::UnderlyingUnitOfMeasure UnderlyingUnitOfMeasure_26("STRING_1369344295");
+    noUnderlyings_0_1.set(UnderlyingUnitOfMeasure_26);
+    UnderlyingInstrument_26.insert(UnderlyingUnitOfMeasure_26.getString());
+    FIX::UnderlyingUnitOfMeasureQty UnderlyingUnitOfMeasureQty_26;
+    UnderlyingUnitOfMeasureQty_26.setString("1277945");
+    noUnderlyings_0_1.set(UnderlyingUnitOfMeasureQty_26);
+    UnderlyingInstrument_26.insert(UnderlyingUnitOfMeasureQty_26.getString());
+    all_values.push_back(UnderlyingInstrument_26);
+
+    // UndSecAltIDGrp
+    // Group UndSecAltIDGrp.NoUnderlyingSecurityAltID
+    {
+      FIX50SP2::Confirmation::NoUnderlyings::NoUnderlyingSecurityAltID noUnderlyingSecurityAltID_1_1_0;
+      // UndSecAltIDGrp.NoUnderlyingSecurityAltID
+      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_54;
+      FIX::UnderlyingSecurityAltID UnderlyingSecurityAltID_54("STRING_2010806201");
+      noUnderlyingSecurityAltID_1_1_0.set(UnderlyingSecurityAltID_54);
+      UndSecAltIDGrp_NoUnderlyingSecurityAltID_54.insert(UnderlyingSecurityAltID_54.getString());
+      FIX::UnderlyingSecurityAltIDSource UnderlyingSecurityAltIDSource_54("STRING_389196263");
+      noUnderlyingSecurityAltID_1_1_0.set(UnderlyingSecurityAltIDSource_54);
+      UndSecAltIDGrp_NoUnderlyingSecurityAltID_54.insert(UnderlyingSecurityAltIDSource_54.getString());
+      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_54);
+
+      noUnderlyings_0_1.addGroup(noUnderlyingSecurityAltID_1_1_0);
+    }
+    // UnderlyingStipulations
+    // Group UnderlyingStipulations.NoUnderlyingStips
+    {
+      FIX50SP2::Confirmation::NoUnderlyings::NoUnderlyingStips noUnderlyingStips_1_1_0;
+      // UnderlyingStipulations.NoUnderlyingStips
+      multiset<string> UnderlyingStipulations_NoUnderlyingStips_48;
+      FIX::UnderlyingStipType UnderlyingStipType_48("STRING_399575152");
+      noUnderlyingStips_1_1_0.set(UnderlyingStipType_48);
+      UnderlyingStipulations_NoUnderlyingStips_48.insert(UnderlyingStipType_48.getString());
+      FIX::UnderlyingStipValue UnderlyingStipValue_48("STRING_957088703");
+      noUnderlyingStips_1_1_0.set(UnderlyingStipValue_48);
+      UnderlyingStipulations_NoUnderlyingStips_48.insert(UnderlyingStipValue_48.getString());
+      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_48);
+
+      noUnderlyings_0_1.addGroup(noUnderlyingStips_1_1_0);
+    }
+    // UndlyInstrumentParties
+    // Group UndlyInstrumentParties.NoUndlyInstrumentParties
+    {
+      FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties noUndlyInstrumentParties_1_1_0;
+      // UndlyInstrumentParties.NoUndlyInstrumentParties
+      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_54;
+      FIX::UnderlyingInstrumentPartyID UnderlyingInstrumentPartyID_54("STRING_1313739117");
+      noUndlyInstrumentParties_1_1_0.set(UnderlyingInstrumentPartyID_54);
+      UndlyInstrumentParties_NoUndlyInstrumentParties_54.insert(UnderlyingInstrumentPartyID_54.getString());
+      FIX::UnderlyingInstrumentPartyIDSource UnderlyingInstrumentPartyIDSource_54('7');
+      noUndlyInstrumentParties_1_1_0.set(UnderlyingInstrumentPartyIDSource_54);
+      UndlyInstrumentParties_NoUndlyInstrumentParties_54.insert(UnderlyingInstrumentPartyIDSource_54.getString());
+      FIX::UnderlyingInstrumentPartyRole UnderlyingInstrumentPartyRole_54(262006489);
+      noUndlyInstrumentParties_1_1_0.set(UnderlyingInstrumentPartyRole_54);
+      UndlyInstrumentParties_NoUndlyInstrumentParties_54.insert(UnderlyingInstrumentPartyRole_54.getString());
+      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_54);
+
+      // UndlyInstrumentPtysSubGrp
+      // Group UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
+      {
+        FIX50SP2::Confirmation::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_1_0_2_0;
+        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_115;
+        FIX::UnderlyingInstrumentPartySubID UnderlyingInstrumentPartySubID_115("STRING_2079831217");
+        noUndlyInstrumentPartySubIDs_1_0_2_0.set(UnderlyingInstrumentPartySubID_115);
+        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_115.insert(UnderlyingInstrumentPartySubID_115.getString());
+        FIX::UnderlyingInstrumentPartySubIDType UnderlyingInstrumentPartySubIDType_115(1310223349);
+        noUndlyInstrumentPartySubIDs_1_0_2_0.set(UnderlyingInstrumentPartySubIDType_115);
+        UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_115.insert(UnderlyingInstrumentPartySubIDType_115.getString());
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_115);
+
+        noUndlyInstrumentParties_1_1_0.addGroup(noUndlyInstrumentPartySubIDs_1_0_2_0);
+      }
+      noUnderlyings_0_1.addGroup(noUndlyInstrumentParties_1_1_0);
+    }
+    msg.addGroup(noUnderlyings_0_1);
   }
   // YieldData
   multiset<string> YieldData_3;
   FIX::Yield Yield_3;
-  Yield_3.setString("71.570000");
+  Yield_3.setString("85.620000");
   msg.set(Yield_3);
   YieldData_3.insert(Yield_3.getString());
-  FIX::YieldCalcDate YieldCalcDate_3("LOCALMKTDATE_1346299564");
+  FIX::YieldCalcDate YieldCalcDate_3("LOCALMKTDATE_1954985003");
   msg.set(YieldCalcDate_3);
   YieldData_3.insert(YieldCalcDate_3.getString());
-  FIX::YieldRedemptionDate YieldRedemptionDate_3("LOCALMKTDATE_1054164022");
+  FIX::YieldRedemptionDate YieldRedemptionDate_3("LOCALMKTDATE_1755005598");
   msg.set(YieldRedemptionDate_3);
   YieldData_3.insert(YieldRedemptionDate_3.getString());
   FIX::YieldRedemptionPrice YieldRedemptionPrice_3;
-  YieldRedemptionPrice_3.setString("13980541");
+  YieldRedemptionPrice_3.setString("7143976");
   msg.set(YieldRedemptionPrice_3);
   YieldData_3.insert(YieldRedemptionPrice_3.getString());
-  FIX::YieldRedemptionPriceType YieldRedemptionPriceType_3(1992980298);
+  FIX::YieldRedemptionPriceType YieldRedemptionPriceType_3(224162352);
   msg.set(YieldRedemptionPriceType_3);
   YieldData_3.insert(YieldRedemptionPriceType_3.getString());
-  FIX::YieldType YieldType_3("STRING_LASTYEAR");
+  FIX::YieldType YieldType_3("STRING_WORST");
   msg.set(YieldType_3);
   YieldData_3.insert(YieldType_3.getString());
   all_values.push_back(YieldData_3);
@@ -2998,15 +3113,10 @@ TEST ( Confirmation, set_fields)
         break;
       } // end if includes
     } // end for all_values
+    EXPECT_TRUE(found);
     if ( ! found) {
       cout << "#### NOT FOUND ###" << endl;
       copy(xml_l.begin(), xml_l.end(), ostream_iterator<string>(cout, " "));      cout << endl;
     } // end if ! found
   } // end for elt_lists
-}
-int main(int argc, char *argv[]) {
-  ::testing::InitGoogleTest(&argc, argv);
-  fix2xml::fix_env::init_xerces();
-  return RUN_ALL_TESTS();
-  fix2xml::fix_env::terminate_xerces();
 }

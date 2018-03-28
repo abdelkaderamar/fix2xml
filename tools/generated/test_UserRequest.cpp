@@ -16,45 +16,45 @@ using namespace fix2xml;
 TEST ( UserRequest, set_fields)
 {
 
-  fixml2fix_converter converter {"FIX50SP2.xml", "fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   ASSERT_TRUE(converter.init());
   FIX50SP2::UserRequest msg;
 
   list<multiset<string>> all_values;
   multiset<string> UserRequest_0;
-  FIX::EncryptedNewPassword EncryptedNewPassword_0("DATA_923403508");
+  FIX::EncryptedNewPassword EncryptedNewPassword_0("DATA_84395830");
   msg.set(EncryptedNewPassword_0);
   UserRequest_0.insert(EncryptedNewPassword_0.getString());
-  FIX::EncryptedNewPasswordLen EncryptedNewPasswordLen_0(1113877005);
+  FIX::EncryptedNewPasswordLen EncryptedNewPasswordLen_0(1985902063);
   msg.set(EncryptedNewPasswordLen_0);
-  FIX::EncryptedPassword EncryptedPassword_0("DATA_762091355");
+  FIX::EncryptedPassword EncryptedPassword_0("DATA_692138450");
   msg.set(EncryptedPassword_0);
   UserRequest_0.insert(EncryptedPassword_0.getString());
-  FIX::EncryptedPasswordLen EncryptedPasswordLen_0(651091187);
+  FIX::EncryptedPasswordLen EncryptedPasswordLen_0(1649956178);
   msg.set(EncryptedPasswordLen_0);
-  FIX::EncryptedPasswordMethod EncryptedPasswordMethod_0(1978928530);
+  FIX::EncryptedPasswordMethod EncryptedPasswordMethod_0(1352118501);
   msg.set(EncryptedPasswordMethod_0);
   UserRequest_0.insert(EncryptedPasswordMethod_0.getString());
-  FIX::NewPassword NewPassword_0("STRING_577481813");
+  FIX::NewPassword NewPassword_0("STRING_263723686");
   msg.set(NewPassword_0);
   UserRequest_0.insert(NewPassword_0.getString());
-  FIX::Password Password_0("STRING_716286369");
+  FIX::Password Password_0("STRING_1110986094");
   msg.set(Password_0);
   UserRequest_0.insert(Password_0.getString());
-  FIX::RawData RawData_2("DATA_2067093786");
+  FIX::RawData RawData_2("DATA_129171033");
   msg.set(RawData_2);
   UserRequest_0.insert(RawData_2.getString());
-  FIX::RawDataLength RawDataLength_2(592637775);
+  FIX::RawDataLength RawDataLength_2(1343371886);
   msg.set(RawDataLength_2);
   UserRequest_0.insert(RawDataLength_2.getString());
-  FIX::UserRequestID UserRequestID_0("STRING_1770390932");
+  FIX::UserRequestID UserRequestID_0("STRING_1697629202");
   msg.set(UserRequestID_0);
   UserRequest_0.insert(UserRequestID_0.getString());
-  FIX::UserRequestType UserRequestType_0(4);
+  FIX::UserRequestType UserRequestType_0(1);
   msg.set(UserRequestType_0);
   UserRequest_0.insert(UserRequestType_0.getString());
-  FIX::Username Username_1("STRING_965262322");
+  FIX::Username Username_1("STRING_1251101781");
   msg.set(Username_1);
   UserRequest_0.insert(Username_1.getString());
   all_values.push_back(UserRequest_0);
@@ -86,15 +86,10 @@ TEST ( UserRequest, set_fields)
         break;
       } // end if includes
     } // end for all_values
+    EXPECT_TRUE(found);
     if ( ! found) {
       cout << "#### NOT FOUND ###" << endl;
       copy(xml_l.begin(), xml_l.end(), ostream_iterator<string>(cout, " "));      cout << endl;
     } // end if ! found
   } // end for elt_lists
-}
-int main(int argc, char *argv[]) {
-  ::testing::InitGoogleTest(&argc, argv);
-  fix2xml::fix_env::init_xerces();
-  return RUN_ALL_TESTS();
-  fix2xml::fix_env::terminate_xerces();
 }

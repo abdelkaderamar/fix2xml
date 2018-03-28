@@ -16,23 +16,23 @@ using namespace fix2xml;
 TEST ( MarketDefinitionRequest, set_fields)
 {
 
-  fixml2fix_converter converter {"FIX50SP2.xml", "fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   ASSERT_TRUE(converter.init());
   FIX50SP2::MarketDefinitionRequest msg;
 
   list<multiset<string>> all_values;
   multiset<string> MarketDefinitionRequest_0;
-  FIX::MarketID MarketID_7("EXCHANGE_43935620");
-  msg.set(MarketID_7);
-  MarketDefinitionRequest_0.insert(MarketID_7.getString());
-  FIX::MarketReqID MarketReqID_1("STRING_663084949");
+  FIX::MarketID MarketID_5("EXCHANGE_262619372");
+  msg.set(MarketID_5);
+  MarketDefinitionRequest_0.insert(MarketID_5.getString());
+  FIX::MarketReqID MarketReqID_1("STRING_2032214340");
   msg.set(MarketReqID_1);
   MarketDefinitionRequest_0.insert(MarketReqID_1.getString());
-  FIX::MarketSegmentID MarketSegmentID_7("STRING_1227454221");
-  msg.set(MarketSegmentID_7);
-  MarketDefinitionRequest_0.insert(MarketSegmentID_7.getString());
-  FIX::ParentMktSegmID ParentMktSegmID_1("STRING_2045861403");
+  FIX::MarketSegmentID MarketSegmentID_5("STRING_301844383");
+  msg.set(MarketSegmentID_5);
+  MarketDefinitionRequest_0.insert(MarketSegmentID_5.getString());
+  FIX::ParentMktSegmID ParentMktSegmID_1("STRING_1250050131");
   msg.set(ParentMktSegmID_1);
   MarketDefinitionRequest_0.insert(ParentMktSegmID_1.getString());
   FIX::SubscriptionRequestType SubscriptionRequestType_3('0');
@@ -67,15 +67,10 @@ TEST ( MarketDefinitionRequest, set_fields)
         break;
       } // end if includes
     } // end for all_values
+    EXPECT_TRUE(found);
     if ( ! found) {
       cout << "#### NOT FOUND ###" << endl;
       copy(xml_l.begin(), xml_l.end(), ostream_iterator<string>(cout, " "));      cout << endl;
     } // end if ! found
   } // end for elt_lists
-}
-int main(int argc, char *argv[]) {
-  ::testing::InitGoogleTest(&argc, argv);
-  fix2xml::fix_env::init_xerces();
-  return RUN_ALL_TESTS();
-  fix2xml::fix_env::terminate_xerces();
 }

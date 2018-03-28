@@ -52,6 +52,7 @@ namespace fix2xml
     bool get_components(const std::string& name, std::list<xml_element>& compos) const;
 
     void to_list(std::list<std::multiset<std::string>>& l) const;
+    void all_components(std::multiset<std::string>& l, const std::string& parent = "") const;
 
   protected:
 

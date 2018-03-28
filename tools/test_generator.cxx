@@ -221,6 +221,8 @@ void generate_component(ostream &os, const fix_component_type &compo_type,
       }
     }
     os << TAB(level) << "all_values.push_back(" << compo_var_name << ");"
+       << endl;
+    os << TAB(level) << "all_compo_names.insert(\"" << compo_type._name << "\");"
        << endl
        << endl;
   }
@@ -275,7 +277,8 @@ void generate_test(ostream &os, const fix_message_type &msg_type,
      << TAB(0) << msg_type_name << " "
      << "msg;" << endl
      << endl
-     << TAB(0) << "list<multiset<string>> all_values;" << endl;
+     << TAB(0) << "list<multiset<string>> all_values;" << endl
+     << TAB(0) << "multiset<string> all_compo_names;" << endl;
   const string msg_var_name = generate_var_name(msg_type._name);
   os << TAB(0) << "multiset<string> " << msg_var_name << ";" << endl;
   for (auto &field_name : msg_type._fields) {
@@ -286,6 +289,8 @@ void generate_test(ostream &os, const fix_message_type &msg_type,
     }
   }
   os << TAB(0) << "all_values.push_back(" << msg_var_name << ");" << endl
+     << endl;
+  os << TAB(0) << "all_compo_names.insert(\"" << msg_type._name << "\");" << endl
      << endl;
 
   for (auto &compo_name : msg_type._components) {
@@ -305,6 +310,15 @@ void generate_test(ostream &os, const fix_message_type &msg_type,
      << TAB(0) << "elt.to_list(elt_lists);" << endl
      << TAB(0) << "EXPECT_EQ(elt_lists.size(), all_values.size());" << endl
      << endl
+     << TAB(0) << "if (elt_lists.size() != all_values.size())"
+     << TAB(0) << "{" << endl
+     << TAB(1) << "cout << \"########################\" << endl;" << endl
+     << TAB(1) << "multiset<string> elt_compo_name;" << endl
+     << TAB(1) << "elt.all_components(elt_compo_name);" << endl
+     << TAB(1) << "copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, \"\\n\"));" << endl
+     << TAB(1) << "cout << \"########################\" << endl; " << endl
+     << TAB(1) << "copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, \"\\n\"));" << endl
+     << TAB(0) << "}"
      << TAB(0) << "cout << \"FIX components\" << endl;" << endl
      << TAB(0) << "for (const auto& l : all_values) {" << endl
      << TAB(1)
@@ -331,6 +345,7 @@ void generate_test(ostream &os, const fix_message_type &msg_type,
      << TAB(3) << "break;" << endl
      << TAB(2) << "} // end if includes" << endl
      << TAB(1) << "} // end for all_values" << endl
+     << TAB(1) << "EXPECT_TRUE(found);" << endl
      << TAB(1) << "if ( ! found) {" << endl
      << TAB(2) << "cout << \"#### NOT FOUND ###\" << endl;" << endl
      << TAB(2) << "copy(xml_l.begin(), xml_l.end(), "
@@ -381,12 +396,12 @@ void generate_message_test(const fix_message_type &msg_type,
   generate_header(ofs, msg_type, dico, ns);
   generate_test(ofs, msg_type, dico, fixml_dico, ns, fix_filename, xsd_schema);
 
-  ofs << "int main(int argc, char *argv[]) {" << endl
-      << TAB(0) << "::testing::InitGoogleTest(&argc, argv);" << endl
-      << TAB(0) << "fix2xml::fix_env::init_xerces();" << endl
-      << TAB(0) << "return RUN_ALL_TESTS();" << endl
-      << TAB(0) << "fix2xml::fix_env::terminate_xerces();" << endl
-      << "}" << endl;
+  // ofs << "int main(int argc, char *argv[]) {" << endl
+  //     << TAB(0) << "::testing::InitGoogleTest(&argc, argv);" << endl
+  //     << TAB(0) << "fix2xml::fix_env::init_xerces();" << endl
+  //     << TAB(0) << "return RUN_ALL_TESTS();" << endl
+  //     << TAB(0) << "fix2xml::fix_env::terminate_xerces();" << endl
+  //     << "}" << endl;
 
   ofs.close();
 } // end generate_message_test

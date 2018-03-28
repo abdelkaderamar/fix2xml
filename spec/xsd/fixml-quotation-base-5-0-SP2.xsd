@@ -15,13 +15,13 @@
            targetNamespace="http://www.fixprotocol.org/FIXML-5-0-SP2"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
-   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>	
+   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>
  <xs:group name="QuoteRequestElements">
   <xs:sequence>
   <xs:element name="Pty" type="RootParties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="QuotReq" type="QuotReqGrp_Block_t" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="QuoteRequestAttributes">
   <xs:attribute name="ReqID" type="QuoteReqID_t" use="required"/>
   <xs:attribute name="RFQReqID" type="RFQReqID_t" use="optional"/>
@@ -38,7 +38,7 @@
  </xs:attributeGroup>
  <xs:complexType name="QuoteRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">QuoteRequest can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">QuoteRequest can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="QuoteRequest" ComponentType="Message" MsgID="26" Section="Pre Trade" Category="QuotationNegotiation"/>
    </xs:appinfo>
@@ -52,7 +52,7 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="QuotReq" type="QuoteRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="QuotReq" type="QuoteRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="QuoteElements">
   <xs:sequence>
   <xs:element name="QuotQual" type="QuotQualGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
@@ -67,7 +67,7 @@
   <xs:element name="SprdBnchmkCurve" type="SpreadOrBenchmarkCurveData_Block_t" minOccurs="0"/>
   <xs:element name="Yield" type="YieldData_Block_t" minOccurs="0"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="QuoteAttributes">
   <xs:attribute name="ReqID" type="QuoteReqID_t" use="optional"/>
   <xs:attribute name="QID" type="QuoteID_t" use="required"/>
@@ -130,7 +130,7 @@
  </xs:attributeGroup>
  <xs:complexType name="Quote_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">Quote can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">Quote can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="Quote" ComponentType="Message" MsgID="27" Section="Pre Trade" Category="QuotationNegotiation"/>
    </xs:appinfo>
@@ -144,14 +144,14 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="Quot" type="Quote_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="Quot" type="Quote_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="QuoteCancelElements">
   <xs:sequence>
   <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="TgtPty" type="TargetParties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="QuotCxlEntry" type="QuotCxlEntriesGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="QuoteCancelAttributes">
   <xs:attribute name="ReqID" type="QuoteReqID_t" use="optional"/>
   <xs:attribute name="QID" type="QuoteID_t" use="optional"/>
@@ -167,7 +167,7 @@
  </xs:attributeGroup>
  <xs:complexType name="QuoteCancel_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">QuoteCancel can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">QuoteCancel can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="QuoteCancel" ComponentType="Message" MsgID="33" Section="Pre Trade" Category="QuotationNegotiation"/>
    </xs:appinfo>
@@ -181,7 +181,7 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="QuotCxl" type="QuoteCancel_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="QuotCxl" type="QuoteCancel_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="QuoteStatusRequestElements">
   <xs:sequence>
   <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="0"/>
@@ -191,7 +191,7 @@
   <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="TgtPty" type="TargetParties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="QuoteStatusRequestAttributes">
   <xs:attribute name="StatReqID" type="QuoteStatusReqID_t" use="optional"/>
   <xs:attribute name="QID" type="QuoteID_t" use="optional"/>
@@ -204,7 +204,7 @@
  </xs:attributeGroup>
  <xs:complexType name="QuoteStatusRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">QuoteStatusRequest can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">QuoteStatusRequest can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="QuoteStatusRequest" ComponentType="Message" MsgID="34" Section="Pre Trade" Category="QuotationNegotiation"/>
    </xs:appinfo>
@@ -218,14 +218,14 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="QuotStatReq" type="QuoteStatusRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="QuotStatReq" type="QuoteStatusRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="MassQuoteAcknowledgementElements">
   <xs:sequence>
   <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="TgtPty" type="TargetParties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="QuotSetAck" type="QuotSetAckGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="MassQuoteAcknowledgementAttributes">
   <xs:attribute name="ReqID" type="QuoteReqID_t" use="optional"/>
   <xs:attribute name="QID" type="QuoteID_t" use="optional"/>
@@ -243,7 +243,7 @@
  </xs:attributeGroup>
  <xs:complexType name="MassQuoteAcknowledgement_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">MassQuoteAcknowledgement can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">MassQuoteAcknowledgement can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="MassQuoteAcknowledgement" ComponentType="Message" MsgID="35" Section="Pre Trade" Category="QuotationNegotiation"/>
    </xs:appinfo>
@@ -257,13 +257,13 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="MassQuotAck" type="MassQuoteAcknowledgement_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="MassQuotAck" type="MassQuoteAcknowledgement_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="MassQuoteElements">
   <xs:sequence>
   <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="QuotSet" type="QuotSetGrp_Block_t" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="MassQuoteAttributes">
   <xs:attribute name="ReqID" type="QuoteReqID_t" use="optional"/>
   <xs:attribute name="QID" type="QuoteID_t" use="required"/>
@@ -277,7 +277,7 @@
  </xs:attributeGroup>
  <xs:complexType name="MassQuote_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">MassQuote can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">MassQuote can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="MassQuote" ComponentType="Message" MsgID="42" Section="Pre Trade" Category="QuotationNegotiation"/>
    </xs:appinfo>
@@ -291,13 +291,13 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="MassQuot" type="MassQuote_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="MassQuot" type="MassQuote_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="QuoteRequestRejectElements">
   <xs:sequence>
   <xs:element name="Pty" type="RootParties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="QuotReqRej" type="QuotReqRjctGrp_Block_t" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="QuoteRequestRejectAttributes">
   <xs:attribute name="ReqID" type="QuoteReqID_t" use="required"/>
   <xs:attribute name="RFQReqID" type="RFQReqID_t" use="optional"/>
@@ -311,7 +311,7 @@
  </xs:attributeGroup>
  <xs:complexType name="QuoteRequestReject_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">QuoteRequestReject can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">QuoteRequestReject can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="QuoteRequestReject" ComponentType="Message" MsgID="66" Section="Pre Trade" Category="QuotationNegotiation"/>
    </xs:appinfo>
@@ -325,13 +325,13 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="QuotReqRej" type="QuoteRequestReject_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="QuotReqRej" type="QuoteRequestReject_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="RFQRequestElements">
   <xs:sequence>
   <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="RFQReq" type="RFQReqGrp_Block_t" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="RFQRequestAttributes">
   <xs:attribute name="RFQReqID" type="RFQReqID_t" use="required"/>
   <xs:attribute name="SubReqTyp" type="SubscriptionRequestType_t" use="optional"/>
@@ -339,7 +339,7 @@
  </xs:attributeGroup>
  <xs:complexType name="RFQRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">RFQRequest can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">RFQRequest can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="RFQRequest" ComponentType="Message" MsgID="67" Section="Pre Trade" Category="QuotationNegotiation"/>
    </xs:appinfo>
@@ -353,7 +353,7 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="RFQReq" type="RFQRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="RFQReq" type="RFQRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="QuoteStatusReportElements">
   <xs:sequence>
   <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
@@ -368,7 +368,7 @@
   <xs:element name="SprdBnchmkCurve" type="SpreadOrBenchmarkCurveData_Block_t" minOccurs="0"/>
   <xs:element name="Yield" type="YieldData_Block_t" minOccurs="0"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="QuoteStatusReportAttributes">
   <xs:attribute name="StatReqID" type="QuoteStatusReqID_t" use="optional"/>
   <xs:attribute name="ReqID" type="QuoteReqID_t" use="optional"/>
@@ -432,7 +432,7 @@
  </xs:attributeGroup>
  <xs:complexType name="QuoteStatusReport_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">QuoteStatusReport can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">QuoteStatusReport can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="QuoteStatusReport" ComponentType="Message" MsgID="68" Section="Pre Trade" Category="QuotationNegotiation"/>
    </xs:appinfo>
@@ -446,7 +446,7 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="QuotStatRpt" type="QuoteStatusReport_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="QuotStatRpt" type="QuoteStatusReport_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="QuoteResponseElements">
   <xs:sequence>
   <xs:element name="QuotQual" type="QuotQualGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
@@ -460,7 +460,7 @@
   <xs:element name="SprdBnchmkCurve" type="SpreadOrBenchmarkCurveData_Block_t" minOccurs="0"/>
   <xs:element name="Yield" type="YieldData_Block_t" minOccurs="0"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="QuoteResponseAttributes">
   <xs:attribute name="RspID" type="QuoteRespID_t" use="required"/>
   <xs:attribute name="QID" type="QuoteID_t" use="optional"/>
@@ -521,7 +521,7 @@
  </xs:attributeGroup>
  <xs:complexType name="QuoteResponse_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">QuoteResponse can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">QuoteResponse can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="QuoteResponse" ComponentType="Message" MsgID="69" Section="Pre Trade" Category="QuotationNegotiation"/>
    </xs:appinfo>
@@ -923,8 +923,8 @@
    <xs:group name="RFQReqGrpElements">
       <xs:sequence>
          <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="1" maxOccurs="1"/>
-         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0"/>
-         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
    </xs:group>
    <xs:attributeGroup name="RFQReqGrpAttributes">

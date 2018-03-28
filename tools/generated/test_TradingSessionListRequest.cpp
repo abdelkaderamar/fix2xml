@@ -16,40 +16,40 @@ using namespace fix2xml;
 TEST ( TradingSessionListRequest, set_fields)
 {
 
-  fixml2fix_converter converter {"FIX50SP2.xml", "fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   ASSERT_TRUE(converter.init());
   FIX50SP2::TradingSessionListRequest msg;
 
   list<multiset<string>> all_values;
   multiset<string> TradingSessionListRequest_0;
-  FIX::MarketID MarketID_29("EXCHANGE_1141316420");
-  msg.set(MarketID_29);
-  TradingSessionListRequest_0.insert(MarketID_29.getString());
-  FIX::MarketSegmentID MarketSegmentID_29("STRING_1092511572");
-  msg.set(MarketSegmentID_29);
-  TradingSessionListRequest_0.insert(MarketSegmentID_29.getString());
-  FIX::SecurityExchange SecurityExchange_96("EXCHANGE_504920761");
-  msg.set(SecurityExchange_96);
-  TradingSessionListRequest_0.insert(SecurityExchange_96.getString());
-  FIX::SubscriptionRequestType SubscriptionRequestType_17('1');
+  FIX::MarketID MarketID_26("EXCHANGE_641081013");
+  msg.set(MarketID_26);
+  TradingSessionListRequest_0.insert(MarketID_26.getString());
+  FIX::MarketSegmentID MarketSegmentID_26("STRING_966448928");
+  msg.set(MarketSegmentID_26);
+  TradingSessionListRequest_0.insert(MarketSegmentID_26.getString());
+  FIX::SecurityExchange SecurityExchange_100("EXCHANGE_1913293060");
+  msg.set(SecurityExchange_100);
+  TradingSessionListRequest_0.insert(SecurityExchange_100.getString());
+  FIX::SubscriptionRequestType SubscriptionRequestType_17('0');
   msg.set(SubscriptionRequestType_17);
   TradingSessionListRequest_0.insert(SubscriptionRequestType_17.getString());
-  FIX::TradSesMethod TradSesMethod_3(1);
-  msg.set(TradSesMethod_3);
-  TradingSessionListRequest_0.insert(TradSesMethod_3.getString());
-  FIX::TradSesMode TradSesMode_3(1);
-  msg.set(TradSesMode_3);
-  TradingSessionListRequest_0.insert(TradSesMode_3.getString());
-  FIX::TradSesReqID TradSesReqID_1("STRING_1526085341");
+  FIX::TradSesMethod TradSesMethod_1(3);
+  msg.set(TradSesMethod_1);
+  TradingSessionListRequest_0.insert(TradSesMethod_1.getString());
+  FIX::TradSesMode TradSesMode_1(3);
+  msg.set(TradSesMode_1);
+  TradingSessionListRequest_0.insert(TradSesMode_1.getString());
+  FIX::TradSesReqID TradSesReqID_1("STRING_1095510206");
   msg.set(TradSesReqID_1);
   TradingSessionListRequest_0.insert(TradSesReqID_1.getString());
-  FIX::TradingSessionID TradingSessionID_98("STRING_4");
-  msg.set(TradingSessionID_98);
-  TradingSessionListRequest_0.insert(TradingSessionID_98.getString());
-  FIX::TradingSessionSubID TradingSessionSubID_98("STRING_1");
-  msg.set(TradingSessionSubID_98);
-  TradingSessionListRequest_0.insert(TradingSessionSubID_98.getString());
+  FIX::TradingSessionID TradingSessionID_94("STRING_2");
+  msg.set(TradingSessionID_94);
+  TradingSessionListRequest_0.insert(TradingSessionID_94.getString());
+  FIX::TradingSessionSubID TradingSessionSubID_94("STRING_6");
+  msg.set(TradingSessionSubID_94);
+  TradingSessionListRequest_0.insert(TradingSessionSubID_94.getString());
   all_values.push_back(TradingSessionListRequest_0);
 
 
@@ -79,15 +79,10 @@ TEST ( TradingSessionListRequest, set_fields)
         break;
       } // end if includes
     } // end for all_values
+    EXPECT_TRUE(found);
     if ( ! found) {
       cout << "#### NOT FOUND ###" << endl;
       copy(xml_l.begin(), xml_l.end(), ostream_iterator<string>(cout, " "));      cout << endl;
     } // end if ! found
   } // end for elt_lists
-}
-int main(int argc, char *argv[]) {
-  ::testing::InitGoogleTest(&argc, argv);
-  fix2xml::fix_env::init_xerces();
-  return RUN_ALL_TESTS();
-  fix2xml::fix_env::terminate_xerces();
 }
