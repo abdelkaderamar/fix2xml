@@ -585,7 +585,7 @@
   <xs:annotation>
      <xs:documentation xml:lang="en">DontKnowTradeDK can be found in Volume4 of the specification </xs:documentation> 
    <xs:appinfo>
-    <fm:Xref Protocol="FIX" name="DontKnowTradeDK" ComponentType="Message" MsgID="25" Section="Trade" Category="SingleGeneralOrderHandling"/>
+    <fm:Xref Protocol="FIX" name="DontKnowTrade" ComponentType="Message" MsgID="25" Section="Trade" Category="SingleGeneralOrderHandling"/>
    </xs:appinfo>
   </xs:annotation>
   <xs:complexContent>

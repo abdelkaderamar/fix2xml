@@ -1,5 +1,6 @@
-#File ( GLOB GEN_TEST_SRCS *.cpp )
-File ( GLOB GEN_TEST_SRCS test_fix2xml_main.cpp test_NewOrderSingle.cpp )
+#File ( GLOB GEN_TEST_SRCS test_fix2xml_main.cpp test_SecurityStatus.cpp )
+File ( GLOB GEN_TEST_SRCS *.cpp )
+#File ( GLOB GEN_TEST_SRCS test_fix2xml_main.cpp test_NewOrderSingle.cpp )
 
 # Foreach (file ${GEN_TEST_SRCS})
 #   get_filename_component(binary_name ${file} NAME_WE)

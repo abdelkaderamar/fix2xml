@@ -22,42 +22,45 @@ TEST ( UserRequest, set_fields)
   FIX50SP2::UserRequest msg;
 
   list<multiset<string>> all_values;
+  multiset<string> all_compo_names;
   multiset<string> UserRequest_0;
-  FIX::EncryptedNewPassword EncryptedNewPassword_0("DATA_84395830");
+  FIX::EncryptedNewPassword EncryptedNewPassword_0("DATA_777137674");
   msg.set(EncryptedNewPassword_0);
   UserRequest_0.insert(EncryptedNewPassword_0.getString());
-  FIX::EncryptedNewPasswordLen EncryptedNewPasswordLen_0(1985902063);
+  FIX::EncryptedNewPasswordLen EncryptedNewPasswordLen_0(1000023044);
   msg.set(EncryptedNewPasswordLen_0);
-  FIX::EncryptedPassword EncryptedPassword_0("DATA_692138450");
+  FIX::EncryptedPassword EncryptedPassword_0("DATA_793780341");
   msg.set(EncryptedPassword_0);
   UserRequest_0.insert(EncryptedPassword_0.getString());
-  FIX::EncryptedPasswordLen EncryptedPasswordLen_0(1649956178);
+  FIX::EncryptedPasswordLen EncryptedPasswordLen_0(1343146314);
   msg.set(EncryptedPasswordLen_0);
-  FIX::EncryptedPasswordMethod EncryptedPasswordMethod_0(1352118501);
+  FIX::EncryptedPasswordMethod EncryptedPasswordMethod_0(470284591);
   msg.set(EncryptedPasswordMethod_0);
   UserRequest_0.insert(EncryptedPasswordMethod_0.getString());
-  FIX::NewPassword NewPassword_0("STRING_263723686");
+  FIX::NewPassword NewPassword_0("STRING_732967325");
   msg.set(NewPassword_0);
   UserRequest_0.insert(NewPassword_0.getString());
-  FIX::Password Password_0("STRING_1110986094");
+  FIX::Password Password_0("STRING_1683301715");
   msg.set(Password_0);
   UserRequest_0.insert(Password_0.getString());
-  FIX::RawData RawData_2("DATA_129171033");
+  FIX::RawData RawData_2("DATA_191774720");
   msg.set(RawData_2);
   UserRequest_0.insert(RawData_2.getString());
-  FIX::RawDataLength RawDataLength_2(1343371886);
+  FIX::RawDataLength RawDataLength_2(1097447041);
   msg.set(RawDataLength_2);
   UserRequest_0.insert(RawDataLength_2.getString());
-  FIX::UserRequestID UserRequestID_0("STRING_1697629202");
+  FIX::UserRequestID UserRequestID_0("STRING_1996474873");
   msg.set(UserRequestID_0);
   UserRequest_0.insert(UserRequestID_0.getString());
   FIX::UserRequestType UserRequestType_0(1);
   msg.set(UserRequestType_0);
   UserRequest_0.insert(UserRequestType_0.getString());
-  FIX::Username Username_1("STRING_1251101781");
+  FIX::Username Username_1("STRING_108881944");
   msg.set(Username_1);
   UserRequest_0.insert(Username_1.getString());
   all_values.push_back(UserRequest_0);
+
+  all_compo_names.insert("UserRequest");
 
 
   xml_element elt;
@@ -67,7 +70,14 @@ TEST ( UserRequest, set_fields)
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
 
-  cout << "FIX components" << endl;
+  if (elt_lists.size() != all_values.size())  {
+    cout << "########################" << endl;
+    multiset<string> elt_compo_name;
+    elt.all_components(elt_compo_name);
+    copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, "\n"));
+    cout << "########################" << endl; 
+    copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, "\n"));
+  }  cout << "FIX components" << endl;
   for (const auto& l : all_values) {
     copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << endl;

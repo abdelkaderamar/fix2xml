@@ -22,63 +22,67 @@ TEST ( SecurityTypes, set_fields)
   FIX50SP2::SecurityTypes msg;
 
   list<multiset<string>> all_values;
+  multiset<string> all_compo_names;
   multiset<string> SecurityTypes_0;
-  FIX::EncodedText EncodedText_84("DATA_743125486");
-  msg.set(EncodedText_84);
-  SecurityTypes_0.insert(EncodedText_84.getString());
-  FIX::EncodedTextLen EncodedTextLen_84(1567916308);
-  msg.set(EncodedTextLen_84);
-  SecurityTypes_0.insert(EncodedTextLen_84.getString());
-  FIX::LastFragment LastFragment_16(true);
+  FIX::EncodedText EncodedText_92("DATA_594826027");
+  msg.set(EncodedText_92);
+  SecurityTypes_0.insert(EncodedText_92.getString());
+  FIX::EncodedTextLen EncodedTextLen_92(590033567);
+  msg.set(EncodedTextLen_92);
+  SecurityTypes_0.insert(EncodedTextLen_92.getString());
+  FIX::LastFragment LastFragment_16(false);
   msg.set(LastFragment_16);
   SecurityTypes_0.insert(LastFragment_16.getString());
-  FIX::MarketID MarketID_22("EXCHANGE_1116694216");
-  msg.set(MarketID_22);
-  SecurityTypes_0.insert(MarketID_22.getString());
-  FIX::MarketSegmentID MarketSegmentID_22("STRING_1802926043");
-  msg.set(MarketSegmentID_22);
-  SecurityTypes_0.insert(MarketSegmentID_22.getString());
-  FIX::SecurityReqID SecurityReqID_10("STRING_187443827");
+  FIX::MarketID MarketID_26("EXCHANGE_732413887");
+  msg.set(MarketID_26);
+  SecurityTypes_0.insert(MarketID_26.getString());
+  FIX::MarketSegmentID MarketSegmentID_26("STRING_174562758");
+  msg.set(MarketSegmentID_26);
+  SecurityTypes_0.insert(MarketSegmentID_26.getString());
+  FIX::SecurityReqID SecurityReqID_10("STRING_1079987293");
   msg.set(SecurityReqID_10);
   SecurityTypes_0.insert(SecurityReqID_10.getString());
-  FIX::SecurityResponseID SecurityResponseID_6("STRING_558329947");
+  FIX::SecurityResponseID SecurityResponseID_6("STRING_1980347732");
   msg.set(SecurityResponseID_6);
   SecurityTypes_0.insert(SecurityResponseID_6.getString());
-  FIX::SecurityResponseType SecurityResponseType_2(4);
+  FIX::SecurityResponseType SecurityResponseType_2(5);
   msg.set(SecurityResponseType_2);
   SecurityTypes_0.insert(SecurityResponseType_2.getString());
-  FIX::SubscriptionRequestType SubscriptionRequestType_12('1');
+  FIX::SubscriptionRequestType SubscriptionRequestType_12('0');
   msg.set(SubscriptionRequestType_12);
   SecurityTypes_0.insert(SubscriptionRequestType_12.getString());
-  FIX::Text Text_84("STRING_498662778");
-  msg.set(Text_84);
-  SecurityTypes_0.insert(Text_84.getString());
-  FIX::TotNoSecurityTypes TotNoSecurityTypes_0(1233159626);
+  FIX::Text Text_92("STRING_561769642");
+  msg.set(Text_92);
+  SecurityTypes_0.insert(Text_92.getString());
+  FIX::TotNoSecurityTypes TotNoSecurityTypes_0(2085049002);
   msg.set(TotNoSecurityTypes_0);
   SecurityTypes_0.insert(TotNoSecurityTypes_0.getString());
-  FIX::TradingSessionID TradingSessionID_89("STRING_2");
-  msg.set(TradingSessionID_89);
-  SecurityTypes_0.insert(TradingSessionID_89.getString());
-  FIX::TradingSessionSubID TradingSessionSubID_89("STRING_3");
-  msg.set(TradingSessionSubID_89);
-  SecurityTypes_0.insert(TradingSessionSubID_89.getString());
+  FIX::TradingSessionID TradingSessionID_116("STRING_4");
+  msg.set(TradingSessionID_116);
+  SecurityTypes_0.insert(TradingSessionID_116.getString());
+  FIX::TradingSessionSubID TradingSessionSubID_116("STRING_7");
+  msg.set(TradingSessionSubID_116);
+  SecurityTypes_0.insert(TradingSessionSubID_116.getString());
   all_values.push_back(SecurityTypes_0);
+
+  all_compo_names.insert("SecurityTypes");
 
   // ApplicationSequenceControl
   multiset<string> ApplicationSequenceControl_17;
-  FIX::ApplID ApplID_17("STRING_1416691481");
+  FIX::ApplID ApplID_17("STRING_489267298");
   msg.set(ApplID_17);
   ApplicationSequenceControl_17.insert(ApplID_17.getString());
-  FIX::ApplLastSeqNum ApplLastSeqNum_17(1902500450);
+  FIX::ApplLastSeqNum ApplLastSeqNum_17(406944918);
   msg.set(ApplLastSeqNum_17);
   ApplicationSequenceControl_17.insert(ApplLastSeqNum_17.getString());
-  FIX::ApplResendFlag ApplResendFlag_17(true);
+  FIX::ApplResendFlag ApplResendFlag_17(false);
   msg.set(ApplResendFlag_17);
   ApplicationSequenceControl_17.insert(ApplResendFlag_17.getString());
-  FIX::ApplSeqNum ApplSeqNum_17(63060959);
+  FIX::ApplSeqNum ApplSeqNum_17(1576737482);
   msg.set(ApplSeqNum_17);
   ApplicationSequenceControl_17.insert(ApplSeqNum_17.getString());
   all_values.push_back(ApplicationSequenceControl_17);
+  all_compo_names.insert("ApplicationSequenceControl");
 
   // SecTypesGrp
   // Group SecTypesGrp.NoSecurityTypes
@@ -86,22 +90,23 @@ TEST ( SecurityTypes, set_fields)
     FIX50SP2::SecurityTypes::NoSecurityTypes noSecurityTypes_0_0;
     // SecTypesGrp.NoSecurityTypes
     multiset<string> SecTypesGrp_NoSecurityTypes_0;
-    FIX::CFICode CFICode_88("STRING_1204203948");
-    noSecurityTypes_0_0.set(CFICode_88);
-    SecTypesGrp_NoSecurityTypes_0.insert(CFICode_88.getString());
-    FIX::Product Product_91(1);
-    noSecurityTypes_0_0.set(Product_91);
-    SecTypesGrp_NoSecurityTypes_0.insert(Product_91.getString());
-    FIX::SecuritySubType SecuritySubType_90("STRING_1234913545");
-    noSecurityTypes_0_0.set(SecuritySubType_90);
-    SecTypesGrp_NoSecurityTypes_0.insert(SecuritySubType_90.getString());
-    FIX::SecurityType SecurityType_91("STRING_ONITE");
-    noSecurityTypes_0_0.set(SecurityType_91);
-    SecTypesGrp_NoSecurityTypes_0.insert(SecurityType_91.getString());
-    FIX::TransactTime TransactTime_65(FIX::UTCTIMESTAMP(8, 1, 38, 26, 4, 2014));
-    noSecurityTypes_0_0.set(TransactTime_65);
-    SecTypesGrp_NoSecurityTypes_0.insert(TransactTime_65.getString());
+    FIX::CFICode CFICode_90("STRING_297758056");
+    noSecurityTypes_0_0.set(CFICode_90);
+    SecTypesGrp_NoSecurityTypes_0.insert(CFICode_90.getString());
+    FIX::Product Product_93(6);
+    noSecurityTypes_0_0.set(Product_93);
+    SecTypesGrp_NoSecurityTypes_0.insert(Product_93.getString());
+    FIX::SecuritySubType SecuritySubType_92("STRING_1559631262");
+    noSecurityTypes_0_0.set(SecuritySubType_92);
+    SecTypesGrp_NoSecurityTypes_0.insert(SecuritySubType_92.getString());
+    FIX::SecurityType SecurityType_93("STRING_BRADY");
+    noSecurityTypes_0_0.set(SecurityType_93);
+    SecTypesGrp_NoSecurityTypes_0.insert(SecurityType_93.getString());
+    FIX::TransactTime TransactTime_68(FIX::UTCTIMESTAMP(7, 25, 7, 13, 11, 2001));
+    noSecurityTypes_0_0.set(TransactTime_68);
+    SecTypesGrp_NoSecurityTypes_0.insert(TransactTime_68.getString());
     all_values.push_back(SecTypesGrp_NoSecurityTypes_0);
+    all_compo_names.insert("SecTypesGrp.NoSecurityTypes");
 
     msg.addGroup(noSecurityTypes_0_0);
   }
@@ -109,22 +114,23 @@ TEST ( SecurityTypes, set_fields)
     FIX50SP2::SecurityTypes::NoSecurityTypes noSecurityTypes_0_1;
     // SecTypesGrp.NoSecurityTypes
     multiset<string> SecTypesGrp_NoSecurityTypes_1;
-    FIX::CFICode CFICode_89("STRING_1661588454");
-    noSecurityTypes_0_1.set(CFICode_89);
-    SecTypesGrp_NoSecurityTypes_1.insert(CFICode_89.getString());
-    FIX::Product Product_92(4);
-    noSecurityTypes_0_1.set(Product_92);
-    SecTypesGrp_NoSecurityTypes_1.insert(Product_92.getString());
-    FIX::SecuritySubType SecuritySubType_91("STRING_892516464");
-    noSecurityTypes_0_1.set(SecuritySubType_91);
-    SecTypesGrp_NoSecurityTypes_1.insert(SecuritySubType_91.getString());
-    FIX::SecurityType SecurityType_92("STRING_MATURED");
-    noSecurityTypes_0_1.set(SecurityType_92);
-    SecTypesGrp_NoSecurityTypes_1.insert(SecurityType_92.getString());
-    FIX::TransactTime TransactTime_66(FIX::UTCTIMESTAMP(17, 30, 32, 0, 3, 2013));
-    noSecurityTypes_0_1.set(TransactTime_66);
-    SecTypesGrp_NoSecurityTypes_1.insert(TransactTime_66.getString());
+    FIX::CFICode CFICode_91("STRING_313846575");
+    noSecurityTypes_0_1.set(CFICode_91);
+    SecTypesGrp_NoSecurityTypes_1.insert(CFICode_91.getString());
+    FIX::Product Product_94(5);
+    noSecurityTypes_0_1.set(Product_94);
+    SecTypesGrp_NoSecurityTypes_1.insert(Product_94.getString());
+    FIX::SecuritySubType SecuritySubType_93("STRING_517812738");
+    noSecurityTypes_0_1.set(SecuritySubType_93);
+    SecTypesGrp_NoSecurityTypes_1.insert(SecuritySubType_93.getString());
+    FIX::SecurityType SecurityType_94("STRING_OOC");
+    noSecurityTypes_0_1.set(SecurityType_94);
+    SecTypesGrp_NoSecurityTypes_1.insert(SecurityType_94.getString());
+    FIX::TransactTime TransactTime_69(FIX::UTCTIMESTAMP(1, 20, 31, 2, 1, 2017));
+    noSecurityTypes_0_1.set(TransactTime_69);
+    SecTypesGrp_NoSecurityTypes_1.insert(TransactTime_69.getString());
     all_values.push_back(SecTypesGrp_NoSecurityTypes_1);
+    all_compo_names.insert("SecTypesGrp.NoSecurityTypes");
 
     msg.addGroup(noSecurityTypes_0_1);
   }
@@ -136,7 +142,14 @@ TEST ( SecurityTypes, set_fields)
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
 
-  cout << "FIX components" << endl;
+  if (elt_lists.size() != all_values.size())  {
+    cout << "########################" << endl;
+    multiset<string> elt_compo_name;
+    elt.all_components(elt_compo_name);
+    copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, "\n"));
+    cout << "########################" << endl; 
+    copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, "\n"));
+  }  cout << "FIX components" << endl;
   for (const auto& l : all_values) {
     copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << endl;

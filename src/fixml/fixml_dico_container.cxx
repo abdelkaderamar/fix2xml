@@ -37,6 +37,7 @@ fixml_dico_container::fixml_dico_container()
     : _fixml_name_index(_type_definitions.get<0>()),
       _fix_name_index(_type_definitions.get<1>()),
       _fix_tag_index(_type_definitions.get<2>()),
+      _fixml_fullname_index(_type_definitions.get<3>()),
       _element_name_index(_element_definitions.get<0>()),
       _element_type_index(_element_definitions.get<1>()) {}
 
@@ -50,6 +51,9 @@ void fixml_dico_container::add_element(const string &name, const string &type) {
 
 void fixml_dico_container::add_type_definition(const fixml_type &type) {
   _type_definitions.insert(type);
+  BOOST_LOG_TRIVIAL(debug) << "****** Adding type [" << type._fullname << "] | "
+                           << "[" << type._fix_data._name << "] | "
+                           << _type_definitions.size();
 }
 
 //----------------------------------------------------------------------------
@@ -77,13 +81,23 @@ bool fixml_dico_container::get_type_by_name(const string &type_name,
 
 bool fixml_dico_container::get_message_type(const string &fix_msg_name,
                                             fixml_type &fixml_msg_type) const {
-  auto it = _fix_name_index.find(fix_msg_name);
-  if (it == _fix_name_index.end()) {
+  BOOST_LOG_TRIVIAL(debug) << "@@@@ Searching for message type by fix name "
+                           << fix_msg_name;
+  auto range = _fix_name_index.equal_range(fix_msg_name);
+  /*if (it == _fix_name_index.end()) {
     BOOST_LOG_TRIVIAL(warning) << "FIXML type not found for " << fix_msg_name;
     return false;
   }
-  fixml_msg_type = *it;
-  return true;
+  */
+
+  for (auto it = range.first; it != range.second; ++it) {
+    // BOOST_LOG_TRIVIAL(debug) << "#### " << it->_fullname;
+    if (it->_base_type == "Abstract_message_t") {
+      fixml_msg_type = *it;
+      return true;
+    }
+  }
+  return false;
 }
 
 //----------------------------------------------------------------------------
@@ -122,10 +136,10 @@ int fixml_dico_container::get_field_fix_tag(
                                  << " not found";
       return -1;
     }
-    BOOST_LOG_TRIVIAL(debug) << "type " << fixml_field_type << " not found =>"
-                             << " try with base type " << base_type_it->_name
-                             << " => fix_name = "
-                             << base_type_it->_fix_data._name;
+    BOOST_LOG_TRIVIAL(debug)
+        << "type " << fixml_field_type << " not found =>"
+        << " try with base type " << base_type_it->_name
+        << " => fix_name = " << base_type_it->_fix_data._name;
 
     // BOOST_LOG_TRIVIAL(debug) << "Try with base_type " << it->_base_type;
     tag = base_type_it->_fix_data._tag;

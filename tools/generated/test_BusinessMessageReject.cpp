@@ -22,38 +22,41 @@ TEST ( BusinessMessageReject, set_fields)
   FIX50SP2::BusinessMessageReject msg;
 
   list<multiset<string>> all_values;
+  multiset<string> all_compo_names;
   multiset<string> BusinessMessageReject_0;
-  FIX::BusinessRejectReason BusinessRejectReason_0(6);
+  FIX::BusinessRejectReason BusinessRejectReason_0(0);
   msg.set(BusinessRejectReason_0);
   BusinessMessageReject_0.insert(BusinessRejectReason_0.getString());
-  FIX::BusinessRejectRefID BusinessRejectRefID_0("STRING_1103398207");
+  FIX::BusinessRejectRefID BusinessRejectRefID_0("STRING_822130239");
   msg.set(BusinessRejectRefID_0);
   BusinessMessageReject_0.insert(BusinessRejectRefID_0.getString());
-  FIX::EncodedText EncodedText_12("DATA_748419514");
-  msg.set(EncodedText_12);
-  BusinessMessageReject_0.insert(EncodedText_12.getString());
-  FIX::EncodedTextLen EncodedTextLen_12(318831340);
-  msg.set(EncodedTextLen_12);
-  BusinessMessageReject_0.insert(EncodedTextLen_12.getString());
-  FIX::RefApplExtID RefApplExtID_0(1812681183);
+  FIX::EncodedText EncodedText_14("DATA_711710750");
+  msg.set(EncodedText_14);
+  BusinessMessageReject_0.insert(EncodedText_14.getString());
+  FIX::EncodedTextLen EncodedTextLen_14(664801373);
+  msg.set(EncodedTextLen_14);
+  BusinessMessageReject_0.insert(EncodedTextLen_14.getString());
+  FIX::RefApplExtID RefApplExtID_0(258880606);
   msg.set(RefApplExtID_0);
   BusinessMessageReject_0.insert(RefApplExtID_0.getString());
-  FIX::RefApplVerID RefApplVerID_0("STRING_1615678584");
+  FIX::RefApplVerID RefApplVerID_0("STRING_444861444");
   msg.set(RefApplVerID_0);
   BusinessMessageReject_0.insert(RefApplVerID_0.getString());
-  FIX::RefCstmApplVerID RefCstmApplVerID_0("STRING_634879225");
+  FIX::RefCstmApplVerID RefCstmApplVerID_0("STRING_359843351");
   msg.set(RefCstmApplVerID_0);
   BusinessMessageReject_0.insert(RefCstmApplVerID_0.getString());
-  FIX::RefMsgType RefMsgType_0("STRING_11119143");
+  FIX::RefMsgType RefMsgType_0("STRING_1550084847");
   msg.set(RefMsgType_0);
   BusinessMessageReject_0.insert(RefMsgType_0.getString());
-  FIX::RefSeqNum RefSeqNum_0(178948653);
+  FIX::RefSeqNum RefSeqNum_0(1569617147);
   msg.set(RefSeqNum_0);
   BusinessMessageReject_0.insert(RefSeqNum_0.getString());
-  FIX::Text Text_12("STRING_412447312");
-  msg.set(Text_12);
-  BusinessMessageReject_0.insert(Text_12.getString());
+  FIX::Text Text_14("STRING_1953392020");
+  msg.set(Text_14);
+  BusinessMessageReject_0.insert(Text_14.getString());
   all_values.push_back(BusinessMessageReject_0);
+
+  all_compo_names.insert("BusinessMessageReject");
 
 
   xml_element elt;
@@ -63,7 +66,14 @@ TEST ( BusinessMessageReject, set_fields)
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
 
-  cout << "FIX components" << endl;
+  if (elt_lists.size() != all_values.size())  {
+    cout << "########################" << endl;
+    multiset<string> elt_compo_name;
+    elt.all_components(elt_compo_name);
+    copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, "\n"));
+    cout << "########################" << endl; 
+    copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, "\n"));
+  }  cout << "FIX components" << endl;
   for (const auto& l : all_values) {
     copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << endl;

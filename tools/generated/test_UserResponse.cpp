@@ -22,20 +22,23 @@ TEST ( UserResponse, set_fields)
   FIX50SP2::UserResponse msg;
 
   list<multiset<string>> all_values;
+  multiset<string> all_compo_names;
   multiset<string> UserResponse_0;
-  FIX::UserRequestID UserRequestID_1("STRING_1027784167");
+  FIX::UserRequestID UserRequestID_1("STRING_1565882566");
   msg.set(UserRequestID_1);
   UserResponse_0.insert(UserRequestID_1.getString());
-  FIX::UserStatus UserStatus_1(5);
+  FIX::UserStatus UserStatus_1(8);
   msg.set(UserStatus_1);
   UserResponse_0.insert(UserStatus_1.getString());
-  FIX::UserStatusText UserStatusText_0("STRING_1543865686");
+  FIX::UserStatusText UserStatusText_0("STRING_631837803");
   msg.set(UserStatusText_0);
   UserResponse_0.insert(UserStatusText_0.getString());
-  FIX::Username Username_2("STRING_582687064");
+  FIX::Username Username_2("STRING_422885389");
   msg.set(Username_2);
   UserResponse_0.insert(Username_2.getString());
   all_values.push_back(UserResponse_0);
+
+  all_compo_names.insert("UserResponse");
 
 
   xml_element elt;
@@ -45,7 +48,14 @@ TEST ( UserResponse, set_fields)
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
 
-  cout << "FIX components" << endl;
+  if (elt_lists.size() != all_values.size())  {
+    cout << "########################" << endl;
+    multiset<string> elt_compo_name;
+    elt.all_components(elt_compo_name);
+    copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, "\n"));
+    cout << "########################" << endl; 
+    copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, "\n"));
+  }  cout << "FIX components" << endl;
   for (const auto& l : all_values) {
     copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << endl;

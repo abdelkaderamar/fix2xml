@@ -15,7 +15,7 @@
            targetNamespace="http://www.fixprotocol.org/FIXML-5-0-SP2"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
-   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>	
+   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>
  <xs:group name="ConfirmationElements">
   <xs:sequence>
   <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
@@ -34,7 +34,7 @@
   <xs:element name="Stip" type="Stipulations_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="MiscFees" type="MiscFeesGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="ConfirmationAttributes">
   <xs:attribute name="CnfmID" type="ConfirmID_t" use="required"/>
   <xs:attribute name="CnfmRefID" type="ConfirmRefID_t" use="optional"/>
@@ -89,7 +89,7 @@
  </xs:attributeGroup>
  <xs:complexType name="Confirmation_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">Confirmation can be found in Volume5 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">Confirmation can be found in Volume5 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="Confirmation" ComponentType="Message" MsgID="70" Section="Post Trade" Category="Confirmation"/>
    </xs:appinfo>
@@ -103,11 +103,11 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="Cnfm" type="Confirmation_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="Cnfm" type="Confirmation_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="Confirmation_AckElements">
   <xs:sequence>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="Confirmation_AckAttributes">
   <xs:attribute name="CnfmID" type="ConfirmID_t" use="required"/>
   <xs:attribute name="TrdDt" type="TradeDate_t" use="required"/>
@@ -121,9 +121,9 @@
  </xs:attributeGroup>
  <xs:complexType name="Confirmation_Ack_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">Confirmation_Ack can be found in Volume5 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">Confirmation_Ack can be found in Volume5 of the specification </xs:documentation>
    <xs:appinfo>
-    <fm:Xref Protocol="FIX" name="Confirmation_Ack" ComponentType="Message" MsgID="80" Section="Post Trade" Category="Confirmation"/>
+    <fm:Xref Protocol="FIX" name="ConfirmationAck" ComponentType="Message" MsgID="80" Section="Post Trade" Category="Confirmation"/>
    </xs:appinfo>
   </xs:annotation>
   <xs:complexContent>
@@ -135,12 +135,12 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="CnfmAck" type="Confirmation_Ack_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="CnfmAck" type="Confirmation_Ack_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="ConfirmationRequestElements">
   <xs:sequence>
   <xs:element name="OrdAlloc" type="OrdAllocGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="ConfirmationRequestAttributes">
   <xs:attribute name="CnfmReqID" type="ConfirmReqID_t" use="required"/>
   <xs:attribute name="CnfmTyp" type="ConfirmType_t" use="required"/>
@@ -157,7 +157,7 @@
  </xs:attributeGroup>
  <xs:complexType name="ConfirmationRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">ConfirmationRequest can be found in Volume5 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">ConfirmationRequest can be found in Volume5 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="ConfirmationRequest" ComponentType="Message" MsgID="93" Section="Post Trade" Category="Confirmation"/>
    </xs:appinfo>

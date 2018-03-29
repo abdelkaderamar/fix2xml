@@ -22,35 +22,38 @@ TEST ( TradingSessionStatusRequest, set_fields)
   FIX50SP2::TradingSessionStatusRequest msg;
 
   list<multiset<string>> all_values;
+  multiset<string> all_compo_names;
   multiset<string> TradingSessionStatusRequest_0;
-  FIX::MarketID MarketID_29("EXCHANGE_1959857709");
-  msg.set(MarketID_29);
-  TradingSessionStatusRequest_0.insert(MarketID_29.getString());
-  FIX::MarketSegmentID MarketSegmentID_29("STRING_220041164");
-  msg.set(MarketSegmentID_29);
-  TradingSessionStatusRequest_0.insert(MarketSegmentID_29.getString());
-  FIX::SecurityExchange SecurityExchange_103("EXCHANGE_1758137541");
-  msg.set(SecurityExchange_103);
-  TradingSessionStatusRequest_0.insert(SecurityExchange_103.getString());
+  FIX::MarketID MarketID_37("EXCHANGE_1839008233");
+  msg.set(MarketID_37);
+  TradingSessionStatusRequest_0.insert(MarketID_37.getString());
+  FIX::MarketSegmentID MarketSegmentID_37("STRING_1042939712");
+  msg.set(MarketSegmentID_37);
+  TradingSessionStatusRequest_0.insert(MarketSegmentID_37.getString());
+  FIX::SecurityExchange SecurityExchange_112("EXCHANGE_727248566");
+  msg.set(SecurityExchange_112);
+  TradingSessionStatusRequest_0.insert(SecurityExchange_112.getString());
   FIX::SubscriptionRequestType SubscriptionRequestType_18('2');
   msg.set(SubscriptionRequestType_18);
   TradingSessionStatusRequest_0.insert(SubscriptionRequestType_18.getString());
-  FIX::TradSesMethod TradSesMethod_4(3);
-  msg.set(TradSesMethod_4);
-  TradingSessionStatusRequest_0.insert(TradSesMethod_4.getString());
-  FIX::TradSesMode TradSesMode_4(3);
-  msg.set(TradSesMode_4);
-  TradingSessionStatusRequest_0.insert(TradSesMode_4.getString());
-  FIX::TradSesReqID TradSesReqID_4("STRING_880015250");
+  FIX::TradSesMethod TradSesMethod_8(2);
+  msg.set(TradSesMethod_8);
+  TradingSessionStatusRequest_0.insert(TradSesMethod_8.getString());
+  FIX::TradSesMode TradSesMode_8(3);
+  msg.set(TradSesMode_8);
+  TradingSessionStatusRequest_0.insert(TradSesMode_8.getString());
+  FIX::TradSesReqID TradSesReqID_4("STRING_1185395535");
   msg.set(TradSesReqID_4);
   TradingSessionStatusRequest_0.insert(TradSesReqID_4.getString());
-  FIX::TradingSessionID TradingSessionID_97("STRING_6");
-  msg.set(TradingSessionID_97);
-  TradingSessionStatusRequest_0.insert(TradingSessionID_97.getString());
-  FIX::TradingSessionSubID TradingSessionSubID_97("STRING_5");
-  msg.set(TradingSessionSubID_97);
-  TradingSessionStatusRequest_0.insert(TradingSessionSubID_97.getString());
+  FIX::TradingSessionID TradingSessionID_131("STRING_1");
+  msg.set(TradingSessionID_131);
+  TradingSessionStatusRequest_0.insert(TradingSessionID_131.getString());
+  FIX::TradingSessionSubID TradingSessionSubID_131("STRING_5");
+  msg.set(TradingSessionSubID_131);
+  TradingSessionStatusRequest_0.insert(TradingSessionSubID_131.getString());
   all_values.push_back(TradingSessionStatusRequest_0);
+
+  all_compo_names.insert("TradingSessionStatusRequest");
 
 
   xml_element elt;
@@ -60,7 +63,14 @@ TEST ( TradingSessionStatusRequest, set_fields)
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
 
-  cout << "FIX components" << endl;
+  if (elt_lists.size() != all_values.size())  {
+    cout << "########################" << endl;
+    multiset<string> elt_compo_name;
+    elt.all_components(elt_compo_name);
+    copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, "\n"));
+    cout << "########################" << endl; 
+    copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, "\n"));
+  }  cout << "FIX components" << endl;
   for (const auto& l : all_values) {
     copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << endl;

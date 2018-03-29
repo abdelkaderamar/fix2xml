@@ -22,29 +22,32 @@ TEST ( ListExecute, set_fields)
   FIX50SP2::ListExecute msg;
 
   list<multiset<string>> all_values;
+  multiset<string> all_compo_names;
   multiset<string> ListExecute_0;
-  FIX::BidID BidID_2("STRING_1032095606");
+  FIX::BidID BidID_2("STRING_849658433");
   msg.set(BidID_2);
   ListExecute_0.insert(BidID_2.getString());
-  FIX::ClientBidID ClientBidID_2("STRING_748795733");
+  FIX::ClientBidID ClientBidID_2("STRING_88667882");
   msg.set(ClientBidID_2);
   ListExecute_0.insert(ClientBidID_2.getString());
-  FIX::EncodedText EncodedText_39("DATA_1849227370");
-  msg.set(EncodedText_39);
-  ListExecute_0.insert(EncodedText_39.getString());
-  FIX::EncodedTextLen EncodedTextLen_39(1329541494);
-  msg.set(EncodedTextLen_39);
-  ListExecute_0.insert(EncodedTextLen_39.getString());
-  FIX::ListID ListID_15("STRING_608854906");
-  msg.set(ListID_15);
-  ListExecute_0.insert(ListID_15.getString());
-  FIX::Text Text_39("STRING_892147727");
-  msg.set(Text_39);
-  ListExecute_0.insert(Text_39.getString());
-  FIX::TransactTime TransactTime_21(FIX::UTCTIMESTAMP(16, 8, 30, 13, 12, 2001));
+  FIX::EncodedText EncodedText_42("DATA_928335121");
+  msg.set(EncodedText_42);
+  ListExecute_0.insert(EncodedText_42.getString());
+  FIX::EncodedTextLen EncodedTextLen_42(1267913033);
+  msg.set(EncodedTextLen_42);
+  ListExecute_0.insert(EncodedTextLen_42.getString());
+  FIX::ListID ListID_18("STRING_335239480");
+  msg.set(ListID_18);
+  ListExecute_0.insert(ListID_18.getString());
+  FIX::Text Text_42("STRING_2027137043");
+  msg.set(Text_42);
+  ListExecute_0.insert(Text_42.getString());
+  FIX::TransactTime TransactTime_21(FIX::UTCTIMESTAMP(11, 25, 7, 4, 12, 2005));
   msg.set(TransactTime_21);
   ListExecute_0.insert(TransactTime_21.getString());
   all_values.push_back(ListExecute_0);
+
+  all_compo_names.insert("ListExecute");
 
 
   xml_element elt;
@@ -54,7 +57,14 @@ TEST ( ListExecute, set_fields)
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
 
-  cout << "FIX components" << endl;
+  if (elt_lists.size() != all_values.size())  {
+    cout << "########################" << endl;
+    multiset<string> elt_compo_name;
+    elt.all_components(elt_compo_name);
+    copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, "\n"));
+    cout << "########################" << endl; 
+    copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, "\n"));
+  }  cout << "FIX components" << endl;
   for (const auto& l : all_values) {
     copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << endl;

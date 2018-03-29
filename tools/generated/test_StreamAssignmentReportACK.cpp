@@ -22,26 +22,29 @@ TEST ( StreamAssignmentReportACK, set_fields)
   FIX50SP2::StreamAssignmentReportACK msg;
 
   list<multiset<string>> all_values;
+  multiset<string> all_compo_names;
   multiset<string> StreamAssignmentReportACK_0;
-  FIX::EncodedText EncodedText_89("DATA_2057896985");
-  msg.set(EncodedText_89);
-  StreamAssignmentReportACK_0.insert(EncodedText_89.getString());
-  FIX::EncodedTextLen EncodedTextLen_89(1967899558);
-  msg.set(EncodedTextLen_89);
-  StreamAssignmentReportACK_0.insert(EncodedTextLen_89.getString());
+  FIX::EncodedText EncodedText_99("DATA_396774676");
+  msg.set(EncodedText_99);
+  StreamAssignmentReportACK_0.insert(EncodedText_99.getString());
+  FIX::EncodedTextLen EncodedTextLen_99(117741279);
+  msg.set(EncodedTextLen_99);
+  StreamAssignmentReportACK_0.insert(EncodedTextLen_99.getString());
   FIX::StreamAsgnAckType StreamAsgnAckType_0(1);
   msg.set(StreamAsgnAckType_0);
   StreamAssignmentReportACK_0.insert(StreamAsgnAckType_0.getString());
-  FIX::StreamAsgnRejReason StreamAsgnRejReason_2(2);
-  msg.set(StreamAsgnRejReason_2);
-  StreamAssignmentReportACK_0.insert(StreamAsgnRejReason_2.getString());
-  FIX::StreamAsgnRptID StreamAsgnRptID_1("STRING_740722244");
+  FIX::StreamAsgnRejReason StreamAsgnRejReason_4(2);
+  msg.set(StreamAsgnRejReason_4);
+  StreamAssignmentReportACK_0.insert(StreamAsgnRejReason_4.getString());
+  FIX::StreamAsgnRptID StreamAsgnRptID_1("STRING_654334884");
   msg.set(StreamAsgnRptID_1);
   StreamAssignmentReportACK_0.insert(StreamAsgnRptID_1.getString());
-  FIX::Text Text_89("STRING_1796202210");
-  msg.set(Text_89);
-  StreamAssignmentReportACK_0.insert(Text_89.getString());
+  FIX::Text Text_99("STRING_1343427786");
+  msg.set(Text_99);
+  StreamAssignmentReportACK_0.insert(Text_99.getString());
   all_values.push_back(StreamAssignmentReportACK_0);
+
+  all_compo_names.insert("StreamAssignmentReportACK");
 
 
   xml_element elt;
@@ -51,7 +54,14 @@ TEST ( StreamAssignmentReportACK, set_fields)
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
 
-  cout << "FIX components" << endl;
+  if (elt_lists.size() != all_values.size())  {
+    cout << "########################" << endl;
+    multiset<string> elt_compo_name;
+    elt.all_components(elt_compo_name);
+    copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, "\n"));
+    cout << "########################" << endl; 
+    copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, "\n"));
+  }  cout << "FIX components" << endl;
   for (const auto& l : all_values) {
     copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << endl;

@@ -22,41 +22,44 @@ TEST ( SecurityTypeRequest, set_fields)
   FIX50SP2::SecurityTypeRequest msg;
 
   list<multiset<string>> all_values;
+  multiset<string> all_compo_names;
   multiset<string> SecurityTypeRequest_0;
-  FIX::EncodedText EncodedText_83("DATA_1911404717");
-  msg.set(EncodedText_83);
-  SecurityTypeRequest_0.insert(EncodedText_83.getString());
-  FIX::EncodedTextLen EncodedTextLen_83(723237033);
-  msg.set(EncodedTextLen_83);
-  SecurityTypeRequest_0.insert(EncodedTextLen_83.getString());
-  FIX::MarketID MarketID_21("EXCHANGE_2073823065");
-  msg.set(MarketID_21);
-  SecurityTypeRequest_0.insert(MarketID_21.getString());
-  FIX::MarketSegmentID MarketSegmentID_21("STRING_762529111");
-  msg.set(MarketSegmentID_21);
-  SecurityTypeRequest_0.insert(MarketSegmentID_21.getString());
-  FIX::Product Product_90(7);
-  msg.set(Product_90);
-  SecurityTypeRequest_0.insert(Product_90.getString());
-  FIX::SecurityReqID SecurityReqID_9("STRING_701746271");
+  FIX::EncodedText EncodedText_91("DATA_1344165122");
+  msg.set(EncodedText_91);
+  SecurityTypeRequest_0.insert(EncodedText_91.getString());
+  FIX::EncodedTextLen EncodedTextLen_91(1871350422);
+  msg.set(EncodedTextLen_91);
+  SecurityTypeRequest_0.insert(EncodedTextLen_91.getString());
+  FIX::MarketID MarketID_25("EXCHANGE_615538374");
+  msg.set(MarketID_25);
+  SecurityTypeRequest_0.insert(MarketID_25.getString());
+  FIX::MarketSegmentID MarketSegmentID_25("STRING_143585169");
+  msg.set(MarketSegmentID_25);
+  SecurityTypeRequest_0.insert(MarketSegmentID_25.getString());
+  FIX::Product Product_92(10);
+  msg.set(Product_92);
+  SecurityTypeRequest_0.insert(Product_92.getString());
+  FIX::SecurityReqID SecurityReqID_9("STRING_1296326537");
   msg.set(SecurityReqID_9);
   SecurityTypeRequest_0.insert(SecurityReqID_9.getString());
-  FIX::SecuritySubType SecuritySubType_89("STRING_1289089362");
-  msg.set(SecuritySubType_89);
-  SecurityTypeRequest_0.insert(SecuritySubType_89.getString());
-  FIX::SecurityType SecurityType_90("STRING_REPLACD");
-  msg.set(SecurityType_90);
-  SecurityTypeRequest_0.insert(SecurityType_90.getString());
-  FIX::Text Text_83("STRING_1861209787");
-  msg.set(Text_83);
-  SecurityTypeRequest_0.insert(Text_83.getString());
-  FIX::TradingSessionID TradingSessionID_88("STRING_1");
-  msg.set(TradingSessionID_88);
-  SecurityTypeRequest_0.insert(TradingSessionID_88.getString());
-  FIX::TradingSessionSubID TradingSessionSubID_88("STRING_3");
-  msg.set(TradingSessionSubID_88);
-  SecurityTypeRequest_0.insert(TradingSessionSubID_88.getString());
+  FIX::SecuritySubType SecuritySubType_91("STRING_1193624650");
+  msg.set(SecuritySubType_91);
+  SecurityTypeRequest_0.insert(SecuritySubType_91.getString());
+  FIX::SecurityType SecurityType_92("STRING_BOX");
+  msg.set(SecurityType_92);
+  SecurityTypeRequest_0.insert(SecurityType_92.getString());
+  FIX::Text Text_91("STRING_82357752");
+  msg.set(Text_91);
+  SecurityTypeRequest_0.insert(Text_91.getString());
+  FIX::TradingSessionID TradingSessionID_115("STRING_3");
+  msg.set(TradingSessionID_115);
+  SecurityTypeRequest_0.insert(TradingSessionID_115.getString());
+  FIX::TradingSessionSubID TradingSessionSubID_115("STRING_2");
+  msg.set(TradingSessionSubID_115);
+  SecurityTypeRequest_0.insert(TradingSessionSubID_115.getString());
   all_values.push_back(SecurityTypeRequest_0);
+
+  all_compo_names.insert("SecurityTypeRequest");
 
 
   xml_element elt;
@@ -66,7 +69,14 @@ TEST ( SecurityTypeRequest, set_fields)
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
 
-  cout << "FIX components" << endl;
+  if (elt_lists.size() != all_values.size())  {
+    cout << "########################" << endl;
+    multiset<string> elt_compo_name;
+    elt.all_components(elt_compo_name);
+    copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, "\n"));
+    cout << "########################" << endl; 
+    copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, "\n"));
+  }  cout << "FIX components" << endl;
   for (const auto& l : all_values) {
     copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << endl;

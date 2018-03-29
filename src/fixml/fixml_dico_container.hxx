@@ -40,7 +40,7 @@ typedef boost::multi_index::multi_index_container<
     fixml_type,
     boost::multi_index::indexed_by<
         // Index by type name
-        boost::multi_index::ordered_unique<boost::multi_index::member<
+        boost::multi_index::ordered_non_unique<boost::multi_index::member<
             fixml_type, std::string, &fixml_type::_name>>,
         // Index by FIX name (non unique if not defined)
         boost::multi_index::ordered_non_unique<key_from_key<
@@ -49,7 +49,10 @@ typedef boost::multi_index::multi_index_container<
         // Index by FIX tag (non unique if not defined)
         boost::multi_index::ordered_non_unique<key_from_key<
             BOOST_MULTI_INDEX_MEMBER(fixml_fix_data, std::string, _tag),
-            BOOST_MULTI_INDEX_MEMBER(fixml_type, fixml_fix_data, _fix_data)>>
+            BOOST_MULTI_INDEX_MEMBER(fixml_type, fixml_fix_data, _fix_data)>>,
+        // Index by type fullname
+        boost::multi_index::ordered_unique<boost::multi_index::member<
+            fixml_type, std::string, &fixml_type::_fullname>>
 
         > // end indexed_by
     >
@@ -99,7 +102,7 @@ public:
                               fixml_type &fix_msg_type) const;
 
   bool get_type_by_fix_name(const std::string &fixname,
-                           fixml_type &fix_msg_type) const;
+                            fixml_type &fix_msg_type) const;
 
   bool has_fix_tag(const std::string &fixname) const;
 
@@ -110,6 +113,7 @@ protected:
   fixml_type_multi_index_container::nth_index<0>::type &_fixml_name_index;
   fixml_type_multi_index_container::nth_index<1>::type &_fix_name_index;
   fixml_type_multi_index_container::nth_index<2>::type &_fix_tag_index;
+  fixml_type_multi_index_container::nth_index<3>::type &_fixml_fullname_index;
 
   fixml_element_multi_index_container::nth_index<0>::type &_element_name_index;
   fixml_element_multi_index_container::nth_index<1>::type &_element_type_index;

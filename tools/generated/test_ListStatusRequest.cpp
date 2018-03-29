@@ -22,20 +22,23 @@ TEST ( ListStatusRequest, set_fields)
   FIX50SP2::ListStatusRequest msg;
 
   list<multiset<string>> all_values;
+  multiset<string> all_compo_names;
   multiset<string> ListStatusRequest_0;
-  FIX::EncodedText EncodedText_42("DATA_1157683403");
-  msg.set(EncodedText_42);
-  ListStatusRequest_0.insert(EncodedText_42.getString());
-  FIX::EncodedTextLen EncodedTextLen_42(1312818693);
-  msg.set(EncodedTextLen_42);
-  ListStatusRequest_0.insert(EncodedTextLen_42.getString());
-  FIX::ListID ListID_17("STRING_441785928");
-  msg.set(ListID_17);
-  ListStatusRequest_0.insert(ListID_17.getString());
-  FIX::Text Text_42("STRING_1967215525");
-  msg.set(Text_42);
-  ListStatusRequest_0.insert(Text_42.getString());
+  FIX::EncodedText EncodedText_44("DATA_1838127963");
+  msg.set(EncodedText_44);
+  ListStatusRequest_0.insert(EncodedText_44.getString());
+  FIX::EncodedTextLen EncodedTextLen_44(2022329686);
+  msg.set(EncodedTextLen_44);
+  ListStatusRequest_0.insert(EncodedTextLen_44.getString());
+  FIX::ListID ListID_20("STRING_419425515");
+  msg.set(ListID_20);
+  ListStatusRequest_0.insert(ListID_20.getString());
+  FIX::Text Text_44("STRING_993650180");
+  msg.set(Text_44);
+  ListStatusRequest_0.insert(Text_44.getString());
   all_values.push_back(ListStatusRequest_0);
+
+  all_compo_names.insert("ListStatusRequest");
 
 
   xml_element elt;
@@ -45,7 +48,14 @@ TEST ( ListStatusRequest, set_fields)
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
 
-  cout << "FIX components" << endl;
+  if (elt_lists.size() != all_values.size())  {
+    cout << "########################" << endl;
+    multiset<string> elt_compo_name;
+    elt.all_components(elt_compo_name);
+    copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, "\n"));
+    cout << "########################" << endl; 
+    copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, "\n"));
+  }  cout << "FIX components" << endl;
   for (const auto& l : all_values) {
     copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << endl;

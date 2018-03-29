@@ -22,14 +22,17 @@ TEST ( NetworkCounterpartySystemStatusRequest, set_fields)
   FIX50SP2::NetworkCounterpartySystemStatusRequest msg;
 
   list<multiset<string>> all_values;
+  multiset<string> all_compo_names;
   multiset<string> NetworkCounterpartySystemStatusRequest_0;
-  FIX::NetworkRequestID NetworkRequestID_0("STRING_630225342");
+  FIX::NetworkRequestID NetworkRequestID_0("STRING_1367029622");
   msg.set(NetworkRequestID_0);
   NetworkCounterpartySystemStatusRequest_0.insert(NetworkRequestID_0.getString());
-  FIX::NetworkRequestType NetworkRequestType_0(2);
+  FIX::NetworkRequestType NetworkRequestType_0(1);
   msg.set(NetworkRequestType_0);
   NetworkCounterpartySystemStatusRequest_0.insert(NetworkRequestType_0.getString());
   all_values.push_back(NetworkCounterpartySystemStatusRequest_0);
+
+  all_compo_names.insert("NetworkCounterpartySystemStatusRequest");
 
   // CompIDReqGrp
   // Group CompIDReqGrp.NoCompIDs
@@ -37,19 +40,20 @@ TEST ( NetworkCounterpartySystemStatusRequest, set_fields)
     FIX50SP2::NetworkCounterpartySystemStatusRequest::NoCompIDs noCompIDs_0_0;
     // CompIDReqGrp.NoCompIDs
     multiset<string> CompIDReqGrp_NoCompIDs_0;
-    FIX::DeskID DeskID_2("STRING_913179740");
-    noCompIDs_0_0.set(DeskID_2);
-    CompIDReqGrp_NoCompIDs_0.insert(DeskID_2.getString());
-    FIX::LocationID LocationID_2("STRING_1783993392");
-    noCompIDs_0_0.set(LocationID_2);
-    CompIDReqGrp_NoCompIDs_0.insert(LocationID_2.getString());
-    FIX::RefCompID RefCompID_0("STRING_675767885");
+    FIX::DeskID DeskID_3("STRING_1931916313");
+    noCompIDs_0_0.set(DeskID_3);
+    CompIDReqGrp_NoCompIDs_0.insert(DeskID_3.getString());
+    FIX::LocationID LocationID_3("STRING_1589335293");
+    noCompIDs_0_0.set(LocationID_3);
+    CompIDReqGrp_NoCompIDs_0.insert(LocationID_3.getString());
+    FIX::RefCompID RefCompID_0("STRING_2108629533");
     noCompIDs_0_0.set(RefCompID_0);
     CompIDReqGrp_NoCompIDs_0.insert(RefCompID_0.getString());
-    FIX::RefSubID RefSubID_0("STRING_1508324052");
+    FIX::RefSubID RefSubID_0("STRING_203192157");
     noCompIDs_0_0.set(RefSubID_0);
     CompIDReqGrp_NoCompIDs_0.insert(RefSubID_0.getString());
     all_values.push_back(CompIDReqGrp_NoCompIDs_0);
+    all_compo_names.insert("CompIDReqGrp.NoCompIDs");
 
     msg.addGroup(noCompIDs_0_0);
   }
@@ -61,7 +65,14 @@ TEST ( NetworkCounterpartySystemStatusRequest, set_fields)
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
 
-  cout << "FIX components" << endl;
+  if (elt_lists.size() != all_values.size())  {
+    cout << "########################" << endl;
+    multiset<string> elt_compo_name;
+    elt.all_components(elt_compo_name);
+    copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, "\n"));
+    cout << "########################" << endl; 
+    copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, "\n"));
+  }  cout << "FIX components" << endl;
   for (const auto& l : all_values) {
     copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << endl;
