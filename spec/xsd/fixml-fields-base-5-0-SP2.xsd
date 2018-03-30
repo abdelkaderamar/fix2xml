@@ -15866,7 +15866,7 @@ Note of Applicability:  values are required in US futures markets by the CFTC to
    </xs:simpleType>
    <xs:simpleType name="PriceDelta_t">
       <xs:annotation>
-         <xs:documentation>The rate of change in the price of a derivative with respect to the movement in the price of the underlying instrument(s) upon which the derivative instrument price is based. 
+         <xs:documentation>The rate of change in the price of a derivative with respect to the movement in the price of the underlying instrument(s) upon which the derivative instrument price is based.
 This value is normally between -1.0 and 1.0.</xs:documentation>
          <xs:appinfo>
             <fm:Xref Protocol="FIX" name="PriceDelta" ComponentType="Field" Tag="811" Type="float"
@@ -19867,7 +19867,7 @@ Text which identifies the  origin i.e. system which was used to generate the tim
    <xs:simpleType name="LegOptionRatio_t">
       <xs:annotation>
          <xs:documentation>Expresses the risk of an option leg
-Value must be between -1 and 1. 
+Value must be between -1 and 1.
 A Call Option will require a ratio value between 0 and 1
 A Put Option will require a ratio value between -1 and 0
 </xs:documentation>
@@ -20092,8 +20092,8 @@ Valid values are grouped by OrderHandlingInstSource(1032).</xs:documentation>
    </xs:simpleType>
    <!--OrderHandlingInstSource(1032) defined in implementation file--><xs:simpleType name="OrderHandlingInstSource_enum_t">
       <xs:annotation>
-         <xs:documentation>Identifies the class or source of the "OrderHandlingInst" values.  Scope of this will apply to both CustOrderHandlingInst and DeskOrderHandlingInst fields.  
- 
+         <xs:documentation>Identifies the class or source of the "OrderHandlingInst" values.  Scope of this will apply to both CustOrderHandlingInst and DeskOrderHandlingInst fields.
+
 Required if CustOrderHandlingInst and/or DeskOrderHandlingInst is specified.
 Valid values:</xs:documentation>
          <xs:appinfo>
@@ -22937,9 +22937,9 @@ Valid values are grouped by OrderHandlingInstSource(1032).</xs:documentation>
    <xs:simpleType name="PrivateQuote_t">
       <xs:annotation>
          <xs:documentation>Specifies whether a quote is public, i.e. available to the market, or private, i.e. available to a specified counterparty only.
-            
+
             Valid values:
-            
+
             'Y' = Private Quote
             'N' = Public Quote
 </xs:documentation>
@@ -23249,7 +23249,7 @@ Values are bilaterally agreed.</xs:documentation>
    </xs:simpleType>
    <xs:simpleType name="OptPayoutAmount_t">
       <xs:annotation>
-         <xs:documentation>Cash amount indicating the pay out associated with an option. For binary options this is a fixed amount. 
+         <xs:documentation>Cash amount indicating the pay out associated with an option. For binary options this is a fixed amount.
 Conditionally required if OptPayoutType(1482) is set to binary.</xs:documentation>
          <xs:appinfo>
             <fm:Xref Protocol="FIX" name="OptPayoutAmount" ComponentType="Field" Tag="1195"
@@ -26034,7 +26034,7 @@ Conditionally required if OptPayoutType(1482) is set to binary.</xs:documentatio
    </xs:simpleType>
    <!--ApplResponseError(1354) defined in implementation file--><xs:simpleType name="ApplResponseError_enum_t">
       <xs:annotation>
-         <xs:documentation>Used to return an error code or text associated with a response to an Application Request. 
+         <xs:documentation>Used to return an error code or text associated with a response to an Application Request.
 </xs:documentation>
          <xs:appinfo>
             <fm:Xref Protocol="FIX" name="ApplResponseError" ComponentType="Field" Tag="1354"
@@ -26369,7 +26369,7 @@ Conditionally required if OptPayoutType(1482) is set to binary.</xs:documentatio
    </xs:simpleType>
    <!--MultilegPriceMethod(1378) defined in implementation file--><xs:simpleType name="MultilegPriceMethod_enum_t">
       <xs:annotation>
-         <xs:documentation>Code to represent how the multileg price is to be interpreted when applied to the legs. 
+         <xs:documentation>Code to represent how the multileg price is to be interpreted when applied to the legs.
 (See Volume : "Glossary" for further value definitions)</xs:documentation>
          <xs:appinfo>
             <fm:Xref Protocol="FIX" name="MultilegPriceMethod" ComponentType="Field" Tag="1378"
@@ -28619,7 +28619,7 @@ Same values as PartyRole (452)</xs:documentation>
    </xs:simpleType>
    <!--StrikePriceDeterminationMethod(1478) defined in implementation file--><xs:simpleType name="StrikePriceDeterminationMethod_enum_t">
       <xs:annotation>
-         <xs:documentation>Specifies how the strike price is determined at the point of option exercise. The strike may be fixed throughout the life of the option, set at expiration to the value of the underlying, set to the average value of the underlying , or set to the optimal value of the underlying.  
+         <xs:documentation>Specifies how the strike price is determined at the point of option exercise. The strike may be fixed throughout the life of the option, set at expiration to the value of the underlying, set to the average value of the underlying , or set to the optimal value of the underlying.
 Conditionally, required if value is other than "fixed".</xs:documentation>
          <xs:appinfo>
             <fm:Xref Protocol="FIX" name="StrikePriceDeterminationMethod" ComponentType="Field"
@@ -28834,7 +28834,7 @@ Conditionally, required if value is other than "fixed".</xs:documentation>
    </xs:simpleType>
    <!--ComplexEventCondition(1490) defined in implementation file--><xs:simpleType name="ComplexEventCondition_enum_t">
       <xs:annotation>
-         <xs:documentation>Specifies the condition between complex events when more than one event is specified.  
+         <xs:documentation>Specifies the condition between complex events when more than one event is specified.
 Multiple barrier events would use an "or" condition since only one can be effective at a given time. A set of digital range events would use an “and” condition since both conditions must be in effect for a payout to result.</xs:documentation>
          <xs:appinfo>
             <fm:Xref Protocol="FIX" name="ComplexEventCondition" ComponentType="Field" Tag="1490"
@@ -28877,7 +28877,7 @@ ComplexEventEndDate must always be greater than or equal to ComplexEventStartDat
    </xs:simpleType>
    <xs:simpleType name="ComplexEventStartTime_t">
       <xs:annotation>
-         <xs:documentation>Specifies the start time of the time range on which a complex event date is effective. 
+         <xs:documentation>Specifies the start time of the time range on which a complex event date is effective.
 ComplexEventStartTime must always be less than or equal to ComplexEventEndTime.</xs:documentation>
          <xs:appinfo>
             <fm:Xref Protocol="FIX" name="ComplexEventStartTime" ComponentType="Field" Tag="1495"
