@@ -140,7 +140,7 @@ void xml_element::all_components(std::multiset<std::string> &l,
                                  const std::string &parent) const {
   l.insert(parent + "." + _name);
   for (const auto &child : _elements) {
-    child.second.all_components(l, _name);
+    child.second.all_components(l, parent + "." + _name);
   }
 }
 }

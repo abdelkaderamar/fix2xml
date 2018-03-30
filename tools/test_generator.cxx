@@ -205,8 +205,10 @@ void generate_component(ostream &os, const fix_component_type &compo_type,
                         const shared_ptr<fix_dico_container> &dico,
                         const shared_ptr<fixml_dico_container> &fixml_dico,
                         const string &field_map, const string &parent_type,
-                        const int level, const string var_level) {
+                        const int level, const string var_level,
+                        const string& parent_name) {
   os << TAB(level) << "// " << compo_type._name << endl;
+  string fullname = parent_name + "." + compo_type._short_name;
   const string compo_var_name = generate_var_name(compo_type._name);
   if (compo_type._fields.size() > 0) {
     os << TAB(level) << "multiset<string> " << compo_var_name << ";" << endl;
@@ -222,7 +224,8 @@ void generate_component(ostream &os, const fix_component_type &compo_type,
     }
     os << TAB(level) << "all_values.push_back(" << compo_var_name << ");"
        << endl;
-    os << TAB(level) << "all_compo_names.insert(\"" << compo_type._name << "\");"
+    //os << TAB(level) << "all_compo_names.insert(\"" << compo_type._name << "\");"
+    os << TAB(level) << "all_compo_names.insert(\"" << fullname << "\");"
        << endl
        << endl;
   }
@@ -247,14 +250,14 @@ void generate_component(ostream &os, const fix_component_type &compo_type,
            << endl;
         generate_component(os, child_compo_type, dico, fixml_dico,
                            group_var_name, group_type_name, level + 1,
-                           var_level + to_string(i) + "_");
+                           var_level + to_string(i) + "_", fullname);
         os << TAB(level + 1) << field_map << ".addGroup(" << group_var_name
            << ");" << endl;
         os << TAB(level) << "}" << endl;
       }
     } else {
       generate_component(os, child_compo_type, dico, fixml_dico, field_map,
-                         parent_type, level, var_level);
+                         parent_type, level, var_level, fullname);
     }
   }
 }
@@ -297,7 +300,7 @@ void generate_test(ostream &os, const fix_message_type &msg_type,
     fix_component_type compo_type;
     if (dico->get_fix_component(compo_name, compo_type))
       generate_component(os, compo_type, dico, fixml_dico, "msg", msg_type_name,
-                         0, "");
+                         0, "", "");
   }
 
   // FIX2FIXML code generation
