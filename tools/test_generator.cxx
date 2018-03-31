@@ -241,6 +241,7 @@ void generate_component(ostream &os, const fix_component_type &compo_type,
       auto first_letter = child_compo_type._short_name.substr(0, 1);
       boost::to_lower(first_letter);
       int r = rand() % 3 + 1;
+      r = 1;
       for (int i = 0; i < r; ++i) {
         string group_var_name =
             first_letter + child_compo_type._short_name.substr(1) + "_" +

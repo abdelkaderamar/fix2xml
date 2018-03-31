@@ -1,5 +1,6 @@
-#File ( GLOB GEN_TEST_SRCS test_fix2xml_main.cpp test_SecurityStatus.cpp )
-File ( GLOB GEN_TEST_SRCS *.cpp )
+File ( GLOB GEN_TEST_SRCS test_fix2xml_main.cpp test_QuoteCancel.cpp )
+#File ( GLOB GEN_TEST_SRCS *.cpp )
+#File ( GLOB GEN_TEST_SRCS test_fix2xml_main.cpp test_O*.cpp test_Q*cpp test_M*cpp test_NewOrderList.cpp test_S*cpp test_U*cpp test_D* test_IOI.cpp)
 #File ( GLOB GEN_TEST_SRCS test_fix2xml_main.cpp test_NewOrderSingle.cpp )
 
 # Foreach (file ${GEN_TEST_SRCS})
