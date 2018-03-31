@@ -143,4 +143,25 @@ void xml_element::all_components(std::multiset<std::string> &l,
     child.second.all_components(l, parent + "." + _name);
   }
 }
+
+//----------------------------------------------------------------------------
+
+// Work only with one key for each sub element
+void xml_element::diff(const xml_element &left,
+                              const xml_element &right) {
+  if (left._name != right._name)
+    cout << "MISSING " << left._name << endl;
+  else {
+    for (const auto &left_child : left._elements) {
+      if (right._elements.count(left_child.first) == 0) {
+        cout << "MISSING " << left_child.second._name << endl;
+      } else {
+        const xml_element &right_child = right._elements.find(left_child.first)->second;
+        diff(left_child.second, right_child);
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------------------------
 }

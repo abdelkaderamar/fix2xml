@@ -20,7 +20,7 @@
   <xs:attribute name="ID" type="HopCompID_t" use="required"/>
   <xs:attribute name="Ref" type="HopRefID_t" use="optional"/>
   <xs:attribute name="Snt" type="HopSendingTime_t" use="optional"/>
- </xs:complexType>	
+ </xs:complexType>
  <!-- Base Header used by both the message and the batch headers -->
  <xs:group name="BaseHeaderElements">
   <xs:sequence>
@@ -120,7 +120,7 @@
    </xs:choice>
    <xs:attributeGroup ref="FixmlAttributes"/>
   </xs:complexType>
- </xs:element>	
+ </xs:element>
 <xs:group name="CommissionDataElements">
       <xs:sequence/>
    </xs:group>
@@ -1086,8 +1086,8 @@
    <xs:group name="InstrmtMDReqGrpElements">
       <xs:sequence>
          <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="1" maxOccurs="1"/>
-         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0"/>
-         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
    </xs:group>
    <xs:attributeGroup name="InstrmtMDReqGrpAttributes">
@@ -2414,7 +2414,7 @@
          <xs:element name="InstrmtExt" type="InstrumentExtension_Block_t" minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="PxLmts2" type="SecondaryPriceLimits_Block_t" minOccurs="0" maxOccurs="1"/>
-         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
    </xs:group>
    <xs:attributeGroup name="RelSymDerivSecUpdGrpAttributes">

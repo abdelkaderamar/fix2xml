@@ -5968,7 +5968,7 @@ TEST ( DerivativeSecurityListUpdateReport, set_fields)
     multiset<string> elt_compo_name;
     elt.all_components(elt_compo_name);
     copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, "\n"));
-    cout << "########################" << endl; 
+    cout << "########################" << endl;
     copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, "\n"));
   }  cout << "FIX components" << endl;
   for (const auto& l : all_values) {
@@ -5995,4 +5995,19 @@ TEST ( DerivativeSecurityListUpdateReport, set_fields)
       copy(xml_l.begin(), xml_l.end(), ostream_iterator<string>(cout, " "));      cout << endl;
     } // end if ! found
   } // end for elt_lists
+
+  for (const auto &l : all_values) {
+      bool found = false;
+   for (const auto &xml_l : elt_lists) {
+       if ( l == xml_l) {
+           found = true;
+           break;
+       }
+   }
+   if ( ! found ) {
+       cout << " ------> CANDIDATE " << endl;
+       copy(l.begin(), l.end(), ostream_iterator<string>(cout, ", "));
+       cout << endl;
+   }
+ }
 }

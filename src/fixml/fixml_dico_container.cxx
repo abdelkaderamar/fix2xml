@@ -196,6 +196,19 @@ bool fixml_dico_container::has_fix_tag(const std::string &fixname) const {
   return (!it->_fix_data._tag.empty());
 }
 //----------------------------------------------------------------------------
+
+xml_element fixml_dico_container::to_xml_model(const fixml_type &type) const {
+  xml_element elt{type._name};
+  const std::list<fixml_component_data> &compos = type.components();
+  for (const auto &compo : compos) {
+    fixml_type compo_type;
+    if (get_type_by_name(compo._name, compo_type)) {
+        elt.add_element(to_xml_model(compo_type));
+    }
+  }
+
+  return elt;
+}
 }
 
 std::ostream &operator<<(std::ostream &os,

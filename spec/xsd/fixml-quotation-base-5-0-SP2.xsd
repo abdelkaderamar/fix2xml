@@ -619,7 +619,7 @@
    <xs:group name="QuotEntryAckGrpElements">
       <xs:sequence>
          <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="0" maxOccurs="1"/>
-         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
    </xs:group>
    <xs:attributeGroup name="QuotEntryAckGrpAttributes">

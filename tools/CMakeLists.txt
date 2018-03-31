@@ -5,7 +5,7 @@ util data fix fixml)
 
 #add_subdirectory(generated)
 
-#File ( GLOB GEN_TEST_SRCS test_fix2xml_main.cpp generated/test_QuoteCancel.cpp )
+#File ( GLOB GEN_TEST_SRCS test_fix2xml_main.cpp generated/test_DerivativeSecurityListUpdateReport.cpp )
 File ( GLOB GEN_TEST_SRCS test_fix2xml_main.cpp generated/*.cpp )
 
 # Foreach (file ${GEN_TEST_SRCS})

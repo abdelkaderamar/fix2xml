@@ -156,8 +156,9 @@ void fixml2fix_converter::add_fixml_components(const fixml_type &type,
                                                const FieldMap &fix_msg,
                                                xml_element &fixml_elt) {
   for (const auto &it : type.components()) {
-    BOOST_LOG_TRIVIAL(debug) << "Adding component " << it._name;
+    BOOST_LOG_TRIVIAL(debug) << "------> Adding component " << it._name;
     add_fixml_component(it, fix_msg, fixml_elt);
+    BOOST_LOG_TRIVIAL(debug) << "------> Done component " << it._name;
   }
 }
 
@@ -176,8 +177,16 @@ void fixml2fix_converter::add_fixml_component(
   } else if (compo_data.is_group()) {
     add_fixml_group(compo_data, fix_msg, fixml_elt, fixml_compo_type);
   }
-  if (!compo_elt.empty())
+  if (!compo_elt.empty()) {
+    BOOST_LOG_TRIVIAL(debug) << "------> Adding XML component "
+                             << compo_elt.name();
     fixml_elt.add_element(compo_elt);
+  } else {
+    // fixml_elt.add_element(compo_elt);
+    BOOST_LOG_TRIVIAL(debug) << "\t----- Component is empty "
+                             << compo_elt.name() << endl
+                             << compo_elt.to_string();
+  }
 }
 
 //----------------------------------------------------------------------------

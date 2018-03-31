@@ -24,16 +24,16 @@ TEST ( UserNotification, set_fields)
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> UserNotification_0;
-  FIX::EncodedText EncodedText_113("DATA_1184396639");
-  msg.set(EncodedText_113);
-  UserNotification_0.insert(EncodedText_113.getString());
-  FIX::EncodedTextLen EncodedTextLen_113(2069141328);
-  msg.set(EncodedTextLen_113);
-  UserNotification_0.insert(EncodedTextLen_113.getString());
-  FIX::Text Text_113("STRING_1796197819");
-  msg.set(Text_113);
-  UserNotification_0.insert(Text_113.getString());
-  FIX::UserStatus UserStatus_0(3);
+  FIX::EncodedText EncodedText_87("DATA_813582465");
+  msg.set(EncodedText_87);
+  UserNotification_0.insert(EncodedText_87.getString());
+  FIX::EncodedTextLen EncodedTextLen_87(1859773224);
+  msg.set(EncodedTextLen_87);
+  UserNotification_0.insert(EncodedTextLen_87.getString());
+  FIX::Text Text_87("STRING_1123864163");
+  msg.set(Text_87);
+  UserNotification_0.insert(Text_87.getString());
+  FIX::UserStatus UserStatus_0(2);
   msg.set(UserStatus_0);
   UserNotification_0.insert(UserStatus_0.getString());
   all_values.push_back(UserNotification_0);
@@ -41,14 +41,19 @@ TEST ( UserNotification, set_fields)
   all_compo_names.insert("UserNotification");
 
   // UsernameGrp
-/*  
-  multiset<string> UsernameGrp_0;
-  FIX::Username Username_0("STRING_292138249");
-  msg.set(Username_0);
-  UsernameGrp_0.insert(Username_0.getString());
-  all_values.push_back(UsernameGrp_0);
-  all_compo_names.insert("UsernameGrp");
-*/
+  // Group UsernameGrp.NoUsernames
+  {
+    FIX50SP2::UserNotification::NoUsernames noUsernames_0_0;
+    // UsernameGrp.NoUsernames
+    multiset<string> UsernameGrp_NoUsernames_0;
+    FIX::Username Username_0("STRING_1200135742");
+    noUsernames_0_0.set(Username_0);
+    UsernameGrp_NoUsernames_0.insert(Username_0.getString());
+    all_values.push_back(UsernameGrp_NoUsernames_0);
+    all_compo_names.insert("..NoUsernames");
+
+    msg.addGroup(noUsernames_0_0);
+  }
 
   xml_element elt;
   converter.fix2fixml(msg, elt);
@@ -62,7 +67,7 @@ TEST ( UserNotification, set_fields)
     multiset<string> elt_compo_name;
     elt.all_components(elt_compo_name);
     copy(elt_compo_name.begin(), elt_compo_name.end(), ostream_iterator<string>(cout, "\n"));
-    cout << "########################" << endl;
+    cout << "########################" << endl; 
     copy(all_compo_names.begin(), all_compo_names.end(), ostream_iterator<string>(cout, "\n"));
   }  cout << "FIX components" << endl;
   for (const auto& l : all_values) {

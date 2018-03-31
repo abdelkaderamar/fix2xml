@@ -24,6 +24,7 @@
 #pragma once
 
 #include "data/fixml_type.hxx"
+#include "data/xml_element.hxx"
 #include "util/fix2xml_utils.hxx"
 
 #include <boost/multi_index/identity.hpp>
@@ -105,6 +106,8 @@ public:
                             fixml_type &fix_msg_type) const;
 
   bool has_fix_tag(const std::string &fixname) const;
+
+  xml_element to_xml_model(const fixml_type &type) const;
 
 protected:
   fixml_type_multi_index_container _type_definitions;

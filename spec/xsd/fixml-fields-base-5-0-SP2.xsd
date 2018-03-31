@@ -5984,7 +5984,7 @@ See PutOrCall(201).</xs:documentation>
       <xs:annotation>
          <xs:documentation>Denotes the reason for the Opening Delay or Trading Halt.</xs:documentation>
          <xs:appinfo>
-            <fm:Xref Protocol="FIX" name="HaltReason" ComponentType="Field" Tag="327" Type="int"
+            <fm:Xref Protocol="FIX" name="HaltReasonInt" ComponentType="Field" Tag="327" Type="int"
                      AbbrName="HaltRsn"/>
          </xs:appinfo>
          <xs:appinfo>

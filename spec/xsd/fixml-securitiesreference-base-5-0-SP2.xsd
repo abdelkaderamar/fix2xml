@@ -346,8 +346,8 @@
  <xs:element name="SecList" type="SecurityList_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="DerivativeSecurityListRequestElements">
   <xs:sequence>
-  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0" maxOccurs="unbounded"/>
-  <xs:element name="DerivInstrmt" type="DerivativeInstrument_Block_t" minOccurs="0"  maxOccurs="unbounded"/>
+  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0" />
+  <xs:element name="DerivInstrmt" type="DerivativeInstrument_Block_t" minOccurs="0" />
   </xs:sequence>
  </xs:group>
  <xs:attributeGroup name="DerivativeSecurityListRequestAttributes">
@@ -383,8 +383,8 @@
  <xs:element name="DerivSecListReq" type="DerivativeSecurityListRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="DerivativeSecurityListElements">
   <xs:sequence>
-  <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
-  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" />
+  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0"/>
   <xs:element name="DerivSecDef" type="DerivativeSecurityDefinition_Block_t" minOccurs="0"/>
   <xs:element name="RelSym" type="RelSymDerivSecGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
@@ -505,7 +505,7 @@
  <xs:group name="DerivativeSecurityListUpdateReportElements">
   <xs:sequence>
   <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
-  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0"/>
   <xs:element name="DerivSecDef" type="DerivativeSecurityDefinition_Block_t" minOccurs="0"/>
   <xs:element name="RelSym" type="RelSymDerivSecUpdGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
@@ -541,7 +541,7 @@
          <xs:element name="PxLmts2" type="SecondaryPriceLimits_Block_t" minOccurs="0" maxOccurs="1"/>
          <xs:element name="InstrmtExt" type="InstrumentExtension_Block_t" minOccurs="0"
                      maxOccurs="1"/>
-         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
    </xs:group>
    <xs:attributeGroup name="RelSymDerivSecGrpAttributes">
