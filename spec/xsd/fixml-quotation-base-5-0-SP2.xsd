@@ -599,8 +599,8 @@
       <xs:sequence>
          <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="0" maxOccurs="1"/>
          <xs:element name="FinDetls" type="FinancingDetails_Block_t" minOccurs="0" maxOccurs="1"/>
-         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0"/>
-         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
    </xs:group>
    <xs:attributeGroup name="QuotCxlEntriesGrpAttributes"/>
@@ -668,7 +668,7 @@
    <xs:group name="QuotEntryGrpElements">
       <xs:sequence>
          <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="0" maxOccurs="1"/>
-         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
    </xs:group>
    <xs:attributeGroup name="QuotEntryGrpAttributes">
@@ -734,7 +734,7 @@
       <xs:sequence>
          <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="1" maxOccurs="1"/>
          <xs:element name="FinDetls" type="FinancingDetails_Block_t" minOccurs="0" maxOccurs="1"/>
-         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="OrdQty" type="OrderQtyData_Block_t" minOccurs="0" maxOccurs="1"/>
          <xs:element name="RtSrc" type="RateSource_Block_t" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="Stip" type="Stipulations_Block_t" minOccurs="0" maxOccurs="unbounded"/>
@@ -819,7 +819,7 @@
       <xs:sequence>
          <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="1" maxOccurs="1"/>
          <xs:element name="FinDetls" type="FinancingDetails_Block_t" minOccurs="0" maxOccurs="1"/>
-         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="OrdQty" type="OrderQtyData_Block_t" minOccurs="0" maxOccurs="1"/>
          <xs:element name="Stip" type="Stipulations_Block_t" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="Leg" type="QuotReqLegsGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
@@ -897,7 +897,7 @@
    </xs:complexType>
    <xs:group name="QuotSetGrpElements">
       <xs:sequence>
-         <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0" maxOccurs="1"/>
+         <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0" />
          <xs:element name="QuotEntry" type="QuotEntryGrp_Block_t" minOccurs="1"
                      maxOccurs="unbounded"/>
       </xs:sequence>

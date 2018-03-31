@@ -68,7 +68,7 @@
       <xs:restriction base="Urgency_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="SettlType_t">
-      <xs:union memberTypes="SettlType_enum_t Tenor"/>
+      <xs:restriction base="SettlType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="SymbolSfx_t">
       <xs:restriction base="SymbolSfx_enum_t"/>
@@ -86,7 +86,7 @@
       <xs:restriction base="AllocStatus_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="AllocRejCode_t">
-      <xs:union memberTypes="AllocRejCode_enum_t"/>
+      <xs:restriction base="AllocRejCode_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="EmailType_t">
       <xs:restriction base="EmailType_enum_t"/>
@@ -95,10 +95,10 @@
       <xs:restriction base="PossResend_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="CxlRejReason_t">
-      <xs:union memberTypes="CxlRejReason_enum_t"/>
+      <xs:restriction base="CxlRejReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="OrdRejReason_t">
-      <xs:union memberTypes="OrdRejReason_enum_t"/>
+      <xs:restriction base="OrdRejReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="IOIQualifier_t">
       <xs:restriction base="IOIQualifier_enum_t"/>
@@ -221,7 +221,7 @@
       <xs:restriction base="QuoteCancelType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="QuoteRejectReason_t">
-      <xs:union memberTypes="QuoteRejectReason_enum_t"/>
+      <xs:restriction base="QuoteRejectReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="QuoteResponseLevel_t">
       <xs:restriction base="QuoteResponseLevel_enum_t"/>
@@ -230,7 +230,7 @@
       <xs:restriction base="QuoteRequestType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="UnderlyingSecurityIDSource_t">
-      <xs:restriction base="SecurityIDSource_enum_t"/>
+      <xs:restriction base="UnderlyingSecurityIDSource_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="UnderlyingSecurityType_t">
       <xs:restriction base="UnderlyingSecurityType_enum_t"/>
@@ -248,10 +248,10 @@
       <xs:restriction base="UnsolicitedIndicator_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="SecurityTradingStatus_t">
-      <xs:union memberTypes="SecurityTradingStatus_enum_t"/>
+      <xs:restriction base="SecurityTradingStatus_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="HaltReason_t">
-      <xs:union memberTypes="HaltReason_enum_t"/>
+      <xs:restriction base="HaltReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="InViewOfCommon_t">
       <xs:restriction base="InViewOfCommon_enum_t"/>
@@ -272,10 +272,10 @@
       <xs:restriction base="TradSesMode_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TradSesStatus_t">
-      <xs:union memberTypes="TradSesStatus_enum_t"/>
+      <xs:restriction base="TradSesStatus_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="QuoteEntryRejectReason_t">
-      <xs:union memberTypes="QuoteRejectReason_enum_t"/>
+      <xs:restriction base="QuoteRejectReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RefMsgType_t">
       <xs:restriction base="MsgType_enum_t"/>
@@ -287,7 +287,7 @@
       <xs:restriction base="SolicitedFlag_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="ExecRestatementReason_t">
-      <xs:union memberTypes="ExecRestatementReason_enum_t"/>
+      <xs:restriction base="ExecRestatementReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="BusinessRejectReason_t">
       <xs:restriction base="BusinessRejectReason_enum_t"/>
@@ -362,7 +362,7 @@
       <xs:restriction base="Product_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="UnderlyingProduct_t">
-      <xs:restriction base="Product_enum_t"/>
+      <xs:restriction base="UnderlyingProduct_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="QuantityType_t">
       <xs:restriction base="QuantityType_enum_t"/>
@@ -371,7 +371,7 @@
       <xs:restriction base="RoundingDirection_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="DistribPaymentMethod_t">
-      <xs:union memberTypes="DistribPaymentMethod_enum_t"/>
+      <xs:restriction base="DistribPaymentMethod_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="CancellationRights_t">
       <xs:restriction base="CancellationRights_enum_t"/>
@@ -386,10 +386,10 @@
       <xs:restriction base="TradeReportTransType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PaymentMethod_t">
-      <xs:union memberTypes="PaymentMethod_enum_t"/>
+      <xs:restriction base="PaymentMethod_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TaxAdvantageType_t">
-      <xs:union memberTypes="TaxAdvantageType_enum_t"/>
+      <xs:restriction base="TaxAdvantageType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="FundRenewWaiv_t">
       <xs:restriction base="FundRenewWaiv_enum_t"/>
@@ -398,7 +398,7 @@
       <xs:restriction base="RegistStatus_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RegistRejReasonCode_t">
-      <xs:union memberTypes="RegistRejReasonCode_enum_t"/>
+      <xs:restriction base="RegistRejReasonCode_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RegistTransType_t">
       <xs:restriction base="RegistTransType_enum_t"/>
@@ -428,7 +428,7 @@
       <xs:restriction base="MassCancelResponse_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="MassCancelRejectReason_t">
-      <xs:union memberTypes="MassCancelRejectReason_enum_t"/>
+      <xs:restriction base="MassCancelRejectReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="QuoteType_t">
       <xs:restriction base="QuoteType_enum_t"/>
@@ -467,7 +467,7 @@
       <xs:restriction base="CoveredOrUncovered_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TradSesStatusRejReason_t">
-      <xs:union memberTypes="TradSesStatusRejReason_enum_t"/>
+      <xs:restriction base="TradSesStatusRejReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TradeRequestType_t">
       <xs:restriction base="TradeRequestType_enum_t"/>
@@ -494,7 +494,7 @@
       <xs:restriction base="CustOrderCapacity_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="MassStatusReqType_t">
-      <xs:union memberTypes="MassStatusReqType_enum_t"/>
+      <xs:restriction base="MassStatusReqType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegSettlType_t">
       <xs:restriction base="SettlType_enum_t"/>
@@ -509,19 +509,19 @@
       <xs:restriction base="PreallocMethod_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegSymbolSfx_t">
-      <xs:restriction base="SymbolSfx_enum_t"/>
+      <xs:restriction base="LegSymbolSfx_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegSecurityIDSource_t">
-      <xs:restriction base="SecurityIDSource_enum_t"/>
+      <xs:restriction base="LegSecurityIDSource_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegSecurityAltIDSource_t">
-      <xs:restriction base="SecurityIDSource_enum_t"/>
+      <xs:restriction base="LegSecurityIDSource_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegProduct_t">
       <xs:restriction base="LegProduct_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegSecurityType_t">
-      <xs:restriction base="SecurityType_enum_t"/>
+      <xs:restriction base="LegSecurityType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegSide_t">
       <xs:restriction base="LegSide_enum_t"/>
@@ -545,7 +545,7 @@
       <xs:restriction base="LegalConfirm_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="QuoteRequestRejectReason_t">
-      <xs:union memberTypes="QuoteRequestRejectReason_enum_t"/>
+      <xs:restriction base="QuoteRequestRejectReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="AcctIDSource_t">
       <xs:restriction base="AcctIDSource_enum_t"/>
@@ -569,13 +569,13 @@
       <xs:restriction base="BenchmarkCurveName_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegIOIQty_t">
-      <xs:restriction base="IOIQty_enum_t"/>
+      <xs:restriction base="LegIOIQty_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegPriceType_t">
-      <xs:restriction base="PriceType_enum_t"/>
+      <xs:restriction base="LegPriceType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegStipulationType_t">
-      <xs:restriction base="StipulationType_enum_t"/>
+      <xs:restriction base="LegStipulationType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegSwapType_t">
       <xs:restriction base="LegSwapType_enum_t"/>
@@ -617,7 +617,7 @@
       <xs:restriction base="PosMaintStatus_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PosMaintResult_t">
-      <xs:union memberTypes="PosMaintResult_enum_t"/>
+      <xs:restriction base="PosMaintResult_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PosReqType_t">
       <xs:restriction base="PosReqType_enum_t"/>
@@ -626,7 +626,7 @@
       <xs:restriction base="ResponseTransportType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PosReqResult_t">
-      <xs:union memberTypes="PosReqResult_enum_t"/>
+      <xs:restriction base="PosReqResult_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PosReqStatus_t">
       <xs:restriction base="PosReqStatus_enum_t"/>
@@ -644,13 +644,13 @@
       <xs:restriction base="ExerciseMethod_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TradeRequestResult_t">
-      <xs:union memberTypes="TradeRequestResult_enum_t"/>
+      <xs:restriction base="TradeRequestResult_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TradeRequestStatus_t">
       <xs:restriction base="TradeRequestStatus_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TradeReportRejectReason_t">
-      <xs:union memberTypes="TradeReportRejectReason_enum_t"/>
+      <xs:restriction base="TradeReportRejectReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="SideMultiLegReportingType_t">
       <xs:restriction base="SideMultiLegReportingType_enum_t"/>
@@ -671,7 +671,7 @@
       <xs:restriction base="ConfirmType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="ConfirmRejReason_t">
-      <xs:union memberTypes="ConfirmRejReason_enum_t"/>
+      <xs:restriction base="ConfirmRejReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="BookingType_t">
       <xs:restriction base="BookingType_enum_t"/>
@@ -698,13 +698,13 @@
       <xs:restriction base="TerminationType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="SettlInstReqRejCode_t">
-      <xs:union memberTypes="SettlInstReqRejCode_enum_t"/>
+      <xs:restriction base="SettlInstReqRejCode_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="AllocReportType_t">
       <xs:restriction base="AllocReportType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="AllocCancReplaceReason_t">
-      <xs:union memberTypes="AllocCancReplaceReason_enum_t"/>
+      <xs:restriction base="AllocCancReplaceReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="AllocAccountType_t">
       <xs:restriction base="AllocAccountType_enum_t"/>
@@ -737,10 +737,10 @@
       <xs:restriction base="ExpirationCycle_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TrdType_t">
-      <xs:union memberTypes="TrdType_enum_t"/>
+      <xs:restriction base="TrdType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TrdSubType_t">
-      <xs:union memberTypes="TrdSubType_enum_t"/>
+      <xs:restriction base="TrdSubType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PegMoveType_t">
       <xs:restriction base="PegMoveType_enum_t"/>
@@ -773,7 +773,7 @@
       <xs:restriction base="DiscretionScope_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TargetStrategy_t">
-      <xs:union memberTypes="TargetStrategy_enum_t"/>
+      <xs:restriction base="TargetStrategy_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LastLiquidityInd_t">
       <xs:restriction base="LastLiquidityInd_enum_t"/>
@@ -788,7 +788,7 @@
       <xs:restriction base="QtyType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="SecondaryTrdType_t">
-      <xs:restriction base="TrdType_enum_t"/>
+      <xs:restriction base="SecondaryTrdType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TradeReportType_t">
       <xs:restriction base="TradeReportType_enum_t"/>
@@ -866,7 +866,7 @@
       <xs:restriction base="CollInquiryStatus_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="CollInquiryResult_t">
-      <xs:union memberTypes="CollInquiryResult_enum_t"/>
+      <xs:restriction base="CollInquiryResult_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="Nested3PartyIDSource_t">
       <xs:restriction base="PartyIDSource_enum_t"/>
@@ -911,7 +911,7 @@
       <xs:restriction base="LegUnitOfMeasure_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="UnderlyingTimeUnit_t">
-      <xs:restriction base="TimeUnit_enum_t"/>
+      <xs:restriction base="UnderlyingTimeUnit_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegTimeUnit_t">
       <xs:restriction base="LegTimeUnit_enum_t"/>
@@ -1079,13 +1079,13 @@
       <xs:restriction base="RespondentType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="SecurityTradingEvent_t">
-      <xs:union memberTypes="SecurityTradingEvent_enum_t"/>
+      <xs:restriction base="SecurityTradingEvent_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="StatsType_t">
       <xs:restriction base="StatsType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="MDSecSizeType_t">
-      <xs:union memberTypes="MDSecSizeType_enum_t"/>
+      <xs:restriction base="MDSecSizeType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PriceUnitOfMeasure_t">
       <xs:restriction base="PriceUnitOfMeasure_enum_t"/>
@@ -1112,7 +1112,7 @@
       <xs:restriction base="InstrAttribType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="DerivativeSymbolSfx_t">
-      <xs:restriction base="SymbolSfx_enum_t"/>
+      <xs:restriction base="DerivativeSymbolSfx_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="DerivativeSecurityIDSource_t">
       <xs:restriction base="SecurityIDSource_enum_t"/>
@@ -1148,7 +1148,7 @@
       <xs:restriction base="DerivativeInstrumentPartySubIDType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="DerivativeExerciseStyle_t">
-      <xs:restriction base="ExerciseStyle_enum_t"/>
+      <xs:restriction base="DerivativeExerciseStyle_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="MaturityMonthYearIncrementUnits_t">
       <xs:restriction base="MaturityMonthYearIncrementUnits_enum_t"/>
@@ -1157,10 +1157,10 @@
       <xs:restriction base="MaturityMonthYearFormat_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="StrikeExerciseStyle_t">
-      <xs:restriction base="ExerciseStyle_enum_t"/>
+      <xs:restriction base="StrikeExerciseStyle_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="SecondaryPriceLimitType_t">
-      <xs:restriction base="PriceLimitType_enum_t"/>
+      <xs:restriction base="SecondaryPriceLimitType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PriceLimitType_t">
       <xs:restriction base="PriceLimitType_enum_t"/>
@@ -1208,19 +1208,19 @@
       <xs:restriction base="ApplResponseError_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TradSesEvent_t">
-      <xs:union memberTypes="TradSesEvent_enum_t"/>
+      <xs:restriction base="TradSesEvent_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="MassActionType_t">
       <xs:restriction base="MassActionType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="MassActionScope_t">
-      <xs:union memberTypes="MassActionScope_enum_t"/>
+      <xs:restriction base="MassActionScope_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="MassActionResponse_t">
       <xs:restriction base="MassActionResponse_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="MassActionRejectReason_t">
-      <xs:union memberTypes="MassActionRejectReason_enum_t"/>
+      <xs:restriction base="MassActionRejectReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="MultilegModel_t">
       <xs:restriction base="MultilegModel_enum_t"/>
@@ -1232,10 +1232,10 @@
       <xs:restriction base="ExecInst_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="ContingencyType_t">
-      <xs:union memberTypes="ContingencyType_enum_t"/>
+      <xs:restriction base="ContingencyType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="ListRejectReason_t">
-      <xs:union memberTypes="ListRejectReason_enum_t"/>
+      <xs:restriction base="ListRejectReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TrdRepPartyRole_t">
       <xs:restriction base="PartyRole_enum_t"/>
@@ -1247,7 +1247,7 @@
       <xs:restriction base="SecurityUpdateAction_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="SessionStatus_t">
-      <xs:union memberTypes="SessionStatus_enum_t"/>
+      <xs:restriction base="SessionStatus_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="Nested4PartySubIDType_t">
       <xs:restriction base="PartySubIDType_enum_t"/>
@@ -1259,10 +1259,10 @@
       <xs:restriction base="PartyRole_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="UnderlyingExerciseStyle_t">
-      <xs:restriction base="ExerciseStyle_enum_t"/>
+      <xs:restriction base="UnderlyingExerciseStyle_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegExerciseStyle_t">
-      <xs:restriction base="ExerciseStyle_enum_t"/>
+      <xs:restriction base="LegExerciseStyle_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegPriceUnitOfMeasure_t">
       <xs:restriction base="LegPriceUnitOfMeasure_enum_t"/>
@@ -1274,13 +1274,13 @@
       <xs:restriction base="ApplReportType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="OrderDelayUnit_t">
-      <xs:union memberTypes="OrderDelayUnit_enum_t"/>
+      <xs:restriction base="OrderDelayUnit_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="VenueType_t">
       <xs:restriction base="VenueType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RefOrdIDReason_t">
-      <xs:union memberTypes="RefOrdIDReason_enum_t"/>
+      <xs:restriction base="RefOrdIDReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="OrigCustOrderCapacity_t">
       <xs:restriction base="OrigCustOrderCapacity_enum_t"/>
@@ -1292,31 +1292,31 @@
       <xs:restriction base="ContractMultiplierUnit_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegContractMultiplierUnit_t">
-      <xs:restriction base="ContractMultiplierUnit_enum_t"/>
+      <xs:restriction base="LegContractMultiplierUnit_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="UnderlyingContractMultiplierUnit_t">
-      <xs:restriction base="ContractMultiplierUnit_enum_t"/>
+      <xs:restriction base="UnderlyingContractMultiplierUnit_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="DerivativeContractMultiplierUnit_t">
-      <xs:restriction base="ContractMultiplierUnit_enum_t"/>
+      <xs:restriction base="DerivativeContractMultiplierUnit_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="FlowScheduleType_t">
       <xs:restriction base="FlowScheduleType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="LegFlowScheduleType_t">
-      <xs:restriction base="FlowScheduleType_enum_t"/>
+      <xs:restriction base="LegFlowScheduleType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="UnderlyingFlowScheduleType_t">
-      <xs:restriction base="FlowScheduleType_enum_t"/>
+      <xs:restriction base="UnderlyingFlowScheduleType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="DerivativeFlowScheduleType_t">
-      <xs:restriction base="FlowScheduleType_enum_t"/>
+      <xs:restriction base="DerivativeFlowScheduleType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="FillLiquidityInd_t">
-      <xs:restriction base="LastLiquidityInd_enum_t"/>
+      <xs:restriction base="FillLiquidityInd_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="SideLiquidityInd_t">
-      <xs:restriction base="LastLiquidityInd_enum_t"/>
+      <xs:restriction base="SideLiquidityInd_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RateSource_t">
       <xs:restriction base="RateSource_enum_t"/>
@@ -1331,10 +1331,10 @@
       <xs:restriction base="Seniority_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="UnderlyingRestructuringType_t">
-      <xs:restriction base="RestructuringType_enum_t"/>
+      <xs:restriction base="UnderlyingRestructuringType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="UnderlyingSeniority_t">
-      <xs:restriction base="Seniority_enum_t"/>
+      <xs:restriction base="UnderlyingSeniority_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="TargetPartyIDSource_t">
       <xs:restriction base="TargetPartyIDSource_enum_t"/>
@@ -1382,7 +1382,7 @@
       <xs:restriction base="StreamAsgnReqType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="StreamAsgnRejReason_t">
-      <xs:union memberTypes="StreamAsgnRejReason_enum_t"/>
+      <xs:restriction base="StreamAsgnRejReason_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="StreamAsgnAckType_t">
       <xs:restriction base="StreamAsgnAckType_enum_t"/>
@@ -1394,16 +1394,16 @@
       <xs:restriction base="PartyRole_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PartyDetailsRequestResult_t">
-      <xs:union memberTypes="PartyDetailsRequestResult_enum_t"/>
+      <xs:restriction base="PartyDetailsRequestResult_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PartyRelationship_t">
-      <xs:union memberTypes="PartyRelationship_enum_t"/>
+      <xs:restriction base="PartyRelationship_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PartyAltIDSource_t">
       <xs:restriction base="PartyIDSource_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="PartyAltSubIDType_t">
-      <xs:union memberTypes="PartySubIDType_enum_t"/>
+      <xs:restriction base="PartySubIDType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="ContextPartyIDSource_t">
       <xs:restriction base="PartyIDSource_enum_t"/>
@@ -1412,7 +1412,7 @@
       <xs:restriction base="PartyRole_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="ContextPartySubIDType_t">
-      <xs:union memberTypes="PartySubIDType_enum_t"/>
+      <xs:restriction base="PartySubIDType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RiskLimitType_t">
       <xs:restriction base="RiskLimitType_enum_t"/>
@@ -1433,7 +1433,7 @@
       <xs:restriction base="PutOrCall_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RiskInstrumentSettlType_t">
-      <xs:union memberTypes="SettlType_enum_t"/>
+      <xs:restriction base="SettlType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelatedPartyIDSource_t">
       <xs:restriction base="PartyIDSource_enum_t"/>
@@ -1442,13 +1442,13 @@
       <xs:restriction base="PartyRole_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelatedPartySubIDType_t">
-      <xs:union memberTypes="PartySubIDType_enum_t"/>
+      <xs:restriction base="PartySubIDType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelatedPartyAltIDSource_t">
       <xs:restriction base="PartyIDSource_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelatedPartyAltSubIDType_t">
-      <xs:union memberTypes="PartySubIDType_enum_t"/>
+      <xs:restriction base="PartySubIDType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelatedContextPartyIDSource_t">
       <xs:restriction base="PartyIDSource_enum_t"/>
@@ -1457,28 +1457,28 @@
       <xs:restriction base="PartyRole_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelatedContextPartySubIDType_t">
-      <xs:union memberTypes="PartySubIDType_enum_t"/>
+      <xs:restriction base="PartySubIDType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelationshipRiskLimitType_t">
       <xs:restriction base="RiskLimitType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelationshipRiskInstrumentOperator_t">
-      <xs:restriction base="RiskInstrumentOperator_enum_t"/>
+      <xs:restriction base="RelationshipRiskInstrumentOperator_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelationshipRiskSecurityIDSource_t">
-      <xs:restriction base="SecurityIDSource_enum_t"/>
+      <xs:restriction base="RelationshipRiskSecurityIDSource_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelationshipRiskProduct_t">
-      <xs:restriction base="Product_enum_t"/>
+      <xs:restriction base="RelationshipRiskProduct_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelationshipRiskSecurityType_t">
-      <xs:restriction base="SecurityType_enum_t"/>
+      <xs:restriction base="RelationshipRiskSecurityType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelationshipRiskPutOrCall_t">
-      <xs:restriction base="PutOrCall_enum_t"/>
+      <xs:restriction base="RelationshipRiskPutOrCall_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="RelationshipRiskInstrumentSettlType_t">
-      <xs:union memberTypes="SettlType_enum_t Tenor"/>
+      <xs:restriction base="RelationshipRiskInstrumentSettlType_enum_t"/>
    </xs:simpleType>
    <xs:simpleType name="StreamAsgnType_t">
       <xs:restriction base="StreamAsgnType_enum_t"/>

@@ -15,7 +15,7 @@
            targetNamespace="http://www.fixprotocol.org/FIXML-5-0-SP2"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
-   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>	
+   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>
  <xs:group name="SecurityDefinitionRequestElements">
   <xs:sequence>
   <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="0"/>
@@ -26,7 +26,7 @@
   <xs:element name="SprdBnchmkCurve" type="SpreadOrBenchmarkCurveData_Block_t" minOccurs="0"/>
   <xs:element name="Yield" type="YieldData_Block_t" minOccurs="0"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="SecurityDefinitionRequestAttributes">
   <xs:attribute name="ReqID" type="SecurityReqID_t" use="required"/>
   <xs:attribute name="ReqTyp" type="SecurityRequestType_t" use="required"/>
@@ -43,7 +43,7 @@
  </xs:attributeGroup>
  <xs:complexType name="SecurityDefinitionRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">SecurityDefinitionRequest can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">SecurityDefinitionRequest can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="SecurityDefinitionRequest" ComponentType="Message" MsgID="36" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -57,7 +57,7 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="SecDefReq" type="SecurityDefinitionRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="SecDefReq" type="SecurityDefinitionRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="SecurityDefinitionElements">
   <xs:sequence>
   <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
@@ -70,7 +70,7 @@
   <xs:element name="Yield" type="YieldData_Block_t" minOccurs="0"/>
   <xs:element name="MktSegGrp" type="MarketSegmentGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="SecurityDefinitionAttributes">
   <xs:attribute name="RptID" type="SecurityReportID_t" use="optional"/>
   <xs:attribute name="BizDt" type="ClearingBusinessDate_t" use="optional"/>
@@ -86,7 +86,7 @@
  </xs:attributeGroup>
  <xs:complexType name="SecurityDefinition_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">SecurityDefinition can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">SecurityDefinition can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="SecurityDefinition" ComponentType="Message" MsgID="37" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -100,7 +100,7 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="SecDef" type="SecurityDefinition_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="SecDef" type="SecurityDefinition_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="SecurityStatusRequestElements">
   <xs:sequence>
   <xs:element name="Instrmt" type="Instrument_Block_t"/>
@@ -108,7 +108,7 @@
   <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="SecurityStatusRequestAttributes">
   <xs:attribute name="StatReqID" type="SecurityStatusReqID_t" use="required"/>
   <xs:attribute name="Ccy" type="Currency_t" use="optional"/>
@@ -120,7 +120,7 @@
  </xs:attributeGroup>
  <xs:complexType name="SecurityStatusRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">SecurityStatusRequest can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">SecurityStatusRequest can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="SecurityStatusRequest" ComponentType="Message" MsgID="38" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -134,7 +134,7 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="SecStatReq" type="SecurityStatusRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="SecStatReq" type="SecurityStatusRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="SecurityStatusElements">
   <xs:sequence>
   <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
@@ -143,7 +143,7 @@
   <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="SecurityStatusAttributes">
   <xs:attribute name="StatReqID" type="SecurityStatusReqID_t" use="optional"/>
   <xs:attribute name="Ccy" type="Currency_t" use="optional"/>
@@ -175,7 +175,7 @@
  </xs:attributeGroup>
  <xs:complexType name="SecurityStatus_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">SecurityStatus can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">SecurityStatus can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="SecurityStatus" ComponentType="Message" MsgID="39" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -189,11 +189,11 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="SecStat" type="SecurityStatus_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="SecStat" type="SecurityStatus_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="SecurityTypeRequestElements">
   <xs:sequence>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="SecurityTypeRequestAttributes">
   <xs:attribute name="ReqID" type="SecurityReqID_t" use="required"/>
   <xs:attribute name="Txt" type="Text_t" use="optional"/>
@@ -209,7 +209,7 @@
  </xs:attributeGroup>
  <xs:complexType name="SecurityTypeRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">SecurityTypeRequest can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">SecurityTypeRequest can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="SecurityTypeRequest" ComponentType="Message" MsgID="55" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -223,13 +223,13 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="SecTypReq" type="SecurityTypeRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="SecTypReq" type="SecurityTypeRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="SecurityTypesElements">
   <xs:sequence>
   <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
   <xs:element name="SecT" type="SecTypesGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="SecurityTypesAttributes">
   <xs:attribute name="ReqID" type="SecurityReqID_t" use="required"/>
   <xs:attribute name="RspID" type="SecurityResponseID_t" use="required"/>
@@ -247,7 +247,7 @@
  </xs:attributeGroup>
  <xs:complexType name="SecurityTypes_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">SecurityTypes can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">SecurityTypes can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="SecurityTypes" ComponentType="Message" MsgID="56" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -261,7 +261,7 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="SecTyps" type="SecurityTypes_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="SecTyps" type="SecurityTypes_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="SecurityListRequestElements">
   <xs:sequence>
   <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="0"/>
@@ -270,7 +270,7 @@
   <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="SecurityListRequestAttributes">
   <xs:attribute name="ReqID" type="SecurityReqID_t" use="required"/>
   <xs:attribute name="ListReqTyp" type="SecurityListRequestType_t" use="required"/>
@@ -289,7 +289,7 @@
  </xs:attributeGroup>
  <xs:complexType name="SecurityListRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">SecurityListRequest can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">SecurityListRequest can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="SecurityListRequest" ComponentType="Message" MsgID="57" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -303,13 +303,13 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="SecListReq" type="SecurityListRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="SecListReq" type="SecurityListRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="SecurityListElements">
   <xs:sequence>
   <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
   <xs:element name="SecL" type="SecListGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="SecurityListAttributes">
   <xs:attribute name="RptID" type="SecurityReportID_t" use="optional"/>
   <xs:attribute name="BizDt" type="ClearingBusinessDate_t" use="optional"/>
@@ -329,7 +329,7 @@
  </xs:attributeGroup>
  <xs:complexType name="SecurityList_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">SecurityList can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">SecurityList can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="SecurityList" ComponentType="Message" MsgID="58" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -343,13 +343,13 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="SecList" type="SecurityList_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="SecList" type="SecurityList_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="DerivativeSecurityListRequestElements">
   <xs:sequence>
-  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0"/>
-  <xs:element name="DerivInstrmt" type="DerivativeInstrument_Block_t" minOccurs="0"/>
+  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+  <xs:element name="DerivInstrmt" type="DerivativeInstrument_Block_t" minOccurs="0"  maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="DerivativeSecurityListRequestAttributes">
   <xs:attribute name="ReqID" type="SecurityReqID_t" use="required"/>
   <xs:attribute name="ListReqTyp" type="SecurityListRequestType_t" use="required"/>
@@ -366,7 +366,7 @@
  </xs:attributeGroup>
  <xs:complexType name="DerivativeSecurityListRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">DerivativeSecurityListRequest can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">DerivativeSecurityListRequest can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="DerivativeSecurityListRequest" ComponentType="Message" MsgID="59" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -380,15 +380,15 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="DerivSecListReq" type="DerivativeSecurityListRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="DerivSecListReq" type="DerivativeSecurityListRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="DerivativeSecurityListElements">
   <xs:sequence>
   <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
-  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0"/>
+  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="DerivSecDef" type="DerivativeSecurityDefinition_Block_t" minOccurs="0"/>
   <xs:element name="RelSym" type="RelSymDerivSecGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="DerivativeSecurityListAttributes">
   <xs:attribute name="RptID" type="SecurityReportID_t" use="optional"/>
   <xs:attribute name="ReqID" type="SecurityReqID_t" use="optional"/>
@@ -401,7 +401,7 @@
  </xs:attributeGroup>
  <xs:complexType name="DerivativeSecurityList_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">DerivativeSecurityList can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">DerivativeSecurityList can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="DerivativeSecurityList" ComponentType="Message" MsgID="60" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -415,7 +415,7 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="DerivSecList" type="DerivativeSecurityList_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="DerivSecList" type="DerivativeSecurityList_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="SecurityDefinitionUpdateReportElements">
   <xs:sequence>
   <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
@@ -428,7 +428,7 @@
   <xs:element name="Yield" type="YieldData_Block_t" minOccurs="0"/>
   <xs:element name="MktSegGrp" type="MarketSegmentGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="SecurityDefinitionUpdateReportAttributes">
   <xs:attribute name="RptID" type="SecurityReportID_t" use="optional"/>
   <xs:attribute name="ReqID" type="SecurityReqID_t" use="optional"/>
@@ -445,7 +445,7 @@
  </xs:attributeGroup>
  <xs:complexType name="SecurityDefinitionUpdateReport_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">SecurityDefinitionUpdateReport can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">SecurityDefinitionUpdateReport can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="SecurityDefinitionUpdateReport" ComponentType="Message" MsgID="95" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -459,13 +459,13 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="SecDefUpd" type="SecurityDefinitionUpdateReport_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="SecDefUpd" type="SecurityDefinitionUpdateReport_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="SecurityListUpdateReportElements">
   <xs:sequence>
   <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
   <xs:element name="SecL" type="SecLstUpdRelSymGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="SecurityListUpdateReportAttributes">
   <xs:attribute name="RptID" type="SecurityReportID_t" use="optional"/>
   <xs:attribute name="ListID" type="SecurityListID_t" use="optional"/>
@@ -487,7 +487,7 @@
  </xs:attributeGroup>
  <xs:complexType name="SecurityListUpdateReport_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">SecurityListUpdateReport can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">SecurityListUpdateReport can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="SecurityListUpdateReport" ComponentType="Message" MsgID="96" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -501,15 +501,15 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="SecListUpd" type="SecurityListUpdateReport_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="SecListUpd" type="SecurityListUpdateReport_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="DerivativeSecurityListUpdateReportElements">
   <xs:sequence>
   <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
-  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0"/>
+  <xs:element name="Undly" type="UnderlyingInstrument_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="DerivSecDef" type="DerivativeSecurityDefinition_Block_t" minOccurs="0"/>
   <xs:element name="RelSym" type="RelSymDerivSecUpdGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="DerivativeSecurityListUpdateReportAttributes">
   <xs:attribute name="ReqID" type="SecurityReqID_t" use="optional"/>
   <xs:attribute name="RspID" type="SecurityResponseID_t" use="optional"/>
@@ -521,7 +521,7 @@
  </xs:attributeGroup>
  <xs:complexType name="DerivativeSecurityListUpdateReport_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">DerivativeSecurityListUpdateReport can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">DerivativeSecurityListUpdateReport can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="DerivativeSecurityListUpdateReport" ComponentType="Message" MsgID="103" Section="Pre Trade" Category="SecuritiesReferenceData"/>
    </xs:appinfo>
@@ -573,7 +573,7 @@
          <xs:element name="SecTrdgRules" type="SecurityTradingRules_Block_t" minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="StrkRules" type="StrikeRules_Block_t" minOccurs="0" maxOccurs="unbounded"/>
-         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="Stip" type="Stipulations_Block_t" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="SecL" type="InstrmtLegSecListGrp_Block_t" minOccurs="0"
                      maxOccurs="unbounded"/>
@@ -632,7 +632,7 @@
          <xs:element name="SecTrdgRules" type="SecurityTradingRules_Block_t" minOccurs="0"
                      maxOccurs="1"/>
          <xs:element name="StrkRules" type="StrikeRules_Block_t" minOccurs="0" maxOccurs="unbounded"/>
-         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="Stip" type="Stipulations_Block_t" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="SecLstUpdRelSymsLegGrp" type="SecLstUpdRelSymsLegGrp_Block_t"
                      minOccurs="0"

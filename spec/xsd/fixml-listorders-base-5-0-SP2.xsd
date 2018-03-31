@@ -15,13 +15,13 @@
            targetNamespace="http://www.fixprotocol.org/FIXML-5-0-SP2"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
-   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>	
+   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>
  <xs:group name="NewOrderListElements">
   <xs:sequence>
   <xs:element name="Pty" type="RootParties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="Ord" type="ListOrdGrp_Block_t" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="NewOrderListAttributes">
   <xs:attribute name="ID" type="ListID_t" use="required"/>
   <xs:attribute name="BidID" type="BidID_t" use="optional"/>
@@ -45,7 +45,7 @@
  </xs:attributeGroup>
  <xs:complexType name="NewOrderList_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">NewOrderList can be found in Volume4 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">NewOrderList can be found in Volume4 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="NewOrderList" ComponentType="Message" MsgID="15" Section="Trade" Category="ProgramTrading"/>
    </xs:appinfo>
@@ -59,12 +59,12 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="NewOrdList" type="NewOrderList_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="NewOrdList" type="NewOrderList_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="ListCancelRequestElements">
   <xs:sequence>
   <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="ListCancelRequestAttributes">
   <xs:attribute name="ID" type="ListID_t" use="required"/>
   <xs:attribute name="TxnTm" type="TransactTime_t" use="required"/>
@@ -76,7 +76,7 @@
  </xs:attributeGroup>
  <xs:complexType name="ListCancelRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">ListCancelRequest can be found in Volume4 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">ListCancelRequest can be found in Volume4 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="ListCancelRequest" ComponentType="Message" MsgID="20" Section="Trade" Category="ProgramTrading"/>
    </xs:appinfo>
@@ -90,11 +90,11 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="ListCxlReq" type="ListCancelRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="ListCxlReq" type="ListCancelRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="ListExecuteElements">
   <xs:sequence>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="ListExecuteAttributes">
   <xs:attribute name="ID" type="ListID_t" use="required"/>
   <xs:attribute name="ClBidID" type="ClientBidID_t" use="optional"/>
@@ -106,7 +106,7 @@
  </xs:attributeGroup>
  <xs:complexType name="ListExecute_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">ListExecute can be found in Volume4 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">ListExecute can be found in Volume4 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="ListExecute" ComponentType="Message" MsgID="21" Section="Trade" Category="ProgramTrading"/>
    </xs:appinfo>
@@ -120,11 +120,11 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="ListExct" type="ListExecute_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="ListExct" type="ListExecute_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="ListStatusRequestElements">
   <xs:sequence>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="ListStatusRequestAttributes">
   <xs:attribute name="ID" type="ListID_t" use="required"/>
   <xs:attribute name="Txt" type="Text_t" use="optional"/>
@@ -133,7 +133,7 @@
  </xs:attributeGroup>
  <xs:complexType name="ListStatusRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">ListStatusRequest can be found in Volume4 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">ListStatusRequest can be found in Volume4 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="ListStatusRequest" ComponentType="Message" MsgID="22" Section="Trade" Category="ProgramTrading"/>
    </xs:appinfo>
@@ -147,12 +147,12 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="ListStatReq" type="ListStatusRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="ListStatReq" type="ListStatusRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="ListStatusElements">
   <xs:sequence>
   <xs:element name="ListStat" type="OrdListStatGrp_Block_t" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="ListStatusAttributes">
   <xs:attribute name="ID" type="ListID_t" use="required"/>
   <xs:attribute name="ListStatTyp" type="ListStatusType_t" use="required"/>
@@ -170,7 +170,7 @@
  </xs:attributeGroup>
  <xs:complexType name="ListStatus_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">ListStatus can be found in Volume4 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">ListStatus can be found in Volume4 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="ListStatus" ComponentType="Message" MsgID="23" Section="Trade" Category="ProgramTrading"/>
    </xs:appinfo>
@@ -184,13 +184,13 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="ListStat" type="ListStatus_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="ListStat" type="ListStatus_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="BidRequestElements">
   <xs:sequence>
   <xs:element name="DescReq" type="BidDescReqGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="CompReq" type="BidCompReqGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="BidRequestAttributes">
   <xs:attribute name="BidID" type="BidID_t" use="optional"/>
   <xs:attribute name="ClBidID" type="ClientBidID_t" use="required"/>
@@ -222,7 +222,7 @@
  </xs:attributeGroup>
  <xs:complexType name="BidRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">BidRequest can be found in Volume4 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">BidRequest can be found in Volume4 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="BidRequest" ComponentType="Message" MsgID="44" Section="Trade" Category="ProgramTrading"/>
    </xs:appinfo>
@@ -236,19 +236,19 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="BidReq" type="BidRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="BidReq" type="BidRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="BidResponseElements">
   <xs:sequence>
   <xs:element name="CompRsp" type="BidCompRspGrp_Block_t" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="BidResponseAttributes">
   <xs:attribute name="BidID" type="BidID_t" use="optional"/>
   <xs:attribute name="ClBidID" type="ClientBidID_t" use="optional"/>
  </xs:attributeGroup>
  <xs:complexType name="BidResponse_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">BidResponse can be found in Volume4 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">BidResponse can be found in Volume4 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="BidResponse" ComponentType="Message" MsgID="45" Section="Trade" Category="ProgramTrading"/>
    </xs:appinfo>
@@ -262,12 +262,12 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="BidRsp" type="BidResponse_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="BidRsp" type="BidResponse_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="ListStrikePriceElements">
   <xs:sequence>
   <xs:element name="StrkPX" type="InstrmtStrkPxGrp_Block_t" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="ListStrikePriceAttributes">
   <xs:attribute name="ID" type="ListID_t" use="required"/>
   <xs:attribute name="TotNoStrks" type="TotNoStrikes_t" use="required"/>
@@ -275,7 +275,7 @@
  </xs:attributeGroup>
  <xs:complexType name="ListStrikePrice_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">ListStrikePrice can be found in Volume4 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">ListStrikePrice can be found in Volume4 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="ListStrikePrice" ComponentType="Message" MsgID="46" Section="Trade" Category="ProgramTrading"/>
    </xs:appinfo>
@@ -379,7 +379,7 @@
    <xs:group name="InstrmtStrkPxGrpElements">
       <xs:sequence>
          <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="1" maxOccurs="1"/>
-         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
    </xs:group>
    <xs:attributeGroup name="InstrmtStrkPxGrpAttributes">
@@ -412,7 +412,7 @@
          <xs:element name="DsplyInstr" type="DisplayInstruction_Block_t" minOccurs="0" maxOccurs="1"/>
          <xs:element name="TrdSes" type="TrdgSesGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="1" maxOccurs="1"/>
-         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded" />
          <xs:element name="Stip" type="Stipulations_Block_t" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="OrdQty" type="OrderQtyData_Block_t" minOccurs="1" maxOccurs="1"/>
          <xs:element name="TrgrInstr" type="TriggeringInstruction_Block_t" minOccurs="0"

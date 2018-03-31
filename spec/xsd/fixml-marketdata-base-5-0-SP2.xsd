@@ -15,7 +15,7 @@
            targetNamespace="http://www.fixprotocol.org/FIXML-5-0-SP2"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
-   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>	
+   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>
  <xs:group name="MarketDataRequestElements">
   <xs:sequence>
   <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
@@ -23,7 +23,7 @@
   <xs:element name="InstReq" type="InstrmtMDReqGrp_Block_t" maxOccurs="unbounded"/>
   <xs:element name="TrdSes" type="TrdgSesGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="MarketDataRequestAttributes">
   <xs:attribute name="ReqID" type="MDReqID_t" use="required"/>
   <xs:attribute name="SubReqTyp" type="SubscriptionRequestType_t" use="required"/>
@@ -39,7 +39,7 @@
  </xs:attributeGroup>
  <xs:complexType name="MarketDataRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">MarketDataRequest can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">MarketDataRequest can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="MarketDataRequest" ComponentType="Message" MsgID="29" Section="Pre Trade" Category="MarketData"/>
    </xs:appinfo>
@@ -53,7 +53,7 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="MktDataReq" type="MarketDataRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="MktDataReq" type="MarketDataRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="MarketDataSnapshotFullRefreshElements">
   <xs:sequence>
   <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
@@ -63,7 +63,7 @@
   <xs:element name="Full" type="MDFullGrp_Block_t" maxOccurs="unbounded"/>
   <xs:element name="Rtg" type="RoutingGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="MarketDataSnapshotFullRefreshAttributes">
   <xs:attribute name="TotNumRpts" type="TotNumReports_t" use="optional"/>
   <xs:attribute name="RptID" type="MDReportID_t" use="optional"/>
@@ -84,7 +84,7 @@
  </xs:attributeGroup>
  <xs:complexType name="MarketDataSnapshotFullRefresh_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">MarketDataSnapshotFullRefresh can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">MarketDataSnapshotFullRefresh can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="MarketDataSnapshotFullRefresh" ComponentType="Message" MsgID="30" Section="Pre Trade" Category="MarketData"/>
    </xs:appinfo>
@@ -98,14 +98,14 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="MktDataFull" type="MarketDataSnapshotFullRefresh_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="MktDataFull" type="MarketDataSnapshotFullRefresh_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="MarketDataIncrementalRefreshElements">
   <xs:sequence>
   <xs:element name="ApplSeqCtrl" type="ApplicationSequenceControl_Block_t" minOccurs="0"/>
   <xs:element name="Inc" type="MDIncGrp_Block_t" maxOccurs="unbounded"/>
   <xs:element name="Rtg" type="RoutingGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="MarketDataIncrementalRefreshAttributes">
   <xs:attribute name="MDBkTyp" type="MDBookType_t" use="optional"/>
   <xs:attribute name="MDFeedTyp" type="MDFeedType_t" use="optional"/>
@@ -116,7 +116,7 @@
  </xs:attributeGroup>
  <xs:complexType name="MarketDataIncrementalRefresh_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">MarketDataIncrementalRefresh can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">MarketDataIncrementalRefresh can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="MarketDataIncrementalRefresh" ComponentType="Message" MsgID="31" Section="Pre Trade" Category="MarketData"/>
    </xs:appinfo>
@@ -130,13 +130,13 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="MktDataInc" type="MarketDataIncrementalRefresh_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="MktDataInc" type="MarketDataIncrementalRefresh_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="MarketDataRequestRejectElements">
   <xs:sequence>
   <xs:element name="Pty" type="Parties_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   <xs:element name="Rjct" type="MDRjctGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="MarketDataRequestRejectAttributes">
   <xs:attribute name="ReqID" type="MDReqID_t" use="required"/>
   <xs:attribute name="ReqRejResn" type="MDReqRejReason_t" use="optional"/>
@@ -146,7 +146,7 @@
  </xs:attributeGroup>
  <xs:complexType name="MarketDataRequestReject_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">MarketDataRequestReject can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">MarketDataRequestReject can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="MarketDataRequestReject" ComponentType="Message" MsgID="32" Section="Pre Trade" Category="MarketData"/>
    </xs:appinfo>
@@ -160,19 +160,19 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="MktDataReqRej" type="MarketDataRequestReject_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="MktDataReqRej" type="MarketDataRequestReject_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="StreamAssignmentRequestElements">
   <xs:sequence>
   <xs:element name="Reqs" type="StrmAsgnReqGrp_Block_t" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="StreamAssignmentRequestAttributes">
   <xs:attribute name="ReqID" type="StreamAsgnReqID_t" use="required"/>
   <xs:attribute name="AsgnReqTyp" type="StreamAsgnReqType_t" use="required"/>
  </xs:attributeGroup>
  <xs:complexType name="StreamAssignmentRequest_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">StreamAssignmentRequest can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">StreamAssignmentRequest can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="StreamAssignmentRequest" ComponentType="Message" MsgID="114" Section="Pre Trade" Category="MarketData"/>
    </xs:appinfo>
@@ -186,12 +186,12 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="StrmAsgnReq" type="StreamAssignmentRequest_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="StrmAsgnReq" type="StreamAssignmentRequest_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="StreamAssignmentReportElements">
   <xs:sequence>
   <xs:element name="Rpts" type="StrmAsgnRptGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="StreamAssignmentReportAttributes">
   <xs:attribute name="RptID" type="StreamAsgnRptID_t" use="required"/>
   <xs:attribute name="AsgnReqTyp" type="StreamAsgnReqType_t" use="optional"/>
@@ -199,7 +199,7 @@
  </xs:attributeGroup>
  <xs:complexType name="StreamAssignmentReport_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">StreamAssignmentReport can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">StreamAssignmentReport can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="StreamAssignmentReport" ComponentType="Message" MsgID="115" Section="Pre Trade" Category="MarketData"/>
    </xs:appinfo>
@@ -213,11 +213,11 @@
    </xs:extension>
   </xs:complexContent>
  </xs:complexType>
- <xs:element name="StrmAsgnRpt" type="StreamAssignmentReport_message_t" substitutionGroup="Message" final="#all"/>	
+ <xs:element name="StrmAsgnRpt" type="StreamAssignmentReport_message_t" substitutionGroup="Message" final="#all"/>
  <xs:group name="StreamAssignmentReportACKElements">
   <xs:sequence>
   </xs:sequence>
- </xs:group>	
+ </xs:group>
  <xs:attributeGroup name="StreamAssignmentReportACKAttributes">
   <xs:attribute name="ActTyp" type="StreamAsgnAckType_t" use="required"/>
   <xs:attribute name="RptID" type="StreamAsgnRptID_t" use="required"/>
@@ -228,7 +228,7 @@
  </xs:attributeGroup>
  <xs:complexType name="StreamAssignmentReportACK_message_t" final="#all">
   <xs:annotation>
-     <xs:documentation xml:lang="en">StreamAssignmentReportACK can be found in Volume3 of the specification </xs:documentation> 
+     <xs:documentation xml:lang="en">StreamAssignmentReportACK can be found in Volume3 of the specification </xs:documentation>
    <xs:appinfo>
     <fm:Xref Protocol="FIX" name="StreamAssignmentReportACK" ComponentType="Message" MsgID="116" Section="Pre Trade" Category="MarketData"/>
    </xs:appinfo>
@@ -327,8 +327,8 @@
    <xs:group name="MDIncGrpElements">
       <xs:sequence>
          <xs:element name="Instrmt" type="Instrument_Block_t" minOccurs="0" maxOccurs="1"/>
-         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0"/>
-         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0"/>
+         <xs:element name="Undly" type="UndInstrmtGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="Leg" type="InstrmtLegGrp_Block_t" minOccurs="0" maxOccurs="unbounded"/>
          <xs:element name="Yield" type="YieldData_Block_t" minOccurs="0" maxOccurs="1"/>
          <xs:element name="SprdBnchmkCurve" type="SpreadOrBenchmarkCurveData_Block_t" minOccurs="0"
                      maxOccurs="1"/>
