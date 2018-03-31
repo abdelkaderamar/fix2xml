@@ -24,16 +24,16 @@ TEST ( UserNotification, set_fields)
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> UserNotification_0;
-  FIX::EncodedText EncodedText_87("DATA_813582465");
+  FIX::EncodedText EncodedText_87("DATA_1240213837");
   msg.set(EncodedText_87);
   UserNotification_0.insert(EncodedText_87.getString());
-  FIX::EncodedTextLen EncodedTextLen_87(1859773224);
+  FIX::EncodedTextLen EncodedTextLen_87(1219180947);
   msg.set(EncodedTextLen_87);
   UserNotification_0.insert(EncodedTextLen_87.getString());
-  FIX::Text Text_87("STRING_1123864163");
+  FIX::Text Text_87("STRING_872508859");
   msg.set(Text_87);
   UserNotification_0.insert(Text_87.getString());
-  FIX::UserStatus UserStatus_0(2);
+  FIX::UserStatus UserStatus_0(5);
   msg.set(UserStatus_0);
   UserNotification_0.insert(UserStatus_0.getString());
   all_values.push_back(UserNotification_0);
@@ -46,7 +46,7 @@ TEST ( UserNotification, set_fields)
     FIX50SP2::UserNotification::NoUsernames noUsernames_0_0;
     // UsernameGrp.NoUsernames
     multiset<string> UsernameGrp_NoUsernames_0;
-    FIX::Username Username_0("STRING_1200135742");
+    FIX::Username Username_0("STRING_933058662");
     noUsernames_0_0.set(Username_0);
     UsernameGrp_NoUsernames_0.insert(Username_0.getString());
     all_values.push_back(UsernameGrp_NoUsernames_0);
