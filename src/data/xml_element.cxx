@@ -127,7 +127,6 @@ void xml_element::to_list(list<multiset<string>> &l) const {
     for (const auto &att : _attributes)
       s.insert(att.second);
     l.push_back(s);
-    cout << "@@@@ " << _name << endl;
   }
 
   for (const auto &child : _elements)

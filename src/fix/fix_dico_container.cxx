@@ -83,7 +83,8 @@ bool fix_dico_container::get_fix_group_tag(const std::string &name,
                                            fix_component_type &type,
                                            int &tag) const {
   if (!get_fix_component(name, type)) {
-    BOOST_LOG_TRIVIAL(warning) << "Corresponding FIX type not found";
+    BOOST_LOG_TRIVIAL(warning)
+        << "Corresponding FIX type not found for XML type {" << name << "}";
     return false;
   }
   BOOST_LOG_TRIVIAL(debug) << "Corresponding FIX type found => " << type._name;

@@ -51,9 +51,10 @@ void fixml_dico_container::add_element(const string &name, const string &type) {
 
 void fixml_dico_container::add_type_definition(const fixml_type &type) {
   _type_definitions.insert(type);
-  BOOST_LOG_TRIVIAL(debug) << "****** Adding type [" << type._fullname << "] | "
-                           << "[" << type._fix_data._name << "] | "
-                           << _type_definitions.size();
+  // BOOST_LOG_TRIVIAL(debug) << "****** Adding type [" << type._fullname << "]
+  // | "
+  //                          << "[" << type._fix_data._name << "] | "
+  //                          << _type_definitions.size();
 }
 
 //----------------------------------------------------------------------------
@@ -81,7 +82,7 @@ bool fixml_dico_container::get_type_by_name(const string &type_name,
 
 bool fixml_dico_container::get_message_type(const string &fix_msg_name,
                                             fixml_type &fixml_msg_type) const {
-  BOOST_LOG_TRIVIAL(debug) << "@@@@ Searching for message type by fix name "
+  BOOST_LOG_TRIVIAL(debug) << "Searching for message type by fix name "
                            << fix_msg_name;
   auto range = _fix_name_index.equal_range(fix_msg_name);
   /*if (it == _fix_name_index.end()) {
@@ -94,6 +95,8 @@ bool fixml_dico_container::get_message_type(const string &fix_msg_name,
     // BOOST_LOG_TRIVIAL(debug) << "#### " << it->_fullname;
     if (it->_base_type == "Abstract_message_t") {
       fixml_msg_type = *it;
+      BOOST_LOG_TRIVIAL(debug) << "---> Type found [" << it->_name << "]"
+                               << endl;
       return true;
     }
   }
@@ -203,7 +206,7 @@ xml_element fixml_dico_container::to_xml_model(const fixml_type &type) const {
   for (const auto &compo : compos) {
     fixml_type compo_type;
     if (get_type_by_name(compo._name, compo_type)) {
-        elt.add_element(to_xml_model(compo_type));
+      elt.add_element(to_xml_model(compo_type));
     }
   }
 

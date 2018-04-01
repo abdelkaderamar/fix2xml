@@ -45,6 +45,7 @@ Endif ( FIX2XML_COVERAGE )
 
 # Include path
 Include_Directories ( ${FIXTOOLS_SOURCE_DIR}/src )
+Include_Directories ( ${FIXTOOLS_SOURCE_DIR} )
 
 #--- Source directories
 Add_Subdirectory ( src )

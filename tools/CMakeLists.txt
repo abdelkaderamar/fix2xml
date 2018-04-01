@@ -1,23 +1,17 @@
-Add_Executable (test_generator test_generator.cxx)
+### FIX to XML test generator
+Add_Executable (fix2xml_test_generator fix2xml_test_generator.cxx
+  generation_util.cxx field_helper.cxx)
+Target_Link_Libraries (fix2xml_test_generator
+  util data fix fixml)
 
-Target_Link_Libraries (test_generator
-util data fix fixml)
+### FIX to XML test generator
+Add_Executable (xml2fix_test_generator xml2fix_test_generator.cxx)
+Target_Link_Libraries (xml2fix_test_generator
+  util data fix fixml)
 
-#add_subdirectory(generated)
-
-#File ( GLOB GEN_TEST_SRCS test_fix2xml_main.cpp generated/test_DerivativeSecurityListUpdateReport.cpp )
-File ( GLOB GEN_TEST_SRCS test_fix2xml_main.cpp generated/*.cpp )
-
-# Foreach (file ${GEN_TEST_SRCS})
-#   get_filename_component(binary_name ${file} NAME_WE)
-#   Message ("Generating binary ${binary_name}")
-#   Add_Executable (${binary_name} ${file})
-#   target_link_libraries(${binary_name}
-#   util data fix fixml quickfix fixml2fix_converter
-# ${GTEST_LIBRARY} pthread )
-# endforeach(file)
-
-Add_Executable (test_fix2xml ${GEN_TEST_SRCS})
+### FIX2XML tests
+File ( GLOB FIX2XML_TEST_SRCS test_fix2xml_main.cpp generated/test_fix2xml_*.cpp )
+Add_Executable (test_fix2xml ${FIX2XML_TEST_SRCS})
 target_link_libraries(test_fix2xml
   util data fix fixml quickfix fixml2fix_converter
   ${GTEST_LIBRARY} pthread )
