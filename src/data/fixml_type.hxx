@@ -26,39 +26,46 @@
 #include "fixml_data.hxx"
 
 #include <list>
+#include <set>
 #include <string>
 
-namespace fix2xml
-{
-  enum class fixml_type_category { SIMPLE, COMPLEX };
+namespace fix2xml {
+enum class fixml_type_category { SIMPLE, COMPLEX };
 
-  class fixml_type
-  {
-  public:
-    fixml_type() {}
-    fixml_type(const std::string& ns,
-	       const std::string& name,
-	       const std::string& base_type,
-	       const fixml_type_category cat);
+class fixml_type {
+public:
+  fixml_type() {}
+  fixml_type(const std::string &ns, const std::string &name,
+             const std::string &base_type, const fixml_type_category cat);
 
-    void add_field(const fixml_field_data& field) { _fields.push_back(field); }
-    const std::list<fixml_field_data>& fields() const { return _fields; }
+  void add_field(const fixml_field_data &field) { _fields.push_back(field); }
+  const std::list<fixml_field_data> &fields() const { return _fields; }
 
-    void add_component(const fixml_component_data& compo) { _components.push_back(compo); }
-    const std::list<fixml_component_data>& components() const { return _components; }
+  void add_component(const fixml_component_data &compo) {
+    _components.push_back(compo);
+  }
+  const std::list<fixml_component_data> &components() const {
+    return _components;
+  }
 
-    std::string _ns;
-    std::string _name;
-    std::string _base_type;
-    fixml_type_category _category;
-    std::string _fullname;
-    fixml_fix_data _fix_data;
+  void add_enum_value(const std::string &value) {
+    _enum_values.insert(value);
+  }
+  const std::set<std::string> &enum_values() const { return _enum_values; }
 
-  protected:
-    std::list<fixml_field_data> _fields;
-    std::list<fixml_component_data> _components;
-  private:
+  std::string _ns;
+  std::string _name;
+  std::string _base_type;
+  fixml_type_category _category;
+  std::string _fullname;
+  fixml_fix_data _fix_data;
 
-  }; // end fixml_type
+protected:
+  std::list<fixml_field_data> _fields;
+  std::list<fixml_component_data> _components;
+  std::set<std::string> _enum_values;
+
+private:
+}; // end fixml_type
 
 } // end namespace fixml_type
