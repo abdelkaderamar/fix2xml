@@ -13,8 +13,8 @@ target_link_libraries(test_fix2xml
 ${GTEST_LIBRARY} pthread )
 
 ### XML2FIX tests
-File ( GLOB FIX2XML_TEST_SRCS test_main.cxx generated/test_xml2fix_*.cpp )
-Add_Executable (test_xml2fix ${FIX2XML_TEST_SRCS})
+File ( GLOB XML2FIX_TEST_SRCS test_main.cxx generated/test_xml2fix_*.cpp )
+Add_Executable (test_xml2fix ${XML2FIX_TEST_SRCS})
 target_link_libraries(test_xml2fix
   util data fix fixml quickfix fixml2fix_converter
 ${GTEST_LIBRARY} pthread )

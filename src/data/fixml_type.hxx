@@ -26,8 +26,8 @@
 #include "fixml_data.hxx"
 
 #include <list>
-#include <set>
 #include <string>
+#include <vector>
 
 namespace fix2xml {
 enum class fixml_type_category { SIMPLE, COMPLEX };
@@ -49,9 +49,9 @@ public:
   }
 
   void add_enum_value(const std::string &value) {
-    _enum_values.insert(value);
+    _enum_values.push_back(value);
   }
-  const std::set<std::string> &enum_values() const { return _enum_values; }
+  const std::vector<std::string> &enum_values() const { return _enum_values; }
 
   std::string _ns;
   std::string _name;
@@ -63,7 +63,7 @@ public:
 protected:
   std::list<fixml_field_data> _fields;
   std::list<fixml_component_data> _components;
-  std::set<std::string> _enum_values;
+  std::vector<std::string> _enum_values;
 
 private:
 }; // end fixml_type

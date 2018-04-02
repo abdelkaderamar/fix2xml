@@ -26,6 +26,7 @@
 #include "fixml/fixml_xsd_parser.hxx"
 #include "generation_util.hxx"
 #include "test_generator_fix2xml.hxx"
+#include "test_generator_xml2fix.hxx"
 #include "util/fix_env.hxx"
 
 #include <boost/algorithm/string.hpp>
@@ -52,10 +53,12 @@ int usage(const int ret) {
 }
 
 //-----------------------------------------------------------------------------
-template <typename GENERATOR> void do_generate(char *argv[], const string& prefix) {
-  unique_ptr<GENERATOR> generator{new GENERATOR };
+template <typename GENERATOR>
+void do_generate(char *argv[], const string &prefix) {
+  unique_ptr<GENERATOR> generator{new GENERATOR};
   BOOST_LOG_TRIVIAL(debug) << "Generator created";
-  if (!generator->init(argv[2], argv[3], argv[4])) return;
+  if (!generator->init(argv[2], argv[3], argv[4]))
+    return;
   BOOST_LOG_TRIVIAL(debug) << "Generator initialized";
   BOOST_LOG_TRIVIAL(debug) << "Test generation starts";
   generator->generate(prefix);
@@ -80,8 +83,9 @@ int main(int argc, char *argv[]) {
 
   if (mode == FIX2XML) {
     do_generate<test_generator_fix2xml>(argv, "test_fix2xml_");
+  } else if (mode == XML2FIX) {
+    do_generate<test_generator_xml2fix>(argv, "test_xml2fix_");
   }
-  // else if (mode == XML2FIX) { do_generate<test_generator_xml2fix>(argv); }
 
   fix_env::terminate_xerces();
   BOOST_LOG_TRIVIAL(info) << "xerces environment terminated";

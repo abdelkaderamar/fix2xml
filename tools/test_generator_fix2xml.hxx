@@ -33,7 +33,7 @@ public:
                      const std::shared_ptr<fix2xml::fix_dico_container> &dico,
                      const std::shared_ptr<fix2xml::fixml_dico_container> &fixml_dico,
                      const std::string &ns, const std::string &fix_filename,
-                     const std::string &xsd_schema);
+                     const std::string &xsd_schema) override;
 
 protected:
 private:

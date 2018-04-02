@@ -71,7 +71,7 @@ string field_helper::generate_dateonly() {
 //-----------------------------------------------------------------------------
 
 string field_helper::generate_currency() {
-  return "\"" + _CURRENCIES[rand() % _CURRENCIES.size()] + "\"";
+  return _CURRENCIES[rand() % _CURRENCIES.size()];
 }
 
 //-----------------------------------------------------------------------------
@@ -96,7 +96,7 @@ string field_helper::generate_random_value(const fix_field_type &field_type) {
       field_type._type == "TZTIMEONLY" || field_type._type == "TZTIMESTAMP")
     return "\"" + field_type._type + "_" + value + "\"";
   if (field_type._type == "CURRENCY")
-    return generate_currency();
+    return "\"" + generate_currency() + "\"";
   if (field_type._type == "PRICE" || field_type._type == "QTY" ||
       field_type._type == "FLOAT" || field_type._type == "AMT" ||
       field_type._type == "PRICEOFFSET")
@@ -166,6 +166,64 @@ string field_helper::generate_field(ostream &os, const string field_name,
     // os << TAB(level) << field_map << ".set(" << var_name << ");" << endl;
   }
   return var_name;
+}
+
+//-----------------------------------------------------------------------------
+
+string field_helper::generate_random_value(const fixml_type &type) {
+
+  int r = rand();
+
+  const std::vector<std::string> &enum_values = type.enum_values();
+  if (!enum_values.empty()) {
+    return enum_values[r % enum_values.size()];
+  }
+  string base_type = type._base_type;
+  boost::algorithm::to_lower(base_type);
+  string value = to_string(r);
+  if (base_type == "amt" || base_type == "data" || base_type == "string" ||
+      base_type == "exchange" || base_type == "language" ||
+      base_type == "localmktdate" || base_type == "tztimestamp" ||
+      base_type == "utctimestamp")
+    return type._name + "_" + value;
+  if (base_type == "boolean")
+    return ((r % 2 == 0) ? "true" : "false");
+  if (base_type == "currency")
+    return generate_currency();
+  if (base_type == "integer" || base_type == "length" || base_type == "seqnum")
+    return value;
+  if (base_type == "price" || base_type == "qty" || base_type == "percentage" ||
+      base_type == "decimal" || base_type == "priceoffset")
+    return to_string(((double)r) / 100);
+  BOOST_LOG_TRIVIAL(error) << "Unknown type " << base_type;
+  return value;
+}
+
+//-----------------------------------------------------------------------------
+
+string
+field_helper::generate_attribute(ostream &os, const fixml_field_data &field,
+                                 const shared_ptr<fixml_dico_container> &dico,
+                                 const int level,
+                                 const string &value_set_name) {
+  string value;
+  fixml_type type;
+  if (dico->get_type_by_fixml_name(field._type, type)) {
+    BOOST_LOG_TRIVIAL(debug) << "# Processing attribute " << field._name
+                             << " / " << type._name << " / " << type._base_type;
+  }
+  value = generate_random_value(type);
+  if (value.empty()) {
+    BOOST_LOG_TRIVIAL(error) << "Cannot generate instruction for "
+                             << field._name << " / " << type._name;
+    return value;
+  }
+  BOOST_LOG_TRIVIAL(debug) << "\t ---> Setting attribute " << field._name
+                           << " to " << value;
+  os << TAB(level) << "elt.add_attribute(\"" << field._name << "\", \"" << value << "\");"
+     << endl;
+
+  return value;
 }
 
 //-----------------------------------------------------------------------------

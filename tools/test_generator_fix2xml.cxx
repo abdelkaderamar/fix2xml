@@ -1,7 +1,7 @@
 #include "test_generator_fix2xml.hxx"
 
-#include "generation_util.hxx"
 #include "field_helper.hxx"
+#include "generation_util.hxx"
 
 #include <boost/algorithm/string.hpp>
 #include <boost/log/trivial.hpp>
@@ -11,13 +11,13 @@ using namespace fix2xml;
 
 //-----------------------------------------------------------------------------
 
-void test_generator_fix2xml::generate_group(ostream &os, const fix_component_type &compo_type,
-                    const fix_component_type &group_compo_type,
-                    const shared_ptr<fix_dico_container> &dico,
-                    const shared_ptr<fixml_dico_container> &fixml_dico,
-                    const string &field_map, const string &parent_type,
-                    const int level, const string var_level,
-                    const string &parent_name) {
+void test_generator_fix2xml::generate_group(
+    ostream &os, const fix_component_type &compo_type,
+    const fix_component_type &group_compo_type,
+    const shared_ptr<fix_dico_container> &dico,
+    const shared_ptr<fixml_dico_container> &fixml_dico, const string &field_map,
+    const string &parent_type, const int level, const string var_level,
+    const string &parent_name) {
   string fullname = parent_name + "." + compo_type._short_name;
   os << TAB(level) << "// Group " << group_compo_type._name << endl;
   auto group_type_name = parent_type + "::" + group_compo_type._short_name;
@@ -134,9 +134,11 @@ void test_generator_fix2xml::generate_test(
      << TAB(0) << "converter.fix2fixml(msg, elt);" << endl
      << TAB(0) << "BOOST_LOG_TRIVIAL(debug) << \"The resulting XML is\";"
      << endl
+     << TAB(0)
      << "cout << \"////////////////////////////////////////////\" << endl;"
      << endl
      << TAB(0) << "cout << elt.to_string() << endl;" << endl
+     << TAB(0)
      << "cout << \"////////////////////////////////////////////\" << endl << "
         "endl;"
      << endl

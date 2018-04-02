@@ -2,7 +2,9 @@
 #define FIELD_HELPER_HXX
 
 #include "data/fix_types.hxx"
+#include "data/fixml_type.hxx"
 #include "fix/fix_dico_container.hxx"
+#include "fixml/fixml_dico_container.hxx"
 
 #include <map>
 #include <memory>
@@ -29,12 +31,18 @@ public:
 
   static bool is_real_number_type(const fix2xml::fix_field_type &field_type);
 
+  static std::string generate_random_value(const fix2xml::fixml_type &type);
+
   static std::string
   generate_field(std::ostream &os, const std::string field_name,
                  const std::string &field_map,
                  const std::shared_ptr<fix2xml::fix_dico_container> &dico,
-                 const int level,
-                 const std::string &value_set_name);
+                 const int level, const std::string &value_set_name);
+
+  static std::string
+  generate_attribute(std::ostream &os, const fix2xml::fixml_field_data &field,
+                     const std::shared_ptr<fix2xml::fixml_dico_container> &dico,
+                     const int level, const std::string &value_set_name);
 
 protected:
   static std::map<std::string, int> _variables;
