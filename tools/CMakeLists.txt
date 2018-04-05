@@ -14,6 +14,7 @@ ${GTEST_LIBRARY} pthread )
 
 ### XML2FIX tests
 File ( GLOB XML2FIX_TEST_SRCS test_main.cxx generated/test_xml2fix_*.cpp )
+File ( GLOB XML2FIX_TEST_SRCS test_main.cxx generated/test_xml2fix_BidRequest.cpp )
 Add_Executable (test_xml2fix ${XML2FIX_TEST_SRCS})
 target_link_libraries(test_xml2fix
   util data fix fixml quickfix fixml2fix_converter

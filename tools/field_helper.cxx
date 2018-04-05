@@ -201,11 +201,10 @@ string field_helper::generate_random_value(const fixml_type &type) {
 
 //-----------------------------------------------------------------------------
 
-string
-field_helper::generate_attribute(ostream &os, const fixml_field_data &field,
-                                 const shared_ptr<fixml_dico_container> &dico,
-                                 const int level,
-                                 const string &value_set_name) {
+string field_helper::generate_attribute(
+    ostream &os, const fixml_field_data &field, const string &elt_name,
+    const shared_ptr<fixml_dico_container> &dico, const int level,
+    const string &value_set_name) {
   string value;
   fixml_type type;
   if (dico->get_type_by_fixml_name(field._type, type)) {
@@ -220,8 +219,9 @@ field_helper::generate_attribute(ostream &os, const fixml_field_data &field,
   }
   BOOST_LOG_TRIVIAL(debug) << "\t ---> Setting attribute " << field._name
                            << " to " << value;
-  os << TAB(level) << "elt.add_attribute(\"" << field._name << "\", \"" << value << "\");"
-     << endl;
+  os << TAB(level) << elt_name << ".add_attribute(\"" << field._name << "\", \"" << value
+     << "\"); // " << level << endl;
+  os << TAB(level) << value_set_name << ".insert(\"" << value << "\");" << endl;
 
   return value;
 }

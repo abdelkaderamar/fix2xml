@@ -9,7 +9,46 @@ using namespace std;
 using namespace fix2xml;
 
 //-----------------------------------------------------------------------------
+void test_generator_xml2fix::generate_component(
+    std::ostream &os, const fix2xml::fixml_component_data &compo,
+    const int level, const string &parent_elt_name) {
+  std::shared_ptr<fixml_dico_container> dico = _xsd_parser.dico();
+  fixml_type type;
+  if (dico->get_type_by_fixml_name(compo._type, type)) {
+    BOOST_LOG_TRIVIAL(debug) << "# Processing Component " << compo._name
+                             << " / " << type._name << " / " << type._base_type;
+  } else {
+    BOOST_LOG_TRIVIAL(error) << "# Type " << compo._type
+                             << " not found => component " << compo._name
+                             << " ignored";
+    return;
+  }
 
+  // os << TAB(0) << "xml_element elt {\"" << compo._name << "\" };" << endl
+  const string elt_name = field_helper::generate_var_name(compo._name);
+  os << TAB(level) << "xml_element " << elt_name << "{\"" + compo._name + "\"};"
+     << endl;
+  if (type.fields().size() > 0) {
+    const string elt_set_value = elt_name + "_set";
+    os << TAB(level) << "multiset<string> " << elt_set_value << ";" << endl;
+    for (const auto &field : type.fields()) {
+      string value = field_helper::generate_attribute(os, field, elt_name, dico,
+                                                      level, elt_set_value);
+    }
+    os << TAB(level) << "all_values.push_back(" << elt_set_value << ");"
+       << endl;
+    os << TAB(level) << "all_compo_names.insert(\"" << elt_set_value << "\");"
+       << endl
+       << endl;
+  }
+  for (const auto &compo : type.components()) {
+    os << TAB(level) << "{" << endl;
+    generate_component(os, compo, level + 1, elt_name);
+    os << TAB(level) << "}" << endl;
+  }
+  os << TAB(level) << parent_elt_name << ".add_element(" << elt_name << ");"
+     << endl;
+}
 void test_generator_xml2fix::generate_test(
     ostream &os, const fix_message_type &msg_type,
     const shared_ptr<fix_dico_container> &dico,
@@ -37,12 +76,12 @@ void test_generator_xml2fix::generate_test(
      << endl
      << TAB(0) << "list<multiset<string>> all_values;" << endl
      << TAB(0) << "multiset<string> all_compo_names;" << endl;
+  const string elt_var_name = field_helper::generate_var_name(xml_type._name);
   if (xml_type.fields().size() > 0) {
-    const string elt_var_name = field_helper::generate_var_name(xml_type._name);
     os << TAB(0) << "multiset<string> " << elt_var_name << ";" << endl;
     for (const auto &field : xml_type.fields()) {
-      string value = field_helper::generate_attribute(os, field, fixml_dico, 0,
-                                                      elt_var_name);
+      string value = field_helper::generate_attribute(
+          os, field, "elt", fixml_dico, 0, elt_var_name);
     }
     os << TAB(0) << "all_values.push_back(" << elt_var_name << ");" << endl;
     os << TAB(0) << "all_compo_names.insert(\"" << xml_type._name << "\");"
@@ -50,11 +89,22 @@ void test_generator_xml2fix::generate_test(
        << endl;
   }
   for (const auto &compo : xml_type.components()) {
+    int count = 1;
+    if (compo.is_group()) {
+      count = 1 + rand() % 3;
+    }
+    for (int i = 0; i < count; ++i) {
+      os << TAB(0) << "{ // " << compo._name << endl;
+      generate_component(os, compo, 1, "elt");
+      os << TAB(0) << "} // end " << compo._name << endl;
+    }
   }
-  os << TAB(0) << "cout << \"////////////////////////////////////////////\" << endl;"
+  os << TAB(0)
+     << "cout << \"////////////////////////////////////////////\" << endl;"
      << endl
      << TAB(0) << "cout << elt.to_string() << endl;" << endl
-     << TAB(0) << "cout << \"////////////////////////////////////////////\" << endl << "
+     << TAB(0)
+     << "cout << \"////////////////////////////////////////////\" << endl << "
         "endl;"
      << endl
      << endl;

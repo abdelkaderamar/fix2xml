@@ -21,6 +21,10 @@ public:
       const std::string &ns, const std::string &fix_filename,
       const std::string &xsd_schema) override;
 
+  void generate_component(std::ostream &os,
+                          const fix2xml::fixml_component_data &compo,
+                          const int level, const std::string &parent_elt_name);
+
 protected:
 private:
 };

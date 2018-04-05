@@ -41,6 +41,7 @@ public:
 
   static std::string
   generate_attribute(std::ostream &os, const fix2xml::fixml_field_data &field,
+                     const std::string &elt_name,
                      const std::shared_ptr<fix2xml::fixml_dico_container> &dico,
                      const int level, const std::string &value_set_name);
 
