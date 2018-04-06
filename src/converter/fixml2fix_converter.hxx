@@ -102,7 +102,8 @@ protected:
   void add_fix_fields_and_compos(const std::string &fix_msg_type,
                                  const fixml_type &type,
                                  const xml_element &fixml_elt,
-                                 FIX::FieldMap &fix_msg);
+                                 FIX::FieldMap &fix_msg,
+                                 const FIX::DataDictionary &quickfix_dico);
 
   void add_fix_fields(const fixml_type &type, const xml_element &fixml_elt,
                       FIX::FieldMap &fix_msg);
@@ -112,15 +113,18 @@ protected:
 
   void add_fix_components(const std::string &fix_msg_type,
                           const fixml_type &type, const xml_element &fixml_elt,
-                          FIX::FieldMap &fix_msg);
+                          FIX::FieldMap &fix_msg,
+                          const FIX::DataDictionary &quickfix_dico);
 
   void add_fix_component(const std::string &fix_msg_type,
                          const fixml_component_data &fixml_compo,
-                         const xml_element &fixml_elt, FIX::FieldMap &fix_msg);
+                         const xml_element &fixml_elt, FIX::FieldMap &fix_msg,
+                         const FIX::DataDictionary &quickfix_dico);
 
   void add_fix_group(const std::string &fix_msg_type,
                      const fixml_component_data &fixml_compo,
-                     const xml_element &fixml_elt, FIX::FieldMap &fix_msg);
+                     const xml_element &fixml_elt, FIX::FieldMap &fix_msg,
+                     const FIX::DataDictionary &quickfix_dico);
 
 private:
   bool _initialized;

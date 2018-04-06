@@ -252,8 +252,8 @@ const bool fixml2fix_converter::fixml2fix(const xml_element &fixml_elt,
     return false;
   }
   fix_msg.getHeader().setField(MsgType(fix_msg_type._msgtype));
-  add_fix_fields_and_compos(fix_msg_type._msgtype, msg_type, fixml_elt,
-                            fix_msg);
+  add_fix_fields_and_compos(fix_msg_type._msgtype, msg_type, fixml_elt, fix_msg,
+                            _quickfix_dictionary);
   return true;
 }
 
@@ -261,9 +261,10 @@ const bool fixml2fix_converter::fixml2fix(const xml_element &fixml_elt,
 
 void fixml2fix_converter::add_fix_fields_and_compos(
     const string &fix_msg_type, const fixml_type &type,
-    const xml_element &fixml_elt, FieldMap &fix_msg) {
+    const xml_element &fixml_elt, FieldMap &fix_msg,
+    const FIX::DataDictionary &quickfix_dico) {
   add_fix_fields(type, fixml_elt, fix_msg);
-  add_fix_components(fix_msg_type, type, fixml_elt, fix_msg);
+  add_fix_components(fix_msg_type, type, fixml_elt, fix_msg, quickfix_dico);
 }
 
 //----------------------------------------------------------------------------
@@ -282,6 +283,7 @@ void fixml2fix_converter::add_fix_field(const fixml_field_data &fixml_field,
                                         const xml_element &fixml_elt,
                                         FIX::FieldMap &fix_msg) {
   auto it = fixml_elt.attributes().find(fixml_field._name);
+  /*
   if (it == fixml_elt.attributes().end())
     return;
   fixml_type attr_fixml_type;
@@ -297,20 +299,23 @@ void fixml2fix_converter::add_fix_field(const fixml_field_data &fixml_field,
     return;
   }
   int tag = atoi(attr_fixml_type._fix_data._tag.c_str());
-  fix_msg.setField(tag, it->second);
+  */
+  int tag = _fixml_dictionary->get_field_fix_tag(fixml_field._type);
+  if (tag != -1)
+    fix_msg.setField(tag, it->second);
 }
 
 //----------------------------------------------------------------------------
 
-void fixml2fix_converter::add_fix_components(const string &fix_msg_type,
-                                             const fixml_type &type,
-                                             const xml_element &fixml_elt,
-                                             FieldMap &fix_msg) {
+void fixml2fix_converter::add_fix_components(
+    const string &fix_msg_type, const fixml_type &type,
+    const xml_element &fixml_elt, FieldMap &fix_msg,
+    const FIX::DataDictionary &quickfix_dico) {
   for (const auto &compo : type.components()) {
     if (compo.is_block()) {
-      add_fix_component(fix_msg_type, compo, fixml_elt, fix_msg);
+      add_fix_component(fix_msg_type, compo, fixml_elt, fix_msg, quickfix_dico);
     } else if (compo.is_group()) {
-      add_fix_group(fix_msg_type, compo, fixml_elt, fix_msg);
+      add_fix_group(fix_msg_type, compo, fixml_elt, fix_msg, quickfix_dico);
     }
   }
 }
@@ -319,7 +324,8 @@ void fixml2fix_converter::add_fix_components(const string &fix_msg_type,
 
 void fixml2fix_converter::add_fix_component(
     const string &fix_msg_type, const fixml_component_data &fixml_compo,
-    const xml_element &fixml_elt, FieldMap &fix_msg) {
+    const xml_element &fixml_elt, FieldMap &fix_msg,
+    const FIX::DataDictionary &quickfix_dico) {
   xml_element compo_elt;
   if (!fixml_elt.get_component(fixml_compo._name, compo_elt)) {
     return;
@@ -330,15 +336,16 @@ void fixml2fix_converter::add_fix_component(
                              << " not found";
     return;
   }
-  add_fix_fields_and_compos(fix_msg_type, compo_type, compo_elt, fix_msg);
+  add_fix_fields_and_compos(fix_msg_type, compo_type, compo_elt, fix_msg,
+                            quickfix_dico);
 }
 
 //----------------------------------------------------------------------------
 
-void fixml2fix_converter::add_fix_group(const string &fix_msg_type,
-                                        const fixml_component_data &fixml_compo,
-                                        const xml_element &fixml_elt,
-                                        FieldMap &fix_msg) {
+void fixml2fix_converter::add_fix_group(
+    const string &fix_msg_type, const fixml_component_data &fixml_compo,
+    const xml_element &fixml_elt, FieldMap &fix_msg,
+    const FIX::DataDictionary &quickfix_dico) {
   xml_element compo_elt;
   if (!fixml_elt.get_component(fixml_compo._name, compo_elt)) {
     return;
@@ -364,7 +371,16 @@ void fixml2fix_converter::add_fix_group(const string &fix_msg_type,
                              << " has zero or more than one subcomponent";
     return;
   }
-  const string numingroup_name = *(fix_compo._components.begin());
+  const string group_name = *(fix_compo._components.begin());
+
+  fix_component_type fix_group_type;
+  if (!_fix_dictionary->get_fix_component(group_name, fix_group_type)) {
+    BOOST_LOG_TRIVIAL(error) << "FIX group [" << group_name << "] not found";
+    return;
+  }
+
+  const string numingroup_name = fix_group_type._short_name;
+
   fix_field_type fix_field;
   if (!_fix_dictionary->get_fix_field(numingroup_name, fix_field)) {
     BOOST_LOG_TRIVIAL(error) << "FIX field " << numingroup_name << " not found";
@@ -375,8 +391,7 @@ void fixml2fix_converter::add_fix_group(const string &fix_msg_type,
                            << "/" << fix_msg_type;
   const DataDictionary *group_dict{nullptr};
   int delimiter = 1;
-  if (!_quickfix_dictionary.getGroup(fix_msg_type, tag, delimiter,
-                                     group_dict)) {
+  if (!quickfix_dico.getGroup(fix_msg_type, tag, delimiter, group_dict)) {
     BOOST_LOG_TRIVIAL(error) << "FIX group " << fix_name
                              << " not found in quickfix dictionary";
     return;
@@ -388,7 +403,8 @@ void fixml2fix_converter::add_fix_group(const string &fix_msg_type,
 
   for (const auto &group_elt : compo_elts) {
     Group fix_group(tag, delimiter, field_order);
-    add_fix_fields_and_compos(fix_msg_type, compo_type, group_elt, fix_group);
+    add_fix_fields_and_compos(fix_msg_type, compo_type, group_elt, fix_group,
+                              *group_dict);
     fix_msg.addGroup(tag, fix_group);
   }
 }
