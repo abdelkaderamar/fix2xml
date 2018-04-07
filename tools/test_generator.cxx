@@ -18,8 +18,7 @@ test_generator::test_generator() {}
 
 //-----------------------------------------------------------------------------
 
-test_generator::~test_generator() {
-}
+test_generator::~test_generator() {}
 
 //-----------------------------------------------------------------------------
 
@@ -57,7 +56,7 @@ void test_generator::generate(const string &filename_prefix) {
 //-----------------------------------------------------------------------------
 
 void test_generator::generate_message_test(
-    const string& filename_prefix, const fix_message_type &msg_type,
+    const string &filename_prefix, const fix_message_type &msg_type,
     const shared_ptr<fix_dico_container> &dico,
     const shared_ptr<fixml_dico_container> &fixml_dico, const string &ns,
     const string &fix_filename, const string &xsd_schema) {
@@ -79,6 +78,8 @@ void test_generator::generate_header(ostream &os,
   os << "#include <gtest/gtest.h>" << endl << endl;
 
   os << "#include \"converter/fixml2fix_converter.hxx\"" << endl
+     << "#include \"converter/xml_element_helper.hxx\"" << endl
+     << "#include \"converter/fix_helper.hxx\"" << endl
      << "#include \"util/fix_env.hxx\"" << endl
      << "#include \"tools/test_util.hxx\"" << endl
      << endl;
@@ -101,7 +102,5 @@ void test_generator::generate_header(ostream &os,
 }
 
 //-----------------------------------------------------------------------------
-
-
 
 //-----------------------------------------------------------------------------

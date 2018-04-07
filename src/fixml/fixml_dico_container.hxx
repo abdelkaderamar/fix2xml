@@ -99,8 +99,11 @@ public:
 
   int get_field_fix_tag(const std::string &fixml_field_type) const;
 
-  bool get_type_by_fixml_name(const std::string &fixml_msg_name,
-                              fixml_type &fix_msg_type) const;
+  bool get_msgtype_by_fixml_name(const std::string &fixml_msg_name,
+                                 fixml_type &fix_msg_type) const;
+
+  bool get_fieldtype_by_fixml_name(const std::string &fixml_msg_name,
+                                   fixml_type &fix_msg_type) const;
 
   bool get_type_by_fix_name(const std::string &fixname,
                             fixml_type &fix_msg_type) const;

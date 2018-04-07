@@ -156,7 +156,29 @@ int fixml_dico_container::get_field_fix_tag(
 
 //----------------------------------------------------------------------------
 
-bool fixml_dico_container::get_type_by_fixml_name(
+bool fixml_dico_container::get_msgtype_by_fixml_name(
+    const string &fixml_msg_name, fixml_type &fix_msg_type) const {
+  auto it_msg_type = _fixml_name_index.find(fixml_msg_name);
+  auto it_msg_elt = _element_name_index.find(fixml_msg_name);
+  if (it_msg_type == _fixml_name_index.end() &&
+      it_msg_elt == _element_name_index.end()) {
+    BOOST_LOG_TRIVIAL(error) << "FIXML type " << fixml_msg_name << " not found";
+    return false;
+  }
+  if (it_msg_type == _fixml_name_index.end()) {
+    it_msg_type = _fixml_name_index.find(it_msg_elt->_type);
+  }
+  if (it_msg_type == _fixml_name_index.end()) {
+    BOOST_LOG_TRIVIAL(error) << "FIXML type " << fixml_msg_name << " not found";
+    return false;
+  }
+  fix_msg_type = *it_msg_type;
+  return true;
+}
+
+//----------------------------------------------------------------------------
+
+bool fixml_dico_container::get_fieldtype_by_fixml_name(
     const string &fixml_msg_name, fixml_type &fix_msg_type) const {
   auto it_msg_type = _fixml_name_index.find(fixml_msg_name);
   auto it_msg_elt = _element_name_index.find(fixml_msg_name);

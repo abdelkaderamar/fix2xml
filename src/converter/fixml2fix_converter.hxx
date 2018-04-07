@@ -67,6 +67,10 @@ public:
     return _fix_dictionary;
   }
 
+  const FIX::DataDictionary &quickfix_dico() const {
+    return _quickfix_dictionary;
+  }
+
 protected:
   std::string _fix_xml_filename;
   std::string _fixml_xsd_schema;

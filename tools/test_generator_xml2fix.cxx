@@ -14,7 +14,7 @@ void test_generator_xml2fix::generate_component(
     const int level, const string &parent_elt_name) {
   std::shared_ptr<fixml_dico_container> dico = _xsd_parser.dico();
   fixml_type type;
-  if (dico->get_type_by_fixml_name(compo._type, type)) {
+  if (dico->get_fieldtype_by_fixml_name(compo._type, type)) {
     BOOST_LOG_TRIVIAL(debug) << "# Processing Component " << compo._name
                              << " / " << type._name << " / " << type._base_type;
   } else {
@@ -70,6 +70,7 @@ void test_generator_xml2fix::generate_test(
      << TAB(0) << "fixml2fix_converter converter {\"" << fix_filename
      << "\", \"" << xsd_schema << "\"};" << endl
      << TAB(0) << "auto& fixml_dict = converter.fixml_dico();" << endl
+     << TAB(0) << "auto &quickfix_dico = converter.quickfix_dico();" << endl
      << TAB(0) << "ASSERT_TRUE(converter.init());" << endl
      << endl
      << TAB(0) << "xml_element elt {\"" << xml_name << "\" };" << endl
@@ -108,6 +109,83 @@ void test_generator_xml2fix::generate_test(
         "endl;"
      << endl
      << endl;
+  os << TAB(0) << "FIX::Message fix_msg;" << endl
+     << TAB(0) << "ASSERT_TRUE(converter.fixml2fix(elt, fix_msg));" << endl
+     << endl;
+
+  os << TAB(0) << "cout << endl << "
+                  "\"////////////////////////////////////////////\" << endl;"
+     << endl
+     << TAB(0) << "cout << fix_msg.toXML() << endl;" << endl
+     << TAB(0) << "cout << \"////////////////////////////////////////////\" << "
+                  "endl << endl;"
+     << endl
+     << endl
+
+     << TAB(0) << "cout << endl << "
+                  "\"////////////////////////////////////////////\" << endl;"
+     << endl
+     << TAB(0) << "multiset<string> fix_s;" << endl
+     << TAB(0) << "list<multiset<string>> fix_ls;" << endl
+     << TAB(0) << "to_list(fix_msg, quickfix_dico, fix_s, fix_ls);" << endl
+     << TAB(0) << "fix_ls.push_back(fix_s);" << endl
+     << endl
+
+     << TAB(0) << "BOOST_LOG_TRIVIAL(debug) << \"All FIX components (\" << "
+                  "fix_ls.size() << \")\";"
+     << endl
+     << TAB(0) << "for (const auto &l : fix_ls) {" << endl
+     << TAB(1) << "cout << \"	[\";" << endl
+     << TAB(1)
+     << "copy(l.begin(), l.end(), ostream_iterator<string>(cout, \" \"));"
+     << endl
+     << TAB(1) << "cout << \"]\" << endl;" << endl
+     << TAB(0) << "}" << endl
+     << endl
+
+     << TAB(0) << "cout << endl << "
+                  "\"////////////////////////////////////////////\" << endl;"
+     << endl
+     << TAB(0) << "multiset<string> xml_s;" << endl
+     << TAB(0) << "list<multiset<string>> xml_ls;" << endl
+     << TAB(0) << "elt_to_list(elt, fixml_dict, xml_s, xml_ls);" << endl
+     << TAB(0) << "xml_ls.push_back(xml_s);" << endl
+
+     << TAB(0) << "BOOST_LOG_TRIVIAL(debug) << \"All XML components (\" << "
+                  "xml_ls.size() << \")\";"
+     << endl
+     << TAB(0) << "for (const auto &l : xml_ls) {" << endl
+     << TAB(1) << "cout << \"	[\";" << endl
+     << TAB(1)
+     << "copy(l.begin(), l.end(), ostream_iterator<string>(cout, \" \"));"
+     << endl
+     << TAB(1) << "cout << \"]\" << endl;" << endl
+     << TAB(0) << "}" << endl
+     << endl
+
+     << TAB(0) << "for (const auto &fix_l : fix_ls) {" << endl
+     << TAB(1) << "bool found = false;" << endl
+     << TAB(1) << "for (const auto &xml_l : xml_ls) {" << endl
+     << TAB(2) << "if (includes(xml_l.begin(), xml_l.end(), fix_l.begin(), "
+                  "fix_l.end())) {"
+     << endl
+     << TAB(3) << "found = true;" << endl
+     << TAB(3) << "break;" << endl
+     << TAB(2) << "} // end if includes" << endl
+     << TAB(1) << "}   // end for all_values" << endl
+     << TAB(1) << "EXPECT_TRUE(found);" << endl
+     << TAB(1) << "if (!found) {" << endl
+     << TAB(2) << "BOOST_LOG_TRIVIAL(debug)" << endl
+     << TAB(3)
+     << "<< \"[TO CHECK] This FIX component was not found in XML message\";"
+     << endl
+     << TAB(2) << "cout << \"	 ---> [\";" << endl
+     << TAB(2) << "copy(fix_l.begin(), fix_l.end(), "
+                  "ostream_iterator<string>(cout, \" \"));"
+     << endl
+     << TAB(2) << "cout << \"]\" << endl << endl;" << endl
+     << TAB(1) << "} // end if ! found" << endl
+     << TAB(0) << "}   // end for elt_lists" << endl;
 
   os << "}" << endl;
 

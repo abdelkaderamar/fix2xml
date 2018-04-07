@@ -1,6 +1,10 @@
 #ifndef TEST_UTIL_HXX
 #define TEST_UTIL_HXX
 
+#include "data/xml_element.hxx"
+
+#include <quickfix/Message.h>
+
 #include <set>
 #include <string>
 
@@ -9,6 +13,8 @@ void set_field(FIELD_MAP &field_map, const FIELD& field, std::multiset<std::stri
     field_map.set(field);
     s.insert(field.getString());
 }
+
+
 
 
 

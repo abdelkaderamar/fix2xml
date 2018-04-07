@@ -48,6 +48,9 @@ public:
     return _components;
   }
 
+  bool get_componet(const std::string &compo_name,
+                    fixml_component_data &compo_data);
+
   void add_enum_value(const std::string &value) {
     _enum_values.push_back(value);
   }

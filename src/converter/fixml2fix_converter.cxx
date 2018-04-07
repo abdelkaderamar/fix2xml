@@ -239,7 +239,7 @@ const bool fixml2fix_converter::fixml2fix(const xml_element &fixml_elt,
                                           Message &fix_msg) {
   const string fixml_msg_type = fixml_elt.name();
   fixml_type msg_type;
-  if (!_fixml_dictionary->get_type_by_fixml_name(fixml_msg_type, msg_type)) {
+  if (!_fixml_dictionary->get_msgtype_by_fixml_name(fixml_msg_type, msg_type)) {
     return false;
   }
   BOOST_LOG_TRIVIAL(debug) << "FIXML message = " << msg_type._name

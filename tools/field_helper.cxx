@@ -207,7 +207,7 @@ string field_helper::generate_attribute(
     const string &value_set_name) {
   string value;
   fixml_type type;
-  if (dico->get_type_by_fixml_name(field._type, type)) {
+  if (dico->get_fieldtype_by_fixml_name(field._type, type)) {
     BOOST_LOG_TRIVIAL(debug) << "# Processing attribute " << field._name
                              << " / " << type._name << " / " << type._base_type;
   }
