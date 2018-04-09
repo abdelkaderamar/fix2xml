@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 
 #include "converter/fixml2fix_converter.hxx"
+#include "converter/xml_element_helper.hxx"
+#include "converter/fix_helper.hxx"
 #include "util/fix_env.hxx"
 #include "tools/test_util.hxx"
 
@@ -22,33 +24,67 @@ TEST ( ListExecute, set_fields)
   fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   ASSERT_TRUE(converter.init());
+  ASSERT_TRUE(converter.parse_fixt_dico("../spec/fix/FIXT11.xml"));
   FIX50SP2::ListExecute msg;
 
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> ListExecute_0;
-  set_field(msg, FIX::BidID{"STRING_765555953"}, ListExecute_0);
-  set_field(msg, FIX::ClientBidID{"STRING_1115285509"}, ListExecute_0);
-  set_field(msg, FIX::EncodedText{"DATA_1199419948"}, ListExecute_0);
-  set_field(msg, FIX::EncodedTextLen{16916947}, ListExecute_0);
-  set_field(msg, FIX::ListID{"STRING_469010123"}, ListExecute_0);
-  set_field(msg, FIX::Text{"STRING_1524679173"}, ListExecute_0);
-  set_field(msg, FIX::TransactTime{FIX::UTCTIMESTAMP(5, 15, 20, 6, 1, 2011)}, ListExecute_0);
+  set_field(msg, FIX::BidID{"STRING_2009599783"}, ListExecute_0);
+  set_field(msg, FIX::ClientBidID{"STRING_1575754340"}, ListExecute_0);
+  set_field(msg, FIX::EncodedText{"DATA_1283644968"}, ListExecute_0);
+  set_field(msg, FIX::EncodedTextLen{898881521}, ListExecute_0);
+  set_field(msg, FIX::ListID{"STRING_1494408507"}, ListExecute_0);
+  set_field(msg, FIX::Text{"STRING_1897368907"}, ListExecute_0);
+  set_field(msg, FIX::TransactTime{FIX::UTCTIMESTAMP(2, 44, 20, 22, 1, 2016)}, ListExecute_0);
   all_values.push_back(ListExecute_0);
 
   all_compo_names.insert("ListExecute");
+
+  // header
+  multiset<string> header_35;
+  set_header_field(msg.getHeader(), FIX::ApplVerID{"STRING_8"}, header_35);
+  set_header_field(msg.getHeader(), FIX::BeginString{"STRING_310358417"}, header_35);
+  set_header_field(msg.getHeader(), FIX::BodyLength{1486910557}, header_35);
+  set_header_field(msg.getHeader(), FIX::CstmApplVerID{"STRING_853320835"}, header_35);
+  set_header_field(msg.getHeader(), FIX::DeliverToCompID{"STRING_1816103482"}, header_35);
+  set_header_field(msg.getHeader(), FIX::DeliverToLocationID{"STRING_260399809"}, header_35);
+  set_header_field(msg.getHeader(), FIX::DeliverToSubID{"STRING_909079063"}, header_35);
+  set_header_field(msg.getHeader(), FIX::LastMsgSeqNumProcessed{1826721203}, header_35);
+  set_header_field(msg.getHeader(), FIX::MessageEncoding{"STRING_EUC-JP"}, header_35);
+  set_header_field(msg.getHeader(), FIX::MsgSeqNum{1042361561}, header_35);
+  set_header_field(msg.getHeader(), FIX::OnBehalfOfCompID{"STRING_1623483752"}, header_35);
+  set_header_field(msg.getHeader(), FIX::OnBehalfOfLocationID{"STRING_938443529"}, header_35);
+  set_header_field(msg.getHeader(), FIX::OnBehalfOfSubID{"STRING_1845887650"}, header_35);
+  set_header_field(msg.getHeader(), FIX::OrigSendingTime{FIX::UTCTIMESTAMP(4, 11, 46, 22, 11, 2005)}, header_35);
+  set_header_field(msg.getHeader(), FIX::PossDupFlag{true}, header_35);
+  set_header_field(msg.getHeader(), FIX::PossResend{false}, header_35);
+  set_header_field(msg.getHeader(), FIX::SecureData{"DATA_2138938526"}, header_35);
+  set_header_field(msg.getHeader(), FIX::SecureDataLen{1216291485}, header_35);
+  set_header_field(msg.getHeader(), FIX::SenderCompID{"STRING_2113191723"}, header_35);
+  set_header_field(msg.getHeader(), FIX::SenderLocationID{"STRING_1701988328"}, header_35);
+  set_header_field(msg.getHeader(), FIX::SenderSubID{"STRING_76483761"}, header_35);
+  set_header_field(msg.getHeader(), FIX::SendingTime{FIX::UTCTIMESTAMP(6, 57, 2, 15, 7, 2001)}, header_35);
+  set_header_field(msg.getHeader(), FIX::TargetCompID{"STRING_697975882"}, header_35);
+  set_header_field(msg.getHeader(), FIX::TargetLocationID{"STRING_2055517049"}, header_35);
+  set_header_field(msg.getHeader(), FIX::TargetSubID{"STRING_396143120"}, header_35);
+  set_header_field(msg.getHeader(), FIX::XmlData{"DATA_1607054945"}, header_35);
+  set_header_field(msg.getHeader(), FIX::XmlDataLen{1734754604}, header_35);
+  all_values.push_back(header_35);
+  all_compo_names.insert(".header");
 
 
   xml_element elt;
   converter.fix2fixml(msg, elt);
   BOOST_LOG_TRIVIAL(debug) << "The resulting XML is";
-cout << "////////////////////////////////////////////" << endl;
+  cout << "////////////////////////////////////////////" << endl;
   cout << elt.to_string() << endl;
-cout << "////////////////////////////////////////////" << endl << endl;
+  cout << "////////////////////////////////////////////" << endl << endl;
 
-  BOOST_LOG_TRIVIAL(debug) << "Quickfix XML representation is";cout << "////////////////////////////////////////////" << endl;
-cout << msg.toXML() << endl;
-cout << "////////////////////////////////////////////" << endl << endl;
+  BOOST_LOG_TRIVIAL(debug) << "Quickfix XML representation is";
+  cout << "////////////////////////////////////////////" << endl;
+  cout << msg.toXML() << endl;
+  cout << "////////////////////////////////////////////" << endl << endl;
   list<multiset<string>> elt_lists;
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
@@ -68,13 +104,13 @@ cout << "////////////////////////////////////////////" << endl << endl;
   BOOST_LOG_TRIVIAL(debug) << "All FIX components";
   for (const auto& l : all_values) {
     cout << "	[";
-copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
+    copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << "]" << endl;
   }
   BOOST_LOG_TRIVIAL(debug) << "All XML components";
   for (const auto& l : elt_lists) {
     cout << "	[";
-copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
+    copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << "]" << endl;
 
   }

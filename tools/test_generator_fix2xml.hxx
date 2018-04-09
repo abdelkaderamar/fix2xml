@@ -29,11 +29,12 @@ public:
       const int level, const std::string var_level,
       const std::string &parent_name);
 
-  void generate_test(std::ostream &os, const fix2xml::fix_message_type &msg_type,
-                     const std::shared_ptr<fix2xml::fix_dico_container> &dico,
-                     const std::shared_ptr<fix2xml::fixml_dico_container> &fixml_dico,
-                     const std::string &ns, const std::string &fix_filename,
-                     const std::string &xsd_schema) override;
+  void generate_test(
+      std::ostream &os, const fix2xml::fix_message_type &msg_type,
+      const std::shared_ptr<fix2xml::fix_dico_container> &dico,
+      const std::shared_ptr<fix2xml::fixml_dico_container> &fixml_dico,
+      const std::string &ns, const std::string &fix_filename,
+      const std::string &fixt_filename, const std::string &xsd_schema) override;
 
 protected:
 private:

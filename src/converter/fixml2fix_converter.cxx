@@ -62,7 +62,7 @@ bool fixml2fix_converter::init() {
 //----------------------------------------------------------------------------
 
 bool fixml2fix_converter::parse_fixt_dico(const string &fixt_filename) {
-  return _fix_parser.parse(fixt_filename.c_str());
+  return _fix_parser.parse(fixt_filename.c_str(), false, true, true);
 }
 
 //----------------------------------------------------------------------------
@@ -109,6 +109,8 @@ bool fixml2fix_converter::set_msg_type(const Message &fix_msg,
   fix_message_type fix_msg_type;
   if (!_fix_dictionary->get_fix_message_by_type(msgtype_field.getString(),
                                                 fix_msg_type)) {
+    BOOST_LOG_TRIVIAL(error) << "FIX dictionary doesn' contain message type "
+                             << msgtype_field.getString();
     return false;
   }
   // fixml_type fixml_msg_type;
@@ -262,6 +264,14 @@ const bool fixml2fix_converter::fixml2fix(const xml_element &fixml_elt,
     return false;
   }
   fix_msg.getHeader().setField(MsgType(fix_msg_type._msgtype));
+
+  fixml_component_data header_component_data("Hdr", "MessageHeader_t", 1, 1);
+  xml_element header_elt;
+  if (msg_type.get_componet("Hdr", header_component_data) &&
+      fixml_elt.get_component("Hdr", header_elt)) {
+    add_fix_component(fix_msg_type._msgtype, header_component_data, fixml_elt,
+                      fix_msg.getHeader(), _quickfix_dictionary);
+  }
   add_fix_fields_and_compos(fix_msg_type._msgtype, msg_type, fixml_elt, fix_msg,
                             _quickfix_dictionary);
   return true;
@@ -322,7 +332,7 @@ void fixml2fix_converter::add_fix_components(
     const xml_element &fixml_elt, FieldMap &fix_msg,
     const FIX::DataDictionary &quickfix_dico) {
   for (const auto &compo : type.components()) {
-    if (compo.is_block()) {
+    if (compo.is_block() && compo._name != "Hdr") {
       add_fix_component(fix_msg_type, compo, fixml_elt, fix_msg, quickfix_dico);
     } else if (compo.is_group()) {
       add_fix_group(fix_msg_type, compo, fixml_elt, fix_msg, quickfix_dico);

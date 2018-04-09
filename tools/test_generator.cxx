@@ -22,15 +22,20 @@ test_generator::~test_generator() {}
 
 //-----------------------------------------------------------------------------
 
-bool test_generator::init(const char *fix_filename, const char *ns,
-                          const char *xsd_filename) {
+bool test_generator::init(const char *fix_filename, const char *fixt_filename,
+                          const char *ns, const char *xsd_filename) {
   std::srand(std::time(0));
   _fix_filename = fix_filename;
+  _fixt_filename = fixt_filename;
   _fix_ns = ns;
   _xsd_filename = xsd_filename;
   _fix_ns = boost::algorithm::to_upper_copy(_fix_ns);
   if (!_parser.parse(_fix_filename.c_str())) {
     BOOST_LOG_TRIVIAL(error) << "Failed to parse " << _fix_filename;
+    return false;
+  }
+  if (!_parser.parse(_fixt_filename.c_str(), false, true, true)) {
+    BOOST_LOG_TRIVIAL(error) << "Failed to parse " << _fixt_filename;
     return false;
   }
   if (!_xsd_parser.parse(_xsd_filename.c_str())) {
@@ -49,7 +54,7 @@ void test_generator::generate(const string &filename_prefix) {
   auto &name_index = messages.get<0>();
   for (const auto msg_type : name_index) {
     generate_message_test(filename_prefix, msg_type, dico, fixml_dico, _fix_ns,
-                          _fix_filename, _xsd_filename);
+                          _fix_filename, _fixt_filename, _xsd_filename);
   }
 }
 
@@ -59,13 +64,15 @@ void test_generator::generate_message_test(
     const string &filename_prefix, const fix_message_type &msg_type,
     const shared_ptr<fix_dico_container> &dico,
     const shared_ptr<fixml_dico_container> &fixml_dico, const string &ns,
-    const string &fix_filename, const string &xsd_schema) {
+    const string &fix_filename, const string &fixt_filename,
+    const string &xsd_schema) {
   const string filename =
       "generated/" + filename_prefix + msg_type._name + ".cpp";
   BOOST_LOG_TRIVIAL(info) << "Generating file " << filename;
   ofstream ofs(filename.c_str());
   generate_header(ofs, msg_type, dico, ns);
-  generate_test(ofs, msg_type, dico, fixml_dico, ns, fix_filename, xsd_schema);
+  generate_test(ofs, msg_type, dico, fixml_dico, ns, fix_filename,
+                fixt_filename, xsd_schema);
   ofs.close();
 } // end generate_message_test
 
@@ -86,11 +93,16 @@ void test_generator::generate_header(ostream &os,
 
   const std::string lower_ns = boost::algorithm::to_lower_copy(ns);
 
-  os << "#include <boost/log/trivial.hpp>" << endl
-     << endl
-     << "#include <quickfix/" << lower_ns << "/" + msg_type._name + ".h>"
-     << endl
-     << endl
+  os << "#include <boost/log/trivial.hpp>" << endl << endl;
+
+  if (is_fixt_message(msg_type._name, lower_ns)) {
+    os << "#include <quickfix/fixt11/" << msg_type._name << ".h>" << endl;
+  } else {
+    os << "#include <quickfix/" << lower_ns << "/" + msg_type._name + ".h>"
+       << endl;
+  }
+
+  os << endl
      << "#include <list>" << endl
      << "#include <set>" << endl
      << "#include <string>" << endl
@@ -102,5 +114,13 @@ void test_generator::generate_header(ostream &os,
 }
 
 //-----------------------------------------------------------------------------
+bool test_generator::is_fixt_message(const string &msg_type, const string &ns) {
+  if ((ns.substr(0, 5) == "FIX50" || ns.substr(0, 5) == "fix50") &&
+      (msg_type == "Heartbeat" || msg_type == "Logon" || msg_type == "Logout" ||
+       msg_type == "Reject" || msg_type == "ResendRequest" ||
+       msg_type == "SequenceReset" || msg_type == "TestRequest"))
+    return true;
 
+  return false;
+}
 //-----------------------------------------------------------------------------

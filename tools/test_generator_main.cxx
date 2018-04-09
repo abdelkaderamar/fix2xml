@@ -43,7 +43,8 @@ using namespace std;
 //-----------------------------------------------------------------------------
 int usage(const int ret) {
   static string text =
-      "Usage: test_generator <mode> <fix dictionary> <FIX version>\n\n"
+      "Usage: test_generator <mode> <fix dictionary> <fixt dictionary>"
+      " <FIX version> <XSD schema>\n\n"
       "Where mode is : FIX2XML or XML2FIX";
   if (ret == 0)
     BOOST_LOG_TRIVIAL(info) << text;
@@ -57,7 +58,7 @@ template <typename GENERATOR>
 void do_generate(char *argv[], const string &prefix) {
   unique_ptr<GENERATOR> generator{new GENERATOR};
   BOOST_LOG_TRIVIAL(debug) << "Generator created";
-  if (!generator->init(argv[2], argv[3], argv[4]))
+  if (!generator->init(argv[2], argv[3], argv[4], argv[5]))
     return;
   BOOST_LOG_TRIVIAL(debug) << "Generator initialized";
   BOOST_LOG_TRIVIAL(debug) << "Test generation starts";
@@ -66,7 +67,7 @@ void do_generate(char *argv[], const string &prefix) {
 }
 
 int main(int argc, char *argv[]) {
-  if (argc < 5)
+  if (argc < 6)
     return usage(1);
 
   if (!fix_env::init_xerces()) {

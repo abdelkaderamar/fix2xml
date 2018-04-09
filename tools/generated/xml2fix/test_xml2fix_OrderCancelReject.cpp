@@ -31,102 +31,102 @@ TEST ( OrderCancelReject_message_t, set_fields)
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> OrderCancelReject_message_t_0;
-  elt.add_attribute("OrdID", "OrderID_t_854070472"); // 0
-  OrderCancelReject_message_t_0.insert("OrderID_t_854070472");
-  elt.add_attribute("OrdID2", "SecondaryOrderID_t_1892983477"); // 0
-  OrderCancelReject_message_t_0.insert("SecondaryOrderID_t_1892983477");
-  elt.add_attribute("ID2", "SecondaryClOrdID_t_1189851164"); // 0
-  OrderCancelReject_message_t_0.insert("SecondaryClOrdID_t_1189851164");
-  elt.add_attribute("ID", "ClOrdID_t_1106736319"); // 0
-  OrderCancelReject_message_t_0.insert("ClOrdID_t_1106736319");
-  elt.add_attribute("LnkID", "ClOrdLinkID_t_822623243"); // 0
-  OrderCancelReject_message_t_0.insert("ClOrdLinkID_t_822623243");
-  elt.add_attribute("OrigID", "OrigClOrdID_t_526894644"); // 0
-  OrderCancelReject_message_t_0.insert("OrigClOrdID_t_526894644");
-  elt.add_attribute("Stat", "4"); // 0
-  OrderCancelReject_message_t_0.insert("4");
-  elt.add_attribute("WorkingInd", "N"); // 0
-  OrderCancelReject_message_t_0.insert("N");
-  elt.add_attribute("OrigOrdModTm", "OrigOrdModTime_t_1341995838"); // 0
-  OrderCancelReject_message_t_0.insert("OrigOrdModTime_t_1341995838");
-  elt.add_attribute("ListID", "ListID_t_1601686107"); // 0
-  OrderCancelReject_message_t_0.insert("ListID_t_1601686107");
-  elt.add_attribute("Acct", "Account_t_105533051"); // 0
-  OrderCancelReject_message_t_0.insert("Account_t_105533051");
-  elt.add_attribute("AcctIDSrc", "2"); // 0
-  OrderCancelReject_message_t_0.insert("2");
-  elt.add_attribute("AcctTyp", "4"); // 0
-  OrderCancelReject_message_t_0.insert("4");
-  elt.add_attribute("OrignDt", "TradeOriginationDate_t_576309259"); // 0
-  OrderCancelReject_message_t_0.insert("TradeOriginationDate_t_576309259");
-  elt.add_attribute("TrdDt", "TradeDate_t_1670446890"); // 0
-  OrderCancelReject_message_t_0.insert("TradeDate_t_1670446890");
-  elt.add_attribute("TxnTm", "TransactTime_t_1720081288"); // 0
-  OrderCancelReject_message_t_0.insert("TransactTime_t_1720081288");
+  elt.add_attribute("OrdID", "OrderID_t_1271215626"); // 0
+  OrderCancelReject_message_t_0.insert("OrderID_t_1271215626");
+  elt.add_attribute("OrdID2", "SecondaryOrderID_t_1335362266"); // 0
+  OrderCancelReject_message_t_0.insert("SecondaryOrderID_t_1335362266");
+  elt.add_attribute("ID2", "SecondaryClOrdID_t_270572572"); // 0
+  OrderCancelReject_message_t_0.insert("SecondaryClOrdID_t_270572572");
+  elt.add_attribute("ID", "ClOrdID_t_1912418897"); // 0
+  OrderCancelReject_message_t_0.insert("ClOrdID_t_1912418897");
+  elt.add_attribute("LnkID", "ClOrdLinkID_t_1597782693"); // 0
+  OrderCancelReject_message_t_0.insert("ClOrdLinkID_t_1597782693");
+  elt.add_attribute("OrigID", "OrigClOrdID_t_1152153446"); // 0
+  OrderCancelReject_message_t_0.insert("OrigClOrdID_t_1152153446");
+  elt.add_attribute("Stat", "7"); // 0
+  OrderCancelReject_message_t_0.insert("7");
+  elt.add_attribute("WorkingInd", "Y"); // 0
+  OrderCancelReject_message_t_0.insert("Y");
+  elt.add_attribute("OrigOrdModTm", "OrigOrdModTime_t_1206585664"); // 0
+  OrderCancelReject_message_t_0.insert("OrigOrdModTime_t_1206585664");
+  elt.add_attribute("ListID", "ListID_t_604995183"); // 0
+  OrderCancelReject_message_t_0.insert("ListID_t_604995183");
+  elt.add_attribute("Acct", "Account_t_722692941"); // 0
+  OrderCancelReject_message_t_0.insert("Account_t_722692941");
+  elt.add_attribute("AcctIDSrc", "1"); // 0
+  OrderCancelReject_message_t_0.insert("1");
+  elt.add_attribute("AcctTyp", "1"); // 0
+  OrderCancelReject_message_t_0.insert("1");
+  elt.add_attribute("OrignDt", "TradeOriginationDate_t_1442344915"); // 0
+  OrderCancelReject_message_t_0.insert("TradeOriginationDate_t_1442344915");
+  elt.add_attribute("TrdDt", "TradeDate_t_1013986942"); // 0
+  OrderCancelReject_message_t_0.insert("TradeDate_t_1013986942");
+  elt.add_attribute("TxnTm", "TransactTime_t_1126562902"); // 0
+  OrderCancelReject_message_t_0.insert("TransactTime_t_1126562902");
   elt.add_attribute("CxlRejRspTo", "1"); // 0
   OrderCancelReject_message_t_0.insert("1");
-  elt.add_attribute("CxlRejRsn", "8"); // 0
-  OrderCancelReject_message_t_0.insert("8");
-  elt.add_attribute("Txt", "Text_t_497261243"); // 0
-  OrderCancelReject_message_t_0.insert("Text_t_497261243");
-  elt.add_attribute("EncTxtLen", "1274623946"); // 0
-  OrderCancelReject_message_t_0.insert("1274623946");
-  elt.add_attribute("EncTxt", "EncodedText_t_1683414147"); // 0
-  OrderCancelReject_message_t_0.insert("EncodedText_t_1683414147");
+  elt.add_attribute("CxlRejRsn", "2"); // 0
+  OrderCancelReject_message_t_0.insert("2");
+  elt.add_attribute("Txt", "Text_t_737934347"); // 0
+  OrderCancelReject_message_t_0.insert("Text_t_737934347");
+  elt.add_attribute("EncTxtLen", "2005786801"); // 0
+  OrderCancelReject_message_t_0.insert("2005786801");
+  elt.add_attribute("EncTxt", "EncodedText_t_1032241504"); // 0
+  OrderCancelReject_message_t_0.insert("EncodedText_t_1032241504");
   all_values.push_back(OrderCancelReject_message_t_0);
   all_compo_names.insert("OrderCancelReject_message_t");
 
   { // Hdr
     xml_element Hdr_56{"Hdr"};
     multiset<string> Hdr_56_set;
-    Hdr_56.add_attribute("SeqNum", "374439232"); // 1
-    Hdr_56_set.insert("374439232");
-    Hdr_56.add_attribute("SID", "SenderCompID_t_342177410"); // 1
-    Hdr_56_set.insert("SenderCompID_t_342177410");
-    Hdr_56.add_attribute("TID", "TargetCompID_t_1228349295"); // 1
-    Hdr_56_set.insert("TargetCompID_t_1228349295");
-    Hdr_56.add_attribute("OBID", "OnBehalfOfCompID_t_1007633768"); // 1
-    Hdr_56_set.insert("OnBehalfOfCompID_t_1007633768");
-    Hdr_56.add_attribute("D2ID", "DeliverToCompID_t_2097797216"); // 1
-    Hdr_56_set.insert("DeliverToCompID_t_2097797216");
-    Hdr_56.add_attribute("SSub", "SenderSubID_t_446004948"); // 1
-    Hdr_56_set.insert("SenderSubID_t_446004948");
-    Hdr_56.add_attribute("SLoc", "SenderLocationID_t_1142768722"); // 1
-    Hdr_56_set.insert("SenderLocationID_t_1142768722");
-    Hdr_56.add_attribute("TSub", "TargetSubID_t_1829428325"); // 1
-    Hdr_56_set.insert("TargetSubID_t_1829428325");
-    Hdr_56.add_attribute("TLoc", "TargetLocationID_t_567958964"); // 1
-    Hdr_56_set.insert("TargetLocationID_t_567958964");
-    Hdr_56.add_attribute("OBSub", "OnBehalfOfSubID_t_1896202443"); // 1
-    Hdr_56_set.insert("OnBehalfOfSubID_t_1896202443");
-    Hdr_56.add_attribute("OBLoc", "OnBehalfOfLocationID_t_536015149"); // 1
-    Hdr_56_set.insert("OnBehalfOfLocationID_t_536015149");
-    Hdr_56.add_attribute("D2Sub", "DeliverToSubID_t_313458793"); // 1
-    Hdr_56_set.insert("DeliverToSubID_t_313458793");
-    Hdr_56.add_attribute("D2Loc", "DeliverToLocationID_t_938569959"); // 1
-    Hdr_56_set.insert("DeliverToLocationID_t_938569959");
-    Hdr_56.add_attribute("PosDup", "N"); // 1
-    Hdr_56_set.insert("N");
-    Hdr_56.add_attribute("PosRsnd", "N"); // 1
-    Hdr_56_set.insert("N");
-    Hdr_56.add_attribute("Snt", "SendingTime_t_1465464604"); // 1
-    Hdr_56_set.insert("SendingTime_t_1465464604");
-    Hdr_56.add_attribute("OrigSnt", "OrigSendingTime_t_1530197119"); // 1
-    Hdr_56_set.insert("OrigSendingTime_t_1530197119");
-    Hdr_56.add_attribute("MsgEncd", "MessageEncoding_t_1506368677"); // 1
-    Hdr_56_set.insert("MessageEncoding_t_1506368677");
+    Hdr_56.add_attribute("SeqNum", "495794840"); // 1
+    Hdr_56_set.insert("495794840");
+    Hdr_56.add_attribute("SID", "SenderCompID_t_2025123764"); // 1
+    Hdr_56_set.insert("SenderCompID_t_2025123764");
+    Hdr_56.add_attribute("TID", "TargetCompID_t_1258775176"); // 1
+    Hdr_56_set.insert("TargetCompID_t_1258775176");
+    Hdr_56.add_attribute("OBID", "OnBehalfOfCompID_t_853584739"); // 1
+    Hdr_56_set.insert("OnBehalfOfCompID_t_853584739");
+    Hdr_56.add_attribute("D2ID", "DeliverToCompID_t_792984139"); // 1
+    Hdr_56_set.insert("DeliverToCompID_t_792984139");
+    Hdr_56.add_attribute("SSub", "SenderSubID_t_185089497"); // 1
+    Hdr_56_set.insert("SenderSubID_t_185089497");
+    Hdr_56.add_attribute("SLoc", "SenderLocationID_t_1464072841"); // 1
+    Hdr_56_set.insert("SenderLocationID_t_1464072841");
+    Hdr_56.add_attribute("TSub", "TargetSubID_t_1930363759"); // 1
+    Hdr_56_set.insert("TargetSubID_t_1930363759");
+    Hdr_56.add_attribute("TLoc", "TargetLocationID_t_195309735"); // 1
+    Hdr_56_set.insert("TargetLocationID_t_195309735");
+    Hdr_56.add_attribute("OBSub", "OnBehalfOfSubID_t_2045183726"); // 1
+    Hdr_56_set.insert("OnBehalfOfSubID_t_2045183726");
+    Hdr_56.add_attribute("OBLoc", "OnBehalfOfLocationID_t_1054095738"); // 1
+    Hdr_56_set.insert("OnBehalfOfLocationID_t_1054095738");
+    Hdr_56.add_attribute("D2Sub", "DeliverToSubID_t_1530672002"); // 1
+    Hdr_56_set.insert("DeliverToSubID_t_1530672002");
+    Hdr_56.add_attribute("D2Loc", "DeliverToLocationID_t_168272650"); // 1
+    Hdr_56_set.insert("DeliverToLocationID_t_168272650");
+    Hdr_56.add_attribute("PosDup", "Y"); // 1
+    Hdr_56_set.insert("Y");
+    Hdr_56.add_attribute("PosRsnd", "Y"); // 1
+    Hdr_56_set.insert("Y");
+    Hdr_56.add_attribute("Snt", "SendingTime_t_1320426096"); // 1
+    Hdr_56_set.insert("SendingTime_t_1320426096");
+    Hdr_56.add_attribute("OrigSnt", "OrigSendingTime_t_1775755203"); // 1
+    Hdr_56_set.insert("OrigSendingTime_t_1775755203");
+    Hdr_56.add_attribute("MsgEncd", "MessageEncoding_t_979567738"); // 1
+    Hdr_56_set.insert("MessageEncoding_t_979567738");
     all_values.push_back(Hdr_56_set);
     all_compo_names.insert("Hdr_56_set");
 
     {
       xml_element Hop_56{"Hop"};
       multiset<string> Hop_56_set;
-      Hop_56.add_attribute("ID", "HopCompID_t_659976794"); // 2
-      Hop_56_set.insert("HopCompID_t_659976794");
-      Hop_56.add_attribute("Ref", "984399578"); // 2
-      Hop_56_set.insert("984399578");
-      Hop_56.add_attribute("Snt", "HopSendingTime_t_1611901728"); // 2
-      Hop_56_set.insert("HopSendingTime_t_1611901728");
+      Hop_56.add_attribute("ID", "HopCompID_t_379528112"); // 2
+      Hop_56_set.insert("HopCompID_t_379528112");
+      Hop_56.add_attribute("Ref", "233266739"); // 2
+      Hop_56_set.insert("233266739");
+      Hop_56.add_attribute("Snt", "HopSendingTime_t_1702260680"); // 2
+      Hop_56_set.insert("HopSendingTime_t_1702260680");
       all_values.push_back(Hop_56_set);
       all_compo_names.insert("Hop_56_set");
 

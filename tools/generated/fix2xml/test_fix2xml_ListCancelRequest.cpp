@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 
 #include "converter/fixml2fix_converter.hxx"
+#include "converter/xml_element_helper.hxx"
+#include "converter/fix_helper.hxx"
 #include "util/fix_env.hxx"
 #include "tools/test_util.hxx"
 
@@ -22,18 +24,19 @@ TEST ( ListCancelRequest, set_fields)
   fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   ASSERT_TRUE(converter.init());
+  ASSERT_TRUE(converter.parse_fixt_dico("../spec/fix/FIXT11.xml"));
   FIX50SP2::ListCancelRequest msg;
 
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> ListCancelRequest_0;
-  set_field(msg, FIX::EncodedText{"DATA_1282054611"}, ListCancelRequest_0);
-  set_field(msg, FIX::EncodedTextLen{1958599459}, ListCancelRequest_0);
-  set_field(msg, FIX::ListID{"STRING_310608935"}, ListCancelRequest_0);
-  set_field(msg, FIX::Text{"STRING_1497516606"}, ListCancelRequest_0);
-  set_field(msg, FIX::TradeDate{"LOCALMKTDATE_1644419747"}, ListCancelRequest_0);
-  set_field(msg, FIX::TradeOriginationDate{"LOCALMKTDATE_287037712"}, ListCancelRequest_0);
-  set_field(msg, FIX::TransactTime{FIX::UTCTIMESTAMP(5, 7, 21, 6, 6, 2016)}, ListCancelRequest_0);
+  set_field(msg, FIX::EncodedText{"DATA_419791652"}, ListCancelRequest_0);
+  set_field(msg, FIX::EncodedTextLen{1218948959}, ListCancelRequest_0);
+  set_field(msg, FIX::ListID{"STRING_1844760329"}, ListCancelRequest_0);
+  set_field(msg, FIX::Text{"STRING_473000757"}, ListCancelRequest_0);
+  set_field(msg, FIX::TradeDate{"LOCALMKTDATE_297470776"}, ListCancelRequest_0);
+  set_field(msg, FIX::TradeOriginationDate{"LOCALMKTDATE_644066726"}, ListCancelRequest_0);
+  set_field(msg, FIX::TransactTime{FIX::UTCTIMESTAMP(5, 15, 41, 1, 5, 2008)}, ListCancelRequest_0);
   all_values.push_back(ListCancelRequest_0);
 
   all_compo_names.insert("ListCancelRequest");
@@ -43,11 +46,11 @@ TEST ( ListCancelRequest, set_fields)
   {
     FIX50SP2::ListCancelRequest::NoPartyIDs noPartyIDs_0_0;
     // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_49;
-    set_field(noPartyIDs_0_0, FIX::PartyID{"STRING_1827733874"}, Parties_NoPartyIDs_49);
-    set_field(noPartyIDs_0_0, FIX::PartyIDSource{'E'}, Parties_NoPartyIDs_49);
-    set_field(noPartyIDs_0_0, FIX::PartyRole{51}, Parties_NoPartyIDs_49);
-    all_values.push_back(Parties_NoPartyIDs_49);
+    multiset<string> Parties_NoPartyIDs_52;
+    set_field(noPartyIDs_0_0, FIX::PartyID{"STRING_1047958037"}, Parties_NoPartyIDs_52);
+    set_field(noPartyIDs_0_0, FIX::PartyIDSource{'H'}, Parties_NoPartyIDs_52);
+    set_field(noPartyIDs_0_0, FIX::PartyRole{30}, Parties_NoPartyIDs_52);
+    all_values.push_back(Parties_NoPartyIDs_52);
     all_compo_names.insert("...NoPartyIDs");
 
     // PtysSubGrp
@@ -55,110 +58,60 @@ TEST ( ListCancelRequest, set_fields)
     {
       FIX50SP2::ListCancelRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_0_1_0;
       // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_102;
-      set_field(noPartySubIDs_0_1_0, FIX::PartySubID{"STRING_1688116216"}, PtysSubGrp_NoPartySubIDs_102);
-      set_field(noPartySubIDs_0_1_0, FIX::PartySubIDType{3}, PtysSubGrp_NoPartySubIDs_102);
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_102);
+      multiset<string> PtysSubGrp_NoPartySubIDs_114;
+      set_field(noPartySubIDs_0_1_0, FIX::PartySubID{"STRING_928686660"}, PtysSubGrp_NoPartySubIDs_114);
+      set_field(noPartySubIDs_0_1_0, FIX::PartySubIDType{11}, PtysSubGrp_NoPartySubIDs_114);
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_114);
       all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
 
       noPartyIDs_0_0.addGroup(noPartySubIDs_0_1_0);
     }
-    {
-      FIX50SP2::ListCancelRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_0_1_1;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_103;
-      set_field(noPartySubIDs_0_1_1, FIX::PartySubID{"STRING_1142025788"}, PtysSubGrp_NoPartySubIDs_103);
-      set_field(noPartySubIDs_0_1_1, FIX::PartySubIDType{17}, PtysSubGrp_NoPartySubIDs_103);
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_103);
-      all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
-
-      noPartyIDs_0_0.addGroup(noPartySubIDs_0_1_1);
-    }
-    {
-      FIX50SP2::ListCancelRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_0_1_2;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_104;
-      set_field(noPartySubIDs_0_1_2, FIX::PartySubID{"STRING_127193101"}, PtysSubGrp_NoPartySubIDs_104);
-      set_field(noPartySubIDs_0_1_2, FIX::PartySubIDType{10}, PtysSubGrp_NoPartySubIDs_104);
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_104);
-      all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
-
-      noPartyIDs_0_0.addGroup(noPartySubIDs_0_1_2);
-    }
     msg.addGroup(noPartyIDs_0_0);
   }
-  {
-    FIX50SP2::ListCancelRequest::NoPartyIDs noPartyIDs_0_1;
-    // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_50;
-    set_field(noPartyIDs_0_1, FIX::PartyID{"STRING_285419127"}, Parties_NoPartyIDs_50);
-    set_field(noPartyIDs_0_1, FIX::PartyIDSource{'I'}, Parties_NoPartyIDs_50);
-    set_field(noPartyIDs_0_1, FIX::PartyRole{68}, Parties_NoPartyIDs_50);
-    all_values.push_back(Parties_NoPartyIDs_50);
-    all_compo_names.insert("...NoPartyIDs");
+  // header
+  multiset<string> header_34;
+  set_header_field(msg.getHeader(), FIX::ApplVerID{"STRING_6"}, header_34);
+  set_header_field(msg.getHeader(), FIX::BeginString{"STRING_1273691895"}, header_34);
+  set_header_field(msg.getHeader(), FIX::BodyLength{670243591}, header_34);
+  set_header_field(msg.getHeader(), FIX::CstmApplVerID{"STRING_1214931188"}, header_34);
+  set_header_field(msg.getHeader(), FIX::DeliverToCompID{"STRING_48735859"}, header_34);
+  set_header_field(msg.getHeader(), FIX::DeliverToLocationID{"STRING_589099960"}, header_34);
+  set_header_field(msg.getHeader(), FIX::DeliverToSubID{"STRING_1864355395"}, header_34);
+  set_header_field(msg.getHeader(), FIX::LastMsgSeqNumProcessed{1490077691}, header_34);
+  set_header_field(msg.getHeader(), FIX::MessageEncoding{"STRING_EUC-JP"}, header_34);
+  set_header_field(msg.getHeader(), FIX::MsgSeqNum{847188855}, header_34);
+  set_header_field(msg.getHeader(), FIX::OnBehalfOfCompID{"STRING_916447258"}, header_34);
+  set_header_field(msg.getHeader(), FIX::OnBehalfOfLocationID{"STRING_1036765386"}, header_34);
+  set_header_field(msg.getHeader(), FIX::OnBehalfOfSubID{"STRING_2066137814"}, header_34);
+  set_header_field(msg.getHeader(), FIX::OrigSendingTime{FIX::UTCTIMESTAMP(15, 23, 45, 20, 5, 2016)}, header_34);
+  set_header_field(msg.getHeader(), FIX::PossDupFlag{true}, header_34);
+  set_header_field(msg.getHeader(), FIX::PossResend{true}, header_34);
+  set_header_field(msg.getHeader(), FIX::SecureData{"DATA_457787028"}, header_34);
+  set_header_field(msg.getHeader(), FIX::SecureDataLen{686056610}, header_34);
+  set_header_field(msg.getHeader(), FIX::SenderCompID{"STRING_979094475"}, header_34);
+  set_header_field(msg.getHeader(), FIX::SenderLocationID{"STRING_1505745065"}, header_34);
+  set_header_field(msg.getHeader(), FIX::SenderSubID{"STRING_920972900"}, header_34);
+  set_header_field(msg.getHeader(), FIX::SendingTime{FIX::UTCTIMESTAMP(0, 20, 58, 5, 4, 2005)}, header_34);
+  set_header_field(msg.getHeader(), FIX::TargetCompID{"STRING_1011693737"}, header_34);
+  set_header_field(msg.getHeader(), FIX::TargetLocationID{"STRING_1024603667"}, header_34);
+  set_header_field(msg.getHeader(), FIX::TargetSubID{"STRING_1392626049"}, header_34);
+  set_header_field(msg.getHeader(), FIX::XmlData{"DATA_728565485"}, header_34);
+  set_header_field(msg.getHeader(), FIX::XmlDataLen{367197710}, header_34);
+  all_values.push_back(header_34);
+  all_compo_names.insert(".header");
 
-    // PtysSubGrp
-    // Group PtysSubGrp.NoPartySubIDs
-    {
-      FIX50SP2::ListCancelRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_1_1_0;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_105;
-      set_field(noPartySubIDs_1_1_0, FIX::PartySubID{"STRING_1969601766"}, PtysSubGrp_NoPartySubIDs_105);
-      set_field(noPartySubIDs_1_1_0, FIX::PartySubIDType{13}, PtysSubGrp_NoPartySubIDs_105);
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_105);
-      all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
-
-      noPartyIDs_0_1.addGroup(noPartySubIDs_1_1_0);
-    }
-    msg.addGroup(noPartyIDs_0_1);
-  }
-  {
-    FIX50SP2::ListCancelRequest::NoPartyIDs noPartyIDs_0_2;
-    // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_51;
-    set_field(noPartyIDs_0_2, FIX::PartyID{"STRING_1039521862"}, Parties_NoPartyIDs_51);
-    set_field(noPartyIDs_0_2, FIX::PartyIDSource{'3'}, Parties_NoPartyIDs_51);
-    set_field(noPartyIDs_0_2, FIX::PartyRole{59}, Parties_NoPartyIDs_51);
-    all_values.push_back(Parties_NoPartyIDs_51);
-    all_compo_names.insert("...NoPartyIDs");
-
-    // PtysSubGrp
-    // Group PtysSubGrp.NoPartySubIDs
-    {
-      FIX50SP2::ListCancelRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_2_1_0;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_106;
-      set_field(noPartySubIDs_2_1_0, FIX::PartySubID{"STRING_454205687"}, PtysSubGrp_NoPartySubIDs_106);
-      set_field(noPartySubIDs_2_1_0, FIX::PartySubIDType{18}, PtysSubGrp_NoPartySubIDs_106);
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_106);
-      all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
-
-      noPartyIDs_0_2.addGroup(noPartySubIDs_2_1_0);
-    }
-    {
-      FIX50SP2::ListCancelRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_2_1_1;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_107;
-      set_field(noPartySubIDs_2_1_1, FIX::PartySubID{"STRING_1637168510"}, PtysSubGrp_NoPartySubIDs_107);
-      set_field(noPartySubIDs_2_1_1, FIX::PartySubIDType{13}, PtysSubGrp_NoPartySubIDs_107);
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_107);
-      all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
-
-      noPartyIDs_0_2.addGroup(noPartySubIDs_2_1_1);
-    }
-    msg.addGroup(noPartyIDs_0_2);
-  }
 
   xml_element elt;
   converter.fix2fixml(msg, elt);
   BOOST_LOG_TRIVIAL(debug) << "The resulting XML is";
-cout << "////////////////////////////////////////////" << endl;
+  cout << "////////////////////////////////////////////" << endl;
   cout << elt.to_string() << endl;
-cout << "////////////////////////////////////////////" << endl << endl;
+  cout << "////////////////////////////////////////////" << endl << endl;
 
-  BOOST_LOG_TRIVIAL(debug) << "Quickfix XML representation is";cout << "////////////////////////////////////////////" << endl;
-cout << msg.toXML() << endl;
-cout << "////////////////////////////////////////////" << endl << endl;
+  BOOST_LOG_TRIVIAL(debug) << "Quickfix XML representation is";
+  cout << "////////////////////////////////////////////" << endl;
+  cout << msg.toXML() << endl;
+  cout << "////////////////////////////////////////////" << endl << endl;
   list<multiset<string>> elt_lists;
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
@@ -178,13 +131,13 @@ cout << "////////////////////////////////////////////" << endl << endl;
   BOOST_LOG_TRIVIAL(debug) << "All FIX components";
   for (const auto& l : all_values) {
     cout << "	[";
-copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
+    copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << "]" << endl;
   }
   BOOST_LOG_TRIVIAL(debug) << "All XML components";
   for (const auto& l : elt_lists) {
     cout << "	[";
-copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
+    copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << "]" << endl;
 
   }

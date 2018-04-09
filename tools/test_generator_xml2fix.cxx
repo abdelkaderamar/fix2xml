@@ -53,7 +53,8 @@ void test_generator_xml2fix::generate_test(
     ostream &os, const fix_message_type &msg_type,
     const shared_ptr<fix_dico_container> &dico,
     const shared_ptr<fixml_dico_container> &fixml_dico, const string &ns,
-    const string &fix_filename, const string &xsd_schema) {
+    const string &fix_filename, const string &fixt_filename,
+    const string &xsd_schema) {
   fixml_type xml_type;
   string xml_name;
   if (!fixml_dico->get_message_type(msg_type._name, xml_type, xml_name)) {

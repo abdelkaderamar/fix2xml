@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 
 #include "converter/fixml2fix_converter.hxx"
+#include "converter/xml_element_helper.hxx"
+#include "converter/fix_helper.hxx"
 #include "util/fix_env.hxx"
 #include "tools/test_util.hxx"
 
@@ -22,43 +24,44 @@ TEST ( SecurityListRequest, set_fields)
   fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   ASSERT_TRUE(converter.init());
+  ASSERT_TRUE(converter.parse_fixt_dico("../spec/fix/FIXT11.xml"));
   FIX50SP2::SecurityListRequest msg;
 
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> SecurityListRequest_0;
   set_field(msg, FIX::Currency{"CHF"}, SecurityListRequest_0);
-  set_field(msg, FIX::EncodedText{"DATA_1417360962"}, SecurityListRequest_0);
-  set_field(msg, FIX::EncodedTextLen{609603084}, SecurityListRequest_0);
-  set_field(msg, FIX::MarketID{"EXCHANGE_180156934"}, SecurityListRequest_0);
-  set_field(msg, FIX::MarketSegmentID{"STRING_1107818456"}, SecurityListRequest_0);
-  set_field(msg, FIX::SecurityListID{"STRING_230513869"}, SecurityListRequest_0);
-  set_field(msg, FIX::SecurityListRequestType{2}, SecurityListRequest_0);
-  set_field(msg, FIX::SecurityListType{1}, SecurityListRequest_0);
-  set_field(msg, FIX::SecurityListTypeSource{2}, SecurityListRequest_0);
-  set_field(msg, FIX::SecurityReqID{"STRING_1527121342"}, SecurityListRequest_0);
+  set_field(msg, FIX::EncodedText{"DATA_1895580108"}, SecurityListRequest_0);
+  set_field(msg, FIX::EncodedTextLen{1656246995}, SecurityListRequest_0);
+  set_field(msg, FIX::MarketID{"EXCHANGE_527501848"}, SecurityListRequest_0);
+  set_field(msg, FIX::MarketSegmentID{"STRING_553270351"}, SecurityListRequest_0);
+  set_field(msg, FIX::SecurityListID{"STRING_1528954241"}, SecurityListRequest_0);
+  set_field(msg, FIX::SecurityListRequestType{4}, SecurityListRequest_0);
+  set_field(msg, FIX::SecurityListType{2}, SecurityListRequest_0);
+  set_field(msg, FIX::SecurityListTypeSource{1}, SecurityListRequest_0);
+  set_field(msg, FIX::SecurityReqID{"STRING_1451506963"}, SecurityListRequest_0);
   set_field(msg, FIX::SubscriptionRequestType{'2'}, SecurityListRequest_0);
-  set_field(msg, FIX::Text{"STRING_1836739460"}, SecurityListRequest_0);
-  set_field(msg, FIX::TradingSessionID{"STRING_6"}, SecurityListRequest_0);
-  set_field(msg, FIX::TradingSessionSubID{"STRING_4"}, SecurityListRequest_0);
+  set_field(msg, FIX::Text{"STRING_1641397923"}, SecurityListRequest_0);
+  set_field(msg, FIX::TradingSessionID{"STRING_4"}, SecurityListRequest_0);
+  set_field(msg, FIX::TradingSessionSubID{"STRING_5"}, SecurityListRequest_0);
   all_values.push_back(SecurityListRequest_0);
 
   all_compo_names.insert("SecurityListRequest");
 
   // FinancingDetails
-  multiset<string> FinancingDetails_27;
-  set_field(msg, FIX::AgreementCurrency{"CAN"}, FinancingDetails_27);
-  set_field(msg, FIX::AgreementDate{"LOCALMKTDATE_944205890"}, FinancingDetails_27);
-  set_field(msg, FIX::AgreementDesc{"STRING_275956067"}, FinancingDetails_27);
-  set_field(msg, FIX::AgreementID{"STRING_803999605"}, FinancingDetails_27);
-  set_field(msg, FIX::DeliveryType{3}, FinancingDetails_27);
-  set_field(msg, FIX::EndDate{"LOCALMKTDATE_424679528"}, FinancingDetails_27);
-  FIX::MarginRatio MarginRatio_27;
-  MarginRatio_27.setString("11.410000");
-set_field(msg, MarginRatio_27, FinancingDetails_27);
-  set_field(msg, FIX::StartDate{"LOCALMKTDATE_307532712"}, FinancingDetails_27);
-  set_field(msg, FIX::TerminationType{2}, FinancingDetails_27);
-  all_values.push_back(FinancingDetails_27);
+  multiset<string> FinancingDetails_26;
+  set_field(msg, FIX::AgreementCurrency{"EUR"}, FinancingDetails_26);
+  set_field(msg, FIX::AgreementDate{"LOCALMKTDATE_1208868754"}, FinancingDetails_26);
+  set_field(msg, FIX::AgreementDesc{"STRING_2133166318"}, FinancingDetails_26);
+  set_field(msg, FIX::AgreementID{"STRING_519680319"}, FinancingDetails_26);
+  set_field(msg, FIX::DeliveryType{1}, FinancingDetails_26);
+  set_field(msg, FIX::EndDate{"LOCALMKTDATE_1440443360"}, FinancingDetails_26);
+  FIX::MarginRatio MarginRatio_26;
+  MarginRatio_26.setString("21.620000");
+set_field(msg, MarginRatio_26, FinancingDetails_26);
+  set_field(msg, FIX::StartDate{"LOCALMKTDATE_136971111"}, FinancingDetails_26);
+  set_field(msg, FIX::TerminationType{4}, FinancingDetails_26);
+  all_values.push_back(FinancingDetails_26);
   all_compo_names.insert(".");
 
   // InstrmtLegGrp
@@ -67,78 +70,78 @@ set_field(msg, MarginRatio_27, FinancingDetails_27);
     FIX50SP2::SecurityListRequest::NoLegs noLegs_0_0;
     // InstrmtLegGrp.NoLegs
     // InstrumentLeg
-    multiset<string> InstrumentLeg_105;
-    set_field(noLegs_0_0, FIX::EncodedLegIssuer{"DATA_928199695"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::EncodedLegIssuerLen{776897898}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::EncodedLegSecurityDesc{"DATA_199251525"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::EncodedLegSecurityDescLen{1215889352}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegCFICode{"STRING_1429509721"}, InstrumentLeg_105);
-    FIX::LegContractMultiplier LegContractMultiplier_105;
-    LegContractMultiplier_105.setString("12376046");
-set_field(noLegs_0_0, LegContractMultiplier_105, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegContractMultiplierUnit{1780031369}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegContractSettlMonth{"MONTHYEAR_699387035"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegCountryOfIssue{"COUNTRY_1847207730"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegCouponPaymentDate{"LOCALMKTDATE_1960188303"}, InstrumentLeg_105);
-    FIX::LegCouponRate LegCouponRate_105;
-    LegCouponRate_105.setString("54.910000");
-set_field(noLegs_0_0, LegCouponRate_105, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegCreditRating{"STRING_2077721600"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegCurrency{"CHF"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegDatedDate{"LOCALMKTDATE_603570040"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegExerciseStyle{1880667439}, InstrumentLeg_105);
-    FIX::LegFactor LegFactor_105;
-    LegFactor_105.setString("306638");
-set_field(noLegs_0_0, LegFactor_105, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegFlowScheduleType{292825852}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegInstrRegistry{"STRING_931013003"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegInterestAccrualDate{"LOCALMKTDATE_193451964"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegIssueDate{"LOCALMKTDATE_1160250970"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegIssuer{"STRING_518136002"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegLocaleOfIssue{"STRING_1137657854"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegMaturityDate{"LOCALMKTDATE_1436207038"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegMaturityMonthYear{"MONTHYEAR_1322135608"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegMaturityTime{"TZTIMEONLY_963658605"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegOptAttribute{'1'}, InstrumentLeg_105);
-    FIX::LegOptionRatio LegOptionRatio_105;
-    LegOptionRatio_105.setString("3616731");
-set_field(noLegs_0_0, LegOptionRatio_105, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegPool{"STRING_1271191317"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegPriceUnitOfMeasure{"STRING_1474446623"}, InstrumentLeg_105);
-    FIX::LegPriceUnitOfMeasureQty LegPriceUnitOfMeasureQty_105;
-    LegPriceUnitOfMeasureQty_105.setString("18977321");
-set_field(noLegs_0_0, LegPriceUnitOfMeasureQty_105, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegProduct{51907364}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegPutOrCall{103860873}, InstrumentLeg_105);
-    FIX::LegRatioQty LegRatioQty_105;
-    LegRatioQty_105.setString("20969836");
-set_field(noLegs_0_0, LegRatioQty_105, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegRedemptionDate{"LOCALMKTDATE_1267796716"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegRepoCollateralSecurityType{"STRING_1533370595"}, InstrumentLeg_105);
-    FIX::LegRepurchaseRate LegRepurchaseRate_105;
-    LegRepurchaseRate_105.setString("46.940000");
-set_field(noLegs_0_0, LegRepurchaseRate_105, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegRepurchaseTerm{900344438}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegSecurityDesc{"STRING_85273982"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegSecurityExchange{"EXCHANGE_886828776"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegSecurityID{"STRING_713049093"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegSecurityIDSource{"STRING_1892479474"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegSecuritySubType{"STRING_817066728"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegSecurityType{"STRING_1066595191"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegSide{'1'}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegStateOrProvinceOfIssue{"STRING_1420636768"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegStrikeCurrency{"USD"}, InstrumentLeg_105);
-    FIX::LegStrikePrice LegStrikePrice_105;
-    LegStrikePrice_105.setString("17134626");
-set_field(noLegs_0_0, LegStrikePrice_105, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegSymbol{"STRING_1730791985"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegSymbolSfx{"STRING_1725542832"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegTimeUnit{"STRING_726229943"}, InstrumentLeg_105);
-    set_field(noLegs_0_0, FIX::LegUnitOfMeasure{"STRING_101444340"}, InstrumentLeg_105);
-    FIX::LegUnitOfMeasureQty LegUnitOfMeasureQty_105;
-    LegUnitOfMeasureQty_105.setString("7157170");
-set_field(noLegs_0_0, LegUnitOfMeasureQty_105, InstrumentLeg_105);
-    all_values.push_back(InstrumentLeg_105);
+    multiset<string> InstrumentLeg_126;
+    set_field(noLegs_0_0, FIX::EncodedLegIssuer{"DATA_1342514222"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::EncodedLegIssuerLen{1139406442}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::EncodedLegSecurityDesc{"DATA_397241610"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::EncodedLegSecurityDescLen{715888092}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegCFICode{"STRING_1583724223"}, InstrumentLeg_126);
+    FIX::LegContractMultiplier LegContractMultiplier_126;
+    LegContractMultiplier_126.setString("7702544");
+set_field(noLegs_0_0, LegContractMultiplier_126, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegContractMultiplierUnit{1674640233}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegContractSettlMonth{"MONTHYEAR_1331820683"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegCountryOfIssue{"COUNTRY_279017826"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegCouponPaymentDate{"LOCALMKTDATE_54658433"}, InstrumentLeg_126);
+    FIX::LegCouponRate LegCouponRate_126;
+    LegCouponRate_126.setString("10.350000");
+set_field(noLegs_0_0, LegCouponRate_126, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegCreditRating{"STRING_1807972067"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegCurrency{"USD"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegDatedDate{"LOCALMKTDATE_1408834839"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegExerciseStyle{755100423}, InstrumentLeg_126);
+    FIX::LegFactor LegFactor_126;
+    LegFactor_126.setString("11526307");
+set_field(noLegs_0_0, LegFactor_126, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegFlowScheduleType{902749115}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegInstrRegistry{"STRING_1593035359"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegInterestAccrualDate{"LOCALMKTDATE_112828079"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegIssueDate{"LOCALMKTDATE_576328252"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegIssuer{"STRING_1598176022"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegLocaleOfIssue{"STRING_1321696833"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegMaturityDate{"LOCALMKTDATE_562010922"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegMaturityMonthYear{"MONTHYEAR_2117856341"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegMaturityTime{"TZTIMEONLY_973373310"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegOptAttribute{'2'}, InstrumentLeg_126);
+    FIX::LegOptionRatio LegOptionRatio_126;
+    LegOptionRatio_126.setString("14360648");
+set_field(noLegs_0_0, LegOptionRatio_126, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegPool{"STRING_1110344421"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegPriceUnitOfMeasure{"STRING_1170961869"}, InstrumentLeg_126);
+    FIX::LegPriceUnitOfMeasureQty LegPriceUnitOfMeasureQty_126;
+    LegPriceUnitOfMeasureQty_126.setString("10812754");
+set_field(noLegs_0_0, LegPriceUnitOfMeasureQty_126, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegProduct{305374995}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegPutOrCall{162884663}, InstrumentLeg_126);
+    FIX::LegRatioQty LegRatioQty_126;
+    LegRatioQty_126.setString("14785170");
+set_field(noLegs_0_0, LegRatioQty_126, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegRedemptionDate{"LOCALMKTDATE_1021263087"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegRepoCollateralSecurityType{"STRING_1746608887"}, InstrumentLeg_126);
+    FIX::LegRepurchaseRate LegRepurchaseRate_126;
+    LegRepurchaseRate_126.setString("78.680000");
+set_field(noLegs_0_0, LegRepurchaseRate_126, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegRepurchaseTerm{548419672}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegSecurityDesc{"STRING_930945922"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegSecurityExchange{"EXCHANGE_380305694"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegSecurityID{"STRING_603078106"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegSecurityIDSource{"STRING_668553309"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegSecuritySubType{"STRING_40794113"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegSecurityType{"STRING_2054155214"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegSide{'1'}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegStateOrProvinceOfIssue{"STRING_1449628953"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegStrikeCurrency{"JPY"}, InstrumentLeg_126);
+    FIX::LegStrikePrice LegStrikePrice_126;
+    LegStrikePrice_126.setString("2048944");
+set_field(noLegs_0_0, LegStrikePrice_126, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegSymbol{"STRING_107323700"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegSymbolSfx{"STRING_499698297"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegTimeUnit{"STRING_781222672"}, InstrumentLeg_126);
+    set_field(noLegs_0_0, FIX::LegUnitOfMeasure{"STRING_1705499722"}, InstrumentLeg_126);
+    FIX::LegUnitOfMeasureQty LegUnitOfMeasureQty_126;
+    LegUnitOfMeasureQty_126.setString("18213951");
+set_field(noLegs_0_0, LegUnitOfMeasureQty_126, InstrumentLeg_126);
+    all_values.push_back(InstrumentLeg_126);
     all_compo_names.insert("...NoLegs.");
 
     // LegSecAltIDGrp
@@ -146,10 +149,10 @@ set_field(noLegs_0_0, LegUnitOfMeasureQty_105, InstrumentLeg_105);
     {
       FIX50SP2::SecurityListRequest::NoLegs::NoLegSecurityAltID noLegSecurityAltID_0_1_0;
       // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_217;
-      set_field(noLegSecurityAltID_0_1_0, FIX::LegSecurityAltID{"STRING_1423579948"}, LegSecAltIDGrp_NoLegSecurityAltID_217);
-      set_field(noLegSecurityAltID_0_1_0, FIX::LegSecurityAltIDSource{"STRING_1679375643"}, LegSecAltIDGrp_NoLegSecurityAltID_217);
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_217);
+      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_252;
+      set_field(noLegSecurityAltID_0_1_0, FIX::LegSecurityAltID{"STRING_1675872416"}, LegSecAltIDGrp_NoLegSecurityAltID_252);
+      set_field(noLegSecurityAltID_0_1_0, FIX::LegSecurityAltIDSource{"STRING_647284793"}, LegSecAltIDGrp_NoLegSecurityAltID_252);
+      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_252);
       all_compo_names.insert("...NoLegs....NoLegSecurityAltID");
 
       noLegs_0_0.addGroup(noLegSecurityAltID_0_1_0);
@@ -157,357 +160,138 @@ set_field(noLegs_0_0, LegUnitOfMeasureQty_105, InstrumentLeg_105);
     {
       FIX50SP2::SecurityListRequest::NoLegs::NoLegSecurityAltID noLegSecurityAltID_0_1_1;
       // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_218;
-      set_field(noLegSecurityAltID_0_1_1, FIX::LegSecurityAltID{"STRING_1875839899"}, LegSecAltIDGrp_NoLegSecurityAltID_218);
-      set_field(noLegSecurityAltID_0_1_1, FIX::LegSecurityAltIDSource{"STRING_1785253049"}, LegSecAltIDGrp_NoLegSecurityAltID_218);
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_218);
+      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_253;
+      set_field(noLegSecurityAltID_0_1_1, FIX::LegSecurityAltID{"STRING_1198204228"}, LegSecAltIDGrp_NoLegSecurityAltID_253);
+      set_field(noLegSecurityAltID_0_1_1, FIX::LegSecurityAltIDSource{"STRING_964453623"}, LegSecAltIDGrp_NoLegSecurityAltID_253);
+      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_253);
       all_compo_names.insert("...NoLegs....NoLegSecurityAltID");
 
       noLegs_0_0.addGroup(noLegSecurityAltID_0_1_1);
     }
     msg.addGroup(noLegs_0_0);
   }
-  {
-    FIX50SP2::SecurityListRequest::NoLegs noLegs_0_1;
-    // InstrmtLegGrp.NoLegs
-    // InstrumentLeg
-    multiset<string> InstrumentLeg_106;
-    set_field(noLegs_0_1, FIX::EncodedLegIssuer{"DATA_803083312"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::EncodedLegIssuerLen{1202802874}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::EncodedLegSecurityDesc{"DATA_1535501572"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::EncodedLegSecurityDescLen{854990677}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegCFICode{"STRING_1306663748"}, InstrumentLeg_106);
-    FIX::LegContractMultiplier LegContractMultiplier_106;
-    LegContractMultiplier_106.setString("14850016");
-set_field(noLegs_0_1, LegContractMultiplier_106, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegContractMultiplierUnit{2122787393}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegContractSettlMonth{"MONTHYEAR_692550695"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegCountryOfIssue{"COUNTRY_524622666"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegCouponPaymentDate{"LOCALMKTDATE_875648183"}, InstrumentLeg_106);
-    FIX::LegCouponRate LegCouponRate_106;
-    LegCouponRate_106.setString("46.770000");
-set_field(noLegs_0_1, LegCouponRate_106, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegCreditRating{"STRING_1411451442"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegCurrency{"CHF"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegDatedDate{"LOCALMKTDATE_81034523"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegExerciseStyle{507808820}, InstrumentLeg_106);
-    FIX::LegFactor LegFactor_106;
-    LegFactor_106.setString("20242475");
-set_field(noLegs_0_1, LegFactor_106, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegFlowScheduleType{1501671291}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegInstrRegistry{"STRING_1307587802"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegInterestAccrualDate{"LOCALMKTDATE_1408854781"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegIssueDate{"LOCALMKTDATE_1067650264"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegIssuer{"STRING_890896140"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegLocaleOfIssue{"STRING_986913966"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegMaturityDate{"LOCALMKTDATE_1793880208"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegMaturityMonthYear{"MONTHYEAR_992340480"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegMaturityTime{"TZTIMEONLY_1702631004"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegOptAttribute{'1'}, InstrumentLeg_106);
-    FIX::LegOptionRatio LegOptionRatio_106;
-    LegOptionRatio_106.setString("2684367");
-set_field(noLegs_0_1, LegOptionRatio_106, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegPool{"STRING_1234523000"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegPriceUnitOfMeasure{"STRING_1537189793"}, InstrumentLeg_106);
-    FIX::LegPriceUnitOfMeasureQty LegPriceUnitOfMeasureQty_106;
-    LegPriceUnitOfMeasureQty_106.setString("20536898");
-set_field(noLegs_0_1, LegPriceUnitOfMeasureQty_106, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegProduct{2037606312}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegPutOrCall{592509019}, InstrumentLeg_106);
-    FIX::LegRatioQty LegRatioQty_106;
-    LegRatioQty_106.setString("14417077");
-set_field(noLegs_0_1, LegRatioQty_106, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegRedemptionDate{"LOCALMKTDATE_745113341"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegRepoCollateralSecurityType{"STRING_1899172767"}, InstrumentLeg_106);
-    FIX::LegRepurchaseRate LegRepurchaseRate_106;
-    LegRepurchaseRate_106.setString("57.250000");
-set_field(noLegs_0_1, LegRepurchaseRate_106, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegRepurchaseTerm{720417087}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegSecurityDesc{"STRING_444239814"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegSecurityExchange{"EXCHANGE_1303848391"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegSecurityID{"STRING_1596065270"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegSecurityIDSource{"STRING_1222064492"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegSecuritySubType{"STRING_567816186"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegSecurityType{"STRING_1037278899"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegSide{'1'}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegStateOrProvinceOfIssue{"STRING_648850709"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegStrikeCurrency{"USD"}, InstrumentLeg_106);
-    FIX::LegStrikePrice LegStrikePrice_106;
-    LegStrikePrice_106.setString("30383");
-set_field(noLegs_0_1, LegStrikePrice_106, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegSymbol{"STRING_705191874"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegSymbolSfx{"STRING_883020042"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegTimeUnit{"STRING_1070688617"}, InstrumentLeg_106);
-    set_field(noLegs_0_1, FIX::LegUnitOfMeasure{"STRING_1596088014"}, InstrumentLeg_106);
-    FIX::LegUnitOfMeasureQty LegUnitOfMeasureQty_106;
-    LegUnitOfMeasureQty_106.setString("18699340");
-set_field(noLegs_0_1, LegUnitOfMeasureQty_106, InstrumentLeg_106);
-    all_values.push_back(InstrumentLeg_106);
-    all_compo_names.insert("...NoLegs.");
-
-    // LegSecAltIDGrp
-    // Group LegSecAltIDGrp.NoLegSecurityAltID
-    {
-      FIX50SP2::SecurityListRequest::NoLegs::NoLegSecurityAltID noLegSecurityAltID_1_1_0;
-      // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_219;
-      set_field(noLegSecurityAltID_1_1_0, FIX::LegSecurityAltID{"STRING_440944846"}, LegSecAltIDGrp_NoLegSecurityAltID_219);
-      set_field(noLegSecurityAltID_1_1_0, FIX::LegSecurityAltIDSource{"STRING_1425081364"}, LegSecAltIDGrp_NoLegSecurityAltID_219);
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_219);
-      all_compo_names.insert("...NoLegs....NoLegSecurityAltID");
-
-      noLegs_0_1.addGroup(noLegSecurityAltID_1_1_0);
-    }
-    {
-      FIX50SP2::SecurityListRequest::NoLegs::NoLegSecurityAltID noLegSecurityAltID_1_1_1;
-      // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_220;
-      set_field(noLegSecurityAltID_1_1_1, FIX::LegSecurityAltID{"STRING_378435070"}, LegSecAltIDGrp_NoLegSecurityAltID_220);
-      set_field(noLegSecurityAltID_1_1_1, FIX::LegSecurityAltIDSource{"STRING_709381626"}, LegSecAltIDGrp_NoLegSecurityAltID_220);
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_220);
-      all_compo_names.insert("...NoLegs....NoLegSecurityAltID");
-
-      noLegs_0_1.addGroup(noLegSecurityAltID_1_1_1);
-    }
-    msg.addGroup(noLegs_0_1);
-  }
-  {
-    FIX50SP2::SecurityListRequest::NoLegs noLegs_0_2;
-    // InstrmtLegGrp.NoLegs
-    // InstrumentLeg
-    multiset<string> InstrumentLeg_107;
-    set_field(noLegs_0_2, FIX::EncodedLegIssuer{"DATA_512120716"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::EncodedLegIssuerLen{1915624863}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::EncodedLegSecurityDesc{"DATA_615587807"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::EncodedLegSecurityDescLen{402243381}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegCFICode{"STRING_360650235"}, InstrumentLeg_107);
-    FIX::LegContractMultiplier LegContractMultiplier_107;
-    LegContractMultiplier_107.setString("20572955");
-set_field(noLegs_0_2, LegContractMultiplier_107, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegContractMultiplierUnit{1147356722}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegContractSettlMonth{"MONTHYEAR_112339354"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegCountryOfIssue{"COUNTRY_689037638"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegCouponPaymentDate{"LOCALMKTDATE_1867773809"}, InstrumentLeg_107);
-    FIX::LegCouponRate LegCouponRate_107;
-    LegCouponRate_107.setString("91.690000");
-set_field(noLegs_0_2, LegCouponRate_107, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegCreditRating{"STRING_1992886030"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegCurrency{"EUR"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegDatedDate{"LOCALMKTDATE_413218568"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegExerciseStyle{206150683}, InstrumentLeg_107);
-    FIX::LegFactor LegFactor_107;
-    LegFactor_107.setString("13760450");
-set_field(noLegs_0_2, LegFactor_107, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegFlowScheduleType{1062069277}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegInstrRegistry{"STRING_1751238403"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegInterestAccrualDate{"LOCALMKTDATE_850210269"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegIssueDate{"LOCALMKTDATE_1065107629"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegIssuer{"STRING_308946629"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegLocaleOfIssue{"STRING_1733230311"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegMaturityDate{"LOCALMKTDATE_2135796246"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegMaturityMonthYear{"MONTHYEAR_1905034643"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegMaturityTime{"TZTIMEONLY_1455680671"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegOptAttribute{'7'}, InstrumentLeg_107);
-    FIX::LegOptionRatio LegOptionRatio_107;
-    LegOptionRatio_107.setString("1984958");
-set_field(noLegs_0_2, LegOptionRatio_107, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegPool{"STRING_733278387"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegPriceUnitOfMeasure{"STRING_1083832846"}, InstrumentLeg_107);
-    FIX::LegPriceUnitOfMeasureQty LegPriceUnitOfMeasureQty_107;
-    LegPriceUnitOfMeasureQty_107.setString("9078774");
-set_field(noLegs_0_2, LegPriceUnitOfMeasureQty_107, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegProduct{1245399104}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegPutOrCall{851974061}, InstrumentLeg_107);
-    FIX::LegRatioQty LegRatioQty_107;
-    LegRatioQty_107.setString("15234652");
-set_field(noLegs_0_2, LegRatioQty_107, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegRedemptionDate{"LOCALMKTDATE_1647642485"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegRepoCollateralSecurityType{"STRING_1212624296"}, InstrumentLeg_107);
-    FIX::LegRepurchaseRate LegRepurchaseRate_107;
-    LegRepurchaseRate_107.setString("71.870000");
-set_field(noLegs_0_2, LegRepurchaseRate_107, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegRepurchaseTerm{647515559}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegSecurityDesc{"STRING_1324963651"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegSecurityExchange{"EXCHANGE_2122314826"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegSecurityID{"STRING_367805721"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegSecurityIDSource{"STRING_1881542820"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegSecuritySubType{"STRING_1967717208"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegSecurityType{"STRING_1684161153"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegSide{'1'}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegStateOrProvinceOfIssue{"STRING_233452128"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegStrikeCurrency{"EUR"}, InstrumentLeg_107);
-    FIX::LegStrikePrice LegStrikePrice_107;
-    LegStrikePrice_107.setString("12955214");
-set_field(noLegs_0_2, LegStrikePrice_107, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegSymbol{"STRING_1494066591"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegSymbolSfx{"STRING_1591474462"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegTimeUnit{"STRING_213145386"}, InstrumentLeg_107);
-    set_field(noLegs_0_2, FIX::LegUnitOfMeasure{"STRING_1803013220"}, InstrumentLeg_107);
-    FIX::LegUnitOfMeasureQty LegUnitOfMeasureQty_107;
-    LegUnitOfMeasureQty_107.setString("11772211");
-set_field(noLegs_0_2, LegUnitOfMeasureQty_107, InstrumentLeg_107);
-    all_values.push_back(InstrumentLeg_107);
-    all_compo_names.insert("...NoLegs.");
-
-    // LegSecAltIDGrp
-    // Group LegSecAltIDGrp.NoLegSecurityAltID
-    {
-      FIX50SP2::SecurityListRequest::NoLegs::NoLegSecurityAltID noLegSecurityAltID_2_1_0;
-      // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_221;
-      set_field(noLegSecurityAltID_2_1_0, FIX::LegSecurityAltID{"STRING_1560564215"}, LegSecAltIDGrp_NoLegSecurityAltID_221);
-      set_field(noLegSecurityAltID_2_1_0, FIX::LegSecurityAltIDSource{"STRING_485418148"}, LegSecAltIDGrp_NoLegSecurityAltID_221);
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_221);
-      all_compo_names.insert("...NoLegs....NoLegSecurityAltID");
-
-      noLegs_0_2.addGroup(noLegSecurityAltID_2_1_0);
-    }
-    {
-      FIX50SP2::SecurityListRequest::NoLegs::NoLegSecurityAltID noLegSecurityAltID_2_1_1;
-      // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_222;
-      set_field(noLegSecurityAltID_2_1_1, FIX::LegSecurityAltID{"STRING_906855760"}, LegSecAltIDGrp_NoLegSecurityAltID_222);
-      set_field(noLegSecurityAltID_2_1_1, FIX::LegSecurityAltIDSource{"STRING_1759060056"}, LegSecAltIDGrp_NoLegSecurityAltID_222);
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_222);
-      all_compo_names.insert("...NoLegs....NoLegSecurityAltID");
-
-      noLegs_0_2.addGroup(noLegSecurityAltID_2_1_1);
-    }
-    {
-      FIX50SP2::SecurityListRequest::NoLegs::NoLegSecurityAltID noLegSecurityAltID_2_1_2;
-      // LegSecAltIDGrp.NoLegSecurityAltID
-      multiset<string> LegSecAltIDGrp_NoLegSecurityAltID_223;
-      set_field(noLegSecurityAltID_2_1_2, FIX::LegSecurityAltID{"STRING_1218696536"}, LegSecAltIDGrp_NoLegSecurityAltID_223);
-      set_field(noLegSecurityAltID_2_1_2, FIX::LegSecurityAltIDSource{"STRING_1990688606"}, LegSecAltIDGrp_NoLegSecurityAltID_223);
-      all_values.push_back(LegSecAltIDGrp_NoLegSecurityAltID_223);
-      all_compo_names.insert("...NoLegs....NoLegSecurityAltID");
-
-      noLegs_0_2.addGroup(noLegSecurityAltID_2_1_2);
-    }
-    msg.addGroup(noLegs_0_2);
-  }
   // Instrument
-  multiset<string> Instrument_71;
-  FIX::AttachmentPoint AttachmentPoint_71;
-  AttachmentPoint_71.setString("38.750000");
-set_field(msg, AttachmentPoint_71, Instrument_71);
-  set_field(msg, FIX::CFICode{"STRING_316611992"}, Instrument_71);
-  set_field(msg, FIX::CPProgram{1}, Instrument_71);
-  set_field(msg, FIX::CPRegType{"STRING_2042919150"}, Instrument_71);
-  FIX::CapPrice CapPrice_71;
-  CapPrice_71.setString("19642544");
-set_field(msg, CapPrice_71, Instrument_71);
-  FIX::ContractMultiplier ContractMultiplier_71;
-  ContractMultiplier_71.setString("19078033");
-set_field(msg, ContractMultiplier_71, Instrument_71);
-  set_field(msg, FIX::ContractMultiplierUnit{2}, Instrument_71);
-  set_field(msg, FIX::ContractSettlMonth{"MONTHYEAR_464286388"}, Instrument_71);
-  set_field(msg, FIX::CountryOfIssue{"COUNTRY_1085283319"}, Instrument_71);
-  set_field(msg, FIX::CouponPaymentDate{"LOCALMKTDATE_1303543867"}, Instrument_71);
-  FIX::CouponRate CouponRate_71;
-  CouponRate_71.setString("21.090000");
-set_field(msg, CouponRate_71, Instrument_71);
-  set_field(msg, FIX::CreditRating{"STRING_819342491"}, Instrument_71);
-  set_field(msg, FIX::DatedDate{"LOCALMKTDATE_1123777427"}, Instrument_71);
-  FIX::DetachmentPoint DetachmentPoint_71;
-  DetachmentPoint_71.setString("96.140000");
-set_field(msg, DetachmentPoint_71, Instrument_71);
-  set_field(msg, FIX::EncodedIssuer{"DATA_184561676"}, Instrument_71);
-  set_field(msg, FIX::EncodedIssuerLen{1357229555}, Instrument_71);
-  set_field(msg, FIX::EncodedSecurityDesc{"DATA_111597803"}, Instrument_71);
-  set_field(msg, FIX::EncodedSecurityDescLen{925825870}, Instrument_71);
-  set_field(msg, FIX::ExerciseStyle{1}, Instrument_71);
-  FIX::Factor Factor_71;
-  Factor_71.setString("16056643");
-set_field(msg, Factor_71, Instrument_71);
-  set_field(msg, FIX::FlexProductEligibilityIndicator{true}, Instrument_71);
-  set_field(msg, FIX::FlexibleIndicator{false}, Instrument_71);
-  FIX::FloorPrice FloorPrice_71;
-  FloorPrice_71.setString("12611939");
-set_field(msg, FloorPrice_71, Instrument_71);
-  set_field(msg, FIX::FlowScheduleType{0}, Instrument_71);
-  set_field(msg, FIX::InstrRegistry{"STRING_919870684"}, Instrument_71);
-  set_field(msg, FIX::InstrmtAssignmentMethod{'6'}, Instrument_71);
-  set_field(msg, FIX::InterestAccrualDate{"LOCALMKTDATE_2032455958"}, Instrument_71);
-  set_field(msg, FIX::IssueDate{"LOCALMKTDATE_1826726444"}, Instrument_71);
-  set_field(msg, FIX::Issuer{"STRING_285850943"}, Instrument_71);
-  set_field(msg, FIX::ListMethod{0}, Instrument_71);
-  set_field(msg, FIX::LocaleOfIssue{"STRING_1669931403"}, Instrument_71);
-  set_field(msg, FIX::MaturityDate{"LOCALMKTDATE_805304818"}, Instrument_71);
-  set_field(msg, FIX::MaturityMonthYear{"MONTHYEAR_1420280838"}, Instrument_71);
-  set_field(msg, FIX::MaturityTime{"TZTIMEONLY_217626775"}, Instrument_71);
-  FIX::MinPriceIncrement MinPriceIncrement_71;
-  MinPriceIncrement_71.setString("7007403");
-set_field(msg, MinPriceIncrement_71, Instrument_71);
-  FIX::MinPriceIncrementAmount MinPriceIncrementAmount_71;
-  MinPriceIncrementAmount_71.setString("12370516");
-set_field(msg, MinPriceIncrementAmount_71, Instrument_71);
-  set_field(msg, FIX::NTPositionLimit{2125430091}, Instrument_71);
-  FIX::NotionalPercentageOutstanding NotionalPercentageOutstanding_71;
-  NotionalPercentageOutstanding_71.setString("30.100000");
-set_field(msg, NotionalPercentageOutstanding_71, Instrument_71);
-  set_field(msg, FIX::OptAttribute{'1'}, Instrument_71);
-  FIX::OptPayoutAmount OptPayoutAmount_71;
-  OptPayoutAmount_71.setString("10632297");
-set_field(msg, OptPayoutAmount_71, Instrument_71);
-  set_field(msg, FIX::OptPayoutType{2}, Instrument_71);
-  FIX::OriginalNotionalPercentageOutstanding OriginalNotionalPercentageOutstanding_71;
-  OriginalNotionalPercentageOutstanding_71.setString("65.170000");
-set_field(msg, OriginalNotionalPercentageOutstanding_71, Instrument_71);
-  set_field(msg, FIX::Pool{"STRING_1882572254"}, Instrument_71);
-  set_field(msg, FIX::PositionLimit{161807009}, Instrument_71);
-  set_field(msg, FIX::PriceQuoteMethod{"STRING_STD"}, Instrument_71);
-  set_field(msg, FIX::PriceUnitOfMeasure{"STRING_2067133931"}, Instrument_71);
-  FIX::PriceUnitOfMeasureQty PriceUnitOfMeasureQty_71;
-  PriceUnitOfMeasureQty_71.setString("15190365");
-set_field(msg, PriceUnitOfMeasureQty_71, Instrument_71);
-  set_field(msg, FIX::Product{7}, Instrument_71);
-  set_field(msg, FIX::ProductComplex{"STRING_845476153"}, Instrument_71);
-  set_field(msg, FIX::PutOrCall{1}, Instrument_71);
-  set_field(msg, FIX::RedemptionDate{"LOCALMKTDATE_324494681"}, Instrument_71);
-  set_field(msg, FIX::RepoCollateralSecurityType{"STRING_1215292837"}, Instrument_71);
-  FIX::RepurchaseRate RepurchaseRate_71;
-  RepurchaseRate_71.setString("29.280000");
-set_field(msg, RepurchaseRate_71, Instrument_71);
-  set_field(msg, FIX::RepurchaseTerm{1585688648}, Instrument_71);
-  set_field(msg, FIX::RestructuringType{"STRING_XR"}, Instrument_71);
-  set_field(msg, FIX::SecurityDesc{"STRING_1515103612"}, Instrument_71);
-  set_field(msg, FIX::SecurityExchange{"EXCHANGE_112479535"}, Instrument_71);
-  set_field(msg, FIX::SecurityGroup{"STRING_499819310"}, Instrument_71);
-  set_field(msg, FIX::SecurityID{"STRING_1194346408"}, Instrument_71);
-  set_field(msg, FIX::SecurityIDSource{"STRING_J"}, Instrument_71);
-  set_field(msg, FIX::SecurityStatus{"STRING_1"}, Instrument_71);
-  set_field(msg, FIX::SecuritySubType{"STRING_716794163"}, Instrument_71);
-  set_field(msg, FIX::SecurityType{"STRING_XLINKD"}, Instrument_71);
-  set_field(msg, FIX::Seniority{"STRING_SB"}, Instrument_71);
-  set_field(msg, FIX::SettlMethod{'C'}, Instrument_71);
-  set_field(msg, FIX::SettleOnOpenFlag{"STRING_1904375617"}, Instrument_71);
-  set_field(msg, FIX::StateOrProvinceOfIssue{"STRING_2113337014"}, Instrument_71);
-  set_field(msg, FIX::StrikeCurrency{"EUR"}, Instrument_71);
-  FIX::StrikeMultiplier StrikeMultiplier_71;
-  StrikeMultiplier_71.setString("16671914");
-set_field(msg, StrikeMultiplier_71, Instrument_71);
-  FIX::StrikePrice StrikePrice_71;
-  StrikePrice_71.setString("19755971");
-set_field(msg, StrikePrice_71, Instrument_71);
-  set_field(msg, FIX::StrikePriceBoundaryMethod{1}, Instrument_71);
-  FIX::StrikePriceBoundaryPrecision StrikePriceBoundaryPrecision_71;
-  StrikePriceBoundaryPrecision_71.setString("79.400000");
-set_field(msg, StrikePriceBoundaryPrecision_71, Instrument_71);
-  set_field(msg, FIX::StrikePriceDeterminationMethod{4}, Instrument_71);
-  FIX::StrikeValue StrikeValue_71;
-  StrikeValue_71.setString("9861815");
-set_field(msg, StrikeValue_71, Instrument_71);
-  set_field(msg, FIX::Symbol{"STRING_660370424"}, Instrument_71);
-  set_field(msg, FIX::SymbolSfx{"STRING_CD"}, Instrument_71);
-  set_field(msg, FIX::TimeUnit{"STRING_Wk"}, Instrument_71);
-  set_field(msg, FIX::UnderlyingPriceDeterminationMethod{4}, Instrument_71);
-  set_field(msg, FIX::UnitOfMeasure{"STRING_lbs"}, Instrument_71);
-  FIX::UnitOfMeasureQty UnitOfMeasureQty_71;
-  UnitOfMeasureQty_71.setString("2345547");
-set_field(msg, UnitOfMeasureQty_71, Instrument_71);
-  set_field(msg, FIX::ValuationMethod{"STRING_EQTY"}, Instrument_71);
-  all_values.push_back(Instrument_71);
+  multiset<string> Instrument_83;
+  FIX::AttachmentPoint AttachmentPoint_83;
+  AttachmentPoint_83.setString("92.150000");
+set_field(msg, AttachmentPoint_83, Instrument_83);
+  set_field(msg, FIX::CFICode{"STRING_221682449"}, Instrument_83);
+  set_field(msg, FIX::CPProgram{99}, Instrument_83);
+  set_field(msg, FIX::CPRegType{"STRING_2063004210"}, Instrument_83);
+  FIX::CapPrice CapPrice_83;
+  CapPrice_83.setString("3845671");
+set_field(msg, CapPrice_83, Instrument_83);
+  FIX::ContractMultiplier ContractMultiplier_83;
+  ContractMultiplier_83.setString("13767624");
+set_field(msg, ContractMultiplier_83, Instrument_83);
+  set_field(msg, FIX::ContractMultiplierUnit{2}, Instrument_83);
+  set_field(msg, FIX::ContractSettlMonth{"MONTHYEAR_2131176000"}, Instrument_83);
+  set_field(msg, FIX::CountryOfIssue{"COUNTRY_1478050309"}, Instrument_83);
+  set_field(msg, FIX::CouponPaymentDate{"LOCALMKTDATE_1485203322"}, Instrument_83);
+  FIX::CouponRate CouponRate_83;
+  CouponRate_83.setString("82.740000");
+set_field(msg, CouponRate_83, Instrument_83);
+  set_field(msg, FIX::CreditRating{"STRING_1858356003"}, Instrument_83);
+  set_field(msg, FIX::DatedDate{"LOCALMKTDATE_2088281428"}, Instrument_83);
+  FIX::DetachmentPoint DetachmentPoint_83;
+  DetachmentPoint_83.setString("15.840000");
+set_field(msg, DetachmentPoint_83, Instrument_83);
+  set_field(msg, FIX::EncodedIssuer{"DATA_1899150117"}, Instrument_83);
+  set_field(msg, FIX::EncodedIssuerLen{1994952994}, Instrument_83);
+  set_field(msg, FIX::EncodedSecurityDesc{"DATA_817431037"}, Instrument_83);
+  set_field(msg, FIX::EncodedSecurityDescLen{1201295422}, Instrument_83);
+  set_field(msg, FIX::ExerciseStyle{0}, Instrument_83);
+  FIX::Factor Factor_83;
+  Factor_83.setString("12043012");
+set_field(msg, Factor_83, Instrument_83);
+  set_field(msg, FIX::FlexProductEligibilityIndicator{true}, Instrument_83);
+  set_field(msg, FIX::FlexibleIndicator{true}, Instrument_83);
+  FIX::FloorPrice FloorPrice_83;
+  FloorPrice_83.setString("17039995");
+set_field(msg, FloorPrice_83, Instrument_83);
+  set_field(msg, FIX::FlowScheduleType{1}, Instrument_83);
+  set_field(msg, FIX::InstrRegistry{"STRING_174581111"}, Instrument_83);
+  set_field(msg, FIX::InstrmtAssignmentMethod{'1'}, Instrument_83);
+  set_field(msg, FIX::InterestAccrualDate{"LOCALMKTDATE_1383162460"}, Instrument_83);
+  set_field(msg, FIX::IssueDate{"LOCALMKTDATE_1850453527"}, Instrument_83);
+  set_field(msg, FIX::Issuer{"STRING_2025195829"}, Instrument_83);
+  set_field(msg, FIX::ListMethod{0}, Instrument_83);
+  set_field(msg, FIX::LocaleOfIssue{"STRING_667423502"}, Instrument_83);
+  set_field(msg, FIX::MaturityDate{"LOCALMKTDATE_1635341396"}, Instrument_83);
+  set_field(msg, FIX::MaturityMonthYear{"MONTHYEAR_655565489"}, Instrument_83);
+  set_field(msg, FIX::MaturityTime{"TZTIMEONLY_565668905"}, Instrument_83);
+  FIX::MinPriceIncrement MinPriceIncrement_83;
+  MinPriceIncrement_83.setString("15508619");
+set_field(msg, MinPriceIncrement_83, Instrument_83);
+  FIX::MinPriceIncrementAmount MinPriceIncrementAmount_83;
+  MinPriceIncrementAmount_83.setString("10401326");
+set_field(msg, MinPriceIncrementAmount_83, Instrument_83);
+  set_field(msg, FIX::NTPositionLimit{1942431346}, Instrument_83);
+  FIX::NotionalPercentageOutstanding NotionalPercentageOutstanding_83;
+  NotionalPercentageOutstanding_83.setString("19.610000");
+set_field(msg, NotionalPercentageOutstanding_83, Instrument_83);
+  set_field(msg, FIX::OptAttribute{'1'}, Instrument_83);
+  FIX::OptPayoutAmount OptPayoutAmount_83;
+  OptPayoutAmount_83.setString("12729980");
+set_field(msg, OptPayoutAmount_83, Instrument_83);
+  set_field(msg, FIX::OptPayoutType{2}, Instrument_83);
+  FIX::OriginalNotionalPercentageOutstanding OriginalNotionalPercentageOutstanding_83;
+  OriginalNotionalPercentageOutstanding_83.setString("32.290000");
+set_field(msg, OriginalNotionalPercentageOutstanding_83, Instrument_83);
+  set_field(msg, FIX::Pool{"STRING_983870362"}, Instrument_83);
+  set_field(msg, FIX::PositionLimit{1766163064}, Instrument_83);
+  set_field(msg, FIX::PriceQuoteMethod{"STRING_INX"}, Instrument_83);
+  set_field(msg, FIX::PriceUnitOfMeasure{"STRING_735536831"}, Instrument_83);
+  FIX::PriceUnitOfMeasureQty PriceUnitOfMeasureQty_83;
+  PriceUnitOfMeasureQty_83.setString("16136324");
+set_field(msg, PriceUnitOfMeasureQty_83, Instrument_83);
+  set_field(msg, FIX::Product{13}, Instrument_83);
+  set_field(msg, FIX::ProductComplex{"STRING_1936832253"}, Instrument_83);
+  set_field(msg, FIX::PutOrCall{0}, Instrument_83);
+  set_field(msg, FIX::RedemptionDate{"LOCALMKTDATE_1248419810"}, Instrument_83);
+  set_field(msg, FIX::RepoCollateralSecurityType{"STRING_1195538447"}, Instrument_83);
+  FIX::RepurchaseRate RepurchaseRate_83;
+  RepurchaseRate_83.setString("51.350000");
+set_field(msg, RepurchaseRate_83, Instrument_83);
+  set_field(msg, FIX::RepurchaseTerm{804935715}, Instrument_83);
+  set_field(msg, FIX::RestructuringType{"STRING_MR"}, Instrument_83);
+  set_field(msg, FIX::SecurityDesc{"STRING_766536246"}, Instrument_83);
+  set_field(msg, FIX::SecurityExchange{"EXCHANGE_35363103"}, Instrument_83);
+  set_field(msg, FIX::SecurityGroup{"STRING_471146125"}, Instrument_83);
+  set_field(msg, FIX::SecurityID{"STRING_469506125"}, Instrument_83);
+  set_field(msg, FIX::SecurityIDSource{"STRING_F"}, Instrument_83);
+  set_field(msg, FIX::SecurityStatus{"STRING_2"}, Instrument_83);
+  set_field(msg, FIX::SecuritySubType{"STRING_1136929627"}, Instrument_83);
+  set_field(msg, FIX::SecurityType{"STRING_SECPLEDGE"}, Instrument_83);
+  set_field(msg, FIX::Seniority{"STRING_SR"}, Instrument_83);
+  set_field(msg, FIX::SettlMethod{'P'}, Instrument_83);
+  set_field(msg, FIX::SettleOnOpenFlag{"STRING_951794992"}, Instrument_83);
+  set_field(msg, FIX::StateOrProvinceOfIssue{"STRING_453243609"}, Instrument_83);
+  set_field(msg, FIX::StrikeCurrency{"CAN"}, Instrument_83);
+  FIX::StrikeMultiplier StrikeMultiplier_83;
+  StrikeMultiplier_83.setString("14770685");
+set_field(msg, StrikeMultiplier_83, Instrument_83);
+  FIX::StrikePrice StrikePrice_83;
+  StrikePrice_83.setString("6230605");
+set_field(msg, StrikePrice_83, Instrument_83);
+  set_field(msg, FIX::StrikePriceBoundaryMethod{4}, Instrument_83);
+  FIX::StrikePriceBoundaryPrecision StrikePriceBoundaryPrecision_83;
+  StrikePriceBoundaryPrecision_83.setString("81.450000");
+set_field(msg, StrikePriceBoundaryPrecision_83, Instrument_83);
+  set_field(msg, FIX::StrikePriceDeterminationMethod{1}, Instrument_83);
+  FIX::StrikeValue StrikeValue_83;
+  StrikeValue_83.setString("5885180");
+set_field(msg, StrikeValue_83, Instrument_83);
+  set_field(msg, FIX::Symbol{"STRING_494735662"}, Instrument_83);
+  set_field(msg, FIX::SymbolSfx{"STRING_CD"}, Instrument_83);
+  set_field(msg, FIX::TimeUnit{"STRING_Min"}, Instrument_83);
+  set_field(msg, FIX::UnderlyingPriceDeterminationMethod{1}, Instrument_83);
+  set_field(msg, FIX::UnitOfMeasure{"STRING_MMbbl"}, Instrument_83);
+  FIX::UnitOfMeasureQty UnitOfMeasureQty_83;
+  UnitOfMeasureQty_83.setString("300568");
+set_field(msg, UnitOfMeasureQty_83, Instrument_83);
+  set_field(msg, FIX::ValuationMethod{"STRING_FUT"}, Instrument_83);
+  all_values.push_back(Instrument_83);
   all_compo_names.insert(".");
 
   // ComplexEvents
@@ -515,21 +299,21 @@ set_field(msg, UnitOfMeasureQty_71, Instrument_71);
   {
     FIX50SP2::SecurityListRequest::NoComplexEvents noComplexEvents_0_0;
     // ComplexEvents.NoComplexEvents
-    multiset<string> ComplexEvents_NoComplexEvents_149;
-    set_field(noComplexEvents_0_0, FIX::ComplexEventCondition{2}, ComplexEvents_NoComplexEvents_149);
-    FIX::ComplexEventPrice ComplexEventPrice_149;
-    ComplexEventPrice_149.setString("12893840");
-set_field(noComplexEvents_0_0, ComplexEventPrice_149, ComplexEvents_NoComplexEvents_149);
-    set_field(noComplexEvents_0_0, FIX::ComplexEventPriceBoundaryMethod{4}, ComplexEvents_NoComplexEvents_149);
-    FIX::ComplexEventPriceBoundaryPrecision ComplexEventPriceBoundaryPrecision_149;
-    ComplexEventPriceBoundaryPrecision_149.setString("76.070000");
-set_field(noComplexEvents_0_0, ComplexEventPriceBoundaryPrecision_149, ComplexEvents_NoComplexEvents_149);
-    set_field(noComplexEvents_0_0, FIX::ComplexEventPriceTimeType{3}, ComplexEvents_NoComplexEvents_149);
-    set_field(noComplexEvents_0_0, FIX::ComplexEventType{3}, ComplexEvents_NoComplexEvents_149);
-    FIX::ComplexOptPayoutAmount ComplexOptPayoutAmount_149;
-    ComplexOptPayoutAmount_149.setString("13917540");
-set_field(noComplexEvents_0_0, ComplexOptPayoutAmount_149, ComplexEvents_NoComplexEvents_149);
-    all_values.push_back(ComplexEvents_NoComplexEvents_149);
+    multiset<string> ComplexEvents_NoComplexEvents_171;
+    set_field(noComplexEvents_0_0, FIX::ComplexEventCondition{1}, ComplexEvents_NoComplexEvents_171);
+    FIX::ComplexEventPrice ComplexEventPrice_171;
+    ComplexEventPrice_171.setString("4447260");
+set_field(noComplexEvents_0_0, ComplexEventPrice_171, ComplexEvents_NoComplexEvents_171);
+    set_field(noComplexEvents_0_0, FIX::ComplexEventPriceBoundaryMethod{5}, ComplexEvents_NoComplexEvents_171);
+    FIX::ComplexEventPriceBoundaryPrecision ComplexEventPriceBoundaryPrecision_171;
+    ComplexEventPriceBoundaryPrecision_171.setString("82.460000");
+set_field(noComplexEvents_0_0, ComplexEventPriceBoundaryPrecision_171, ComplexEvents_NoComplexEvents_171);
+    set_field(noComplexEvents_0_0, FIX::ComplexEventPriceTimeType{1}, ComplexEvents_NoComplexEvents_171);
+    set_field(noComplexEvents_0_0, FIX::ComplexEventType{1}, ComplexEvents_NoComplexEvents_171);
+    FIX::ComplexOptPayoutAmount ComplexOptPayoutAmount_171;
+    ComplexOptPayoutAmount_171.setString("18580543");
+set_field(noComplexEvents_0_0, ComplexOptPayoutAmount_171, ComplexEvents_NoComplexEvents_171);
+    all_values.push_back(ComplexEvents_NoComplexEvents_171);
     all_compo_names.insert("....NoComplexEvents");
 
     // ComplexEventDates
@@ -537,10 +321,10 @@ set_field(noComplexEvents_0_0, ComplexOptPayoutAmount_149, ComplexEvents_NoCompl
     {
       FIX50SP2::SecurityListRequest::NoComplexEvents::NoComplexEventDates noComplexEventDates_0_1_0;
       // ComplexEventDates.NoComplexEventDates
-      multiset<string> ComplexEventDates_NoComplexEventDates_310;
-      set_field(noComplexEventDates_0_1_0, FIX::ComplexEventEndDate{FIX::UTCTIMESTAMP(3, 22, 54, 25, 4, 2008)}, ComplexEventDates_NoComplexEventDates_310);
-      set_field(noComplexEventDates_0_1_0, FIX::ComplexEventStartDate{FIX::UTCTIMESTAMP(2, 55, 48, 11, 4, 2010)}, ComplexEventDates_NoComplexEventDates_310);
-      all_values.push_back(ComplexEventDates_NoComplexEventDates_310);
+      multiset<string> ComplexEventDates_NoComplexEventDates_346;
+      set_field(noComplexEventDates_0_1_0, FIX::ComplexEventEndDate{FIX::UTCTIMESTAMP(15, 2, 12, 16, 11, 2010)}, ComplexEventDates_NoComplexEventDates_346);
+      set_field(noComplexEventDates_0_1_0, FIX::ComplexEventStartDate{FIX::UTCTIMESTAMP(3, 38, 49, 19, 12, 2015)}, ComplexEventDates_NoComplexEventDates_346);
+      all_values.push_back(ComplexEventDates_NoComplexEventDates_346);
       all_compo_names.insert("....NoComplexEvents...NoComplexEventDates");
 
       // ComplexEventTimes
@@ -548,124 +332,80 @@ set_field(noComplexEvents_0_0, ComplexOptPayoutAmount_149, ComplexEvents_NoCompl
       {
         FIX50SP2::SecurityListRequest::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_0_2_0;
         // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_632;
-        set_field(noComplexEventTimes_0_0_2_0, FIX::ComplexEventEndTime{FIX::UTCTIMEONLY(22, 50, 22)}, ComplexEventTimes_NoComplexEventTimes_632);
-        set_field(noComplexEventTimes_0_0_2_0, FIX::ComplexEventStartTime{FIX::UTCTIMEONLY(5, 22, 7)}, ComplexEventTimes_NoComplexEventTimes_632);
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_632);
+        multiset<string> ComplexEventTimes_NoComplexEventTimes_704;
+        set_field(noComplexEventTimes_0_0_2_0, FIX::ComplexEventEndTime{FIX::UTCTIMEONLY(1, 11, 13)}, ComplexEventTimes_NoComplexEventTimes_704);
+        set_field(noComplexEventTimes_0_0_2_0, FIX::ComplexEventStartTime{FIX::UTCTIMEONLY(20, 32, 40)}, ComplexEventTimes_NoComplexEventTimes_704);
+        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_704);
         all_compo_names.insert("....NoComplexEvents...NoComplexEventDates...NoComplexEventTimes");
 
         noComplexEventDates_0_1_0.addGroup(noComplexEventTimes_0_0_2_0);
       }
-      {
-        FIX50SP2::SecurityListRequest::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_0_2_1;
-        // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_633;
-        set_field(noComplexEventTimes_0_0_2_1, FIX::ComplexEventEndTime{FIX::UTCTIMEONLY(15, 55, 55)}, ComplexEventTimes_NoComplexEventTimes_633);
-        set_field(noComplexEventTimes_0_0_2_1, FIX::ComplexEventStartTime{FIX::UTCTIMEONLY(10, 3, 9)}, ComplexEventTimes_NoComplexEventTimes_633);
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_633);
-        all_compo_names.insert("....NoComplexEvents...NoComplexEventDates...NoComplexEventTimes");
-
-        noComplexEventDates_0_1_0.addGroup(noComplexEventTimes_0_0_2_1);
-      }
-      {
-        FIX50SP2::SecurityListRequest::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_0_2_2;
-        // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_634;
-        set_field(noComplexEventTimes_0_0_2_2, FIX::ComplexEventEndTime{FIX::UTCTIMEONLY(10, 32, 35)}, ComplexEventTimes_NoComplexEventTimes_634);
-        set_field(noComplexEventTimes_0_0_2_2, FIX::ComplexEventStartTime{FIX::UTCTIMEONLY(11, 47, 7)}, ComplexEventTimes_NoComplexEventTimes_634);
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_634);
-        all_compo_names.insert("....NoComplexEvents...NoComplexEventDates...NoComplexEventTimes");
-
-        noComplexEventDates_0_1_0.addGroup(noComplexEventTimes_0_0_2_2);
-      }
       noComplexEvents_0_0.addGroup(noComplexEventDates_0_1_0);
     }
-    {
-      FIX50SP2::SecurityListRequest::NoComplexEvents::NoComplexEventDates noComplexEventDates_0_1_1;
-      // ComplexEventDates.NoComplexEventDates
-      multiset<string> ComplexEventDates_NoComplexEventDates_311;
-      set_field(noComplexEventDates_0_1_1, FIX::ComplexEventEndDate{FIX::UTCTIMESTAMP(18, 47, 21, 1, 4, 2009)}, ComplexEventDates_NoComplexEventDates_311);
-      set_field(noComplexEventDates_0_1_1, FIX::ComplexEventStartDate{FIX::UTCTIMESTAMP(18, 36, 42, 8, 6, 2003)}, ComplexEventDates_NoComplexEventDates_311);
-      all_values.push_back(ComplexEventDates_NoComplexEventDates_311);
-      all_compo_names.insert("....NoComplexEvents...NoComplexEventDates");
-
-      // ComplexEventTimes
-      // Group ComplexEventTimes.NoComplexEventTimes
-      {
-        FIX50SP2::SecurityListRequest::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_1_2_0;
-        // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_635;
-        set_field(noComplexEventTimes_0_1_2_0, FIX::ComplexEventEndTime{FIX::UTCTIMEONLY(4, 42, 29)}, ComplexEventTimes_NoComplexEventTimes_635);
-        set_field(noComplexEventTimes_0_1_2_0, FIX::ComplexEventStartTime{FIX::UTCTIMEONLY(4, 32, 17)}, ComplexEventTimes_NoComplexEventTimes_635);
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_635);
-        all_compo_names.insert("....NoComplexEvents...NoComplexEventDates...NoComplexEventTimes");
-
-        noComplexEventDates_0_1_1.addGroup(noComplexEventTimes_0_1_2_0);
-      }
-      {
-        FIX50SP2::SecurityListRequest::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_1_2_1;
-        // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_636;
-        set_field(noComplexEventTimes_0_1_2_1, FIX::ComplexEventEndTime{FIX::UTCTIMEONLY(6, 41, 24)}, ComplexEventTimes_NoComplexEventTimes_636);
-        set_field(noComplexEventTimes_0_1_2_1, FIX::ComplexEventStartTime{FIX::UTCTIMEONLY(9, 12, 21)}, ComplexEventTimes_NoComplexEventTimes_636);
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_636);
-        all_compo_names.insert("....NoComplexEvents...NoComplexEventDates...NoComplexEventTimes");
-
-        noComplexEventDates_0_1_1.addGroup(noComplexEventTimes_0_1_2_1);
-      }
-      noComplexEvents_0_0.addGroup(noComplexEventDates_0_1_1);
-    }
-    {
-      FIX50SP2::SecurityListRequest::NoComplexEvents::NoComplexEventDates noComplexEventDates_0_1_2;
-      // ComplexEventDates.NoComplexEventDates
-      multiset<string> ComplexEventDates_NoComplexEventDates_312;
-      set_field(noComplexEventDates_0_1_2, FIX::ComplexEventEndDate{FIX::UTCTIMESTAMP(22, 8, 36, 0, 5, 2003)}, ComplexEventDates_NoComplexEventDates_312);
-      set_field(noComplexEventDates_0_1_2, FIX::ComplexEventStartDate{FIX::UTCTIMESTAMP(22, 49, 43, 6, 8, 2008)}, ComplexEventDates_NoComplexEventDates_312);
-      all_values.push_back(ComplexEventDates_NoComplexEventDates_312);
-      all_compo_names.insert("....NoComplexEvents...NoComplexEventDates");
-
-      // ComplexEventTimes
-      // Group ComplexEventTimes.NoComplexEventTimes
-      {
-        FIX50SP2::SecurityListRequest::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_2_2_0;
-        // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_637;
-        set_field(noComplexEventTimes_0_2_2_0, FIX::ComplexEventEndTime{FIX::UTCTIMEONLY(16, 19, 34)}, ComplexEventTimes_NoComplexEventTimes_637);
-        set_field(noComplexEventTimes_0_2_2_0, FIX::ComplexEventStartTime{FIX::UTCTIMEONLY(0, 7, 46)}, ComplexEventTimes_NoComplexEventTimes_637);
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_637);
-        all_compo_names.insert("....NoComplexEvents...NoComplexEventDates...NoComplexEventTimes");
-
-        noComplexEventDates_0_1_2.addGroup(noComplexEventTimes_0_2_2_0);
-      }
-      {
-        FIX50SP2::SecurityListRequest::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_0_2_2_1;
-        // ComplexEventTimes.NoComplexEventTimes
-        multiset<string> ComplexEventTimes_NoComplexEventTimes_638;
-        set_field(noComplexEventTimes_0_2_2_1, FIX::ComplexEventEndTime{FIX::UTCTIMEONLY(17, 19, 42)}, ComplexEventTimes_NoComplexEventTimes_638);
-        set_field(noComplexEventTimes_0_2_2_1, FIX::ComplexEventStartTime{FIX::UTCTIMEONLY(4, 46, 40)}, ComplexEventTimes_NoComplexEventTimes_638);
-        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_638);
-        all_compo_names.insert("....NoComplexEvents...NoComplexEventDates...NoComplexEventTimes");
-
-        noComplexEventDates_0_1_2.addGroup(noComplexEventTimes_0_2_2_1);
-      }
-      noComplexEvents_0_0.addGroup(noComplexEventDates_0_1_2);
-    }
     msg.addGroup(noComplexEvents_0_0);
+  }
+  {
+    FIX50SP2::SecurityListRequest::NoComplexEvents noComplexEvents_0_1;
+    // ComplexEvents.NoComplexEvents
+    multiset<string> ComplexEvents_NoComplexEvents_172;
+    set_field(noComplexEvents_0_1, FIX::ComplexEventCondition{2}, ComplexEvents_NoComplexEvents_172);
+    FIX::ComplexEventPrice ComplexEventPrice_172;
+    ComplexEventPrice_172.setString("10786405");
+set_field(noComplexEvents_0_1, ComplexEventPrice_172, ComplexEvents_NoComplexEvents_172);
+    set_field(noComplexEvents_0_1, FIX::ComplexEventPriceBoundaryMethod{5}, ComplexEvents_NoComplexEvents_172);
+    FIX::ComplexEventPriceBoundaryPrecision ComplexEventPriceBoundaryPrecision_172;
+    ComplexEventPriceBoundaryPrecision_172.setString("26.350000");
+set_field(noComplexEvents_0_1, ComplexEventPriceBoundaryPrecision_172, ComplexEvents_NoComplexEvents_172);
+    set_field(noComplexEvents_0_1, FIX::ComplexEventPriceTimeType{1}, ComplexEvents_NoComplexEvents_172);
+    set_field(noComplexEvents_0_1, FIX::ComplexEventType{1}, ComplexEvents_NoComplexEvents_172);
+    FIX::ComplexOptPayoutAmount ComplexOptPayoutAmount_172;
+    ComplexOptPayoutAmount_172.setString("11070933");
+set_field(noComplexEvents_0_1, ComplexOptPayoutAmount_172, ComplexEvents_NoComplexEvents_172);
+    all_values.push_back(ComplexEvents_NoComplexEvents_172);
+    all_compo_names.insert("....NoComplexEvents");
+
+    // ComplexEventDates
+    // Group ComplexEventDates.NoComplexEventDates
+    {
+      FIX50SP2::SecurityListRequest::NoComplexEvents::NoComplexEventDates noComplexEventDates_1_1_0;
+      // ComplexEventDates.NoComplexEventDates
+      multiset<string> ComplexEventDates_NoComplexEventDates_347;
+      set_field(noComplexEventDates_1_1_0, FIX::ComplexEventEndDate{FIX::UTCTIMESTAMP(14, 57, 36, 6, 12, 2010)}, ComplexEventDates_NoComplexEventDates_347);
+      set_field(noComplexEventDates_1_1_0, FIX::ComplexEventStartDate{FIX::UTCTIMESTAMP(18, 28, 6, 13, 8, 2001)}, ComplexEventDates_NoComplexEventDates_347);
+      all_values.push_back(ComplexEventDates_NoComplexEventDates_347);
+      all_compo_names.insert("....NoComplexEvents...NoComplexEventDates");
+
+      // ComplexEventTimes
+      // Group ComplexEventTimes.NoComplexEventTimes
+      {
+        FIX50SP2::SecurityListRequest::NoComplexEvents::NoComplexEventDates::NoComplexEventTimes noComplexEventTimes_1_0_2_0;
+        // ComplexEventTimes.NoComplexEventTimes
+        multiset<string> ComplexEventTimes_NoComplexEventTimes_705;
+        set_field(noComplexEventTimes_1_0_2_0, FIX::ComplexEventEndTime{FIX::UTCTIMEONLY(9, 32, 26)}, ComplexEventTimes_NoComplexEventTimes_705);
+        set_field(noComplexEventTimes_1_0_2_0, FIX::ComplexEventStartTime{FIX::UTCTIMEONLY(21, 58, 40)}, ComplexEventTimes_NoComplexEventTimes_705);
+        all_values.push_back(ComplexEventTimes_NoComplexEventTimes_705);
+        all_compo_names.insert("....NoComplexEvents...NoComplexEventDates...NoComplexEventTimes");
+
+        noComplexEventDates_1_1_0.addGroup(noComplexEventTimes_1_0_2_0);
+      }
+      noComplexEvents_0_1.addGroup(noComplexEventDates_1_1_0);
+    }
+    msg.addGroup(noComplexEvents_0_1);
   }
   // EvntGrp
   // Group EvntGrp.NoEvents
   {
     FIX50SP2::SecurityListRequest::NoEvents noEvents_0_0;
     // EvntGrp.NoEvents
-    multiset<string> EvntGrp_NoEvents_144;
-    set_field(noEvents_0_0, FIX::EventDate{"LOCALMKTDATE_1719729032"}, EvntGrp_NoEvents_144);
-    FIX::EventPx EventPx_144;
-    EventPx_144.setString("12514982");
-set_field(noEvents_0_0, EventPx_144, EvntGrp_NoEvents_144);
-    set_field(noEvents_0_0, FIX::EventText{"STRING_1711407787"}, EvntGrp_NoEvents_144);
-    set_field(noEvents_0_0, FIX::EventTime{FIX::UTCTIMESTAMP(5, 21, 21, 27, 11, 2004)}, EvntGrp_NoEvents_144);
-    set_field(noEvents_0_0, FIX::EventType{2}, EvntGrp_NoEvents_144);
-    all_values.push_back(EvntGrp_NoEvents_144);
+    multiset<string> EvntGrp_NoEvents_162;
+    set_field(noEvents_0_0, FIX::EventDate{"LOCALMKTDATE_1785303783"}, EvntGrp_NoEvents_162);
+    FIX::EventPx EventPx_162;
+    EventPx_162.setString("7271184");
+set_field(noEvents_0_0, EventPx_162, EvntGrp_NoEvents_162);
+    set_field(noEvents_0_0, FIX::EventText{"STRING_542574477"}, EvntGrp_NoEvents_162);
+    set_field(noEvents_0_0, FIX::EventTime{FIX::UTCTIMESTAMP(5, 56, 32, 9, 3, 2009)}, EvntGrp_NoEvents_162);
+    set_field(noEvents_0_0, FIX::EventType{14}, EvntGrp_NoEvents_162);
+    all_values.push_back(EvntGrp_NoEvents_162);
     all_compo_names.insert("....NoEvents");
 
     msg.addGroup(noEvents_0_0);
@@ -673,29 +413,45 @@ set_field(noEvents_0_0, EventPx_144, EvntGrp_NoEvents_144);
   {
     FIX50SP2::SecurityListRequest::NoEvents noEvents_0_1;
     // EvntGrp.NoEvents
-    multiset<string> EvntGrp_NoEvents_145;
-    set_field(noEvents_0_1, FIX::EventDate{"LOCALMKTDATE_1513942953"}, EvntGrp_NoEvents_145);
-    FIX::EventPx EventPx_145;
-    EventPx_145.setString("5832097");
-set_field(noEvents_0_1, EventPx_145, EvntGrp_NoEvents_145);
-    set_field(noEvents_0_1, FIX::EventText{"STRING_551060390"}, EvntGrp_NoEvents_145);
-    set_field(noEvents_0_1, FIX::EventTime{FIX::UTCTIMESTAMP(20, 9, 5, 21, 2, 2000)}, EvntGrp_NoEvents_145);
-    set_field(noEvents_0_1, FIX::EventType{4}, EvntGrp_NoEvents_145);
-    all_values.push_back(EvntGrp_NoEvents_145);
+    multiset<string> EvntGrp_NoEvents_163;
+    set_field(noEvents_0_1, FIX::EventDate{"LOCALMKTDATE_1666503196"}, EvntGrp_NoEvents_163);
+    FIX::EventPx EventPx_163;
+    EventPx_163.setString("9438690");
+set_field(noEvents_0_1, EventPx_163, EvntGrp_NoEvents_163);
+    set_field(noEvents_0_1, FIX::EventText{"STRING_908925224"}, EvntGrp_NoEvents_163);
+    set_field(noEvents_0_1, FIX::EventTime{FIX::UTCTIMESTAMP(2, 12, 39, 24, 1, 2011)}, EvntGrp_NoEvents_163);
+    set_field(noEvents_0_1, FIX::EventType{2}, EvntGrp_NoEvents_163);
+    all_values.push_back(EvntGrp_NoEvents_163);
     all_compo_names.insert("....NoEvents");
 
     msg.addGroup(noEvents_0_1);
+  }
+  {
+    FIX50SP2::SecurityListRequest::NoEvents noEvents_0_2;
+    // EvntGrp.NoEvents
+    multiset<string> EvntGrp_NoEvents_164;
+    set_field(noEvents_0_2, FIX::EventDate{"LOCALMKTDATE_1568692988"}, EvntGrp_NoEvents_164);
+    FIX::EventPx EventPx_164;
+    EventPx_164.setString("1963885");
+set_field(noEvents_0_2, EventPx_164, EvntGrp_NoEvents_164);
+    set_field(noEvents_0_2, FIX::EventText{"STRING_274447186"}, EvntGrp_NoEvents_164);
+    set_field(noEvents_0_2, FIX::EventTime{FIX::UTCTIMESTAMP(0, 7, 24, 24, 2, 2004)}, EvntGrp_NoEvents_164);
+    set_field(noEvents_0_2, FIX::EventType{19}, EvntGrp_NoEvents_164);
+    all_values.push_back(EvntGrp_NoEvents_164);
+    all_compo_names.insert("....NoEvents");
+
+    msg.addGroup(noEvents_0_2);
   }
   // InstrumentParties
   // Group InstrumentParties.NoInstrumentParties
   {
     FIX50SP2::SecurityListRequest::NoInstrumentParties noInstrumentParties_0_0;
     // InstrumentParties.NoInstrumentParties
-    multiset<string> InstrumentParties_NoInstrumentParties_136;
-    set_field(noInstrumentParties_0_0, FIX::InstrumentPartyID{"STRING_986067789"}, InstrumentParties_NoInstrumentParties_136);
-    set_field(noInstrumentParties_0_0, FIX::InstrumentPartyIDSource{'9'}, InstrumentParties_NoInstrumentParties_136);
-    set_field(noInstrumentParties_0_0, FIX::InstrumentPartyRole{1944353017}, InstrumentParties_NoInstrumentParties_136);
-    all_values.push_back(InstrumentParties_NoInstrumentParties_136);
+    multiset<string> InstrumentParties_NoInstrumentParties_154;
+    set_field(noInstrumentParties_0_0, FIX::InstrumentPartyID{"STRING_1034991417"}, InstrumentParties_NoInstrumentParties_154);
+    set_field(noInstrumentParties_0_0, FIX::InstrumentPartyIDSource{'1'}, InstrumentParties_NoInstrumentParties_154);
+    set_field(noInstrumentParties_0_0, FIX::InstrumentPartyRole{750818795}, InstrumentParties_NoInstrumentParties_154);
+    all_values.push_back(InstrumentParties_NoInstrumentParties_154);
     all_compo_names.insert("....NoInstrumentParties");
 
     // InstrumentPtysSubGrp
@@ -703,46 +459,24 @@ set_field(noEvents_0_1, EventPx_145, EvntGrp_NoEvents_145);
     {
       FIX50SP2::SecurityListRequest::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_0_1_0;
       // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_279;
-      set_field(noInstrumentPartySubIDs_0_1_0, FIX::InstrumentPartySubID{"STRING_1722866319"}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_279);
-      set_field(noInstrumentPartySubIDs_0_1_0, FIX::InstrumentPartySubIDType{917229675}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_279);
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_279);
+      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_314;
+      set_field(noInstrumentPartySubIDs_0_1_0, FIX::InstrumentPartySubID{"STRING_1518417748"}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_314);
+      set_field(noInstrumentPartySubIDs_0_1_0, FIX::InstrumentPartySubIDType{60113045}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_314);
+      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_314);
       all_compo_names.insert("....NoInstrumentParties...NoInstrumentPartySubIDs");
 
       noInstrumentParties_0_0.addGroup(noInstrumentPartySubIDs_0_1_0);
-    }
-    {
-      FIX50SP2::SecurityListRequest::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_0_1_1;
-      // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_280;
-      set_field(noInstrumentPartySubIDs_0_1_1, FIX::InstrumentPartySubID{"STRING_1163000109"}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_280);
-      set_field(noInstrumentPartySubIDs_0_1_1, FIX::InstrumentPartySubIDType{411148082}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_280);
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_280);
-      all_compo_names.insert("....NoInstrumentParties...NoInstrumentPartySubIDs");
-
-      noInstrumentParties_0_0.addGroup(noInstrumentPartySubIDs_0_1_1);
-    }
-    {
-      FIX50SP2::SecurityListRequest::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_0_1_2;
-      // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_281;
-      set_field(noInstrumentPartySubIDs_0_1_2, FIX::InstrumentPartySubID{"STRING_489475059"}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_281);
-      set_field(noInstrumentPartySubIDs_0_1_2, FIX::InstrumentPartySubIDType{267014750}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_281);
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_281);
-      all_compo_names.insert("....NoInstrumentParties...NoInstrumentPartySubIDs");
-
-      noInstrumentParties_0_0.addGroup(noInstrumentPartySubIDs_0_1_2);
     }
     msg.addGroup(noInstrumentParties_0_0);
   }
   {
     FIX50SP2::SecurityListRequest::NoInstrumentParties noInstrumentParties_0_1;
     // InstrumentParties.NoInstrumentParties
-    multiset<string> InstrumentParties_NoInstrumentParties_137;
-    set_field(noInstrumentParties_0_1, FIX::InstrumentPartyID{"STRING_2122555870"}, InstrumentParties_NoInstrumentParties_137);
-    set_field(noInstrumentParties_0_1, FIX::InstrumentPartyIDSource{'1'}, InstrumentParties_NoInstrumentParties_137);
-    set_field(noInstrumentParties_0_1, FIX::InstrumentPartyRole{243839891}, InstrumentParties_NoInstrumentParties_137);
-    all_values.push_back(InstrumentParties_NoInstrumentParties_137);
+    multiset<string> InstrumentParties_NoInstrumentParties_155;
+    set_field(noInstrumentParties_0_1, FIX::InstrumentPartyID{"STRING_487936663"}, InstrumentParties_NoInstrumentParties_155);
+    set_field(noInstrumentParties_0_1, FIX::InstrumentPartyIDSource{'3'}, InstrumentParties_NoInstrumentParties_155);
+    set_field(noInstrumentParties_0_1, FIX::InstrumentPartyRole{1726616242}, InstrumentParties_NoInstrumentParties_155);
+    all_values.push_back(InstrumentParties_NoInstrumentParties_155);
     all_compo_names.insert("....NoInstrumentParties");
 
     // InstrumentPtysSubGrp
@@ -750,10 +484,10 @@ set_field(noEvents_0_1, EventPx_145, EvntGrp_NoEvents_145);
     {
       FIX50SP2::SecurityListRequest::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_1_1_0;
       // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_282;
-      set_field(noInstrumentPartySubIDs_1_1_0, FIX::InstrumentPartySubID{"STRING_1882209621"}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_282);
-      set_field(noInstrumentPartySubIDs_1_1_0, FIX::InstrumentPartySubIDType{1611509382}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_282);
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_282);
+      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_315;
+      set_field(noInstrumentPartySubIDs_1_1_0, FIX::InstrumentPartySubID{"STRING_1218449818"}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_315);
+      set_field(noInstrumentPartySubIDs_1_1_0, FIX::InstrumentPartySubIDType{1208038907}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_315);
+      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_315);
       all_compo_names.insert("....NoInstrumentParties...NoInstrumentPartySubIDs");
 
       noInstrumentParties_0_1.addGroup(noInstrumentPartySubIDs_1_1_0);
@@ -761,24 +495,13 @@ set_field(noEvents_0_1, EventPx_145, EvntGrp_NoEvents_145);
     {
       FIX50SP2::SecurityListRequest::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_1_1_1;
       // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_283;
-      set_field(noInstrumentPartySubIDs_1_1_1, FIX::InstrumentPartySubID{"STRING_667362325"}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_283);
-      set_field(noInstrumentPartySubIDs_1_1_1, FIX::InstrumentPartySubIDType{1248700397}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_283);
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_283);
+      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_316;
+      set_field(noInstrumentPartySubIDs_1_1_1, FIX::InstrumentPartySubID{"STRING_462957514"}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_316);
+      set_field(noInstrumentPartySubIDs_1_1_1, FIX::InstrumentPartySubIDType{790195802}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_316);
+      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_316);
       all_compo_names.insert("....NoInstrumentParties...NoInstrumentPartySubIDs");
 
       noInstrumentParties_0_1.addGroup(noInstrumentPartySubIDs_1_1_1);
-    }
-    {
-      FIX50SP2::SecurityListRequest::NoInstrumentParties::NoInstrumentPartySubIDs noInstrumentPartySubIDs_1_1_2;
-      // InstrumentPtysSubGrp.NoInstrumentPartySubIDs
-      multiset<string> InstrumentPtysSubGrp_NoInstrumentPartySubIDs_284;
-      set_field(noInstrumentPartySubIDs_1_1_2, FIX::InstrumentPartySubID{"STRING_1603439155"}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_284);
-      set_field(noInstrumentPartySubIDs_1_1_2, FIX::InstrumentPartySubIDType{33821631}, InstrumentPtysSubGrp_NoInstrumentPartySubIDs_284);
-      all_values.push_back(InstrumentPtysSubGrp_NoInstrumentPartySubIDs_284);
-      all_compo_names.insert("....NoInstrumentParties...NoInstrumentPartySubIDs");
-
-      noInstrumentParties_0_1.addGroup(noInstrumentPartySubIDs_1_1_2);
     }
     msg.addGroup(noInstrumentParties_0_1);
   }
@@ -787,27 +510,38 @@ set_field(noEvents_0_1, EventPx_145, EvntGrp_NoEvents_145);
   {
     FIX50SP2::SecurityListRequest::NoSecurityAltID noSecurityAltID_0_0;
     // SecAltIDGrp.NoSecurityAltID
-    multiset<string> SecAltIDGrp_NoSecurityAltID_140;
-    set_field(noSecurityAltID_0_0, FIX::SecurityAltID{"STRING_7015897"}, SecAltIDGrp_NoSecurityAltID_140);
-    set_field(noSecurityAltID_0_0, FIX::SecurityAltIDSource{"STRING_2111419649"}, SecAltIDGrp_NoSecurityAltID_140);
-    all_values.push_back(SecAltIDGrp_NoSecurityAltID_140);
+    multiset<string> SecAltIDGrp_NoSecurityAltID_166;
+    set_field(noSecurityAltID_0_0, FIX::SecurityAltID{"STRING_589080094"}, SecAltIDGrp_NoSecurityAltID_166);
+    set_field(noSecurityAltID_0_0, FIX::SecurityAltIDSource{"STRING_1132780370"}, SecAltIDGrp_NoSecurityAltID_166);
+    all_values.push_back(SecAltIDGrp_NoSecurityAltID_166);
     all_compo_names.insert("....NoSecurityAltID");
 
     msg.addGroup(noSecurityAltID_0_0);
   }
+  {
+    FIX50SP2::SecurityListRequest::NoSecurityAltID noSecurityAltID_0_1;
+    // SecAltIDGrp.NoSecurityAltID
+    multiset<string> SecAltIDGrp_NoSecurityAltID_167;
+    set_field(noSecurityAltID_0_1, FIX::SecurityAltID{"STRING_1020494530"}, SecAltIDGrp_NoSecurityAltID_167);
+    set_field(noSecurityAltID_0_1, FIX::SecurityAltIDSource{"STRING_1111412216"}, SecAltIDGrp_NoSecurityAltID_167);
+    all_values.push_back(SecAltIDGrp_NoSecurityAltID_167);
+    all_compo_names.insert("....NoSecurityAltID");
+
+    msg.addGroup(noSecurityAltID_0_1);
+  }
   // SecurityXML
-  multiset<string> SecurityXML_142;
-  set_field(msg, FIX::SecurityXML{"XMLDATA_565090173"}, SecurityXML_142);
-  set_field(msg, FIX::SecurityXMLLen{1322065427}, SecurityXML_142);
-  set_field(msg, FIX::SecurityXMLSchema{"STRING_554903066"}, SecurityXML_142);
-  all_values.push_back(SecurityXML_142);
+  multiset<string> SecurityXML_166;
+  set_field(msg, FIX::SecurityXML{"XMLDATA_553989711"}, SecurityXML_166);
+  set_field(msg, FIX::SecurityXMLLen{1216883050}, SecurityXML_166);
+  set_field(msg, FIX::SecurityXMLSchema{"STRING_1385859402"}, SecurityXML_166);
+  all_values.push_back(SecurityXML_166);
   all_compo_names.insert("..");
 
   // InstrumentExtension
   multiset<string> InstrumentExtension_12;
-  set_field(msg, FIX::DeliveryForm{1}, InstrumentExtension_12);
+  set_field(msg, FIX::DeliveryForm{2}, InstrumentExtension_12);
   FIX::PctAtRisk PctAtRisk_12;
-  PctAtRisk_12.setString("11.960000");
+  PctAtRisk_12.setString("12.500000");
 set_field(msg, PctAtRisk_12, InstrumentExtension_12);
   all_values.push_back(InstrumentExtension_12);
   all_compo_names.insert(".");
@@ -817,13 +551,35 @@ set_field(msg, PctAtRisk_12, InstrumentExtension_12);
   {
     FIX50SP2::SecurityListRequest::NoInstrAttrib noInstrAttrib_0_0;
     // AttrbGrp.NoInstrAttrib
-    multiset<string> AttrbGrp_NoInstrAttrib_21;
-    set_field(noInstrAttrib_0_0, FIX::InstrAttribType{2}, AttrbGrp_NoInstrAttrib_21);
-    set_field(noInstrAttrib_0_0, FIX::InstrAttribValue{"STRING_934335671"}, AttrbGrp_NoInstrAttrib_21);
-    all_values.push_back(AttrbGrp_NoInstrAttrib_21);
+    multiset<string> AttrbGrp_NoInstrAttrib_23;
+    set_field(noInstrAttrib_0_0, FIX::InstrAttribType{13}, AttrbGrp_NoInstrAttrib_23);
+    set_field(noInstrAttrib_0_0, FIX::InstrAttribValue{"STRING_1310549262"}, AttrbGrp_NoInstrAttrib_23);
+    all_values.push_back(AttrbGrp_NoInstrAttrib_23);
     all_compo_names.insert("....NoInstrAttrib");
 
     msg.addGroup(noInstrAttrib_0_0);
+  }
+  {
+    FIX50SP2::SecurityListRequest::NoInstrAttrib noInstrAttrib_0_1;
+    // AttrbGrp.NoInstrAttrib
+    multiset<string> AttrbGrp_NoInstrAttrib_24;
+    set_field(noInstrAttrib_0_1, FIX::InstrAttribType{1}, AttrbGrp_NoInstrAttrib_24);
+    set_field(noInstrAttrib_0_1, FIX::InstrAttribValue{"STRING_87010862"}, AttrbGrp_NoInstrAttrib_24);
+    all_values.push_back(AttrbGrp_NoInstrAttrib_24);
+    all_compo_names.insert("....NoInstrAttrib");
+
+    msg.addGroup(noInstrAttrib_0_1);
+  }
+  {
+    FIX50SP2::SecurityListRequest::NoInstrAttrib noInstrAttrib_0_2;
+    // AttrbGrp.NoInstrAttrib
+    multiset<string> AttrbGrp_NoInstrAttrib_25;
+    set_field(noInstrAttrib_0_2, FIX::InstrAttribType{1}, AttrbGrp_NoInstrAttrib_25);
+    set_field(noInstrAttrib_0_2, FIX::InstrAttribValue{"STRING_605595128"}, AttrbGrp_NoInstrAttrib_25);
+    all_values.push_back(AttrbGrp_NoInstrAttrib_25);
+    all_compo_names.insert("....NoInstrAttrib");
+
+    msg.addGroup(noInstrAttrib_0_2);
   }
   // UndInstrmtGrp
   // Group UndInstrmtGrp.NoUnderlyings
@@ -831,123 +587,123 @@ set_field(msg, PctAtRisk_12, InstrumentExtension_12);
     FIX50SP2::SecurityListRequest::NoUnderlyings noUnderlyings_0_0;
     // UndInstrmtGrp.NoUnderlyings
     // UnderlyingInstrument
-    multiset<string> UnderlyingInstrument_129;
-    set_field(noUnderlyings_0_0, FIX::EncodedUnderlyingIssuer{"DATA_591665776"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::EncodedUnderlyingIssuerLen{731205040}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::EncodedUnderlyingSecurityDesc{"DATA_322246561"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::EncodedUnderlyingSecurityDescLen{167048447}, UnderlyingInstrument_129);
-    FIX::UnderlyingAdjustedQuantity UnderlyingAdjustedQuantity_129;
-    UnderlyingAdjustedQuantity_129.setString("16484347");
-set_field(noUnderlyings_0_0, UnderlyingAdjustedQuantity_129, UnderlyingInstrument_129);
-    FIX::UnderlyingAllocationPercent UnderlyingAllocationPercent_129;
-    UnderlyingAllocationPercent_129.setString("66.700000");
-set_field(noUnderlyings_0_0, UnderlyingAllocationPercent_129, UnderlyingInstrument_129);
-    FIX::UnderlyingAttachmentPoint UnderlyingAttachmentPoint_129;
-    UnderlyingAttachmentPoint_129.setString("65.290000");
-set_field(noUnderlyings_0_0, UnderlyingAttachmentPoint_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingCFICode{"STRING_2137909775"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingCPProgram{"STRING_1752261421"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingCPRegType{"STRING_553268751"}, UnderlyingInstrument_129);
-    FIX::UnderlyingCapValue UnderlyingCapValue_129;
-    UnderlyingCapValue_129.setString("16141215");
-set_field(noUnderlyings_0_0, UnderlyingCapValue_129, UnderlyingInstrument_129);
-    FIX::UnderlyingCashAmount UnderlyingCashAmount_129;
-    UnderlyingCashAmount_129.setString("19961013");
-set_field(noUnderlyings_0_0, UnderlyingCashAmount_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingCashType{"STRING_FIXED"}, UnderlyingInstrument_129);
-    FIX::UnderlyingContractMultiplier UnderlyingContractMultiplier_129;
-    UnderlyingContractMultiplier_129.setString("13488475");
-set_field(noUnderlyings_0_0, UnderlyingContractMultiplier_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingContractMultiplierUnit{1460127047}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingCountryOfIssue{"COUNTRY_227680172"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingCouponPaymentDate{"LOCALMKTDATE_450064309"}, UnderlyingInstrument_129);
-    FIX::UnderlyingCouponRate UnderlyingCouponRate_129;
-    UnderlyingCouponRate_129.setString("25.540000");
-set_field(noUnderlyings_0_0, UnderlyingCouponRate_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingCreditRating{"STRING_261501803"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingCurrency{"USD"}, UnderlyingInstrument_129);
-    FIX::UnderlyingCurrentValue UnderlyingCurrentValue_129;
-    UnderlyingCurrentValue_129.setString("2254378");
-set_field(noUnderlyings_0_0, UnderlyingCurrentValue_129, UnderlyingInstrument_129);
-    FIX::UnderlyingDetachmentPoint UnderlyingDetachmentPoint_129;
-    UnderlyingDetachmentPoint_129.setString("9.790000");
-set_field(noUnderlyings_0_0, UnderlyingDetachmentPoint_129, UnderlyingInstrument_129);
-    FIX::UnderlyingDirtyPrice UnderlyingDirtyPrice_129;
-    UnderlyingDirtyPrice_129.setString("976802");
-set_field(noUnderlyings_0_0, UnderlyingDirtyPrice_129, UnderlyingInstrument_129);
-    FIX::UnderlyingEndPrice UnderlyingEndPrice_129;
-    UnderlyingEndPrice_129.setString("7803408");
-set_field(noUnderlyings_0_0, UnderlyingEndPrice_129, UnderlyingInstrument_129);
-    FIX::UnderlyingEndValue UnderlyingEndValue_129;
-    UnderlyingEndValue_129.setString("20448635");
-set_field(noUnderlyings_0_0, UnderlyingEndValue_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingExerciseStyle{336951427}, UnderlyingInstrument_129);
-    FIX::UnderlyingFXRate UnderlyingFXRate_129;
-    UnderlyingFXRate_129.setString("13157039");
-set_field(noUnderlyings_0_0, UnderlyingFXRate_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingFXRateCalc{'M'}, UnderlyingInstrument_129);
-    FIX::UnderlyingFactor UnderlyingFactor_129;
-    UnderlyingFactor_129.setString("12712870");
-set_field(noUnderlyings_0_0, UnderlyingFactor_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingFlowScheduleType{689651233}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingInstrRegistry{"STRING_142690679"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingIssueDate{"LOCALMKTDATE_2002492139"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingIssuer{"STRING_1011897794"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingLocaleOfIssue{"STRING_309739126"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingMaturityDate{"LOCALMKTDATE_1503443207"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingMaturityMonthYear{"MONTHYEAR_349660817"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingMaturityTime{"TZTIMEONLY_887935656"}, UnderlyingInstrument_129);
-    FIX::UnderlyingNotionalPercentageOutstanding UnderlyingNotionalPercentageOutstanding_129;
-    UnderlyingNotionalPercentageOutstanding_129.setString("93.340000");
-set_field(noUnderlyings_0_0, UnderlyingNotionalPercentageOutstanding_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingOptAttribute{'2'}, UnderlyingInstrument_129);
-    FIX::UnderlyingOriginalNotionalPercentageOutstanding UnderlyingOriginalNotionalPercentageOutstanding_129;
-    UnderlyingOriginalNotionalPercentageOutstanding_129.setString("44.070000");
-set_field(noUnderlyings_0_0, UnderlyingOriginalNotionalPercentageOutstanding_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingPriceUnitOfMeasure{"STRING_960507273"}, UnderlyingInstrument_129);
-    FIX::UnderlyingPriceUnitOfMeasureQty UnderlyingPriceUnitOfMeasureQty_129;
-    UnderlyingPriceUnitOfMeasureQty_129.setString("19505399");
-set_field(noUnderlyings_0_0, UnderlyingPriceUnitOfMeasureQty_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingProduct{1001522254}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingPutOrCall{161871185}, UnderlyingInstrument_129);
-    FIX::UnderlyingPx UnderlyingPx_129;
-    UnderlyingPx_129.setString("12631833");
-set_field(noUnderlyings_0_0, UnderlyingPx_129, UnderlyingInstrument_129);
-    FIX::UnderlyingQty UnderlyingQty_129;
-    UnderlyingQty_129.setString("12292024");
-set_field(noUnderlyings_0_0, UnderlyingQty_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingRedemptionDate{"LOCALMKTDATE_611935494"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingRepoCollateralSecurityType{"STRING_31782208"}, UnderlyingInstrument_129);
-    FIX::UnderlyingRepurchaseRate UnderlyingRepurchaseRate_129;
-    UnderlyingRepurchaseRate_129.setString("42.290000");
-set_field(noUnderlyings_0_0, UnderlyingRepurchaseRate_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingRepurchaseTerm{746426300}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingRestructuringType{"STRING_954880660"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingSecurityDesc{"STRING_1716142033"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingSecurityExchange{"EXCHANGE_1446007279"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingSecurityID{"STRING_1052560891"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingSecurityIDSource{"STRING_348999256"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingSecuritySubType{"STRING_1343387169"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingSecurityType{"STRING_1389512318"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingSeniority{"STRING_1664703238"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingSettlMethod{"STRING_894412073"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingSettlementType{4}, UnderlyingInstrument_129);
-    FIX::UnderlyingStartValue UnderlyingStartValue_129;
-    UnderlyingStartValue_129.setString("2068708");
-set_field(noUnderlyings_0_0, UnderlyingStartValue_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingStateOrProvinceOfIssue{"STRING_1037102752"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingStrikeCurrency{"USD"}, UnderlyingInstrument_129);
-    FIX::UnderlyingStrikePrice UnderlyingStrikePrice_129;
-    UnderlyingStrikePrice_129.setString("13468418");
-set_field(noUnderlyings_0_0, UnderlyingStrikePrice_129, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingSymbol{"STRING_1871767468"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingSymbolSfx{"STRING_1568429435"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingTimeUnit{"STRING_87293887"}, UnderlyingInstrument_129);
-    set_field(noUnderlyings_0_0, FIX::UnderlyingUnitOfMeasure{"STRING_1218153154"}, UnderlyingInstrument_129);
-    FIX::UnderlyingUnitOfMeasureQty UnderlyingUnitOfMeasureQty_129;
-    UnderlyingUnitOfMeasureQty_129.setString("15228680");
-set_field(noUnderlyings_0_0, UnderlyingUnitOfMeasureQty_129, UnderlyingInstrument_129);
-    all_values.push_back(UnderlyingInstrument_129);
+    multiset<string> UnderlyingInstrument_126;
+    set_field(noUnderlyings_0_0, FIX::EncodedUnderlyingIssuer{"DATA_756722944"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::EncodedUnderlyingIssuerLen{1356413923}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::EncodedUnderlyingSecurityDesc{"DATA_1010470461"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::EncodedUnderlyingSecurityDescLen{127657044}, UnderlyingInstrument_126);
+    FIX::UnderlyingAdjustedQuantity UnderlyingAdjustedQuantity_126;
+    UnderlyingAdjustedQuantity_126.setString("14165269");
+set_field(noUnderlyings_0_0, UnderlyingAdjustedQuantity_126, UnderlyingInstrument_126);
+    FIX::UnderlyingAllocationPercent UnderlyingAllocationPercent_126;
+    UnderlyingAllocationPercent_126.setString("71.250000");
+set_field(noUnderlyings_0_0, UnderlyingAllocationPercent_126, UnderlyingInstrument_126);
+    FIX::UnderlyingAttachmentPoint UnderlyingAttachmentPoint_126;
+    UnderlyingAttachmentPoint_126.setString("16.380000");
+set_field(noUnderlyings_0_0, UnderlyingAttachmentPoint_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingCFICode{"STRING_995659563"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingCPProgram{"STRING_782729197"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingCPRegType{"STRING_1655631456"}, UnderlyingInstrument_126);
+    FIX::UnderlyingCapValue UnderlyingCapValue_126;
+    UnderlyingCapValue_126.setString("562148");
+set_field(noUnderlyings_0_0, UnderlyingCapValue_126, UnderlyingInstrument_126);
+    FIX::UnderlyingCashAmount UnderlyingCashAmount_126;
+    UnderlyingCashAmount_126.setString("12456867");
+set_field(noUnderlyings_0_0, UnderlyingCashAmount_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingCashType{"STRING_DIFF"}, UnderlyingInstrument_126);
+    FIX::UnderlyingContractMultiplier UnderlyingContractMultiplier_126;
+    UnderlyingContractMultiplier_126.setString("10838179");
+set_field(noUnderlyings_0_0, UnderlyingContractMultiplier_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingContractMultiplierUnit{1834766806}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingCountryOfIssue{"COUNTRY_1431123981"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingCouponPaymentDate{"LOCALMKTDATE_2104312451"}, UnderlyingInstrument_126);
+    FIX::UnderlyingCouponRate UnderlyingCouponRate_126;
+    UnderlyingCouponRate_126.setString("53.740000");
+set_field(noUnderlyings_0_0, UnderlyingCouponRate_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingCreditRating{"STRING_1985113692"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingCurrency{"GBP"}, UnderlyingInstrument_126);
+    FIX::UnderlyingCurrentValue UnderlyingCurrentValue_126;
+    UnderlyingCurrentValue_126.setString("20330615");
+set_field(noUnderlyings_0_0, UnderlyingCurrentValue_126, UnderlyingInstrument_126);
+    FIX::UnderlyingDetachmentPoint UnderlyingDetachmentPoint_126;
+    UnderlyingDetachmentPoint_126.setString("94.550000");
+set_field(noUnderlyings_0_0, UnderlyingDetachmentPoint_126, UnderlyingInstrument_126);
+    FIX::UnderlyingDirtyPrice UnderlyingDirtyPrice_126;
+    UnderlyingDirtyPrice_126.setString("8354551");
+set_field(noUnderlyings_0_0, UnderlyingDirtyPrice_126, UnderlyingInstrument_126);
+    FIX::UnderlyingEndPrice UnderlyingEndPrice_126;
+    UnderlyingEndPrice_126.setString("1341472");
+set_field(noUnderlyings_0_0, UnderlyingEndPrice_126, UnderlyingInstrument_126);
+    FIX::UnderlyingEndValue UnderlyingEndValue_126;
+    UnderlyingEndValue_126.setString("19680487");
+set_field(noUnderlyings_0_0, UnderlyingEndValue_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingExerciseStyle{192415691}, UnderlyingInstrument_126);
+    FIX::UnderlyingFXRate UnderlyingFXRate_126;
+    UnderlyingFXRate_126.setString("2211580");
+set_field(noUnderlyings_0_0, UnderlyingFXRate_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingFXRateCalc{'D'}, UnderlyingInstrument_126);
+    FIX::UnderlyingFactor UnderlyingFactor_126;
+    UnderlyingFactor_126.setString("7980108");
+set_field(noUnderlyings_0_0, UnderlyingFactor_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingFlowScheduleType{1343160365}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingInstrRegistry{"STRING_146750086"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingIssueDate{"LOCALMKTDATE_6941095"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingIssuer{"STRING_206147179"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingLocaleOfIssue{"STRING_274407130"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingMaturityDate{"LOCALMKTDATE_1423468064"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingMaturityMonthYear{"MONTHYEAR_1704554304"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingMaturityTime{"TZTIMEONLY_711588769"}, UnderlyingInstrument_126);
+    FIX::UnderlyingNotionalPercentageOutstanding UnderlyingNotionalPercentageOutstanding_126;
+    UnderlyingNotionalPercentageOutstanding_126.setString("39.790000");
+set_field(noUnderlyings_0_0, UnderlyingNotionalPercentageOutstanding_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingOptAttribute{'3'}, UnderlyingInstrument_126);
+    FIX::UnderlyingOriginalNotionalPercentageOutstanding UnderlyingOriginalNotionalPercentageOutstanding_126;
+    UnderlyingOriginalNotionalPercentageOutstanding_126.setString("65.770000");
+set_field(noUnderlyings_0_0, UnderlyingOriginalNotionalPercentageOutstanding_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingPriceUnitOfMeasure{"STRING_327858801"}, UnderlyingInstrument_126);
+    FIX::UnderlyingPriceUnitOfMeasureQty UnderlyingPriceUnitOfMeasureQty_126;
+    UnderlyingPriceUnitOfMeasureQty_126.setString("15854865");
+set_field(noUnderlyings_0_0, UnderlyingPriceUnitOfMeasureQty_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingProduct{518080188}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingPutOrCall{1411676723}, UnderlyingInstrument_126);
+    FIX::UnderlyingPx UnderlyingPx_126;
+    UnderlyingPx_126.setString("12727697");
+set_field(noUnderlyings_0_0, UnderlyingPx_126, UnderlyingInstrument_126);
+    FIX::UnderlyingQty UnderlyingQty_126;
+    UnderlyingQty_126.setString("19492041");
+set_field(noUnderlyings_0_0, UnderlyingQty_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingRedemptionDate{"LOCALMKTDATE_1368505526"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingRepoCollateralSecurityType{"STRING_2071465096"}, UnderlyingInstrument_126);
+    FIX::UnderlyingRepurchaseRate UnderlyingRepurchaseRate_126;
+    UnderlyingRepurchaseRate_126.setString("42.140000");
+set_field(noUnderlyings_0_0, UnderlyingRepurchaseRate_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingRepurchaseTerm{394733732}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingRestructuringType{"STRING_2108536224"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingSecurityDesc{"STRING_1672412136"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingSecurityExchange{"EXCHANGE_1052233187"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingSecurityID{"STRING_796507745"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingSecurityIDSource{"STRING_1806559360"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingSecuritySubType{"STRING_872798257"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingSecurityType{"STRING_988923436"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingSeniority{"STRING_2027717446"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingSettlMethod{"STRING_262825399"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingSettlementType{2}, UnderlyingInstrument_126);
+    FIX::UnderlyingStartValue UnderlyingStartValue_126;
+    UnderlyingStartValue_126.setString("12233941");
+set_field(noUnderlyings_0_0, UnderlyingStartValue_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingStateOrProvinceOfIssue{"STRING_409575485"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingStrikeCurrency{"CHF"}, UnderlyingInstrument_126);
+    FIX::UnderlyingStrikePrice UnderlyingStrikePrice_126;
+    UnderlyingStrikePrice_126.setString("6839826");
+set_field(noUnderlyings_0_0, UnderlyingStrikePrice_126, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingSymbol{"STRING_1069859767"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingSymbolSfx{"STRING_986611999"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingTimeUnit{"STRING_1395571384"}, UnderlyingInstrument_126);
+    set_field(noUnderlyings_0_0, FIX::UnderlyingUnitOfMeasure{"STRING_1341503746"}, UnderlyingInstrument_126);
+    FIX::UnderlyingUnitOfMeasureQty UnderlyingUnitOfMeasureQty_126;
+    UnderlyingUnitOfMeasureQty_126.setString("13264118");
+set_field(noUnderlyings_0_0, UnderlyingUnitOfMeasureQty_126, UnderlyingInstrument_126);
+    all_values.push_back(UnderlyingInstrument_126);
     all_compo_names.insert("...NoUnderlyings.");
 
     // UndSecAltIDGrp
@@ -955,10 +711,10 @@ set_field(noUnderlyings_0_0, UnderlyingUnitOfMeasureQty_129, UnderlyingInstrumen
     {
       FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingSecurityAltID noUnderlyingSecurityAltID_0_1_0;
       // UndSecAltIDGrp.NoUnderlyingSecurityAltID
-      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_267;
-      set_field(noUnderlyingSecurityAltID_0_1_0, FIX::UnderlyingSecurityAltID{"STRING_31176779"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_267);
-      set_field(noUnderlyingSecurityAltID_0_1_0, FIX::UnderlyingSecurityAltIDSource{"STRING_1325924279"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_267);
-      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_267);
+      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_261;
+      set_field(noUnderlyingSecurityAltID_0_1_0, FIX::UnderlyingSecurityAltID{"STRING_1669362547"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_261);
+      set_field(noUnderlyingSecurityAltID_0_1_0, FIX::UnderlyingSecurityAltIDSource{"STRING_764414768"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_261);
+      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_261);
       all_compo_names.insert("...NoUnderlyings....NoUnderlyingSecurityAltID");
 
       noUnderlyings_0_0.addGroup(noUnderlyingSecurityAltID_0_1_0);
@@ -966,10 +722,10 @@ set_field(noUnderlyings_0_0, UnderlyingUnitOfMeasureQty_129, UnderlyingInstrumen
     {
       FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingSecurityAltID noUnderlyingSecurityAltID_0_1_1;
       // UndSecAltIDGrp.NoUnderlyingSecurityAltID
-      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_268;
-      set_field(noUnderlyingSecurityAltID_0_1_1, FIX::UnderlyingSecurityAltID{"STRING_382536900"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_268);
-      set_field(noUnderlyingSecurityAltID_0_1_1, FIX::UnderlyingSecurityAltIDSource{"STRING_193047964"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_268);
-      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_268);
+      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_262;
+      set_field(noUnderlyingSecurityAltID_0_1_1, FIX::UnderlyingSecurityAltID{"STRING_2133388150"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_262);
+      set_field(noUnderlyingSecurityAltID_0_1_1, FIX::UnderlyingSecurityAltIDSource{"STRING_933555622"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_262);
+      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_262);
       all_compo_names.insert("...NoUnderlyings....NoUnderlyingSecurityAltID");
 
       noUnderlyings_0_0.addGroup(noUnderlyingSecurityAltID_0_1_1);
@@ -979,35 +735,13 @@ set_field(noUnderlyings_0_0, UnderlyingUnitOfMeasureQty_129, UnderlyingInstrumen
     {
       FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingStips noUnderlyingStips_0_1_0;
       // UnderlyingStipulations.NoUnderlyingStips
-      multiset<string> UnderlyingStipulations_NoUnderlyingStips_262;
-      set_field(noUnderlyingStips_0_1_0, FIX::UnderlyingStipType{"STRING_1611739326"}, UnderlyingStipulations_NoUnderlyingStips_262);
-      set_field(noUnderlyingStips_0_1_0, FIX::UnderlyingStipValue{"STRING_804983458"}, UnderlyingStipulations_NoUnderlyingStips_262);
-      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_262);
+      multiset<string> UnderlyingStipulations_NoUnderlyingStips_253;
+      set_field(noUnderlyingStips_0_1_0, FIX::UnderlyingStipType{"STRING_1935108672"}, UnderlyingStipulations_NoUnderlyingStips_253);
+      set_field(noUnderlyingStips_0_1_0, FIX::UnderlyingStipValue{"STRING_154577501"}, UnderlyingStipulations_NoUnderlyingStips_253);
+      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_253);
       all_compo_names.insert("...NoUnderlyings....NoUnderlyingStips");
 
       noUnderlyings_0_0.addGroup(noUnderlyingStips_0_1_0);
-    }
-    {
-      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingStips noUnderlyingStips_0_1_1;
-      // UnderlyingStipulations.NoUnderlyingStips
-      multiset<string> UnderlyingStipulations_NoUnderlyingStips_263;
-      set_field(noUnderlyingStips_0_1_1, FIX::UnderlyingStipType{"STRING_473406141"}, UnderlyingStipulations_NoUnderlyingStips_263);
-      set_field(noUnderlyingStips_0_1_1, FIX::UnderlyingStipValue{"STRING_954959907"}, UnderlyingStipulations_NoUnderlyingStips_263);
-      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_263);
-      all_compo_names.insert("...NoUnderlyings....NoUnderlyingStips");
-
-      noUnderlyings_0_0.addGroup(noUnderlyingStips_0_1_1);
-    }
-    {
-      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingStips noUnderlyingStips_0_1_2;
-      // UnderlyingStipulations.NoUnderlyingStips
-      multiset<string> UnderlyingStipulations_NoUnderlyingStips_264;
-      set_field(noUnderlyingStips_0_1_2, FIX::UnderlyingStipType{"STRING_1551409758"}, UnderlyingStipulations_NoUnderlyingStips_264);
-      set_field(noUnderlyingStips_0_1_2, FIX::UnderlyingStipValue{"STRING_1428286801"}, UnderlyingStipulations_NoUnderlyingStips_264);
-      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_264);
-      all_compo_names.insert("...NoUnderlyings....NoUnderlyingStips");
-
-      noUnderlyings_0_0.addGroup(noUnderlyingStips_0_1_2);
     }
     // UndlyInstrumentParties
     // Group UndlyInstrumentParties.NoUndlyInstrumentParties
@@ -1015,9 +749,9 @@ set_field(noUnderlyings_0_0, UnderlyingUnitOfMeasureQty_129, UnderlyingInstrumen
       FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties noUndlyInstrumentParties_0_1_0;
       // UndlyInstrumentParties.NoUndlyInstrumentParties
       multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_267;
-      set_field(noUndlyInstrumentParties_0_1_0, FIX::UnderlyingInstrumentPartyID{"STRING_849933389"}, UndlyInstrumentParties_NoUndlyInstrumentParties_267);
-      set_field(noUndlyInstrumentParties_0_1_0, FIX::UnderlyingInstrumentPartyIDSource{'3'}, UndlyInstrumentParties_NoUndlyInstrumentParties_267);
-      set_field(noUndlyInstrumentParties_0_1_0, FIX::UnderlyingInstrumentPartyRole{872617549}, UndlyInstrumentParties_NoUndlyInstrumentParties_267);
+      set_field(noUndlyInstrumentParties_0_1_0, FIX::UnderlyingInstrumentPartyID{"STRING_1574459239"}, UndlyInstrumentParties_NoUndlyInstrumentParties_267);
+      set_field(noUndlyInstrumentParties_0_1_0, FIX::UnderlyingInstrumentPartyIDSource{'5'}, UndlyInstrumentParties_NoUndlyInstrumentParties_267);
+      set_field(noUndlyInstrumentParties_0_1_0, FIX::UnderlyingInstrumentPartyRole{1922218516}, UndlyInstrumentParties_NoUndlyInstrumentParties_267);
       all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_267);
       all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties");
 
@@ -1026,10 +760,10 @@ set_field(noUnderlyings_0_0, UnderlyingUnitOfMeasureQty_129, UnderlyingInstrumen
       {
         FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_0_2_0;
         // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_532;
-        set_field(noUndlyInstrumentPartySubIDs_0_0_2_0, FIX::UnderlyingInstrumentPartySubID{"STRING_1722876362"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_532);
-        set_field(noUndlyInstrumentPartySubIDs_0_0_2_0, FIX::UnderlyingInstrumentPartySubIDType{389837139}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_532);
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_532);
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_533;
+        set_field(noUndlyInstrumentPartySubIDs_0_0_2_0, FIX::UnderlyingInstrumentPartySubID{"STRING_1601544420"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_533);
+        set_field(noUndlyInstrumentPartySubIDs_0_0_2_0, FIX::UnderlyingInstrumentPartySubIDType{571242613}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_533);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_533);
         all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
 
         noUndlyInstrumentParties_0_1_0.addGroup(noUndlyInstrumentPartySubIDs_0_0_2_0);
@@ -1037,15 +771,120 @@ set_field(noUnderlyings_0_0, UnderlyingUnitOfMeasureQty_129, UnderlyingInstrumen
       {
         FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_0_2_1;
         // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_533;
-        set_field(noUndlyInstrumentPartySubIDs_0_0_2_1, FIX::UnderlyingInstrumentPartySubID{"STRING_940248984"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_533);
-        set_field(noUndlyInstrumentPartySubIDs_0_0_2_1, FIX::UnderlyingInstrumentPartySubIDType{88708484}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_533);
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_533);
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_534;
+        set_field(noUndlyInstrumentPartySubIDs_0_0_2_1, FIX::UnderlyingInstrumentPartySubID{"STRING_758463440"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_534);
+        set_field(noUndlyInstrumentPartySubIDs_0_0_2_1, FIX::UnderlyingInstrumentPartySubIDType{326859029}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_534);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_534);
         all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
 
         noUndlyInstrumentParties_0_1_0.addGroup(noUndlyInstrumentPartySubIDs_0_0_2_1);
       }
+      {
+        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_0_2_2;
+        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_535;
+        set_field(noUndlyInstrumentPartySubIDs_0_0_2_2, FIX::UnderlyingInstrumentPartySubID{"STRING_1560166050"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_535);
+        set_field(noUndlyInstrumentPartySubIDs_0_0_2_2, FIX::UnderlyingInstrumentPartySubIDType{638697238}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_535);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_535);
+        all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
+
+        noUndlyInstrumentParties_0_1_0.addGroup(noUndlyInstrumentPartySubIDs_0_0_2_2);
+      }
       noUnderlyings_0_0.addGroup(noUndlyInstrumentParties_0_1_0);
+    }
+    {
+      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties noUndlyInstrumentParties_0_1_1;
+      // UndlyInstrumentParties.NoUndlyInstrumentParties
+      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_268;
+      set_field(noUndlyInstrumentParties_0_1_1, FIX::UnderlyingInstrumentPartyID{"STRING_589684428"}, UndlyInstrumentParties_NoUndlyInstrumentParties_268);
+      set_field(noUndlyInstrumentParties_0_1_1, FIX::UnderlyingInstrumentPartyIDSource{'1'}, UndlyInstrumentParties_NoUndlyInstrumentParties_268);
+      set_field(noUndlyInstrumentParties_0_1_1, FIX::UnderlyingInstrumentPartyRole{1862091402}, UndlyInstrumentParties_NoUndlyInstrumentParties_268);
+      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_268);
+      all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties");
+
+      // UndlyInstrumentPtysSubGrp
+      // Group UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
+      {
+        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_1_2_0;
+        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_536;
+        set_field(noUndlyInstrumentPartySubIDs_0_1_2_0, FIX::UnderlyingInstrumentPartySubID{"STRING_846008361"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_536);
+        set_field(noUndlyInstrumentPartySubIDs_0_1_2_0, FIX::UnderlyingInstrumentPartySubIDType{1144149097}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_536);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_536);
+        all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
+
+        noUndlyInstrumentParties_0_1_1.addGroup(noUndlyInstrumentPartySubIDs_0_1_2_0);
+      }
+      {
+        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_1_2_1;
+        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_537;
+        set_field(noUndlyInstrumentPartySubIDs_0_1_2_1, FIX::UnderlyingInstrumentPartySubID{"STRING_1683242529"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_537);
+        set_field(noUndlyInstrumentPartySubIDs_0_1_2_1, FIX::UnderlyingInstrumentPartySubIDType{1915868128}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_537);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_537);
+        all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
+
+        noUndlyInstrumentParties_0_1_1.addGroup(noUndlyInstrumentPartySubIDs_0_1_2_1);
+      }
+      {
+        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_1_2_2;
+        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_538;
+        set_field(noUndlyInstrumentPartySubIDs_0_1_2_2, FIX::UnderlyingInstrumentPartySubID{"STRING_2130761096"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_538);
+        set_field(noUndlyInstrumentPartySubIDs_0_1_2_2, FIX::UnderlyingInstrumentPartySubIDType{931330265}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_538);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_538);
+        all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
+
+        noUndlyInstrumentParties_0_1_1.addGroup(noUndlyInstrumentPartySubIDs_0_1_2_2);
+      }
+      noUnderlyings_0_0.addGroup(noUndlyInstrumentParties_0_1_1);
+    }
+    {
+      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties noUndlyInstrumentParties_0_1_2;
+      // UndlyInstrumentParties.NoUndlyInstrumentParties
+      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_269;
+      set_field(noUndlyInstrumentParties_0_1_2, FIX::UnderlyingInstrumentPartyID{"STRING_1109888226"}, UndlyInstrumentParties_NoUndlyInstrumentParties_269);
+      set_field(noUndlyInstrumentParties_0_1_2, FIX::UnderlyingInstrumentPartyIDSource{'1'}, UndlyInstrumentParties_NoUndlyInstrumentParties_269);
+      set_field(noUndlyInstrumentParties_0_1_2, FIX::UnderlyingInstrumentPartyRole{399154579}, UndlyInstrumentParties_NoUndlyInstrumentParties_269);
+      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_269);
+      all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties");
+
+      // UndlyInstrumentPtysSubGrp
+      // Group UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
+      {
+        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_2_2_0;
+        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_539;
+        set_field(noUndlyInstrumentPartySubIDs_0_2_2_0, FIX::UnderlyingInstrumentPartySubID{"STRING_2074104069"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_539);
+        set_field(noUndlyInstrumentPartySubIDs_0_2_2_0, FIX::UnderlyingInstrumentPartySubIDType{385059082}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_539);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_539);
+        all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
+
+        noUndlyInstrumentParties_0_1_2.addGroup(noUndlyInstrumentPartySubIDs_0_2_2_0);
+      }
+      {
+        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_2_2_1;
+        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_540;
+        set_field(noUndlyInstrumentPartySubIDs_0_2_2_1, FIX::UnderlyingInstrumentPartySubID{"STRING_1565322748"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_540);
+        set_field(noUndlyInstrumentPartySubIDs_0_2_2_1, FIX::UnderlyingInstrumentPartySubIDType{1963804912}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_540);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_540);
+        all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
+
+        noUndlyInstrumentParties_0_1_2.addGroup(noUndlyInstrumentPartySubIDs_0_2_2_1);
+      }
+      {
+        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_0_2_2_2;
+        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_541;
+        set_field(noUndlyInstrumentPartySubIDs_0_2_2_2, FIX::UnderlyingInstrumentPartySubID{"STRING_172684106"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_541);
+        set_field(noUndlyInstrumentPartySubIDs_0_2_2_2, FIX::UnderlyingInstrumentPartySubIDType{1719900249}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_541);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_541);
+        all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
+
+        noUndlyInstrumentParties_0_1_2.addGroup(noUndlyInstrumentPartySubIDs_0_2_2_2);
+      }
+      noUnderlyings_0_0.addGroup(noUndlyInstrumentParties_0_1_2);
     }
     msg.addGroup(noUnderlyings_0_0);
   }
@@ -1053,123 +892,123 @@ set_field(noUnderlyings_0_0, UnderlyingUnitOfMeasureQty_129, UnderlyingInstrumen
     FIX50SP2::SecurityListRequest::NoUnderlyings noUnderlyings_0_1;
     // UndInstrmtGrp.NoUnderlyings
     // UnderlyingInstrument
-    multiset<string> UnderlyingInstrument_130;
-    set_field(noUnderlyings_0_1, FIX::EncodedUnderlyingIssuer{"DATA_596707963"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::EncodedUnderlyingIssuerLen{1977351736}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::EncodedUnderlyingSecurityDesc{"DATA_457032745"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::EncodedUnderlyingSecurityDescLen{1815476581}, UnderlyingInstrument_130);
-    FIX::UnderlyingAdjustedQuantity UnderlyingAdjustedQuantity_130;
-    UnderlyingAdjustedQuantity_130.setString("11767099");
-set_field(noUnderlyings_0_1, UnderlyingAdjustedQuantity_130, UnderlyingInstrument_130);
-    FIX::UnderlyingAllocationPercent UnderlyingAllocationPercent_130;
-    UnderlyingAllocationPercent_130.setString("65.650000");
-set_field(noUnderlyings_0_1, UnderlyingAllocationPercent_130, UnderlyingInstrument_130);
-    FIX::UnderlyingAttachmentPoint UnderlyingAttachmentPoint_130;
-    UnderlyingAttachmentPoint_130.setString("23.680000");
-set_field(noUnderlyings_0_1, UnderlyingAttachmentPoint_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingCFICode{"STRING_1264003854"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingCPProgram{"STRING_1399469719"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingCPRegType{"STRING_611806745"}, UnderlyingInstrument_130);
-    FIX::UnderlyingCapValue UnderlyingCapValue_130;
-    UnderlyingCapValue_130.setString("6450185");
-set_field(noUnderlyings_0_1, UnderlyingCapValue_130, UnderlyingInstrument_130);
-    FIX::UnderlyingCashAmount UnderlyingCashAmount_130;
-    UnderlyingCashAmount_130.setString("14306464");
-set_field(noUnderlyings_0_1, UnderlyingCashAmount_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingCashType{"STRING_FIXED"}, UnderlyingInstrument_130);
-    FIX::UnderlyingContractMultiplier UnderlyingContractMultiplier_130;
-    UnderlyingContractMultiplier_130.setString("10275554");
-set_field(noUnderlyings_0_1, UnderlyingContractMultiplier_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingContractMultiplierUnit{1623694462}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingCountryOfIssue{"COUNTRY_231871309"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingCouponPaymentDate{"LOCALMKTDATE_491811080"}, UnderlyingInstrument_130);
-    FIX::UnderlyingCouponRate UnderlyingCouponRate_130;
-    UnderlyingCouponRate_130.setString("42.720000");
-set_field(noUnderlyings_0_1, UnderlyingCouponRate_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingCreditRating{"STRING_705277450"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingCurrency{"USD"}, UnderlyingInstrument_130);
-    FIX::UnderlyingCurrentValue UnderlyingCurrentValue_130;
-    UnderlyingCurrentValue_130.setString("21335642");
-set_field(noUnderlyings_0_1, UnderlyingCurrentValue_130, UnderlyingInstrument_130);
-    FIX::UnderlyingDetachmentPoint UnderlyingDetachmentPoint_130;
-    UnderlyingDetachmentPoint_130.setString("92.800000");
-set_field(noUnderlyings_0_1, UnderlyingDetachmentPoint_130, UnderlyingInstrument_130);
-    FIX::UnderlyingDirtyPrice UnderlyingDirtyPrice_130;
-    UnderlyingDirtyPrice_130.setString("5350537");
-set_field(noUnderlyings_0_1, UnderlyingDirtyPrice_130, UnderlyingInstrument_130);
-    FIX::UnderlyingEndPrice UnderlyingEndPrice_130;
-    UnderlyingEndPrice_130.setString("3194446");
-set_field(noUnderlyings_0_1, UnderlyingEndPrice_130, UnderlyingInstrument_130);
-    FIX::UnderlyingEndValue UnderlyingEndValue_130;
-    UnderlyingEndValue_130.setString("6955231");
-set_field(noUnderlyings_0_1, UnderlyingEndValue_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingExerciseStyle{580890682}, UnderlyingInstrument_130);
-    FIX::UnderlyingFXRate UnderlyingFXRate_130;
-    UnderlyingFXRate_130.setString("20423210");
-set_field(noUnderlyings_0_1, UnderlyingFXRate_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingFXRateCalc{'M'}, UnderlyingInstrument_130);
-    FIX::UnderlyingFactor UnderlyingFactor_130;
-    UnderlyingFactor_130.setString("15211396");
-set_field(noUnderlyings_0_1, UnderlyingFactor_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingFlowScheduleType{2131029494}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingInstrRegistry{"STRING_1682068284"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingIssueDate{"LOCALMKTDATE_1351007755"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingIssuer{"STRING_440578591"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingLocaleOfIssue{"STRING_1350061217"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingMaturityDate{"LOCALMKTDATE_380234074"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingMaturityMonthYear{"MONTHYEAR_621895156"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingMaturityTime{"TZTIMEONLY_438999937"}, UnderlyingInstrument_130);
-    FIX::UnderlyingNotionalPercentageOutstanding UnderlyingNotionalPercentageOutstanding_130;
-    UnderlyingNotionalPercentageOutstanding_130.setString("79.290000");
-set_field(noUnderlyings_0_1, UnderlyingNotionalPercentageOutstanding_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingOptAttribute{'2'}, UnderlyingInstrument_130);
-    FIX::UnderlyingOriginalNotionalPercentageOutstanding UnderlyingOriginalNotionalPercentageOutstanding_130;
-    UnderlyingOriginalNotionalPercentageOutstanding_130.setString("66.820000");
-set_field(noUnderlyings_0_1, UnderlyingOriginalNotionalPercentageOutstanding_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingPriceUnitOfMeasure{"STRING_141772782"}, UnderlyingInstrument_130);
-    FIX::UnderlyingPriceUnitOfMeasureQty UnderlyingPriceUnitOfMeasureQty_130;
-    UnderlyingPriceUnitOfMeasureQty_130.setString("13045277");
-set_field(noUnderlyings_0_1, UnderlyingPriceUnitOfMeasureQty_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingProduct{841054059}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingPutOrCall{1169328183}, UnderlyingInstrument_130);
-    FIX::UnderlyingPx UnderlyingPx_130;
-    UnderlyingPx_130.setString("7807385");
-set_field(noUnderlyings_0_1, UnderlyingPx_130, UnderlyingInstrument_130);
-    FIX::UnderlyingQty UnderlyingQty_130;
-    UnderlyingQty_130.setString("10729253");
-set_field(noUnderlyings_0_1, UnderlyingQty_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingRedemptionDate{"LOCALMKTDATE_1661139263"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingRepoCollateralSecurityType{"STRING_1061932811"}, UnderlyingInstrument_130);
-    FIX::UnderlyingRepurchaseRate UnderlyingRepurchaseRate_130;
-    UnderlyingRepurchaseRate_130.setString("28.190000");
-set_field(noUnderlyings_0_1, UnderlyingRepurchaseRate_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingRepurchaseTerm{960426603}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingRestructuringType{"STRING_747053193"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingSecurityDesc{"STRING_1764283422"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingSecurityExchange{"EXCHANGE_783332235"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingSecurityID{"STRING_1282106964"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingSecurityIDSource{"STRING_2083728070"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingSecuritySubType{"STRING_1478855417"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingSecurityType{"STRING_1862997647"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingSeniority{"STRING_1978565432"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingSettlMethod{"STRING_416732091"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingSettlementType{4}, UnderlyingInstrument_130);
-    FIX::UnderlyingStartValue UnderlyingStartValue_130;
-    UnderlyingStartValue_130.setString("19621112");
-set_field(noUnderlyings_0_1, UnderlyingStartValue_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingStateOrProvinceOfIssue{"STRING_2098800375"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingStrikeCurrency{"EUR"}, UnderlyingInstrument_130);
-    FIX::UnderlyingStrikePrice UnderlyingStrikePrice_130;
-    UnderlyingStrikePrice_130.setString("13013779");
-set_field(noUnderlyings_0_1, UnderlyingStrikePrice_130, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingSymbol{"STRING_820411847"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingSymbolSfx{"STRING_877101377"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingTimeUnit{"STRING_1740377882"}, UnderlyingInstrument_130);
-    set_field(noUnderlyings_0_1, FIX::UnderlyingUnitOfMeasure{"STRING_317166128"}, UnderlyingInstrument_130);
-    FIX::UnderlyingUnitOfMeasureQty UnderlyingUnitOfMeasureQty_130;
-    UnderlyingUnitOfMeasureQty_130.setString("7509826");
-set_field(noUnderlyings_0_1, UnderlyingUnitOfMeasureQty_130, UnderlyingInstrument_130);
-    all_values.push_back(UnderlyingInstrument_130);
+    multiset<string> UnderlyingInstrument_127;
+    set_field(noUnderlyings_0_1, FIX::EncodedUnderlyingIssuer{"DATA_1777487203"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::EncodedUnderlyingIssuerLen{1747143345}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::EncodedUnderlyingSecurityDesc{"DATA_121727834"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::EncodedUnderlyingSecurityDescLen{1552222071}, UnderlyingInstrument_127);
+    FIX::UnderlyingAdjustedQuantity UnderlyingAdjustedQuantity_127;
+    UnderlyingAdjustedQuantity_127.setString("6990474");
+set_field(noUnderlyings_0_1, UnderlyingAdjustedQuantity_127, UnderlyingInstrument_127);
+    FIX::UnderlyingAllocationPercent UnderlyingAllocationPercent_127;
+    UnderlyingAllocationPercent_127.setString("22.540000");
+set_field(noUnderlyings_0_1, UnderlyingAllocationPercent_127, UnderlyingInstrument_127);
+    FIX::UnderlyingAttachmentPoint UnderlyingAttachmentPoint_127;
+    UnderlyingAttachmentPoint_127.setString("46.850000");
+set_field(noUnderlyings_0_1, UnderlyingAttachmentPoint_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingCFICode{"STRING_1457510865"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingCPProgram{"STRING_2050131284"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingCPRegType{"STRING_1536147087"}, UnderlyingInstrument_127);
+    FIX::UnderlyingCapValue UnderlyingCapValue_127;
+    UnderlyingCapValue_127.setString("20962081");
+set_field(noUnderlyings_0_1, UnderlyingCapValue_127, UnderlyingInstrument_127);
+    FIX::UnderlyingCashAmount UnderlyingCashAmount_127;
+    UnderlyingCashAmount_127.setString("4923320");
+set_field(noUnderlyings_0_1, UnderlyingCashAmount_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingCashType{"STRING_DIFF"}, UnderlyingInstrument_127);
+    FIX::UnderlyingContractMultiplier UnderlyingContractMultiplier_127;
+    UnderlyingContractMultiplier_127.setString("18108158");
+set_field(noUnderlyings_0_1, UnderlyingContractMultiplier_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingContractMultiplierUnit{1491591978}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingCountryOfIssue{"COUNTRY_1434288458"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingCouponPaymentDate{"LOCALMKTDATE_807481307"}, UnderlyingInstrument_127);
+    FIX::UnderlyingCouponRate UnderlyingCouponRate_127;
+    UnderlyingCouponRate_127.setString("8.590000");
+set_field(noUnderlyings_0_1, UnderlyingCouponRate_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingCreditRating{"STRING_1202672938"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingCurrency{"USD"}, UnderlyingInstrument_127);
+    FIX::UnderlyingCurrentValue UnderlyingCurrentValue_127;
+    UnderlyingCurrentValue_127.setString("1650775");
+set_field(noUnderlyings_0_1, UnderlyingCurrentValue_127, UnderlyingInstrument_127);
+    FIX::UnderlyingDetachmentPoint UnderlyingDetachmentPoint_127;
+    UnderlyingDetachmentPoint_127.setString("80.560000");
+set_field(noUnderlyings_0_1, UnderlyingDetachmentPoint_127, UnderlyingInstrument_127);
+    FIX::UnderlyingDirtyPrice UnderlyingDirtyPrice_127;
+    UnderlyingDirtyPrice_127.setString("2103520");
+set_field(noUnderlyings_0_1, UnderlyingDirtyPrice_127, UnderlyingInstrument_127);
+    FIX::UnderlyingEndPrice UnderlyingEndPrice_127;
+    UnderlyingEndPrice_127.setString("7968446");
+set_field(noUnderlyings_0_1, UnderlyingEndPrice_127, UnderlyingInstrument_127);
+    FIX::UnderlyingEndValue UnderlyingEndValue_127;
+    UnderlyingEndValue_127.setString("20270684");
+set_field(noUnderlyings_0_1, UnderlyingEndValue_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingExerciseStyle{595411138}, UnderlyingInstrument_127);
+    FIX::UnderlyingFXRate UnderlyingFXRate_127;
+    UnderlyingFXRate_127.setString("2146837");
+set_field(noUnderlyings_0_1, UnderlyingFXRate_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingFXRateCalc{'M'}, UnderlyingInstrument_127);
+    FIX::UnderlyingFactor UnderlyingFactor_127;
+    UnderlyingFactor_127.setString("7680952");
+set_field(noUnderlyings_0_1, UnderlyingFactor_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingFlowScheduleType{1934583990}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingInstrRegistry{"STRING_1473393297"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingIssueDate{"LOCALMKTDATE_367754942"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingIssuer{"STRING_2056311824"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingLocaleOfIssue{"STRING_878131720"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingMaturityDate{"LOCALMKTDATE_1066802367"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingMaturityMonthYear{"MONTHYEAR_1632100431"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingMaturityTime{"TZTIMEONLY_854112757"}, UnderlyingInstrument_127);
+    FIX::UnderlyingNotionalPercentageOutstanding UnderlyingNotionalPercentageOutstanding_127;
+    UnderlyingNotionalPercentageOutstanding_127.setString("95.840000");
+set_field(noUnderlyings_0_1, UnderlyingNotionalPercentageOutstanding_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingOptAttribute{'1'}, UnderlyingInstrument_127);
+    FIX::UnderlyingOriginalNotionalPercentageOutstanding UnderlyingOriginalNotionalPercentageOutstanding_127;
+    UnderlyingOriginalNotionalPercentageOutstanding_127.setString("61.960000");
+set_field(noUnderlyings_0_1, UnderlyingOriginalNotionalPercentageOutstanding_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingPriceUnitOfMeasure{"STRING_325554039"}, UnderlyingInstrument_127);
+    FIX::UnderlyingPriceUnitOfMeasureQty UnderlyingPriceUnitOfMeasureQty_127;
+    UnderlyingPriceUnitOfMeasureQty_127.setString("20270801");
+set_field(noUnderlyings_0_1, UnderlyingPriceUnitOfMeasureQty_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingProduct{831056293}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingPutOrCall{2136369897}, UnderlyingInstrument_127);
+    FIX::UnderlyingPx UnderlyingPx_127;
+    UnderlyingPx_127.setString("13711884");
+set_field(noUnderlyings_0_1, UnderlyingPx_127, UnderlyingInstrument_127);
+    FIX::UnderlyingQty UnderlyingQty_127;
+    UnderlyingQty_127.setString("1178611");
+set_field(noUnderlyings_0_1, UnderlyingQty_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingRedemptionDate{"LOCALMKTDATE_796367557"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingRepoCollateralSecurityType{"STRING_251055672"}, UnderlyingInstrument_127);
+    FIX::UnderlyingRepurchaseRate UnderlyingRepurchaseRate_127;
+    UnderlyingRepurchaseRate_127.setString("40.410000");
+set_field(noUnderlyings_0_1, UnderlyingRepurchaseRate_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingRepurchaseTerm{1587126313}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingRestructuringType{"STRING_62253149"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingSecurityDesc{"STRING_1485611557"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingSecurityExchange{"EXCHANGE_1540090721"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingSecurityID{"STRING_272605205"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingSecurityIDSource{"STRING_134972551"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingSecuritySubType{"STRING_1419675551"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingSecurityType{"STRING_868016343"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingSeniority{"STRING_349656292"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingSettlMethod{"STRING_1115581644"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingSettlementType{2}, UnderlyingInstrument_127);
+    FIX::UnderlyingStartValue UnderlyingStartValue_127;
+    UnderlyingStartValue_127.setString("1367566");
+set_field(noUnderlyings_0_1, UnderlyingStartValue_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingStateOrProvinceOfIssue{"STRING_441491293"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingStrikeCurrency{"CHF"}, UnderlyingInstrument_127);
+    FIX::UnderlyingStrikePrice UnderlyingStrikePrice_127;
+    UnderlyingStrikePrice_127.setString("13196230");
+set_field(noUnderlyings_0_1, UnderlyingStrikePrice_127, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingSymbol{"STRING_923185248"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingSymbolSfx{"STRING_1677685242"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingTimeUnit{"STRING_26252123"}, UnderlyingInstrument_127);
+    set_field(noUnderlyings_0_1, FIX::UnderlyingUnitOfMeasure{"STRING_1300014832"}, UnderlyingInstrument_127);
+    FIX::UnderlyingUnitOfMeasureQty UnderlyingUnitOfMeasureQty_127;
+    UnderlyingUnitOfMeasureQty_127.setString("10649496");
+set_field(noUnderlyings_0_1, UnderlyingUnitOfMeasureQty_127, UnderlyingInstrument_127);
+    all_values.push_back(UnderlyingInstrument_127);
     all_compo_names.insert("...NoUnderlyings.");
 
     // UndSecAltIDGrp
@@ -1177,10 +1016,10 @@ set_field(noUnderlyings_0_1, UnderlyingUnitOfMeasureQty_130, UnderlyingInstrumen
     {
       FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingSecurityAltID noUnderlyingSecurityAltID_1_1_0;
       // UndSecAltIDGrp.NoUnderlyingSecurityAltID
-      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_269;
-      set_field(noUnderlyingSecurityAltID_1_1_0, FIX::UnderlyingSecurityAltID{"STRING_458938910"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_269);
-      set_field(noUnderlyingSecurityAltID_1_1_0, FIX::UnderlyingSecurityAltIDSource{"STRING_2055510329"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_269);
-      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_269);
+      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_263;
+      set_field(noUnderlyingSecurityAltID_1_1_0, FIX::UnderlyingSecurityAltID{"STRING_1625568872"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_263);
+      set_field(noUnderlyingSecurityAltID_1_1_0, FIX::UnderlyingSecurityAltIDSource{"STRING_944546145"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_263);
+      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_263);
       all_compo_names.insert("...NoUnderlyings....NoUnderlyingSecurityAltID");
 
       noUnderlyings_0_1.addGroup(noUnderlyingSecurityAltID_1_1_0);
@@ -1188,23 +1027,34 @@ set_field(noUnderlyings_0_1, UnderlyingUnitOfMeasureQty_130, UnderlyingInstrumen
     {
       FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingSecurityAltID noUnderlyingSecurityAltID_1_1_1;
       // UndSecAltIDGrp.NoUnderlyingSecurityAltID
-      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_270;
-      set_field(noUnderlyingSecurityAltID_1_1_1, FIX::UnderlyingSecurityAltID{"STRING_1484754976"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_270);
-      set_field(noUnderlyingSecurityAltID_1_1_1, FIX::UnderlyingSecurityAltIDSource{"STRING_1628267093"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_270);
-      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_270);
+      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_264;
+      set_field(noUnderlyingSecurityAltID_1_1_1, FIX::UnderlyingSecurityAltID{"STRING_1100084613"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_264);
+      set_field(noUnderlyingSecurityAltID_1_1_1, FIX::UnderlyingSecurityAltIDSource{"STRING_1614455121"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_264);
+      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_264);
       all_compo_names.insert("...NoUnderlyings....NoUnderlyingSecurityAltID");
 
       noUnderlyings_0_1.addGroup(noUnderlyingSecurityAltID_1_1_1);
+    }
+    {
+      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingSecurityAltID noUnderlyingSecurityAltID_1_1_2;
+      // UndSecAltIDGrp.NoUnderlyingSecurityAltID
+      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_265;
+      set_field(noUnderlyingSecurityAltID_1_1_2, FIX::UnderlyingSecurityAltID{"STRING_168250958"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_265);
+      set_field(noUnderlyingSecurityAltID_1_1_2, FIX::UnderlyingSecurityAltIDSource{"STRING_1217945717"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_265);
+      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_265);
+      all_compo_names.insert("...NoUnderlyings....NoUnderlyingSecurityAltID");
+
+      noUnderlyings_0_1.addGroup(noUnderlyingSecurityAltID_1_1_2);
     }
     // UnderlyingStipulations
     // Group UnderlyingStipulations.NoUnderlyingStips
     {
       FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingStips noUnderlyingStips_1_1_0;
       // UnderlyingStipulations.NoUnderlyingStips
-      multiset<string> UnderlyingStipulations_NoUnderlyingStips_265;
-      set_field(noUnderlyingStips_1_1_0, FIX::UnderlyingStipType{"STRING_410196696"}, UnderlyingStipulations_NoUnderlyingStips_265);
-      set_field(noUnderlyingStips_1_1_0, FIX::UnderlyingStipValue{"STRING_1141922709"}, UnderlyingStipulations_NoUnderlyingStips_265);
-      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_265);
+      multiset<string> UnderlyingStipulations_NoUnderlyingStips_254;
+      set_field(noUnderlyingStips_1_1_0, FIX::UnderlyingStipType{"STRING_419306631"}, UnderlyingStipulations_NoUnderlyingStips_254);
+      set_field(noUnderlyingStips_1_1_0, FIX::UnderlyingStipValue{"STRING_390996110"}, UnderlyingStipulations_NoUnderlyingStips_254);
+      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_254);
       all_compo_names.insert("...NoUnderlyings....NoUnderlyingStips");
 
       noUnderlyings_0_1.addGroup(noUnderlyingStips_1_1_0);
@@ -1212,10 +1062,10 @@ set_field(noUnderlyings_0_1, UnderlyingUnitOfMeasureQty_130, UnderlyingInstrumen
     {
       FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingStips noUnderlyingStips_1_1_1;
       // UnderlyingStipulations.NoUnderlyingStips
-      multiset<string> UnderlyingStipulations_NoUnderlyingStips_266;
-      set_field(noUnderlyingStips_1_1_1, FIX::UnderlyingStipType{"STRING_1750698031"}, UnderlyingStipulations_NoUnderlyingStips_266);
-      set_field(noUnderlyingStips_1_1_1, FIX::UnderlyingStipValue{"STRING_40915867"}, UnderlyingStipulations_NoUnderlyingStips_266);
-      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_266);
+      multiset<string> UnderlyingStipulations_NoUnderlyingStips_255;
+      set_field(noUnderlyingStips_1_1_1, FIX::UnderlyingStipType{"STRING_1850465343"}, UnderlyingStipulations_NoUnderlyingStips_255);
+      set_field(noUnderlyingStips_1_1_1, FIX::UnderlyingStipValue{"STRING_481559780"}, UnderlyingStipulations_NoUnderlyingStips_255);
+      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_255);
       all_compo_names.insert("...NoUnderlyings....NoUnderlyingStips");
 
       noUnderlyings_0_1.addGroup(noUnderlyingStips_1_1_1);
@@ -1223,10 +1073,10 @@ set_field(noUnderlyings_0_1, UnderlyingUnitOfMeasureQty_130, UnderlyingInstrumen
     {
       FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingStips noUnderlyingStips_1_1_2;
       // UnderlyingStipulations.NoUnderlyingStips
-      multiset<string> UnderlyingStipulations_NoUnderlyingStips_267;
-      set_field(noUnderlyingStips_1_1_2, FIX::UnderlyingStipType{"STRING_2102349312"}, UnderlyingStipulations_NoUnderlyingStips_267);
-      set_field(noUnderlyingStips_1_1_2, FIX::UnderlyingStipValue{"STRING_350267576"}, UnderlyingStipulations_NoUnderlyingStips_267);
-      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_267);
+      multiset<string> UnderlyingStipulations_NoUnderlyingStips_256;
+      set_field(noUnderlyingStips_1_1_2, FIX::UnderlyingStipType{"STRING_1876607668"}, UnderlyingStipulations_NoUnderlyingStips_256);
+      set_field(noUnderlyingStips_1_1_2, FIX::UnderlyingStipValue{"STRING_1243072417"}, UnderlyingStipulations_NoUnderlyingStips_256);
+      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_256);
       all_compo_names.insert("...NoUnderlyings....NoUnderlyingStips");
 
       noUnderlyings_0_1.addGroup(noUnderlyingStips_1_1_2);
@@ -1236,11 +1086,11 @@ set_field(noUnderlyings_0_1, UnderlyingUnitOfMeasureQty_130, UnderlyingInstrumen
     {
       FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties noUndlyInstrumentParties_1_1_0;
       // UndlyInstrumentParties.NoUndlyInstrumentParties
-      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_268;
-      set_field(noUndlyInstrumentParties_1_1_0, FIX::UnderlyingInstrumentPartyID{"STRING_738197899"}, UndlyInstrumentParties_NoUndlyInstrumentParties_268);
-      set_field(noUndlyInstrumentParties_1_1_0, FIX::UnderlyingInstrumentPartyIDSource{'1'}, UndlyInstrumentParties_NoUndlyInstrumentParties_268);
-      set_field(noUndlyInstrumentParties_1_1_0, FIX::UnderlyingInstrumentPartyRole{1741443712}, UndlyInstrumentParties_NoUndlyInstrumentParties_268);
-      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_268);
+      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_270;
+      set_field(noUndlyInstrumentParties_1_1_0, FIX::UnderlyingInstrumentPartyID{"STRING_2011580219"}, UndlyInstrumentParties_NoUndlyInstrumentParties_270);
+      set_field(noUndlyInstrumentParties_1_1_0, FIX::UnderlyingInstrumentPartyIDSource{'5'}, UndlyInstrumentParties_NoUndlyInstrumentParties_270);
+      set_field(noUndlyInstrumentParties_1_1_0, FIX::UnderlyingInstrumentPartyRole{1622181328}, UndlyInstrumentParties_NoUndlyInstrumentParties_270);
+      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_270);
       all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties");
 
       // UndlyInstrumentPtysSubGrp
@@ -1248,10 +1098,10 @@ set_field(noUnderlyings_0_1, UnderlyingUnitOfMeasureQty_130, UnderlyingInstrumen
       {
         FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_1_0_2_0;
         // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_534;
-        set_field(noUndlyInstrumentPartySubIDs_1_0_2_0, FIX::UnderlyingInstrumentPartySubID{"STRING_1347888539"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_534);
-        set_field(noUndlyInstrumentPartySubIDs_1_0_2_0, FIX::UnderlyingInstrumentPartySubIDType{1572525496}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_534);
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_534);
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_542;
+        set_field(noUndlyInstrumentPartySubIDs_1_0_2_0, FIX::UnderlyingInstrumentPartySubID{"STRING_1630845964"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_542);
+        set_field(noUndlyInstrumentPartySubIDs_1_0_2_0, FIX::UnderlyingInstrumentPartySubIDType{1110809267}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_542);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_542);
         all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
 
         noUndlyInstrumentParties_1_1_0.addGroup(noUndlyInstrumentPartySubIDs_1_0_2_0);
@@ -1259,35 +1109,24 @@ set_field(noUnderlyings_0_1, UnderlyingUnitOfMeasureQty_130, UnderlyingInstrumen
       {
         FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_1_0_2_1;
         // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_535;
-        set_field(noUndlyInstrumentPartySubIDs_1_0_2_1, FIX::UnderlyingInstrumentPartySubID{"STRING_486301760"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_535);
-        set_field(noUndlyInstrumentPartySubIDs_1_0_2_1, FIX::UnderlyingInstrumentPartySubIDType{437058557}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_535);
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_535);
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_543;
+        set_field(noUndlyInstrumentPartySubIDs_1_0_2_1, FIX::UnderlyingInstrumentPartySubID{"STRING_350509498"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_543);
+        set_field(noUndlyInstrumentPartySubIDs_1_0_2_1, FIX::UnderlyingInstrumentPartySubIDType{2072337258}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_543);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_543);
         all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
 
         noUndlyInstrumentParties_1_1_0.addGroup(noUndlyInstrumentPartySubIDs_1_0_2_1);
-      }
-      {
-        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_1_0_2_2;
-        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_536;
-        set_field(noUndlyInstrumentPartySubIDs_1_0_2_2, FIX::UnderlyingInstrumentPartySubID{"STRING_1387153126"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_536);
-        set_field(noUndlyInstrumentPartySubIDs_1_0_2_2, FIX::UnderlyingInstrumentPartySubIDType{437618487}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_536);
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_536);
-        all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
-
-        noUndlyInstrumentParties_1_1_0.addGroup(noUndlyInstrumentPartySubIDs_1_0_2_2);
       }
       noUnderlyings_0_1.addGroup(noUndlyInstrumentParties_1_1_0);
     }
     {
       FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties noUndlyInstrumentParties_1_1_1;
       // UndlyInstrumentParties.NoUndlyInstrumentParties
-      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_269;
-      set_field(noUndlyInstrumentParties_1_1_1, FIX::UnderlyingInstrumentPartyID{"STRING_877236329"}, UndlyInstrumentParties_NoUndlyInstrumentParties_269);
-      set_field(noUndlyInstrumentParties_1_1_1, FIX::UnderlyingInstrumentPartyIDSource{'1'}, UndlyInstrumentParties_NoUndlyInstrumentParties_269);
-      set_field(noUndlyInstrumentParties_1_1_1, FIX::UnderlyingInstrumentPartyRole{1738996432}, UndlyInstrumentParties_NoUndlyInstrumentParties_269);
-      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_269);
+      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_271;
+      set_field(noUndlyInstrumentParties_1_1_1, FIX::UnderlyingInstrumentPartyID{"STRING_967192149"}, UndlyInstrumentParties_NoUndlyInstrumentParties_271);
+      set_field(noUndlyInstrumentParties_1_1_1, FIX::UnderlyingInstrumentPartyIDSource{'3'}, UndlyInstrumentParties_NoUndlyInstrumentParties_271);
+      set_field(noUndlyInstrumentParties_1_1_1, FIX::UnderlyingInstrumentPartyRole{1244476624}, UndlyInstrumentParties_NoUndlyInstrumentParties_271);
+      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_271);
       all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties");
 
       // UndlyInstrumentPtysSubGrp
@@ -1295,87 +1134,295 @@ set_field(noUnderlyings_0_1, UnderlyingUnitOfMeasureQty_130, UnderlyingInstrumen
       {
         FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_1_1_2_0;
         // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_537;
-        set_field(noUndlyInstrumentPartySubIDs_1_1_2_0, FIX::UnderlyingInstrumentPartySubID{"STRING_371977076"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_537);
-        set_field(noUndlyInstrumentPartySubIDs_1_1_2_0, FIX::UnderlyingInstrumentPartySubIDType{1331890667}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_537);
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_537);
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_544;
+        set_field(noUndlyInstrumentPartySubIDs_1_1_2_0, FIX::UnderlyingInstrumentPartySubID{"STRING_2073779552"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_544);
+        set_field(noUndlyInstrumentPartySubIDs_1_1_2_0, FIX::UnderlyingInstrumentPartySubIDType{1270728747}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_544);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_544);
         all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
 
         noUndlyInstrumentParties_1_1_1.addGroup(noUndlyInstrumentPartySubIDs_1_1_2_0);
       }
-      {
-        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_1_1_2_1;
-        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_538;
-        set_field(noUndlyInstrumentPartySubIDs_1_1_2_1, FIX::UnderlyingInstrumentPartySubID{"STRING_2014814304"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_538);
-        set_field(noUndlyInstrumentPartySubIDs_1_1_2_1, FIX::UnderlyingInstrumentPartySubIDType{1122959680}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_538);
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_538);
-        all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
-
-        noUndlyInstrumentParties_1_1_1.addGroup(noUndlyInstrumentPartySubIDs_1_1_2_1);
-      }
       noUnderlyings_0_1.addGroup(noUndlyInstrumentParties_1_1_1);
     }
+    msg.addGroup(noUnderlyings_0_1);
+  }
+  {
+    FIX50SP2::SecurityListRequest::NoUnderlyings noUnderlyings_0_2;
+    // UndInstrmtGrp.NoUnderlyings
+    // UnderlyingInstrument
+    multiset<string> UnderlyingInstrument_128;
+    set_field(noUnderlyings_0_2, FIX::EncodedUnderlyingIssuer{"DATA_1042908582"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::EncodedUnderlyingIssuerLen{991245566}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::EncodedUnderlyingSecurityDesc{"DATA_1539757067"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::EncodedUnderlyingSecurityDescLen{520993806}, UnderlyingInstrument_128);
+    FIX::UnderlyingAdjustedQuantity UnderlyingAdjustedQuantity_128;
+    UnderlyingAdjustedQuantity_128.setString("19357917");
+set_field(noUnderlyings_0_2, UnderlyingAdjustedQuantity_128, UnderlyingInstrument_128);
+    FIX::UnderlyingAllocationPercent UnderlyingAllocationPercent_128;
+    UnderlyingAllocationPercent_128.setString("80.330000");
+set_field(noUnderlyings_0_2, UnderlyingAllocationPercent_128, UnderlyingInstrument_128);
+    FIX::UnderlyingAttachmentPoint UnderlyingAttachmentPoint_128;
+    UnderlyingAttachmentPoint_128.setString("89.270000");
+set_field(noUnderlyings_0_2, UnderlyingAttachmentPoint_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingCFICode{"STRING_2104042669"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingCPProgram{"STRING_1710303750"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingCPRegType{"STRING_251304310"}, UnderlyingInstrument_128);
+    FIX::UnderlyingCapValue UnderlyingCapValue_128;
+    UnderlyingCapValue_128.setString("3758656");
+set_field(noUnderlyings_0_2, UnderlyingCapValue_128, UnderlyingInstrument_128);
+    FIX::UnderlyingCashAmount UnderlyingCashAmount_128;
+    UnderlyingCashAmount_128.setString("21012998");
+set_field(noUnderlyings_0_2, UnderlyingCashAmount_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingCashType{"STRING_DIFF"}, UnderlyingInstrument_128);
+    FIX::UnderlyingContractMultiplier UnderlyingContractMultiplier_128;
+    UnderlyingContractMultiplier_128.setString("8574254");
+set_field(noUnderlyings_0_2, UnderlyingContractMultiplier_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingContractMultiplierUnit{1830423880}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingCountryOfIssue{"COUNTRY_1197358422"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingCouponPaymentDate{"LOCALMKTDATE_1611590417"}, UnderlyingInstrument_128);
+    FIX::UnderlyingCouponRate UnderlyingCouponRate_128;
+    UnderlyingCouponRate_128.setString("4.510000");
+set_field(noUnderlyings_0_2, UnderlyingCouponRate_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingCreditRating{"STRING_1712622742"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingCurrency{"CHF"}, UnderlyingInstrument_128);
+    FIX::UnderlyingCurrentValue UnderlyingCurrentValue_128;
+    UnderlyingCurrentValue_128.setString("11959850");
+set_field(noUnderlyings_0_2, UnderlyingCurrentValue_128, UnderlyingInstrument_128);
+    FIX::UnderlyingDetachmentPoint UnderlyingDetachmentPoint_128;
+    UnderlyingDetachmentPoint_128.setString("37.170000");
+set_field(noUnderlyings_0_2, UnderlyingDetachmentPoint_128, UnderlyingInstrument_128);
+    FIX::UnderlyingDirtyPrice UnderlyingDirtyPrice_128;
+    UnderlyingDirtyPrice_128.setString("1112991");
+set_field(noUnderlyings_0_2, UnderlyingDirtyPrice_128, UnderlyingInstrument_128);
+    FIX::UnderlyingEndPrice UnderlyingEndPrice_128;
+    UnderlyingEndPrice_128.setString("11208386");
+set_field(noUnderlyings_0_2, UnderlyingEndPrice_128, UnderlyingInstrument_128);
+    FIX::UnderlyingEndValue UnderlyingEndValue_128;
+    UnderlyingEndValue_128.setString("10168058");
+set_field(noUnderlyings_0_2, UnderlyingEndValue_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingExerciseStyle{507393475}, UnderlyingInstrument_128);
+    FIX::UnderlyingFXRate UnderlyingFXRate_128;
+    UnderlyingFXRate_128.setString("2178316");
+set_field(noUnderlyings_0_2, UnderlyingFXRate_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingFXRateCalc{'M'}, UnderlyingInstrument_128);
+    FIX::UnderlyingFactor UnderlyingFactor_128;
+    UnderlyingFactor_128.setString("4336893");
+set_field(noUnderlyings_0_2, UnderlyingFactor_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingFlowScheduleType{1488560392}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingInstrRegistry{"STRING_1802608197"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingIssueDate{"LOCALMKTDATE_1424934946"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingIssuer{"STRING_880833812"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingLocaleOfIssue{"STRING_176118355"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingMaturityDate{"LOCALMKTDATE_1213243009"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingMaturityMonthYear{"MONTHYEAR_1373191845"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingMaturityTime{"TZTIMEONLY_164083635"}, UnderlyingInstrument_128);
+    FIX::UnderlyingNotionalPercentageOutstanding UnderlyingNotionalPercentageOutstanding_128;
+    UnderlyingNotionalPercentageOutstanding_128.setString("20.300000");
+set_field(noUnderlyings_0_2, UnderlyingNotionalPercentageOutstanding_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingOptAttribute{'9'}, UnderlyingInstrument_128);
+    FIX::UnderlyingOriginalNotionalPercentageOutstanding UnderlyingOriginalNotionalPercentageOutstanding_128;
+    UnderlyingOriginalNotionalPercentageOutstanding_128.setString("79.450000");
+set_field(noUnderlyings_0_2, UnderlyingOriginalNotionalPercentageOutstanding_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingPriceUnitOfMeasure{"STRING_1545667683"}, UnderlyingInstrument_128);
+    FIX::UnderlyingPriceUnitOfMeasureQty UnderlyingPriceUnitOfMeasureQty_128;
+    UnderlyingPriceUnitOfMeasureQty_128.setString("8898281");
+set_field(noUnderlyings_0_2, UnderlyingPriceUnitOfMeasureQty_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingProduct{369673950}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingPutOrCall{255609467}, UnderlyingInstrument_128);
+    FIX::UnderlyingPx UnderlyingPx_128;
+    UnderlyingPx_128.setString("5727683");
+set_field(noUnderlyings_0_2, UnderlyingPx_128, UnderlyingInstrument_128);
+    FIX::UnderlyingQty UnderlyingQty_128;
+    UnderlyingQty_128.setString("15670323");
+set_field(noUnderlyings_0_2, UnderlyingQty_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingRedemptionDate{"LOCALMKTDATE_1867199885"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingRepoCollateralSecurityType{"STRING_119805195"}, UnderlyingInstrument_128);
+    FIX::UnderlyingRepurchaseRate UnderlyingRepurchaseRate_128;
+    UnderlyingRepurchaseRate_128.setString("14.670000");
+set_field(noUnderlyings_0_2, UnderlyingRepurchaseRate_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingRepurchaseTerm{806004334}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingRestructuringType{"STRING_2028078510"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingSecurityDesc{"STRING_180672878"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingSecurityExchange{"EXCHANGE_855618051"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingSecurityID{"STRING_2139377676"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingSecurityIDSource{"STRING_1301511547"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingSecuritySubType{"STRING_1872423917"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingSecurityType{"STRING_499287503"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingSeniority{"STRING_1519343192"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingSettlMethod{"STRING_484639885"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingSettlementType{4}, UnderlyingInstrument_128);
+    FIX::UnderlyingStartValue UnderlyingStartValue_128;
+    UnderlyingStartValue_128.setString("8604199");
+set_field(noUnderlyings_0_2, UnderlyingStartValue_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingStateOrProvinceOfIssue{"STRING_139764434"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingStrikeCurrency{"EUR"}, UnderlyingInstrument_128);
+    FIX::UnderlyingStrikePrice UnderlyingStrikePrice_128;
+    UnderlyingStrikePrice_128.setString("3158827");
+set_field(noUnderlyings_0_2, UnderlyingStrikePrice_128, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingSymbol{"STRING_1423671190"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingSymbolSfx{"STRING_966961946"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingTimeUnit{"STRING_479966425"}, UnderlyingInstrument_128);
+    set_field(noUnderlyings_0_2, FIX::UnderlyingUnitOfMeasure{"STRING_445989573"}, UnderlyingInstrument_128);
+    FIX::UnderlyingUnitOfMeasureQty UnderlyingUnitOfMeasureQty_128;
+    UnderlyingUnitOfMeasureQty_128.setString("19029738");
+set_field(noUnderlyings_0_2, UnderlyingUnitOfMeasureQty_128, UnderlyingInstrument_128);
+    all_values.push_back(UnderlyingInstrument_128);
+    all_compo_names.insert("...NoUnderlyings.");
+
+    // UndSecAltIDGrp
+    // Group UndSecAltIDGrp.NoUnderlyingSecurityAltID
     {
-      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties noUndlyInstrumentParties_1_1_2;
+      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingSecurityAltID noUnderlyingSecurityAltID_2_1_0;
+      // UndSecAltIDGrp.NoUnderlyingSecurityAltID
+      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_266;
+      set_field(noUnderlyingSecurityAltID_2_1_0, FIX::UnderlyingSecurityAltID{"STRING_1991657256"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_266);
+      set_field(noUnderlyingSecurityAltID_2_1_0, FIX::UnderlyingSecurityAltIDSource{"STRING_645318404"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_266);
+      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_266);
+      all_compo_names.insert("...NoUnderlyings....NoUnderlyingSecurityAltID");
+
+      noUnderlyings_0_2.addGroup(noUnderlyingSecurityAltID_2_1_0);
+    }
+    {
+      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingSecurityAltID noUnderlyingSecurityAltID_2_1_1;
+      // UndSecAltIDGrp.NoUnderlyingSecurityAltID
+      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_267;
+      set_field(noUnderlyingSecurityAltID_2_1_1, FIX::UnderlyingSecurityAltID{"STRING_1265028320"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_267);
+      set_field(noUnderlyingSecurityAltID_2_1_1, FIX::UnderlyingSecurityAltIDSource{"STRING_99783075"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_267);
+      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_267);
+      all_compo_names.insert("...NoUnderlyings....NoUnderlyingSecurityAltID");
+
+      noUnderlyings_0_2.addGroup(noUnderlyingSecurityAltID_2_1_1);
+    }
+    {
+      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingSecurityAltID noUnderlyingSecurityAltID_2_1_2;
+      // UndSecAltIDGrp.NoUnderlyingSecurityAltID
+      multiset<string> UndSecAltIDGrp_NoUnderlyingSecurityAltID_268;
+      set_field(noUnderlyingSecurityAltID_2_1_2, FIX::UnderlyingSecurityAltID{"STRING_1218086796"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_268);
+      set_field(noUnderlyingSecurityAltID_2_1_2, FIX::UnderlyingSecurityAltIDSource{"STRING_684577045"}, UndSecAltIDGrp_NoUnderlyingSecurityAltID_268);
+      all_values.push_back(UndSecAltIDGrp_NoUnderlyingSecurityAltID_268);
+      all_compo_names.insert("...NoUnderlyings....NoUnderlyingSecurityAltID");
+
+      noUnderlyings_0_2.addGroup(noUnderlyingSecurityAltID_2_1_2);
+    }
+    // UnderlyingStipulations
+    // Group UnderlyingStipulations.NoUnderlyingStips
+    {
+      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingStips noUnderlyingStips_2_1_0;
+      // UnderlyingStipulations.NoUnderlyingStips
+      multiset<string> UnderlyingStipulations_NoUnderlyingStips_257;
+      set_field(noUnderlyingStips_2_1_0, FIX::UnderlyingStipType{"STRING_1337891992"}, UnderlyingStipulations_NoUnderlyingStips_257);
+      set_field(noUnderlyingStips_2_1_0, FIX::UnderlyingStipValue{"STRING_1816748513"}, UnderlyingStipulations_NoUnderlyingStips_257);
+      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_257);
+      all_compo_names.insert("...NoUnderlyings....NoUnderlyingStips");
+
+      noUnderlyings_0_2.addGroup(noUnderlyingStips_2_1_0);
+    }
+    {
+      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingStips noUnderlyingStips_2_1_1;
+      // UnderlyingStipulations.NoUnderlyingStips
+      multiset<string> UnderlyingStipulations_NoUnderlyingStips_258;
+      set_field(noUnderlyingStips_2_1_1, FIX::UnderlyingStipType{"STRING_625503647"}, UnderlyingStipulations_NoUnderlyingStips_258);
+      set_field(noUnderlyingStips_2_1_1, FIX::UnderlyingStipValue{"STRING_1218486854"}, UnderlyingStipulations_NoUnderlyingStips_258);
+      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_258);
+      all_compo_names.insert("...NoUnderlyings....NoUnderlyingStips");
+
+      noUnderlyings_0_2.addGroup(noUnderlyingStips_2_1_1);
+    }
+    {
+      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUnderlyingStips noUnderlyingStips_2_1_2;
+      // UnderlyingStipulations.NoUnderlyingStips
+      multiset<string> UnderlyingStipulations_NoUnderlyingStips_259;
+      set_field(noUnderlyingStips_2_1_2, FIX::UnderlyingStipType{"STRING_1997421391"}, UnderlyingStipulations_NoUnderlyingStips_259);
+      set_field(noUnderlyingStips_2_1_2, FIX::UnderlyingStipValue{"STRING_1481121698"}, UnderlyingStipulations_NoUnderlyingStips_259);
+      all_values.push_back(UnderlyingStipulations_NoUnderlyingStips_259);
+      all_compo_names.insert("...NoUnderlyings....NoUnderlyingStips");
+
+      noUnderlyings_0_2.addGroup(noUnderlyingStips_2_1_2);
+    }
+    // UndlyInstrumentParties
+    // Group UndlyInstrumentParties.NoUndlyInstrumentParties
+    {
+      FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties noUndlyInstrumentParties_2_1_0;
       // UndlyInstrumentParties.NoUndlyInstrumentParties
-      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_270;
-      set_field(noUndlyInstrumentParties_1_1_2, FIX::UnderlyingInstrumentPartyID{"STRING_1975591584"}, UndlyInstrumentParties_NoUndlyInstrumentParties_270);
-      set_field(noUndlyInstrumentParties_1_1_2, FIX::UnderlyingInstrumentPartyIDSource{'3'}, UndlyInstrumentParties_NoUndlyInstrumentParties_270);
-      set_field(noUndlyInstrumentParties_1_1_2, FIX::UnderlyingInstrumentPartyRole{1030986361}, UndlyInstrumentParties_NoUndlyInstrumentParties_270);
-      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_270);
+      multiset<string> UndlyInstrumentParties_NoUndlyInstrumentParties_272;
+      set_field(noUndlyInstrumentParties_2_1_0, FIX::UnderlyingInstrumentPartyID{"STRING_1151449291"}, UndlyInstrumentParties_NoUndlyInstrumentParties_272);
+      set_field(noUndlyInstrumentParties_2_1_0, FIX::UnderlyingInstrumentPartyIDSource{'1'}, UndlyInstrumentParties_NoUndlyInstrumentParties_272);
+      set_field(noUndlyInstrumentParties_2_1_0, FIX::UnderlyingInstrumentPartyRole{1709668386}, UndlyInstrumentParties_NoUndlyInstrumentParties_272);
+      all_values.push_back(UndlyInstrumentParties_NoUndlyInstrumentParties_272);
       all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties");
 
       // UndlyInstrumentPtysSubGrp
       // Group UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
       {
-        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_1_2_2_0;
+        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_2_0_2_0;
         // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_539;
-        set_field(noUndlyInstrumentPartySubIDs_1_2_2_0, FIX::UnderlyingInstrumentPartySubID{"STRING_1954536660"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_539);
-        set_field(noUndlyInstrumentPartySubIDs_1_2_2_0, FIX::UnderlyingInstrumentPartySubIDType{1719751581}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_539);
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_539);
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_545;
+        set_field(noUndlyInstrumentPartySubIDs_2_0_2_0, FIX::UnderlyingInstrumentPartySubID{"STRING_1690701853"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_545);
+        set_field(noUndlyInstrumentPartySubIDs_2_0_2_0, FIX::UnderlyingInstrumentPartySubIDType{495161621}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_545);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_545);
         all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
 
-        noUndlyInstrumentParties_1_1_2.addGroup(noUndlyInstrumentPartySubIDs_1_2_2_0);
+        noUndlyInstrumentParties_2_1_0.addGroup(noUndlyInstrumentPartySubIDs_2_0_2_0);
       }
       {
-        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_1_2_2_1;
+        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_2_0_2_1;
         // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_540;
-        set_field(noUndlyInstrumentPartySubIDs_1_2_2_1, FIX::UnderlyingInstrumentPartySubID{"STRING_1723059608"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_540);
-        set_field(noUndlyInstrumentPartySubIDs_1_2_2_1, FIX::UnderlyingInstrumentPartySubIDType{948975721}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_540);
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_540);
+        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_546;
+        set_field(noUndlyInstrumentPartySubIDs_2_0_2_1, FIX::UnderlyingInstrumentPartySubID{"STRING_1383728772"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_546);
+        set_field(noUndlyInstrumentPartySubIDs_2_0_2_1, FIX::UnderlyingInstrumentPartySubIDType{1830466287}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_546);
+        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_546);
         all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
 
-        noUndlyInstrumentParties_1_1_2.addGroup(noUndlyInstrumentPartySubIDs_1_2_2_1);
+        noUndlyInstrumentParties_2_1_0.addGroup(noUndlyInstrumentPartySubIDs_2_0_2_1);
       }
-      {
-        FIX50SP2::SecurityListRequest::NoUnderlyings::NoUndlyInstrumentParties::NoUndlyInstrumentPartySubIDs noUndlyInstrumentPartySubIDs_1_2_2_2;
-        // UndlyInstrumentPtysSubGrp.NoUndlyInstrumentPartySubIDs
-        multiset<string> UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_541;
-        set_field(noUndlyInstrumentPartySubIDs_1_2_2_2, FIX::UnderlyingInstrumentPartySubID{"STRING_1322965964"}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_541);
-        set_field(noUndlyInstrumentPartySubIDs_1_2_2_2, FIX::UnderlyingInstrumentPartySubIDType{1763975476}, UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_541);
-        all_values.push_back(UndlyInstrumentPtysSubGrp_NoUndlyInstrumentPartySubIDs_541);
-        all_compo_names.insert("...NoUnderlyings....NoUndlyInstrumentParties...NoUndlyInstrumentPartySubIDs");
-
-        noUndlyInstrumentParties_1_1_2.addGroup(noUndlyInstrumentPartySubIDs_1_2_2_2);
-      }
-      noUnderlyings_0_1.addGroup(noUndlyInstrumentParties_1_1_2);
+      noUnderlyings_0_2.addGroup(noUndlyInstrumentParties_2_1_0);
     }
-    msg.addGroup(noUnderlyings_0_1);
+    msg.addGroup(noUnderlyings_0_2);
   }
+  // header
+  multiset<string> header_84;
+  set_header_field(msg.getHeader(), FIX::ApplVerID{"STRING_3"}, header_84);
+  set_header_field(msg.getHeader(), FIX::BeginString{"STRING_977498873"}, header_84);
+  set_header_field(msg.getHeader(), FIX::BodyLength{2146349077}, header_84);
+  set_header_field(msg.getHeader(), FIX::CstmApplVerID{"STRING_2129260993"}, header_84);
+  set_header_field(msg.getHeader(), FIX::DeliverToCompID{"STRING_1944460819"}, header_84);
+  set_header_field(msg.getHeader(), FIX::DeliverToLocationID{"STRING_478831854"}, header_84);
+  set_header_field(msg.getHeader(), FIX::DeliverToSubID{"STRING_427766918"}, header_84);
+  set_header_field(msg.getHeader(), FIX::LastMsgSeqNumProcessed{1699951064}, header_84);
+  set_header_field(msg.getHeader(), FIX::MessageEncoding{"STRING_ISO-2022-JP"}, header_84);
+  set_header_field(msg.getHeader(), FIX::MsgSeqNum{271940526}, header_84);
+  set_header_field(msg.getHeader(), FIX::OnBehalfOfCompID{"STRING_197785821"}, header_84);
+  set_header_field(msg.getHeader(), FIX::OnBehalfOfLocationID{"STRING_491730897"}, header_84);
+  set_header_field(msg.getHeader(), FIX::OnBehalfOfSubID{"STRING_371723602"}, header_84);
+  set_header_field(msg.getHeader(), FIX::OrigSendingTime{FIX::UTCTIMESTAMP(22, 34, 41, 23, 10, 2014)}, header_84);
+  set_header_field(msg.getHeader(), FIX::PossDupFlag{false}, header_84);
+  set_header_field(msg.getHeader(), FIX::PossResend{true}, header_84);
+  set_header_field(msg.getHeader(), FIX::SecureData{"DATA_887665050"}, header_84);
+  set_header_field(msg.getHeader(), FIX::SecureDataLen{1846959842}, header_84);
+  set_header_field(msg.getHeader(), FIX::SenderCompID{"STRING_1356426580"}, header_84);
+  set_header_field(msg.getHeader(), FIX::SenderLocationID{"STRING_449849788"}, header_84);
+  set_header_field(msg.getHeader(), FIX::SenderSubID{"STRING_222785029"}, header_84);
+  set_header_field(msg.getHeader(), FIX::SendingTime{FIX::UTCTIMESTAMP(10, 2, 4, 9, 12, 2010)}, header_84);
+  set_header_field(msg.getHeader(), FIX::TargetCompID{"STRING_1632378558"}, header_84);
+  set_header_field(msg.getHeader(), FIX::TargetLocationID{"STRING_233506199"}, header_84);
+  set_header_field(msg.getHeader(), FIX::TargetSubID{"STRING_1060324708"}, header_84);
+  set_header_field(msg.getHeader(), FIX::XmlData{"DATA_2060145477"}, header_84);
+  set_header_field(msg.getHeader(), FIX::XmlDataLen{1933457263}, header_84);
+  all_values.push_back(header_84);
+  all_compo_names.insert(".header");
+
 
   xml_element elt;
   converter.fix2fixml(msg, elt);
   BOOST_LOG_TRIVIAL(debug) << "The resulting XML is";
-cout << "////////////////////////////////////////////" << endl;
+  cout << "////////////////////////////////////////////" << endl;
   cout << elt.to_string() << endl;
-cout << "////////////////////////////////////////////" << endl << endl;
+  cout << "////////////////////////////////////////////" << endl << endl;
 
-  BOOST_LOG_TRIVIAL(debug) << "Quickfix XML representation is";cout << "////////////////////////////////////////////" << endl;
-cout << msg.toXML() << endl;
-cout << "////////////////////////////////////////////" << endl << endl;
+  BOOST_LOG_TRIVIAL(debug) << "Quickfix XML representation is";
+  cout << "////////////////////////////////////////////" << endl;
+  cout << msg.toXML() << endl;
+  cout << "////////////////////////////////////////////" << endl << endl;
   list<multiset<string>> elt_lists;
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
@@ -1395,13 +1442,13 @@ cout << "////////////////////////////////////////////" << endl << endl;
   BOOST_LOG_TRIVIAL(debug) << "All FIX components";
   for (const auto& l : all_values) {
     cout << "	[";
-copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
+    copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << "]" << endl;
   }
   BOOST_LOG_TRIVIAL(debug) << "All XML components";
   for (const auto& l : elt_lists) {
     cout << "	[";
-copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
+    copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << "]" << endl;
 
   }

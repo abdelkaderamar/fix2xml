@@ -31,88 +31,88 @@ TEST ( MarketDefinitionUpdateReport_message_t, set_fields)
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> MarketDefinitionUpdateReport_message_t_0;
-  elt.add_attribute("MktRptID", "MarketReportID_t_2070877772"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("MarketReportID_t_2070877772");
-  elt.add_attribute("MktReqID", "MarketReqID_t_1021696635"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("MarketReqID_t_1021696635");
-  elt.add_attribute("MktUpdtActn", "M"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("M");
-  elt.add_attribute("MktID", "MarketID_t_1952073744"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("MarketID_t_1952073744");
-  elt.add_attribute("MktSegID", "MarketSegmentID_t_1065812508"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("MarketSegmentID_t_1065812508");
-  elt.add_attribute("MarketSegmentDesc", "MarketSegmentDesc_t_1852592598"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("MarketSegmentDesc_t_1852592598");
-  elt.add_attribute("EncodedMktSegmDescLen", "657079993"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("657079993");
-  elt.add_attribute("EncodedMktSegmDesc", "EncodedMktSegmDesc_t_1387329505"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("EncodedMktSegmDesc_t_1387329505");
-  elt.add_attribute("ParentMktSegmID", "ParentMktSegmID_t_1179683261"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("ParentMktSegmID_t_1179683261");
-  elt.add_attribute("Ccy", "CHF"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("CHF");
-  elt.add_attribute("TxnTm", "TransactTime_t_2134273450"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("TransactTime_t_2134273450");
-  elt.add_attribute("Txt", "Text_t_1637131943"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("Text_t_1637131943");
-  elt.add_attribute("EncTxtLen", "1382385100"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("1382385100");
-  elt.add_attribute("EncTxt", "EncodedText_t_1302128000"); // 0
-  MarketDefinitionUpdateReport_message_t_0.insert("EncodedText_t_1302128000");
+  elt.add_attribute("MktRptID", "MarketReportID_t_91964929"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("MarketReportID_t_91964929");
+  elt.add_attribute("MktReqID", "MarketReqID_t_1706319574"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("MarketReqID_t_1706319574");
+  elt.add_attribute("MktUpdtActn", "A"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("A");
+  elt.add_attribute("MktID", "MarketID_t_97391296"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("MarketID_t_97391296");
+  elt.add_attribute("MktSegID", "MarketSegmentID_t_1846692074"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("MarketSegmentID_t_1846692074");
+  elt.add_attribute("MarketSegmentDesc", "MarketSegmentDesc_t_1120801123"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("MarketSegmentDesc_t_1120801123");
+  elt.add_attribute("EncodedMktSegmDescLen", "1322655750"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("1322655750");
+  elt.add_attribute("EncodedMktSegmDesc", "EncodedMktSegmDesc_t_292634715"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("EncodedMktSegmDesc_t_292634715");
+  elt.add_attribute("ParentMktSegmID", "ParentMktSegmID_t_1090676360"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("ParentMktSegmID_t_1090676360");
+  elt.add_attribute("Ccy", "JPY"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("JPY");
+  elt.add_attribute("TxnTm", "TransactTime_t_790447609"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("TransactTime_t_790447609");
+  elt.add_attribute("Txt", "Text_t_1072718463"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("Text_t_1072718463");
+  elt.add_attribute("EncTxtLen", "614310774"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("614310774");
+  elt.add_attribute("EncTxt", "EncodedText_t_124197385"); // 0
+  MarketDefinitionUpdateReport_message_t_0.insert("EncodedText_t_124197385");
   all_values.push_back(MarketDefinitionUpdateReport_message_t_0);
   all_compo_names.insert("MarketDefinitionUpdateReport_message_t");
 
   { // Hdr
     xml_element Hdr_45{"Hdr"};
     multiset<string> Hdr_45_set;
-    Hdr_45.add_attribute("SeqNum", "944860717"); // 1
-    Hdr_45_set.insert("944860717");
-    Hdr_45.add_attribute("SID", "SenderCompID_t_1666816168"); // 1
-    Hdr_45_set.insert("SenderCompID_t_1666816168");
-    Hdr_45.add_attribute("TID", "TargetCompID_t_1348513453"); // 1
-    Hdr_45_set.insert("TargetCompID_t_1348513453");
-    Hdr_45.add_attribute("OBID", "OnBehalfOfCompID_t_1485086881"); // 1
-    Hdr_45_set.insert("OnBehalfOfCompID_t_1485086881");
-    Hdr_45.add_attribute("D2ID", "DeliverToCompID_t_1922152964"); // 1
-    Hdr_45_set.insert("DeliverToCompID_t_1922152964");
-    Hdr_45.add_attribute("SSub", "SenderSubID_t_605218660"); // 1
-    Hdr_45_set.insert("SenderSubID_t_605218660");
-    Hdr_45.add_attribute("SLoc", "SenderLocationID_t_454838768"); // 1
-    Hdr_45_set.insert("SenderLocationID_t_454838768");
-    Hdr_45.add_attribute("TSub", "TargetSubID_t_401987295"); // 1
-    Hdr_45_set.insert("TargetSubID_t_401987295");
-    Hdr_45.add_attribute("TLoc", "TargetLocationID_t_326800150"); // 1
-    Hdr_45_set.insert("TargetLocationID_t_326800150");
-    Hdr_45.add_attribute("OBSub", "OnBehalfOfSubID_t_439493014"); // 1
-    Hdr_45_set.insert("OnBehalfOfSubID_t_439493014");
-    Hdr_45.add_attribute("OBLoc", "OnBehalfOfLocationID_t_785080933"); // 1
-    Hdr_45_set.insert("OnBehalfOfLocationID_t_785080933");
-    Hdr_45.add_attribute("D2Sub", "DeliverToSubID_t_1205210593"); // 1
-    Hdr_45_set.insert("DeliverToSubID_t_1205210593");
-    Hdr_45.add_attribute("D2Loc", "DeliverToLocationID_t_575008613"); // 1
-    Hdr_45_set.insert("DeliverToLocationID_t_575008613");
-    Hdr_45.add_attribute("PosDup", "N"); // 1
-    Hdr_45_set.insert("N");
+    Hdr_45.add_attribute("SeqNum", "717561344"); // 1
+    Hdr_45_set.insert("717561344");
+    Hdr_45.add_attribute("SID", "SenderCompID_t_1996187388"); // 1
+    Hdr_45_set.insert("SenderCompID_t_1996187388");
+    Hdr_45.add_attribute("TID", "TargetCompID_t_1856944720"); // 1
+    Hdr_45_set.insert("TargetCompID_t_1856944720");
+    Hdr_45.add_attribute("OBID", "OnBehalfOfCompID_t_720660916"); // 1
+    Hdr_45_set.insert("OnBehalfOfCompID_t_720660916");
+    Hdr_45.add_attribute("D2ID", "DeliverToCompID_t_1104554973"); // 1
+    Hdr_45_set.insert("DeliverToCompID_t_1104554973");
+    Hdr_45.add_attribute("SSub", "SenderSubID_t_146799353"); // 1
+    Hdr_45_set.insert("SenderSubID_t_146799353");
+    Hdr_45.add_attribute("SLoc", "SenderLocationID_t_85767271"); // 1
+    Hdr_45_set.insert("SenderLocationID_t_85767271");
+    Hdr_45.add_attribute("TSub", "TargetSubID_t_920930266"); // 1
+    Hdr_45_set.insert("TargetSubID_t_920930266");
+    Hdr_45.add_attribute("TLoc", "TargetLocationID_t_1518350556"); // 1
+    Hdr_45_set.insert("TargetLocationID_t_1518350556");
+    Hdr_45.add_attribute("OBSub", "OnBehalfOfSubID_t_447285066"); // 1
+    Hdr_45_set.insert("OnBehalfOfSubID_t_447285066");
+    Hdr_45.add_attribute("OBLoc", "OnBehalfOfLocationID_t_486297214"); // 1
+    Hdr_45_set.insert("OnBehalfOfLocationID_t_486297214");
+    Hdr_45.add_attribute("D2Sub", "DeliverToSubID_t_726341394"); // 1
+    Hdr_45_set.insert("DeliverToSubID_t_726341394");
+    Hdr_45.add_attribute("D2Loc", "DeliverToLocationID_t_633429911"); // 1
+    Hdr_45_set.insert("DeliverToLocationID_t_633429911");
+    Hdr_45.add_attribute("PosDup", "Y"); // 1
+    Hdr_45_set.insert("Y");
     Hdr_45.add_attribute("PosRsnd", "N"); // 1
     Hdr_45_set.insert("N");
-    Hdr_45.add_attribute("Snt", "SendingTime_t_605590899"); // 1
-    Hdr_45_set.insert("SendingTime_t_605590899");
-    Hdr_45.add_attribute("OrigSnt", "OrigSendingTime_t_889802780"); // 1
-    Hdr_45_set.insert("OrigSendingTime_t_889802780");
-    Hdr_45.add_attribute("MsgEncd", "MessageEncoding_t_287856108"); // 1
-    Hdr_45_set.insert("MessageEncoding_t_287856108");
+    Hdr_45.add_attribute("Snt", "SendingTime_t_1606389902"); // 1
+    Hdr_45_set.insert("SendingTime_t_1606389902");
+    Hdr_45.add_attribute("OrigSnt", "OrigSendingTime_t_1256317052"); // 1
+    Hdr_45_set.insert("OrigSendingTime_t_1256317052");
+    Hdr_45.add_attribute("MsgEncd", "MessageEncoding_t_330343324"); // 1
+    Hdr_45_set.insert("MessageEncoding_t_330343324");
     all_values.push_back(Hdr_45_set);
     all_compo_names.insert("Hdr_45_set");
 
     {
       xml_element Hop_45{"Hop"};
       multiset<string> Hop_45_set;
-      Hop_45.add_attribute("ID", "HopCompID_t_427923328"); // 2
-      Hop_45_set.insert("HopCompID_t_427923328");
-      Hop_45.add_attribute("Ref", "694392877"); // 2
-      Hop_45_set.insert("694392877");
-      Hop_45.add_attribute("Snt", "HopSendingTime_t_1353668616"); // 2
-      Hop_45_set.insert("HopSendingTime_t_1353668616");
+      Hop_45.add_attribute("ID", "HopCompID_t_779764263"); // 2
+      Hop_45_set.insert("HopCompID_t_779764263");
+      Hop_45.add_attribute("Ref", "1353708348"); // 2
+      Hop_45_set.insert("1353708348");
+      Hop_45.add_attribute("Snt", "HopSendingTime_t_29551750"); // 2
+      Hop_45_set.insert("HopSendingTime_t_29551750");
       all_values.push_back(Hop_45_set);
       all_compo_names.insert("Hop_45_set");
 
@@ -123,14 +123,14 @@ TEST ( MarketDefinitionUpdateReport_message_t, set_fields)
   { // ApplSeqCtrl
     xml_element ApplSeqCtrl_9{"ApplSeqCtrl"};
     multiset<string> ApplSeqCtrl_9_set;
-    ApplSeqCtrl_9.add_attribute("ApplID", "ApplID_t_133032278"); // 1
-    ApplSeqCtrl_9_set.insert("ApplID_t_133032278");
-    ApplSeqCtrl_9.add_attribute("ApplSeqNum", "1351472870"); // 1
-    ApplSeqCtrl_9_set.insert("1351472870");
-    ApplSeqCtrl_9.add_attribute("ApplLastSeqNum", "593514473"); // 1
-    ApplSeqCtrl_9_set.insert("593514473");
-    ApplSeqCtrl_9.add_attribute("ApplResendFlag", "false"); // 1
-    ApplSeqCtrl_9_set.insert("false");
+    ApplSeqCtrl_9.add_attribute("ApplID", "ApplID_t_1900565386"); // 1
+    ApplSeqCtrl_9_set.insert("ApplID_t_1900565386");
+    ApplSeqCtrl_9.add_attribute("ApplSeqNum", "528880451"); // 1
+    ApplSeqCtrl_9_set.insert("528880451");
+    ApplSeqCtrl_9.add_attribute("ApplLastSeqNum", "322186465"); // 1
+    ApplSeqCtrl_9_set.insert("322186465");
+    ApplSeqCtrl_9.add_attribute("ApplResendFlag", "true"); // 1
+    ApplSeqCtrl_9_set.insert("true");
     all_values.push_back(ApplSeqCtrl_9_set);
     all_compo_names.insert("ApplSeqCtrl_9_set");
 
@@ -141,38 +141,38 @@ TEST ( MarketDefinitionUpdateReport_message_t, set_fields)
     multiset<string> BaseTrdgRules_3_set;
     BaseTrdgRules_3.add_attribute("ExpirationCycle", "0"); // 1
     BaseTrdgRules_3_set.insert("0");
-    BaseTrdgRules_3.add_attribute("MinTrdVol", "6569400.440000"); // 1
-    BaseTrdgRules_3_set.insert("6569400.440000");
-    BaseTrdgRules_3.add_attribute("MaxTrdVol", "12995053.410000"); // 1
-    BaseTrdgRules_3_set.insert("12995053.410000");
-    BaseTrdgRules_3.add_attribute("MxPxVar", "12184378.060000"); // 1
-    BaseTrdgRules_3_set.insert("12184378.060000");
-    BaseTrdgRules_3.add_attribute("ImpldMktInd", "0"); // 1
+    BaseTrdgRules_3.add_attribute("MinTrdVol", "5156415.240000"); // 1
+    BaseTrdgRules_3_set.insert("5156415.240000");
+    BaseTrdgRules_3.add_attribute("MaxTrdVol", "16342057.070000"); // 1
+    BaseTrdgRules_3_set.insert("16342057.070000");
+    BaseTrdgRules_3.add_attribute("MxPxVar", "7571737.780000"); // 1
+    BaseTrdgRules_3_set.insert("7571737.780000");
+    BaseTrdgRules_3.add_attribute("ImpldMktInd", "2"); // 1
+    BaseTrdgRules_3_set.insert("2");
+    BaseTrdgRules_3.add_attribute("TrdCcy", "USD"); // 1
+    BaseTrdgRules_3_set.insert("USD");
+    BaseTrdgRules_3.add_attribute("RndLot", "9786560.380000"); // 1
+    BaseTrdgRules_3_set.insert("9786560.380000");
+    BaseTrdgRules_3.add_attribute("MlegModel", "0"); // 1
     BaseTrdgRules_3_set.insert("0");
-    BaseTrdgRules_3.add_attribute("TrdCcy", "CHF"); // 1
-    BaseTrdgRules_3_set.insert("CHF");
-    BaseTrdgRules_3.add_attribute("RndLot", "15586576.640000"); // 1
-    BaseTrdgRules_3_set.insert("15586576.640000");
-    BaseTrdgRules_3.add_attribute("MlegModel", "2"); // 1
+    BaseTrdgRules_3.add_attribute("MlegPxMeth", "2"); // 1
     BaseTrdgRules_3_set.insert("2");
-    BaseTrdgRules_3.add_attribute("MlegPxMeth", "4"); // 1
-    BaseTrdgRules_3_set.insert("4");
-    BaseTrdgRules_3.add_attribute("PxTyp", "2"); // 1
-    BaseTrdgRules_3_set.insert("2");
+    BaseTrdgRules_3.add_attribute("PxTyp", "10"); // 1
+    BaseTrdgRules_3_set.insert("10");
     all_values.push_back(BaseTrdgRules_3_set);
     all_compo_names.insert("BaseTrdgRules_3_set");
 
     {
       xml_element TickRules_3{"TickRules"};
       multiset<string> TickRules_3_set;
-      TickRules_3.add_attribute("StartTickPxRng", "2603981.590000"); // 2
-      TickRules_3_set.insert("2603981.590000");
-      TickRules_3.add_attribute("EndTickPxRng", "19557405.240000"); // 2
-      TickRules_3_set.insert("19557405.240000");
-      TickRules_3.add_attribute("TickIncr", "17353142.760000"); // 2
-      TickRules_3_set.insert("17353142.760000");
-      TickRules_3.add_attribute("TickRuleTyp", "4"); // 2
-      TickRules_3_set.insert("4");
+      TickRules_3.add_attribute("StartTickPxRng", "16146635.180000"); // 2
+      TickRules_3_set.insert("16146635.180000");
+      TickRules_3.add_attribute("EndTickPxRng", "1336796.620000"); // 2
+      TickRules_3_set.insert("1336796.620000");
+      TickRules_3.add_attribute("TickIncr", "8566576.290000"); // 2
+      TickRules_3_set.insert("8566576.290000");
+      TickRules_3.add_attribute("TickRuleTyp", "1"); // 2
+      TickRules_3_set.insert("1");
       all_values.push_back(TickRules_3_set);
       all_compo_names.insert("TickRules_3_set");
 
@@ -181,10 +181,10 @@ TEST ( MarketDefinitionUpdateReport_message_t, set_fields)
     {
       xml_element LotTypeRules_3{"LotTypeRules"};
       multiset<string> LotTypeRules_3_set;
-      LotTypeRules_3.add_attribute("LotTyp", "3"); // 2
-      LotTypeRules_3_set.insert("3");
-      LotTypeRules_3.add_attribute("MinLotSz", "3729115.610000"); // 2
-      LotTypeRules_3_set.insert("3729115.610000");
+      LotTypeRules_3.add_attribute("LotTyp", "1"); // 2
+      LotTypeRules_3_set.insert("1");
+      LotTypeRules_3.add_attribute("MinLotSz", "13429548.430000"); // 2
+      LotTypeRules_3_set.insert("13429548.430000");
       all_values.push_back(LotTypeRules_3_set);
       all_compo_names.insert("LotTypeRules_3_set");
 
@@ -193,14 +193,14 @@ TEST ( MarketDefinitionUpdateReport_message_t, set_fields)
     {
       xml_element PxLmts_3{"PxLmts"};
       multiset<string> PxLmts_3_set;
-      PxLmts_3.add_attribute("PxLmtTyp", "0"); // 2
-      PxLmts_3_set.insert("0");
-      PxLmts_3.add_attribute("LowLmtPx", "8227585.030000"); // 2
-      PxLmts_3_set.insert("8227585.030000");
-      PxLmts_3.add_attribute("HiLmtPx", "13393202.170000"); // 2
-      PxLmts_3_set.insert("13393202.170000");
-      PxLmts_3.add_attribute("TrdgRefPx", "10585683.740000"); // 2
-      PxLmts_3_set.insert("10585683.740000");
+      PxLmts_3.add_attribute("PxLmtTyp", "1"); // 2
+      PxLmts_3_set.insert("1");
+      PxLmts_3.add_attribute("LowLmtPx", "12143946.390000"); // 2
+      PxLmts_3_set.insert("12143946.390000");
+      PxLmts_3.add_attribute("HiLmtPx", "3598233.180000"); // 2
+      PxLmts_3_set.insert("3598233.180000");
+      PxLmts_3.add_attribute("TrdgRefPx", "3358955.710000"); // 2
+      PxLmts_3_set.insert("3358955.710000");
       all_values.push_back(PxLmts_3_set);
       all_compo_names.insert("PxLmts_3_set");
 
@@ -209,50 +209,60 @@ TEST ( MarketDefinitionUpdateReport_message_t, set_fields)
     elt.add_element(BaseTrdgRules_3);
   } // end BaseTrdgRules
   { // OrdTypRules
-    xml_element OrdTypRules_5{"OrdTypRules"};
-    multiset<string> OrdTypRules_5_set;
-    OrdTypRules_5.add_attribute("OrdTyp", "F"); // 1
-    OrdTypRules_5_set.insert("F");
-    all_values.push_back(OrdTypRules_5_set);
-    all_compo_names.insert("OrdTypRules_5_set");
+    xml_element OrdTypRules_4{"OrdTypRules"};
+    multiset<string> OrdTypRules_4_set;
+    OrdTypRules_4.add_attribute("OrdTyp", "4"); // 1
+    OrdTypRules_4_set.insert("4");
+    all_values.push_back(OrdTypRules_4_set);
+    all_compo_names.insert("OrdTypRules_4_set");
 
-    elt.add_element(OrdTypRules_5);
-  } // end OrdTypRules
-  { // OrdTypRules
-    xml_element OrdTypRules_6{"OrdTypRules"};
-    multiset<string> OrdTypRules_6_set;
-    OrdTypRules_6.add_attribute("OrdTyp", "3"); // 1
-    OrdTypRules_6_set.insert("3");
-    all_values.push_back(OrdTypRules_6_set);
-    all_compo_names.insert("OrdTypRules_6_set");
-
-    elt.add_element(OrdTypRules_6);
-  } // end OrdTypRules
-  { // OrdTypRules
-    xml_element OrdTypRules_7{"OrdTypRules"};
-    multiset<string> OrdTypRules_7_set;
-    OrdTypRules_7.add_attribute("OrdTyp", "4"); // 1
-    OrdTypRules_7_set.insert("4");
-    all_values.push_back(OrdTypRules_7_set);
-    all_compo_names.insert("OrdTypRules_7_set");
-
-    elt.add_element(OrdTypRules_7);
+    elt.add_element(OrdTypRules_4);
   } // end OrdTypRules
   { // TmInForceRules
     xml_element TmInForceRules_3{"TmInForceRules"};
     multiset<string> TmInForceRules_3_set;
-    TmInForceRules_3.add_attribute("TmInForce", "0"); // 1
-    TmInForceRules_3_set.insert("0");
+    TmInForceRules_3.add_attribute("TmInForce", "6"); // 1
+    TmInForceRules_3_set.insert("6");
     all_values.push_back(TmInForceRules_3_set);
     all_compo_names.insert("TmInForceRules_3_set");
 
     elt.add_element(TmInForceRules_3);
   } // end TmInForceRules
+  { // TmInForceRules
+    xml_element TmInForceRules_4{"TmInForceRules"};
+    multiset<string> TmInForceRules_4_set;
+    TmInForceRules_4.add_attribute("TmInForce", "1"); // 1
+    TmInForceRules_4_set.insert("1");
+    all_values.push_back(TmInForceRules_4_set);
+    all_compo_names.insert("TmInForceRules_4_set");
+
+    elt.add_element(TmInForceRules_4);
+  } // end TmInForceRules
+  { // TmInForceRules
+    xml_element TmInForceRules_5{"TmInForceRules"};
+    multiset<string> TmInForceRules_5_set;
+    TmInForceRules_5.add_attribute("TmInForce", "6"); // 1
+    TmInForceRules_5_set.insert("6");
+    all_values.push_back(TmInForceRules_5_set);
+    all_compo_names.insert("TmInForceRules_5_set");
+
+    elt.add_element(TmInForceRules_5);
+  } // end TmInForceRules
+  { // ExecInstRules
+    xml_element ExecInstRules_3{"ExecInstRules"};
+    multiset<string> ExecInstRules_3_set;
+    ExecInstRules_3.add_attribute("ExecInstValu", "E"); // 1
+    ExecInstRules_3_set.insert("E");
+    all_values.push_back(ExecInstRules_3_set);
+    all_compo_names.insert("ExecInstRules_3_set");
+
+    elt.add_element(ExecInstRules_3);
+  } // end ExecInstRules
   { // ExecInstRules
     xml_element ExecInstRules_4{"ExecInstRules"};
     multiset<string> ExecInstRules_4_set;
-    ExecInstRules_4.add_attribute("ExecInstValu", "K"); // 1
-    ExecInstRules_4_set.insert("K");
+    ExecInstRules_4.add_attribute("ExecInstValu", "Z"); // 1
+    ExecInstRules_4_set.insert("Z");
     all_values.push_back(ExecInstRules_4_set);
     all_compo_names.insert("ExecInstRules_4_set");
 
@@ -261,22 +271,12 @@ TEST ( MarketDefinitionUpdateReport_message_t, set_fields)
   { // ExecInstRules
     xml_element ExecInstRules_5{"ExecInstRules"};
     multiset<string> ExecInstRules_5_set;
-    ExecInstRules_5.add_attribute("ExecInstValu", "V"); // 1
-    ExecInstRules_5_set.insert("V");
+    ExecInstRules_5.add_attribute("ExecInstValu", "D"); // 1
+    ExecInstRules_5_set.insert("D");
     all_values.push_back(ExecInstRules_5_set);
     all_compo_names.insert("ExecInstRules_5_set");
 
     elt.add_element(ExecInstRules_5);
-  } // end ExecInstRules
-  { // ExecInstRules
-    xml_element ExecInstRules_6{"ExecInstRules"};
-    multiset<string> ExecInstRules_6_set;
-    ExecInstRules_6.add_attribute("ExecInstValu", "G"); // 1
-    ExecInstRules_6_set.insert("G");
-    all_values.push_back(ExecInstRules_6_set);
-    all_compo_names.insert("ExecInstRules_6_set");
-
-    elt.add_element(ExecInstRules_6);
   } // end ExecInstRules
   cout << "////////////////////////////////////////////" << endl;
   cout << elt.to_string() << endl;

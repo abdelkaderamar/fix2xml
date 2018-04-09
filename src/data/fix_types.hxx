@@ -84,10 +84,8 @@ namespace fix2xml
 
   struct fix_message_type : public fix_base_type
   {
-    fix_message_type() {}
-    fix_message_type(const std::string& name, const std::string& msgtype) :
-      fix_base_type(name), _msgtype(msgtype)
-    {}
+    fix_message_type();
+    fix_message_type(const std::string& name, const std::string& msgtype);
 
     std::string to_string() const override;
 

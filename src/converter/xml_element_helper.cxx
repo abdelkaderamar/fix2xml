@@ -1,5 +1,7 @@
 #include "xml_element_helper.hxx"
 
+#include <iostream>
+
 namespace fix2xml {
 using namespace std;
 
@@ -19,7 +21,13 @@ void elt_to_list(const xml_element &elt, const string &type_name,
     if (!elt_type.get_componet(it.first, compo_data))
       continue;
     if (compo_data.is_block()) {
-      elt_to_list(it.second, compo_data._type, fixml_dict, s, ls);
+      if (compo_data._name != "Hdr") {
+        elt_to_list(it.second, compo_data._type, fixml_dict, s, ls);
+      } else {
+        multiset<string> header_set;
+        elt_to_list(it.second, compo_data._type, fixml_dict, header_set, ls);
+        ls.push_back(header_set);
+      }
     } else if (compo_data.is_group()) {
       multiset<string> group_set;
       elt_to_list(it.second, compo_data._type, fixml_dict, group_set, ls);
@@ -44,7 +52,13 @@ void elt_to_list(const xml_element &elt,
     if (!elt_type.get_componet(it.first, compo_data))
       continue;
     if (compo_data.is_block()) {
-      elt_to_list(it.second, compo_data._type, fixml_dict, s, ls);
+      if (compo_data._name != "Hdr") {
+        elt_to_list(it.second, compo_data._type, fixml_dict, s, ls);
+      } else {
+        multiset<string> header_set;
+        elt_to_list(it.second, compo_data._type, fixml_dict, header_set, ls);
+        ls.push_back(header_set);
+      }
     } else if (compo_data.is_group()) {
       multiset<string> group_set;
       elt_to_list(it.second, compo_data._type, fixml_dict, group_set, ls);

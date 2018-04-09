@@ -52,10 +52,13 @@ void test_generator_fix2xml::generate_component(
   string fullname = parent_name + "." + compo_type._short_name;
   const string compo_var_name =
       field_helper::generate_var_name(compo_type._name);
+  string attr_map = field_map;
+  if (compo_type._name == "header")
+    attr_map += ".getHeader()";
   if (compo_type._fields.size() > 0) {
     os << TAB(level) << "multiset<string> " << compo_var_name << ";" << endl;
     for (const auto &field_name : compo_type._fields) {
-      string value = field_helper::generate_field(os, field_name, field_map,
+      string value = field_helper::generate_field(os, field_name, attr_map,
                                                   dico, level, compo_var_name);
       if (!value.empty() && fixml_dico->has_fix_tag(field_name)) {
       } else {
@@ -91,8 +94,12 @@ void test_generator_fix2xml::generate_test(
     ostream &os, const fix_message_type &msg_type,
     const shared_ptr<fix_dico_container> &dico,
     const shared_ptr<fixml_dico_container> &fixml_dico, const string &ns,
-    const string &fix_filename, const string &xsd_schema) {
-  const string msg_type_name = ns + "::" + msg_type._name;
+    const string &fix_filename, const string &fixt_filename,
+    const string &xsd_schema) {
+  string msg_type_name = ns + "::" + msg_type._name;
+  BOOST_LOG_TRIVIAL(debug) << ns << "@" << msg_type._name;
+  if (is_fixt_message(msg_type._name, ns))
+    msg_type_name = "FIXT11::" + msg_type._name;
   os << "TEST ( " << msg_type._name << ", set_fields)\n"
      << "{" << endl
      << endl
@@ -100,6 +107,8 @@ void test_generator_fix2xml::generate_test(
      << "\", \"" << xsd_schema << "\"};" << endl
      << TAB(0) << "auto& fixml_dict = converter.fixml_dico();" << endl
      << TAB(0) << "ASSERT_TRUE(converter.init());" << endl
+     << TAB(0) << "ASSERT_TRUE(converter.parse_fixt_dico(\"" << fixt_filename
+     << "\"));" << endl
      << TAB(0) << msg_type_name << " "
      << "msg;" << endl
      << endl
@@ -126,6 +135,9 @@ void test_generator_fix2xml::generate_test(
     if (dico->get_fix_component(compo_name, compo_type))
       generate_component(os, compo_type, dico, fixml_dico, "msg", msg_type_name,
                          0, "", "");
+    else {
+      BOOST_LOG_TRIVIAL(warning) << "Cannot find " << compo_name;
+    }
   }
 
   // FIX2FIXML code generation
@@ -145,9 +157,12 @@ void test_generator_fix2xml::generate_test(
      << endl
      << TAB(0)
      << "BOOST_LOG_TRIVIAL(debug) << \"Quickfix XML representation is\";"
+     << endl
+     << TAB(0)
      << "cout << \"////////////////////////////////////////////\" << endl;"
      << endl
-     << "cout << msg.toXML() << endl;" << endl
+     << TAB(0) << "cout << msg.toXML() << endl;" << endl
+     << TAB(0)
      << "cout << \"////////////////////////////////////////////\" << endl << "
         "endl;"
      << endl
@@ -176,6 +191,7 @@ void test_generator_fix2xml::generate_test(
      << TAB(0) << "BOOST_LOG_TRIVIAL(debug) << \"All FIX components\";" << endl
      << TAB(0) << "for (const auto& l : all_values) {" << endl
      << TAB(1) << "cout << \"\t[\";" << endl
+     << TAB(1)
      << "copy(l.begin(), l.end(), ostream_iterator<string>(cout, \" \"));"
      << endl
      << TAB(1) << "cout << \"]\" << endl;" << endl
@@ -183,6 +199,7 @@ void test_generator_fix2xml::generate_test(
      << TAB(0) << "BOOST_LOG_TRIVIAL(debug) << \"All XML components\";" << endl
      << TAB(0) << "for (const auto& l : elt_lists) {" << endl
      << TAB(1) << "cout << \"\t[\";" << endl
+     << TAB(1)
      << "copy(l.begin(), l.end(), ostream_iterator<string>(cout, \" \"));"
      << endl
      << TAB(1) << "cout << \"]\" << endl;" << endl

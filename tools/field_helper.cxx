@@ -134,6 +134,8 @@ string field_helper::generate_field(ostream &os, const string field_name,
                                     const shared_ptr<fix_dico_container> &dico,
                                     const int level,
                                     const string &value_set_name) {
+  if (field_name == "MsgType")
+    return "";
   fix_field_type field_type;
   if (!dico->get_fix_field(field_name, field_type)) {
     BOOST_LOG_TRIVIAL(error) << "The field " << field_name << " not found";
@@ -156,7 +158,10 @@ string field_helper::generate_field(ostream &os, const string field_name,
       os << "set_field(" << field_map << ", " << var_name << ", "
          << value_set_name << ");" << endl;
     } else {
-      os << TAB(level) << "set_field(" << field_map << ", "
+      string setter = "set_field";
+      if (field_map == "msg.getHeader()")
+        setter = "set_header_field";
+      os << TAB(level) << setter << "(" << field_map << ", "
          << "FIX::" << field_name << "{" << value << "}, " << value_set_name
          << ");" << endl;
 
@@ -219,8 +224,8 @@ string field_helper::generate_attribute(
   }
   BOOST_LOG_TRIVIAL(debug) << "\t ---> Setting attribute " << field._name
                            << " to " << value;
-  os << TAB(level) << elt_name << ".add_attribute(\"" << field._name << "\", \"" << value
-     << "\"); // " << level << endl;
+  os << TAB(level) << elt_name << ".add_attribute(\"" << field._name << "\", \""
+     << value << "\"); // " << level << endl;
   os << TAB(level) << value_set_name << ".insert(\"" << value << "\");" << endl;
 
   return value;

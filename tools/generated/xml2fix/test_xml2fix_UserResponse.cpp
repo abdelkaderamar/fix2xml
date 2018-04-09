@@ -31,68 +31,68 @@ TEST ( UserResponse_message_t, set_fields)
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> UserResponse_message_t_0;
-  elt.add_attribute("UserReqID", "UserRequestID_t_1801422150"); // 0
-  UserResponse_message_t_0.insert("UserRequestID_t_1801422150");
-  elt.add_attribute("Username", "Username_t_31461106"); // 0
-  UserResponse_message_t_0.insert("Username_t_31461106");
-  elt.add_attribute("UserStat", "2"); // 0
-  UserResponse_message_t_0.insert("2");
-  elt.add_attribute("UserStatText", "UserStatusText_t_1356483606"); // 0
-  UserResponse_message_t_0.insert("UserStatusText_t_1356483606");
+  elt.add_attribute("UserReqID", "UserRequestID_t_1937573737"); // 0
+  UserResponse_message_t_0.insert("UserRequestID_t_1937573737");
+  elt.add_attribute("Username", "Username_t_1038327136"); // 0
+  UserResponse_message_t_0.insert("Username_t_1038327136");
+  elt.add_attribute("UserStat", "8"); // 0
+  UserResponse_message_t_0.insert("8");
+  elt.add_attribute("UserStatText", "UserStatusText_t_379570371"); // 0
+  UserResponse_message_t_0.insert("UserStatusText_t_379570371");
   all_values.push_back(UserResponse_message_t_0);
   all_compo_names.insert("UserResponse_message_t");
 
   { // Hdr
     xml_element Hdr_107{"Hdr"};
     multiset<string> Hdr_107_set;
-    Hdr_107.add_attribute("SeqNum", "571071107"); // 1
-    Hdr_107_set.insert("571071107");
-    Hdr_107.add_attribute("SID", "SenderCompID_t_1969714278"); // 1
-    Hdr_107_set.insert("SenderCompID_t_1969714278");
-    Hdr_107.add_attribute("TID", "TargetCompID_t_2065857853"); // 1
-    Hdr_107_set.insert("TargetCompID_t_2065857853");
-    Hdr_107.add_attribute("OBID", "OnBehalfOfCompID_t_1132949997"); // 1
-    Hdr_107_set.insert("OnBehalfOfCompID_t_1132949997");
-    Hdr_107.add_attribute("D2ID", "DeliverToCompID_t_1076907596"); // 1
-    Hdr_107_set.insert("DeliverToCompID_t_1076907596");
-    Hdr_107.add_attribute("SSub", "SenderSubID_t_1874086921"); // 1
-    Hdr_107_set.insert("SenderSubID_t_1874086921");
-    Hdr_107.add_attribute("SLoc", "SenderLocationID_t_1796651731"); // 1
-    Hdr_107_set.insert("SenderLocationID_t_1796651731");
-    Hdr_107.add_attribute("TSub", "TargetSubID_t_575424043"); // 1
-    Hdr_107_set.insert("TargetSubID_t_575424043");
-    Hdr_107.add_attribute("TLoc", "TargetLocationID_t_897524324"); // 1
-    Hdr_107_set.insert("TargetLocationID_t_897524324");
-    Hdr_107.add_attribute("OBSub", "OnBehalfOfSubID_t_1974545718"); // 1
-    Hdr_107_set.insert("OnBehalfOfSubID_t_1974545718");
-    Hdr_107.add_attribute("OBLoc", "OnBehalfOfLocationID_t_521900445"); // 1
-    Hdr_107_set.insert("OnBehalfOfLocationID_t_521900445");
-    Hdr_107.add_attribute("D2Sub", "DeliverToSubID_t_1065464673"); // 1
-    Hdr_107_set.insert("DeliverToSubID_t_1065464673");
-    Hdr_107.add_attribute("D2Loc", "DeliverToLocationID_t_1935776932"); // 1
-    Hdr_107_set.insert("DeliverToLocationID_t_1935776932");
-    Hdr_107.add_attribute("PosDup", "Y"); // 1
-    Hdr_107_set.insert("Y");
-    Hdr_107.add_attribute("PosRsnd", "N"); // 1
+    Hdr_107.add_attribute("SeqNum", "800477750"); // 1
+    Hdr_107_set.insert("800477750");
+    Hdr_107.add_attribute("SID", "SenderCompID_t_1103452572"); // 1
+    Hdr_107_set.insert("SenderCompID_t_1103452572");
+    Hdr_107.add_attribute("TID", "TargetCompID_t_33504814"); // 1
+    Hdr_107_set.insert("TargetCompID_t_33504814");
+    Hdr_107.add_attribute("OBID", "OnBehalfOfCompID_t_256377375"); // 1
+    Hdr_107_set.insert("OnBehalfOfCompID_t_256377375");
+    Hdr_107.add_attribute("D2ID", "DeliverToCompID_t_1504716873"); // 1
+    Hdr_107_set.insert("DeliverToCompID_t_1504716873");
+    Hdr_107.add_attribute("SSub", "SenderSubID_t_1072783375"); // 1
+    Hdr_107_set.insert("SenderSubID_t_1072783375");
+    Hdr_107.add_attribute("SLoc", "SenderLocationID_t_95513028"); // 1
+    Hdr_107_set.insert("SenderLocationID_t_95513028");
+    Hdr_107.add_attribute("TSub", "TargetSubID_t_613560821"); // 1
+    Hdr_107_set.insert("TargetSubID_t_613560821");
+    Hdr_107.add_attribute("TLoc", "TargetLocationID_t_713619964"); // 1
+    Hdr_107_set.insert("TargetLocationID_t_713619964");
+    Hdr_107.add_attribute("OBSub", "OnBehalfOfSubID_t_1126609329"); // 1
+    Hdr_107_set.insert("OnBehalfOfSubID_t_1126609329");
+    Hdr_107.add_attribute("OBLoc", "OnBehalfOfLocationID_t_1848080543"); // 1
+    Hdr_107_set.insert("OnBehalfOfLocationID_t_1848080543");
+    Hdr_107.add_attribute("D2Sub", "DeliverToSubID_t_2126881884"); // 1
+    Hdr_107_set.insert("DeliverToSubID_t_2126881884");
+    Hdr_107.add_attribute("D2Loc", "DeliverToLocationID_t_183934785"); // 1
+    Hdr_107_set.insert("DeliverToLocationID_t_183934785");
+    Hdr_107.add_attribute("PosDup", "N"); // 1
     Hdr_107_set.insert("N");
-    Hdr_107.add_attribute("Snt", "SendingTime_t_1030341657"); // 1
-    Hdr_107_set.insert("SendingTime_t_1030341657");
-    Hdr_107.add_attribute("OrigSnt", "OrigSendingTime_t_1366700710"); // 1
-    Hdr_107_set.insert("OrigSendingTime_t_1366700710");
-    Hdr_107.add_attribute("MsgEncd", "MessageEncoding_t_599520153"); // 1
-    Hdr_107_set.insert("MessageEncoding_t_599520153");
+    Hdr_107.add_attribute("PosRsnd", "Y"); // 1
+    Hdr_107_set.insert("Y");
+    Hdr_107.add_attribute("Snt", "SendingTime_t_286118879"); // 1
+    Hdr_107_set.insert("SendingTime_t_286118879");
+    Hdr_107.add_attribute("OrigSnt", "OrigSendingTime_t_215185563"); // 1
+    Hdr_107_set.insert("OrigSendingTime_t_215185563");
+    Hdr_107.add_attribute("MsgEncd", "MessageEncoding_t_1031756796"); // 1
+    Hdr_107_set.insert("MessageEncoding_t_1031756796");
     all_values.push_back(Hdr_107_set);
     all_compo_names.insert("Hdr_107_set");
 
     {
       xml_element Hop_107{"Hop"};
       multiset<string> Hop_107_set;
-      Hop_107.add_attribute("ID", "HopCompID_t_2088271301"); // 2
-      Hop_107_set.insert("HopCompID_t_2088271301");
-      Hop_107.add_attribute("Ref", "1216302948"); // 2
-      Hop_107_set.insert("1216302948");
-      Hop_107.add_attribute("Snt", "HopSendingTime_t_607499024"); // 2
-      Hop_107_set.insert("HopSendingTime_t_607499024");
+      Hop_107.add_attribute("ID", "HopCompID_t_302884880"); // 2
+      Hop_107_set.insert("HopCompID_t_302884880");
+      Hop_107.add_attribute("Ref", "1642742275"); // 2
+      Hop_107_set.insert("1642742275");
+      Hop_107.add_attribute("Snt", "HopSendingTime_t_709743379"); // 2
+      Hop_107_set.insert("HopSendingTime_t_709743379");
       all_values.push_back(Hop_107_set);
       all_compo_names.insert("Hop_107_set");
 

@@ -100,6 +100,8 @@ bool fixml_dico_container::get_message_type(const string &fix_msg_name,
       return true;
     }
   }
+  BOOST_LOG_TRIVIAL(error) << "Message type " << fix_msg_name
+                           << " not found in FIXML dictionary";
   return false;
 }
 

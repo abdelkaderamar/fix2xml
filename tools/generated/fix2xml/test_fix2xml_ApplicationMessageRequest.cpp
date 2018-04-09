@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 
 #include "converter/fixml2fix_converter.hxx"
+#include "converter/xml_element_helper.hxx"
+#include "converter/fix_helper.hxx"
 #include "util/fix_env.hxx"
 #include "tools/test_util.hxx"
 
@@ -22,16 +24,17 @@ TEST ( ApplicationMessageRequest, set_fields)
   fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   ASSERT_TRUE(converter.init());
+  ASSERT_TRUE(converter.parse_fixt_dico("../spec/fix/FIXT11.xml"));
   FIX50SP2::ApplicationMessageRequest msg;
 
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> ApplicationMessageRequest_0;
-  set_field(msg, FIX::ApplReqID{"STRING_305479428"}, ApplicationMessageRequest_0);
+  set_field(msg, FIX::ApplReqID{"STRING_240611213"}, ApplicationMessageRequest_0);
   set_field(msg, FIX::ApplReqType{1}, ApplicationMessageRequest_0);
-  set_field(msg, FIX::EncodedText{"DATA_312535914"}, ApplicationMessageRequest_0);
-  set_field(msg, FIX::EncodedTextLen{1144777939}, ApplicationMessageRequest_0);
-  set_field(msg, FIX::Text{"STRING_616352496"}, ApplicationMessageRequest_0);
+  set_field(msg, FIX::EncodedText{"DATA_730359957"}, ApplicationMessageRequest_0);
+  set_field(msg, FIX::EncodedTextLen{152739446}, ApplicationMessageRequest_0);
+  set_field(msg, FIX::Text{"STRING_1715580302"}, ApplicationMessageRequest_0);
   all_values.push_back(ApplicationMessageRequest_0);
 
   all_compo_names.insert("ApplicationMessageRequest");
@@ -42,10 +45,10 @@ TEST ( ApplicationMessageRequest, set_fields)
     FIX50SP2::ApplicationMessageRequest::NoApplIDs noApplIDs_0_0;
     // ApplIDRequestGrp.NoApplIDs
     multiset<string> ApplIDRequestGrp_NoApplIDs_0;
-    set_field(noApplIDs_0_0, FIX::ApplBegSeqNum{1800210184}, ApplIDRequestGrp_NoApplIDs_0);
-    set_field(noApplIDs_0_0, FIX::ApplEndSeqNum{792428963}, ApplIDRequestGrp_NoApplIDs_0);
-    set_field(noApplIDs_0_0, FIX::RefApplID{"STRING_109848848"}, ApplIDRequestGrp_NoApplIDs_0);
-    set_field(noApplIDs_0_0, FIX::RefApplReqID{"STRING_1014802560"}, ApplIDRequestGrp_NoApplIDs_0);
+    set_field(noApplIDs_0_0, FIX::ApplBegSeqNum{1786151681}, ApplIDRequestGrp_NoApplIDs_0);
+    set_field(noApplIDs_0_0, FIX::ApplEndSeqNum{1378085630}, ApplIDRequestGrp_NoApplIDs_0);
+    set_field(noApplIDs_0_0, FIX::RefApplID{"STRING_1460035383"}, ApplIDRequestGrp_NoApplIDs_0);
+    set_field(noApplIDs_0_0, FIX::RefApplReqID{"STRING_237934720"}, ApplIDRequestGrp_NoApplIDs_0);
     all_values.push_back(ApplIDRequestGrp_NoApplIDs_0);
     all_compo_names.insert("...NoApplIDs");
 
@@ -54,11 +57,11 @@ TEST ( ApplicationMessageRequest, set_fields)
     {
       FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_0_1_0;
       // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_28;
-      set_field(noNestedPartyIDs_0_1_0, FIX::NestedPartyID{"STRING_95952722"}, NestedParties_NoNestedPartyIDs_28);
-      set_field(noNestedPartyIDs_0_1_0, FIX::NestedPartyIDSource{'2'}, NestedParties_NoNestedPartyIDs_28);
-      set_field(noNestedPartyIDs_0_1_0, FIX::NestedPartyRole{345729105}, NestedParties_NoNestedPartyIDs_28);
-      all_values.push_back(NestedParties_NoNestedPartyIDs_28);
+      multiset<string> NestedParties_NoNestedPartyIDs_30;
+      set_field(noNestedPartyIDs_0_1_0, FIX::NestedPartyID{"STRING_73074856"}, NestedParties_NoNestedPartyIDs_30);
+      set_field(noNestedPartyIDs_0_1_0, FIX::NestedPartyIDSource{'2'}, NestedParties_NoNestedPartyIDs_30);
+      set_field(noNestedPartyIDs_0_1_0, FIX::NestedPartyRole{184285139}, NestedParties_NoNestedPartyIDs_30);
+      all_values.push_back(NestedParties_NoNestedPartyIDs_30);
       all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs");
 
       // NstdPtysSubGrp
@@ -66,10 +69,10 @@ TEST ( ApplicationMessageRequest, set_fields)
       {
         FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_0_2_0;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_58;
-        set_field(noNestedPartySubIDs_0_0_2_0, FIX::NestedPartySubID{"STRING_1568135041"}, NstdPtysSubGrp_NoNestedPartySubIDs_58);
-        set_field(noNestedPartySubIDs_0_0_2_0, FIX::NestedPartySubIDType{728655500}, NstdPtysSubGrp_NoNestedPartySubIDs_58);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_58);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_64;
+        set_field(noNestedPartySubIDs_0_0_2_0, FIX::NestedPartySubID{"STRING_653988395"}, NstdPtysSubGrp_NoNestedPartySubIDs_64);
+        set_field(noNestedPartySubIDs_0_0_2_0, FIX::NestedPartySubIDType{573676957}, NstdPtysSubGrp_NoNestedPartySubIDs_64);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_64);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
         noNestedPartyIDs_0_1_0.addGroup(noNestedPartySubIDs_0_0_2_0);
@@ -77,10 +80,10 @@ TEST ( ApplicationMessageRequest, set_fields)
       {
         FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_0_2_1;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_59;
-        set_field(noNestedPartySubIDs_0_0_2_1, FIX::NestedPartySubID{"STRING_471732498"}, NstdPtysSubGrp_NoNestedPartySubIDs_59);
-        set_field(noNestedPartySubIDs_0_0_2_1, FIX::NestedPartySubIDType{1403935543}, NstdPtysSubGrp_NoNestedPartySubIDs_59);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_59);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_65;
+        set_field(noNestedPartySubIDs_0_0_2_1, FIX::NestedPartySubID{"STRING_3208629"}, NstdPtysSubGrp_NoNestedPartySubIDs_65);
+        set_field(noNestedPartySubIDs_0_0_2_1, FIX::NestedPartySubIDType{1470771779}, NstdPtysSubGrp_NoNestedPartySubIDs_65);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_65);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
         noNestedPartyIDs_0_1_0.addGroup(noNestedPartySubIDs_0_0_2_1);
@@ -88,10 +91,10 @@ TEST ( ApplicationMessageRequest, set_fields)
       {
         FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_0_2_2;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_60;
-        set_field(noNestedPartySubIDs_0_0_2_2, FIX::NestedPartySubID{"STRING_1335103194"}, NstdPtysSubGrp_NoNestedPartySubIDs_60);
-        set_field(noNestedPartySubIDs_0_0_2_2, FIX::NestedPartySubIDType{987063679}, NstdPtysSubGrp_NoNestedPartySubIDs_60);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_60);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_66;
+        set_field(noNestedPartySubIDs_0_0_2_2, FIX::NestedPartySubID{"STRING_563162833"}, NstdPtysSubGrp_NoNestedPartySubIDs_66);
+        set_field(noNestedPartySubIDs_0_0_2_2, FIX::NestedPartySubIDType{1298315745}, NstdPtysSubGrp_NoNestedPartySubIDs_66);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_66);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
         noNestedPartyIDs_0_1_0.addGroup(noNestedPartySubIDs_0_0_2_2);
@@ -101,11 +104,11 @@ TEST ( ApplicationMessageRequest, set_fields)
     {
       FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_0_1_1;
       // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_29;
-      set_field(noNestedPartyIDs_0_1_1, FIX::NestedPartyID{"STRING_1597586031"}, NestedParties_NoNestedPartyIDs_29);
-      set_field(noNestedPartyIDs_0_1_1, FIX::NestedPartyIDSource{'6'}, NestedParties_NoNestedPartyIDs_29);
-      set_field(noNestedPartyIDs_0_1_1, FIX::NestedPartyRole{271863251}, NestedParties_NoNestedPartyIDs_29);
-      all_values.push_back(NestedParties_NoNestedPartyIDs_29);
+      multiset<string> NestedParties_NoNestedPartyIDs_31;
+      set_field(noNestedPartyIDs_0_1_1, FIX::NestedPartyID{"STRING_1512257243"}, NestedParties_NoNestedPartyIDs_31);
+      set_field(noNestedPartyIDs_0_1_1, FIX::NestedPartyIDSource{'2'}, NestedParties_NoNestedPartyIDs_31);
+      set_field(noNestedPartyIDs_0_1_1, FIX::NestedPartyRole{569203284}, NestedParties_NoNestedPartyIDs_31);
+      all_values.push_back(NestedParties_NoNestedPartyIDs_31);
       all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs");
 
       // NstdPtysSubGrp
@@ -113,10 +116,10 @@ TEST ( ApplicationMessageRequest, set_fields)
       {
         FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_1_2_0;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_61;
-        set_field(noNestedPartySubIDs_0_1_2_0, FIX::NestedPartySubID{"STRING_1342110800"}, NstdPtysSubGrp_NoNestedPartySubIDs_61);
-        set_field(noNestedPartySubIDs_0_1_2_0, FIX::NestedPartySubIDType{1943560129}, NstdPtysSubGrp_NoNestedPartySubIDs_61);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_61);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_67;
+        set_field(noNestedPartySubIDs_0_1_2_0, FIX::NestedPartySubID{"STRING_509522041"}, NstdPtysSubGrp_NoNestedPartySubIDs_67);
+        set_field(noNestedPartySubIDs_0_1_2_0, FIX::NestedPartySubIDType{1631201084}, NstdPtysSubGrp_NoNestedPartySubIDs_67);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_67);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
         noNestedPartyIDs_0_1_1.addGroup(noNestedPartySubIDs_0_1_2_0);
@@ -124,10 +127,10 @@ TEST ( ApplicationMessageRequest, set_fields)
       {
         FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_1_2_1;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_62;
-        set_field(noNestedPartySubIDs_0_1_2_1, FIX::NestedPartySubID{"STRING_881934553"}, NstdPtysSubGrp_NoNestedPartySubIDs_62);
-        set_field(noNestedPartySubIDs_0_1_2_1, FIX::NestedPartySubIDType{1861753060}, NstdPtysSubGrp_NoNestedPartySubIDs_62);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_62);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_68;
+        set_field(noNestedPartySubIDs_0_1_2_1, FIX::NestedPartySubID{"STRING_315657987"}, NstdPtysSubGrp_NoNestedPartySubIDs_68);
+        set_field(noNestedPartySubIDs_0_1_2_1, FIX::NestedPartySubIDType{2087948943}, NstdPtysSubGrp_NoNestedPartySubIDs_68);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_68);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
         noNestedPartyIDs_0_1_1.addGroup(noNestedPartySubIDs_0_1_2_1);
@@ -135,10 +138,10 @@ TEST ( ApplicationMessageRequest, set_fields)
       {
         FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_1_2_2;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_63;
-        set_field(noNestedPartySubIDs_0_1_2_2, FIX::NestedPartySubID{"STRING_359100924"}, NstdPtysSubGrp_NoNestedPartySubIDs_63);
-        set_field(noNestedPartySubIDs_0_1_2_2, FIX::NestedPartySubIDType{1598148886}, NstdPtysSubGrp_NoNestedPartySubIDs_63);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_63);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_69;
+        set_field(noNestedPartySubIDs_0_1_2_2, FIX::NestedPartySubID{"STRING_594580418"}, NstdPtysSubGrp_NoNestedPartySubIDs_69);
+        set_field(noNestedPartySubIDs_0_1_2_2, FIX::NestedPartySubIDType{1216817730}, NstdPtysSubGrp_NoNestedPartySubIDs_69);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_69);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
         noNestedPartyIDs_0_1_1.addGroup(noNestedPartySubIDs_0_1_2_2);
@@ -148,11 +151,11 @@ TEST ( ApplicationMessageRequest, set_fields)
     {
       FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_0_1_2;
       // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_30;
-      set_field(noNestedPartyIDs_0_1_2, FIX::NestedPartyID{"STRING_19748840"}, NestedParties_NoNestedPartyIDs_30);
-      set_field(noNestedPartyIDs_0_1_2, FIX::NestedPartyIDSource{'2'}, NestedParties_NoNestedPartyIDs_30);
-      set_field(noNestedPartyIDs_0_1_2, FIX::NestedPartyRole{1910684800}, NestedParties_NoNestedPartyIDs_30);
-      all_values.push_back(NestedParties_NoNestedPartyIDs_30);
+      multiset<string> NestedParties_NoNestedPartyIDs_32;
+      set_field(noNestedPartyIDs_0_1_2, FIX::NestedPartyID{"STRING_181076508"}, NestedParties_NoNestedPartyIDs_32);
+      set_field(noNestedPartyIDs_0_1_2, FIX::NestedPartyIDSource{'8'}, NestedParties_NoNestedPartyIDs_32);
+      set_field(noNestedPartyIDs_0_1_2, FIX::NestedPartyRole{1947177687}, NestedParties_NoNestedPartyIDs_32);
+      all_values.push_back(NestedParties_NoNestedPartyIDs_32);
       all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs");
 
       // NstdPtysSubGrp
@@ -160,10 +163,10 @@ TEST ( ApplicationMessageRequest, set_fields)
       {
         FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_2_2_0;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_64;
-        set_field(noNestedPartySubIDs_0_2_2_0, FIX::NestedPartySubID{"STRING_583696956"}, NstdPtysSubGrp_NoNestedPartySubIDs_64);
-        set_field(noNestedPartySubIDs_0_2_2_0, FIX::NestedPartySubIDType{650918982}, NstdPtysSubGrp_NoNestedPartySubIDs_64);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_64);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_70;
+        set_field(noNestedPartySubIDs_0_2_2_0, FIX::NestedPartySubID{"STRING_447476386"}, NstdPtysSubGrp_NoNestedPartySubIDs_70);
+        set_field(noNestedPartySubIDs_0_2_2_0, FIX::NestedPartySubIDType{247248600}, NstdPtysSubGrp_NoNestedPartySubIDs_70);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_70);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
         noNestedPartyIDs_0_1_2.addGroup(noNestedPartySubIDs_0_2_2_0);
@@ -171,13 +174,24 @@ TEST ( ApplicationMessageRequest, set_fields)
       {
         FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_2_2_1;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_65;
-        set_field(noNestedPartySubIDs_0_2_2_1, FIX::NestedPartySubID{"STRING_817253316"}, NstdPtysSubGrp_NoNestedPartySubIDs_65);
-        set_field(noNestedPartySubIDs_0_2_2_1, FIX::NestedPartySubIDType{1376125919}, NstdPtysSubGrp_NoNestedPartySubIDs_65);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_65);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_71;
+        set_field(noNestedPartySubIDs_0_2_2_1, FIX::NestedPartySubID{"STRING_2119967635"}, NstdPtysSubGrp_NoNestedPartySubIDs_71);
+        set_field(noNestedPartySubIDs_0_2_2_1, FIX::NestedPartySubIDType{1825562016}, NstdPtysSubGrp_NoNestedPartySubIDs_71);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_71);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
         noNestedPartyIDs_0_1_2.addGroup(noNestedPartySubIDs_0_2_2_1);
+      }
+      {
+        FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_0_2_2_2;
+        // NstdPtysSubGrp.NoNestedPartySubIDs
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_72;
+        set_field(noNestedPartySubIDs_0_2_2_2, FIX::NestedPartySubID{"STRING_1707283983"}, NstdPtysSubGrp_NoNestedPartySubIDs_72);
+        set_field(noNestedPartySubIDs_0_2_2_2, FIX::NestedPartySubIDType{210418707}, NstdPtysSubGrp_NoNestedPartySubIDs_72);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_72);
+        all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
+
+        noNestedPartyIDs_0_1_2.addGroup(noNestedPartySubIDs_0_2_2_2);
       }
       noApplIDs_0_0.addGroup(noNestedPartyIDs_0_1_2);
     }
@@ -187,10 +201,10 @@ TEST ( ApplicationMessageRequest, set_fields)
     FIX50SP2::ApplicationMessageRequest::NoApplIDs noApplIDs_0_1;
     // ApplIDRequestGrp.NoApplIDs
     multiset<string> ApplIDRequestGrp_NoApplIDs_1;
-    set_field(noApplIDs_0_1, FIX::ApplBegSeqNum{760767830}, ApplIDRequestGrp_NoApplIDs_1);
-    set_field(noApplIDs_0_1, FIX::ApplEndSeqNum{1832055876}, ApplIDRequestGrp_NoApplIDs_1);
-    set_field(noApplIDs_0_1, FIX::RefApplID{"STRING_516494000"}, ApplIDRequestGrp_NoApplIDs_1);
-    set_field(noApplIDs_0_1, FIX::RefApplReqID{"STRING_856720553"}, ApplIDRequestGrp_NoApplIDs_1);
+    set_field(noApplIDs_0_1, FIX::ApplBegSeqNum{1373187205}, ApplIDRequestGrp_NoApplIDs_1);
+    set_field(noApplIDs_0_1, FIX::ApplEndSeqNum{1780358839}, ApplIDRequestGrp_NoApplIDs_1);
+    set_field(noApplIDs_0_1, FIX::RefApplID{"STRING_439180720"}, ApplIDRequestGrp_NoApplIDs_1);
+    set_field(noApplIDs_0_1, FIX::RefApplReqID{"STRING_1557472344"}, ApplIDRequestGrp_NoApplIDs_1);
     all_values.push_back(ApplIDRequestGrp_NoApplIDs_1);
     all_compo_names.insert("...NoApplIDs");
 
@@ -199,11 +213,11 @@ TEST ( ApplicationMessageRequest, set_fields)
     {
       FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_1_1_0;
       // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_31;
-      set_field(noNestedPartyIDs_1_1_0, FIX::NestedPartyID{"STRING_862223106"}, NestedParties_NoNestedPartyIDs_31);
-      set_field(noNestedPartyIDs_1_1_0, FIX::NestedPartyIDSource{'5'}, NestedParties_NoNestedPartyIDs_31);
-      set_field(noNestedPartyIDs_1_1_0, FIX::NestedPartyRole{1496334454}, NestedParties_NoNestedPartyIDs_31);
-      all_values.push_back(NestedParties_NoNestedPartyIDs_31);
+      multiset<string> NestedParties_NoNestedPartyIDs_33;
+      set_field(noNestedPartyIDs_1_1_0, FIX::NestedPartyID{"STRING_1093169115"}, NestedParties_NoNestedPartyIDs_33);
+      set_field(noNestedPartyIDs_1_1_0, FIX::NestedPartyIDSource{'2'}, NestedParties_NoNestedPartyIDs_33);
+      set_field(noNestedPartyIDs_1_1_0, FIX::NestedPartyRole{180937673}, NestedParties_NoNestedPartyIDs_33);
+      all_values.push_back(NestedParties_NoNestedPartyIDs_33);
       all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs");
 
       // NstdPtysSubGrp
@@ -211,10 +225,10 @@ TEST ( ApplicationMessageRequest, set_fields)
       {
         FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_1_0_2_0;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_66;
-        set_field(noNestedPartySubIDs_1_0_2_0, FIX::NestedPartySubID{"STRING_1043850639"}, NstdPtysSubGrp_NoNestedPartySubIDs_66);
-        set_field(noNestedPartySubIDs_1_0_2_0, FIX::NestedPartySubIDType{752786349}, NstdPtysSubGrp_NoNestedPartySubIDs_66);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_66);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_73;
+        set_field(noNestedPartySubIDs_1_0_2_0, FIX::NestedPartySubID{"STRING_546828486"}, NstdPtysSubGrp_NoNestedPartySubIDs_73);
+        set_field(noNestedPartySubIDs_1_0_2_0, FIX::NestedPartySubIDType{1479253418}, NstdPtysSubGrp_NoNestedPartySubIDs_73);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_73);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
         noNestedPartyIDs_1_1_0.addGroup(noNestedPartySubIDs_1_0_2_0);
@@ -222,35 +236,24 @@ TEST ( ApplicationMessageRequest, set_fields)
       {
         FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_1_0_2_1;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_67;
-        set_field(noNestedPartySubIDs_1_0_2_1, FIX::NestedPartySubID{"STRING_778498153"}, NstdPtysSubGrp_NoNestedPartySubIDs_67);
-        set_field(noNestedPartySubIDs_1_0_2_1, FIX::NestedPartySubIDType{2030914318}, NstdPtysSubGrp_NoNestedPartySubIDs_67);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_67);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_74;
+        set_field(noNestedPartySubIDs_1_0_2_1, FIX::NestedPartySubID{"STRING_1928714490"}, NstdPtysSubGrp_NoNestedPartySubIDs_74);
+        set_field(noNestedPartySubIDs_1_0_2_1, FIX::NestedPartySubIDType{782196851}, NstdPtysSubGrp_NoNestedPartySubIDs_74);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_74);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
         noNestedPartyIDs_1_1_0.addGroup(noNestedPartySubIDs_1_0_2_1);
-      }
-      {
-        FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_1_0_2_2;
-        // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_68;
-        set_field(noNestedPartySubIDs_1_0_2_2, FIX::NestedPartySubID{"STRING_202888732"}, NstdPtysSubGrp_NoNestedPartySubIDs_68);
-        set_field(noNestedPartySubIDs_1_0_2_2, FIX::NestedPartySubIDType{1435535841}, NstdPtysSubGrp_NoNestedPartySubIDs_68);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_68);
-        all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
-
-        noNestedPartyIDs_1_1_0.addGroup(noNestedPartySubIDs_1_0_2_2);
       }
       noApplIDs_0_1.addGroup(noNestedPartyIDs_1_1_0);
     }
     {
       FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_1_1_1;
       // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_32;
-      set_field(noNestedPartyIDs_1_1_1, FIX::NestedPartyID{"STRING_155293921"}, NestedParties_NoNestedPartyIDs_32);
-      set_field(noNestedPartyIDs_1_1_1, FIX::NestedPartyIDSource{'1'}, NestedParties_NoNestedPartyIDs_32);
-      set_field(noNestedPartyIDs_1_1_1, FIX::NestedPartyRole{630162993}, NestedParties_NoNestedPartyIDs_32);
-      all_values.push_back(NestedParties_NoNestedPartyIDs_32);
+      multiset<string> NestedParties_NoNestedPartyIDs_34;
+      set_field(noNestedPartyIDs_1_1_1, FIX::NestedPartyID{"STRING_2048456702"}, NestedParties_NoNestedPartyIDs_34);
+      set_field(noNestedPartyIDs_1_1_1, FIX::NestedPartyIDSource{'1'}, NestedParties_NoNestedPartyIDs_34);
+      set_field(noNestedPartyIDs_1_1_1, FIX::NestedPartyRole{1291718893}, NestedParties_NoNestedPartyIDs_34);
+      all_values.push_back(NestedParties_NoNestedPartyIDs_34);
       all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs");
 
       // NstdPtysSubGrp
@@ -258,97 +261,90 @@ TEST ( ApplicationMessageRequest, set_fields)
       {
         FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_1_1_2_0;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_69;
-        set_field(noNestedPartySubIDs_1_1_2_0, FIX::NestedPartySubID{"STRING_315141405"}, NstdPtysSubGrp_NoNestedPartySubIDs_69);
-        set_field(noNestedPartySubIDs_1_1_2_0, FIX::NestedPartySubIDType{344432405}, NstdPtysSubGrp_NoNestedPartySubIDs_69);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_69);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_75;
+        set_field(noNestedPartySubIDs_1_1_2_0, FIX::NestedPartySubID{"STRING_98021392"}, NstdPtysSubGrp_NoNestedPartySubIDs_75);
+        set_field(noNestedPartySubIDs_1_1_2_0, FIX::NestedPartySubIDType{1232184188}, NstdPtysSubGrp_NoNestedPartySubIDs_75);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_75);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
         noNestedPartyIDs_1_1_1.addGroup(noNestedPartySubIDs_1_1_2_0);
       }
-      {
-        FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_1_1_2_1;
-        // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_70;
-        set_field(noNestedPartySubIDs_1_1_2_1, FIX::NestedPartySubID{"STRING_310471326"}, NstdPtysSubGrp_NoNestedPartySubIDs_70);
-        set_field(noNestedPartySubIDs_1_1_2_1, FIX::NestedPartySubIDType{1913290291}, NstdPtysSubGrp_NoNestedPartySubIDs_70);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_70);
-        all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
-
-        noNestedPartyIDs_1_1_1.addGroup(noNestedPartySubIDs_1_1_2_1);
-      }
-      {
-        FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_1_1_2_2;
-        // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_71;
-        set_field(noNestedPartySubIDs_1_1_2_2, FIX::NestedPartySubID{"STRING_364181246"}, NstdPtysSubGrp_NoNestedPartySubIDs_71);
-        set_field(noNestedPartySubIDs_1_1_2_2, FIX::NestedPartySubIDType{277815786}, NstdPtysSubGrp_NoNestedPartySubIDs_71);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_71);
-        all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
-
-        noNestedPartyIDs_1_1_1.addGroup(noNestedPartySubIDs_1_1_2_2);
-      }
       noApplIDs_0_1.addGroup(noNestedPartyIDs_1_1_1);
     }
+    msg.addGroup(noApplIDs_0_1);
+  }
+  {
+    FIX50SP2::ApplicationMessageRequest::NoApplIDs noApplIDs_0_2;
+    // ApplIDRequestGrp.NoApplIDs
+    multiset<string> ApplIDRequestGrp_NoApplIDs_2;
+    set_field(noApplIDs_0_2, FIX::ApplBegSeqNum{2126754557}, ApplIDRequestGrp_NoApplIDs_2);
+    set_field(noApplIDs_0_2, FIX::ApplEndSeqNum{1314839122}, ApplIDRequestGrp_NoApplIDs_2);
+    set_field(noApplIDs_0_2, FIX::RefApplID{"STRING_1413260697"}, ApplIDRequestGrp_NoApplIDs_2);
+    set_field(noApplIDs_0_2, FIX::RefApplReqID{"STRING_858650640"}, ApplIDRequestGrp_NoApplIDs_2);
+    all_values.push_back(ApplIDRequestGrp_NoApplIDs_2);
+    all_compo_names.insert("...NoApplIDs");
+
+    // NestedParties
+    // Group NestedParties.NoNestedPartyIDs
     {
-      FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_1_1_2;
+      FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs noNestedPartyIDs_2_1_0;
       // NestedParties.NoNestedPartyIDs
-      multiset<string> NestedParties_NoNestedPartyIDs_33;
-      set_field(noNestedPartyIDs_1_1_2, FIX::NestedPartyID{"STRING_1676491443"}, NestedParties_NoNestedPartyIDs_33);
-      set_field(noNestedPartyIDs_1_1_2, FIX::NestedPartyIDSource{'1'}, NestedParties_NoNestedPartyIDs_33);
-      set_field(noNestedPartyIDs_1_1_2, FIX::NestedPartyRole{861512742}, NestedParties_NoNestedPartyIDs_33);
-      all_values.push_back(NestedParties_NoNestedPartyIDs_33);
+      multiset<string> NestedParties_NoNestedPartyIDs_35;
+      set_field(noNestedPartyIDs_2_1_0, FIX::NestedPartyID{"STRING_1747076651"}, NestedParties_NoNestedPartyIDs_35);
+      set_field(noNestedPartyIDs_2_1_0, FIX::NestedPartyIDSource{'1'}, NestedParties_NoNestedPartyIDs_35);
+      set_field(noNestedPartyIDs_2_1_0, FIX::NestedPartyRole{1361781762}, NestedParties_NoNestedPartyIDs_35);
+      all_values.push_back(NestedParties_NoNestedPartyIDs_35);
       all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs");
 
       // NstdPtysSubGrp
       // Group NstdPtysSubGrp.NoNestedPartySubIDs
       {
-        FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_1_2_2_0;
+        FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_2_0_2_0;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_72;
-        set_field(noNestedPartySubIDs_1_2_2_0, FIX::NestedPartySubID{"STRING_198477694"}, NstdPtysSubGrp_NoNestedPartySubIDs_72);
-        set_field(noNestedPartySubIDs_1_2_2_0, FIX::NestedPartySubIDType{90155013}, NstdPtysSubGrp_NoNestedPartySubIDs_72);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_72);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_76;
+        set_field(noNestedPartySubIDs_2_0_2_0, FIX::NestedPartySubID{"STRING_984205395"}, NstdPtysSubGrp_NoNestedPartySubIDs_76);
+        set_field(noNestedPartySubIDs_2_0_2_0, FIX::NestedPartySubIDType{921582098}, NstdPtysSubGrp_NoNestedPartySubIDs_76);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_76);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
-        noNestedPartyIDs_1_1_2.addGroup(noNestedPartySubIDs_1_2_2_0);
+        noNestedPartyIDs_2_1_0.addGroup(noNestedPartySubIDs_2_0_2_0);
       }
       {
-        FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_1_2_2_1;
+        FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_2_0_2_1;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_73;
-        set_field(noNestedPartySubIDs_1_2_2_1, FIX::NestedPartySubID{"STRING_940694608"}, NstdPtysSubGrp_NoNestedPartySubIDs_73);
-        set_field(noNestedPartySubIDs_1_2_2_1, FIX::NestedPartySubIDType{2030533571}, NstdPtysSubGrp_NoNestedPartySubIDs_73);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_73);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_77;
+        set_field(noNestedPartySubIDs_2_0_2_1, FIX::NestedPartySubID{"STRING_1929979346"}, NstdPtysSubGrp_NoNestedPartySubIDs_77);
+        set_field(noNestedPartySubIDs_2_0_2_1, FIX::NestedPartySubIDType{209908952}, NstdPtysSubGrp_NoNestedPartySubIDs_77);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_77);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
-        noNestedPartyIDs_1_1_2.addGroup(noNestedPartySubIDs_1_2_2_1);
+        noNestedPartyIDs_2_1_0.addGroup(noNestedPartySubIDs_2_0_2_1);
       }
       {
-        FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_1_2_2_2;
+        FIX50SP2::ApplicationMessageRequest::NoApplIDs::NoNestedPartyIDs::NoNestedPartySubIDs noNestedPartySubIDs_2_0_2_2;
         // NstdPtysSubGrp.NoNestedPartySubIDs
-        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_74;
-        set_field(noNestedPartySubIDs_1_2_2_2, FIX::NestedPartySubID{"STRING_606649014"}, NstdPtysSubGrp_NoNestedPartySubIDs_74);
-        set_field(noNestedPartySubIDs_1_2_2_2, FIX::NestedPartySubIDType{1797415161}, NstdPtysSubGrp_NoNestedPartySubIDs_74);
-        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_74);
+        multiset<string> NstdPtysSubGrp_NoNestedPartySubIDs_78;
+        set_field(noNestedPartySubIDs_2_0_2_2, FIX::NestedPartySubID{"STRING_554457289"}, NstdPtysSubGrp_NoNestedPartySubIDs_78);
+        set_field(noNestedPartySubIDs_2_0_2_2, FIX::NestedPartySubIDType{221676419}, NstdPtysSubGrp_NoNestedPartySubIDs_78);
+        all_values.push_back(NstdPtysSubGrp_NoNestedPartySubIDs_78);
         all_compo_names.insert("...NoApplIDs...NoNestedPartyIDs...NoNestedPartySubIDs");
 
-        noNestedPartyIDs_1_1_2.addGroup(noNestedPartySubIDs_1_2_2_2);
+        noNestedPartyIDs_2_1_0.addGroup(noNestedPartySubIDs_2_0_2_2);
       }
-      noApplIDs_0_1.addGroup(noNestedPartyIDs_1_1_2);
+      noApplIDs_0_2.addGroup(noNestedPartyIDs_2_1_0);
     }
-    msg.addGroup(noApplIDs_0_1);
+    msg.addGroup(noApplIDs_0_2);
   }
   // Parties
   // Group Parties.NoPartyIDs
   {
     FIX50SP2::ApplicationMessageRequest::NoPartyIDs noPartyIDs_0_0;
     // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_11;
-    set_field(noPartyIDs_0_0, FIX::PartyID{"STRING_1468872120"}, Parties_NoPartyIDs_11);
-    set_field(noPartyIDs_0_0, FIX::PartyIDSource{'G'}, Parties_NoPartyIDs_11);
-    set_field(noPartyIDs_0_0, FIX::PartyRole{60}, Parties_NoPartyIDs_11);
-    all_values.push_back(Parties_NoPartyIDs_11);
+    multiset<string> Parties_NoPartyIDs_13;
+    set_field(noPartyIDs_0_0, FIX::PartyID{"STRING_732186333"}, Parties_NoPartyIDs_13);
+    set_field(noPartyIDs_0_0, FIX::PartyIDSource{'8'}, Parties_NoPartyIDs_13);
+    set_field(noPartyIDs_0_0, FIX::PartyRole{3}, Parties_NoPartyIDs_13);
+    all_values.push_back(Parties_NoPartyIDs_13);
     all_compo_names.insert("...NoPartyIDs");
 
     // PtysSubGrp
@@ -356,24 +352,46 @@ TEST ( ApplicationMessageRequest, set_fields)
     {
       FIX50SP2::ApplicationMessageRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_0_1_0;
       // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_22;
-      set_field(noPartySubIDs_0_1_0, FIX::PartySubID{"STRING_1265900293"}, PtysSubGrp_NoPartySubIDs_22);
-      set_field(noPartySubIDs_0_1_0, FIX::PartySubIDType{26}, PtysSubGrp_NoPartySubIDs_22);
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_22);
+      multiset<string> PtysSubGrp_NoPartySubIDs_32;
+      set_field(noPartySubIDs_0_1_0, FIX::PartySubID{"STRING_1731302781"}, PtysSubGrp_NoPartySubIDs_32);
+      set_field(noPartySubIDs_0_1_0, FIX::PartySubIDType{31}, PtysSubGrp_NoPartySubIDs_32);
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_32);
       all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
 
       noPartyIDs_0_0.addGroup(noPartySubIDs_0_1_0);
+    }
+    {
+      FIX50SP2::ApplicationMessageRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_0_1_1;
+      // PtysSubGrp.NoPartySubIDs
+      multiset<string> PtysSubGrp_NoPartySubIDs_33;
+      set_field(noPartySubIDs_0_1_1, FIX::PartySubID{"STRING_244893776"}, PtysSubGrp_NoPartySubIDs_33);
+      set_field(noPartySubIDs_0_1_1, FIX::PartySubIDType{9}, PtysSubGrp_NoPartySubIDs_33);
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_33);
+      all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
+
+      noPartyIDs_0_0.addGroup(noPartySubIDs_0_1_1);
+    }
+    {
+      FIX50SP2::ApplicationMessageRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_0_1_2;
+      // PtysSubGrp.NoPartySubIDs
+      multiset<string> PtysSubGrp_NoPartySubIDs_34;
+      set_field(noPartySubIDs_0_1_2, FIX::PartySubID{"STRING_932588640"}, PtysSubGrp_NoPartySubIDs_34);
+      set_field(noPartySubIDs_0_1_2, FIX::PartySubIDType{1}, PtysSubGrp_NoPartySubIDs_34);
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_34);
+      all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
+
+      noPartyIDs_0_0.addGroup(noPartySubIDs_0_1_2);
     }
     msg.addGroup(noPartyIDs_0_0);
   }
   {
     FIX50SP2::ApplicationMessageRequest::NoPartyIDs noPartyIDs_0_1;
     // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_12;
-    set_field(noPartyIDs_0_1, FIX::PartyID{"STRING_1690765231"}, Parties_NoPartyIDs_12);
-    set_field(noPartyIDs_0_1, FIX::PartyIDSource{'9'}, Parties_NoPartyIDs_12);
-    set_field(noPartyIDs_0_1, FIX::PartyRole{41}, Parties_NoPartyIDs_12);
-    all_values.push_back(Parties_NoPartyIDs_12);
+    multiset<string> Parties_NoPartyIDs_14;
+    set_field(noPartyIDs_0_1, FIX::PartyID{"STRING_1294897028"}, Parties_NoPartyIDs_14);
+    set_field(noPartyIDs_0_1, FIX::PartyIDSource{'B'}, Parties_NoPartyIDs_14);
+    set_field(noPartyIDs_0_1, FIX::PartyRole{19}, Parties_NoPartyIDs_14);
+    all_values.push_back(Parties_NoPartyIDs_14);
     all_compo_names.insert("...NoPartyIDs");
 
     // PtysSubGrp
@@ -381,46 +399,24 @@ TEST ( ApplicationMessageRequest, set_fields)
     {
       FIX50SP2::ApplicationMessageRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_1_1_0;
       // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_23;
-      set_field(noPartySubIDs_1_1_0, FIX::PartySubID{"STRING_1304624884"}, PtysSubGrp_NoPartySubIDs_23);
-      set_field(noPartySubIDs_1_1_0, FIX::PartySubIDType{8}, PtysSubGrp_NoPartySubIDs_23);
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_23);
+      multiset<string> PtysSubGrp_NoPartySubIDs_35;
+      set_field(noPartySubIDs_1_1_0, FIX::PartySubID{"STRING_1309008073"}, PtysSubGrp_NoPartySubIDs_35);
+      set_field(noPartySubIDs_1_1_0, FIX::PartySubIDType{4}, PtysSubGrp_NoPartySubIDs_35);
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_35);
       all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
 
       noPartyIDs_0_1.addGroup(noPartySubIDs_1_1_0);
-    }
-    {
-      FIX50SP2::ApplicationMessageRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_1_1_1;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_24;
-      set_field(noPartySubIDs_1_1_1, FIX::PartySubID{"STRING_1608980418"}, PtysSubGrp_NoPartySubIDs_24);
-      set_field(noPartySubIDs_1_1_1, FIX::PartySubIDType{8}, PtysSubGrp_NoPartySubIDs_24);
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_24);
-      all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
-
-      noPartyIDs_0_1.addGroup(noPartySubIDs_1_1_1);
-    }
-    {
-      FIX50SP2::ApplicationMessageRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_1_1_2;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_25;
-      set_field(noPartySubIDs_1_1_2, FIX::PartySubID{"STRING_2011607128"}, PtysSubGrp_NoPartySubIDs_25);
-      set_field(noPartySubIDs_1_1_2, FIX::PartySubIDType{33}, PtysSubGrp_NoPartySubIDs_25);
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_25);
-      all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
-
-      noPartyIDs_0_1.addGroup(noPartySubIDs_1_1_2);
     }
     msg.addGroup(noPartyIDs_0_1);
   }
   {
     FIX50SP2::ApplicationMessageRequest::NoPartyIDs noPartyIDs_0_2;
     // Parties.NoPartyIDs
-    multiset<string> Parties_NoPartyIDs_13;
-    set_field(noPartyIDs_0_2, FIX::PartyID{"STRING_1566466612"}, Parties_NoPartyIDs_13);
-    set_field(noPartyIDs_0_2, FIX::PartyIDSource{'5'}, Parties_NoPartyIDs_13);
-    set_field(noPartyIDs_0_2, FIX::PartyRole{6}, Parties_NoPartyIDs_13);
-    all_values.push_back(Parties_NoPartyIDs_13);
+    multiset<string> Parties_NoPartyIDs_15;
+    set_field(noPartyIDs_0_2, FIX::PartyID{"STRING_560273895"}, Parties_NoPartyIDs_15);
+    set_field(noPartyIDs_0_2, FIX::PartyIDSource{'E'}, Parties_NoPartyIDs_15);
+    set_field(noPartyIDs_0_2, FIX::PartyRole{20}, Parties_NoPartyIDs_15);
+    all_values.push_back(Parties_NoPartyIDs_15);
     all_compo_names.insert("...NoPartyIDs");
 
     // PtysSubGrp
@@ -428,38 +424,60 @@ TEST ( ApplicationMessageRequest, set_fields)
     {
       FIX50SP2::ApplicationMessageRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_2_1_0;
       // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_26;
-      set_field(noPartySubIDs_2_1_0, FIX::PartySubID{"STRING_1306421566"}, PtysSubGrp_NoPartySubIDs_26);
-      set_field(noPartySubIDs_2_1_0, FIX::PartySubIDType{30}, PtysSubGrp_NoPartySubIDs_26);
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_26);
+      multiset<string> PtysSubGrp_NoPartySubIDs_36;
+      set_field(noPartySubIDs_2_1_0, FIX::PartySubID{"STRING_174378126"}, PtysSubGrp_NoPartySubIDs_36);
+      set_field(noPartySubIDs_2_1_0, FIX::PartySubIDType{10}, PtysSubGrp_NoPartySubIDs_36);
+      all_values.push_back(PtysSubGrp_NoPartySubIDs_36);
       all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
 
       noPartyIDs_0_2.addGroup(noPartySubIDs_2_1_0);
     }
-    {
-      FIX50SP2::ApplicationMessageRequest::NoPartyIDs::NoPartySubIDs noPartySubIDs_2_1_1;
-      // PtysSubGrp.NoPartySubIDs
-      multiset<string> PtysSubGrp_NoPartySubIDs_27;
-      set_field(noPartySubIDs_2_1_1, FIX::PartySubID{"STRING_558311492"}, PtysSubGrp_NoPartySubIDs_27);
-      set_field(noPartySubIDs_2_1_1, FIX::PartySubIDType{31}, PtysSubGrp_NoPartySubIDs_27);
-      all_values.push_back(PtysSubGrp_NoPartySubIDs_27);
-      all_compo_names.insert("...NoPartyIDs...NoPartySubIDs");
-
-      noPartyIDs_0_2.addGroup(noPartySubIDs_2_1_1);
-    }
     msg.addGroup(noPartyIDs_0_2);
   }
+  // header
+  multiset<string> header_8;
+  set_header_field(msg.getHeader(), FIX::ApplVerID{"STRING_1"}, header_8);
+  set_header_field(msg.getHeader(), FIX::BeginString{"STRING_1893938765"}, header_8);
+  set_header_field(msg.getHeader(), FIX::BodyLength{511327645}, header_8);
+  set_header_field(msg.getHeader(), FIX::CstmApplVerID{"STRING_1810687269"}, header_8);
+  set_header_field(msg.getHeader(), FIX::DeliverToCompID{"STRING_1676434463"}, header_8);
+  set_header_field(msg.getHeader(), FIX::DeliverToLocationID{"STRING_721236597"}, header_8);
+  set_header_field(msg.getHeader(), FIX::DeliverToSubID{"STRING_217660911"}, header_8);
+  set_header_field(msg.getHeader(), FIX::LastMsgSeqNumProcessed{1898110882}, header_8);
+  set_header_field(msg.getHeader(), FIX::MessageEncoding{"STRING_EUC-JP"}, header_8);
+  set_header_field(msg.getHeader(), FIX::MsgSeqNum{949847244}, header_8);
+  set_header_field(msg.getHeader(), FIX::OnBehalfOfCompID{"STRING_1065472769"}, header_8);
+  set_header_field(msg.getHeader(), FIX::OnBehalfOfLocationID{"STRING_2092181195"}, header_8);
+  set_header_field(msg.getHeader(), FIX::OnBehalfOfSubID{"STRING_1862971250"}, header_8);
+  set_header_field(msg.getHeader(), FIX::OrigSendingTime{FIX::UTCTIMESTAMP(16, 46, 18, 24, 6, 2015)}, header_8);
+  set_header_field(msg.getHeader(), FIX::PossDupFlag{false}, header_8);
+  set_header_field(msg.getHeader(), FIX::PossResend{false}, header_8);
+  set_header_field(msg.getHeader(), FIX::SecureData{"DATA_554673679"}, header_8);
+  set_header_field(msg.getHeader(), FIX::SecureDataLen{266026286}, header_8);
+  set_header_field(msg.getHeader(), FIX::SenderCompID{"STRING_1294117410"}, header_8);
+  set_header_field(msg.getHeader(), FIX::SenderLocationID{"STRING_1114947574"}, header_8);
+  set_header_field(msg.getHeader(), FIX::SenderSubID{"STRING_840811409"}, header_8);
+  set_header_field(msg.getHeader(), FIX::SendingTime{FIX::UTCTIMESTAMP(23, 35, 12, 15, 9, 2007)}, header_8);
+  set_header_field(msg.getHeader(), FIX::TargetCompID{"STRING_1194579776"}, header_8);
+  set_header_field(msg.getHeader(), FIX::TargetLocationID{"STRING_290595467"}, header_8);
+  set_header_field(msg.getHeader(), FIX::TargetSubID{"STRING_274799126"}, header_8);
+  set_header_field(msg.getHeader(), FIX::XmlData{"DATA_1412240687"}, header_8);
+  set_header_field(msg.getHeader(), FIX::XmlDataLen{41222702}, header_8);
+  all_values.push_back(header_8);
+  all_compo_names.insert(".header");
+
 
   xml_element elt;
   converter.fix2fixml(msg, elt);
   BOOST_LOG_TRIVIAL(debug) << "The resulting XML is";
-cout << "////////////////////////////////////////////" << endl;
+  cout << "////////////////////////////////////////////" << endl;
   cout << elt.to_string() << endl;
-cout << "////////////////////////////////////////////" << endl << endl;
+  cout << "////////////////////////////////////////////" << endl << endl;
 
-  BOOST_LOG_TRIVIAL(debug) << "Quickfix XML representation is";cout << "////////////////////////////////////////////" << endl;
-cout << msg.toXML() << endl;
-cout << "////////////////////////////////////////////" << endl << endl;
+  BOOST_LOG_TRIVIAL(debug) << "Quickfix XML representation is";
+  cout << "////////////////////////////////////////////" << endl;
+  cout << msg.toXML() << endl;
+  cout << "////////////////////////////////////////////" << endl << endl;
   list<multiset<string>> elt_lists;
   elt.to_list(elt_lists);
   EXPECT_EQ(elt_lists.size(), all_values.size());
@@ -479,13 +497,13 @@ cout << "////////////////////////////////////////////" << endl << endl;
   BOOST_LOG_TRIVIAL(debug) << "All FIX components";
   for (const auto& l : all_values) {
     cout << "	[";
-copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
+    copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << "]" << endl;
   }
   BOOST_LOG_TRIVIAL(debug) << "All XML components";
   for (const auto& l : elt_lists) {
     cout << "	[";
-copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
+    copy(l.begin(), l.end(), ostream_iterator<string>(cout, " "));
     cout << "]" << endl;
 
   }
