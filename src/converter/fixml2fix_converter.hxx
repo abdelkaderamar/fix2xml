@@ -25,6 +25,7 @@
 
 #include "data/xml_element.hxx"
 #include "fix/fix_dico_container.hxx"
+#include "fix/fix_parser.hxx"
 #include "fixml/fixml_dico_container.hxx"
 #include "fixml/fixml_parser.hxx"
 
@@ -47,6 +48,8 @@ public:
                       const std::string &fixml_xsd_schema);
 
   bool init();
+
+  bool parse_fixt_dico(const std::string& fixt_filename);
 
   const bool fix2fixml(const FIX::Message &fix_msg, std::string &xml_string);
 
@@ -132,5 +135,6 @@ protected:
 
 private:
   bool _initialized;
+  fix_parser _fix_parser;
 };
 }

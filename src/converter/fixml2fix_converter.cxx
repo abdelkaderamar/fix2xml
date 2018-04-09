@@ -23,7 +23,6 @@
 
 #include "fixml2fix_converter.hxx"
 
-#include "fix/fix_parser.hxx"
 #include "fixml/fixml_xsd_parser.hxx"
 
 #include <boost/log/trivial.hpp>
@@ -44,7 +43,6 @@ fixml2fix_converter::fixml2fix_converter(const string &fix_xml_filename,
 //----------------------------------------------------------------------------
 
 bool fixml2fix_converter::init() {
-  fix_parser _fix_parser;
   bool fix_initialized = _fix_parser.parse(_fix_xml_filename.c_str());
   if (fix_initialized)
     _fix_dictionary = _fix_parser.dico();
@@ -59,6 +57,12 @@ bool fixml2fix_converter::init() {
   _initialized = fix_initialized && fixml_initialized;
 
   return _initialized;
+}
+
+//----------------------------------------------------------------------------
+
+bool fixml2fix_converter::parse_fixt_dico(const string &fixt_filename) {
+  return _fix_parser.parse(fixt_filename.c_str());
 }
 
 //----------------------------------------------------------------------------
@@ -79,6 +83,12 @@ const bool fixml2fix_converter::fix2fixml(const Message &fix_msg,
   fixml_type fixml_msg_type;
   if (!set_msg_type(fix_msg, fixml_elt, fixml_msg_type))
     return false;
+
+  // header
+  fixml_component_data fixml_header_data{"Hdr", "", 1, 1};
+  if (fixml_msg_type.get_componet("Hdr", fixml_header_data)) {
+    add_fixml_component(fixml_header_data, fix_msg.getHeader(), fixml_elt);
+  }
 
   add_fixml_attributes(fixml_msg_type, fix_msg, fixml_elt);
   add_fixml_components(fixml_msg_type, fix_msg, fixml_elt);
