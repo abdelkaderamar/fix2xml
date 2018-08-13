@@ -21,7 +21,7 @@ using namespace fix2xml;
 TEST ( UserRequest_message_t, set_fields)
 {
 
-  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../../spec/fix/FIX50SP2.xml", "../../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   auto &quickfix_dico = converter.quickfix_dico();
   ASSERT_TRUE(converter.init());
@@ -31,80 +31,80 @@ TEST ( UserRequest_message_t, set_fields)
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> UserRequest_message_t_0;
-  elt.add_attribute("UserReqID", "UserRequestID_t_1591257614"); // 0
-  UserRequest_message_t_0.insert("UserRequestID_t_1591257614");
-  elt.add_attribute("UserReqTyp", "2"); // 0
-  UserRequest_message_t_0.insert("2");
-  elt.add_attribute("Username", "Username_t_137606005"); // 0
-  UserRequest_message_t_0.insert("Username_t_137606005");
-  elt.add_attribute("Password", "Password_t_589480282"); // 0
-  UserRequest_message_t_0.insert("Password_t_589480282");
-  elt.add_attribute("NewPassword", "NewPassword_t_1909634262"); // 0
-  UserRequest_message_t_0.insert("NewPassword_t_1909634262");
-  elt.add_attribute("EncPwdMethod", "1006555156"); // 0
-  UserRequest_message_t_0.insert("1006555156");
-  elt.add_attribute("EncPwd", "EncryptedPassword_t_1801418091"); // 0
-  UserRequest_message_t_0.insert("EncryptedPassword_t_1801418091");
-  elt.add_attribute("EncNewPwd", "EncryptedNewPassword_t_1603383273"); // 0
-  UserRequest_message_t_0.insert("EncryptedNewPassword_t_1603383273");
-  elt.add_attribute("RawDataLength", "401264301"); // 0
-  UserRequest_message_t_0.insert("401264301");
-  elt.add_attribute("RawData", "RawData_t_1039278561"); // 0
-  UserRequest_message_t_0.insert("RawData_t_1039278561");
+  elt.add_attribute("UserReqID", "UserRequestID_t_1153190554"); // 0
+  UserRequest_message_t_0.insert("UserRequestID_t_1153190554");
+  elt.add_attribute("UserReqTyp", "3"); // 0
+  UserRequest_message_t_0.insert("3");
+  elt.add_attribute("Username", "Username_t_641488024"); // 0
+  UserRequest_message_t_0.insert("Username_t_641488024");
+  elt.add_attribute("Password", "Password_t_942070423"); // 0
+  UserRequest_message_t_0.insert("Password_t_942070423");
+  elt.add_attribute("NewPassword", "NewPassword_t_1329361597"); // 0
+  UserRequest_message_t_0.insert("NewPassword_t_1329361597");
+  elt.add_attribute("EncPwdMethod", "921526252"); // 0
+  UserRequest_message_t_0.insert("921526252");
+  elt.add_attribute("EncPwd", "EncryptedPassword_t_2134455004"); // 0
+  UserRequest_message_t_0.insert("EncryptedPassword_t_2134455004");
+  elt.add_attribute("EncNewPwd", "EncryptedNewPassword_t_229607629"); // 0
+  UserRequest_message_t_0.insert("EncryptedNewPassword_t_229607629");
+  elt.add_attribute("RawDataLength", "2019885654"); // 0
+  UserRequest_message_t_0.insert("2019885654");
+  elt.add_attribute("RawData", "RawData_t_1491750905"); // 0
+  UserRequest_message_t_0.insert("RawData_t_1491750905");
   all_values.push_back(UserRequest_message_t_0);
   all_compo_names.insert("UserRequest_message_t");
 
   { // Hdr
     xml_element Hdr_106{"Hdr"};
     multiset<string> Hdr_106_set;
-    Hdr_106.add_attribute("SeqNum", "1986619300"); // 1
-    Hdr_106_set.insert("1986619300");
-    Hdr_106.add_attribute("SID", "SenderCompID_t_1256327596"); // 1
-    Hdr_106_set.insert("SenderCompID_t_1256327596");
-    Hdr_106.add_attribute("TID", "TargetCompID_t_1788320236"); // 1
-    Hdr_106_set.insert("TargetCompID_t_1788320236");
-    Hdr_106.add_attribute("OBID", "OnBehalfOfCompID_t_1031096301"); // 1
-    Hdr_106_set.insert("OnBehalfOfCompID_t_1031096301");
-    Hdr_106.add_attribute("D2ID", "DeliverToCompID_t_1234519721"); // 1
-    Hdr_106_set.insert("DeliverToCompID_t_1234519721");
-    Hdr_106.add_attribute("SSub", "SenderSubID_t_1413261920"); // 1
-    Hdr_106_set.insert("SenderSubID_t_1413261920");
-    Hdr_106.add_attribute("SLoc", "SenderLocationID_t_1204809104"); // 1
-    Hdr_106_set.insert("SenderLocationID_t_1204809104");
-    Hdr_106.add_attribute("TSub", "TargetSubID_t_751376791"); // 1
-    Hdr_106_set.insert("TargetSubID_t_751376791");
-    Hdr_106.add_attribute("TLoc", "TargetLocationID_t_650855663"); // 1
-    Hdr_106_set.insert("TargetLocationID_t_650855663");
-    Hdr_106.add_attribute("OBSub", "OnBehalfOfSubID_t_102184094"); // 1
-    Hdr_106_set.insert("OnBehalfOfSubID_t_102184094");
-    Hdr_106.add_attribute("OBLoc", "OnBehalfOfLocationID_t_1910695525"); // 1
-    Hdr_106_set.insert("OnBehalfOfLocationID_t_1910695525");
-    Hdr_106.add_attribute("D2Sub", "DeliverToSubID_t_401502896"); // 1
-    Hdr_106_set.insert("DeliverToSubID_t_401502896");
-    Hdr_106.add_attribute("D2Loc", "DeliverToLocationID_t_16766001"); // 1
-    Hdr_106_set.insert("DeliverToLocationID_t_16766001");
-    Hdr_106.add_attribute("PosDup", "Y"); // 1
-    Hdr_106_set.insert("Y");
-    Hdr_106.add_attribute("PosRsnd", "Y"); // 1
-    Hdr_106_set.insert("Y");
-    Hdr_106.add_attribute("Snt", "SendingTime_t_1762314551"); // 1
-    Hdr_106_set.insert("SendingTime_t_1762314551");
-    Hdr_106.add_attribute("OrigSnt", "OrigSendingTime_t_1997494353"); // 1
-    Hdr_106_set.insert("OrigSendingTime_t_1997494353");
-    Hdr_106.add_attribute("MsgEncd", "MessageEncoding_t_912294879"); // 1
-    Hdr_106_set.insert("MessageEncoding_t_912294879");
+    Hdr_106.add_attribute("SeqNum", "963853357"); // 1
+    Hdr_106_set.insert("963853357");
+    Hdr_106.add_attribute("SID", "SenderCompID_t_872475616"); // 1
+    Hdr_106_set.insert("SenderCompID_t_872475616");
+    Hdr_106.add_attribute("TID", "TargetCompID_t_845203266"); // 1
+    Hdr_106_set.insert("TargetCompID_t_845203266");
+    Hdr_106.add_attribute("OBID", "OnBehalfOfCompID_t_953390934"); // 1
+    Hdr_106_set.insert("OnBehalfOfCompID_t_953390934");
+    Hdr_106.add_attribute("D2ID", "DeliverToCompID_t_647355562"); // 1
+    Hdr_106_set.insert("DeliverToCompID_t_647355562");
+    Hdr_106.add_attribute("SSub", "SenderSubID_t_2219217"); // 1
+    Hdr_106_set.insert("SenderSubID_t_2219217");
+    Hdr_106.add_attribute("SLoc", "SenderLocationID_t_2124950390"); // 1
+    Hdr_106_set.insert("SenderLocationID_t_2124950390");
+    Hdr_106.add_attribute("TSub", "TargetSubID_t_637196783"); // 1
+    Hdr_106_set.insert("TargetSubID_t_637196783");
+    Hdr_106.add_attribute("TLoc", "TargetLocationID_t_1132944633"); // 1
+    Hdr_106_set.insert("TargetLocationID_t_1132944633");
+    Hdr_106.add_attribute("OBSub", "OnBehalfOfSubID_t_1301518863"); // 1
+    Hdr_106_set.insert("OnBehalfOfSubID_t_1301518863");
+    Hdr_106.add_attribute("OBLoc", "OnBehalfOfLocationID_t_932407083"); // 1
+    Hdr_106_set.insert("OnBehalfOfLocationID_t_932407083");
+    Hdr_106.add_attribute("D2Sub", "DeliverToSubID_t_1045643866"); // 1
+    Hdr_106_set.insert("DeliverToSubID_t_1045643866");
+    Hdr_106.add_attribute("D2Loc", "DeliverToLocationID_t_1014269831"); // 1
+    Hdr_106_set.insert("DeliverToLocationID_t_1014269831");
+    Hdr_106.add_attribute("PosDup", "N"); // 1
+    Hdr_106_set.insert("N");
+    Hdr_106.add_attribute("PosRsnd", "N"); // 1
+    Hdr_106_set.insert("N");
+    Hdr_106.add_attribute("Snt", "SendingTime_t_475631407"); // 1
+    Hdr_106_set.insert("SendingTime_t_475631407");
+    Hdr_106.add_attribute("OrigSnt", "OrigSendingTime_t_519000880"); // 1
+    Hdr_106_set.insert("OrigSendingTime_t_519000880");
+    Hdr_106.add_attribute("MsgEncd", "MessageEncoding_t_1596148372"); // 1
+    Hdr_106_set.insert("MessageEncoding_t_1596148372");
     all_values.push_back(Hdr_106_set);
     all_compo_names.insert("Hdr_106_set");
 
     {
       xml_element Hop_106{"Hop"};
       multiset<string> Hop_106_set;
-      Hop_106.add_attribute("ID", "HopCompID_t_346316122"); // 2
-      Hop_106_set.insert("HopCompID_t_346316122");
-      Hop_106.add_attribute("Ref", "1945170142"); // 2
-      Hop_106_set.insert("1945170142");
-      Hop_106.add_attribute("Snt", "HopSendingTime_t_2106775058"); // 2
-      Hop_106_set.insert("HopSendingTime_t_2106775058");
+      Hop_106.add_attribute("ID", "HopCompID_t_1782696843"); // 2
+      Hop_106_set.insert("HopCompID_t_1782696843");
+      Hop_106.add_attribute("Ref", "1455527554"); // 2
+      Hop_106_set.insert("1455527554");
+      Hop_106.add_attribute("Snt", "HopSendingTime_t_1414630636"); // 2
+      Hop_106_set.insert("HopSendingTime_t_1414630636");
       all_values.push_back(Hop_106_set);
       all_compo_names.insert("Hop_106_set");
 
@@ -126,7 +126,7 @@ TEST ( UserRequest_message_t, set_fields)
   cout << endl << "////////////////////////////////////////////" << endl;
   multiset<string> fix_s;
   list<multiset<string>> fix_ls;
-  to_list(fix_msg, quickfix_dico, fix_s, fix_ls);
+  msg_to_list(fix_msg, quickfix_dico, fix_s, fix_ls);
   fix_ls.push_back(fix_s);
 
   BOOST_LOG_TRIVIAL(debug) << "All FIX components (" << fix_ls.size() << ")";

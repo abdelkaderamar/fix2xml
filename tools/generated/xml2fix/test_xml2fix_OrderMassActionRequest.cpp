@@ -21,7 +21,7 @@ using namespace fix2xml;
 TEST ( OrderMassActionRequest_message_t, set_fields)
 {
 
-  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../../spec/fix/FIX50SP2.xml", "../../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   auto &quickfix_dico = converter.quickfix_dico();
   ASSERT_TRUE(converter.init());
@@ -31,86 +31,86 @@ TEST ( OrderMassActionRequest_message_t, set_fields)
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> OrderMassActionRequest_message_t_0;
-  elt.add_attribute("ClOrdID", "ClOrdID_t_815654049"); // 0
-  OrderMassActionRequest_message_t_0.insert("ClOrdID_t_815654049");
-  elt.add_attribute("ClOrdID2", "SecondaryClOrdID_t_822782132"); // 0
-  OrderMassActionRequest_message_t_0.insert("SecondaryClOrdID_t_822782132");
+  elt.add_attribute("ClOrdID", "ClOrdID_t_1061138401"); // 0
+  OrderMassActionRequest_message_t_0.insert("ClOrdID_t_1061138401");
+  elt.add_attribute("ClOrdID2", "SecondaryClOrdID_t_1281475279"); // 0
+  OrderMassActionRequest_message_t_0.insert("SecondaryClOrdID_t_1281475279");
   elt.add_attribute("MassActionType", "1"); // 0
   OrderMassActionRequest_message_t_0.insert("1");
-  elt.add_attribute("MassActionScope", "12"); // 0
-  OrderMassActionRequest_message_t_0.insert("12");
-  elt.add_attribute("MktID", "MarketID_t_345517113"); // 0
-  OrderMassActionRequest_message_t_0.insert("MarketID_t_345517113");
-  elt.add_attribute("MktSegID", "MarketSegmentID_t_1956003701"); // 0
-  OrderMassActionRequest_message_t_0.insert("MarketSegmentID_t_1956003701");
-  elt.add_attribute("SesID", "6"); // 0
+  elt.add_attribute("MassActionScope", "10"); // 0
+  OrderMassActionRequest_message_t_0.insert("10");
+  elt.add_attribute("MktID", "MarketID_t_793999536"); // 0
+  OrderMassActionRequest_message_t_0.insert("MarketID_t_793999536");
+  elt.add_attribute("MktSegID", "MarketSegmentID_t_1818132046"); // 0
+  OrderMassActionRequest_message_t_0.insert("MarketSegmentID_t_1818132046");
+  elt.add_attribute("SesID", "1"); // 0
+  OrderMassActionRequest_message_t_0.insert("1");
+  elt.add_attribute("SesSub", "6"); // 0
   OrderMassActionRequest_message_t_0.insert("6");
-  elt.add_attribute("SesSub", "7"); // 0
-  OrderMassActionRequest_message_t_0.insert("7");
-  elt.add_attribute("Side", "5"); // 0
-  OrderMassActionRequest_message_t_0.insert("5");
-  elt.add_attribute("TxnTm", "TransactTime_t_985364195"); // 0
-  OrderMassActionRequest_message_t_0.insert("TransactTime_t_985364195");
-  elt.add_attribute("Txt", "Text_t_363316379"); // 0
-  OrderMassActionRequest_message_t_0.insert("Text_t_363316379");
-  elt.add_attribute("EncTxtLen", "1767746513"); // 0
-  OrderMassActionRequest_message_t_0.insert("1767746513");
-  elt.add_attribute("EncTxt", "EncodedText_t_2031769420"); // 0
-  OrderMassActionRequest_message_t_0.insert("EncodedText_t_2031769420");
+  elt.add_attribute("Side", "9"); // 0
+  OrderMassActionRequest_message_t_0.insert("9");
+  elt.add_attribute("TxnTm", "TransactTime_t_170503281"); // 0
+  OrderMassActionRequest_message_t_0.insert("TransactTime_t_170503281");
+  elt.add_attribute("Txt", "Text_t_440615933"); // 0
+  OrderMassActionRequest_message_t_0.insert("Text_t_440615933");
+  elt.add_attribute("EncTxtLen", "1368363205"); // 0
+  OrderMassActionRequest_message_t_0.insert("1368363205");
+  elt.add_attribute("EncTxt", "EncodedText_t_861440380"); // 0
+  OrderMassActionRequest_message_t_0.insert("EncodedText_t_861440380");
   all_values.push_back(OrderMassActionRequest_message_t_0);
   all_compo_names.insert("OrderMassActionRequest_message_t");
 
   { // Hdr
     xml_element Hdr_60{"Hdr"};
     multiset<string> Hdr_60_set;
-    Hdr_60.add_attribute("SeqNum", "257157481"); // 1
-    Hdr_60_set.insert("257157481");
-    Hdr_60.add_attribute("SID", "SenderCompID_t_603341669"); // 1
-    Hdr_60_set.insert("SenderCompID_t_603341669");
-    Hdr_60.add_attribute("TID", "TargetCompID_t_1045639597"); // 1
-    Hdr_60_set.insert("TargetCompID_t_1045639597");
-    Hdr_60.add_attribute("OBID", "OnBehalfOfCompID_t_2075792829"); // 1
-    Hdr_60_set.insert("OnBehalfOfCompID_t_2075792829");
-    Hdr_60.add_attribute("D2ID", "DeliverToCompID_t_1362367914"); // 1
-    Hdr_60_set.insert("DeliverToCompID_t_1362367914");
-    Hdr_60.add_attribute("SSub", "SenderSubID_t_1295118275"); // 1
-    Hdr_60_set.insert("SenderSubID_t_1295118275");
-    Hdr_60.add_attribute("SLoc", "SenderLocationID_t_1241860803"); // 1
-    Hdr_60_set.insert("SenderLocationID_t_1241860803");
-    Hdr_60.add_attribute("TSub", "TargetSubID_t_6014999"); // 1
-    Hdr_60_set.insert("TargetSubID_t_6014999");
-    Hdr_60.add_attribute("TLoc", "TargetLocationID_t_2061878164"); // 1
-    Hdr_60_set.insert("TargetLocationID_t_2061878164");
-    Hdr_60.add_attribute("OBSub", "OnBehalfOfSubID_t_1394630859"); // 1
-    Hdr_60_set.insert("OnBehalfOfSubID_t_1394630859");
-    Hdr_60.add_attribute("OBLoc", "OnBehalfOfLocationID_t_1284059292"); // 1
-    Hdr_60_set.insert("OnBehalfOfLocationID_t_1284059292");
-    Hdr_60.add_attribute("D2Sub", "DeliverToSubID_t_1333104591"); // 1
-    Hdr_60_set.insert("DeliverToSubID_t_1333104591");
-    Hdr_60.add_attribute("D2Loc", "DeliverToLocationID_t_1671567033"); // 1
-    Hdr_60_set.insert("DeliverToLocationID_t_1671567033");
-    Hdr_60.add_attribute("PosDup", "Y"); // 1
-    Hdr_60_set.insert("Y");
+    Hdr_60.add_attribute("SeqNum", "1721544861"); // 1
+    Hdr_60_set.insert("1721544861");
+    Hdr_60.add_attribute("SID", "SenderCompID_t_2030732521"); // 1
+    Hdr_60_set.insert("SenderCompID_t_2030732521");
+    Hdr_60.add_attribute("TID", "TargetCompID_t_708809056"); // 1
+    Hdr_60_set.insert("TargetCompID_t_708809056");
+    Hdr_60.add_attribute("OBID", "OnBehalfOfCompID_t_68662372"); // 1
+    Hdr_60_set.insert("OnBehalfOfCompID_t_68662372");
+    Hdr_60.add_attribute("D2ID", "DeliverToCompID_t_314738326"); // 1
+    Hdr_60_set.insert("DeliverToCompID_t_314738326");
+    Hdr_60.add_attribute("SSub", "SenderSubID_t_999800746"); // 1
+    Hdr_60_set.insert("SenderSubID_t_999800746");
+    Hdr_60.add_attribute("SLoc", "SenderLocationID_t_590466275"); // 1
+    Hdr_60_set.insert("SenderLocationID_t_590466275");
+    Hdr_60.add_attribute("TSub", "TargetSubID_t_798190641"); // 1
+    Hdr_60_set.insert("TargetSubID_t_798190641");
+    Hdr_60.add_attribute("TLoc", "TargetLocationID_t_1355833819"); // 1
+    Hdr_60_set.insert("TargetLocationID_t_1355833819");
+    Hdr_60.add_attribute("OBSub", "OnBehalfOfSubID_t_360454906"); // 1
+    Hdr_60_set.insert("OnBehalfOfSubID_t_360454906");
+    Hdr_60.add_attribute("OBLoc", "OnBehalfOfLocationID_t_1029142202"); // 1
+    Hdr_60_set.insert("OnBehalfOfLocationID_t_1029142202");
+    Hdr_60.add_attribute("D2Sub", "DeliverToSubID_t_2001771656"); // 1
+    Hdr_60_set.insert("DeliverToSubID_t_2001771656");
+    Hdr_60.add_attribute("D2Loc", "DeliverToLocationID_t_1966057147"); // 1
+    Hdr_60_set.insert("DeliverToLocationID_t_1966057147");
+    Hdr_60.add_attribute("PosDup", "N"); // 1
+    Hdr_60_set.insert("N");
     Hdr_60.add_attribute("PosRsnd", "Y"); // 1
     Hdr_60_set.insert("Y");
-    Hdr_60.add_attribute("Snt", "SendingTime_t_1464977761"); // 1
-    Hdr_60_set.insert("SendingTime_t_1464977761");
-    Hdr_60.add_attribute("OrigSnt", "OrigSendingTime_t_427741879"); // 1
-    Hdr_60_set.insert("OrigSendingTime_t_427741879");
-    Hdr_60.add_attribute("MsgEncd", "MessageEncoding_t_1349726417"); // 1
-    Hdr_60_set.insert("MessageEncoding_t_1349726417");
+    Hdr_60.add_attribute("Snt", "SendingTime_t_1208577259"); // 1
+    Hdr_60_set.insert("SendingTime_t_1208577259");
+    Hdr_60.add_attribute("OrigSnt", "OrigSendingTime_t_307656241"); // 1
+    Hdr_60_set.insert("OrigSendingTime_t_307656241");
+    Hdr_60.add_attribute("MsgEncd", "MessageEncoding_t_229190956"); // 1
+    Hdr_60_set.insert("MessageEncoding_t_229190956");
     all_values.push_back(Hdr_60_set);
     all_compo_names.insert("Hdr_60_set");
 
     {
       xml_element Hop_60{"Hop"};
       multiset<string> Hop_60_set;
-      Hop_60.add_attribute("ID", "HopCompID_t_133148162"); // 2
-      Hop_60_set.insert("HopCompID_t_133148162");
-      Hop_60.add_attribute("Ref", "1250524011"); // 2
-      Hop_60_set.insert("1250524011");
-      Hop_60.add_attribute("Snt", "HopSendingTime_t_1524814115"); // 2
-      Hop_60_set.insert("HopSendingTime_t_1524814115");
+      Hop_60.add_attribute("ID", "HopCompID_t_122232013"); // 2
+      Hop_60_set.insert("HopCompID_t_122232013");
+      Hop_60.add_attribute("Ref", "1589131520"); // 2
+      Hop_60_set.insert("1589131520");
+      Hop_60.add_attribute("Snt", "HopSendingTime_t_938805823"); // 2
+      Hop_60_set.insert("HopSendingTime_t_938805823");
       all_values.push_back(Hop_60_set);
       all_compo_names.insert("Hop_60_set");
 
@@ -119,548 +119,576 @@ TEST ( OrderMassActionRequest_message_t, set_fields)
     elt.add_element(Hdr_60);
   } // end Hdr
   { // Pty
-    xml_element Pty_251{"Pty"};
-    multiset<string> Pty_251_set;
-    Pty_251.add_attribute("ID", "PartyID_t_1596041124"); // 1
-    Pty_251_set.insert("PartyID_t_1596041124");
-    Pty_251.add_attribute("Src", "9"); // 1
-    Pty_251_set.insert("9");
-    Pty_251.add_attribute("R", "78"); // 1
-    Pty_251_set.insert("78");
-    all_values.push_back(Pty_251_set);
-    all_compo_names.insert("Pty_251_set");
+    xml_element Pty_272{"Pty"};
+    multiset<string> Pty_272_set;
+    Pty_272.add_attribute("ID", "PartyID_t_235647408"); // 1
+    Pty_272_set.insert("PartyID_t_235647408");
+    Pty_272.add_attribute("Src", "G"); // 1
+    Pty_272_set.insert("G");
+    Pty_272.add_attribute("R", "41"); // 1
+    Pty_272_set.insert("41");
+    all_values.push_back(Pty_272_set);
+    all_compo_names.insert("Pty_272_set");
 
     {
-      xml_element Sub_251{"Sub"};
-      multiset<string> Sub_251_set;
-      Sub_251.add_attribute("ID", "PartySubID_t_1858631367"); // 2
-      Sub_251_set.insert("PartySubID_t_1858631367");
-      Sub_251.add_attribute("Typ", "10"); // 2
-      Sub_251_set.insert("10");
-      all_values.push_back(Sub_251_set);
-      all_compo_names.insert("Sub_251_set");
+      xml_element Sub_272{"Sub"};
+      multiset<string> Sub_272_set;
+      Sub_272.add_attribute("ID", "PartySubID_t_861061735"); // 2
+      Sub_272_set.insert("PartySubID_t_861061735");
+      Sub_272.add_attribute("Typ", "22"); // 2
+      Sub_272_set.insert("22");
+      all_values.push_back(Sub_272_set);
+      all_compo_names.insert("Sub_272_set");
 
-      Pty_251.add_element(Sub_251);
+      Pty_272.add_element(Sub_272);
     }
-    elt.add_element(Pty_251);
+    elt.add_element(Pty_272);
   } // end Pty
   { // Pty
-    xml_element Pty_252{"Pty"};
-    multiset<string> Pty_252_set;
-    Pty_252.add_attribute("ID", "PartyID_t_1164995500"); // 1
-    Pty_252_set.insert("PartyID_t_1164995500");
-    Pty_252.add_attribute("Src", "8"); // 1
-    Pty_252_set.insert("8");
-    Pty_252.add_attribute("R", "19"); // 1
-    Pty_252_set.insert("19");
-    all_values.push_back(Pty_252_set);
-    all_compo_names.insert("Pty_252_set");
+    xml_element Pty_273{"Pty"};
+    multiset<string> Pty_273_set;
+    Pty_273.add_attribute("ID", "PartyID_t_1291367231"); // 1
+    Pty_273_set.insert("PartyID_t_1291367231");
+    Pty_273.add_attribute("Src", "1"); // 1
+    Pty_273_set.insert("1");
+    Pty_273.add_attribute("R", "15"); // 1
+    Pty_273_set.insert("15");
+    all_values.push_back(Pty_273_set);
+    all_compo_names.insert("Pty_273_set");
 
     {
-      xml_element Sub_252{"Sub"};
-      multiset<string> Sub_252_set;
-      Sub_252.add_attribute("ID", "PartySubID_t_1049281272"); // 2
-      Sub_252_set.insert("PartySubID_t_1049281272");
-      Sub_252.add_attribute("Typ", "27"); // 2
-      Sub_252_set.insert("27");
-      all_values.push_back(Sub_252_set);
-      all_compo_names.insert("Sub_252_set");
+      xml_element Sub_273{"Sub"};
+      multiset<string> Sub_273_set;
+      Sub_273.add_attribute("ID", "PartySubID_t_5323963"); // 2
+      Sub_273_set.insert("PartySubID_t_5323963");
+      Sub_273.add_attribute("Typ", "30"); // 2
+      Sub_273_set.insert("30");
+      all_values.push_back(Sub_273_set);
+      all_compo_names.insert("Sub_273_set");
 
-      Pty_252.add_element(Sub_252);
+      Pty_273.add_element(Sub_273);
     }
-    elt.add_element(Pty_252);
+    elt.add_element(Pty_273);
   } // end Pty
   { // TgtPty
     xml_element TgtPty_4{"TgtPty"};
     multiset<string> TgtPty_4_set;
-    TgtPty_4.add_attribute("ID", "TargetPartyID_t_2094920869"); // 1
-    TgtPty_4_set.insert("TargetPartyID_t_2094920869");
-    TgtPty_4.add_attribute("Src", "G"); // 1
-    TgtPty_4_set.insert("G");
-    TgtPty_4.add_attribute("R", "40"); // 1
-    TgtPty_4_set.insert("40");
+    TgtPty_4.add_attribute("ID", "TargetPartyID_t_714133019"); // 1
+    TgtPty_4_set.insert("TargetPartyID_t_714133019");
+    TgtPty_4.add_attribute("Src", "7"); // 1
+    TgtPty_4_set.insert("7");
+    TgtPty_4.add_attribute("R", "49"); // 1
+    TgtPty_4_set.insert("49");
     all_values.push_back(TgtPty_4_set);
     all_compo_names.insert("TgtPty_4_set");
 
     elt.add_element(TgtPty_4);
   } // end TgtPty
+  { // TgtPty
+    xml_element TgtPty_5{"TgtPty"};
+    multiset<string> TgtPty_5_set;
+    TgtPty_5.add_attribute("ID", "TargetPartyID_t_1713933765"); // 1
+    TgtPty_5_set.insert("TargetPartyID_t_1713933765");
+    TgtPty_5.add_attribute("Src", "6"); // 1
+    TgtPty_5_set.insert("6");
+    TgtPty_5.add_attribute("R", "50"); // 1
+    TgtPty_5_set.insert("50");
+    all_values.push_back(TgtPty_5_set);
+    all_compo_names.insert("TgtPty_5_set");
+
+    elt.add_element(TgtPty_5);
+  } // end TgtPty
+  { // TgtPty
+    xml_element TgtPty_6{"TgtPty"};
+    multiset<string> TgtPty_6_set;
+    TgtPty_6.add_attribute("ID", "TargetPartyID_t_922283936"); // 1
+    TgtPty_6_set.insert("TargetPartyID_t_922283936");
+    TgtPty_6.add_attribute("Src", "G"); // 1
+    TgtPty_6_set.insert("G");
+    TgtPty_6.add_attribute("R", "60"); // 1
+    TgtPty_6_set.insert("60");
+    all_values.push_back(TgtPty_6_set);
+    all_compo_names.insert("TgtPty_6_set");
+
+    elt.add_element(TgtPty_6);
+  } // end TgtPty
   { // Instrmt
-    xml_element Instrmt_48{"Instrmt"};
-    multiset<string> Instrmt_48_set;
-    Instrmt_48.add_attribute("Sym", "Symbol_t_1242555496"); // 1
-    Instrmt_48_set.insert("Symbol_t_1242555496");
-    Instrmt_48.add_attribute("Sfx", "CD"); // 1
-    Instrmt_48_set.insert("CD");
-    Instrmt_48.add_attribute("ID", "SecurityID_t_2066902725"); // 1
-    Instrmt_48_set.insert("SecurityID_t_2066902725");
-    Instrmt_48.add_attribute("Src", "M"); // 1
-    Instrmt_48_set.insert("M");
-    Instrmt_48.add_attribute("Prod", "1"); // 1
-    Instrmt_48_set.insert("1");
-    Instrmt_48.add_attribute("ProdCmplx", "ProductComplex_t_1203478369"); // 1
-    Instrmt_48_set.insert("ProductComplex_t_1203478369");
-    Instrmt_48.add_attribute("SecGrp", "SecurityGroup_t_342570956"); // 1
-    Instrmt_48_set.insert("SecurityGroup_t_342570956");
-    Instrmt_48.add_attribute("CFI", "CFICode_t_273022161"); // 1
-    Instrmt_48_set.insert("CFICode_t_273022161");
-    Instrmt_48.add_attribute("SecTyp", "CMB"); // 1
-    Instrmt_48_set.insert("CMB");
-    Instrmt_48.add_attribute("SubTyp", "SecuritySubType_t_1847049825"); // 1
-    Instrmt_48_set.insert("SecuritySubType_t_1847049825");
-    Instrmt_48.add_attribute("MMY", "1737999922"); // 1
-    Instrmt_48_set.insert("1737999922");
-    Instrmt_48.add_attribute("MatDt", "MaturityDate_t_468978619"); // 1
-    Instrmt_48_set.insert("MaturityDate_t_468978619");
-    Instrmt_48.add_attribute("MatTm", "1049292594"); // 1
-    Instrmt_48_set.insert("1049292594");
-    Instrmt_48.add_attribute("SettlOnOpenFlag", "SettleOnOpenFlag_t_1871148084"); // 1
-    Instrmt_48_set.insert("SettleOnOpenFlag_t_1871148084");
-    Instrmt_48.add_attribute("AsgnMeth", "1719502630"); // 1
-    Instrmt_48_set.insert("1719502630");
-    Instrmt_48.add_attribute("Status", "1"); // 1
-    Instrmt_48_set.insert("1");
-    Instrmt_48.add_attribute("CpnPmt", "CouponPaymentDate_t_424206581"); // 1
-    Instrmt_48_set.insert("CouponPaymentDate_t_424206581");
-    Instrmt_48.add_attribute("RestrctTyp", "XR"); // 1
-    Instrmt_48_set.insert("XR");
-    Instrmt_48.add_attribute("Snrty", "SD"); // 1
-    Instrmt_48_set.insert("SD");
-    Instrmt_48.add_attribute("NotlPctOut", "6038378.860000"); // 1
-    Instrmt_48_set.insert("6038378.860000");
-    Instrmt_48.add_attribute("OrigNotlPctOut", "8792078.260000"); // 1
-    Instrmt_48_set.insert("8792078.260000");
-    Instrmt_48.add_attribute("AttchPnt", "873888.590000"); // 1
-    Instrmt_48_set.insert("873888.590000");
-    Instrmt_48.add_attribute("DetchPnt", "17688333.860000"); // 1
-    Instrmt_48_set.insert("17688333.860000");
-    Instrmt_48.add_attribute("Issued", "IssueDate_t_953671925"); // 1
-    Instrmt_48_set.insert("IssueDate_t_953671925");
-    Instrmt_48.add_attribute("RepoCollSecTyp", "182567001"); // 1
-    Instrmt_48_set.insert("182567001");
-    Instrmt_48.add_attribute("RepoTrm", "670631010"); // 1
-    Instrmt_48_set.insert("670631010");
-    Instrmt_48.add_attribute("RepoRt", "12852935.050000"); // 1
-    Instrmt_48_set.insert("12852935.050000");
-    Instrmt_48.add_attribute("Fctr", "8810868.130000"); // 1
-    Instrmt_48_set.insert("8810868.130000");
-    Instrmt_48.add_attribute("CrdRtg", "CreditRating_t_618068231"); // 1
-    Instrmt_48_set.insert("CreditRating_t_618068231");
-    Instrmt_48.add_attribute("Rgstry", "InstrRegistry_t_1545224267"); // 1
-    Instrmt_48_set.insert("InstrRegistry_t_1545224267");
-    Instrmt_48.add_attribute("IssuCtry", "794490891"); // 1
-    Instrmt_48_set.insert("794490891");
-    Instrmt_48.add_attribute("StPrv", "StateOrProvinceOfIssue_t_1860623727"); // 1
-    Instrmt_48_set.insert("StateOrProvinceOfIssue_t_1860623727");
-    Instrmt_48.add_attribute("Lcl", "LocaleOfIssue_t_899532183"); // 1
-    Instrmt_48_set.insert("LocaleOfIssue_t_899532183");
-    Instrmt_48.add_attribute("Redeem", "RedemptionDate_t_713909968"); // 1
-    Instrmt_48_set.insert("RedemptionDate_t_713909968");
-    Instrmt_48.add_attribute("StrkPx", "8700900.920000"); // 1
-    Instrmt_48_set.insert("8700900.920000");
-    Instrmt_48.add_attribute("StrkCcy", "USD"); // 1
-    Instrmt_48_set.insert("USD");
-    Instrmt_48.add_attribute("StrkMult", "12126610.480000"); // 1
-    Instrmt_48_set.insert("12126610.480000");
-    Instrmt_48.add_attribute("StrkValu", "19214931.200000"); // 1
-    Instrmt_48_set.insert("19214931.200000");
-    Instrmt_48.add_attribute("StrkPxDtrmnMeth", "3"); // 1
-    Instrmt_48_set.insert("3");
-    Instrmt_48.add_attribute("StrkPxBndryMeth", "2"); // 1
-    Instrmt_48_set.insert("2");
-    Instrmt_48.add_attribute("StrkPxBndryPrcsn", "15120093.940000"); // 1
-    Instrmt_48_set.insert("15120093.940000");
-    Instrmt_48.add_attribute("PxDtrmnMeth", "3"); // 1
-    Instrmt_48_set.insert("3");
-    Instrmt_48.add_attribute("OptAt", "1961519820"); // 1
-    Instrmt_48_set.insert("1961519820");
-    Instrmt_48.add_attribute("Mult", "12356738.300000"); // 1
-    Instrmt_48_set.insert("12356738.300000");
-    Instrmt_48.add_attribute("MultTyp", "1"); // 1
-    Instrmt_48_set.insert("1");
-    Instrmt_48.add_attribute("FlowSchedTyp", "4"); // 1
-    Instrmt_48_set.insert("4");
-    Instrmt_48.add_attribute("MinPxIncr", "16598804.110000"); // 1
-    Instrmt_48_set.insert("16598804.110000");
-    Instrmt_48.add_attribute("MinPxIncrAmt", "MinPriceIncrementAmount_t_1020199139"); // 1
-    Instrmt_48_set.insert("MinPriceIncrementAmount_t_1020199139");
-    Instrmt_48.add_attribute("UOM", "Gal"); // 1
-    Instrmt_48_set.insert("Gal");
-    Instrmt_48.add_attribute("UOMQty", "1162346.490000"); // 1
-    Instrmt_48_set.insert("1162346.490000");
-    Instrmt_48.add_attribute("PxUOM", "Bbl"); // 1
-    Instrmt_48_set.insert("Bbl");
-    Instrmt_48.add_attribute("PxUOMQty", "20880053.240000"); // 1
-    Instrmt_48_set.insert("20880053.240000");
-    Instrmt_48.add_attribute("SettlMeth", "P"); // 1
-    Instrmt_48_set.insert("P");
-    Instrmt_48.add_attribute("ExerStyle", "1"); // 1
-    Instrmt_48_set.insert("1");
-    Instrmt_48.add_attribute("OptPayoutTyp", "2"); // 1
-    Instrmt_48_set.insert("2");
-    Instrmt_48.add_attribute("OptPayAmt", "OptPayoutAmount_t_408215397"); // 1
-    Instrmt_48_set.insert("OptPayoutAmount_t_408215397");
-    Instrmt_48.add_attribute("PxQteMeth", "INX"); // 1
-    Instrmt_48_set.insert("INX");
-    Instrmt_48.add_attribute("ValMeth", "FUT"); // 1
-    Instrmt_48_set.insert("FUT");
-    Instrmt_48.add_attribute("ListMeth", "0"); // 1
-    Instrmt_48_set.insert("0");
-    Instrmt_48.add_attribute("CapPx", "13886293.680000"); // 1
-    Instrmt_48_set.insert("13886293.680000");
-    Instrmt_48.add_attribute("FlrPx", "17986663.820000"); // 1
-    Instrmt_48_set.insert("17986663.820000");
-    Instrmt_48.add_attribute("PutCall", "0"); // 1
-    Instrmt_48_set.insert("0");
-    Instrmt_48.add_attribute("FlexInd", "false"); // 1
-    Instrmt_48_set.insert("false");
-    Instrmt_48.add_attribute("FlexProdElig", "true"); // 1
-    Instrmt_48_set.insert("true");
-    Instrmt_48.add_attribute("TmUnit", "Yr"); // 1
-    Instrmt_48_set.insert("Yr");
-    Instrmt_48.add_attribute("CpnRt", "17891488.620000"); // 1
-    Instrmt_48_set.insert("17891488.620000");
-    Instrmt_48.add_attribute("Exch", "SecurityExchange_t_134997392"); // 1
-    Instrmt_48_set.insert("SecurityExchange_t_134997392");
-    Instrmt_48.add_attribute("PosLmt", "674691201"); // 1
-    Instrmt_48_set.insert("674691201");
-    Instrmt_48.add_attribute("NTPosLmt", "1563158334"); // 1
-    Instrmt_48_set.insert("1563158334");
-    Instrmt_48.add_attribute("Issr", "Issuer_t_2093622471"); // 1
-    Instrmt_48_set.insert("Issuer_t_2093622471");
-    Instrmt_48.add_attribute("EncIssrLen", "1586918427"); // 1
-    Instrmt_48_set.insert("1586918427");
-    Instrmt_48.add_attribute("EncIssr", "EncodedIssuer_t_927684080"); // 1
-    Instrmt_48_set.insert("EncodedIssuer_t_927684080");
-    Instrmt_48.add_attribute("Desc", "SecurityDesc_t_226258873"); // 1
-    Instrmt_48_set.insert("SecurityDesc_t_226258873");
-    Instrmt_48.add_attribute("EncSecDescLen", "1400954599"); // 1
-    Instrmt_48_set.insert("1400954599");
-    Instrmt_48.add_attribute("EncSecDesc", "EncodedSecurityDesc_t_15874262"); // 1
-    Instrmt_48_set.insert("EncodedSecurityDesc_t_15874262");
-    Instrmt_48.add_attribute("Pool", "Pool_t_78397905"); // 1
-    Instrmt_48_set.insert("Pool_t_78397905");
-    Instrmt_48.add_attribute("CSetMo", "1641613834"); // 1
-    Instrmt_48_set.insert("1641613834");
-    Instrmt_48.add_attribute("CPPgm", "2"); // 1
-    Instrmt_48_set.insert("2");
-    Instrmt_48.add_attribute("CPRegT", "CPRegType_t_1098597045"); // 1
-    Instrmt_48_set.insert("CPRegType_t_1098597045");
-    Instrmt_48.add_attribute("Dated", "DatedDate_t_1494746651"); // 1
-    Instrmt_48_set.insert("DatedDate_t_1494746651");
-    Instrmt_48.add_attribute("IntAcrl", "InterestAccrualDate_t_1791989323"); // 1
-    Instrmt_48_set.insert("InterestAccrualDate_t_1791989323");
-    all_values.push_back(Instrmt_48_set);
-    all_compo_names.insert("Instrmt_48_set");
+    xml_element Instrmt_50{"Instrmt"};
+    multiset<string> Instrmt_50_set;
+    Instrmt_50.add_attribute("Sym", "Symbol_t_776571945"); // 1
+    Instrmt_50_set.insert("Symbol_t_776571945");
+    Instrmt_50.add_attribute("Sfx", "WI"); // 1
+    Instrmt_50_set.insert("WI");
+    Instrmt_50.add_attribute("ID", "SecurityID_t_1200611719"); // 1
+    Instrmt_50_set.insert("SecurityID_t_1200611719");
+    Instrmt_50.add_attribute("Src", "D"); // 1
+    Instrmt_50_set.insert("D");
+    Instrmt_50.add_attribute("Prod", "3"); // 1
+    Instrmt_50_set.insert("3");
+    Instrmt_50.add_attribute("ProdCmplx", "ProductComplex_t_1508267960"); // 1
+    Instrmt_50_set.insert("ProductComplex_t_1508267960");
+    Instrmt_50.add_attribute("SecGrp", "SecurityGroup_t_169842491"); // 1
+    Instrmt_50_set.insert("SecurityGroup_t_169842491");
+    Instrmt_50.add_attribute("CFI", "CFICode_t_897221559"); // 1
+    Instrmt_50_set.insert("CFICode_t_897221559");
+    Instrmt_50.add_attribute("SecTyp", "DINP"); // 1
+    Instrmt_50_set.insert("DINP");
+    Instrmt_50.add_attribute("SubTyp", "SecuritySubType_t_1108648314"); // 1
+    Instrmt_50_set.insert("SecuritySubType_t_1108648314");
+    Instrmt_50.add_attribute("MMY", "883590114"); // 1
+    Instrmt_50_set.insert("883590114");
+    Instrmt_50.add_attribute("MatDt", "MaturityDate_t_1185563241"); // 1
+    Instrmt_50_set.insert("MaturityDate_t_1185563241");
+    Instrmt_50.add_attribute("MatTm", "1718102536"); // 1
+    Instrmt_50_set.insert("1718102536");
+    Instrmt_50.add_attribute("SettlOnOpenFlag", "SettleOnOpenFlag_t_2004454064"); // 1
+    Instrmt_50_set.insert("SettleOnOpenFlag_t_2004454064");
+    Instrmt_50.add_attribute("AsgnMeth", "2046624976"); // 1
+    Instrmt_50_set.insert("2046624976");
+    Instrmt_50.add_attribute("Status", "2"); // 1
+    Instrmt_50_set.insert("2");
+    Instrmt_50.add_attribute("CpnPmt", "CouponPaymentDate_t_1148337648"); // 1
+    Instrmt_50_set.insert("CouponPaymentDate_t_1148337648");
+    Instrmt_50.add_attribute("RestrctTyp", "MR"); // 1
+    Instrmt_50_set.insert("MR");
+    Instrmt_50.add_attribute("Snrty", "SB"); // 1
+    Instrmt_50_set.insert("SB");
+    Instrmt_50.add_attribute("NotlPctOut", "11536616.110000"); // 1
+    Instrmt_50_set.insert("11536616.110000");
+    Instrmt_50.add_attribute("OrigNotlPctOut", "20765578.790000"); // 1
+    Instrmt_50_set.insert("20765578.790000");
+    Instrmt_50.add_attribute("AttchPnt", "14051500.910000"); // 1
+    Instrmt_50_set.insert("14051500.910000");
+    Instrmt_50.add_attribute("DetchPnt", "18677946.310000"); // 1
+    Instrmt_50_set.insert("18677946.310000");
+    Instrmt_50.add_attribute("Issued", "IssueDate_t_873475485"); // 1
+    Instrmt_50_set.insert("IssueDate_t_873475485");
+    Instrmt_50.add_attribute("RepoCollSecTyp", "1278030037"); // 1
+    Instrmt_50_set.insert("1278030037");
+    Instrmt_50.add_attribute("RepoTrm", "1434244748"); // 1
+    Instrmt_50_set.insert("1434244748");
+    Instrmt_50.add_attribute("RepoRt", "2608593.660000"); // 1
+    Instrmt_50_set.insert("2608593.660000");
+    Instrmt_50.add_attribute("Fctr", "19491006.250000"); // 1
+    Instrmt_50_set.insert("19491006.250000");
+    Instrmt_50.add_attribute("CrdRtg", "CreditRating_t_209045037"); // 1
+    Instrmt_50_set.insert("CreditRating_t_209045037");
+    Instrmt_50.add_attribute("Rgstry", "InstrRegistry_t_8698153"); // 1
+    Instrmt_50_set.insert("InstrRegistry_t_8698153");
+    Instrmt_50.add_attribute("IssuCtry", "1501829766"); // 1
+    Instrmt_50_set.insert("1501829766");
+    Instrmt_50.add_attribute("StPrv", "StateOrProvinceOfIssue_t_985616982"); // 1
+    Instrmt_50_set.insert("StateOrProvinceOfIssue_t_985616982");
+    Instrmt_50.add_attribute("Lcl", "LocaleOfIssue_t_1722594088"); // 1
+    Instrmt_50_set.insert("LocaleOfIssue_t_1722594088");
+    Instrmt_50.add_attribute("Redeem", "RedemptionDate_t_554957838"); // 1
+    Instrmt_50_set.insert("RedemptionDate_t_554957838");
+    Instrmt_50.add_attribute("StrkPx", "9262685.160000"); // 1
+    Instrmt_50_set.insert("9262685.160000");
+    Instrmt_50.add_attribute("StrkCcy", "GBP"); // 1
+    Instrmt_50_set.insert("GBP");
+    Instrmt_50.add_attribute("StrkMult", "10961110.070000"); // 1
+    Instrmt_50_set.insert("10961110.070000");
+    Instrmt_50.add_attribute("StrkValu", "12473215.460000"); // 1
+    Instrmt_50_set.insert("12473215.460000");
+    Instrmt_50.add_attribute("StrkPxDtrmnMeth", "4"); // 1
+    Instrmt_50_set.insert("4");
+    Instrmt_50.add_attribute("StrkPxBndryMeth", "5"); // 1
+    Instrmt_50_set.insert("5");
+    Instrmt_50.add_attribute("StrkPxBndryPrcsn", "21309116.600000"); // 1
+    Instrmt_50_set.insert("21309116.600000");
+    Instrmt_50.add_attribute("PxDtrmnMeth", "2"); // 1
+    Instrmt_50_set.insert("2");
+    Instrmt_50.add_attribute("OptAt", "1775378210"); // 1
+    Instrmt_50_set.insert("1775378210");
+    Instrmt_50.add_attribute("Mult", "19878820.770000"); // 1
+    Instrmt_50_set.insert("19878820.770000");
+    Instrmt_50.add_attribute("MultTyp", "0"); // 1
+    Instrmt_50_set.insert("0");
+    Instrmt_50.add_attribute("FlowSchedTyp", "2"); // 1
+    Instrmt_50_set.insert("2");
+    Instrmt_50.add_attribute("MinPxIncr", "9887360.770000"); // 1
+    Instrmt_50_set.insert("9887360.770000");
+    Instrmt_50.add_attribute("MinPxIncrAmt", "MinPriceIncrementAmount_t_1003697902"); // 1
+    Instrmt_50_set.insert("MinPriceIncrementAmount_t_1003697902");
+    Instrmt_50.add_attribute("UOM", "USD"); // 1
+    Instrmt_50_set.insert("USD");
+    Instrmt_50.add_attribute("UOMQty", "21423976.880000"); // 1
+    Instrmt_50_set.insert("21423976.880000");
+    Instrmt_50.add_attribute("PxUOM", "lbs"); // 1
+    Instrmt_50_set.insert("lbs");
+    Instrmt_50.add_attribute("PxUOMQty", "7572015.550000"); // 1
+    Instrmt_50_set.insert("7572015.550000");
+    Instrmt_50.add_attribute("SettlMeth", "P"); // 1
+    Instrmt_50_set.insert("P");
+    Instrmt_50.add_attribute("ExerStyle", "1"); // 1
+    Instrmt_50_set.insert("1");
+    Instrmt_50.add_attribute("OptPayoutTyp", "3"); // 1
+    Instrmt_50_set.insert("3");
+    Instrmt_50.add_attribute("OptPayAmt", "OptPayoutAmount_t_1149469772"); // 1
+    Instrmt_50_set.insert("OptPayoutAmount_t_1149469772");
+    Instrmt_50.add_attribute("PxQteMeth", "STD"); // 1
+    Instrmt_50_set.insert("STD");
+    Instrmt_50.add_attribute("ValMeth", "CDSD"); // 1
+    Instrmt_50_set.insert("CDSD");
+    Instrmt_50.add_attribute("ListMeth", "1"); // 1
+    Instrmt_50_set.insert("1");
+    Instrmt_50.add_attribute("CapPx", "20758051.380000"); // 1
+    Instrmt_50_set.insert("20758051.380000");
+    Instrmt_50.add_attribute("FlrPx", "11911946.880000"); // 1
+    Instrmt_50_set.insert("11911946.880000");
+    Instrmt_50.add_attribute("PutCall", "1"); // 1
+    Instrmt_50_set.insert("1");
+    Instrmt_50.add_attribute("FlexInd", "true"); // 1
+    Instrmt_50_set.insert("true");
+    Instrmt_50.add_attribute("FlexProdElig", "true"); // 1
+    Instrmt_50_set.insert("true");
+    Instrmt_50.add_attribute("TmUnit", "Wk"); // 1
+    Instrmt_50_set.insert("Wk");
+    Instrmt_50.add_attribute("CpnRt", "20010155.650000"); // 1
+    Instrmt_50_set.insert("20010155.650000");
+    Instrmt_50.add_attribute("Exch", "SecurityExchange_t_1661894676"); // 1
+    Instrmt_50_set.insert("SecurityExchange_t_1661894676");
+    Instrmt_50.add_attribute("PosLmt", "71544019"); // 1
+    Instrmt_50_set.insert("71544019");
+    Instrmt_50.add_attribute("NTPosLmt", "1100853464"); // 1
+    Instrmt_50_set.insert("1100853464");
+    Instrmt_50.add_attribute("Issr", "Issuer_t_380069012"); // 1
+    Instrmt_50_set.insert("Issuer_t_380069012");
+    Instrmt_50.add_attribute("EncIssrLen", "128819693"); // 1
+    Instrmt_50_set.insert("128819693");
+    Instrmt_50.add_attribute("EncIssr", "EncodedIssuer_t_1084281476"); // 1
+    Instrmt_50_set.insert("EncodedIssuer_t_1084281476");
+    Instrmt_50.add_attribute("Desc", "SecurityDesc_t_283806589"); // 1
+    Instrmt_50_set.insert("SecurityDesc_t_283806589");
+    Instrmt_50.add_attribute("EncSecDescLen", "1904197903"); // 1
+    Instrmt_50_set.insert("1904197903");
+    Instrmt_50.add_attribute("EncSecDesc", "EncodedSecurityDesc_t_924679905"); // 1
+    Instrmt_50_set.insert("EncodedSecurityDesc_t_924679905");
+    Instrmt_50.add_attribute("Pool", "Pool_t_86685494"); // 1
+    Instrmt_50_set.insert("Pool_t_86685494");
+    Instrmt_50.add_attribute("CSetMo", "1556724542"); // 1
+    Instrmt_50_set.insert("1556724542");
+    Instrmt_50.add_attribute("CPPgm", "2"); // 1
+    Instrmt_50_set.insert("2");
+    Instrmt_50.add_attribute("CPRegT", "CPRegType_t_1090383397"); // 1
+    Instrmt_50_set.insert("CPRegType_t_1090383397");
+    Instrmt_50.add_attribute("Dated", "DatedDate_t_908776006"); // 1
+    Instrmt_50_set.insert("DatedDate_t_908776006");
+    Instrmt_50.add_attribute("IntAcrl", "InterestAccrualDate_t_1908330023"); // 1
+    Instrmt_50_set.insert("InterestAccrualDate_t_1908330023");
+    all_values.push_back(Instrmt_50_set);
+    all_compo_names.insert("Instrmt_50_set");
 
     {
-      xml_element AID_51{"AID"};
-      multiset<string> AID_51_set;
-      AID_51.add_attribute("AltID", "SecurityAltID_t_850520363"); // 2
-      AID_51_set.insert("SecurityAltID_t_850520363");
-      AID_51.add_attribute("AltIDSrc", "A"); // 2
-      AID_51_set.insert("A");
-      all_values.push_back(AID_51_set);
-      all_compo_names.insert("AID_51_set");
+      xml_element AID_53{"AID"};
+      multiset<string> AID_53_set;
+      AID_53.add_attribute("AltID", "SecurityAltID_t_2023155530"); // 2
+      AID_53_set.insert("SecurityAltID_t_2023155530");
+      AID_53.add_attribute("AltIDSrc", "I"); // 2
+      AID_53_set.insert("I");
+      all_values.push_back(AID_53_set);
+      all_compo_names.insert("AID_53_set");
 
-      Instrmt_48.add_element(AID_51);
+      Instrmt_50.add_element(AID_53);
     }
     {
-      xml_element SecXML_51{"SecXML"};
-      multiset<string> SecXML_51_set;
-      SecXML_51.add_attribute("Schema", "SecurityXMLSchema_t_1529573711"); // 2
-      SecXML_51_set.insert("SecurityXMLSchema_t_1529573711");
-      all_values.push_back(SecXML_51_set);
-      all_compo_names.insert("SecXML_51_set");
+      xml_element SecXML_53{"SecXML"};
+      multiset<string> SecXML_53_set;
+      SecXML_53.add_attribute("Schema", "SecurityXMLSchema_t_1623555046"); // 2
+      SecXML_53_set.insert("SecurityXMLSchema_t_1623555046");
+      all_values.push_back(SecXML_53_set);
+      all_compo_names.insert("SecXML_53_set");
 
-      Instrmt_48.add_element(SecXML_51);
+      Instrmt_50.add_element(SecXML_53);
     }
     {
-      xml_element Evnt_51{"Evnt"};
-      multiset<string> Evnt_51_set;
-      Evnt_51.add_attribute("EventTyp", "6"); // 2
-      Evnt_51_set.insert("6");
-      Evnt_51.add_attribute("Dt", "EventDate_t_1558357005"); // 2
-      Evnt_51_set.insert("EventDate_t_1558357005");
-      Evnt_51.add_attribute("Tm", "EventTime_t_1937789108"); // 2
-      Evnt_51_set.insert("EventTime_t_1937789108");
-      Evnt_51.add_attribute("Px", "13995207.070000"); // 2
-      Evnt_51_set.insert("13995207.070000");
-      Evnt_51.add_attribute("Txt", "EventText_t_415048848"); // 2
-      Evnt_51_set.insert("EventText_t_415048848");
-      all_values.push_back(Evnt_51_set);
-      all_compo_names.insert("Evnt_51_set");
+      xml_element Evnt_53{"Evnt"};
+      multiset<string> Evnt_53_set;
+      Evnt_53.add_attribute("EventTyp", "2"); // 2
+      Evnt_53_set.insert("2");
+      Evnt_53.add_attribute("Dt", "EventDate_t_1553725505"); // 2
+      Evnt_53_set.insert("EventDate_t_1553725505");
+      Evnt_53.add_attribute("Tm", "EventTime_t_625541170"); // 2
+      Evnt_53_set.insert("EventTime_t_625541170");
+      Evnt_53.add_attribute("Px", "16015428.370000"); // 2
+      Evnt_53_set.insert("16015428.370000");
+      Evnt_53.add_attribute("Txt", "EventText_t_1243090427"); // 2
+      Evnt_53_set.insert("EventText_t_1243090427");
+      all_values.push_back(Evnt_53_set);
+      all_compo_names.insert("Evnt_53_set");
 
-      Instrmt_48.add_element(Evnt_51);
+      Instrmt_50.add_element(Evnt_53);
     }
     {
-      xml_element Pty_253{"Pty"};
-      multiset<string> Pty_253_set;
-      Pty_253.add_attribute("ID", "InstrumentPartyID_t_816589089"); // 2
-      Pty_253_set.insert("InstrumentPartyID_t_816589089");
-      Pty_253.add_attribute("Src", "6"); // 2
-      Pty_253_set.insert("6");
-      Pty_253.add_attribute("R", "27"); // 2
-      Pty_253_set.insert("27");
-      all_values.push_back(Pty_253_set);
-      all_compo_names.insert("Pty_253_set");
+      xml_element Pty_274{"Pty"};
+      multiset<string> Pty_274_set;
+      Pty_274.add_attribute("ID", "InstrumentPartyID_t_1984055979"); // 2
+      Pty_274_set.insert("InstrumentPartyID_t_1984055979");
+      Pty_274.add_attribute("Src", "C"); // 2
+      Pty_274_set.insert("C");
+      Pty_274.add_attribute("R", "24"); // 2
+      Pty_274_set.insert("24");
+      all_values.push_back(Pty_274_set);
+      all_compo_names.insert("Pty_274_set");
 
       {
-        xml_element Sub_253{"Sub"};
-        multiset<string> Sub_253_set;
-        Sub_253.add_attribute("ID", "InstrumentPartySubID_t_1556012797"); // 3
-        Sub_253_set.insert("InstrumentPartySubID_t_1556012797");
-        Sub_253.add_attribute("Typ", "32"); // 3
-        Sub_253_set.insert("32");
-        all_values.push_back(Sub_253_set);
-        all_compo_names.insert("Sub_253_set");
+        xml_element Sub_274{"Sub"};
+        multiset<string> Sub_274_set;
+        Sub_274.add_attribute("ID", "InstrumentPartySubID_t_33220474"); // 3
+        Sub_274_set.insert("InstrumentPartySubID_t_33220474");
+        Sub_274.add_attribute("Typ", "28"); // 3
+        Sub_274_set.insert("28");
+        all_values.push_back(Sub_274_set);
+        all_compo_names.insert("Sub_274_set");
 
-        Pty_253.add_element(Sub_253);
+        Pty_274.add_element(Sub_274);
       }
-      Instrmt_48.add_element(Pty_253);
+      Instrmt_50.add_element(Pty_274);
     }
     {
-      xml_element CmplxEvnt_48{"CmplxEvnt"};
-      multiset<string> CmplxEvnt_48_set;
-      CmplxEvnt_48.add_attribute("Typ", "6"); // 2
-      CmplxEvnt_48_set.insert("6");
-      CmplxEvnt_48.add_attribute("OptPayAmt", "ComplexOptPayoutAmount_t_1018042949"); // 2
-      CmplxEvnt_48_set.insert("ComplexOptPayoutAmount_t_1018042949");
-      CmplxEvnt_48.add_attribute("Px", "4230095.450000"); // 2
-      CmplxEvnt_48_set.insert("4230095.450000");
-      CmplxEvnt_48.add_attribute("PxBndryMeth", "3"); // 2
-      CmplxEvnt_48_set.insert("3");
-      CmplxEvnt_48.add_attribute("PxBndryPrcsn", "16927341.500000"); // 2
-      CmplxEvnt_48_set.insert("16927341.500000");
-      CmplxEvnt_48.add_attribute("PxTmTyp", "1"); // 2
-      CmplxEvnt_48_set.insert("1");
-      CmplxEvnt_48.add_attribute("Cond", "1"); // 2
-      CmplxEvnt_48_set.insert("1");
-      all_values.push_back(CmplxEvnt_48_set);
-      all_compo_names.insert("CmplxEvnt_48_set");
+      xml_element CmplxEvnt_50{"CmplxEvnt"};
+      multiset<string> CmplxEvnt_50_set;
+      CmplxEvnt_50.add_attribute("Typ", "1"); // 2
+      CmplxEvnt_50_set.insert("1");
+      CmplxEvnt_50.add_attribute("OptPayAmt", "ComplexOptPayoutAmount_t_1156137134"); // 2
+      CmplxEvnt_50_set.insert("ComplexOptPayoutAmount_t_1156137134");
+      CmplxEvnt_50.add_attribute("Px", "8868281.750000"); // 2
+      CmplxEvnt_50_set.insert("8868281.750000");
+      CmplxEvnt_50.add_attribute("PxBndryMeth", "2"); // 2
+      CmplxEvnt_50_set.insert("2");
+      CmplxEvnt_50.add_attribute("PxBndryPrcsn", "12276811.530000"); // 2
+      CmplxEvnt_50_set.insert("12276811.530000");
+      CmplxEvnt_50.add_attribute("PxTmTyp", "2"); // 2
+      CmplxEvnt_50_set.insert("2");
+      CmplxEvnt_50.add_attribute("Cond", "2"); // 2
+      CmplxEvnt_50_set.insert("2");
+      all_values.push_back(CmplxEvnt_50_set);
+      all_compo_names.insert("CmplxEvnt_50_set");
 
       {
-        xml_element EvntDts_48{"EvntDts"};
-        multiset<string> EvntDts_48_set;
-        EvntDts_48.add_attribute("StartDt", "ComplexEventStartDate_t_1132168929"); // 3
-        EvntDts_48_set.insert("ComplexEventStartDate_t_1132168929");
-        EvntDts_48.add_attribute("EndDt", "ComplexEventEndDate_t_766368312"); // 3
-        EvntDts_48_set.insert("ComplexEventEndDate_t_766368312");
-        all_values.push_back(EvntDts_48_set);
-        all_compo_names.insert("EvntDts_48_set");
+        xml_element EvntDts_50{"EvntDts"};
+        multiset<string> EvntDts_50_set;
+        EvntDts_50.add_attribute("StartDt", "ComplexEventStartDate_t_1356500846"); // 3
+        EvntDts_50_set.insert("ComplexEventStartDate_t_1356500846");
+        EvntDts_50.add_attribute("EndDt", "ComplexEventEndDate_t_924479468"); // 3
+        EvntDts_50_set.insert("ComplexEventEndDate_t_924479468");
+        all_values.push_back(EvntDts_50_set);
+        all_compo_names.insert("EvntDts_50_set");
 
         {
-          xml_element EvntTms_48{"EvntTms"};
-          multiset<string> EvntTms_48_set;
-          EvntTms_48.add_attribute("StartTm", "738719373"); // 4
-          EvntTms_48_set.insert("738719373");
-          EvntTms_48.add_attribute("EndTm", "385639881"); // 4
-          EvntTms_48_set.insert("385639881");
-          all_values.push_back(EvntTms_48_set);
-          all_compo_names.insert("EvntTms_48_set");
+          xml_element EvntTms_50{"EvntTms"};
+          multiset<string> EvntTms_50_set;
+          EvntTms_50.add_attribute("StartTm", "63756974"); // 4
+          EvntTms_50_set.insert("63756974");
+          EvntTms_50.add_attribute("EndTm", "1113215101"); // 4
+          EvntTms_50_set.insert("1113215101");
+          all_values.push_back(EvntTms_50_set);
+          all_compo_names.insert("EvntTms_50_set");
 
-          EvntDts_48.add_element(EvntTms_48);
+          EvntDts_50.add_element(EvntTms_50);
         }
-        CmplxEvnt_48.add_element(EvntDts_48);
+        CmplxEvnt_50.add_element(EvntDts_50);
       }
-      Instrmt_48.add_element(CmplxEvnt_48);
+      Instrmt_50.add_element(CmplxEvnt_50);
     }
-    elt.add_element(Instrmt_48);
+    elt.add_element(Instrmt_50);
   } // end Instrmt
   { // Undly
-    xml_element Undly_65{"Undly"};
-    multiset<string> Undly_65_set;
-    Undly_65.add_attribute("Sym", "UnderlyingSymbol_t_782242575"); // 1
-    Undly_65_set.insert("UnderlyingSymbol_t_782242575");
-    Undly_65.add_attribute("Sfx", "WI"); // 1
-    Undly_65_set.insert("WI");
-    Undly_65.add_attribute("ID", "UnderlyingSecurityID_t_2027253715"); // 1
-    Undly_65_set.insert("UnderlyingSecurityID_t_2027253715");
-    Undly_65.add_attribute("Src", "E"); // 1
-    Undly_65_set.insert("E");
-    Undly_65.add_attribute("Prod", "13"); // 1
-    Undly_65_set.insert("13");
-    Undly_65.add_attribute("CFI", "UnderlyingCFICode_t_1374516718"); // 1
-    Undly_65_set.insert("UnderlyingCFICode_t_1374516718");
-    Undly_65.add_attribute("SecTyp", "MT"); // 1
-    Undly_65_set.insert("MT");
-    Undly_65.add_attribute("SubTyp", "UnderlyingSecuritySubType_t_618751039"); // 1
-    Undly_65_set.insert("UnderlyingSecuritySubType_t_618751039");
-    Undly_65.add_attribute("MMY", "662301397"); // 1
-    Undly_65_set.insert("662301397");
-    Undly_65.add_attribute("Mat", "UnderlyingMaturityDate_t_1484592987"); // 1
-    Undly_65_set.insert("UnderlyingMaturityDate_t_1484592987");
-    Undly_65.add_attribute("MatTm", "27382997"); // 1
-    Undly_65_set.insert("27382997");
-    Undly_65.add_attribute("CpnPmt", "UnderlyingCouponPaymentDate_t_73174755"); // 1
-    Undly_65_set.insert("UnderlyingCouponPaymentDate_t_73174755");
-    Undly_65.add_attribute("RestrctTyp", "FR"); // 1
-    Undly_65_set.insert("FR");
-    Undly_65.add_attribute("Snrty", "SR"); // 1
-    Undly_65_set.insert("SR");
-    Undly_65.add_attribute("NotlPctOut", "4882236.030000"); // 1
-    Undly_65_set.insert("4882236.030000");
-    Undly_65.add_attribute("OrigNotlPctOut", "20914875.370000"); // 1
-    Undly_65_set.insert("20914875.370000");
-    Undly_65.add_attribute("AttchPnt", "20675701.320000"); // 1
-    Undly_65_set.insert("20675701.320000");
-    Undly_65.add_attribute("DetchPnt", "5544551.860000"); // 1
-    Undly_65_set.insert("5544551.860000");
-    Undly_65.add_attribute("Issued", "UnderlyingIssueDate_t_1500016686"); // 1
-    Undly_65_set.insert("UnderlyingIssueDate_t_1500016686");
-    Undly_65.add_attribute("RepoCollSecTyp", "701430815"); // 1
-    Undly_65_set.insert("701430815");
-    Undly_65.add_attribute("RepoTrm", "985779471"); // 1
-    Undly_65_set.insert("985779471");
-    Undly_65.add_attribute("RepoRt", "3705759.870000"); // 1
-    Undly_65_set.insert("3705759.870000");
-    Undly_65.add_attribute("Fctr", "11244403.610000"); // 1
-    Undly_65_set.insert("11244403.610000");
-    Undly_65.add_attribute("CrdRtg", "UnderlyingCreditRating_t_1552101148"); // 1
-    Undly_65_set.insert("UnderlyingCreditRating_t_1552101148");
-    Undly_65.add_attribute("Rgstry", "UnderlyingInstrRegistry_t_2063310138"); // 1
-    Undly_65_set.insert("UnderlyingInstrRegistry_t_2063310138");
-    Undly_65.add_attribute("Ctry", "963124593"); // 1
-    Undly_65_set.insert("963124593");
-    Undly_65.add_attribute("StOrProvnc", "UnderlyingStateOrProvinceOfIssue_t_2064561649"); // 1
-    Undly_65_set.insert("UnderlyingStateOrProvinceOfIssue_t_2064561649");
-    Undly_65.add_attribute("Lcl", "UnderlyingLocaleOfIssue_t_1047995419"); // 1
-    Undly_65_set.insert("UnderlyingLocaleOfIssue_t_1047995419");
-    Undly_65.add_attribute("Redeem", "UnderlyingRedemptionDate_t_1729492905"); // 1
-    Undly_65_set.insert("UnderlyingRedemptionDate_t_1729492905");
-    Undly_65.add_attribute("StrkPx", "6557973.740000"); // 1
-    Undly_65_set.insert("6557973.740000");
-    Undly_65.add_attribute("StrkCcy", "JPY"); // 1
-    Undly_65_set.insert("JPY");
-    Undly_65.add_attribute("OptA", "1472914653"); // 1
-    Undly_65_set.insert("1472914653");
-    Undly_65.add_attribute("Mult", "13134053.670000"); // 1
-    Undly_65_set.insert("13134053.670000");
-    Undly_65.add_attribute("MultTyp", "0"); // 1
-    Undly_65_set.insert("0");
-    Undly_65.add_attribute("FlowSchedTyp", "4"); // 1
-    Undly_65_set.insert("4");
-    Undly_65.add_attribute("UOM", "MMbbl"); // 1
-    Undly_65_set.insert("MMbbl");
-    Undly_65.add_attribute("UOMQty", "6297847.100000"); // 1
-    Undly_65_set.insert("6297847.100000");
-    Undly_65.add_attribute("PxUOM", "tn"); // 1
-    Undly_65_set.insert("tn");
-    Undly_65.add_attribute("PxUOMQty", "12027398.350000"); // 1
-    Undly_65_set.insert("12027398.350000");
-    Undly_65.add_attribute("TmUnit", "Mo"); // 1
-    Undly_65_set.insert("Mo");
-    Undly_65.add_attribute("ExerStyle", "0"); // 1
-    Undly_65_set.insert("0");
-    Undly_65.add_attribute("CpnRt", "12759145.900000"); // 1
-    Undly_65_set.insert("12759145.900000");
-    Undly_65.add_attribute("Exch", "UnderlyingSecurityExchange_t_1241792497"); // 1
-    Undly_65_set.insert("UnderlyingSecurityExchange_t_1241792497");
-    Undly_65.add_attribute("Issr", "UnderlyingIssuer_t_1166699423"); // 1
-    Undly_65_set.insert("UnderlyingIssuer_t_1166699423");
-    Undly_65.add_attribute("EncUndIssrLen", "1764138193"); // 1
-    Undly_65_set.insert("1764138193");
-    Undly_65.add_attribute("EncUndIssr", "EncodedUnderlyingIssuer_t_1185796386"); // 1
-    Undly_65_set.insert("EncodedUnderlyingIssuer_t_1185796386");
-    Undly_65.add_attribute("Desc", "UnderlyingSecurityDesc_t_1086785907"); // 1
-    Undly_65_set.insert("UnderlyingSecurityDesc_t_1086785907");
-    Undly_65.add_attribute("EncUndSecDescLen", "171109731"); // 1
-    Undly_65_set.insert("171109731");
-    Undly_65.add_attribute("EncUndSecDesc", "EncodedUnderlyingSecurityDesc_t_538329424"); // 1
-    Undly_65_set.insert("EncodedUnderlyingSecurityDesc_t_538329424");
-    Undly_65.add_attribute("CPPgm", "UnderlyingCPProgram_t_1788216723"); // 1
-    Undly_65_set.insert("UnderlyingCPProgram_t_1788216723");
-    Undly_65.add_attribute("CPRegTyp", "UnderlyingCPRegType_t_1156889202"); // 1
-    Undly_65_set.insert("UnderlyingCPRegType_t_1156889202");
-    Undly_65.add_attribute("AllocPct", "9089054.120000"); // 1
-    Undly_65_set.insert("9089054.120000");
-    Undly_65.add_attribute("Ccy", "CHF"); // 1
-    Undly_65_set.insert("CHF");
-    Undly_65.add_attribute("Qty", "8247319.020000"); // 1
-    Undly_65_set.insert("8247319.020000");
-    Undly_65.add_attribute("SettlTyp", "2"); // 1
-    Undly_65_set.insert("2");
-    Undly_65.add_attribute("CashAmt", "UnderlyingCashAmount_t_478584704"); // 1
-    Undly_65_set.insert("UnderlyingCashAmount_t_478584704");
-    Undly_65.add_attribute("CashTyp", "DIFF"); // 1
-    Undly_65_set.insert("DIFF");
-    Undly_65.add_attribute("Px", "13103072.860000"); // 1
-    Undly_65_set.insert("13103072.860000");
-    Undly_65.add_attribute("DirtPx", "11343820.780000"); // 1
-    Undly_65_set.insert("11343820.780000");
-    Undly_65.add_attribute("EndPx", "11588789.740000"); // 1
-    Undly_65_set.insert("11588789.740000");
-    Undly_65.add_attribute("StartVal", "UnderlyingStartValue_t_1674559119"); // 1
-    Undly_65_set.insert("UnderlyingStartValue_t_1674559119");
-    Undly_65.add_attribute("CurVal", "UnderlyingCurrentValue_t_459813084"); // 1
-    Undly_65_set.insert("UnderlyingCurrentValue_t_459813084");
-    Undly_65.add_attribute("EndVal", "UnderlyingEndValue_t_324800693"); // 1
-    Undly_65_set.insert("UnderlyingEndValue_t_324800693");
-    Undly_65.add_attribute("AdjQty", "2018409.040000"); // 1
-    Undly_65_set.insert("2018409.040000");
-    Undly_65.add_attribute("FxRate", "17009584.130000"); // 1
-    Undly_65_set.insert("17009584.130000");
-    Undly_65.add_attribute("FxRateCalc", "D"); // 1
-    Undly_65_set.insert("D");
-    Undly_65.add_attribute("CapValu", "UnderlyingCapValue_t_831625614"); // 1
-    Undly_65_set.insert("UnderlyingCapValue_t_831625614");
-    Undly_65.add_attribute("SetMeth", "UnderlyingSettlMethod_t_1413371134"); // 1
-    Undly_65_set.insert("UnderlyingSettlMethod_t_1413371134");
-    Undly_65.add_attribute("PutCall", "2067978966"); // 1
-    Undly_65_set.insert("2067978966");
-    all_values.push_back(Undly_65_set);
-    all_compo_names.insert("Undly_65_set");
+    xml_element Undly_70{"Undly"};
+    multiset<string> Undly_70_set;
+    Undly_70.add_attribute("Sym", "UnderlyingSymbol_t_1849159373"); // 1
+    Undly_70_set.insert("UnderlyingSymbol_t_1849159373");
+    Undly_70.add_attribute("Sfx", "WI"); // 1
+    Undly_70_set.insert("WI");
+    Undly_70.add_attribute("ID", "UnderlyingSecurityID_t_522455995"); // 1
+    Undly_70_set.insert("UnderlyingSecurityID_t_522455995");
+    Undly_70.add_attribute("Src", "B"); // 1
+    Undly_70_set.insert("B");
+    Undly_70.add_attribute("Prod", "4"); // 1
+    Undly_70_set.insert("4");
+    Undly_70.add_attribute("CFI", "UnderlyingCFICode_t_1431232001"); // 1
+    Undly_70_set.insert("UnderlyingCFICode_t_1431232001");
+    Undly_70.add_attribute("SecTyp", "EUSOV"); // 1
+    Undly_70_set.insert("EUSOV");
+    Undly_70.add_attribute("SubTyp", "UnderlyingSecuritySubType_t_1116497748"); // 1
+    Undly_70_set.insert("UnderlyingSecuritySubType_t_1116497748");
+    Undly_70.add_attribute("MMY", "949725914"); // 1
+    Undly_70_set.insert("949725914");
+    Undly_70.add_attribute("Mat", "UnderlyingMaturityDate_t_852009481"); // 1
+    Undly_70_set.insert("UnderlyingMaturityDate_t_852009481");
+    Undly_70.add_attribute("MatTm", "650933601"); // 1
+    Undly_70_set.insert("650933601");
+    Undly_70.add_attribute("CpnPmt", "UnderlyingCouponPaymentDate_t_355967772"); // 1
+    Undly_70_set.insert("UnderlyingCouponPaymentDate_t_355967772");
+    Undly_70.add_attribute("RestrctTyp", "FR"); // 1
+    Undly_70_set.insert("FR");
+    Undly_70.add_attribute("Snrty", "SD"); // 1
+    Undly_70_set.insert("SD");
+    Undly_70.add_attribute("NotlPctOut", "15990581.990000"); // 1
+    Undly_70_set.insert("15990581.990000");
+    Undly_70.add_attribute("OrigNotlPctOut", "13141229.830000"); // 1
+    Undly_70_set.insert("13141229.830000");
+    Undly_70.add_attribute("AttchPnt", "16348571.180000"); // 1
+    Undly_70_set.insert("16348571.180000");
+    Undly_70.add_attribute("DetchPnt", "18858596.660000"); // 1
+    Undly_70_set.insert("18858596.660000");
+    Undly_70.add_attribute("Issued", "UnderlyingIssueDate_t_1347343458"); // 1
+    Undly_70_set.insert("UnderlyingIssueDate_t_1347343458");
+    Undly_70.add_attribute("RepoCollSecTyp", "520669728"); // 1
+    Undly_70_set.insert("520669728");
+    Undly_70.add_attribute("RepoTrm", "1771330011"); // 1
+    Undly_70_set.insert("1771330011");
+    Undly_70.add_attribute("RepoRt", "3559969.440000"); // 1
+    Undly_70_set.insert("3559969.440000");
+    Undly_70.add_attribute("Fctr", "14074979.040000"); // 1
+    Undly_70_set.insert("14074979.040000");
+    Undly_70.add_attribute("CrdRtg", "UnderlyingCreditRating_t_1171211384"); // 1
+    Undly_70_set.insert("UnderlyingCreditRating_t_1171211384");
+    Undly_70.add_attribute("Rgstry", "UnderlyingInstrRegistry_t_1583678097"); // 1
+    Undly_70_set.insert("UnderlyingInstrRegistry_t_1583678097");
+    Undly_70.add_attribute("Ctry", "1247695895"); // 1
+    Undly_70_set.insert("1247695895");
+    Undly_70.add_attribute("StOrProvnc", "UnderlyingStateOrProvinceOfIssue_t_951161770"); // 1
+    Undly_70_set.insert("UnderlyingStateOrProvinceOfIssue_t_951161770");
+    Undly_70.add_attribute("Lcl", "UnderlyingLocaleOfIssue_t_792695295"); // 1
+    Undly_70_set.insert("UnderlyingLocaleOfIssue_t_792695295");
+    Undly_70.add_attribute("Redeem", "UnderlyingRedemptionDate_t_24691715"); // 1
+    Undly_70_set.insert("UnderlyingRedemptionDate_t_24691715");
+    Undly_70.add_attribute("StrkPx", "10149187.440000"); // 1
+    Undly_70_set.insert("10149187.440000");
+    Undly_70.add_attribute("StrkCcy", "CAN"); // 1
+    Undly_70_set.insert("CAN");
+    Undly_70.add_attribute("OptA", "1165361213"); // 1
+    Undly_70_set.insert("1165361213");
+    Undly_70.add_attribute("Mult", "2808827.430000"); // 1
+    Undly_70_set.insert("2808827.430000");
+    Undly_70.add_attribute("MultTyp", "2"); // 1
+    Undly_70_set.insert("2");
+    Undly_70.add_attribute("FlowSchedTyp", "1"); // 1
+    Undly_70_set.insert("1");
+    Undly_70.add_attribute("UOM", "Gal"); // 1
+    Undly_70_set.insert("Gal");
+    Undly_70.add_attribute("UOMQty", "5699135.840000"); // 1
+    Undly_70_set.insert("5699135.840000");
+    Undly_70.add_attribute("PxUOM", "Bbl"); // 1
+    Undly_70_set.insert("Bbl");
+    Undly_70.add_attribute("PxUOMQty", "5143570.110000"); // 1
+    Undly_70_set.insert("5143570.110000");
+    Undly_70.add_attribute("TmUnit", "D"); // 1
+    Undly_70_set.insert("D");
+    Undly_70.add_attribute("ExerStyle", "1"); // 1
+    Undly_70_set.insert("1");
+    Undly_70.add_attribute("CpnRt", "8703247.830000"); // 1
+    Undly_70_set.insert("8703247.830000");
+    Undly_70.add_attribute("Exch", "UnderlyingSecurityExchange_t_751990069"); // 1
+    Undly_70_set.insert("UnderlyingSecurityExchange_t_751990069");
+    Undly_70.add_attribute("Issr", "UnderlyingIssuer_t_2131127572"); // 1
+    Undly_70_set.insert("UnderlyingIssuer_t_2131127572");
+    Undly_70.add_attribute("EncUndIssrLen", "321899334"); // 1
+    Undly_70_set.insert("321899334");
+    Undly_70.add_attribute("EncUndIssr", "EncodedUnderlyingIssuer_t_2066113053"); // 1
+    Undly_70_set.insert("EncodedUnderlyingIssuer_t_2066113053");
+    Undly_70.add_attribute("Desc", "UnderlyingSecurityDesc_t_1618501043"); // 1
+    Undly_70_set.insert("UnderlyingSecurityDesc_t_1618501043");
+    Undly_70.add_attribute("EncUndSecDescLen", "60275352"); // 1
+    Undly_70_set.insert("60275352");
+    Undly_70.add_attribute("EncUndSecDesc", "EncodedUnderlyingSecurityDesc_t_1265972863"); // 1
+    Undly_70_set.insert("EncodedUnderlyingSecurityDesc_t_1265972863");
+    Undly_70.add_attribute("CPPgm", "UnderlyingCPProgram_t_2139170771"); // 1
+    Undly_70_set.insert("UnderlyingCPProgram_t_2139170771");
+    Undly_70.add_attribute("CPRegTyp", "UnderlyingCPRegType_t_1831605363"); // 1
+    Undly_70_set.insert("UnderlyingCPRegType_t_1831605363");
+    Undly_70.add_attribute("AllocPct", "16219698.070000"); // 1
+    Undly_70_set.insert("16219698.070000");
+    Undly_70.add_attribute("Ccy", "JPY"); // 1
+    Undly_70_set.insert("JPY");
+    Undly_70.add_attribute("Qty", "10581642.560000"); // 1
+    Undly_70_set.insert("10581642.560000");
+    Undly_70.add_attribute("SettlTyp", "4"); // 1
+    Undly_70_set.insert("4");
+    Undly_70.add_attribute("CashAmt", "UnderlyingCashAmount_t_1806494870"); // 1
+    Undly_70_set.insert("UnderlyingCashAmount_t_1806494870");
+    Undly_70.add_attribute("CashTyp", "DIFF"); // 1
+    Undly_70_set.insert("DIFF");
+    Undly_70.add_attribute("Px", "5240889.900000"); // 1
+    Undly_70_set.insert("5240889.900000");
+    Undly_70.add_attribute("DirtPx", "6739299.660000"); // 1
+    Undly_70_set.insert("6739299.660000");
+    Undly_70.add_attribute("EndPx", "16092862.990000"); // 1
+    Undly_70_set.insert("16092862.990000");
+    Undly_70.add_attribute("StartVal", "UnderlyingStartValue_t_250456431"); // 1
+    Undly_70_set.insert("UnderlyingStartValue_t_250456431");
+    Undly_70.add_attribute("CurVal", "UnderlyingCurrentValue_t_1839291180"); // 1
+    Undly_70_set.insert("UnderlyingCurrentValue_t_1839291180");
+    Undly_70.add_attribute("EndVal", "UnderlyingEndValue_t_1890169042"); // 1
+    Undly_70_set.insert("UnderlyingEndValue_t_1890169042");
+    Undly_70.add_attribute("AdjQty", "15919155.800000"); // 1
+    Undly_70_set.insert("15919155.800000");
+    Undly_70.add_attribute("FxRate", "20979946.110000"); // 1
+    Undly_70_set.insert("20979946.110000");
+    Undly_70.add_attribute("FxRateCalc", "D"); // 1
+    Undly_70_set.insert("D");
+    Undly_70.add_attribute("CapValu", "UnderlyingCapValue_t_14345516"); // 1
+    Undly_70_set.insert("UnderlyingCapValue_t_14345516");
+    Undly_70.add_attribute("SetMeth", "UnderlyingSettlMethod_t_1325712143"); // 1
+    Undly_70_set.insert("UnderlyingSettlMethod_t_1325712143");
+    Undly_70.add_attribute("PutCall", "1969157151"); // 1
+    Undly_70_set.insert("1969157151");
+    all_values.push_back(Undly_70_set);
+    all_compo_names.insert("Undly_70_set");
 
     {
-      xml_element UndAID_65{"UndAID"};
-      multiset<string> UndAID_65_set;
-      UndAID_65.add_attribute("AltID", "UnderlyingSecurityAltID_t_798519664"); // 2
-      UndAID_65_set.insert("UnderlyingSecurityAltID_t_798519664");
-      UndAID_65.add_attribute("AltIDSrc", "3"); // 2
-      UndAID_65_set.insert("3");
-      all_values.push_back(UndAID_65_set);
-      all_compo_names.insert("UndAID_65_set");
+      xml_element UndAID_70{"UndAID"};
+      multiset<string> UndAID_70_set;
+      UndAID_70.add_attribute("AltID", "UnderlyingSecurityAltID_t_1436268582"); // 2
+      UndAID_70_set.insert("UnderlyingSecurityAltID_t_1436268582");
+      UndAID_70.add_attribute("AltIDSrc", "8"); // 2
+      UndAID_70_set.insert("8");
+      all_values.push_back(UndAID_70_set);
+      all_compo_names.insert("UndAID_70_set");
 
-      Undly_65.add_element(UndAID_65);
+      Undly_70.add_element(UndAID_70);
     }
     {
-      xml_element Stip_102{"Stip"};
-      multiset<string> Stip_102_set;
-      Stip_102.add_attribute("Typ", "AVAILQTY"); // 2
-      Stip_102_set.insert("AVAILQTY");
-      Stip_102.add_attribute("Val", "UnderlyingStipValue_t_2040312161"); // 2
-      Stip_102_set.insert("UnderlyingStipValue_t_2040312161");
-      all_values.push_back(Stip_102_set);
-      all_compo_names.insert("Stip_102_set");
+      xml_element Stip_108{"Stip"};
+      multiset<string> Stip_108_set;
+      Stip_108.add_attribute("Typ", "SECTOR"); // 2
+      Stip_108_set.insert("SECTOR");
+      Stip_108.add_attribute("Val", "UnderlyingStipValue_t_40775003"); // 2
+      Stip_108_set.insert("UnderlyingStipValue_t_40775003");
+      all_values.push_back(Stip_108_set);
+      all_compo_names.insert("Stip_108_set");
 
-      Undly_65.add_element(Stip_102);
+      Undly_70.add_element(Stip_108);
     }
     {
-      xml_element Pty_254{"Pty"};
-      multiset<string> Pty_254_set;
-      Pty_254.add_attribute("ID", "UnderlyingInstrumentPartyID_t_172382627"); // 2
-      Pty_254_set.insert("UnderlyingInstrumentPartyID_t_172382627");
-      Pty_254.add_attribute("Src", "8"); // 2
-      Pty_254_set.insert("8");
-      Pty_254.add_attribute("R", "55"); // 2
-      Pty_254_set.insert("55");
-      all_values.push_back(Pty_254_set);
-      all_compo_names.insert("Pty_254_set");
+      xml_element Pty_275{"Pty"};
+      multiset<string> Pty_275_set;
+      Pty_275.add_attribute("ID", "UnderlyingInstrumentPartyID_t_1188007201"); // 2
+      Pty_275_set.insert("UnderlyingInstrumentPartyID_t_1188007201");
+      Pty_275.add_attribute("Src", "C"); // 2
+      Pty_275_set.insert("C");
+      Pty_275.add_attribute("R", "59"); // 2
+      Pty_275_set.insert("59");
+      all_values.push_back(Pty_275_set);
+      all_compo_names.insert("Pty_275_set");
 
       {
-        xml_element Sub_254{"Sub"};
-        multiset<string> Sub_254_set;
-        Sub_254.add_attribute("ID", "UnderlyingInstrumentPartySubID_t_1259168534"); // 3
-        Sub_254_set.insert("UnderlyingInstrumentPartySubID_t_1259168534");
-        Sub_254.add_attribute("Typ", "14"); // 3
-        Sub_254_set.insert("14");
-        all_values.push_back(Sub_254_set);
-        all_compo_names.insert("Sub_254_set");
+        xml_element Sub_275{"Sub"};
+        multiset<string> Sub_275_set;
+        Sub_275.add_attribute("ID", "UnderlyingInstrumentPartySubID_t_659024596"); // 3
+        Sub_275_set.insert("UnderlyingInstrumentPartySubID_t_659024596");
+        Sub_275.add_attribute("Typ", "14"); // 3
+        Sub_275_set.insert("14");
+        all_values.push_back(Sub_275_set);
+        all_compo_names.insert("Sub_275_set");
 
-        Pty_254.add_element(Sub_254);
+        Pty_275.add_element(Sub_275);
       }
-      Undly_65.add_element(Pty_254);
+      Undly_70.add_element(Pty_275);
     }
-    elt.add_element(Undly_65);
+    elt.add_element(Undly_70);
   } // end Undly
   cout << "////////////////////////////////////////////" << endl;
   cout << elt.to_string() << endl;
@@ -676,7 +704,7 @@ TEST ( OrderMassActionRequest_message_t, set_fields)
   cout << endl << "////////////////////////////////////////////" << endl;
   multiset<string> fix_s;
   list<multiset<string>> fix_ls;
-  to_list(fix_msg, quickfix_dico, fix_s, fix_ls);
+  msg_to_list(fix_msg, quickfix_dico, fix_s, fix_ls);
   fix_ls.push_back(fix_s);
 
   BOOST_LOG_TRIVIAL(debug) << "All FIX components (" << fix_ls.size() << ")";

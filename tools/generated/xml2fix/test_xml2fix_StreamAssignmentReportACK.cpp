@@ -21,7 +21,7 @@ using namespace fix2xml;
 TEST ( StreamAssignmentReportACK_message_t, set_fields)
 {
 
-  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../../spec/fix/FIX50SP2.xml", "../../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   auto &quickfix_dico = converter.quickfix_dico();
   ASSERT_TRUE(converter.init());
@@ -31,72 +31,72 @@ TEST ( StreamAssignmentReportACK_message_t, set_fields)
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> StreamAssignmentReportACK_message_t_0;
-  elt.add_attribute("ActTyp", "1"); // 0
-  StreamAssignmentReportACK_message_t_0.insert("1");
-  elt.add_attribute("RptID", "StreamAsgnRptID_t_724946280"); // 0
-  StreamAssignmentReportACK_message_t_0.insert("StreamAsgnRptID_t_724946280");
-  elt.add_attribute("RejRsn", "99"); // 0
-  StreamAssignmentReportACK_message_t_0.insert("99");
-  elt.add_attribute("Txt", "Text_t_1988212048"); // 0
-  StreamAssignmentReportACK_message_t_0.insert("Text_t_1988212048");
-  elt.add_attribute("EncTxtLen", "1963335864"); // 0
-  StreamAssignmentReportACK_message_t_0.insert("1963335864");
-  elt.add_attribute("EncTxt", "EncodedText_t_270891974"); // 0
-  StreamAssignmentReportACK_message_t_0.insert("EncodedText_t_270891974");
+  elt.add_attribute("ActTyp", "0"); // 0
+  StreamAssignmentReportACK_message_t_0.insert("0");
+  elt.add_attribute("RptID", "StreamAsgnRptID_t_1935066724"); // 0
+  StreamAssignmentReportACK_message_t_0.insert("StreamAsgnRptID_t_1935066724");
+  elt.add_attribute("RejRsn", "0"); // 0
+  StreamAssignmentReportACK_message_t_0.insert("0");
+  elt.add_attribute("Txt", "Text_t_1445146365"); // 0
+  StreamAssignmentReportACK_message_t_0.insert("Text_t_1445146365");
+  elt.add_attribute("EncTxtLen", "1137852833"); // 0
+  StreamAssignmentReportACK_message_t_0.insert("1137852833");
+  elt.add_attribute("EncTxt", "EncodedText_t_964259304"); // 0
+  StreamAssignmentReportACK_message_t_0.insert("EncodedText_t_964259304");
   all_values.push_back(StreamAssignmentReportACK_message_t_0);
   all_compo_names.insert("StreamAssignmentReportACK_message_t");
 
   { // Hdr
     xml_element Hdr_94{"Hdr"};
     multiset<string> Hdr_94_set;
-    Hdr_94.add_attribute("SeqNum", "1306963108"); // 1
-    Hdr_94_set.insert("1306963108");
-    Hdr_94.add_attribute("SID", "SenderCompID_t_1141747056"); // 1
-    Hdr_94_set.insert("SenderCompID_t_1141747056");
-    Hdr_94.add_attribute("TID", "TargetCompID_t_730749735"); // 1
-    Hdr_94_set.insert("TargetCompID_t_730749735");
-    Hdr_94.add_attribute("OBID", "OnBehalfOfCompID_t_1408652965"); // 1
-    Hdr_94_set.insert("OnBehalfOfCompID_t_1408652965");
-    Hdr_94.add_attribute("D2ID", "DeliverToCompID_t_1307272204"); // 1
-    Hdr_94_set.insert("DeliverToCompID_t_1307272204");
-    Hdr_94.add_attribute("SSub", "SenderSubID_t_1286065577"); // 1
-    Hdr_94_set.insert("SenderSubID_t_1286065577");
-    Hdr_94.add_attribute("SLoc", "SenderLocationID_t_1714991201"); // 1
-    Hdr_94_set.insert("SenderLocationID_t_1714991201");
-    Hdr_94.add_attribute("TSub", "TargetSubID_t_2089056337"); // 1
-    Hdr_94_set.insert("TargetSubID_t_2089056337");
-    Hdr_94.add_attribute("TLoc", "TargetLocationID_t_1192402142"); // 1
-    Hdr_94_set.insert("TargetLocationID_t_1192402142");
-    Hdr_94.add_attribute("OBSub", "OnBehalfOfSubID_t_618149849"); // 1
-    Hdr_94_set.insert("OnBehalfOfSubID_t_618149849");
-    Hdr_94.add_attribute("OBLoc", "OnBehalfOfLocationID_t_1038519019"); // 1
-    Hdr_94_set.insert("OnBehalfOfLocationID_t_1038519019");
-    Hdr_94.add_attribute("D2Sub", "DeliverToSubID_t_535925085"); // 1
-    Hdr_94_set.insert("DeliverToSubID_t_535925085");
-    Hdr_94.add_attribute("D2Loc", "DeliverToLocationID_t_525091734"); // 1
-    Hdr_94_set.insert("DeliverToLocationID_t_525091734");
+    Hdr_94.add_attribute("SeqNum", "1296829578"); // 1
+    Hdr_94_set.insert("1296829578");
+    Hdr_94.add_attribute("SID", "SenderCompID_t_1618455152"); // 1
+    Hdr_94_set.insert("SenderCompID_t_1618455152");
+    Hdr_94.add_attribute("TID", "TargetCompID_t_242960895"); // 1
+    Hdr_94_set.insert("TargetCompID_t_242960895");
+    Hdr_94.add_attribute("OBID", "OnBehalfOfCompID_t_1780924694"); // 1
+    Hdr_94_set.insert("OnBehalfOfCompID_t_1780924694");
+    Hdr_94.add_attribute("D2ID", "DeliverToCompID_t_1828036030"); // 1
+    Hdr_94_set.insert("DeliverToCompID_t_1828036030");
+    Hdr_94.add_attribute("SSub", "SenderSubID_t_2043860943"); // 1
+    Hdr_94_set.insert("SenderSubID_t_2043860943");
+    Hdr_94.add_attribute("SLoc", "SenderLocationID_t_1050208433"); // 1
+    Hdr_94_set.insert("SenderLocationID_t_1050208433");
+    Hdr_94.add_attribute("TSub", "TargetSubID_t_627024586"); // 1
+    Hdr_94_set.insert("TargetSubID_t_627024586");
+    Hdr_94.add_attribute("TLoc", "TargetLocationID_t_856977380"); // 1
+    Hdr_94_set.insert("TargetLocationID_t_856977380");
+    Hdr_94.add_attribute("OBSub", "OnBehalfOfSubID_t_1875244691"); // 1
+    Hdr_94_set.insert("OnBehalfOfSubID_t_1875244691");
+    Hdr_94.add_attribute("OBLoc", "OnBehalfOfLocationID_t_669994150"); // 1
+    Hdr_94_set.insert("OnBehalfOfLocationID_t_669994150");
+    Hdr_94.add_attribute("D2Sub", "DeliverToSubID_t_26706594"); // 1
+    Hdr_94_set.insert("DeliverToSubID_t_26706594");
+    Hdr_94.add_attribute("D2Loc", "DeliverToLocationID_t_1908980707"); // 1
+    Hdr_94_set.insert("DeliverToLocationID_t_1908980707");
     Hdr_94.add_attribute("PosDup", "N"); // 1
     Hdr_94_set.insert("N");
-    Hdr_94.add_attribute("PosRsnd", "N"); // 1
-    Hdr_94_set.insert("N");
-    Hdr_94.add_attribute("Snt", "SendingTime_t_1700264920"); // 1
-    Hdr_94_set.insert("SendingTime_t_1700264920");
-    Hdr_94.add_attribute("OrigSnt", "OrigSendingTime_t_444607848"); // 1
-    Hdr_94_set.insert("OrigSendingTime_t_444607848");
-    Hdr_94.add_attribute("MsgEncd", "MessageEncoding_t_1481775025"); // 1
-    Hdr_94_set.insert("MessageEncoding_t_1481775025");
+    Hdr_94.add_attribute("PosRsnd", "Y"); // 1
+    Hdr_94_set.insert("Y");
+    Hdr_94.add_attribute("Snt", "SendingTime_t_1096241971"); // 1
+    Hdr_94_set.insert("SendingTime_t_1096241971");
+    Hdr_94.add_attribute("OrigSnt", "OrigSendingTime_t_1975627620"); // 1
+    Hdr_94_set.insert("OrigSendingTime_t_1975627620");
+    Hdr_94.add_attribute("MsgEncd", "MessageEncoding_t_2138952766"); // 1
+    Hdr_94_set.insert("MessageEncoding_t_2138952766");
     all_values.push_back(Hdr_94_set);
     all_compo_names.insert("Hdr_94_set");
 
     {
       xml_element Hop_94{"Hop"};
       multiset<string> Hop_94_set;
-      Hop_94.add_attribute("ID", "HopCompID_t_1678813508"); // 2
-      Hop_94_set.insert("HopCompID_t_1678813508");
-      Hop_94.add_attribute("Ref", "1233581920"); // 2
-      Hop_94_set.insert("1233581920");
-      Hop_94.add_attribute("Snt", "HopSendingTime_t_499623991"); // 2
-      Hop_94_set.insert("HopSendingTime_t_499623991");
+      Hop_94.add_attribute("ID", "HopCompID_t_147199643"); // 2
+      Hop_94_set.insert("HopCompID_t_147199643");
+      Hop_94.add_attribute("Ref", "1610429676"); // 2
+      Hop_94_set.insert("1610429676");
+      Hop_94.add_attribute("Snt", "HopSendingTime_t_798579318"); // 2
+      Hop_94_set.insert("HopSendingTime_t_798579318");
       all_values.push_back(Hop_94_set);
       all_compo_names.insert("Hop_94_set");
 
@@ -118,7 +118,7 @@ TEST ( StreamAssignmentReportACK_message_t, set_fields)
   cout << endl << "////////////////////////////////////////////" << endl;
   multiset<string> fix_s;
   list<multiset<string>> fix_ls;
-  to_list(fix_msg, quickfix_dico, fix_s, fix_ls);
+  msg_to_list(fix_msg, quickfix_dico, fix_s, fix_ls);
   fix_ls.push_back(fix_s);
 
   BOOST_LOG_TRIVIAL(debug) << "All FIX components (" << fix_ls.size() << ")";

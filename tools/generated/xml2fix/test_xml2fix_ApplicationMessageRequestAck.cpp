@@ -21,7 +21,7 @@ using namespace fix2xml;
 TEST ( ApplicationMessageRequestAck_message_t, set_fields)
 {
 
-  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../../spec/fix/FIX50SP2.xml", "../../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   auto &quickfix_dico = converter.quickfix_dico();
   ASSERT_TRUE(converter.init());
@@ -31,76 +31,76 @@ TEST ( ApplicationMessageRequestAck_message_t, set_fields)
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> ApplicationMessageRequestAck_message_t_0;
-  elt.add_attribute("ApplRespID", "ApplResponseID_t_70487120"); // 0
-  ApplicationMessageRequestAck_message_t_0.insert("ApplResponseID_t_70487120");
-  elt.add_attribute("ApplReqID", "ApplReqID_t_978097756"); // 0
-  ApplicationMessageRequestAck_message_t_0.insert("ApplReqID_t_978097756");
-  elt.add_attribute("ApplReqTyp", "3"); // 0
-  ApplicationMessageRequestAck_message_t_0.insert("3");
-  elt.add_attribute("ApplRespTyp", "1"); // 0
-  ApplicationMessageRequestAck_message_t_0.insert("1");
-  elt.add_attribute("ApplTotMsgCnt", "464753335"); // 0
-  ApplicationMessageRequestAck_message_t_0.insert("464753335");
-  elt.add_attribute("Txt", "Text_t_187955347"); // 0
-  ApplicationMessageRequestAck_message_t_0.insert("Text_t_187955347");
-  elt.add_attribute("EncTxtLen", "1452147566"); // 0
-  ApplicationMessageRequestAck_message_t_0.insert("1452147566");
-  elt.add_attribute("EncTxt", "EncodedText_t_622351648"); // 0
-  ApplicationMessageRequestAck_message_t_0.insert("EncodedText_t_622351648");
+  elt.add_attribute("ApplRespID", "ApplResponseID_t_1208544089"); // 0
+  ApplicationMessageRequestAck_message_t_0.insert("ApplResponseID_t_1208544089");
+  elt.add_attribute("ApplReqID", "ApplReqID_t_2062785264"); // 0
+  ApplicationMessageRequestAck_message_t_0.insert("ApplReqID_t_2062785264");
+  elt.add_attribute("ApplReqTyp", "6"); // 0
+  ApplicationMessageRequestAck_message_t_0.insert("6");
+  elt.add_attribute("ApplRespTyp", "2"); // 0
+  ApplicationMessageRequestAck_message_t_0.insert("2");
+  elt.add_attribute("ApplTotMsgCnt", "598545776"); // 0
+  ApplicationMessageRequestAck_message_t_0.insert("598545776");
+  elt.add_attribute("Txt", "Text_t_1327706561"); // 0
+  ApplicationMessageRequestAck_message_t_0.insert("Text_t_1327706561");
+  elt.add_attribute("EncTxtLen", "498548191"); // 0
+  ApplicationMessageRequestAck_message_t_0.insert("498548191");
+  elt.add_attribute("EncTxt", "EncodedText_t_1325011808"); // 0
+  ApplicationMessageRequestAck_message_t_0.insert("EncodedText_t_1325011808");
   all_values.push_back(ApplicationMessageRequestAck_message_t_0);
   all_compo_names.insert("ApplicationMessageRequestAck_message_t");
 
   { // Hdr
     xml_element Hdr_9{"Hdr"};
     multiset<string> Hdr_9_set;
-    Hdr_9.add_attribute("SeqNum", "1358808093"); // 1
-    Hdr_9_set.insert("1358808093");
-    Hdr_9.add_attribute("SID", "SenderCompID_t_325608239"); // 1
-    Hdr_9_set.insert("SenderCompID_t_325608239");
-    Hdr_9.add_attribute("TID", "TargetCompID_t_632663946"); // 1
-    Hdr_9_set.insert("TargetCompID_t_632663946");
-    Hdr_9.add_attribute("OBID", "OnBehalfOfCompID_t_1623098831"); // 1
-    Hdr_9_set.insert("OnBehalfOfCompID_t_1623098831");
-    Hdr_9.add_attribute("D2ID", "DeliverToCompID_t_1959549977"); // 1
-    Hdr_9_set.insert("DeliverToCompID_t_1959549977");
-    Hdr_9.add_attribute("SSub", "SenderSubID_t_799490478"); // 1
-    Hdr_9_set.insert("SenderSubID_t_799490478");
-    Hdr_9.add_attribute("SLoc", "SenderLocationID_t_1208386364"); // 1
-    Hdr_9_set.insert("SenderLocationID_t_1208386364");
-    Hdr_9.add_attribute("TSub", "TargetSubID_t_1428972083"); // 1
-    Hdr_9_set.insert("TargetSubID_t_1428972083");
-    Hdr_9.add_attribute("TLoc", "TargetLocationID_t_1206234537"); // 1
-    Hdr_9_set.insert("TargetLocationID_t_1206234537");
-    Hdr_9.add_attribute("OBSub", "OnBehalfOfSubID_t_2097296051"); // 1
-    Hdr_9_set.insert("OnBehalfOfSubID_t_2097296051");
-    Hdr_9.add_attribute("OBLoc", "OnBehalfOfLocationID_t_1613975438"); // 1
-    Hdr_9_set.insert("OnBehalfOfLocationID_t_1613975438");
-    Hdr_9.add_attribute("D2Sub", "DeliverToSubID_t_1567431113"); // 1
-    Hdr_9_set.insert("DeliverToSubID_t_1567431113");
-    Hdr_9.add_attribute("D2Loc", "DeliverToLocationID_t_1502403414"); // 1
-    Hdr_9_set.insert("DeliverToLocationID_t_1502403414");
-    Hdr_9.add_attribute("PosDup", "N"); // 1
-    Hdr_9_set.insert("N");
-    Hdr_9.add_attribute("PosRsnd", "Y"); // 1
+    Hdr_9.add_attribute("SeqNum", "281721716"); // 1
+    Hdr_9_set.insert("281721716");
+    Hdr_9.add_attribute("SID", "SenderCompID_t_1345810773"); // 1
+    Hdr_9_set.insert("SenderCompID_t_1345810773");
+    Hdr_9.add_attribute("TID", "TargetCompID_t_1871302714"); // 1
+    Hdr_9_set.insert("TargetCompID_t_1871302714");
+    Hdr_9.add_attribute("OBID", "OnBehalfOfCompID_t_1738860556"); // 1
+    Hdr_9_set.insert("OnBehalfOfCompID_t_1738860556");
+    Hdr_9.add_attribute("D2ID", "DeliverToCompID_t_1590941537"); // 1
+    Hdr_9_set.insert("DeliverToCompID_t_1590941537");
+    Hdr_9.add_attribute("SSub", "SenderSubID_t_1874120886"); // 1
+    Hdr_9_set.insert("SenderSubID_t_1874120886");
+    Hdr_9.add_attribute("SLoc", "SenderLocationID_t_1936936834"); // 1
+    Hdr_9_set.insert("SenderLocationID_t_1936936834");
+    Hdr_9.add_attribute("TSub", "TargetSubID_t_337387775"); // 1
+    Hdr_9_set.insert("TargetSubID_t_337387775");
+    Hdr_9.add_attribute("TLoc", "TargetLocationID_t_1303976458"); // 1
+    Hdr_9_set.insert("TargetLocationID_t_1303976458");
+    Hdr_9.add_attribute("OBSub", "OnBehalfOfSubID_t_885313773"); // 1
+    Hdr_9_set.insert("OnBehalfOfSubID_t_885313773");
+    Hdr_9.add_attribute("OBLoc", "OnBehalfOfLocationID_t_355851573"); // 1
+    Hdr_9_set.insert("OnBehalfOfLocationID_t_355851573");
+    Hdr_9.add_attribute("D2Sub", "DeliverToSubID_t_1881243839"); // 1
+    Hdr_9_set.insert("DeliverToSubID_t_1881243839");
+    Hdr_9.add_attribute("D2Loc", "DeliverToLocationID_t_338841317"); // 1
+    Hdr_9_set.insert("DeliverToLocationID_t_338841317");
+    Hdr_9.add_attribute("PosDup", "Y"); // 1
     Hdr_9_set.insert("Y");
-    Hdr_9.add_attribute("Snt", "SendingTime_t_1328820379"); // 1
-    Hdr_9_set.insert("SendingTime_t_1328820379");
-    Hdr_9.add_attribute("OrigSnt", "OrigSendingTime_t_1369897751"); // 1
-    Hdr_9_set.insert("OrigSendingTime_t_1369897751");
-    Hdr_9.add_attribute("MsgEncd", "MessageEncoding_t_668039963"); // 1
-    Hdr_9_set.insert("MessageEncoding_t_668039963");
+    Hdr_9.add_attribute("PosRsnd", "N"); // 1
+    Hdr_9_set.insert("N");
+    Hdr_9.add_attribute("Snt", "SendingTime_t_1727125506"); // 1
+    Hdr_9_set.insert("SendingTime_t_1727125506");
+    Hdr_9.add_attribute("OrigSnt", "OrigSendingTime_t_381831629"); // 1
+    Hdr_9_set.insert("OrigSendingTime_t_381831629");
+    Hdr_9.add_attribute("MsgEncd", "MessageEncoding_t_849240361"); // 1
+    Hdr_9_set.insert("MessageEncoding_t_849240361");
     all_values.push_back(Hdr_9_set);
     all_compo_names.insert("Hdr_9_set");
 
     {
       xml_element Hop_9{"Hop"};
       multiset<string> Hop_9_set;
-      Hop_9.add_attribute("ID", "HopCompID_t_1074516534"); // 2
-      Hop_9_set.insert("HopCompID_t_1074516534");
-      Hop_9.add_attribute("Ref", "222540133"); // 2
-      Hop_9_set.insert("222540133");
-      Hop_9.add_attribute("Snt", "HopSendingTime_t_1185194771"); // 2
-      Hop_9_set.insert("HopSendingTime_t_1185194771");
+      Hop_9.add_attribute("ID", "HopCompID_t_701011192"); // 2
+      Hop_9_set.insert("HopCompID_t_701011192");
+      Hop_9.add_attribute("Ref", "745238971"); // 2
+      Hop_9_set.insert("745238971");
+      Hop_9.add_attribute("Snt", "HopSendingTime_t_2115339498"); // 2
+      Hop_9_set.insert("HopSendingTime_t_2115339498");
       all_values.push_back(Hop_9_set);
       all_compo_names.insert("Hop_9_set");
 
@@ -111,172 +111,74 @@ TEST ( ApplicationMessageRequestAck_message_t, set_fields)
   { // ApplIDReqAckGrp
     xml_element ApplIDReqAckGrp_0{"ApplIDReqAckGrp"};
     multiset<string> ApplIDReqAckGrp_0_set;
-    ApplIDReqAckGrp_0.add_attribute("RefApplID", "RefApplID_t_20170003"); // 1
-    ApplIDReqAckGrp_0_set.insert("RefApplID_t_20170003");
-    ApplIDReqAckGrp_0.add_attribute("RefID", "RefApplReqID_t_1255681892"); // 1
-    ApplIDReqAckGrp_0_set.insert("RefApplReqID_t_1255681892");
-    ApplIDReqAckGrp_0.add_attribute("ApplBegSeqNum", "1246331714"); // 1
-    ApplIDReqAckGrp_0_set.insert("1246331714");
-    ApplIDReqAckGrp_0.add_attribute("ApplEndSeq", "1637910691"); // 1
-    ApplIDReqAckGrp_0_set.insert("1637910691");
-    ApplIDReqAckGrp_0.add_attribute("RefApplLastSeqNum", "936401152"); // 1
-    ApplIDReqAckGrp_0_set.insert("936401152");
+    ApplIDReqAckGrp_0.add_attribute("RefApplID", "RefApplID_t_166442215"); // 1
+    ApplIDReqAckGrp_0_set.insert("RefApplID_t_166442215");
+    ApplIDReqAckGrp_0.add_attribute("RefID", "RefApplReqID_t_1176399940"); // 1
+    ApplIDReqAckGrp_0_set.insert("RefApplReqID_t_1176399940");
+    ApplIDReqAckGrp_0.add_attribute("ApplBegSeqNum", "758910946"); // 1
+    ApplIDReqAckGrp_0_set.insert("758910946");
+    ApplIDReqAckGrp_0.add_attribute("ApplEndSeq", "1521118292"); // 1
+    ApplIDReqAckGrp_0_set.insert("1521118292");
+    ApplIDReqAckGrp_0.add_attribute("RefApplLastSeqNum", "2041882080"); // 1
+    ApplIDReqAckGrp_0_set.insert("2041882080");
     ApplIDReqAckGrp_0.add_attribute("ApplRespErr", "0"); // 1
     ApplIDReqAckGrp_0_set.insert("0");
     all_values.push_back(ApplIDReqAckGrp_0_set);
     all_compo_names.insert("ApplIDReqAckGrp_0_set");
 
     {
-      xml_element Pty_45{"Pty"};
-      multiset<string> Pty_45_set;
-      Pty_45.add_attribute("ID", "NestedPartyID_t_1825866038"); // 2
-      Pty_45_set.insert("NestedPartyID_t_1825866038");
-      Pty_45.add_attribute("Src", "H"); // 2
-      Pty_45_set.insert("H");
-      Pty_45.add_attribute("R", "68"); // 2
-      Pty_45_set.insert("68");
-      all_values.push_back(Pty_45_set);
-      all_compo_names.insert("Pty_45_set");
+      xml_element Pty_54{"Pty"};
+      multiset<string> Pty_54_set;
+      Pty_54.add_attribute("ID", "NestedPartyID_t_701341205"); // 2
+      Pty_54_set.insert("NestedPartyID_t_701341205");
+      Pty_54.add_attribute("Src", "I"); // 2
+      Pty_54_set.insert("I");
+      Pty_54.add_attribute("R", "57"); // 2
+      Pty_54_set.insert("57");
+      all_values.push_back(Pty_54_set);
+      all_compo_names.insert("Pty_54_set");
 
       {
-        xml_element Sub_45{"Sub"};
-        multiset<string> Sub_45_set;
-        Sub_45.add_attribute("ID", "NestedPartySubID_t_1037190483"); // 3
-        Sub_45_set.insert("NestedPartySubID_t_1037190483");
-        Sub_45.add_attribute("Typ", "24"); // 3
-        Sub_45_set.insert("24");
-        all_values.push_back(Sub_45_set);
-        all_compo_names.insert("Sub_45_set");
+        xml_element Sub_54{"Sub"};
+        multiset<string> Sub_54_set;
+        Sub_54.add_attribute("ID", "NestedPartySubID_t_983062921"); // 3
+        Sub_54_set.insert("NestedPartySubID_t_983062921");
+        Sub_54.add_attribute("Typ", "11"); // 3
+        Sub_54_set.insert("11");
+        all_values.push_back(Sub_54_set);
+        all_compo_names.insert("Sub_54_set");
 
-        Pty_45.add_element(Sub_45);
+        Pty_54.add_element(Sub_54);
       }
-      ApplIDReqAckGrp_0.add_element(Pty_45);
+      ApplIDReqAckGrp_0.add_element(Pty_54);
     }
     elt.add_element(ApplIDReqAckGrp_0);
   } // end ApplIDReqAckGrp
-  { // ApplIDReqAckGrp
-    xml_element ApplIDReqAckGrp_1{"ApplIDReqAckGrp"};
-    multiset<string> ApplIDReqAckGrp_1_set;
-    ApplIDReqAckGrp_1.add_attribute("RefApplID", "RefApplID_t_818616996"); // 1
-    ApplIDReqAckGrp_1_set.insert("RefApplID_t_818616996");
-    ApplIDReqAckGrp_1.add_attribute("RefID", "RefApplReqID_t_512805666"); // 1
-    ApplIDReqAckGrp_1_set.insert("RefApplReqID_t_512805666");
-    ApplIDReqAckGrp_1.add_attribute("ApplBegSeqNum", "378739639"); // 1
-    ApplIDReqAckGrp_1_set.insert("378739639");
-    ApplIDReqAckGrp_1.add_attribute("ApplEndSeq", "1618107475"); // 1
-    ApplIDReqAckGrp_1_set.insert("1618107475");
-    ApplIDReqAckGrp_1.add_attribute("RefApplLastSeqNum", "1721192031"); // 1
-    ApplIDReqAckGrp_1_set.insert("1721192031");
-    ApplIDReqAckGrp_1.add_attribute("ApplRespErr", "1"); // 1
-    ApplIDReqAckGrp_1_set.insert("1");
-    all_values.push_back(ApplIDReqAckGrp_1_set);
-    all_compo_names.insert("ApplIDReqAckGrp_1_set");
-
-    {
-      xml_element Pty_46{"Pty"};
-      multiset<string> Pty_46_set;
-      Pty_46.add_attribute("ID", "NestedPartyID_t_676858364"); // 2
-      Pty_46_set.insert("NestedPartyID_t_676858364");
-      Pty_46.add_attribute("Src", "D"); // 2
-      Pty_46_set.insert("D");
-      Pty_46.add_attribute("R", "60"); // 2
-      Pty_46_set.insert("60");
-      all_values.push_back(Pty_46_set);
-      all_compo_names.insert("Pty_46_set");
-
-      {
-        xml_element Sub_46{"Sub"};
-        multiset<string> Sub_46_set;
-        Sub_46.add_attribute("ID", "NestedPartySubID_t_96805829"); // 3
-        Sub_46_set.insert("NestedPartySubID_t_96805829");
-        Sub_46.add_attribute("Typ", "14"); // 3
-        Sub_46_set.insert("14");
-        all_values.push_back(Sub_46_set);
-        all_compo_names.insert("Sub_46_set");
-
-        Pty_46.add_element(Sub_46);
-      }
-      ApplIDReqAckGrp_1.add_element(Pty_46);
-    }
-    elt.add_element(ApplIDReqAckGrp_1);
-  } // end ApplIDReqAckGrp
   { // Pty
-    xml_element Pty_47{"Pty"};
-    multiset<string> Pty_47_set;
-    Pty_47.add_attribute("ID", "PartyID_t_1658698840"); // 1
-    Pty_47_set.insert("PartyID_t_1658698840");
-    Pty_47.add_attribute("Src", "5"); // 1
-    Pty_47_set.insert("5");
-    Pty_47.add_attribute("R", "64"); // 1
-    Pty_47_set.insert("64");
-    all_values.push_back(Pty_47_set);
-    all_compo_names.insert("Pty_47_set");
+    xml_element Pty_55{"Pty"};
+    multiset<string> Pty_55_set;
+    Pty_55.add_attribute("ID", "PartyID_t_574439829"); // 1
+    Pty_55_set.insert("PartyID_t_574439829");
+    Pty_55.add_attribute("Src", "I"); // 1
+    Pty_55_set.insert("I");
+    Pty_55.add_attribute("R", "35"); // 1
+    Pty_55_set.insert("35");
+    all_values.push_back(Pty_55_set);
+    all_compo_names.insert("Pty_55_set");
 
     {
-      xml_element Sub_47{"Sub"};
-      multiset<string> Sub_47_set;
-      Sub_47.add_attribute("ID", "PartySubID_t_179255155"); // 2
-      Sub_47_set.insert("PartySubID_t_179255155");
-      Sub_47.add_attribute("Typ", "21"); // 2
-      Sub_47_set.insert("21");
-      all_values.push_back(Sub_47_set);
-      all_compo_names.insert("Sub_47_set");
+      xml_element Sub_55{"Sub"};
+      multiset<string> Sub_55_set;
+      Sub_55.add_attribute("ID", "PartySubID_t_363893015"); // 2
+      Sub_55_set.insert("PartySubID_t_363893015");
+      Sub_55.add_attribute("Typ", "4"); // 2
+      Sub_55_set.insert("4");
+      all_values.push_back(Sub_55_set);
+      all_compo_names.insert("Sub_55_set");
 
-      Pty_47.add_element(Sub_47);
+      Pty_55.add_element(Sub_55);
     }
-    elt.add_element(Pty_47);
-  } // end Pty
-  { // Pty
-    xml_element Pty_48{"Pty"};
-    multiset<string> Pty_48_set;
-    Pty_48.add_attribute("ID", "PartyID_t_868567984"); // 1
-    Pty_48_set.insert("PartyID_t_868567984");
-    Pty_48.add_attribute("Src", "E"); // 1
-    Pty_48_set.insert("E");
-    Pty_48.add_attribute("R", "82"); // 1
-    Pty_48_set.insert("82");
-    all_values.push_back(Pty_48_set);
-    all_compo_names.insert("Pty_48_set");
-
-    {
-      xml_element Sub_48{"Sub"};
-      multiset<string> Sub_48_set;
-      Sub_48.add_attribute("ID", "PartySubID_t_888737987"); // 2
-      Sub_48_set.insert("PartySubID_t_888737987");
-      Sub_48.add_attribute("Typ", "29"); // 2
-      Sub_48_set.insert("29");
-      all_values.push_back(Sub_48_set);
-      all_compo_names.insert("Sub_48_set");
-
-      Pty_48.add_element(Sub_48);
-    }
-    elt.add_element(Pty_48);
-  } // end Pty
-  { // Pty
-    xml_element Pty_49{"Pty"};
-    multiset<string> Pty_49_set;
-    Pty_49.add_attribute("ID", "PartyID_t_648859490"); // 1
-    Pty_49_set.insert("PartyID_t_648859490");
-    Pty_49.add_attribute("Src", "H"); // 1
-    Pty_49_set.insert("H");
-    Pty_49.add_attribute("R", "61"); // 1
-    Pty_49_set.insert("61");
-    all_values.push_back(Pty_49_set);
-    all_compo_names.insert("Pty_49_set");
-
-    {
-      xml_element Sub_49{"Sub"};
-      multiset<string> Sub_49_set;
-      Sub_49.add_attribute("ID", "PartySubID_t_212460892"); // 2
-      Sub_49_set.insert("PartySubID_t_212460892");
-      Sub_49.add_attribute("Typ", "16"); // 2
-      Sub_49_set.insert("16");
-      all_values.push_back(Sub_49_set);
-      all_compo_names.insert("Sub_49_set");
-
-      Pty_49.add_element(Sub_49);
-    }
-    elt.add_element(Pty_49);
+    elt.add_element(Pty_55);
   } // end Pty
   cout << "////////////////////////////////////////////" << endl;
   cout << elt.to_string() << endl;
@@ -292,7 +194,7 @@ TEST ( ApplicationMessageRequestAck_message_t, set_fields)
   cout << endl << "////////////////////////////////////////////" << endl;
   multiset<string> fix_s;
   list<multiset<string>> fix_ls;
-  to_list(fix_msg, quickfix_dico, fix_s, fix_ls);
+  msg_to_list(fix_msg, quickfix_dico, fix_s, fix_ls);
   fix_ls.push_back(fix_s);
 
   BOOST_LOG_TRIVIAL(debug) << "All FIX components (" << fix_ls.size() << ")";

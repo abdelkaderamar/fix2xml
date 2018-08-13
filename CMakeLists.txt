@@ -18,12 +18,17 @@ Set ( CMAKE_MODULE_PATH ${FIXTOOLS_SOURCE_DIR}/cmake )
 Set ( CMAKE_BUILD_TYPE "Debug" )
 
 #--- options
+OPTION( FIX2XML_TEST       "Build FIXTOOLS tests." OFF )
 OPTION( FIX2XML_COVERAGE   "Build FIXTOOLS for coverage." OFF )
 
 Include (CodeCoverage)
 
-# C++11
-# Add_Definitions ( "-std=c++11" )
+#--- Check C++14 is supported (Quickfix uses dynamic exception specifications
+#--- but they are removed from the language starting from C++17)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 
 #--- Dependencies
 Find_Package ( Boost COMPONENTS log )
@@ -38,7 +43,9 @@ If ( XercesC_FOUND )
 Endif()
 
 Find_Package ( GTest )
+#--- End dependencies
 
+#--- Add coverage flags
 If ( FIX2XML_COVERAGE )
   APPEND_COVERAGE_COMPILER_FLAGS()
 Endif ( FIX2XML_COVERAGE )
@@ -50,6 +57,7 @@ Include_Directories ( ${FIXTOOLS_SOURCE_DIR} )
 #--- Source directories
 Add_Subdirectory ( src )
 
+#--- Coverage exclude patterns
 Set(COVERAGE_EXCLUDES 'boost/*' '/usr/*' 'test/*')
 
 SETUP_TARGET_FOR_COVERAGE (
@@ -58,7 +66,10 @@ SETUP_TARGET_FOR_COVERAGE (
   DEPENDENCIES fix2xml_test )
 
 #--- Test directories
-Add_Subdirectory ( test )
+If ( FIX2XML_TEST )
+  Add_Subdirectory ( test )
+Endif( FIX2XML_TEST )
+
 
 #--- Tools directory
 Add_Subdirectory ( tools )

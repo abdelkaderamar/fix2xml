@@ -21,7 +21,7 @@ using namespace fix2xml;
 TEST ( ListExecute_message_t, set_fields)
 {
 
-  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../../spec/fix/FIX50SP2.xml", "../../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   auto &quickfix_dico = converter.quickfix_dico();
   ASSERT_TRUE(converter.init());
@@ -31,74 +31,74 @@ TEST ( ListExecute_message_t, set_fields)
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> ListExecute_message_t_0;
-  elt.add_attribute("ID", "ListID_t_1078800269"); // 0
-  ListExecute_message_t_0.insert("ListID_t_1078800269");
-  elt.add_attribute("ClBidID", "ClientBidID_t_322653707"); // 0
-  ListExecute_message_t_0.insert("ClientBidID_t_322653707");
-  elt.add_attribute("BidID", "BidID_t_1022626011"); // 0
-  ListExecute_message_t_0.insert("BidID_t_1022626011");
-  elt.add_attribute("TxnTm", "TransactTime_t_1707292508"); // 0
-  ListExecute_message_t_0.insert("TransactTime_t_1707292508");
-  elt.add_attribute("Txt", "Text_t_1885441554"); // 0
-  ListExecute_message_t_0.insert("Text_t_1885441554");
-  elt.add_attribute("EncTxtLen", "218769717"); // 0
-  ListExecute_message_t_0.insert("218769717");
-  elt.add_attribute("EncTxt", "EncodedText_t_930883868"); // 0
-  ListExecute_message_t_0.insert("EncodedText_t_930883868");
+  elt.add_attribute("ID", "ListID_t_766396255"); // 0
+  ListExecute_message_t_0.insert("ListID_t_766396255");
+  elt.add_attribute("ClBidID", "ClientBidID_t_400383307"); // 0
+  ListExecute_message_t_0.insert("ClientBidID_t_400383307");
+  elt.add_attribute("BidID", "BidID_t_319387433"); // 0
+  ListExecute_message_t_0.insert("BidID_t_319387433");
+  elt.add_attribute("TxnTm", "TransactTime_t_1472091944"); // 0
+  ListExecute_message_t_0.insert("TransactTime_t_1472091944");
+  elt.add_attribute("Txt", "Text_t_88923603"); // 0
+  ListExecute_message_t_0.insert("Text_t_88923603");
+  elt.add_attribute("EncTxtLen", "522107681"); // 0
+  ListExecute_message_t_0.insert("522107681");
+  elt.add_attribute("EncTxt", "EncodedText_t_1404354655"); // 0
+  ListExecute_message_t_0.insert("EncodedText_t_1404354655");
   all_values.push_back(ListExecute_message_t_0);
   all_compo_names.insert("ListExecute_message_t");
 
   { // Hdr
     xml_element Hdr_35{"Hdr"};
     multiset<string> Hdr_35_set;
-    Hdr_35.add_attribute("SeqNum", "159809874"); // 1
-    Hdr_35_set.insert("159809874");
-    Hdr_35.add_attribute("SID", "SenderCompID_t_1854862304"); // 1
-    Hdr_35_set.insert("SenderCompID_t_1854862304");
-    Hdr_35.add_attribute("TID", "TargetCompID_t_1213701168"); // 1
-    Hdr_35_set.insert("TargetCompID_t_1213701168");
-    Hdr_35.add_attribute("OBID", "OnBehalfOfCompID_t_1754000108"); // 1
-    Hdr_35_set.insert("OnBehalfOfCompID_t_1754000108");
-    Hdr_35.add_attribute("D2ID", "DeliverToCompID_t_539811763"); // 1
-    Hdr_35_set.insert("DeliverToCompID_t_539811763");
-    Hdr_35.add_attribute("SSub", "SenderSubID_t_1352153967"); // 1
-    Hdr_35_set.insert("SenderSubID_t_1352153967");
-    Hdr_35.add_attribute("SLoc", "SenderLocationID_t_314645797"); // 1
-    Hdr_35_set.insert("SenderLocationID_t_314645797");
-    Hdr_35.add_attribute("TSub", "TargetSubID_t_100947416"); // 1
-    Hdr_35_set.insert("TargetSubID_t_100947416");
-    Hdr_35.add_attribute("TLoc", "TargetLocationID_t_1358905447"); // 1
-    Hdr_35_set.insert("TargetLocationID_t_1358905447");
-    Hdr_35.add_attribute("OBSub", "OnBehalfOfSubID_t_275815552"); // 1
-    Hdr_35_set.insert("OnBehalfOfSubID_t_275815552");
-    Hdr_35.add_attribute("OBLoc", "OnBehalfOfLocationID_t_497619063"); // 1
-    Hdr_35_set.insert("OnBehalfOfLocationID_t_497619063");
-    Hdr_35.add_attribute("D2Sub", "DeliverToSubID_t_493763148"); // 1
-    Hdr_35_set.insert("DeliverToSubID_t_493763148");
-    Hdr_35.add_attribute("D2Loc", "DeliverToLocationID_t_1813012709"); // 1
-    Hdr_35_set.insert("DeliverToLocationID_t_1813012709");
-    Hdr_35.add_attribute("PosDup", "N"); // 1
-    Hdr_35_set.insert("N");
-    Hdr_35.add_attribute("PosRsnd", "Y"); // 1
+    Hdr_35.add_attribute("SeqNum", "1790487918"); // 1
+    Hdr_35_set.insert("1790487918");
+    Hdr_35.add_attribute("SID", "SenderCompID_t_1519420266"); // 1
+    Hdr_35_set.insert("SenderCompID_t_1519420266");
+    Hdr_35.add_attribute("TID", "TargetCompID_t_310919764"); // 1
+    Hdr_35_set.insert("TargetCompID_t_310919764");
+    Hdr_35.add_attribute("OBID", "OnBehalfOfCompID_t_1939739868"); // 1
+    Hdr_35_set.insert("OnBehalfOfCompID_t_1939739868");
+    Hdr_35.add_attribute("D2ID", "DeliverToCompID_t_1847537648"); // 1
+    Hdr_35_set.insert("DeliverToCompID_t_1847537648");
+    Hdr_35.add_attribute("SSub", "SenderSubID_t_1105830462"); // 1
+    Hdr_35_set.insert("SenderSubID_t_1105830462");
+    Hdr_35.add_attribute("SLoc", "SenderLocationID_t_265966916"); // 1
+    Hdr_35_set.insert("SenderLocationID_t_265966916");
+    Hdr_35.add_attribute("TSub", "TargetSubID_t_139629566"); // 1
+    Hdr_35_set.insert("TargetSubID_t_139629566");
+    Hdr_35.add_attribute("TLoc", "TargetLocationID_t_1740493178"); // 1
+    Hdr_35_set.insert("TargetLocationID_t_1740493178");
+    Hdr_35.add_attribute("OBSub", "OnBehalfOfSubID_t_1365795856"); // 1
+    Hdr_35_set.insert("OnBehalfOfSubID_t_1365795856");
+    Hdr_35.add_attribute("OBLoc", "OnBehalfOfLocationID_t_1013938232"); // 1
+    Hdr_35_set.insert("OnBehalfOfLocationID_t_1013938232");
+    Hdr_35.add_attribute("D2Sub", "DeliverToSubID_t_1116691227"); // 1
+    Hdr_35_set.insert("DeliverToSubID_t_1116691227");
+    Hdr_35.add_attribute("D2Loc", "DeliverToLocationID_t_689899692"); // 1
+    Hdr_35_set.insert("DeliverToLocationID_t_689899692");
+    Hdr_35.add_attribute("PosDup", "Y"); // 1
     Hdr_35_set.insert("Y");
-    Hdr_35.add_attribute("Snt", "SendingTime_t_97519626"); // 1
-    Hdr_35_set.insert("SendingTime_t_97519626");
-    Hdr_35.add_attribute("OrigSnt", "OrigSendingTime_t_832870281"); // 1
-    Hdr_35_set.insert("OrigSendingTime_t_832870281");
-    Hdr_35.add_attribute("MsgEncd", "MessageEncoding_t_402351824"); // 1
-    Hdr_35_set.insert("MessageEncoding_t_402351824");
+    Hdr_35.add_attribute("PosRsnd", "N"); // 1
+    Hdr_35_set.insert("N");
+    Hdr_35.add_attribute("Snt", "SendingTime_t_677147662"); // 1
+    Hdr_35_set.insert("SendingTime_t_677147662");
+    Hdr_35.add_attribute("OrigSnt", "OrigSendingTime_t_1764680504"); // 1
+    Hdr_35_set.insert("OrigSendingTime_t_1764680504");
+    Hdr_35.add_attribute("MsgEncd", "MessageEncoding_t_1560020263"); // 1
+    Hdr_35_set.insert("MessageEncoding_t_1560020263");
     all_values.push_back(Hdr_35_set);
     all_compo_names.insert("Hdr_35_set");
 
     {
       xml_element Hop_35{"Hop"};
       multiset<string> Hop_35_set;
-      Hop_35.add_attribute("ID", "HopCompID_t_935872427"); // 2
-      Hop_35_set.insert("HopCompID_t_935872427");
-      Hop_35.add_attribute("Ref", "552306418"); // 2
-      Hop_35_set.insert("552306418");
-      Hop_35.add_attribute("Snt", "HopSendingTime_t_1419099457"); // 2
-      Hop_35_set.insert("HopSendingTime_t_1419099457");
+      Hop_35.add_attribute("ID", "HopCompID_t_1197918497"); // 2
+      Hop_35_set.insert("HopCompID_t_1197918497");
+      Hop_35.add_attribute("Ref", "230377143"); // 2
+      Hop_35_set.insert("230377143");
+      Hop_35.add_attribute("Snt", "HopSendingTime_t_1236494272"); // 2
+      Hop_35_set.insert("HopSendingTime_t_1236494272");
       all_values.push_back(Hop_35_set);
       all_compo_names.insert("Hop_35_set");
 
@@ -120,7 +120,7 @@ TEST ( ListExecute_message_t, set_fields)
   cout << endl << "////////////////////////////////////////////" << endl;
   multiset<string> fix_s;
   list<multiset<string>> fix_ls;
-  to_list(fix_msg, quickfix_dico, fix_s, fix_ls);
+  msg_to_list(fix_msg, quickfix_dico, fix_s, fix_ls);
   fix_ls.push_back(fix_s);
 
   BOOST_LOG_TRIVIAL(debug) << "All FIX components (" << fix_ls.size() << ")";

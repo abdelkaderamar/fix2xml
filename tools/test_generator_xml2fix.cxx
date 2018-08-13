@@ -128,7 +128,7 @@ void test_generator_xml2fix::generate_test(
      << endl
      << TAB(0) << "multiset<string> fix_s;" << endl
      << TAB(0) << "list<multiset<string>> fix_ls;" << endl
-     << TAB(0) << "to_list(fix_msg, quickfix_dico, fix_s, fix_ls);" << endl
+     << TAB(0) << "msg_to_list(fix_msg, quickfix_dico, fix_s, fix_ls);" << endl
      << TAB(0) << "fix_ls.push_back(fix_s);" << endl
      << endl
 

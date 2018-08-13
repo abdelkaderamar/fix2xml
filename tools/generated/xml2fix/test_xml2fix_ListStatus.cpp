@@ -21,7 +21,7 @@ using namespace fix2xml;
 TEST ( ListStatus_message_t, set_fields)
 {
 
-  fixml2fix_converter converter {"../spec/fix/FIX50SP2.xml", "../spec/xsd/fixml-main-5-0-SP2.xsd"};
+  fixml2fix_converter converter {"../../spec/fix/FIX50SP2.xml", "../../spec/xsd/fixml-main-5-0-SP2.xsd"};
   auto& fixml_dict = converter.fixml_dico();
   auto &quickfix_dico = converter.quickfix_dico();
   ASSERT_TRUE(converter.init());
@@ -31,30 +31,30 @@ TEST ( ListStatus_message_t, set_fields)
   list<multiset<string>> all_values;
   multiset<string> all_compo_names;
   multiset<string> ListStatus_message_t_0;
-  elt.add_attribute("ID", "ListID_t_870941361"); // 0
-  ListStatus_message_t_0.insert("ListID_t_870941361");
-  elt.add_attribute("ListStatTyp", "6"); // 0
-  ListStatus_message_t_0.insert("6");
-  elt.add_attribute("NoRpts", "249041915"); // 0
-  ListStatus_message_t_0.insert("249041915");
-  elt.add_attribute("ListOrdStat", "5"); // 0
-  ListStatus_message_t_0.insert("5");
-  elt.add_attribute("ContingencyType", "2"); // 0
+  elt.add_attribute("ID", "ListID_t_926665620"); // 0
+  ListStatus_message_t_0.insert("ListID_t_926665620");
+  elt.add_attribute("ListStatTyp", "4"); // 0
+  ListStatus_message_t_0.insert("4");
+  elt.add_attribute("NoRpts", "910749508"); // 0
+  ListStatus_message_t_0.insert("910749508");
+  elt.add_attribute("ListOrdStat", "2"); // 0
   ListStatus_message_t_0.insert("2");
-  elt.add_attribute("ListRejectReason", "6"); // 0
-  ListStatus_message_t_0.insert("6");
-  elt.add_attribute("RptSeq", "1509550490"); // 0
-  ListStatus_message_t_0.insert("1509550490");
-  elt.add_attribute("ListStatText", "ListStatusText_t_880419939"); // 0
-  ListStatus_message_t_0.insert("ListStatusText_t_880419939");
-  elt.add_attribute("EncListStatTextLen", "1490437643"); // 0
-  ListStatus_message_t_0.insert("1490437643");
-  elt.add_attribute("EncListStatText", "EncodedListStatusText_t_292950711"); // 0
-  ListStatus_message_t_0.insert("EncodedListStatusText_t_292950711");
-  elt.add_attribute("TxnTm", "TransactTime_t_1040229813"); // 0
-  ListStatus_message_t_0.insert("TransactTime_t_1040229813");
-  elt.add_attribute("TotNoOrds", "1197816299"); // 0
-  ListStatus_message_t_0.insert("1197816299");
+  elt.add_attribute("ContingencyType", "3"); // 0
+  ListStatus_message_t_0.insert("3");
+  elt.add_attribute("ListRejectReason", "11"); // 0
+  ListStatus_message_t_0.insert("11");
+  elt.add_attribute("RptSeq", "1017670172"); // 0
+  ListStatus_message_t_0.insert("1017670172");
+  elt.add_attribute("ListStatText", "ListStatusText_t_220029809"); // 0
+  ListStatus_message_t_0.insert("ListStatusText_t_220029809");
+  elt.add_attribute("EncListStatTextLen", "1752244622"); // 0
+  ListStatus_message_t_0.insert("1752244622");
+  elt.add_attribute("EncListStatText", "EncodedListStatusText_t_274541179"); // 0
+  ListStatus_message_t_0.insert("EncodedListStatusText_t_274541179");
+  elt.add_attribute("TxnTm", "TransactTime_t_2010517727"); // 0
+  ListStatus_message_t_0.insert("TransactTime_t_2010517727");
+  elt.add_attribute("TotNoOrds", "1124181240"); // 0
+  ListStatus_message_t_0.insert("1124181240");
   elt.add_attribute("LastFragment", "Y"); // 0
   ListStatus_message_t_0.insert("Y");
   all_values.push_back(ListStatus_message_t_0);
@@ -63,54 +63,54 @@ TEST ( ListStatus_message_t, set_fields)
   { // Hdr
     xml_element Hdr_36{"Hdr"};
     multiset<string> Hdr_36_set;
-    Hdr_36.add_attribute("SeqNum", "646746274"); // 1
-    Hdr_36_set.insert("646746274");
-    Hdr_36.add_attribute("SID", "SenderCompID_t_1737628062"); // 1
-    Hdr_36_set.insert("SenderCompID_t_1737628062");
-    Hdr_36.add_attribute("TID", "TargetCompID_t_711322198"); // 1
-    Hdr_36_set.insert("TargetCompID_t_711322198");
-    Hdr_36.add_attribute("OBID", "OnBehalfOfCompID_t_961392071"); // 1
-    Hdr_36_set.insert("OnBehalfOfCompID_t_961392071");
-    Hdr_36.add_attribute("D2ID", "DeliverToCompID_t_1838575478"); // 1
-    Hdr_36_set.insert("DeliverToCompID_t_1838575478");
-    Hdr_36.add_attribute("SSub", "SenderSubID_t_2070227646"); // 1
-    Hdr_36_set.insert("SenderSubID_t_2070227646");
-    Hdr_36.add_attribute("SLoc", "SenderLocationID_t_1237207623"); // 1
-    Hdr_36_set.insert("SenderLocationID_t_1237207623");
-    Hdr_36.add_attribute("TSub", "TargetSubID_t_188710893"); // 1
-    Hdr_36_set.insert("TargetSubID_t_188710893");
-    Hdr_36.add_attribute("TLoc", "TargetLocationID_t_416507146"); // 1
-    Hdr_36_set.insert("TargetLocationID_t_416507146");
-    Hdr_36.add_attribute("OBSub", "OnBehalfOfSubID_t_902736684"); // 1
-    Hdr_36_set.insert("OnBehalfOfSubID_t_902736684");
-    Hdr_36.add_attribute("OBLoc", "OnBehalfOfLocationID_t_1559864785"); // 1
-    Hdr_36_set.insert("OnBehalfOfLocationID_t_1559864785");
-    Hdr_36.add_attribute("D2Sub", "DeliverToSubID_t_1643162807"); // 1
-    Hdr_36_set.insert("DeliverToSubID_t_1643162807");
-    Hdr_36.add_attribute("D2Loc", "DeliverToLocationID_t_1000256311"); // 1
-    Hdr_36_set.insert("DeliverToLocationID_t_1000256311");
+    Hdr_36.add_attribute("SeqNum", "1802773947"); // 1
+    Hdr_36_set.insert("1802773947");
+    Hdr_36.add_attribute("SID", "SenderCompID_t_824235240"); // 1
+    Hdr_36_set.insert("SenderCompID_t_824235240");
+    Hdr_36.add_attribute("TID", "TargetCompID_t_1691291405"); // 1
+    Hdr_36_set.insert("TargetCompID_t_1691291405");
+    Hdr_36.add_attribute("OBID", "OnBehalfOfCompID_t_2068740864"); // 1
+    Hdr_36_set.insert("OnBehalfOfCompID_t_2068740864");
+    Hdr_36.add_attribute("D2ID", "DeliverToCompID_t_963864807"); // 1
+    Hdr_36_set.insert("DeliverToCompID_t_963864807");
+    Hdr_36.add_attribute("SSub", "SenderSubID_t_1284300935"); // 1
+    Hdr_36_set.insert("SenderSubID_t_1284300935");
+    Hdr_36.add_attribute("SLoc", "SenderLocationID_t_1287053072"); // 1
+    Hdr_36_set.insert("SenderLocationID_t_1287053072");
+    Hdr_36.add_attribute("TSub", "TargetSubID_t_1977803039"); // 1
+    Hdr_36_set.insert("TargetSubID_t_1977803039");
+    Hdr_36.add_attribute("TLoc", "TargetLocationID_t_253508515"); // 1
+    Hdr_36_set.insert("TargetLocationID_t_253508515");
+    Hdr_36.add_attribute("OBSub", "OnBehalfOfSubID_t_1976952764"); // 1
+    Hdr_36_set.insert("OnBehalfOfSubID_t_1976952764");
+    Hdr_36.add_attribute("OBLoc", "OnBehalfOfLocationID_t_1010463150"); // 1
+    Hdr_36_set.insert("OnBehalfOfLocationID_t_1010463150");
+    Hdr_36.add_attribute("D2Sub", "DeliverToSubID_t_1387744001"); // 1
+    Hdr_36_set.insert("DeliverToSubID_t_1387744001");
+    Hdr_36.add_attribute("D2Loc", "DeliverToLocationID_t_506616779"); // 1
+    Hdr_36_set.insert("DeliverToLocationID_t_506616779");
     Hdr_36.add_attribute("PosDup", "N"); // 1
     Hdr_36_set.insert("N");
-    Hdr_36.add_attribute("PosRsnd", "Y"); // 1
-    Hdr_36_set.insert("Y");
-    Hdr_36.add_attribute("Snt", "SendingTime_t_1936128738"); // 1
-    Hdr_36_set.insert("SendingTime_t_1936128738");
-    Hdr_36.add_attribute("OrigSnt", "OrigSendingTime_t_797557837"); // 1
-    Hdr_36_set.insert("OrigSendingTime_t_797557837");
-    Hdr_36.add_attribute("MsgEncd", "MessageEncoding_t_1317130440"); // 1
-    Hdr_36_set.insert("MessageEncoding_t_1317130440");
+    Hdr_36.add_attribute("PosRsnd", "N"); // 1
+    Hdr_36_set.insert("N");
+    Hdr_36.add_attribute("Snt", "SendingTime_t_1704535276"); // 1
+    Hdr_36_set.insert("SendingTime_t_1704535276");
+    Hdr_36.add_attribute("OrigSnt", "OrigSendingTime_t_858037149"); // 1
+    Hdr_36_set.insert("OrigSendingTime_t_858037149");
+    Hdr_36.add_attribute("MsgEncd", "MessageEncoding_t_2036774888"); // 1
+    Hdr_36_set.insert("MessageEncoding_t_2036774888");
     all_values.push_back(Hdr_36_set);
     all_compo_names.insert("Hdr_36_set");
 
     {
       xml_element Hop_36{"Hop"};
       multiset<string> Hop_36_set;
-      Hop_36.add_attribute("ID", "HopCompID_t_659586451"); // 2
-      Hop_36_set.insert("HopCompID_t_659586451");
-      Hop_36.add_attribute("Ref", "1617366162"); // 2
-      Hop_36_set.insert("1617366162");
-      Hop_36.add_attribute("Snt", "HopSendingTime_t_1566172355"); // 2
-      Hop_36_set.insert("HopSendingTime_t_1566172355");
+      Hop_36.add_attribute("ID", "HopCompID_t_483717248"); // 2
+      Hop_36_set.insert("HopCompID_t_483717248");
+      Hop_36.add_attribute("Ref", "588760048"); // 2
+      Hop_36_set.insert("588760048");
+      Hop_36.add_attribute("Snt", "HopSendingTime_t_800040748"); // 2
+      Hop_36_set.insert("HopSendingTime_t_800040748");
       all_values.push_back(Hop_36_set);
       all_compo_names.insert("Hop_36_set");
 
@@ -121,32 +121,32 @@ TEST ( ListStatus_message_t, set_fields)
   { // ListStat
     xml_element ListStat_0{"ListStat"};
     multiset<string> ListStat_0_set;
-    ListStat_0.add_attribute("ClOrdID", "ClOrdID_t_612344547"); // 1
-    ListStat_0_set.insert("ClOrdID_t_612344547");
-    ListStat_0.add_attribute("OrdID", "OrderID_t_690356633"); // 1
-    ListStat_0_set.insert("OrderID_t_690356633");
-    ListStat_0.add_attribute("ClOrdID2", "SecondaryClOrdID_t_1971394923"); // 1
-    ListStat_0_set.insert("SecondaryClOrdID_t_1971394923");
-    ListStat_0.add_attribute("CumQty", "14927644.860000"); // 1
-    ListStat_0_set.insert("14927644.860000");
-    ListStat_0.add_attribute("OrdStat", "9"); // 1
-    ListStat_0_set.insert("9");
-    ListStat_0.add_attribute("WorkingInd", "N"); // 1
-    ListStat_0_set.insert("N");
-    ListStat_0.add_attribute("LeavesQty", "3855106.520000"); // 1
-    ListStat_0_set.insert("3855106.520000");
-    ListStat_0.add_attribute("CxlQty", "12311269.270000"); // 1
-    ListStat_0_set.insert("12311269.270000");
-    ListStat_0.add_attribute("AvgPx", "16235138.660000"); // 1
-    ListStat_0_set.insert("16235138.660000");
-    ListStat_0.add_attribute("RejRsn", "18"); // 1
-    ListStat_0_set.insert("18");
-    ListStat_0.add_attribute("Txt", "Text_t_821271341"); // 1
-    ListStat_0_set.insert("Text_t_821271341");
-    ListStat_0.add_attribute("EncTxtLen", "187352416"); // 1
-    ListStat_0_set.insert("187352416");
-    ListStat_0.add_attribute("EncTxt", "EncodedText_t_1993648997"); // 1
-    ListStat_0_set.insert("EncodedText_t_1993648997");
+    ListStat_0.add_attribute("ClOrdID", "ClOrdID_t_719866255"); // 1
+    ListStat_0_set.insert("ClOrdID_t_719866255");
+    ListStat_0.add_attribute("OrdID", "OrderID_t_2030177690"); // 1
+    ListStat_0_set.insert("OrderID_t_2030177690");
+    ListStat_0.add_attribute("ClOrdID2", "SecondaryClOrdID_t_1046965648"); // 1
+    ListStat_0_set.insert("SecondaryClOrdID_t_1046965648");
+    ListStat_0.add_attribute("CumQty", "9398960.640000"); // 1
+    ListStat_0_set.insert("9398960.640000");
+    ListStat_0.add_attribute("OrdStat", "5"); // 1
+    ListStat_0_set.insert("5");
+    ListStat_0.add_attribute("WorkingInd", "Y"); // 1
+    ListStat_0_set.insert("Y");
+    ListStat_0.add_attribute("LeavesQty", "8029301.440000"); // 1
+    ListStat_0_set.insert("8029301.440000");
+    ListStat_0.add_attribute("CxlQty", "6116362.570000"); // 1
+    ListStat_0_set.insert("6116362.570000");
+    ListStat_0.add_attribute("AvgPx", "19069677.710000"); // 1
+    ListStat_0_set.insert("19069677.710000");
+    ListStat_0.add_attribute("RejRsn", "2"); // 1
+    ListStat_0_set.insert("2");
+    ListStat_0.add_attribute("Txt", "Text_t_1435871497"); // 1
+    ListStat_0_set.insert("Text_t_1435871497");
+    ListStat_0.add_attribute("EncTxtLen", "1450775528"); // 1
+    ListStat_0_set.insert("1450775528");
+    ListStat_0.add_attribute("EncTxt", "EncodedText_t_379477659"); // 1
+    ListStat_0_set.insert("EncodedText_t_379477659");
     all_values.push_back(ListStat_0_set);
     all_compo_names.insert("ListStat_0_set");
 
@@ -155,36 +155,70 @@ TEST ( ListStatus_message_t, set_fields)
   { // ListStat
     xml_element ListStat_1{"ListStat"};
     multiset<string> ListStat_1_set;
-    ListStat_1.add_attribute("ClOrdID", "ClOrdID_t_512363172"); // 1
-    ListStat_1_set.insert("ClOrdID_t_512363172");
-    ListStat_1.add_attribute("OrdID", "OrderID_t_110096414"); // 1
-    ListStat_1_set.insert("OrderID_t_110096414");
-    ListStat_1.add_attribute("ClOrdID2", "SecondaryClOrdID_t_1083372972"); // 1
-    ListStat_1_set.insert("SecondaryClOrdID_t_1083372972");
-    ListStat_1.add_attribute("CumQty", "7010740.650000"); // 1
-    ListStat_1_set.insert("7010740.650000");
-    ListStat_1.add_attribute("OrdStat", "0"); // 1
-    ListStat_1_set.insert("0");
+    ListStat_1.add_attribute("ClOrdID", "ClOrdID_t_252252656"); // 1
+    ListStat_1_set.insert("ClOrdID_t_252252656");
+    ListStat_1.add_attribute("OrdID", "OrderID_t_587592816"); // 1
+    ListStat_1_set.insert("OrderID_t_587592816");
+    ListStat_1.add_attribute("ClOrdID2", "SecondaryClOrdID_t_1666530731"); // 1
+    ListStat_1_set.insert("SecondaryClOrdID_t_1666530731");
+    ListStat_1.add_attribute("CumQty", "825720.470000"); // 1
+    ListStat_1_set.insert("825720.470000");
+    ListStat_1.add_attribute("OrdStat", "1"); // 1
+    ListStat_1_set.insert("1");
     ListStat_1.add_attribute("WorkingInd", "N"); // 1
     ListStat_1_set.insert("N");
-    ListStat_1.add_attribute("LeavesQty", "1134552.030000"); // 1
-    ListStat_1_set.insert("1134552.030000");
-    ListStat_1.add_attribute("CxlQty", "222827.190000"); // 1
-    ListStat_1_set.insert("222827.190000");
-    ListStat_1.add_attribute("AvgPx", "8388823.190000"); // 1
-    ListStat_1_set.insert("8388823.190000");
-    ListStat_1.add_attribute("RejRsn", "99"); // 1
-    ListStat_1_set.insert("99");
-    ListStat_1.add_attribute("Txt", "Text_t_2067797351"); // 1
-    ListStat_1_set.insert("Text_t_2067797351");
-    ListStat_1.add_attribute("EncTxtLen", "627527409"); // 1
-    ListStat_1_set.insert("627527409");
-    ListStat_1.add_attribute("EncTxt", "EncodedText_t_1156264458"); // 1
-    ListStat_1_set.insert("EncodedText_t_1156264458");
+    ListStat_1.add_attribute("LeavesQty", "10930351.980000"); // 1
+    ListStat_1_set.insert("10930351.980000");
+    ListStat_1.add_attribute("CxlQty", "813616.840000"); // 1
+    ListStat_1_set.insert("813616.840000");
+    ListStat_1.add_attribute("AvgPx", "20026166.270000"); // 1
+    ListStat_1_set.insert("20026166.270000");
+    ListStat_1.add_attribute("RejRsn", "3"); // 1
+    ListStat_1_set.insert("3");
+    ListStat_1.add_attribute("Txt", "Text_t_881642300"); // 1
+    ListStat_1_set.insert("Text_t_881642300");
+    ListStat_1.add_attribute("EncTxtLen", "1559668255"); // 1
+    ListStat_1_set.insert("1559668255");
+    ListStat_1.add_attribute("EncTxt", "EncodedText_t_431248706"); // 1
+    ListStat_1_set.insert("EncodedText_t_431248706");
     all_values.push_back(ListStat_1_set);
     all_compo_names.insert("ListStat_1_set");
 
     elt.add_element(ListStat_1);
+  } // end ListStat
+  { // ListStat
+    xml_element ListStat_2{"ListStat"};
+    multiset<string> ListStat_2_set;
+    ListStat_2.add_attribute("ClOrdID", "ClOrdID_t_770933540"); // 1
+    ListStat_2_set.insert("ClOrdID_t_770933540");
+    ListStat_2.add_attribute("OrdID", "OrderID_t_2043385503"); // 1
+    ListStat_2_set.insert("OrderID_t_2043385503");
+    ListStat_2.add_attribute("ClOrdID2", "SecondaryClOrdID_t_1020008754"); // 1
+    ListStat_2_set.insert("SecondaryClOrdID_t_1020008754");
+    ListStat_2.add_attribute("CumQty", "15709742.880000"); // 1
+    ListStat_2_set.insert("15709742.880000");
+    ListStat_2.add_attribute("OrdStat", "5"); // 1
+    ListStat_2_set.insert("5");
+    ListStat_2.add_attribute("WorkingInd", "Y"); // 1
+    ListStat_2_set.insert("Y");
+    ListStat_2.add_attribute("LeavesQty", "14536683.300000"); // 1
+    ListStat_2_set.insert("14536683.300000");
+    ListStat_2.add_attribute("CxlQty", "9721629.790000"); // 1
+    ListStat_2_set.insert("9721629.790000");
+    ListStat_2.add_attribute("AvgPx", "5322874.260000"); // 1
+    ListStat_2_set.insert("5322874.260000");
+    ListStat_2.add_attribute("RejRsn", "8"); // 1
+    ListStat_2_set.insert("8");
+    ListStat_2.add_attribute("Txt", "Text_t_146186159"); // 1
+    ListStat_2_set.insert("Text_t_146186159");
+    ListStat_2.add_attribute("EncTxtLen", "1335217570"); // 1
+    ListStat_2_set.insert("1335217570");
+    ListStat_2.add_attribute("EncTxt", "EncodedText_t_1552759604"); // 1
+    ListStat_2_set.insert("EncodedText_t_1552759604");
+    all_values.push_back(ListStat_2_set);
+    all_compo_names.insert("ListStat_2_set");
+
+    elt.add_element(ListStat_2);
   } // end ListStat
   cout << "////////////////////////////////////////////" << endl;
   cout << elt.to_string() << endl;
@@ -200,7 +234,7 @@ TEST ( ListStatus_message_t, set_fields)
   cout << endl << "////////////////////////////////////////////" << endl;
   multiset<string> fix_s;
   list<multiset<string>> fix_ls;
-  to_list(fix_msg, quickfix_dico, fix_s, fix_ls);
+  msg_to_list(fix_msg, quickfix_dico, fix_s, fix_ls);
   fix_ls.push_back(fix_s);
 
   BOOST_LOG_TRIVIAL(debug) << "All FIX components (" << fix_ls.size() << ")";
