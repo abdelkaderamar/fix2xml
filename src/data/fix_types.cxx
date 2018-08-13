@@ -31,6 +31,7 @@ using namespace std;
 
 string fix_field_type::to_string() const {
   stringstream ss;
+  // TODO
   return ss.str();
 }
 
@@ -38,6 +39,7 @@ string fix_field_type::to_string() const {
 
 string fix_component_type::to_string() const {
   stringstream ss;
+  // TODO
   return ss.str();
 }
 

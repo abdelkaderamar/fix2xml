@@ -1,8 +1,8 @@
-# fixml library
+# converter library
 
-File ( GLOB FIXML_FIX_SOURCES *.cxx )
+File ( GLOB CONVERTER_FIX_SOURCES *.cxx )
 
-Add_Library ( fixml2fix_converter ${FIXML_FIX_SOURCES} )
+Add_Library ( fixml2fix_converter ${CONVERTER_FIX_SOURCES} )
 
 Target_Link_Libraries (fixml2fix_converter
   data util fix fixml )
