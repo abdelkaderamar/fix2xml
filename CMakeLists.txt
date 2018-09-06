@@ -66,9 +66,9 @@ SETUP_TARGET_FOR_COVERAGE (
   DEPENDENCIES fix2xml_test )
 
 #--- Test directories
-If ( FIX2XML_TEST )
+If ( FIX2XML_TEST OR FIX2XML_COVERAGE )
   Add_Subdirectory ( test )
-Endif( FIX2XML_TEST )
+Endif( FIX2XML_TEST OR FIX2XML_COVERAGE )
 
 
 #--- Tools directory
